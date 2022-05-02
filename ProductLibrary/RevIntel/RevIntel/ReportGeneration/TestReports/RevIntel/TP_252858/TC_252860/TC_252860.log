@@ -1,0 +1,74 @@
+2021-07-28 15:48:48,525 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-07-28 15:48:50,592 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-07-28 15:48:50,735 ::INFO ::[Logger]::  is used for Testing
+2021-07-28 15:48:51,638 ::INFO ::[Logger]:: This is the login page.https://ssodev.rainmakertest.org/Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://devrhbi.revintel.co/SSOLanding.aspx
+2021-07-28 15:48:51,640 ::INFO ::[Logger]:: Execution started at:-Jul-28-2021 15-48-51-PM
+2021-07-28 15:48:51,641 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-28 15:48:51,654 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-07-28 15:48:51,656 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_252860         XXXXXXXXXXXXXXXX
+2021-07-28 15:48:51,657 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-28 15:48:53,273 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=744}
+2021-07-28 15:48:53,306 ::INFO ::[Logger]:: Test Case : Validate the Best Available Rate Contribution
+2021-07-28 15:49:10,212 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2021-07-28 15:49:10,298 ::DEBUG::[Logger]:: 1) Email Address displayed
+2021-07-28 15:49:32,182 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2021-07-28 15:49:42,911 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2021-07-28 15:49:43,044 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
+2021-07-28 15:50:10,853 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2021-07-28 15:50:17,430 ::INFO ::[Logger]:: Clicked the Click_Automation element on the Navigation page.
+2021-07-28 15:50:17,520 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
+2021-07-28 15:50:35,177 ::DEBUG::[Logger]:: 4) Client displayed
+2021-07-28 15:51:12,086 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
+2021-07-28 15:51:12,089 ::DEBUG::[Logger]:: 5) Kerzner selected
+2021-07-28 15:51:30,725 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
+2021-07-28 15:51:49,251 ::INFO ::[Logger]:: Clicked the Click_Hamburger_Icon element on the Navigation page.
+2021-07-28 15:51:58,497 ::INFO ::[Logger]:: Clicked the Click_Room_Rate_Menu element on the Navigation page.
+2021-07-28 15:51:58,509 ::DEBUG::[Logger]:: 7) Room Rate drop down displayed
+2021-07-28 15:52:13,215 ::INFO ::[Logger]:: Clicked the Best_Available_Rate_Contribution_Report element on the Navigation page.
+2021-07-28 15:52:23,311 ::DEBUG::[Logger]:: 8) User Landed on Best Available Rate Contribution Report Page
+2021-07-28 15:52:34,865 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-28 15:53:01,559 ::INFO ::[Logger]:: Clicked the Click_View_Analysis element on the ReportParameter page.
+2021-07-28 15:53:01,575 ::DEBUG::[Logger]:: 9) Required field validation message is displaying
+2021-07-28 15:53:19,136 ::INFO ::[Logger]:: Clicked the Click_Business_Unit_Dropdown element on the ReportParameter page.
+2021-07-28 15:53:30,739 ::INFO ::[Logger]:: Clicked the Select_Business_Unit_Value element on the ReportParameter page.
+2021-07-28 15:53:30,756 ::DEBUG::[Logger]:: 10) AUDis selected as Business Unit
+2021-07-28 15:53:47,962 ::INFO ::[Logger]:: Clicked the Click_Currency_Dropdown element on the ReportParameter page.
+2021-07-28 15:53:58,709 ::INFO ::[Logger]:: Clicked the Select_Currency_Value element on the ReportParameter page.
+2021-07-28 15:53:58,711 ::DEBUG::[Logger]:: 11) Hotelis selected as Currency
+2021-07-28 15:54:21,932 ::INFO ::[Logger]:: Inserted text in the Text_StartDate element on the ReportParameter page.
+2021-07-28 15:54:21,935 ::DEBUG::[Logger]:: 12) Enter start date as = 10/1/2020
+2021-07-28 15:54:42,426 ::INFO ::[Logger]:: Inserted text in the Text_EndDate element on the ReportParameter page.
+2021-07-28 15:54:42,446 ::DEBUG::[Logger]:: 13) Enter enddate as = 10/31/2020
+2021-07-28 15:55:48,530 ::INFO ::[Logger]:: Clicked the Click_View_Analysis element on the ReportParameter page.
+2021-07-28 15:56:28,634 ::DEBUG::[Logger]:: 14) Report generated
+2021-07-28 15:56:38,882 ::INFO ::[Logger]:: Clicked the Export_Menu element on the ReportParameter page.
+2021-07-28 15:56:38,884 ::DEBUG::[Logger]:: 15) Export drop down menu displayed
+2021-07-28 15:56:48,996 ::INFO ::[Logger]:: Clicked the Excel element on the ReportParameter page.
+2021-07-28 15:57:19,077 ::DEBUG::[Logger]:: 16) Report exported in excel format
+2021-07-28 15:57:22,640 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-28 15:57:24,006 ::DEBUG::[Logger]:: 17) The template downloaded in the csv file format.
+2021-07-28 15:57:27,183 ::INFO ::[Logger]:: File Size in Bytes: 41
+2021-07-28 15:58:08,173 ::INFO ::[Logger]:: Best Available Rate Contribution matched with Report name 
+2021-07-28 15:58:35,678 ::INFO ::[Logger]:: Clicked the Click_Hamburger_Icon element on the Navigation page.
+2021-07-28 15:58:47,989 ::INFO ::[Logger]:: Clicked the Click_Room_Rate_Menu element on the Navigation page.
+2021-07-28 15:58:47,991 ::DEBUG::[Logger]:: 18) Room Rate Dropdown displayed
+2021-07-28 15:58:58,619 ::INFO ::[Logger]:: Clicked the Best_Available_Rate_Contribution_Report element on the Navigation page.
+2021-07-28 15:59:08,736 ::DEBUG::[Logger]:: 19) User landed on Best Available Rate Contribution Report  page
+2021-07-28 15:59:23,104 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-28 16:00:02,380 ::INFO ::[Logger]:: Clicked the Portfolio_RadioButton element on the ReportParameter page.
+2021-07-28 16:00:10,248 ::INFO ::[Logger]:: Clicked the Portfolio_DDL element on the ReportParameter page.
+2021-07-28 16:00:10,250 ::DEBUG::[Logger]:: 20) Portfolio drop down displyed
+2021-07-28 16:00:22,033 ::INFO ::[Logger]:: Clicked the Portfolio_DDL_value element on the ReportParameter page.
+2021-07-28 16:00:22,035 ::DEBUG::[Logger]:: 21) One&Only All -CT,SG,RR,RM,TP,PL,WV,NGSelected
+2021-07-28 16:00:35,437 ::INFO ::[Logger]:: Inserted text in the Text_StartDate element on the ReportParameter page.
+2021-07-28 16:00:43,659 ::INFO ::[Logger]:: Inserted text in the Text_EndDate element on the ReportParameter page.
+2021-07-28 16:00:43,661 ::DEBUG::[Logger]:: 22) Enter start date as = 10/1/2020
+2021-07-28 16:00:47,052 ::DEBUG::[Logger]:: 23) Enter enddate as = 10/31/2020
+2021-07-28 16:01:01,496 ::INFO ::[Logger]:: Clicked the Select_SourceMarket_DDL element on the ReportParameter page.
+2021-07-28 16:01:01,499 ::DEBUG::[Logger]:: 24) Source Market drop down displayed
+2021-07-28 16:01:13,848 ::INFO ::[Logger]:: Clicked the Select_SourceMarket_value element on the ReportParameter page.
+2021-07-28 16:01:13,850 ::DEBUG::[Logger]:: 25) AfricaSelected as source market
+2021-07-28 16:01:54,464 ::INFO ::[Logger]:: Clicked the Click_View_Analysis element on the ReportParameter page.
+2021-07-28 16:03:04,531 ::DEBUG::[Logger]:: 26) Report generated
+2021-07-28 16:03:13,585 ::INFO ::[Logger]:: Filter(s):  ; Source Market: Africa; Found on the page
+2021-07-28 16:03:13,587 ::DEBUG::[Logger]:: 27) Applied filter displayed at footer

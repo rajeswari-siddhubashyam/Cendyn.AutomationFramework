@@ -1,0 +1,54 @@
+2021-06-24 10:54:29,330 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-06-24 10:54:29,336 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-06-24 10:54:29,338 ::INFO ::[Logger]::  is used for Testing
+2021-06-24 10:54:29,634 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DCAOAFRON%26response_mode%3Dform_post%26response_type%3Dcode%2520id_token%26scope%3Dopenid%2520roles%2520profile%2520write%2520offline_access%2520CendynAccessApi%26state%3DOpenIdConnect.AuthenticationProperties%253De0iF4c2_a4y7Hfeq9hWKKMgKZkgvpcJJBiQQSMwl-g312BoFohy38lFXSihmBShNRP8K6pr8WO2mZNrF7UyPfUrvI7h6pwo2XUPC0_tszLETf39F9z6dAUMjCLpeq1_UurDyUva3vYm7g0j8Im_P7g%26nonce%3D637601090753842331.YzdjOGUzMWEtMTBhNi00NjRhLWFiOWItMDM1NGM3YTM3ZTdiMTZjMGUyMTAtZWFkYS00NWNlLTg5MTYtYWMwYTYwZTMyM2M0%26redirect_uri%3Dhttps%253A%252F%252Fqa.cendynaccess.com%26ui_locales%3Den-US
+2021-06-24 10:54:29,635 ::INFO ::[Logger]:: Execution started at:-Jun-24-2021 10-54-29-AM
+2021-06-24 10:54:29,636 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-06-24 10:54:29,636 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-06-24 10:54:29,637 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_232898         XXXXXXXXXXXXXXXX
+2021-06-24 10:54:29,637 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-06-24 10:54:29,923 ::INFO ::[Logger]:: Window Size is: {Width=1366, Height=768}
+2021-06-24 10:54:30,935 ::DEBUG::[Logger]:: 1) Landed on Admin Login Page
+2021-06-24 10:54:41,255 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Username element on the PropertyAdmin page.
+2021-06-24 10:54:47,458 ::INFO ::[Logger]:: Clicked the Click_NextButton element on the PropertyAdmin page.
+2021-06-24 10:54:53,233 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Password element on the PropertyAdmin page.
+2021-06-24 10:54:53,234 ::DEBUG::[Logger]:: 2) Entered Username =qacendynautomation@cendyn17.com and Password =Cendyn123$
+2021-06-24 10:55:03,873 ::INFO ::[Logger]:: Clicked the Click_LoginButton element on the PropertyAdmin page.
+2021-06-24 10:55:06,680 ::DEBUG::[Logger]:: 3) Landed on Select Product Page 
+2021-06-24 10:55:24,476 ::INFO ::[Logger]:: Clicked the Click_eMenus element on the PropertyAdmin page.
+2021-06-24 10:55:24,478 ::DEBUG::[Logger]:: 4) eMenus Product got Selected 
+2021-06-24 10:55:35,397 ::INFO ::[Logger]:: Clicked the Click_Select_PropertyDropdown element on the PropertyAdmin page.
+2021-06-24 10:55:35,398 ::DEBUG::[Logger]:: 5) Clicked on Select Property Drop-down
+2021-06-24 10:55:44,916 ::INFO ::[Logger]:: Inserted text in the Enter_Property_TextBox element on the PropertyAdmin page.
+2021-06-24 10:55:44,917 ::DEBUG::[Logger]:: 6) Entered Property
+2021-06-24 10:55:56,794 ::INFO ::[Logger]:: Selected the Hotel Origami value from the Select_Property_Dropdown drop down.
+2021-06-24 10:55:56,795 ::DEBUG::[Logger]:: 7) Hotel Origami Property got Selected
+2021-06-24 10:56:07,365 ::INFO ::[Logger]:: Clicked the Click_MyMenus element on the PropertyAdmin page.
+2021-06-24 10:56:07,366 ::DEBUG::[Logger]:: 8) Navigated to My Menu Page
+2021-06-24 10:56:17,952 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-06-24 10:56:25,789 ::INFO ::[Logger]:: Clicked the Click_MyMenu_BreakfastDropdown element on the PropertyAdmin page.
+2021-06-24 10:56:25,790 ::DEBUG::[Logger]:: 9) Clicked on Breakfast Menu 
+2021-06-24 10:56:35,338 ::INFO ::[Logger]:: Clicked the MyMenu_BreakfastDropdown_ContinentalBreakfast element on the PropertyAdmin page.
+2021-06-24 10:56:43,699 ::INFO ::[Logger]:: Clicked the Click_MyMenu_AddNewMenu element on the PropertyAdmin page.
+2021-06-24 10:56:43,700 ::DEBUG::[Logger]:: 10) Add Menu Popup got Displayed
+2021-06-24 10:56:46,290 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-06-24 10:56:53,704 ::INFO ::[Logger]:: Inserted text in the AddNewMenu_MenuName element on the PropertyAdmin page.
+2021-06-24 10:56:59,255 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-06-24 10:57:06,750 ::INFO ::[Logger]:: Inserted text in the AddNewMenu_AddChoice_Description element on the PropertyAdmin page.
+2021-06-24 10:57:06,751 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-06-24 10:57:14,082 ::INFO ::[Logger]:: Inserted text in the AddNewMenu_Price element on the PropertyAdmin page.
+2021-06-24 10:57:21,047 ::INFO ::[Logger]:: Selected the Per Adult value from the Select_Price_Description drop down.
+2021-06-24 10:57:21,048 ::DEBUG::[Logger]:: 11) All the details are entered successfully
+2021-06-24 10:57:29,864 ::INFO ::[Logger]:: Clicked the Click_AddNewMenu_SaveButton element on the PropertyAdmin page.
+2021-06-24 10:57:35,410 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-06-24 10:57:39,833 ::ERROR::[Logger]:: eMenus_Flow :: Script::Failed
+NUnit.Framework.AssertionException: Menu_1567777593Text not found
+   at NUnit.Framework.Assert.ReportFailure(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 394
+   at NUnit.Framework.Assert.Fail(String message, Object[] args) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 145
+   at NUnit.Framework.Assert.Fail(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 155
+   at BaseUtility.Utility.Helper.VerifyTextOnPageAndHighLight(String text) in E:\2020\April\eMenus_Atomation\BaseUtility\Utility\Helper.cs:line 604
+   at eMenus.AppModule.Admin.PropertyAdmin.AddNewMenuWithPrice(String menuName, String menuDescription, String price, String pricedescription) in E:\2020\April\eMenus_Atomation\ProductLibrary\eMenus\AppModule\Admin\PropertyAdmin.cs:line 537
+   at eMenus.AppModule.MainAdminApp.MainAdminApp.TC_232898() in E:\2020\April\eMenus_Atomation\ProductLibrary\eMenus\AppModule\MainAdminApp\TP_231897_PropertyAdmin.cs:line 732
+   at eMenus.AppModule.MainAdminApp.MainAdminApp.TP_231897() in E:\2020\April\eMenus_Atomation\ProductLibrary\eMenus\AppModule\MainAdminApp.cs:line 35
+   at eMenus.TestPlan.HotelOrigami.eMenu_TP_231897_PropertyAdmin.TC_232898() in E:\2020\April\eMenus_Atomation\ProductLibrary\eMenus\TestPlan\HotelOrigami\eMenu_TP_231897_PropertyAdmin.cs:line 256
+2021-06-24 10:57:47,812 ::INFO ::[Logger]:: E.N.D

@@ -1,0 +1,108 @@
+2021-06-25 10:19:46,480 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-06-25 10:19:46,548 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-06-25 10:19:46,561 ::INFO ::[Logger]::  is used for Testing
+2021-06-25 10:19:46,569 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DEMACBACK%26redirect_uri%3Dhttps%253A%252F%252Fqacendynadmin.menusaccess.com%26response_mode%3Dform_post%26response_type%3Dcode%2520id_token%26scope%3Dopenid%2520roles%2520profile%2520write%2520offline_access%2520CendynAccessApi%26state%3DOpenIdConnect.AuthenticationProperties%253DXjrib-wF3XtpDOabvACD9l8r23glest2Ek87vqFtJZMBgrZ5VBuP4BPgBt9vUB1rru24TaPV041t-qLKrEj7t352wRXnnClHk3gbgKTh6JLiuMrJAiNp0156PT3vhPtCDr2hXbD_4bS4RrIsWRg_8ZVtNxuhDrBmgcFwtr7GJeYwIlRhp-kGdJZ6m_1cACFIrz38SQRfmBsUQP7ZgbU1cKJzPbI%26nonce%3D637601933815574507.MzI2ZjcxMzAtMjMyNi00YjVjLWIzMTctYjBhMmQ1ZmYxYzI3NTFlYjIzYTUtYzlkMS00MTIzLThkZDUtMGVhYmExNDhlNzll%26ui_locales%3Den-US
+2021-06-25 10:19:46,995 ::INFO ::[Logger]:: Execution started at:-Jun-25-2021 10-19-46-AM
+2021-06-25 10:19:46,999 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-06-25 10:19:47,000 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-06-25 10:19:47,000 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_232159         XXXXXXXXXXXXXXXX
+2021-06-25 10:19:47,001 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-06-25 10:19:47,007 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=744}
+2021-06-25 10:19:50,009 ::DEBUG::[Logger]:: 1) Landed on Admin Login Page
+2021-06-25 10:19:56,904 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Username element on the PropertyAdmin page.
+2021-06-25 10:20:01,997 ::INFO ::[Logger]:: Clicked the Click_NextButton element on the PropertyAdmin page.
+2021-06-25 10:20:06,179 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Password element on the PropertyAdmin page.
+2021-06-25 10:20:06,180 ::DEBUG::[Logger]:: 2) Entered Username =qacendynautomation@cendyn17.com and Password =Cendyn123$
+2021-06-25 10:20:13,731 ::INFO ::[Logger]:: Clicked the Click_LoginButton element on the PropertyAdmin page.
+2021-06-25 10:20:23,241 ::INFO ::[Logger]:: Clicked the Cendyn_Property_Dropdown element on the CendynAdmin page.
+2021-06-25 10:20:23,295 ::DEBUG::[Logger]:: 3) Clicked on Select Property Drop-down
+2021-06-25 10:20:29,953 ::INFO ::[Logger]:: Inserted text in the Enter_Property_TextBox element on the PropertyAdmin page.
+2021-06-25 10:20:29,955 ::DEBUG::[Logger]:: 4) Entered Property
+2021-06-25 10:20:38,835 ::INFO ::[Logger]:: Selected the Hotel Origami value from the Cendyn_select_Property drop down.
+2021-06-25 10:20:38,837 ::DEBUG::[Logger]:: 5) Hotel Origami Property got Selected
+2021-06-25 10:20:50,160 ::INFO ::[Logger]:: Clicked the Supplier_Tab element on the CendynAdmin page.
+2021-06-25 10:20:50,161 ::DEBUG::[Logger]:: 6) landed on supplier page
+2021-06-25 10:20:57,419 ::INFO ::[Logger]:: Clicked the Click_category element on the CendynAdmin page.
+2021-06-25 10:20:57,422 ::DEBUG::[Logger]:: 7) Landed on Category page
+2021-06-25 10:21:04,698 ::INFO ::[Logger]:: Clicked the Add_category element on the CendynAdmin page.
+2021-06-25 10:21:06,766 ::INFO ::[Logger]:: Add Category Found on the page
+2021-06-25 10:21:08,801 ::INFO ::[Logger]:: Add Category Found on the page
+2021-06-25 10:21:08,803 ::DEBUG::[Logger]:: 8) Add category pop up is displayed
+2021-06-25 10:21:16,057 ::INFO ::[Logger]:: Clicked the Add_category_Save element on the CendynAdmin page.
+2021-06-25 10:21:18,126 ::INFO ::[Logger]:: Category Name should not be blank. Found on the page
+2021-06-25 10:21:18,128 ::DEBUG::[Logger]:: 9) Validation message is displayed for required field
+2021-06-25 10:21:24,491 ::INFO ::[Logger]:: Inserted text in the Enter_Category_Name element on the CendynAdmin page.
+2021-06-25 10:21:24,493 ::DEBUG::[Logger]:: 10) Entered the Category Details
+2021-06-25 10:21:32,036 ::INFO ::[Logger]:: Clicked the Add_category_Save element on the CendynAdmin page.
+2021-06-25 10:21:32,038 ::DEBUG::[Logger]:: 11) Category should get added successfully
+2021-06-25 10:21:35,198 ::DEBUG::[Logger]:: 12) Added category displayed
+2021-06-25 10:21:42,404 ::INFO ::[Logger]:: Clicked the Click_addSub_category element on the CendynAdmin page.
+2021-06-25 10:21:42,405 ::DEBUG::[Logger]:: 13) Sub category drop-down displayed
+2021-06-25 10:21:49,632 ::INFO ::[Logger]:: Clicked the Click_Addnav element on the CendynAdmin page.
+2021-06-25 10:21:49,633 ::DEBUG::[Logger]:: 14) Sub category pop up displayed
+2021-06-25 10:21:56,849 ::INFO ::[Logger]:: Clicked the Sub_category_Save element on the CendynAdmin page.
+2021-06-25 10:21:58,888 ::INFO ::[Logger]:: Category Name should not be blank. Found on the page
+2021-06-25 10:21:58,890 ::DEBUG::[Logger]:: 15) Validation message displayed for required filed
+2021-06-25 10:22:05,239 ::INFO ::[Logger]:: Inserted text in the Enter_Sub_Category_Name element on the CendynAdmin page.
+2021-06-25 10:22:05,241 ::DEBUG::[Logger]:: 16) Entered Sub category name
+2021-06-25 10:22:13,361 ::INFO ::[Logger]:: Clicked the Sub_category_Save element on the CendynAdmin page.
+2021-06-25 10:22:13,362 ::DEBUG::[Logger]:: 17) Sub category added successfully
+2021-06-25 10:22:20,641 ::INFO ::[Logger]:: Clicked the Click_addSub_sub_category element on the CendynAdmin page.
+2021-06-25 10:22:20,646 ::DEBUG::[Logger]:: 18) Sub-sub category drop-down displayed
+2021-06-25 10:22:27,836 ::INFO ::[Logger]:: Clicked the Click_Sub_Addnav element on the CendynAdmin page.
+2021-06-25 10:22:27,838 ::DEBUG::[Logger]:: 19) Sub-sub category pop up displayed
+2021-06-25 10:22:35,104 ::INFO ::[Logger]:: Clicked the Sub_Sub_category_Save element on the CendynAdmin page.
+2021-06-25 10:22:37,141 ::INFO ::[Logger]:: Category Name should not be blank. Found on the page
+2021-06-25 10:22:37,144 ::DEBUG::[Logger]:: 20) Validation message displayed for required filed
+2021-06-25 10:22:43,518 ::INFO ::[Logger]:: Inserted text in the Enter_Sub_Sub_Category element on the CendynAdmin page.
+2021-06-25 10:22:43,519 ::DEBUG::[Logger]:: 21) Enter Sub-sub category name
+2021-06-25 10:22:51,666 ::INFO ::[Logger]:: Clicked the Sub_Sub_category_Save element on the CendynAdmin page.
+2021-06-25 10:22:51,667 ::DEBUG::[Logger]:: 22) Sub-Sub category added successfully
+2021-06-25 10:22:58,950 ::INFO ::[Logger]:: Clicked the Click_Dropdown element on the CendynAdmin page.
+2021-06-25 10:22:58,951 ::DEBUG::[Logger]:: 23) Dropdown item is displayed
+2021-06-25 10:23:37,769 ::INFO ::[Logger]:: Clicked the Click_Property_Admin element on the CendynAdmin page.
+2021-06-25 10:23:37,771 ::DEBUG::[Logger]:: 24) Click Property admin
+2021-06-25 10:23:41,085 ::DEBUG::[Logger]:: 25) Landed on property admin page
+2021-06-25 10:23:48,992 ::INFO ::[Logger]:: Clicked the Click_Select_PropertyDropdown element on the PropertyAdmin page.
+2021-06-25 10:23:49,011 ::DEBUG::[Logger]:: 26) Clicked on Select Property Drop-down
+2021-06-25 10:23:56,089 ::INFO ::[Logger]:: Inserted text in the Enter_Property_TextBox element on the PropertyAdmin page.
+2021-06-25 10:23:56,091 ::DEBUG::[Logger]:: 27) Entered Property
+2021-06-25 10:24:15,347 ::INFO ::[Logger]:: Selected the Hotel Origami value from the Select_Property_Dropdown drop down.
+2021-06-25 10:24:15,349 ::DEBUG::[Logger]:: 28) Hotel Origami Property got Selected
+2021-06-25 10:24:22,598 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-06-25 10:24:26,135 ::INFO ::[Logger]:: Found the text: 'FirstLevel_229' on the PropertyAdmin page.
+2021-06-25 10:24:26,136 ::DEBUG::[Logger]:: 29) Added category displayed on property admin page
+2021-06-25 10:24:33,462 ::INFO ::[Logger]:: Clicked the Added_CategoryDropDown element on the CendynAdmin page.
+2021-06-25 10:24:33,464 ::DEBUG::[Logger]:: 30) Category displayed with sub categories
+2021-06-25 10:24:40,785 ::INFO ::[Logger]:: Clicked the Added_CategoryDropDown element on the CendynAdmin page.
+2021-06-25 10:24:40,787 ::DEBUG::[Logger]:: 31) Category displayed with sub categories
+2021-06-25 10:24:42,938 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-06-25 10:25:03,185 ::INFO ::[Logger]:: Clicked the Click_Publish_Button element on the PropertyAdmin page.
+2021-06-25 10:25:03,204 ::DEBUG::[Logger]:: 32) Changes are displaying on Overlay and Needs to Publish
+2021-06-25 10:25:10,455 ::INFO ::[Logger]:: Clicked the Click_Form_Publish_Button element on the PropertyAdmin page.
+2021-06-25 10:25:37,138 ::FATAL::[Logger]:: Unable to click the Click_Publish_Button element on the PropertyAdmin page.OpenQA.Selenium.ElementClickInterceptedException: element click intercepted: Element <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#publishModal">...</button> is not clickable at point (1307, 141). Other element would receive the click: <div class="modal fade in" id="publishModal" tabindex="-1" role="dialog" style="display: block;">...</div>
+  (Session info: chrome=91.0.4472.114)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in E:\2020\April\eMenus_Atomation\BaseUtility\Utility\Helper.cs:line 54
+2021-06-25 10:30:37,938 ::ERROR::[Logger]:: eMenus_Flow :: Script::Failed
+OpenQA.Selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=91.0.4472.114)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.set_Url(String value)
+   at eMenus.AppModule.Admin.PropertyAdmin.PropertyAdmin_Non2Factor() in E:\2020\April\eMenus_Atomation\ProductLibrary\eMenus\AppModule\Admin\PropertyAdmin.cs:line 1942
+   at eMenus.AppModule.MainAdminApp.MainAdminApp.TC_232159() in E:\2020\April\eMenus_Atomation\ProductLibrary\eMenus\AppModule\MainAdminApp\TP_231897_CendynAdmin.cs:line 162
+   at eMenus.AppModule.MainAdminApp.MainAdminApp.TP_231898() in E:\2020\April\eMenus_Atomation\ProductLibrary\eMenus\AppModule\MainAdminApp.cs:line 48
+   at eMenus.TestPlan.HotelOrigami.eMenu_TP_231898_Cendynadmin.TC_232159() in E:\2020\April\eMenus_Atomation\ProductLibrary\eMenus\TestPlan\HotelOrigami\eMenu_TP_231898_CendynAdmin.cs:line 101
+2021-06-25 10:30:44,008 ::ERROR::[Logger]:: Error in Takescreenshot code
+2021-06-25 10:30:49,049 ::ERROR::[Logger]:: Exception while taking screenshot
+OpenQA.Selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=91.0.4472.114)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.GetScreenshot()
+   at InfoMessageLogger.ReportGeneration.CaptureScreenshot.CapturescreenShot(String filename) in E:\2020\April\eMenus_Atomation\InfoMessageLogger\ReportGeneration\CaptureScreenshot.cs:line 29
+2021-06-25 10:30:56,903 ::INFO ::[Logger]:: E.N.D

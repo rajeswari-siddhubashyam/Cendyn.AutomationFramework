@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <Login>
+    <Parameter key="Enter_EmailAddress">//*[@id="emailAddress"]</Parameter>
+    <Parameter key="Enter_Password">//*[@id="password"]</Parameter>
+    <Parameter key="Click_SignIn_Button">//*[@id='login-submit']</Parameter>
+    <Parameter key="Click_Next_Button">//*[@id="email-submit"]</Parameter>
+    <Parameter key="Select_DropDown">//*[@id="UserMenu"]</Parameter>
+    <Parameter key="LogOut_Button">//button[@name='topUser$ctl00$btnLogOut']</Parameter>
+  </Login>
+
+  <Navigation>
+    <Parameter key="Click_SubmitRequest">//button[contains(text(),'Submit a Request')]</Parameter>
+    <Parameter key="Click_UAT">UATTab</Parameter>
+    <Parameter key="Click_Automation">//*[@id='AutomationTab']</Parameter>
+    <Parameter key="Click_TA">//*[@id="UserMenu"]//span[contains(text(),'TA')]</Parameter>
+    <Parameter key="Click_RS">//*[@id="UserMenu"]//span[contains(text(),'RS')]</Parameter>
+    <Parameter key="Click_change_password">//span[contains(text(),'change password')]</Parameter>
+    <Parameter key="Change_password_Cancel_button">//input[@id='login-cancelResetPassword']</Parameter>
+    <Parameter key="Enter_Current_Password">//*[@id='oldPassword']</Parameter>
+    <Parameter key="Enter_New_Password">//*[@id='password']</Parameter>
+    <Parameter key="Enter_Confirm_Password">//*[@id='RenterPassword']</Parameter>
+    <Parameter key="Click_Change_Password_button">//*[@id='login-resetPassword']</Parameter>
+    <Parameter key="incorrect_current_password_validation">//*[@id="resetPassword"]//span[@data-valmsg-for='RenterPassword']</Parameter>
+    <Parameter key="Tenant_21C">(//a[contains(text(),'21C')])[3]</Parameter>
+   <Parameter key="Hard_Rock">Hard Rock</Parameter>
+    <Parameter key="Kerzner">Kerzner</Parameter>
+    <Parameter key="D_Rock">D Rock</Parameter>
+    <Parameter key="Filament">//a[contains(text(),'Filament')]</Parameter>
+    <Parameter key="Benchmark_Hospitality">//a[contains(text(),'Benchmark Hospitality')]</Parameter>
+    <Parameter key="Ocean_House">Ocean House</Parameter>
+    <Parameter key="BusinessSource">//span[contains(text(),'Business Source')]</Parameter>
+    <Parameter key="AgentAnalysis">(//form[@id='form1']//span[contains(text(),'Agent Analysis')])[1]</Parameter>
+    <Parameter key="Market">(//span[contains(text(),'Market')])[16]</Parameter>
+    <Parameter key="Market_Report">//span[contains(text(),'Market Report')]</Parameter>
+    <Parameter key="Click_Menu_Market">//*[@id="RadMenu1"]/div[1]/ul/li[6]/span/span[1]</Parameter>
+    <Parameter key="Booking_Trends">//span[contains(text(),'Booking Trends')]</Parameter>
+    <Parameter key="Channel">//*[@id="RadMenu1"]//span[contains(text(),'Channel')]</Parameter>
+    <Parameter key="Forecast_and_Budget">//span[contains(text(),'Forecast and Budget')]</Parameter>
+    <Parameter key="Adhoc">//span[contains(text(),'Adhoc')]</Parameter>
+    <Parameter key="Geo_Source">//span[contains(text(),'Geo Source')]</Parameter>
+    <Parameter key="Room_Type">(//span[contains(text(),'Room Type')])[5]</Parameter>
+    <Parameter key="Time_Period">//span[contains(text(),'Time Period')]</Parameter>
+    <Parameter key="Room_Rate">//span[contains(text(),'Room Rate')]</Parameter>
+    <Parameter key="Click_RainMaker">//span[contains(text(),'Rainmaker')]</Parameter>
+    <Parameter key="Portfolio">(//span[contains(text(),'Portfolio')])[3]</Parameter>
+    <Parameter key="Portfolio_Report">//span[contains(text(),'Portfolio Report')]</Parameter>
+    <Parameter key="Click_Hamburger_Icon">(//div[@id='RadMenu1']//span[@class='rnvMore rnvRight'])</Parameter>
+    <Parameter key="Iframe_user_preferences">//iframe[@name='wndUserPreference']</Parameter>
+    <Parameter key="user_preferences">//span[contains(text(),'user preferences')]</Parameter>
+    <Parameter key="user_preferences_Hotel">//*[@id='HotelPortfolioDropdown_Input']</Parameter>
+    <Parameter key="user_preferences_Hotel_select">//li[contains(text(),'Mazagan Beach')]</Parameter>
+    <Parameter key="user_preferences_Hotel_Default">//li[contains(text(),'Atlantis, The Palm')]</Parameter>
+    <Parameter key="user_preferences_BusinessUnit">//*[@id='wcBusinessUnit_Input']</Parameter>
+    <Parameter key="user_preferences_Currency">//*[@id='wcCurrency_Input']</Parameter>
+    <Parameter key="user_preferences_Currency_Select">(//li[contains(text(),'AED')])[1]</Parameter>
+    <Parameter key="user_preferences_Currency_Default">(//li[contains(text(),'AUD')])[1]</Parameter>
+    <Parameter key="user_preferences_Save">btnSave</Parameter>
+    <Parameter key="user_preferences_Close">//img[@src='/CommonLibrary/Images/WebDesktop/o7/close_active.gif']</Parameter>
+    <Parameter key="Help_Menu">//*[@id='HelpMenu']</Parameter>
+    <Parameter key="Training">//*[contains(text(),'Training')]</Parameter>
+    <Parameter key="Release_note">//*[contains(text(),'release notes')]</Parameter>
+    <Parameter key="Administration">//span[contains(text(),'Administration')]</Parameter>
+    <Parameter key="User_Maintenance">//span[contains(text(),'User Maintenance')]</Parameter>
+    <Parameter key="Add_New_User">//a[contains(text(),'Add New User')]</Parameter>
+    <Parameter key="Iframe_user_Maintenance">//iframe[@name='User Maintenance']</Parameter>
+    <Parameter key="user_Maintenance_Save">//*[@id='btnSave']</Parameter>
+    <Parameter key="user_Maintenance_Close">//*[@id="RadWindowWrapper_UserAddDialog"]/table/tbody/tr[1]/td[2]/table/tbody/tr/td[3]/ul/li/a/span</Parameter>
+    <Parameter key="user_Id">//*[@id='txtUserId']</Parameter>
+    <Parameter key="Add_User_Email">//*[@id='txtEmailAddress']</Parameter>
+    <Parameter key="Add_User_FirstName">//*[@id="txtFirstName"]</Parameter>
+    <Parameter key="Add_User_LastName">//*[@id="txtLastName"]</Parameter>
+    <Parameter key="Select_Available_Hotels">//*[@id="lbAvailable"]/table/tbody/tr/td/a[3]/span/span/span/span/span</Parameter>
+    <Parameter key="Iframe_Add_User">//iframe[@name='UserAddDialog']</Parameter>
+    <Parameter key="Corporate_Portfolio">//span[contains(text(),'Corporate Portfolio')]</Parameter>
+    <Parameter key="Add_New_Portfolio">//a[contains(text(),'Add New Portfolio')]</Parameter>
+    <Parameter key="iframe_New_Portfolio">//iframe[@name='Corporate Portfolio']</Parameter>
+    <Parameter key="Portfolio_name">//*[@id="txtPortfolioNm"]</Parameter>
+    <Parameter key="Pace_Forecast_Report">//span[contains(text(),'Pace and Forecast Report')]</Parameter>
+    <Parameter key="iFrame_Pace_Forecast_Report">//iframe[@name='Pace and Forecast Report']</Parameter>
+    <Parameter key="Agent_Summary">(//form[@id='form1']//span[contains(text(),'Agent Summary')])[1]</Parameter>
+    <Parameter key="Parent_Company_Analysis">//span[contains(text(),'Parent Company Analysis')]</Parameter>
+    <Parameter key="Parent_Travel_Agent_Analysis">//span[contains (text(),'Parent Travel Agent Analysis')]</Parameter>
+    <Parameter key="Company_Period_Summary">//span[contains (text(),'Company Period Summary')]</Parameter>
+    <Parameter key="Agent_Period_Summary">//span[contains (text(),'Agent Period Summary')]</Parameter>
+    <Parameter key="Agent_Trend_Report">//span[contains (text(),'Agent Trend Report')]</Parameter>
+    <Parameter key="Company_Trend_Report">//span[contains (text(),'Company Trend Report')]</Parameter>
+    <Parameter key="Agent_By_Hotel">//*[@id="form1"]/div[3]/div[1]/div/ul/li[2]/a/span</Parameter>
+    <Parameter key="Channel_By_Hotel">//span[contains(text(),'Channel By Hotel Report')]</Parameter>
+    <Parameter key="Company_By_Hotel">//span[contains(text(),'Company By Hotel')]</Parameter>
+    <Parameter key="Market_By_Hotel_Report">//span[contains(text(),'Market By Hotel Report')]</Parameter>
+    <Parameter key="Province_and_State_By_Hotel">//span[contains(text(),'Province and State By Hotel')]</Parameter>
+    <Parameter key="Room_Type_By_Hotel">//span[contains(text(),'Room Type By Hotel')]</Parameter>
+    <Parameter key="Source_Market_By_Hotel">//span[contains(text(),'Source Market By Hotel')]</Parameter>
+    <Parameter key="Pace_Report">//span[contains(text(),'Pace Report')]</Parameter>
+    <Parameter key="Pace_Trend">//span[contains(text(),'Pace Trend')]</Parameter>
+    <Parameter key="Daily_Pace_and_Pickup_Analysis">//span[contains(text(),'Daily Pace and Pickup Analysis')]</Parameter>
+    <Parameter key="Pace_and_Pickup_Analysis">(//span[contains(text(),'Pace and Pickup Analysis')])[2]</Parameter>
+    <Parameter key="Rate_Code_Pace_Report">//span[contains(text(),'Rate Code Pace Report')]</Parameter>
+    <Parameter key="Channel_By_Room_Type_Pace">//span[contains(text(),'Channel By Room Type Pace')]</Parameter>
+    <Parameter key="Channel_Pace_Analysis">//span[contains(text(),'Channel Pace Analysis')]</Parameter>
+    <Parameter key="Pickup_By_Day">(//span[contains(text(),'Pickup by Day')])[2]</Parameter>
+    <Parameter key="Annual_Pickup_by_Day">//span[contains(text(),'Annual Pickup by Day')]</Parameter>
+    <Parameter key="Length_of_Stay_Report">//span[contains(text(),'Length of Stay Report')]</Parameter>
+    <Parameter key="Rooms_Lead_Time">//span[contains(text(),'Rooms Lead Time')]</Parameter>
+    <Parameter key="Pickup_By_Day_Detailed">//span[contains(text(),'Pickup By Day Detailed')]</Parameter>
+    <Parameter key="Monthly_Pickup">//span[contains(text(),'Monthly Pickup')]</Parameter>
+    <Parameter key="Click_Help_Icon">//*[@id='Embed']//button</Parameter>
+    <Parameter key="Enter_Help_Text">//input[@placeholder='How can we help?']</Parameter>
+    <Parameter key="Click_Contact_us_Icon">//*[@id='Embed']//button[contains(text(),'Contact us')]</Parameter>
+    <Parameter key="Click_Portal_Update_Button">//*[@value='Update']</Parameter>
+    <Parameter key="Click_Link_Portal">//*[@id='RadMenu1']//a[contains(@href,'Dashboard/MonthlyPickupBudgetV2')]</Parameter>
+    <Parameter key="Click_Link_Hotel_Dashboard">//*[@id='RadMenu1']//a[contains(@href, 'Dashboard/Hotel.aspx')]</Parameter>
+    <Parameter key="Hotel_Dashboard_iFrame">//*[@id='dvWnd_WebDesktopManager1_Hotel Dashboard']//iframe[@name = 'Hotel Dashboard']</Parameter>
+    <Parameter key="Hotel_Event_Calendar">//span[contains(text(),'Hotel Event Calendar')]</Parameter>
+    <Parameter key="Click_Help_Icon_Minimize">//button[@data-garden-id='buttons.icon_button']</Parameter>
+    <Parameter key="Production_Patterns">//span[contains(text(),'Production Patterns')]</Parameter>
+    <Parameter key="High_Occupancy_Night_By_Day">//span[contains(text(),'High Occupancy Night By Day')]</Parameter>
+    <Parameter key="Sold_Out_Night_Analysis">//span[contains(text(),'Sold Out Night Analysis')]</Parameter>
+    <Parameter key="Cancellation_Report">//span[contains(text(),'Cancellation Report')]</Parameter>
+    <Parameter key="Channel_Report">//span[contains(text(),'Channel Report')]</Parameter>
+    <Parameter key="Pace_and_Forecast_Report">//span[contains(text(),'Pace and Forecast Report')]</Parameter>
+    <Parameter key="Stay_Graph">//span[contains(text(),'Stay Graph')]</Parameter>
+    <Parameter key="Source_Market_Trend">//span[contains(text(),'Source Market Trend')]</Parameter>
+    <Parameter key="Room_Type_Analysis">(//span[contains(text(),'Room Type Analysis')])[2]</Parameter>
+    <Parameter key="Day_of_Week_Statistics">//span[contains(text(),'Day of Week Statistics')]</Parameter>
+    <Parameter key="Total_Revenue_Analysis">//span[contains(text(),'Total Revenue Analysis')]</Parameter>
+    <Parameter key="Custom">//span[contains(text(),'Custom')]</Parameter>
+    <Parameter key="OTB_Comparison_for_All_Segments">//span[contains(text(),'OTB Comparison for All Segments')]</Parameter>
+    <Parameter key="Enter_Contact_Name">//input[@name='name']</Parameter>
+    <Parameter key="Enter_Contact_Email">//input[@name='email']</Parameter>
+    <Parameter key="Enter_Contact_Subject">//input[@name='subject']</Parameter>
+    <Parameter key="Enter_Contact_Property">//input[contains(@name,'key')]</Parameter>
+    <Parameter key="Enter_Contact_Description">//textarea[@name='description']</Parameter>
+    <Parameter key="Click_Contact_Send">//*[@id='Embed']//button[contains(text(),'Send')]</Parameter>
+    <Parameter key="Click_Contact_Support_Dropdown">(//div[@data-garden-id = 'dropdowns.faux_input'])[1]</Parameter>
+    <Parameter key="Click_Contact_Support_Services">//*[contains(text(),'Revenue Services')]</Parameter>
+    <Parameter key="Click_Contact_Support_Sub_Services">//*[contains(text(),'Revintel')]</Parameter>
+    <Parameter key="Hotel">(//span[contains(text(),'Hotel')])[10]</Parameter>
+    <Parameter key="Market_Performance">//span[contains(text(),'Market Performance')]</Parameter>
+    <Parameter key="Market_Trend_Report">//span[contains(text(),'Market Trend Report')]</Parameter>
+    <Parameter key="Market_Segment_by_Day">//span[contains(text(),'Market Segment by Day')]</Parameter>
+    <Parameter key="Market_Segment_by_Day_Summary">//span[contains(text(),'Market Segment by Day Summary')]</Parameter>
+    <Parameter key="Annual_Market_Analysis_by_Month">//span[contains(text(),'Annual Market Analysis by Month')]</Parameter>
+    <Parameter key="Rate_Code_Analysis">//span[contains(text(),'Rate Code Analysis')]</Parameter>
+    <Parameter key="Market_Analysis_by_Year">//span[contains(text(),'Market Analysis by Year')]</Parameter>
+    <Parameter key="Monthly_Market_Segment_Report">//span[contains(text(),'Monthly Market Segment Report')]</Parameter>
+    <Parameter key="Rate_Code_Trend_Report">//span[contains(text(),'Rate Code Trend Report')]</Parameter>
+    <Parameter key="Click_Forecast_Budget_Upload_Report">//span[contains(text(),'Forecast Budget Upload')]</Parameter>
+    <Parameter key="Click_Source_Market_Analysis_Report">//span[contains(text(),'Source Market Analysis')]</Parameter>
+    <Parameter key="Click_Source_Market_Trend_Report">//span[text()='Source Market Trend']</Parameter>
+    <Parameter key="Click_Province_and_State_Analysis_Report">//span[contains(text(),'Province and State Analysis')]</Parameter>
+    <Parameter key="Click_United_States_Trend_Report">//span[contains(text(),'United States Trend')]</Parameter>
+    <Parameter key="Click_Room_Type_Analysis_Report">(//span[contains(text(),'Room Type Analysis')])[2]</Parameter>
+    <Parameter key="Click_Room_Type_and_Up_Grade_Statistics_Report">(//span[contains(text(),'Room Type and Up Grade Statistics')])[1]</Parameter>
+    <Parameter key="Click_Booked_Room_Materialization_Report">//span[contains(text(),'Booked Room Materialization')]</Parameter>
+    <Parameter key="Click_Detailed_Room_Type_Availability_Report">//span[contains(text(),'Detailed Room Type Availability')]</Parameter>
+    <Parameter key="Click_Time_Period_Menu">//span[contains(text(),'Time Period')]</Parameter>
+    <Parameter key="Click_Annual_Trends_Report">//span[contains(text(),'Annual Trends')]</Parameter>
+    <Parameter key="Click_Daily_Analysis_Report">//span[contains(text(),'Daily Analysis')]</Parameter>
+    <Parameter key="Click_Day_of_Week_Statistics_Report">//span[contains(text(),'Day of Week Statistics')]</Parameter>
+    <Parameter key="Click_Monthly_Summary_Report">//span[contains(text(),'Monthly Summary')]</Parameter>
+    <Parameter key="Click_Day_of_Week_Analysis_Report">//span[contains(text(),'Day of Week Analysis')]</Parameter>
+    <Parameter key="Click_Daily_Analysis_PerPerson_Report">//span[contains(text(),'Daily Analysis PerPerson')]</Parameter>
+    <Parameter key="Click_Custom_Menu">//span[contains(text(),'Custom')]</Parameter>
+    <Parameter key="Click_OTB_Comparison_by_Segment_Reports">//span[contains(text(),'OTB Comparison by Segment')]</Parameter>
+    <Parameter key="Click_Daily_Pick_Up_Report">//span[contains(text(),'Daily Pick Up Report')]</Parameter>
+    <Parameter key="Click_Revenue_By_Room_Product_Report">//span[contains(text(),'Revenue By Room Product')]</Parameter>
+    <Parameter key="Click_Pickup_by_Market_Segment_Report">//span[contains(text(),'Pickup by Market Segment')]</Parameter>
+    <Parameter key="Click_OTB_Comparison_for_All_Segments_Report">//a[@class='rnvLink']//*[contains(text(),'OTB Comparison for All Segments')]</Parameter>
+    <Parameter key="Click_OTB_vs_Budget_by_Segment_Report">//span[contains(text(),'OTB vs Budget by Segment')]</Parameter>
+    <Parameter key="Click_OTB_vs_Forecast_by_Segment_Report">//span[contains(text(),'OTB vs Forecast by Segment')]</Parameter>
+    <Parameter key="Click_Room_Type_Booked_vs_Occupied">//span[contains(text(),'Room Type Booked vs Occupied')]</Parameter>
+    <Parameter key="Click_Access_Log">//span[contains(text(),'Access Log')]</Parameter>
+    <Parameter key="Click_Parent_Company">(//span[contains(text(),'Parent Company')])[2]</Parameter>
+    <Parameter key="Click_User_Access_Report">//span[contains(text(),'User Access Report')]</Parameter>
+    <Parameter key="Click_Room_Rate_Menu">//span[contains(text(),'Room Rate')]</Parameter>
+    <Parameter key="Best_Available_Rate_Contribution_Report">//span[contains(text(),'Best Available Rate Contribution')]</Parameter>
+    <Parameter key="Click_Total_Revenue_Analysis_Report">//span[contains(text(),'Total Revenue Analysis')]</Parameter>
+    <Parameter key="Click_UserMenu">(//div[@id='UserMenu']//span)[2]</Parameter>
+    <Parameter key="Click_UserMenu_ReportScheduler">//*[@id='topUser_ctl00_LogoutSiteMap_i2_reportSched']/span</Parameter>
+    <Parameter key="Click_UserMenu_ManageReportSchedules">//*[@id="topUser_ctl00_LogoutSiteMap_i3_manageSched"]/span</Parameter>
+    <Parameter key="Click_RainMaker_MoreButton">//*[@id="RadMenu1"]/div[1]/span</Parameter>
+    <Parameter key="Click_SubscriptionSupport">//span[contains(text(),'Subscription Support')]</Parameter>
+    <Parameter key="Click_Hotel_Dashboard">//span[contains(text(),'Hotel Dashboard')]</Parameter>
+    <Parameter key="Click_Agent_Dashboard">//span[contains(text(),'Agent Dashboard')]</Parameter>
+    <Parameter key="Click_Company_Dashboard">//span[contains(text(),'Company Dashboard')]</Parameter>
+    <Parameter key="Click_Market_Dashboard">//span[contains(text(),'Market Dashboard')]</Parameter>
+    <Parameter key="Click_Channel_Dashboard">//span[contains(text(),'Channel Dashboard')]</Parameter>
+    <Parameter key="Click_Room_Type_Dashboard">//span[contains(text(),'Room Type Dashboard')]</Parameter>
+    <Parameter key="Click_Negotiated_Dashboard">//span[contains(text(),'Negotiated Dashboard')]</Parameter>
+    <Parameter key="Click_Pace_Dashboard">//span[contains(text(),'Pace Dashboard')]</Parameter>
+    <Parameter key="Click_Channel_Trend_Report">//span[contains(text(),'Channel Trend Report')]</Parameter>
+    <Parameter key="Click_Daily_Channel_by_Room_Type">//span[contains(text(),'Daily Channel by Room Type')]</Parameter>
+    <Parameter key="Click_Stay_Graph_Report">//span[contains(text(),'Stay Graph')]</Parameter>
+    <Parameter key="Click_Menu_Room_Type">//*[@id="form1"]/div[3]/div[8]/div/ul/li[2]/span/span[2]</Parameter>
+    <Parameter key="Click_Pace_and_Forecast_Report">//span[contains(text(),'Pace and Forecast Report')]</Parameter>
+    <Parameter key="Click_User_Preference_Portfolio_Toggle_button">//*[@id="ConfigsTabbedControl"]/div/ul/li[2]/a/span/span/span</Parameter>
+    <Parameter key="Click_change_tenant">//span[contains(text(),'change tenant')]</Parameter>
+    
+    <Parameter key="Click_Business_Unit_Grouping">//span[contains(text(),'Business Unit Grouping')]</Parameter>
+    <Parameter key="Click_Add_New_Business_Unit_Group">//a[contains(text(),'Add New Business Unit Group')]</Parameter>
+    <Parameter key="Click_Channel_Mapping">//span[contains(text(),'Channel Mapping')]</Parameter>
+    <Parameter key="Click_Room_Type_Mapping">//span[contains(text(),'Room Type Mapping')]</Parameter>
+    <Parameter key="Click_Market_Mapping">//span[contains(text(),'Market Mapping')]</Parameter>
+  
+  
+  </Navigation>
+
+  <ReportParameter>
+    <Parameter key="Click_Currency_Dropdown">//a[@id='wcCurrency_Arrow']</Parameter>
+    <Parameter key="Select_Currency_Value">//li[contains(text(),'AUD')]</Parameter>
+    <Parameter key="Click_Business_Unit_Dropdown">//*[@id='rcBusinessUnit_Arrow']</Parameter>
+    <Parameter key="Select_Business_Unit_Value">//*[@id="rcBusinessUnit_DropDown"]//li[contains(text(),'Hotel')]</Parameter>
+    <Parameter key="Select_Hotel">//*[@id="rblHotelPortfolio_ctl00"]</Parameter>
+    <Parameter key="Select_Hotel_DDL">//*[@id='wcHotelPortBrand_Input']</Parameter>
+    <Parameter key="Select_Hotel_value">//*[@id='wcHotelPortBrand_i1_Label1']</Parameter>
+    <Parameter key="Portfolio_RadioButton">//*[@id='rblHotelPortfolio_ctl01']/span[1]</Parameter>
+    <Parameter key="HotelorPortfolio_DDL">wcHotelPortBrand_Input</Parameter>
+    <Parameter key="HotelorPortfolio_Dropdown_Arrow">wcHotelPortBrand_Arrow</Parameter>
+    <Parameter key="Select_Dropdown_Hotel">//span[contains(text(),'   21C Museum Hotel Cincinnati')]</Parameter>
+    <Parameter key="HotelorPortfolio_ListValue">//*[@id='wcHotelPortBrand_DropDown']/div/ul/li</Parameter>
+    <Parameter key="StartDate_Text">txtStartDate_dateInput</Parameter>
+    <Parameter key="EndDate_Text">txtEndDate_dateInput</Parameter>
+    <Parameter key="Select_SourceMarket_DDL">//*[@id='rddtSourceMarketPanel']</Parameter>
+    <Parameter key="Select_SourceMarket_value">//*[@id="rddtSourceMarket_EmbeddedTree"]/ul/li[1]/div/span[3]</Parameter>
+    <Parameter key="Select_RoomProduct_DDL">//*[@id='rddtRoomProduct']</Parameter>
+    <Parameter key="Select_RoomProduct_value">//*[@id="rddtRoomProduct_EmbeddedTree"]/ul/li[1]/div/span[3]</Parameter>
+    <Parameter key="Save_Button">rptViewer_ctl09_ctl04_ctl00_ButtonImg</Parameter>
+    <Parameter key="ReportHeading_Label">_labelReportheadingXpath</Parameter>
+    <Parameter key="Click_View_Analysis">//*[@id='rbViewAnalysis_input']</Parameter>
+    <Parameter key="IFrame_Agent_Analysis">//iframe[@name='Agent Analysis']</Parameter>
+    <Parameter key="Export_Menu">//a[@title='Export drop down menu']</Parameter>
+    <Parameter key="Excel">//a[@title='Excel']</Parameter>
+    <Parameter key="Word">//a[@title='Word']</Parameter>
+    <Parameter key="PDF">//a[@title='PDF']</Parameter>
+    <Parameter key="TIFF">//a[@title='TIFF file']</Parameter>
+    <Parameter key="PowerPoint">//a[contains(text(),'PowerPoint')]</Parameter>
+    <Parameter key="MHTML">//a[contains(text(),'MHTML (web archive)')]</Parameter>
+    <Parameter key="CSV">//a[contains(text(),'CSV (comma delimited)')]</Parameter>
+    <Parameter key="XML">//a[contains(text(),'XML file with report data')]</Parameter>
+    <Parameter key="Data_Feed">//a[contains(text(),'Data Feed')]</Parameter>
+    <Parameter key="Parameter_market">//*[@id='rddtMarket']/span/span[1]</Parameter>
+    <Parameter key="Parameter_market_Direct">(//*[@id='rddtMarket_EmbeddedTree']//span[3])[1]</Parameter>
+    <Parameter key="Parameter_Channel">//*[@id="rddtChannel"]/span/span[1]</Parameter>
+    <Parameter key="Parameter_channel_Hotel_Direct">//*[@id="rddtChannel_EmbeddedTree"]/ul/li[1]/div/span[3]</Parameter>
+    <Parameter key="iframe_Parent_Company_Analysis">//iframe[@name='Parent Company Analysis']</Parameter>
+    <Parameter key="Parent_Company_Analysis_Close">//img[@src='/CommonLibrary/Images/WebDesktop/o7/close_active.gif']</Parameter>
+    <Parameter key="Paremeter_Memberships">//a[@id='rcbMembership_Arrow']</Parameter>
+    <Parameter key="Paremeter_Memberships_value">//*[@id="rcbMembership_i0_rtvMembership"]//span[contains(text(),'All')]</Parameter>
+    <Parameter key="Parent_Travel_Agent_Analysis_Close">//img[@src='/CommonLibrary/Images/WebDesktop/o7/close_active.gif']</Parameter>
+    <Parameter key="iframe_Parent_Travel_Agent_Analysis">//iframe[@name='Parent Travel Agent Analysis']</Parameter>
+    <Parameter key="Parameter_Agent">//*[@id="rddtAgent"]//span[contains(text(),'Filter by Travel Agent...')]</Parameter>
+    <Parameter key="Parameter_Agent_Enter">(//*[@id="form1"]//*[@class='rddtFilterInput radPreventDecorate'])[1]</Parameter>
+    <Parameter key="Parameter_Agent_value">//*[@id="rddtAgent_EmbeddedTree"]/ul/li[3]/div/label/input</Parameter>
+    <Parameter key="iframe_Company_Period_Summary">//iframe[@name='Company Period Summary']</Parameter>
+    <Parameter key="Company_Period_Summary_Close">//img[@src='/CommonLibrary/Images/WebDesktop/o7/close_active.gif']</Parameter>
+    <Parameter key="Agent_Period_Summary_Close">//img[@src='/CommonLibrary/Images/WebDesktop/o7/close_active.gif']</Parameter>
+    <Parameter key="iframe_Agent_Period_Summary">//iframe[@name='Agent Period Summary']</Parameter>
+    <Parameter key="iframe_Agent_Trend_Report">//Iframe[@name='Agent Trend Report']</Parameter>
+    <Parameter key="Agent_Trend_Report_Close">//img[@src='/CommonLibrary/Images/WebDesktop/o7/close_active.gif']</Parameter>
+    <Parameter key="Compare_Start_Date">//*[@id="txtCompareStartDate_dateInput"]</Parameter>
+    <Parameter key="Compare_End_Date">//*[@id="txtCompareEndDate_dateInput"]</Parameter>
+    <Parameter key="iframe_Company_Trend_Report">//iframe[@name='Company Trend Report']</Parameter>
+    <Parameter key="iframe_Portfolio">//iframe[@name='Portfolio Report']</Parameter>
+    <Parameter key="Portfolio_DDL">//*[@id="wcHotelPortBrand_Arrow"]</Parameter>
+    <Parameter key="Portfolio_DDL_value">//*[@id="wcHotelPortBrand_DropDown"]/div/ul/li[2]</Parameter>
+    <Parameter key="iframe_Agent_By_Hotel">//iframe[@name='Agent By Hotel']</Parameter>
+    <Parameter key="Memberships_value_MemberOnly">(//*[@id="rcbMembership_i0_rtvMembership"]//*[contains(text(),'Members Only')])[2]</Parameter>
+    <Parameter key="iframe_channel_By_Hotel">//iframe[@name='Channel By Hotel Report']</Parameter>
+    <Parameter key="Portfolio_Selection_DDL">//*[@id='lblHotelPortBrand']</Parameter>
+    <Parameter key="iframe_company_By_Hotel">//iframe[@name='Company By Hotel']</Parameter>
+    <Parameter key="Parameter_market_Corporate">(//*[@id="rddtMarket_EmbeddedTree"]//*[@class='rtUnchecked'])[6]</Parameter>
+    <Parameter key="iframe_Province_and_State_By_Hotel">//iframe[@name='Province and State By Hotel']</Parameter>
+    <Parameter key="iframe_Room_Type_By_Hotel">//iframe[@name='Room Type By Hotel']</Parameter>
+    <Parameter key="iframe_Source_Market_By_Hotel">//iframe[@name='Source Market By Hotel']</Parameter>
+    <Parameter key="iframe_Market_By_Hotel_Report">//iframe[@name='Market By Hotel Report']</Parameter>
+    <Parameter key="Click_expand_sign">//*[@alt='Expand Afma Group']</Parameter>
+    <Parameter key="Click_collapse_sign">//*[@alt='Collapse Afma Group']</Parameter>
+    <Parameter key="Click_Source_Market_By_Hotel_expand_sign">//img[@alt='Expand Africa']</Parameter>
+    <Parameter key="Click_Source_Market_By_Hotel_collapse_sign">//img[@alt='Collapse Africa']</Parameter>
+    <Parameter key="iframe_Pace_report">//iframe[@name='Pace Report']</Parameter>
+    <Parameter key="Enter_As_Of_Date">//*[@id='txtAsOfDate_dateInput']</Parameter>
+    <Parameter key="Select_Portfolio_value">//*[@id="wcHotelPortBrand_i1_Label1"]/text()</Parameter>
+    <Parameter key="iframe_Pace_Trend">//iframe[@name='Pace Trend']</Parameter>
+    <Parameter key="Enter_Pace_Trend_Start_Month">//*[@id='txtStartMonth_dateInput']</Parameter>
+    <Parameter key="iframe_Daily_Pace_and_Pickup_Analysis">//iframe[@name='Daily Pace and Pickup Analysis']</Parameter>
+    <Parameter key="iframe_Pace_and_Pickup_Analysis">//iframe[@name='Pace and Pickup Analysis']</Parameter>
+    <Parameter key="Parameter_Rate_code_DDL">//*[@id="rddtRateCode"]//span[contains(text(),'Please select')]</Parameter>
+    <Parameter key="Parameter_Rate_code_value">//*[@id="rddtRateCode_EmbeddedTree"]/ul/li[1]/div/span[3]</Parameter>
+    <Parameter key="iframe_Rate_Code_Pace_Report">//iframe[@name='Rate Code Pace Report']</Parameter>
+    <Parameter key="iframe_Channel_By_Room_Type_Pace">//iframe[@name='Channel By Room Type Pace']</Parameter>
+    <Parameter key="iframe_Channel_Pace_Analysis">//iframe[@name='Channel Pace Analysis']</Parameter>
+    <Parameter key="iframe_Pickup_By_Day">//iframe[@name='Pickup by Day']</Parameter>
+    <Parameter key="Pickup_startDate">//input[@id='txtPickupStartDate_dateInput']</Parameter>
+    <Parameter key="Pickup_enddate">//input[@id='txtPickupEndDate_dateInput']</Parameter>
+    <Parameter key="PaceReport_Expand">//img[@alt='Expand Direct']</Parameter>
+    <Parameter key="PaceReport_Collapse">//img[@alt='Collapse Direct']</Parameter>
+    <Parameter key="Monthly_PickupStart">//*[@id="RadToolBar1_i8_rdpPickupStartDate_dateInput"]</Parameter>
+    <Parameter key="Monthly_PickupEnd">//*[@id='RadToolBar1_i9_rdpPickupEndDate_dateInput']</Parameter>
+    <Parameter key="Monthly_Start">//*[@id='RadToolBar1_i10_rdpStartDate_dateInput']</Parameter>
+    <Parameter key="Monthly_End">//*[@id='RadToolBar1_i11_rdpEndDate_dateInput']</Parameter>
+    <Parameter key="iframe_Annual_Pickup_by_Day">//iframe[@name='Annual Pickup by Day']</Parameter>
+    <Parameter key="iframe_Lenght_of_stay_Report">//iframe[@name='Length of Stay Report']</Parameter>
+    <Parameter key="iframe_Rooms_Lead_Time">//iframe[@name='Rooms Lead Time']</Parameter>
+    <Parameter key="iframe_Pickup_By_Day_Detailed">//iframe[@name='Pickup By Day Detailed']</Parameter>
+    <Parameter key="iframe_Production_Patterns">//iframe[@name='Production Patterns']</Parameter>
+    <Parameter key="iframe_High_Occupancy_Night_By_Day">//iframe[@name='High Occupancy Night By Day']</Parameter>
+    <Parameter key="iframe_Sold_Out_Night_Analysis">//iframe[@name='Sold Out Night Analysis']</Parameter>
+    <Parameter key="iframe_Cancellation_Report">//iframe[@name='Cancellation Report']</Parameter>
+    <Parameter key="Monthly_Pickup_Excel">//*[@id="RadToolBar1_i15_ImageButton1"]</Parameter>
+    <Parameter key="Market_Report_Expand_Level">//a[@id='rcbExpand_Arrow']</Parameter>
+    <Parameter key="iframe_Market_Report">//iframe[@name='Market Report']</Parameter>
+    <Parameter key="iframe_Market_Performance">//iframe[@name='Market Performance']</Parameter>
+    <Parameter key="iframe_Market_Trend_Report">//iframe[@name='Market Trend Report']</Parameter>
+    <Parameter key="iframe_Market_Segment_by_Day">//iframe[@name='Market Segment by Day']</Parameter>
+    <Parameter key="iframe_Market_Segment_by_Day_Summary">//iframe[@name='Market Segment by Day Summary']</Parameter>
+    <Parameter key="iframe_Annual_Market_Analysis_by_Month">//iframe[@name='Annual Market Analysis by Month']</Parameter>
+    <Parameter key="iframe_Rate_Code_Analysis">//iframe[@name='Rate Code Analysis']</Parameter>
+    <Parameter key="iframe_Market_Analysis_by_Year">//iframe[@name='Market Analysis by Year']</Parameter>
+    <Parameter key="iframe_Monthly_Market_Segment_Report">//iframe[@name='Monthly Market Segment Report']</Parameter>
+    <Parameter key="iframe_Rate_Code_Trend_Report">//iframe[@name='Rate Code Trend Report']</Parameter>
+    <Parameter key="iframe_Pace_and_Forecast_Report">//iframe[@name='Pace and Forecast Report']</Parameter>
+    <Parameter key="iframe_Source_Market_Analysis_Report">//iframe[@name='Source Market Analysis']</Parameter>
+    <Parameter key="iframe_Source_Market_Trend_Report">//iframe[@name='Source Market Trend']</Parameter>
+    <Parameter key="iframe_Province_and_State_Analysis_Report">//iframe[@name='Province and State Analysis']</Parameter>
+    <Parameter key="iframe_United_States_Trend_Report">//iframe[@name='United States Trend']</Parameter>
+    <Parameter key="iframe_Room_Type_Analysis_Report">//iframe[@name='Room Type Analysis']</Parameter>
+    <Parameter key="iframe_Room_Type_and_Up_Grade_Statistics_Report">//iframe[@name='Room Type and Up Grade Statistics']</Parameter>
+    <Parameter key="iframe_Booked_Room_Materialization_Report">//iframe[@name='Booked Room Materialization']</Parameter>
+    <Parameter key="iframe_Detailed_Room_Type_Availability_Report">//iframe[@name='Detailed Room Type Availability']</Parameter>
+    <Parameter key="iframe_Annual_Trends_Report">//iframe[@name='Annual Trends']</Parameter>
+    <Parameter key="iframe_Daily_Analysis_Report">//iframe[@name='Daily Analysis']</Parameter>
+    <Parameter key="iframe_Monthly_Summary_Report">//iframe[@name='Monthly Summary']</Parameter>
+    <Parameter key="iframe_Day_of_Week_Statistics_Report">//iframe[@name='Day of Week Statistics']</Parameter>
+    <Parameter key="iframe_Day_of_Week_Analysis_Report">//iframe[@name='Day of Week Analysis']</Parameter>
+    <Parameter key="iframe_Daily_Analysis_PerPerson_Report">//iframe[@name='Daily Analysis PerPerson']</Parameter>
+    <Parameter key="iframe_OTB_Comparison_by_Segment_Report">//iframe[@name='OTB Comparison by Segment']</Parameter>
+    <Parameter key="iframe_Daily_Pick_Up_Report">//iframe[@name='Daily Pick Up Report']</Parameter>
+    <Parameter key="iframe_Revenue_By_Room_Product_Report">//iframe[@name='Revenue By Room Product']</Parameter>
+    <Parameter key="iframe_Pickup_by_Market_Segment_Report">//iframe[@name='Pickup by Market Segment']</Parameter>
+    <Parameter key="iframe_OTB_Comparison_for_All_Segments_Report">//iframe[@name='OTB Comparison for All Segments']</Parameter>
+    <Parameter key="iframe_OTB_vs_Budget_by_Segment_Report">//iframe[@name='OTB vs Budget by Segment']</Parameter>
+    <Parameter key="iframe_OTB_vs_Forecast_by_Segment_Report">//iframe[@name='OTB vs Forecast by Segment']</Parameter>
+    <Parameter key="iframe_Room_Type_Booked_vs_Occupied">//iframe[@name='Room Type Booked vs Occupied']</Parameter>
+    <Parameter key="iframe_Access_Log">//iframe[@name='Access Log']</Parameter>
+    <Parameter key="iframe_Parent_Company">//iframe[@name='Parent Company']</Parameter>
+    <Parameter key="Click_Add_New_Parent_Company">//a[contains(text(),'Add New Parent Company')]</Parameter>
+    <Parameter key="Click_Add_New_Parent_Company_Save_Button">//*[@id="btnSave"]</Parameter>
+    <Parameter key="Click_Add_New_Parent_Company_Close_Button">//input[@name='btnClose']</Parameter>
+    <Parameter key="Enter_Parent_Company_Name">//input[@id='txtName']</Parameter>
+    <Parameter key="Click_Parent_Company_Name_Edit_Link">//*[@id="RadGrid1_ctl00_ctl04_EditLink"]</Parameter>
+    <Parameter key="iframe_Add_Parent_Company_PopUp">//*[@id="RadWindowWrapper_AddDialog"]/table/tbody/tr[2]/td[2]/iframe</Parameter>
+    <Parameter key="iframe_User_Access_Report">//iframe[@name='User Access Report']</Parameter>
+    <Parameter key="iframe_Best_Available_Rate_Contribution_Report">//iframe[@name='Best Available Rate Contribution']</Parameter>
+    <Parameter key="iframe_Total_Revenue_Analysis_Report">//iframe[@name='Total Revenue Analysis']</Parameter>
+    <Parameter key="Click_User_Maintenance_Edit_Link">//a[@id='RadGrid1_ctl00_ctl118_EditLink']</Parameter>
+    <Parameter key="Click_User_Role_Test_Role">//span[contains(text(),'Test Role')]</Parameter>
+    <Parameter key="Click_Role_Maintenance">//span[contains(text(),'Role Maintenance')]</Parameter>
+    <Parameter key="Click_Role_Maintenance_Edit_Link_for_Test_Custom">//*[@id="RadGrid1_ctl00_ctl20_EditLink"]</Parameter>
+    <Parameter key="Click_Role_Report_Tab">//span[contains(text(),'Reports')]</Parameter>
+    <Parameter key="Click_Role_Tenants_Tab">//span[contains(text(),'Tenants')]</Parameter>
+    <Parameter key="iframe_Maintain_User">//iframe[@name='UserListDialog']</Parameter>
+    <Parameter key="iframe_Role_Maintenance_PopUp">//iframe[@name='UserListDialog']</Parameter>
+    <Parameter key="iframe_Role_Maintenance">//iframe[@name='Role Maintenance']</Parameter>
+    <Parameter key="iframe_Hotel_Dashboard">//iframe[@name='Hotel Dashboard']</Parameter>
+    <Parameter key="Dashboard_Hotel_RadioButton">//*[@id="RadToolBar1_i2_rblHotelPortfolio_ctl00"]</Parameter>
+    <Parameter key="Dashboard_Portfolio_RadioButton">//*[@id="RadToolBar1_i2_rblHotelPortfolio_ctl01"]</Parameter>
+    <Parameter key="Hotel_Dashboard_Summary">//*[@id="RadTabStrip1"]//span[contains(text(),'Summary')]</Parameter>
+    <Parameter key="Hotel_Dashboard_Detail">//*[@id="RadTabStrip1"]//span[contains(text(),'Detail')] </Parameter>
+    <Parameter key="Hotel_Dashboard_ADR_Radio_button">//*[@id='rtbMetric_i0_rblMetric_0']</Parameter>
+    <Parameter key="Hotel_Dashboard_Room_Revenue_Radio_button">//*[@id='rtbMetric_i0_rblMetric_1']</Parameter>
+    <Parameter key="Hotel_Dashboard_Room_Sold_button">//*[@id='rtbMetric_i0_rblMetric_2']</Parameter>
+    <Parameter key="iframe_Agent_Dashboard">//iframe[@name='Agent Dashboard']</Parameter>
+    <Parameter key="Click_Dashboard_Update_Button">//*[@id="RadToolBar1_i12_rbUpdate_input"]</Parameter>
+    <Parameter key="Enter_Dashboard_Pickup_Start">//input[@id='RadToolBar1_i8_rdpPickupStartDate_dateInput']</Parameter>
+    <Parameter key="Enter_Dashboard_Pickup_End">//input[@id='RadToolBar1_i9_rdpPickupEndDate_dateInput']</Parameter>
+    <Parameter key="Click_Dashboard_Excel_Icon">//input[@id='RadToolBar1_i15_ImageButton1']</Parameter>
+    <Parameter key="iframe_Monthly_Pickup">//iframe[@name='Monthly Pickup']</Parameter>
+    <Parameter key="Click_Dashboard_Currency_DDL">//*[@id="RadToolBar1_i5_wcCurrency_Arrow"]</Parameter>
+    <Parameter key="Click_Dashboard_Hotel_OR_Portfolio_DDL">//*[@id="RadToolBar1_i3_wcHotelPortBrand_Arrow"]</Parameter>
+    <Parameter key="Click_Dashboard_Business_DDL">//*[@id="RadToolBar1_i6_wcBusinessUnit_Arrow"]</Parameter>
+    <Parameter key="Dashboard_Enter_StartDate">//*[@id="RadToolBar1_i9_rdpStartDate_dateInput"]</Parameter>
+    <Parameter key="Dashboard_Enter_EndDate">//*[@id="RadToolBar1_i10_rdpEndDate_dateInput"]</Parameter>
+    <Parameter key="iframe_Company_Dashboard">//iframe[@name='Company Dashboard']</Parameter>
+    <Parameter key="CompanyDashboard_Enter_StartDate">//*[@id="RadToolBar1_i8_rdpStartDate_dateInput"]</Parameter>
+    <Parameter key="CompanyDashboard_Enter_EndDate">//*[@id="RadToolBar1_i9_rdpEndDate_dateInput"]</Parameter>
+    <Parameter key="Click_CompanyDashboard_Update_Button">//*[@id="RadToolBar1_i11_rbUpdate_input"]</Parameter>
+    <Parameter key="iframe_Market_Dashboard">//iframe[@name='Market Dashboard']</Parameter>
+    <Parameter key="iframe_Channel_Dashboard">//iframe[@name='Channel Dashboard']</Parameter>
+    <Parameter key="iframe_Room_Type_Dashboard">//iframe[@name='Room Type Dashboard']</Parameter>
+    <Parameter key="iframe_Negotiated_Dashboard">//iframe[@name='Negotiated Dashboard']</Parameter>
+    <Parameter key="iframe_Pace_Dashboard">//iframe[@name='Pace Dashboard']</Parameter>
+    <Parameter key="Pace_Dashboard_StartDate">//*[@id="RadToolBar1_i10_rdpStartDate_dateInput"]</Parameter>
+    <Parameter key="Pace_Dashboard_EndDate">//*[@id="RadToolBar1_i11_rdpEndDate_dateInput"]</Parameter>
+    <Parameter key="Pace_Dashboard_Update_Button">//*[@id="RadToolBar1_i13_rbUpdate_input"]</Parameter>
+    <Parameter key="iframe_Channel_Report">//iframe[@name='Channel Report']</Parameter>
+    <Parameter key="iframe_Channel_Trend_Report">//iframe[@name='Channel Trend Report']</Parameter>
+    <Parameter key="iframe_Daily_Channel_by_Room_Type_Report">//iframe[@name='Daily Channel by Room Type']</Parameter>
+ 
+    <Parameter key="Hotel_Dashboard_Hotel_RadioButton">//*[@id='RadToolBar1_i2_rblHotelPortfolio_ctl00']</Parameter>
+    <Parameter key="Hotel_Dashboard_Portfolio_RadioButton">//*[@id='RadToolBar1_i2_rblHotelPortfolio_ctl00_ClientState']</Parameter>
+    <Parameter key="Hotel_Dashboard_Enter_StartDate">//input[@id='RadToolBar1_i9_rdpStartDate_dateInput']</Parameter>
+    <Parameter key="Hotel_Dashboard_Enter_EndDate">//input[@id='RadToolBar1_i10_rdpEndDate_dateInput']</Parameter>
+    <Parameter key="Click_Hotel_Dashboard_Update">//input[@id='RadToolBar1_i12_rbUpdate_input']</Parameter>
+    <Parameter key="UserPreference_GetHotel">//*[@id="HotelPortfolioDropdown_Input"]</Parameter>
+    <Parameter key="UserPreference_GetBusinessUnit">//*[@id="wcBusinessUnit_Input"]</Parameter>
+    <Parameter key="UserPreference_GetCurrency">//*[@id="wcCurrency_Input"]</Parameter>
+    
+    <Parameter key="Monthly_Pickup_Hotel_Value">//input[@id='RadToolBar1_i3_wcHotelPortBrand_Input']</Parameter>
+    <Parameter key="Monthly_Pickup_Currency_Value">//input[@id='RadToolBar1_i5_wcCurrency_Input']</Parameter>
+    <Parameter key="Monthly_Pickup_Business_Unit_Value">//input[@id='RadToolBar1_i6_wcBusinessUnit_Input']</Parameter>
+    <Parameter key="Hotel_Portfolio_Dropdown">//*[@id='wcHotelPortBrand_Input']</Parameter>
+    <Parameter key="Business_Dropdown">//*[@id='rcBusinessUnit_Input']</Parameter>
+    <Parameter key="Currency_Dropdown">//*[@id='wcCurrency_Input']</Parameter>
+    
+    <Parameter key="iframe_Business_Unit_Grouping">//iframe[@name='Business Unit Grouping']</Parameter>
+    <Parameter key="Enter_Business_Unit_Grouping_Code">//input[@name='txtDescription']</Parameter>
+    <Parameter key="Enter_Business_Unit_Grouping_Name">//input[@name='txtBusinessUnitNm']</Parameter>
+    <Parameter key="Saved_Business_Unit_Grouping">//*[@id="btnSave"]</Parameter>
+    <Parameter key="Click_Business_Unit_Grouping_TransferAllFrom_Button">//*[@id="lbAvailable"]/table/tbody/tr/td/a[3]/span/span/span/span/span</Parameter> 
+    <Parameter key="Click_Edit_Business_Unit_Grouping_button">//a[@id='RadGrid1_ctl00_ctl06_EditLink']</Parameter>
+    <Parameter key="Delete_Business_Unit_Grouping_button">//*[@id="RadGrid1_ctl00_ctl06_gbcDeleteColumn"]</Parameter>
+    
+    <Parameter key="iframe_Add_Business_Unit_Group">//iframe[@name='UserAddDialog']</Parameter>
+    <Parameter key="Click_Business_Unit_Group_Sort">(//a[contains(text(),'Business Unit Group')])[2]</Parameter>
+    
+    <Parameter key="iframe_Room_Type_Mapping">//iframe[@name='Room Type Mapping']</Parameter>
+    <Parameter key="Click_Room_Type_Code">//a[contains(text(),'Room Type Code')]</Parameter>
+    <Parameter key="Click_Room_Type_Name">//a[contains(text(),'Room Type Name')]</Parameter>
+    <Parameter key="Click_Rooms_Counted">//a[contains(text(),'Rooms Counted')]</Parameter>
+    <Parameter key="Click_Rooms_Product">//a[contains(text(),'Room Product')]</Parameter>
+    <Parameter key="Click_Business_Unit">//a[contains(text(),'Business Unit')]</Parameter>
+      
+    <Parameter key="iframe_Market_Mapping">//iframe[@name='Market Mapping']</Parameter>
+    <Parameter key="Click_PMS_Market_Code">//a[contains(text(),'PMS Market Code')]</Parameter>
+    <Parameter key="Click_revintel_Market_1">(//a[contains(text(),'revintel Market')])[1]</Parameter>
+    <Parameter key="Click_revintel_Market_2">(//a[contains(text(),'revintel Market')])[2]</Parameter>
+    
+    <Parameter key="iframe_Channel_Mapping">//iframe[@name='Channel Mapping']</Parameter>
+    <Parameter key="Click_PMS_Channel_Code">//a[contains(text(),'PMS Channel Code')]</Parameter>
+    <Parameter key="Click_revintel_Channel_1">(//a[contains(text(),'revintel Channel')])[1]</Parameter>
+    <Parameter key="Click_revintel_Channel_2">(//a[contains(text(),'revintel Channel')])[2]</Parameter>
+  
+    <Parameter key="Rainmaker_Hotel_Dropdown">//*[@id="rcHotel_Arrow"]</Parameter>
+    <Parameter key="Rainmaker_Hotel_Value">//*[@id="rcHotel_DropDown"]/div/ul/li[3]</Parameter>
+    
+    <Parameter key="Maintenance_Edit_testaccess">//*[@id="RadGrid1_ctl00_ctl132_EditLink"]</Parameter>
+
+    <Parameter key="Enter_Room_Type_Name">//input[@id='rgvRoomType_ctl00_ctl02_ctl01_FilterTextBox_room_type_Nm']</Parameter>
+    <Parameter key="Click_Filter_Icon_Room_Type_Name">//input[@id='rgvRoomType_ctl00_ctl02_ctl01_Filter_room_type_Nm']</Parameter>
+    <Parameter key="Filter_with_statsWith">//span[contains(text(),'StartsWith')]</Parameter>
+
+    <Parameter key="Enter_Market_Name">//*[@id="rgvMarket_ctl00_ctl02_ctl01_FilterTextBox_MarketName"]</Parameter>
+    <Parameter key="Click_Filter_Icon_Market_Name">//*[@id="rgvMarket_ctl00_ctl02_ctl01_Filter_MarketName"]</Parameter>
+
+    <Parameter key="Enter_Channel_Name">//*[@id="rgvChannel_ctl00_ctl02_ctl01_FilterTextBox_minor_channel_Nm"]</Parameter>
+    <Parameter key="Click_Filter_Icon_Channel_Name">//*[@id="rgvChannel_ctl00_ctl02_ctl01_Filter_minor_channel_Nm"]</Parameter>
+
+	  <Parameter key="Click_RoomTypeAnalysis_ComparisonYear_DDM">//span[@class='rddlFakeInput rddlDefaultMessage']</Parameter>
+	  <Parameter key="Select_RoomTypeAnalysis_ComparisonYear1">//li[contains(text(),'1 Year Ago')]</Parameter>
+	  <Parameter key="Select_RoomTypeAnalysis_ComparisonYear2">//li[contains(text(),'2 Years Ago')]</Parameter>
+	  <Parameter key="Select_RoomTypeAnalysis_ComparisonYear3">//li[contains(text(),'3 Years Ago')]</Parameter>
+    
+    <Parameter key="iframe_Compose">//iframe[@name='Compose']</Parameter>
+    <Parameter key="Click_Compose_Menu">//span[contains(text(),'Compose')]</Parameter>
+    <Parameter key="Click_Compose_new_report">//button[@id='NewReportButton']</Parameter>
+    <Parameter key="Click_Compose_Create_New_Report_Close_Icon">//*[@id="CreateNewReportModal"]/div/div/div[1]/button/span</Parameter>
+    <Parameter key="Click_Compose_Create_New_Report_Cancel_button">//*[@id="CreateNewReportModal"]/div/div/div[3]/button[1]</Parameter>
+    <Parameter key="Click_Compose_FullscreenButton">//*[@id="FullscreenButton"]/i</Parameter>
+    <Parameter key="Click_Compose_NewReport_Create_button">//*[@id="CreateNewReportModal"]/div/div/div[3]/button[2]</Parameter>
+    <Parameter key="Compose_Users_Report">//*[@id="MenuGroup_User"]/li[1]/span</Parameter>
+    <Parameter key="Compose_Users_Report_HeaderName">//*[@id="HeaderBar"]/div[1]/div/span</Parameter>
+    <Parameter key="Compose_Users_Report_HeaderName_Edit">//*[@id="RenameReportButton"]/button/i</Parameter>
+    <Parameter key="Compose_Users_Report_HeaderName_Edit_CancelButton">//*[@id="RenameReportModal"]/div/div/div[3]/button[1]</Parameter>
+    <Parameter key="Compose_Users_Report_HeaderName_CloseButton">//*[@id="RenameReportModal"]/div/div/div[1]/button/span</Parameter>
+    <Parameter key="Compose_Enter_NewReport_Name">//*[@id="CreateNewReportModal"]/div/div/div[2]/div/label/input</Parameter>
+    <Parameter key="Compose_UserReport_Delete">//*[@id="DeleteReportButton"]</Parameter>
+    <Parameter key="Compose_UserReport_DeleteReport_Delete_Button">//*[@id="DeleteReportModal"]/div/div/div[3]/button[2]</Parameter>
+    <Parameter key="Compose_Rename_Button">//button[contains(text(),'Rename')]</Parameter>
+    <Parameter key="Update_compose_report_Name">//*[@id="RenameReportModal"]/div/div/div[2]/div/label/input</Parameter>
+
+    <Parameter key="Enter_Start_Month">//*[@id="txtStartMonth_dateInput"]</Parameter>
+    
+  </ReportParameter>
+
+  <BusinessSource>
+    <Parameter key="iframe_AgentSummary">//iframe[@name='Agent Summary']</Parameter>
+    <Parameter key="Click_AgentRoomTypeAnalysis">(//form[@id='form1']//span[contains(text(),'Agent Room Type Analysis')])[1]</Parameter>
+    <Parameter key="iframe_Agent_Room_Type_Analysis">//iframe[@name='Agent Room Type Analysis']</Parameter>
+    <Parameter key="BookingStartDate">//*[@id='txtResvStartDate_dateInput']</Parameter>
+    <Parameter key="BookingEndDate">//*[@id='txtResvEndDate_dateInput']</Parameter>
+    <Parameter key="Click_Annual_Agent_Analysis_by_Month">//span[contains(text(),'Annual Agent Analysis by Month')]</Parameter>
+    <Parameter key="iframe_Annual_Agent_Analysis_by_Month">//iframe[@name='Annual Agent Analysis by Month']</Parameter>
+    <Parameter key="Year_DDL">//*[@id='rcYear_Input']</Parameter>
+    <Parameter key="Year_value">//*[@id="rcYear_DropDown"]//*[contains(text(),'2019')]</Parameter>
+    <Parameter key="Click_Company_Analysis">(//*[@id="form1"]//span[contains(text(),'Company Analysis')])[1]</Parameter>
+    <Parameter key="iframe_Company_Analysis">//iframe[@name='Company Analysis']</Parameter>
+    <Parameter key="kerner_Portfolio">//*[@id="wcHotelPortBrand_i1_Label1"]</Parameter>
+    <Parameter key="Click_Annual_Company_Analysis_by_Month">//span[contains(text(),'Annual Company Analysis by Month')]</Parameter>
+    <Parameter key="iframe_Annual_Company_Analysis_by_Month">//iframe[@name='Annual Company Analysis by Month']</Parameter>
+    <Parameter key="Annual_Company_Analysis_by_Month_CompanyDDL">//*[@id='rddtCompany']/span/span[2]</Parameter>
+    <Parameter key="Annual_Company_Analysis_by_Month_Company_Select">//*[@id='rddtCompany_EmbeddedTree']//span[contains(text(),'1')]</Parameter>
+    <Parameter key="Click_Company_Summary">//span[contains(text(),'Company Summary')]</Parameter>
+    <Parameter key="iframe_Company_Summary">//iframe[@name='Company Summary']</Parameter>
+    <Parameter key="Company_Summary_Portfolio">//*[@id='wcHotelPortBrand_i1_Label1']</Parameter>
+
+  </BusinessSource>
+
+  <ReportScheduler>
+    <Parameter key="Click_BookingTrends">//*[@id='RadGrid1_ctl00_ctl07_GECBtnExpandColumn']</Parameter>
+    <Parameter key="Click_BookingTrends_ChannelPaceAnalysis">//*[@id='RadGrid1_ctl00_ctl09_Detail20__1:0_3']/td</Parameter>
+    <Parameter key="Click_BookingTrends_PickUpByDayDetailed">//*[@id='RadGrid1_ctl00_ctl09_Detail20__1:0_12']/td</Parameter>
+    <Parameter key="Click_BookingTrends_PaceReport">//*[@id='RadGrid1_ctl00_ctl09_Detail20__1:0_9']/td</Parameter>
+    <Parameter key="Enter_ChannelPaceAnalysis_RelativeStartDate">//*[@id='DeliveryConfigPanelBar_i4_PeriodOptionStartDate']/span[@class='rddlInner rddlFocused']</Parameter>
+    <Parameter key="Enter_ChannelPaceAnalysis_RelativeEndDate">//*[@id='DeliveryConfigPanelBar_i4_PeriodOptionEndDate']//span[@class='rddlInner rddlFocused']</Parameter>
+    <Parameter key="Enter_ChannelPaceAnalysis_StartDate">//*[@id='DeliveryConfigPanelBar_i4_StartDt_dateInput']</Parameter>
+    <Parameter key="Enter_ChannelPaceAnalysis_EndDate">//*[@id='DeliveryConfigPanelBar_i4_EndDt_dateInput']</Parameter>
+    <Parameter key="Enter_PickUpByDayDetailed_RelativeStartDate">//*[@id='DeliveryConfigPanelBar_i4_PeriodOptionStartDate']/span</Parameter>
+    <Parameter key="Enter_PickUpByDayDetailed_RelativeEndDate">//*[@id='DeliveryConfigPanelBar_i4_PeriodOptionEndDate']/span</Parameter>
+    <Parameter key="Enter_PickUpByDayDetailed_RelativePickupStartDate">//*[@id='DeliveryConfigPanelBar_i4_PeriodOptionPickupStartDate']/span</Parameter>
+    <Parameter key="Enter_PickUpByDayDetailed_RelativePickupEndDate">//*[@id='DeliveryConfigPanelBar_i4_PeriodOptionPickupEndDate']/span</Parameter>
+    <Parameter key="Enter_PickUpByDayDetailed_StartDate">//*[@id='DeliveryConfigPanelBar_i4_StartDt_dateInput']</Parameter>
+    <Parameter key="Enter_PickUpByDayDetailed_EndDate">//*[@id='DeliveryConfigPanelBar_i4_EndDt_dateInput']</Parameter>
+    <Parameter key="Enter_PickUpByDayDetailed_PickupStartDate">//*[@id='DeliveryConfigPanelBar_i4_PickupStartDt_dateInput']</Parameter>
+    <Parameter key="Enter_PickUpByDayDetailed_PickupEndDate">//*[@id="DeliveryConfigPanelBar_i4_PickupEndDt_dateInput"]</Parameter>
+    <Parameter key="Click_BusinessSource">//*[@id="RadGrid1_ctl00_ctl10_GECBtnExpandColumn"]</Parameter>
+    <Parameter key="Click_BusinessSource_RoomTypeAnalysis">//*[@id='RadGrid1_ctl00_ctl12_Detail30__2:0_2']/td</Parameter>
+    <Parameter key="Click_BusinessSource_MarketReport"></Parameter>
+    <Parameter key="Enter_ReportDescription">//*[@id="ReportDescription"]</Parameter>
+    <Parameter key="Click_Tuesday">//*[@id="DeliveryConfigPanelBar_i0_Days_ctl02"]/span[1]</Parameter>
+    <Parameter key="Click_Wednesday">//*[@id="DeliveryConfigPanelBar_i0_Days_ctl03"]/span[1]</Parameter>
+    <Parameter key="Click_Thursday">//*[@id="DeliveryConfigPanelBar_i0_Days_ctl04"]/span[1]</Parameter>
+    <Parameter key="Click_Friday">//*[@id="DeliveryConfigPanelBar_i0_Days_ctl05"]/span[1]</Parameter>
+    <Parameter key="Enter_StartTimeHours">//*[@id="DeliveryConfigPanelBar_i0_StartHour"]</Parameter>
+    <Parameter key="Enter_StartTimeMinutes">//*[@id="DeliveryConfigPanelBar_i0_StartMinute"]</Parameter>
+    <Parameter key="Enter_RendorFormat">//*[@id="DeliveryConfigPanelBar_i2_ReportType"]/table/tbody/tr</Parameter>
+    <Parameter key="Enter_EmailTo">//*[@id="DeliveryConfigPanelBar_i3_Email"]</Parameter>
+    <Parameter key="Enter_EmailSubject">//*[@id="DeliveryConfigPanelBar_i3_Subject"]</Parameter>
+    <Parameter key="Enter_RelativeStartDateOffset">//*[@id="DeliveryConfigPanelBar_i4_PeriodOffsetStartDate"]</Parameter>
+    <Parameter key="Enter_RelativeEndDateOffset">//*[@id="DeliveryConfigPanelBar_i4_PeriodOffsetEndDate"]</Parameter>
+    <Parameter key="Click_RoomTypeAnalysis_SaveButton">//*[@id="SaveButton"]</Parameter>
+    <Parameter key="Enter_AsOfDate">//*[@id="DeliveryConfigPanelBar_i4_AsOfDate_dateInput"]</Parameter>
+    <Parameter key="Enter_RelativeAsOfDate">//*[@id="DeliveryConfigPanelBar_i4_PeriodOptionAsOfDate"]/span</Parameter>
+    <Parameter key="Click_CurrentDate_RelativeSatrtDate">//*[@id='DeliveryConfigPanelBar_i4_PeriodOptionStartDate_DropDown']/div/ul/li[2]</Parameter>
+    <Parameter key="Click_CurrentDate_RelativeEndDate">//*[@id='DeliveryConfigPanelBar_i4_PeriodOptionEndDate_DropDown']/div/ul/li[2]</Parameter>
+    <Parameter key="Click_CurrentDate_RelativePickupSatrtDate">//*[@id='DeliveryConfigPanelBar_i4_PeriodOptionPickupStartDate_DropDown']/div/ul/li[2]</Parameter>
+    <Parameter key="Click_CurrentDate_RelativePickupEndDate">//*[@id='DeliveryConfigPanelBar_i4_PeriodOptionPickupEndDate_DropDown']/div/ul/li[2]</Parameter>
+    <Parameter key="Click_SelectDate_RelativeStartDate">//*[@id='DeliveryConfigPanelBar_i4_PeriodOptionStartDate_DropDown']/div/ul/li[1]</Parameter>
+    <Parameter key="Click_SelectDate_RelativeEndDate">//*[@id='DeliveryConfigPanelBar_i4_PeriodOptionEndDate_DropDown']/div/ul/li[1]</Parameter>
+    <Parameter key="Click_SelectDate_RelativePickupStartDate">//*[@id='DeliveryConfigPanelBar_i4_PeriodOptionPickupStartDate_DropDown']/div/ul/li[1]</Parameter>
+    <Parameter key="Click_SelectDate_RelativePickupEndDate">//*[@id='DeliveryConfigPanelBar_i4_PeriodOptionPickupEndDate_DropDown']/div/ul/li[1]</Parameter>
+    <Parameter key="Click_ReportType_Excel">//*[@id='DeliveryConfigPanelBar_i2_ReportType_DropDown']/div/ul/li[2]</Parameter>
+    <Parameter key="Click_SaveSchedule_OkButton">//a[contains(.,'Close')]</Parameter>
+    <Parameter key="Click_ManageReportSchedule_EditButton">//div[@id='RadGrid1_Frozen']//preceding::td[5]</Parameter>
+    <Parameter key="Click_ManageReportSchedule_DeleteButton">//div[@id='RadGrid1_Frozen']//preceding::td[6]</Parameter>
+
+
+    <Parameter key="Click_RelativeAsOfDate_Currentmonth">//*[@id='DeliveryConfigPanelBar_i4_PeriodOptionAsOfDate_DropDown']/div/ul/li[3]</Parameter>
+    <Parameter key="Click_RelativeAsOfDate_Offset">//*[@id='DeliveryConfigPanelBar_i4_PeriodOffsetAsOfDate']</Parameter>
+    <Parameter key="Enter_RelativePickUpStartDateOffset">//*[@id='DeliveryConfigPanelBar_i4_PeriodOffsetPickupStartDate']</Parameter>
+    <Parameter key="Enter_RelativePickUpEndDateOffset">//*[@id='DeliveryConfigPanelBar_i4_PeriodOffsetPickupEndDate']</Parameter>
+    
+    <Parameter key="Click_Quick_AbsoluteDate">//*[@id="DeliveryConfigPanelBar_i4_rbQuickStartDt_input"]</Parameter>
+    <Parameter key="Click_Quick_AbsolutePickupDate">//*[@id="DeliveryConfigPanelBar_i4_rbQuickPickupStartDt_input"]</Parameter>
+    
+    <Parameter key="Click_Quick_AbsoluteDateToday">//*[@id="RcmQuickStaticStartDate_detached"]/ul/li[10]/a/span</Parameter>
+    <Parameter key="Click_Quick_AbsoluteDateYesterday">//*[@id="RcmQuickStaticStartDate_detached"]/ul/li[9]/a/span</Parameter>
+    <Parameter key="Click_Quick_AbsoluteDateMTM">//*[@id="RcmQuickStaticStartDate_detached"]/ul/li[11]/a/span</Parameter>
+    <Parameter key="Click_Quick_AbsoluteDateYTD">//*[@id="RcmQuickStaticStartDate_detached"]/ul/li[12]/a/span</Parameter>
+    <Parameter key="Click_Quick_AbsoluteDateLastMonth">//*[@id="RcmQuickStaticStartDate_detached"]/ul/li[13]/a/span</Parameter>
+    <Parameter key="Click_Quick_AbsoluteDateThisMonth">//*[@id="RcmQuickStaticStartDate_detached"]/ul/li[14]/a/span</Parameter>
+    <Parameter key="Click_Quick_AbsoluteDateNextMonth">//*[@id="RcmQuickStaticStartDate_detached"]/ul/li[15]/a/span</Parameter>
+    <Parameter key="Click_Quick_AbsoluteDateLastYear">//*[@id="RcmQuickStaticStartDate_detached"]/ul/li[16]/a/span</Parameter>
+    <Parameter key="Click_Quick_AbsoluteDateThisYear">//*[@id="RcmQuickStaticStartDate_detached"]/ul/li[17]/a/span</Parameter>
+    <Parameter key="Click_Quick_AbsoluteDateEndOfYear">//*[@id="RcmQuickStaticStartDate_detached"]/ul/li[18]/a/span</Parameter>
+
+    
+    <Parameter key="Click_Quick_AbsolutePickupDateToday">//*[@id="RcmQuickStaticPickupStartDate_detached"]/ul/li[10]/a/span</Parameter>
+    <Parameter key="Click_Quick_AbsolutePickupDateYesterday">//*[@id="RcmQuickStaticPickupStartDate_detached"]/ul/li[9]/a/span</Parameter>
+    <Parameter key="Click_Quick_AbsolutePickupDateMTM">//*[@id="RcmQuickStaticPickupStartDate_detached"]/ul/li[11]/a/span</Parameter>
+    <Parameter key="Click_Quick_AbsolutePickupDateYTD">//*[@id="RcmQuickStaticPickupStartDate_detached"]/ul/li[12]/a/span</Parameter>
+    <Parameter key="Click_Quick_AbsolutePickupDateLastMonth">//*[@id="RcmQuickStaticPickupStartDate_detached"]/ul/li[13]/a/span</Parameter>
+    <Parameter key="Click_Quick_AbsolutePickupDateThisMonth">//*[@id="RcmQuickStaticPickupStartDate_detached"]/ul/li[14]/a/span</Parameter>
+    <Parameter key="Click_Quick_AbsolutePickupDateNextMonth">//*[@id="RcmQuickStaticPickupStartDate_detached"]/ul/li[15]/a/span</Parameter>
+    <Parameter key="Click_Quick_AbsolutePickupDateLastYear">//*[@id="RcmQuickStaticPickupStartDate_detached"]/ul/li[16]/a/span</Parameter>
+    <Parameter key="Click_Quick_AbsolutePickupDateThisYear">//*[@id="RcmQuickStaticPickupStartDate_detached"]/ul/li[17]/a/span</Parameter>
+    <Parameter key="Click_Quick_AbsolutePickupDateEndOfYear">//*[@id="RcmQuickStaticPickupStartDate_detached"]/ul/li[18]/a/span</Parameter>
+    
+    <Parameter key="Click_Quick_RelativeDate">//*[@id='DeliveryConfigPanelBar_i4_QuickStartDateButton_input']</Parameter>
+    <Parameter key="Click_Quick_RelativePickupDate">//*[@id="DeliveryConfigPanelBar_i4_QuickPickupStartDateButton_input"]</Parameter>
+    
+    <Parameter key="Click_Quick_RelativeDateToday">//*[@id="RcmQuickStartDate_detached"]/ul/li[10]/a/span</Parameter>
+    <Parameter key="Click_Quick_RelativeDateYesteraday">//*[@id="RcmQuickStartDate_detached"]/ul/li[9]</Parameter>
+    <Parameter key="Click_Quick_RelativeDateLastMonth">//*[@id="RcmQuickStartDate_detached"]/ul/li[11]</Parameter>
+    <Parameter key="Click_Quick_RelativeDateThisMonth">//*[@id="RcmQuickStartDate_detached"]/ul/li[12]</Parameter>
+    <Parameter key="Click_Quick_RelativeDateNextMonth">//*[@id="RcmQuickStartDate_detached"]/ul/li[13]</Parameter>
+    <Parameter key="Click_Quick_RelativeDateLastYear">//*[@id="RcmQuickStartDate_detached"]/ul/li[14]</Parameter>
+    <Parameter key="Click_Quick_RelativeDateThisYear">//*[@id="RcmQuickStartDate_detached"]/ul/li[15]</Parameter>
+    
+    <Parameter key="Click_Quick_RelativePickupDateToday">//*[@id="RcmQuickPickupStartDate_detached"]/ul/li[10]/a/span</Parameter>
+    <Parameter key="Click_Quick_RelativePickupDateYesteraday">//*[@id="RcmQuickPickupStartDate_detached"]/ul/li[9]/a/span</Parameter>
+    <Parameter key="Click_Quick_RelativePickupDateLastMonth">//*[@id="RcmQuickPickupStartDate_detached"]/ul/li[11]/a/span</Parameter>
+    <Parameter key="Click_Quick_RelativePickupDateThisMonth">//*[@id="RcmQuickPickupStartDate_detached"]/ul/li[12]/a/span</Parameter>
+    <Parameter key="Click_Quick_RelativePickupDateNextMonth">//*[@id="RcmQuickPickupStartDate_detached"]/ul/li[13]/a/span</Parameter>
+    <Parameter key="Click_Quick_RelativePickupDateLastYear">//*[@id="RcmQuickPickupStartDate_detached"]/ul/li[14]/a/span</Parameter>
+    <Parameter key="Click_Quick_RelativePickupDateThisYear">//*[@id="RcmQuickPickupStartDate_detached"]/ul/li[15]/a/span</Parameter>
+    
+    <Parameter key="Click_Portfolio">//*[@id="RadGrid1_ctl00_ctl28_GECBtnExpandColumn"]</Parameter>
+    <Parameter key="Click_BookingTrends_AgentByHotel">//*[@id="RadGrid1_ctl00_ctl30_Detail90__8:0_0"]/td</Parameter>
+    <Parameter key="Click_SelectType">//*[@id="DeliveryConfigPanelBar_i4_FormatType_Input"]</Parameter>
+    <Parameter key="ReportScheduler_GetHotel">//*[@id="DeliveryConfigPanelBar_i4_HotelCode_Input"]</Parameter>
+    <Parameter key="ReportScheduler_GetBusinessUnit">//*[@id="DeliveryConfigPanelBar_i4_BusinessUnitId_Input"]</Parameter>
+    <Parameter key="ReportScheduler_GetCurrency">//*[@id="DeliveryConfigPanelBar_i4_CurrencyCd_Input"]</Parameter>
+    <Parameter key="Select_Blank_RelativeAsOfDate">//*[@id='DeliveryConfigPanelBar_i4_PeriodOptionAsOfDate_DropDown']//li[1]</Parameter>
+  
+	
+	  <Parameter key="Click_ReportParameter_Market">//tr[@id='RadGrid1_ctl00__7']//td[1]</Parameter>
+    <Parameter key="Click_Market_MarketReport">//tr[@id='RadGrid1_ctl00_ctl27_Detail80__7:0_3']//td</Parameter>
+    <Parameter key="Click_SelectType_Hotel">//*[@id='DeliveryConfigPanelBar_i4_FormatType_Input']</Parameter>
+    <Parameter key="Select_SelectType_Portfolio">//*[@id='DeliveryConfigPanelBar_i4_FormatType_DropDown']//li[2]</Parameter>
+    <Parameter key="Click_InvalidSelection_OkButton">//*[@id='alert1614069462238_content']/div/div[2]/a/span/span</Parameter>
+    <Parameter key="Select_SelectType_Hotel">//*[@id='DeliveryConfigPanelBar_i4_FormatType_DropDown']//li[1]</Parameter>
+    <Parameter key="Click_HotelOrPortfolio">//*[@id='DeliveryConfigPanelBar_i4_HotelCode_Input']</Parameter>
+    
+  </ReportScheduler>
+  <ExchangeRate>
+    <Parameter key="Click_ViewAnalysis">rbViewAnalysis_input</Parameter>
+  </ExchangeRate>
+
+
+</ObjectRepository>

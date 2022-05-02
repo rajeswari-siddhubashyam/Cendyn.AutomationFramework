@@ -1,0 +1,40 @@
+2021-06-29 17:09:47,575 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-06-29 17:09:47,744 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-06-29 17:09:47,780 ::INFO ::[Logger]::  is used for Testing
+2021-06-29 17:09:47,811 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DCAOAFRON%26response_mode%3Dform_post%26response_type%3Dcode%2520id_token%26scope%3Dopenid%2520roles%2520profile%2520write%2520offline_access%2520CendynAccessApi%26state%3DOpenIdConnect.AuthenticationProperties%253D4NjtYCmUNHKwvE08ZGbcmIGfRrjE-MwF9lixDkXMIiLeCWQKAakpxsIbGlFXjVEUgdefZZACp09JwDcA_JIcbbvkI4CdxmiIjGVG-W6dfxmZTaGJHYqm4I6lUhUEMEI6pm6sNqhWQp8QdTidikinhg%26nonce%3D637605635805597850.Y2FhZDc2NjktYzAwMi00YjI2LWIyZTUtNDdmMTc3NTJhNGQyMDEyOTczNDItMDY0OS00YWYzLTg1NGQtNWIyNTViZTlkMTNk%26redirect_uri%3Dhttps%253A%252F%252Fqa.cendynaccess.com%26ui_locales%3Den-US
+2021-06-29 17:09:47,905 ::INFO ::[Logger]:: Execution started at:-Jun-29-2021 17-09-47-PM
+2021-06-29 17:09:47,907 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-06-29 17:09:47,911 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-06-29 17:09:47,925 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_232792         XXXXXXXXXXXXXXXX
+2021-06-29 17:09:47,927 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-06-29 17:09:47,942 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=744}
+2021-06-29 17:09:49,369 ::DEBUG::[Logger]:: 1) Landed on Admin Login Page
+2021-06-29 17:09:56,431 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Username element on the PropertyAdmin page.
+2021-06-29 17:10:01,525 ::INFO ::[Logger]:: Clicked the Click_NextButton element on the PropertyAdmin page.
+2021-06-29 17:10:05,689 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Password element on the PropertyAdmin page.
+2021-06-29 17:10:05,690 ::DEBUG::[Logger]:: 2) Entered Username =qacendynautomation@cendyn17.com and Password =Cendyn123$
+2021-06-29 17:10:13,322 ::INFO ::[Logger]:: Clicked the Click_LoginButton element on the PropertyAdmin page.
+2021-06-29 17:10:37,762 ::INFO ::[Logger]:: Clicked the Navigation_ePlanner element on the PropertyAdmin page.
+2021-06-29 17:10:37,763 ::DEBUG::[Logger]:: 3) ePlanner Product got Selected 
+2021-06-29 17:10:45,371 ::INFO ::[Logger]:: Clicked the Click_Select_PropertyDropdown element on the PropertyAdmin page.
+2021-06-29 17:10:45,372 ::DEBUG::[Logger]:: 4) Clicked on Select Property Drop-down
+2021-06-29 17:10:51,971 ::INFO ::[Logger]:: Inserted text in the Enter_Property_TextBox element on the PropertyAdmin page.
+2021-06-29 17:10:51,972 ::DEBUG::[Logger]:: 5) Entered Property
+2021-06-29 17:11:10,013 ::INFO ::[Logger]:: Selected the Hotel Origami value from the Select_Property_Dropdown drop down.
+2021-06-29 17:11:10,014 ::DEBUG::[Logger]:: 6) Hotel Origami Property got Selected
+2021-06-29 17:11:45,768 ::DEBUG::[Logger]:: 7) Landed on Cendyn admin page
+2021-06-29 17:11:53,046 ::INFO ::[Logger]:: Clicked the Click_ePlannerCendynAdmin_Select_PropertyDropdown element on the CendynAdmin page.
+2021-06-29 17:11:53,054 ::DEBUG::[Logger]:: 8) Clicked on Select Property Drop-down
+2021-06-29 17:11:59,478 ::INFO ::[Logger]:: Inserted text in the Enter_ePlannerCendynAdmin_Property_TextBox element on the CendynAdmin page.
+2021-06-29 17:11:59,480 ::DEBUG::[Logger]:: 9) Entered Property
+2021-06-29 17:12:17,053 ::INFO ::[Logger]:: Selected the Hotel Origami value from the Select_ePlannerCendynAdmin_Property_Dropdown drop down.
+2021-06-29 17:12:17,054 ::DEBUG::[Logger]:: 10) Hotel Origami Property got Selected
+2021-06-29 17:12:36,848 ::INFO ::[Logger]:: Clicked the Click_ePlanner_SupplierTab element on the CendynAdmin page.
+2021-06-29 17:12:37,684 ::DEBUG::[Logger]:: 11) Supplier tab clicked
+2021-06-29 17:12:45,677 ::INFO ::[Logger]:: Clicked the Click_ePlanner_CategoryTab element on the CendynAdmin page.
+2021-06-29 17:12:46,427 ::DEBUG::[Logger]:: 12) Category tab clicked
+2021-06-29 17:12:57,720 ::INFO ::[Logger]:: Clicked the Click_Supplier_Category_HomeEdit element on the CendynAdmin page.
+2021-06-29 17:13:00,510 ::DEBUG::[Logger]:: 13) 
+2021-06-29 17:14:23,674 ::INFO ::[Logger]:: Selected the Home Letter value from the Select_CategoryType_Dropdown drop down.
+2021-06-29 17:14:38,235 ::INFO ::[Logger]:: Clicked the Click_EditCategory_SaveButton element on the CendynAdmin page.
+2021-06-29 17:14:39,302 ::DEBUG::[Logger]:: 14) Clicked on Home edit and category type selected as Home Letter

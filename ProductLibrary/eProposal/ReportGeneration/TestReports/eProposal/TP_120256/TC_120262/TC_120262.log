@@ -1,0 +1,13 @@
+2021-09-09 20:37:15,610 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-09-09 20:37:16,289 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-09-09 20:37:16,307 ::INFO ::[Logger]::  is used for Testing
+2021-09-09 20:37:16,321 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/Account/Login
+2021-09-09 20:37:16,322 ::INFO ::[Logger]:: Execution started at:-Sep-09-2021 20-37-16-PM
+2021-09-09 20:37:16,324 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-09-09 20:37:16,326 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-09-09 20:37:16,327 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_120262         XXXXXXXXXXXXXXXX
+2021-09-09 20:37:16,360 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-09-09 20:38:43,116 ::INFO ::[Logger]:: Inserted text in the  element on the  page.
+2021-09-09 20:38:50,405 ::INFO ::[Logger]:: Clicked the  element on the  page.
+2021-09-09 20:38:58,090 ::INFO ::[Logger]:: Inserted text in the  element on the  page.
+2021-09-09 20:39:04,426 ::INFO ::[Logger]:: Clicked the  element on the  page.

@@ -1,0 +1,1012 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ObjectRepository>
+
+  <Admin>
+    <!--START [Admin]-->
+    <Parameter key="Admin_Text_UserName">//*[@id='Email']</Parameter>
+    <Parameter key="Admin_Text_Password">//*[@id='Password']</Parameter>
+    <Parameter key="Admin_Button_Login">//input[@value='Login']</Parameter>
+    <Parameter key="Admin_Text_SearchEmail">//*[@id="email"]</Parameter>
+    <Parameter key="Admin_Button_MemberSearch">//*[@id="btnSearchMember"]</Parameter>
+    <Parameter key="Admin_Button_ClearSearch">clearSearch</Parameter>
+    <Parameter key="Admin_Button_ViewMember">//div[@id='memberSearchTab']//th[@aria-label='View']//following::span[1]</Parameter>
+    <Parameter key="Admin_MemberEmailText">//*[@id="38699"]/div[1]/div[1]/div/span[3]</Parameter>
+    <Parameter key="Admin_Link_ActivationEmail">//*[@id="memResendAE"]</Parameter>
+    <Parameter key="Admin_Link_WelcomeEmail">//*[@id="memResendWE"]</Parameter>
+    <Parameter key="Admin_ActivationEmail_Icon_Close">//div[@id='resendActEmail']//button[@id='btnClose']</Parameter>
+    <Parameter key="Admin_WelcomeEmail_Icon_Close">//div[@id='resendWelcome']//button[@id='btnClose']</Parameter>
+    <Parameter key="Admin_Button_Activation_Save">(//button[@id='btnSave'])[6]</Parameter>
+    <Parameter key="Admin_Button_Welcome_Save">(//button[@id='btnSave'])[7]</Parameter>
+    <Parameter key="Admin_Dropdown_MemberType">memType</Parameter>
+    <Parameter key="Admin_Textbox_MemberNumber">memNumb</Parameter>
+    <Parameter key="Admin_Textbox_Lastname">lname</Parameter>
+    <Parameter key="Admin_Textbox_Firstname">fname</Parameter>
+    <Parameter key="Admin_Textbox_Email">//input[@id='email']</Parameter>
+    <Parameter key="Admin_Textbox_Street">street</Parameter>
+    <Parameter key="Admin_Textbox_City">city</Parameter>
+    <Parameter key="Admin_Textbox_Zip">zip</Parameter>
+    <Parameter key="Admin_Dropdown_Country">//select[@id='country']</Parameter>
+    <Parameter key="Admin_Dropdown_State">//button[@data-id='state']</Parameter>
+    <Parameter key="Admin_Dropdown_State_2">//select[@id='state']</Parameter>
+    <Parameter key="Admin_Dropdown_AwardName">awardType</Parameter>
+    <Parameter key="Admin_Textbox_AwardNumber	">perkNumber</Parameter>
+    <Parameter key="Admin_Textbox_CardName">cardname</Parameter>
+    <Parameter key="Admin_Textbox_Company">company</Parameter>
+    <Parameter key="Admin_Textbox_Phone">mobilephone</Parameter>
+    <Parameter key="Admin_Dropdown_MemberStatus">memberstatus</Parameter>
+    <Parameter key="Admin_Value_MemberType">//table[@id='memberSearchResults']//th[contains(@aria-label,'Member Type')]//following::td[1]</Parameter>
+    <Parameter key="Admin_Value_MemberNumber">//table[@id='memberSearchResults']//th[contains(@aria-label,'Member #')]//following::td[2]</Parameter>
+    <Parameter key="Admin_Value_Email">//table[@id='memberSearchResults']//th[contains(@aria-label,'Email')]/parent::tr/parent::thead/following::tbody/tr/td[contains(.,'@cendyn17.com')]</Parameter>
+    <Parameter key="Admin_Value_FullName">//table[@id='memberSearchResults']//th[contains(@aria-label,'Full Name')]//following::td[3]</Parameter>
+    <Parameter key="Admin_Value_Address">//table[@id='memberSearchResults']//th[contains(@aria-label,'Address')]//following::td[5]</Parameter>
+    <Parameter key="Admin_Value_Phone">//table[@id='memberSearchResults']//th[contains(@aria-label,'Phone')]//following::td[6]</Parameter>
+    <Parameter key="Admin_Value_CardName">//*[@id='memberSearchResults']/tbody/tr/td[0]</Parameter>
+    <Parameter key="Admin_Value_MemberLevel">//table[@id='memberSearchResults']//th[contains(@aria-label,'Member Level')]//following::td[7]</Parameter>
+    <Parameter key="Admin_Value_Company">//table[@id='memberSearchResults']//th[contains(@aria-label,'Company')]//following::td[8]</Parameter>
+    <Parameter key="Admin_Value_Status">//table[@id='memberSearchResults']//th[contains(@aria-label,'Status')]//following::td[9]</Parameter>
+    <Parameter key="Admin_Textbox_Filter">//*[@id='memberSearchResults_filter']//label/input</Parameter>
+    <Parameter key="Admin_Dropdown_Pagination">//*[@id='memberSearchResults_length']/label/select</Parameter>
+    <Parameter key="Admin_Arrow_Next">//*[@id='memberSearchResults_next']/a</Parameter>
+    <Parameter key="Admin_Arrow_Previous">//*[@id='memberSearchResults_previous']/a</Parameter>
+    <Parameter key="Admin_MemberInfo_MemberStays">//a[contains(text(),'Member Stays')]</Parameter>
+    <Parameter key="Admin_MemberInfo_SearchMemberStays">(//input[@type='search'])[3]</Parameter>
+    <Parameter key="Admin_Menu_LoyaltyAwards">//a[contains(@href, '/en-US/Loyalty/LoyaltyAwards')]</Parameter>
+    <Parameter key="Admin_Button_Awards_Add">//button[@id='btnAddAward']</Parameter>
+    <Parameter key="Admin_Text_Award_Name">//input[@id='awardname']</Parameter>
+    <Parameter key="Admin_Text_Award_Search">//input[@type='search']</Parameter>
+    <Parameter key="Admin_Text_Award_Code">//input[@id='awardcode']</Parameter>
+    <Parameter key="Admin_Text_Award_StartDate">//*[@id="startdate"]</Parameter>
+    <Parameter key="Admin_Text_Award_EndDate">//*[@id="enddate"]</Parameter>
+    <Parameter key="Admin_DropDown_Awardtype">//*[@id="awardtype"]</Parameter>
+    <Parameter key="Admin_Text_DaysActive">//*[@id="awardActiveDays"]</Parameter>
+    <Parameter key="Admin_Text_AdvanceDeliveryDays">//*[@id="advanceDeliveryDays"]</Parameter>
+    <Parameter key="Admin_DropDown_MinQualifiedStay">//*[@id="awardForm"]/div/div/div[2]/div[1]/div[16]/div/div/button</Parameter>
+    <Parameter key="Admin_DropDown_MemberLevel">//*[@id="awardForm"]/div/div/div[2]/div[1]/div[17]/div/div/button</Parameter>
+    <Parameter key="Admin_DropDown_EmailName">//*[@id="emailcode"]</Parameter>
+    <Parameter key="Admin_Award_Savebtn">//div[@id='awardForm']/div/div/div[3]/button[2]</Parameter>
+    <Parameter key="Admin_Button_Close">//div[@id='addTrans']//button[@id='btnClose']</Parameter>
+    <!--<Parameter key="Admin_Button_Close">//div[@id='addTrans']//button[@id='btnClose']</Parameter>-->
+    <Parameter key="Admin_CheckBox_Use_As_EGift">//input[@id='iseGift']</Parameter>
+    <Parameter key="Admin_Text_PointsCost">//input[@id='points']</Parameter>
+    <Parameter key="Admin_DropDown_AwardExpMonth">//select[@id='awardExpMonth']</Parameter>
+    <Parameter key="Admin_SwitchButton_Automated">//div[@class='bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-mini bootstrap-switch-id-chkAutomated bootstrap-switch-animate bootstrap-switch-on']//span[@class='bootstrap-switch-handle-on bootstrap-switch-primary'][contains(text(),'On')] </Parameter>
+    <Parameter key="Admin_SwitchButton_AwardStatus">//div[@class='bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-mini bootstrap-switch-id-chkActive bootstrap-switch-animate bootstrap-switch-on']//span[@class='bootstrap-switch-handle-on bootstrap-switch-primary'][contains(text(),'On')]</Parameter>
+    <Parameter key="Dropdown_Value_Country">//ul[@class='dropdown-menu inner']//li[@class='active']//a/span[1]</Parameter>
+    <Parameter key="Admin_Attribute_state">//select[@id='state']</Parameter>
+    <Parameter key="DropDown_value_State">//span[text()='CALIFORNIA']</Parameter>
+    <Parameter key="Click_On_Close">//button[@id='loginModalCloseBtn']</Parameter>
+    <Parameter key="Admin_Loyalty_Egift_tab">//*[@id="MainNav_LoyaltyCoupons"]</Parameter>
+    <Parameter key="Admin_Loyalty_Egift_Account_Balance">/html/body/div[2]/div/div/ul/li[3]/a</Parameter>
+    <Parameter key="AdminorgotPassword_Recovery">//*[@id='password-recovery-confirm']</Parameter>
+    <Parameter key="Admin_ForgotPassword_LinkText">//a[contains(.,'Forgot Password?')]</Parameter>
+    <Parameter key="Admin_Recovery_Email">//input[@id='Email']</Parameter>
+    <Parameter key="Admin_ForgotPassword_Recover">//*[@id='password-recovery']</Parameter>
+    <Parameter key="Admin_NewPassword">//input[@id='NewPassword']</Parameter>
+    <Parameter key="Admin_NewPasswordConfirm">//input[@id='ConfirmNewPassword']</Parameter>
+    <Parameter key="SubmitNewPassword">//input[@id='password-recovery']</Parameter>
+    <Parameter key="Admin_submenu_Users_setting">/html/body/div[2]/div/div/ul/li[4]/a</Parameter>
+    <Parameter key="Admin_MemberBatchUpload_Tab">//a[contains(.,'Member Batch Upload')]</Parameter>
+    <Parameter key="Click_MemberBatchUpdate">//a[contains(.,'Member Batch Updates')]</Parameter>
+    <Parameter key="BatchUpdate_DownloadTemplete">//button[@id='downloadMembersUpdateTemplateBtn']</Parameter>
+    <Parameter key="BatchUpload_DownloadTemplete">//button[@id='downloadMembersTemplateBtn']</Parameter>
+    <Parameter key="BatchUpdate_UploadTemplete">//button[contains(text(),'Upload Members')]</Parameter>
+    <Parameter key="BatchUpdate_UpdateTemplete">//button[contains(text(),'Update Members')]</Parameter>
+    <Parameter key="BatchUpload_UploadFile">//div[@id='uploadMembersModal']//label[@class='input-group-addon']</Parameter>
+    <Parameter key="BatchUpdate_UploadFile">//div[@id='uploadMembersUpdateModal']//label[@class='input-group-addon']</Parameter>
+    <Parameter key="BatchUpload_ClickonUpload">//button[@id='uploadMembersBtn']</Parameter>
+    <Parameter key="Refreshbutton">//*[@id="refreshUploadMemberLogBtn"]</Parameter>
+    <Parameter key="MemberUploadedDetails">//*[@id="tableMemberUploadLogs"]//button</Parameter>
+    <Parameter key="Admin_Memberupload_Text_Filter">//*[@id="tableMemberUploadLogs_filter"]//input</Parameter>
+    <Parameter key="BatchUploadRegistraion_Upload">//label[@class='input-group-addon']/following::span[@class='icon-folder']</Parameter>
+    <Parameter key="Admin_MemberBatchUpload_BtachRegistration_SubTab">//a[contains(.,'Member Batch Registration')]</Parameter>
+    <Parameter key="BatchUpdate_UploadFiles">//button[@id='uploadMembersUpdateBtn']</Parameter>
+    <Parameter key="Click_CloseButton_OnMemberBatchUpdateDetailsPopup">(//button[contains(text(),'Close')])[2]</Parameter>
+    <Parameter key="Click_MemberBatchUpdate_UploadDateAndTime">//*[@id='tableMemberUploadLogs']/thead/tr/th[1]</Parameter>
+    <Parameter key="UpdateRefreshbutton">//button[@id='refreshUpdateMemberLogBtn']</Parameter>
+    <Parameter key="Admin_Memberupdate_Text_Filter">//input[@type='search' and @aria-controls='tableMemberUpdateLogs']</Parameter>
+    <Parameter key="MemberUpdateDetails">//button[@class='btn btn-secondary btn-sm btnViewMemberBatchUpdateLog']</Parameter>
+    <Parameter key="Click_MemberSearchTab">//a[contains(text(),'Member Search')]</Parameter>
+    <Parameter key="Text_MemberShipId">//span[@class='id ']</Parameter>
+    <Parameter key="Admin_Value_MemberNumber_Almanac">//table[@id='memberSearchResults']//th[contains(@aria-label,'Member #')]//following::td[1]</Parameter>
+    <Parameter key="Admin_MemberInformation_Tab">//a[contains(.,'Member Information')]</Parameter>
+    <Parameter key="Click_Member_Level_Email_No_Button">(//button[contains(text(),'No')])[2]</Parameter>
+    <Parameter key="MemberLevel_CrossButton">//*[@id="sendMemberLevelUpEmail"]/div/div/div[1]/button</Parameter>
+       <Parameter key="MemberLevel_Email_Overlay">//*[@id='sendMemberLevelUpEmail']//button[contains(text(),'Yes')]</Parameter>
+    <Parameter key="Admin_Update_View_Overlay_Close">//*[@id='adminLogDetail']//button[@class='close']</Parameter>
+    <Parameter key="Click_Admin_AwardStatusSwitch">(//*[@id='awardForm']//span[@class='bootstrap-switch-label'])[2]</Parameter>
+    <Parameter key="LoyaltyeGift_RemainingBalance">//*[@id='partnersDashboardTable']/tbody/tr/td[4]</Parameter>
+    <Parameter key="Click_AddAward">//*[@id='memPerks']//button[contains(text(),'Add Award')]</Parameter>
+    <Parameter key="Admin_Textbox_First_Name">firstname</Parameter>
+    <Parameter key="Admin_Textbox_Last_Name">lastname</Parameter>
+    <Parameter key="Admin_MemberAward_Previous_button">//*[@id='perksMember001_paginate']//a[contains(text(),'Pre')]</Parameter>
+    <Parameter key="Dropdown_SelectStatus">//select[@class='form-control input-sm']</Parameter>
+    <Parameter key="SelectStatusCheck">//button[@class='btn btn-primary btn-sm editable-submit']</Parameter>
+    <Parameter key="Activation_Email_Link_Button">(//div[@class='x_email_content']//following::td[1])[1]</Parameter>
+    <Parameter key="Activation_Email_Link">((//div[@class='x_email_content']//following::td[1])[1]//following::a)[1]</Parameter>
+    <Parameter key="DeleteSelectedStatus">//div[2]/button[2]</Parameter>
+    <Parameter key="Click_LoyaltyRules_MemberLevelRules_Tab">//a[contains(.,'Member Level Rules')]</Parameter>
+    <Parameter key="Click_LoyaltyRules_MemberLevelRules_AddRule">//*[@id='btnAddMemberLevelRule']</Parameter>
+    <Parameter key="Click_LoyaltyRules_MemberLevelRules_Filters">//*[@id='table-fasttrack-rules_filter']//input</Parameter>
+    <Parameter key="Click_LoyaltyRules_MemberLevelRules_AddRule_RefferalCode">//*[@id='referralCode']</Parameter>
+    <Parameter key="Click_LoyaltyRules_MemberLevelRules_AddRule_QualifyingNights">//*[@id='qualifyingNinghts']</Parameter>
+    <Parameter key="Click_LoyaltyRules_MemberLevelRules_AddRule_StayType">//*[@id='ddStayType']</Parameter>
+    <Parameter key="Click_LoyaltyRules_MemberLevelRules_AddRule_NewLevel">//*[@id='ddNewLevel']</Parameter>
+    <Parameter key="Click_LoyaltyRules_MemberLevelRules_AddRule_CancelButton">//*[@id='btnCancelLevel']</Parameter>
+    <Parameter key="Click_LoyaltyRules_MemberLevelRules_AddRule_SaveButton">//*[@id='btnSaveLevel']</Parameter>
+    <Parameter key="Click_LoyaltyRules_MemberLevelRules_EditButton">(//*[@id='table-fasttrack-rules']//button[1])[1]</Parameter>
+    <Parameter key="Click_LoyaltyRules_MemberLevelRules_DeleteButton">(//*[@id='table-fasttrack-rules']//button[2])[1]</Parameter>
+    <Parameter key="Click_LoyaltyRules_MemberLevelRules_PrevButton">(//*[@id='table-fasttrack-rules_paginate']//a[contains(.,'Prev')])[1]</Parameter>
+    <Parameter key="Click_LoyaltyRules_MemberLevelRules_NextButton">(//*[@id='table-fasttrack-rules_paginate']//a[contains(.,'Next')])[1]</Parameter>
+    <Parameter key="Click_LoyaltyRules_MemberLevelRules_DeleteConfirmButton">//*[@id='btnConfirmRemoveMemberLevelRule']</Parameter>
+    <Parameter key="Click_LoyaltyRules_MemberLevelRules_DeleteCancle">//*[@id='btnCancelRemoveMemberLevelRule']</Parameter>
+    <Parameter key="Click_LoyaltyRules_MemberLevelRules_PaginationDropdown">//*[@id='table-fasttrack-rules_length']//select</Parameter>
+    <Parameter key="Click_LoyaltyRules_PointsEarningRule_RuleRestriction">//a[contains(text(),'Rule Restrictions')]</Parameter>
+    <Parameter key="Click_LoyaltyRules_PointsEarningRule_RuleRestriction_ChannelCodeValue">//*[@id="restrictions"]//button[@data-id = 'channelList']/span</Parameter>
+    <Parameter key="Get_PointsEarningRule_GridName">//*[@id='table-rules']/tbody/tr/td[1]</Parameter>
+    <Parameter key="Get_PointsEarningRule_GridPriority">//*[@id='table-rules']/tbody/tr[1]/td[4]</Parameter>
+	  <Parameter key="Enter_AddMemershipLevel_Filter">//div[@id='table-membershiplevel_filter']//input</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Button_EditPromotion">//*[@id='promo-table']/tbody/tr[1]/td[5]/button</Parameter>
+    <Parameter key="Click_Member_Level_Email_Yes_Button">//button[@class='btn btn-primary sendMemberLevelUpEmail']</Parameter>
+    
+    <!--END [Admin]-->
+
+    <!--Start [Admin_MemberInformation]-->
+    <Parameter key="Admin_MemberInformation_Value_MemberStatus">memStatus</Parameter>
+    <Parameter key="Admin_MemberInformation_Dropdown_MemberStatus">//div[@class ='editable-input']//select[@class ='form-control input-sm']</Parameter>
+    <Parameter key="Admin_MemberInformation_Dropdown_EmailStatus">emailstatus</Parameter>
+    <Parameter key="Admin_MemberInformation_Value_MemberLevel">memLevel</Parameter>
+    <Parameter key="Admin_MemberInformation_Icon_Right">//div[@class ='editable-buttons']//button[@type='submit']</Parameter>
+    <Parameter key="Admin_MemberInformation_Icon_Cross">//div[@class ='editable-buttons']//button[@type='button']</Parameter>
+    <Parameter key="Admin_MemberInformation_Value_PointsBalance">//span[contains(@class,'currentPointCount')]</Parameter>
+    <Parameter key="Admin_MemberInformation_Value_MemberLogin">memReset</Parameter>
+    <Parameter key="Admin_MemberInformation_Text_UserLogin">userLogin</Parameter>
+    <Parameter key="Admin_MemberInformation_Button_Update">//div[@id='resetLogin']//button[@id='btnSave']</Parameter>
+    <Parameter key="Admin_MemberInformation_ResetLogin_Icon_Close">//div[@id='resetLogin']//button[@id='btnClose']</Parameter>
+    <Parameter key="Admin_MemberInformation_Value_ActivationEmail">memResendAE</Parameter>
+    <Parameter key="Admin_MemberInformation_ActivationEmail_UserLogin">userLoginAE</Parameter>
+    <Parameter key="Admin_MemberInformation_Value_WelcomeEmail">memResendWE</Parameter>
+    <Parameter key="Admin_MemberInformation_WelcomeEmail_UserLogin">userLoginWE</Parameter>
+    <Parameter key="Admin_MemberInformation_Value_MemberPortal">adminLogin</Parameter>
+    <Parameter key="Admin_MemberInformation_Value_EmailStatus">//*[@class='status ']</Parameter>
+    <!--<Parameter key="Admin_MemberInformation_Value_EmailStatus">//span[@class='status']</Parameter>-->
+    <Parameter key="Admin_MemberInformation_Value_ActivatedDate">//span[@class='actived']</Parameter>
+    <Parameter key="Admin_MemberInformation_Value_Email">//span[@class='email']</Parameter>
+    <Parameter key="Admin_MemberInformation_Activation_Button_SendEmail">//div[@id='resendActEmail']//button[@id='btnSave']</Parameter>
+    <Parameter key="Admin_MemberInformation_Send_Email_Popup_Close">//div[@class='modal-dialog ui-draggable']//button[@class='close'][contains(text(),'×')]</Parameter>
+    <Parameter key="Admin_MemberInformation_Welcome_Button_SendEmail">//div[@id='resendWelcome']//button[@id='btnSave']</Parameter>
+    <Parameter key="Admin_Bartell_MemberStay_Data_Arrival">//*[@id='staySearch_wrapper']//tbody/tr[1]/td[5]</Parameter>
+    <!--END [Admin_MemberInformation]-->
+
+    <!--Start [Admin_Navigation]-->
+    <Parameter key="Admin_Tab_MemberAwards">//a[contains(text(),'Member Awards')]</Parameter>
+    <Parameter key="Admin_Tab_MemberStays">//a[contains(text(),'Member Stays')]</Parameter>
+    <Parameter key="Admin_Tab_MemberTransactions">//a[contains(text(),'Member Transactions')]</Parameter>
+    <Parameter key="Admin_Tab_PointsHistory">//a[contains(text(),'Points History')]</Parameter>
+    <Parameter key="Admin_Tab_Invites">//a[contains(text(),'Invites')]</Parameter>
+    <Parameter key="Admin_Tab_Redemptions">//a[contains(text(),'Redemptions')]</Parameter>
+    <Parameter key="Admin_Tab_AdminUpdates">//a[contains(text(),'Admin Updates')]</Parameter>
+    <Parameter key="Admin_Menu_LoyaltySetup">//a[contains(text(),'Loyalty Setup')]</Parameter>
+    <Parameter key="Admin_Menu_Home">//a[contains(text(),'Home')]</Parameter>
+    <Parameter key="Admin_Menu_Users">//a[contains(text(),'Users')]</Parameter>
+    <Parameter key="Admin_Menu_EmailSetup">//*[@id='MainNav_EmailDashboard']</Parameter>
+    <Parameter key="Admin_Menu_LoyaltyRules">//a[contains(text(),'Loyalty Rules')]</Parameter>
+    <Parameter key="Admin_Menu_ManualMerge">//a[contains(text(),'Manual Merge')]</Parameter>
+    <Parameter key="Admin_Menu_LoyaltyeGifts">//a[contains(@href, '/en-US/Loyalty/LoyaltyeGifts')]</Parameter>
+
+    <Parameter key="Admin_LoyaltySetup_SubTab_TransactionReason">//a[contains(text(),'Transaction Reasons')]</Parameter>
+    <Parameter key="Admin_LoyaltySetup_SubTab_SignUpSources">//a[contains(text(),'Sign Up Sources')]</Parameter>
+    <Parameter key="Admin_LoyaltySetup_SubTab_TermsAndConditions">//a[contains(text(),'Terms &amp; Conditions')]</Parameter>
+    <Parameter key="Admin_LoyaltySetup_SubTab_Offers">//a[contains(text(),'Offers')]</Parameter>
+    <Parameter key="Admin_LoyaltyRules_SubTab_QualifyingRules">//a[contains(text(),'Qualifying Rules')]</Parameter>
+    <Parameter key="Admin_LoyaltyRules_SubTab_PointsEarningRules">//a[contains(text(),'Points Earning Rules')]</Parameter>
+    <Parameter key="Admin_Menu_ContentManagment_Tab">//a[contains(.,'Content Management')]</Parameter>
+    <Parameter key="Admin_Menu_LoyaltyMapping_Tab">//a[contains(.,'Loyalty Mapping')]</Parameter>
+    <Parameter key="Admin_LoyaltyMapping_UploadLog_SubTab">//a[contains(.,'Upload Log')]</Parameter>
+    <!--END [Admin_Navigation]-->
+
+    <!--Start [Admin_MemberTransaction]-->
+    <Parameter key="Admin_MemberTransaction_Button_AddTransactions">btnAddTrans</Parameter>
+    <Parameter key="Admin_MemberTransaction_Text_FilterSearch">//*[@id='transMember001_filter']//label/input</Parameter>
+    <Parameter key="Admin_MemberTransaction_Dropdown_Entries">//*[@id='transMember001_length']/label/select</Parameter>
+    <Parameter key="Admin_MemberTransaction_Dropdown_TransactionReason">transReason</Parameter>
+    <Parameter key="Admin_MemberTransaction_Text_Points">transPoints</Parameter>
+    <Parameter key="Admin_MemberTransaction_Text_InternalComments">commentsInternal</Parameter>
+    <Parameter key="Admin_MemberTransaction_DatePicker_ExpirationDate">//*[@id='datepicker-expirationdate']/span/span</Parameter>
+    <Parameter key="Admin_MemberTransaction_Text_ExpirationDate">expirationdate</Parameter>
+    <Parameter key="Admin_MemberTransaction_Text_CommentsToGuest">commentsToCustomer</Parameter>
+    <Parameter key="Admin_MemberTransaction_RadioButton_SendEmailToMember">sendMemberEmail</Parameter>
+    <Parameter key="Admin_MemberTransaction_RadioButton_AddCommentsToEmail">addComments</Parameter>
+    <Parameter key="Admin_MemberTransaction_Text_MemberEmail">//*[@id='addTrans']//label[contains(text(),'Member Email: ')]//following::*[@id='memberEmail']</Parameter>
+    <Parameter key="Admin_MemberTransaction_Text_BCC">bccEmail</Parameter>
+    <Parameter key="Admin_MemberTransaction_RadioButton_FraserHospitality">parentHotel</Parameter>
+    <Parameter key="Admin_MemberTransaction_RadioButton_Hotel">childHotels</Parameter>
+    <Parameter key="Admin_MemberTransaction_Text_Hotel">//*[@id='addTrans']/div/div/div[2]/div[1]/div[4]/div/div/button</Parameter>
+    <Parameter key="Admin_MemberTransaction_Dropdown_Hotel">//*[@id='addTrans']/div/div/div[2]/div[1]/div[4]/div/div/div/div/input</Parameter>
+    <Parameter key="Admin_MemberTransaction_Button_Save">//div[@id='addTrans']//button[@id='btnSave']</Parameter>
+    <Parameter key="Admin_MemberTransaction_Icon_Close">//div[@id='addTrans']//button[@id='btnClose']</Parameter>
+    <Parameter key="Admin_MemberTransaction_Dropdown_Pagination">//*[@id='transMember001_length']//select</Parameter>
+    <Parameter key="Admin_MemberTransaction_Arrow_Next">//*[@id='transMember001_paginate']//a[contains(text(),'Next')]</Parameter>
+    <Parameter key="Admin_MemberTransaction_Arrow_Previous">//*[@id='transMember001_paginate']//a[contains(text(),'Pre')]</Parameter>
+    <!--END [Admin_MemberTransaction]-->
+
+    <!--Start [Admin_MemberStay]-->
+    <Parameter key="Admin_Dropdown_Entries">//*[@id='staysMember001_length']/label/select</Parameter>
+    <Parameter key="Admin_Icon_Next">//div[@id='staysMember001_paginate']//a[text()='Next']</Parameter>
+    <Parameter key="Admin_Icon_Previous">//div[@id='staysMember001_paginate']//a[text()='Pre']</Parameter>
+    <Parameter key="Admin_MemberStay_Button_SearchStay">//*[@id='memStays']/div[1]/div[2]/ul/li[2]/a</Parameter>
+    <Parameter key="Admin_MemberStay_Dropdown_Property">//*[@id='searchStays']/div[1]/div[1]/div/div/button</Parameter>
+    <Parameter key="Admin_MemberStay_Value_Property">//*[@id='searchStays']/div[1]/div[1]/div/div/div/div/input</Parameter>
+    <Parameter key="Admin_MemberStay_Value_DepartureFrom">getDepartFrom</Parameter>
+    <Parameter key="Admin_MemberStay_Value_DepartureTo">getDepartTo</Parameter>
+    <Parameter key="Admin_MemberStay_Text_FirstName">//div[@id='searchStays']//input[@id='fname']</Parameter>
+    <Parameter key="Admin_MemberStay_Text_LastName">//div[@id='searchStays']//input[@id='lname']</Parameter>
+    <Parameter key="Admin_MemberStay_Text_ReservationNumber">reservNumber</Parameter>
+    <Parameter key="Admin_MemberStay_Data_ReservationNumber">//*[@id='staysMember001']/tbody/tr[1]/td[1]</Parameter>
+    <Parameter key="Admin_MemberStay_Data_Arrival">//*[@id='staysMember001']/tbody/tr/td[3]</Parameter>
+    <Parameter key="Admin_MemberStay_Data_Departure">//*[@id='staysMember001']/tbody/tr[1]/td[4]</Parameter>
+    <Parameter key="Admin_MemberStay_Data_Hotel">//*[@id='staysMember001']/tbody/tr[1]/td[5]</Parameter>
+    <Parameter key="Admin_MemberStay_Tab_MemberID">(//*[@id='staySearch_wrapper']//thead/tr/th[9])[1]</Parameter>
+    <Parameter key="Admin_MemberStay_Checkbox_Select">//table[@id='staySearch']/tbody/tr[1]/td[10]/div/input[not (@disabled)]</Parameter>
+    <Parameter key="Admin_MemberStay_Button_Search">btnSearchStay</Parameter>
+    <Parameter key="Admin_MemberStay_Button_Save">//div[@id='searchStays']//button[@id='btnSave']</Parameter>
+    <Parameter key="Admin_MemberStay_Button_Back">//*[@id='memStays']/div[1]/div[2]/ul/li[1]/a</Parameter>
+    <Parameter key="Admin_MemberStay_Text_Filter">//*[@id='staysMember001_filter']//input</Parameter>
+	<Parameter key="Enter_ReservationNumber">//input[@id='reservNumber']</Parameter>
+    <!--END [Admin_MemberStay]-->
+
+    <!--Start [AdminUpdates]-->
+    <Parameter key="Admin_AdminUpdates_Dropdown_Entries">//*[@id='tbAdminUpdates001_length']/label/select</Parameter>
+    <Parameter key="Admin_AdminUpdates_Text_Filter">//*[@id='tbAdminUpdates001_filter']//label/input</Parameter>
+    <Parameter key="Admin_AdminUpdates_Icon_View1">//*[@id='tbAdminUpdates001']/tbody/tr[1]/td[4]/a</Parameter>
+    <Parameter key="Admin_AdminUpdates_Button_Next">//div[@id='tbAdminUpdates001_paginate']//a[text()='Next']</Parameter>
+    <Parameter key="Admin_AdminUpdates_Button_Last">//div[@id='tbAdminUpdates001_paginate']//a[text()='Last']</Parameter>
+    <Parameter key="Admin_AdminUpdates_Button_Prev">//div[@id='tbAdminUpdates001_paginate']//a[text()='Prev']</Parameter>
+    <Parameter key="Admin_AdminUpdates_Button_First">//div[@id='tbAdminUpdates001_paginate']//a[text()='First']</Parameter>
+    <Parameter key="Admin_AdminUpdates_Search_Clear">//*[@id="tbAdminUpdates001_filter"]//input</Parameter>
+    <Parameter key="Click_AdminUpdates_Button_Close">//*[@id='adminLogDetail']//button[@type='button']</Parameter>
+    <!--END [AdminUpdates]-->
+
+    <!--Start [Admin_MemberAwards]-->
+    <Parameter key="Admin_MemberAwards_Button_AddAward">//*[contains(text(),' Add Award')]</Parameter>
+    <Parameter key="Admin_MemberAwards_Dropdown_SelectAward">perkSelection</Parameter>
+    <Parameter key="Admin_MemberAwards_Text_Comment">comments</Parameter>
+    <Parameter key="Admin_MemberAwards_Button_Save">//div[@id='addPerk']//button[@id='btnSave']</Parameter>
+    <Parameter key="Admin_MemberAwards_Icon_Close">//button[@id='btnClose']</Parameter>
+    <Parameter key="Admin_MemberAwards_Text_Filter">//*[@id='perksMember001_filter']//input</Parameter>
+    <Parameter key="Admin_Click_ExpirationDate">//table[@id='perksMember001']/tbody/tr[@class='odd']/td[4]/a</Parameter>
+    <Parameter key="Admin_Click_ExpirationDateSubmit">//button[@type='submit' and @class='btn btn-primary btn-sm editable-submit']</Parameter>
+    <Parameter key="Click_MemberAwardStatus">//table[@id='perksMember001']/tbody/tr[@class='odd']/td[6]/a</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_Dropdown_AdminMemberStatus">//select[@class='form-control input-sm']</Parameter>
+    <Parameter key="Click_AdminSendResend">//table[@id='perksMember001']/tbody/tr[@class='odd']/td[9]/button</Parameter>
+    <Parameter key="click_ResendAwardEmail_Close">//h4[contains(text(),'Resend Award Email')]/preceding-sibling::button[@id='btnClose']</Parameter>
+
+    <!--END [Admin_MemberAwards]-->
+
+    <!--Start [Admin_LoyaltyAwards]-->
+    <Parameter key="Admin_LoyaltyAwards_Button_Add">btnAddAward</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_Text_Filter">//*[@id='loyaltyAwards01_filter']//input</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_Icon_Edit">//table[@id='loyaltyAwards01']//button[@class='btn btn-secondary btn-sm btnEditLoyAward']</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_Text_AwardName">awardname</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_Text_AwardCode">awardcode</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_Text_StartDate">startdate</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_Text_EndDate">enddate</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_Text_Points">//*[@id="loyaltyAwards01"]/tbody/tr[1]/td[5]</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_Dropdown_AwardType">//select[@id='awardtype']</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_Button_Save">btnSave</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_Button_Cancel">btnCancel</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_Icon_Close">btnClose</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_BirthdayAward_Text_DaysActive">awardActiveDays</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_BirthdayAward_Text_AdvanceDeliveryDays">advanceDeliveryDays</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_BirthdayAward_Text_MinQualifiedStay">//*[@id='awardForm']/div/div/div[2]/div[3]/div[3]/div/div/button</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_BirthdayAward_Dropdown_MemberLevel">//button[@data-id='reqCL' and @type='button'] </Parameter>
+    <Parameter key="Admin_LoyaltyAwards_BirthdayAward_Text_MemberLevel">//button[@data-id='reqCL' and @type='button'] /following-sibling::div/descendant::input</Parameter>
+    <parameter key="Admin_LoyaltyAwards_BirthdayAward_Text_MemberLevelClubMember">//span[text()='Club Member']</parameter>
+    <Parameter key="Admin_LoyaltyAwards_BirthdayAward_Dropdown_EmailName">//select[@class='form-control' and @id='emailcode']</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_NightBasedAward_Text_NightCycle">awardActiveDays</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_NightBasedAward_Dropdown_NightAwarded">//*[@id="awardForm"]/div/div/div[2]/div[2]/div[7]/div/div/div/div[1]</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_NightBasedAward_Text_NightAwarded">//*[@id='awardForm']/div/div/div[2]/div[2]/div[7]/div/div/button</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_NightBasedAward_Dropdown_AwardExpMonth">//*[@id='awardForm']/div/div/div[2]/div[3]/div[3]/div/div/button</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_NightBasedAward_Dropdown_MemberLevel">//*[@id='awardForm']/div/div/div[2]/div[3]/div[4]/div/div/button</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_NightBasedAward_Text_MemberLevel">//*[@id='awardForm']/div/div/div[2]/div[3]/div[4]/div/div/div/div[1]</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_NightBasedAward_Text_MaxAwardPerNight">maxPer</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_NightBasedAward_Dropdown_Hotel">//*[@id='awardForm']/div/div/div[2]/div[3]/div[9]/div/div/button</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_NightBasedAward_Text_Hotel">//*[@id='awardForm']/div/div/div[2]/div[3]/div[9]/div/div/div/div[1]</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_Member_Level">//select[@id='reqCL']</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_Member_Level_DeselectAll">//*[@id='awardForm']/div/div/div[2]/div[3]/div[4]/div/div/div/div[2]/div/button[2]</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_Member_Level_SelectAll">//*[@id='awardForm']/div/div/div[2]/div[3]/div[4]/div/div/div/div[2]/div/button[1]</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_Member_Level_ClickDDM">//*[@id='awardForm']/div/div/div[2]/div[3]/div[4]/div/div/button</Parameter>
+    
+    <Parameter key="Admin_LoyaltyAwards_Dropdown_ExpMonth">//select[@class='month form-control']</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_Dropdown_ExpDay">//select[@class='day form-control']</Parameter>
+    <Parameter key="Admin_LoyaltyAwards_Dropdown_ExpYear">//select[@class='year form-control']</Parameter>
+    <!--END [Admin_LoyaltyAwards]-->
+
+    <!--Start [Admin_LoyaltyeGifts]-->
+    <Parameter key="Admin_LoyaltyeGifts_Button_AddeGift">//button[@id='btnAddGift']</Parameter>
+    <Parameter key="Admin_LoyaltyeGifts_Name">//input[@id='couponName']</Parameter>
+    <Parameter key="Admin_LoyaltyeGifts_Marketing_Partner"> //select[@id='coupPartner']</Parameter>
+    <Parameter key="Admin_LoyaltyeGifts_Marketing_Partner_Input">//span[@class='select2-search select2-search--dropdown']//input[@class='select2-search__field']</Parameter>
+    <Parameter key="Admin_LoyaltyeGifts_Award">//select[@id='coupAward']</Parameter>
+    <Parameter key="Admin_LoyaltyeGifts_Choose_Catalog">//select[@id='catalog']</Parameter>
+    <Parameter key="Admin_LoyaltyeGifts_Card_Amount">//input[@id='cardAmount']</Parameter>
+    <Parameter key="Admin_LoyaltyeGifts_Button_Add">//button[@id='couponModalSubmit']</Parameter>
+    <Parameter key="Admin_LoyaltyeGifts_Marketing_Partner_Tab"> //a[contains(text(),'Marketing Partners')]</Parameter>
+    <Parameter key="Admin_LoyaltyeGifts_Marketing_Partner_Edit">//a[contains(text(),'Marketing Partners')]</Parameter>
+    <Parameter key="Admin_LoyaltyeGifts_Marketing_Partner_Notify">//input[@id='NotificationEmail']</Parameter>
+    <Parameter key="Admin_LoyaltyeGifts_Marketing_Partner_Notify_Save">//button[@id='btnSaveCouponPartner']</Parameter>
+   
+
+    <!--END [Admin_LoyaltyeGifts]-->
+
+    <!--Start[Admin_Redeem]-->
+    <Parameter key="Admin_Menu_Redeem">//a[@href='/en-US/Loyalty/Redeem']</Parameter>
+    <Parameter key="Admin_Menu_Redeem_Edit">//tr[1]//button[@class='btn btn-primary btn-sm btnEdit']</Parameter>
+    <Parameter key="Admin_Menu_Redeem_Dropdown_Connect_To">//select[@id='promotionAward']</Parameter>
+    <Parameter key="Admin_Menu_Redeem_Button_Save">//a[@class='btn btn-primary btn-sm btnSave']</Parameter>
+    <Parameter key="Button_Add_Redemption">//a[@href='#redeemEdit']</Parameter>
+    <Parameter key="Name_InputBox_Add_Redemption">//input[@id='promotionName']</Parameter>
+    <Parameter key="ConnectTo_InputBox_Add_Redemption">//select[@id='promotionAward']</Parameter>
+    <Parameter key="Button_InputBox_Add_Redemption"> //input[@id='promotionButton']</Parameter>
+    <Parameter key="Redeem_FilterSearch">//*[@id='redeemsTable_filter']//input</Parameter>
+	  <Parameter key="Get_RedeemptionName">(//*[@id='redeemsTable']//td[3])[1]</Parameter>
+    <Parameter key="Get_AwardLinkName">(//*[@id='redeemsTable']//td[4])[1]</Parameter> 
+    <Parameter key="ForgotPassword_Email_Link">//span[contains(text(),'RESET MY PASSWORD')]</Parameter>
+
+    <!--End [Admin_Redeem]-->
+
+
+    <!--Start [LoyaltySetUp_TransactionReason]-->
+    <Parameter key="Admin_LoyaltySetUp_TransactionReason_Button_AddReason">//*[@id='transferReasons']/div[1]/div[2]/button</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_TransactionReason_Text_Code">transferReasonCode</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_TransactionReason_Text_ReasonName">transferReasonName</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_TransactionReason_Text_Filter">//*[@id='transferReasons01_filter']//input</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_TransactionReason_Button_Save">//div[@id='transferReasonsForm']//button[@id='trbtnSave']</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_TransactionReason_Button_Cancel">//div[@id='transferReasonsForm']//button[@id='trbtnCancel']</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_TransactionReason_Icon_Close">//div[@id='transferReasonsForm']//button[@id='trbtnClose']</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_TransactionReason_Icon_Edit">//table[@id='transferReasons01']//button[@class='btn btn-alternate btn-sm center-block btnEdit']</Parameter>
+    <!--END [LoyaltySetUp_TransactionReason]-->
+
+    <!--Start [LoyaltySetUp_SignUpSource]-->
+    <Parameter key="Admin_LoyaltySetUp_SignUpSource_Button_AddSource">//*[@id='signuptable']/div[1]/div[2]/button</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_SignUpSource_Text_Filter">//*[@id='signupSource01_filter']//input</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_SignUpSource_Icon_Edit">//button[@id='kioskedit']</Parameter>
+    <!--<Parameter key="Admin_LoyaltySetUp_SignUpSource_Icon_Edit">//table[@id='signupSource01']//button[@class='btn btn-alternate btn-sm center-block btnEdit']</Parameter>-->
+    <Parameter key="Admin_LoyaltySetUp_SignUpSource_Text_SignUpSourceCode">signupCode</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_SignUpSource_Text_SignUpSourceName">SignUpSource</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_SignUpSource_Button_Save">//div[@id='signUpSourceForm']//button[@id='btnSignupSave']</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_SignUpSource_Button_Cancel">//div[@id='signUpSourceForm']//button[@id='subtnCancel']</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_SignUpSource_Button_Close">//div[@id='signUpSourceForm']//button[@id='subtnClose']</Parameter>
+    <!--END [LoyaltySetUp_SignUpSource]-->
+
+    <!--Start [LoyaltySetUp_TermsAndCondition]-->
+    <Parameter key="Admin_LoyaltySetUp_TermsAndCondition_Button_AddTermsAndCondition">//*[@id='setupTC']/div[1]/div[2]/button</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_TermsAndCondition_Text_Filter">//*[@id='setTerms_filter']//input</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_TermsAndCondition_Icon_Edit">(//*[@id='setTerms']//button[contains(@class,'btnEdit')])[1]</Parameter>
+    <!--<Parameter key="Admin_LoyaltySetUp_TermsAndCondition_Icon_Delete">//table[@id='setTerms']//span[@class='icon-circle-minus']</Parameter>-->
+    <Parameter key="Admin_LoyaltySetUp_TermsAndCondition_Icon_Delete">(//button[@class='btn btn-primary btn-sm btnRemove'])[10]</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_TermsAndCondition_Text_Title">//div[@id='addeditTC']//input[@id='tctitle']</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_TermsAndCondition_Button_Save">tcbtnSave</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_TermsAndCondition_Button_Cancel">(//div[@id='addeditTC']//button[1])[20]</Parameter>
+	  <Parameter key="Admin_LoyaltySetUp_TermsAndCondition_Icon_Close">tcbtnClose</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_TermsAndCondition_Button_Yes">//*[@id='commonModal']/div/div/div[3]/button[1]</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_TermsAndCondition_Button_No">//*[@id='commonModal']/div/div/div[3]/button[2]</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_TermsAndCondition_Add_TermsAndCondition">(//*[@id='setupTC']//button)[1]</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_TermsAndCondition_Description"> //body[@id='tinymce']</Parameter>
+
+    <!--END [LoyaltySetUp_TermsAndCondition]-->
+
+    <!--Start [LoyaltySetUp_Offers]-->
+    <Parameter key="Admin_LoyaltySetUp_Offers_Button_AddOffers">//*[@id='offersetup']/div[1]/div[2]/a</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Text_Filter">//*[@id='offersTable_filter']//input</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Icon_Edit">//table[@id='offersTable']//i[@class='icon-pencil btnEdit']</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Text_Title">promotionTitle</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_IFrame_ShortDescription">offershortdesc_ifr</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Text_Description">tinymce</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Text_VisibilityStart">//div[@id='datepicker-startdate']/input[@id='startdate']</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Text_VisibilityEnd">//div[@id='datepicker-enddate']/input[@id='enddate']</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Text_PromotionStart">//div[@id='vis-datepicker-startdate']//input[@id='vis-startdate']</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Text_PromotionEnd">//div[@id='vis-datepicker-enddate']//input[@id='vis-enddate']</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Icon_Image">//*[@id='offersEdit']/div[2]/div[3]/div/button</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Button_BrowseImage">//*[@id='imgCropit']//label/span</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Button_SaveImage">//*[@id='imgCropit']/div/div/div[3]/button[2]</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Button_CancelImage">//*[@id='imgCropit']/div/div/div[3]/button[1]</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Button_Save">//a[contains(text(),'Save')]</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Button_Cancel">//*[@id='offersEdit']//button[contains(text(),'Cancel')]</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Icon_Close">tcbtnClose</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Button_Yes">//*[@id='commonModal']/div/div/div[3]/button[1]</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Button_No">//*[@id='commonModal']/div/div/div[3]/button[2]</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Dropdown_MemberLevel">//*[@id='offersEdit']/div[2]/div[1]/div[3]/div/button</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Button_SelectAll">//*[@id='offersEdit']/div[2]/div[1]/div[3]/div/div/div[2]/div/button[1]</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Button_DeselectAll">//*[@id='offersEdit']/div[2]/div[1]/div[3]/div/div/div[2]/div/button[2]</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Text_MemberLevel">//*[@id='offersEdit']/div[2]/div[1]/div[3]/div/div/div[1]/input</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Button_AddAnotherPromotion">btnAddPromotion</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Text_PromotionCode">promotionCode</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Text_ButtonText">promotionButtontext</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Iframe_Description">offerdesc_ifr</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Dropdown_HotelSelection">//*[@id='promo-modal']/div/div/div[2]/div/div[3]/div/div/button</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Value_HotelSelection">//*[@id='promo-modal']/div/div/div[2]/div/div[3]/div/div/div/div[1]/input</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Button_SavePromotion">promoConfirmation</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Button_CancelPromotion">promoCancel</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Button_SavePromotionConfirm">promoSave</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Button_SavePromotionCancel">//*[@id='promoConfirmation-modal']/div/div/div[3]/button[1]</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Button_DeletePromotion">//*[@id='promo-table']/tbody/tr[1]/td[6]/button</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Button_DeleteYes">//div[@id='commonModal']/descendant::button[contains(text(),'Yes')]</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Button_DeleteNo">//div[@id='commonModal']/descendant::button[contains(text(),'No')]</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Icon_PromotionDeleteClose">//*[@id='commonModal']/div/div/div[1]/button</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Pagination_Dropdown">//*[@id='offersTable_length']//select</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Pagination_Prev_Button">//*[@id='offersTable_paginate']//a[contains(text(),'Prev')]</Parameter>
+    <Parameter key="Admin_LoyaltySetUp_Offers_Pagination_Next_Button">//*[@id='offersTable_paginate']//a[contains(text(),'Next')]</Parameter>
+	<Parameter key="Click_LoyaltySetUp_Promotion_Filter">//*[@id='promo-table_filter']/form/label/input</Parameter>
+    
+    <!--END [LoyaltySetUp_Offers]-->
+
+    <!--Start [LoyaltyRules_PointsEarningRules]-->
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Button_AddRule">pointsBasedBtn</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Text_Filter">//*[@id='table-rules_filter']//input</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Icon_Edit">//table[@id='table-rules']//button[@id='table-rule-edit-btn']</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Text_Name">//input[@id='name']</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Text_DisplayName">//input[@id='displayname']</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Text_Description">//textarea[@id='desc']</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Dropdown_BasedOn">//div[@id='ruledata']//select[@id='basedon']</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Text_StartDate">startdate</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Text_EndDate">enddate</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Text_Priority">priority</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Dropdown_RuleType">//div[@id='ruledata']//select[@id='ruletype']</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Dropdown_For">//div[@id='ruledata']//select[@id='for']</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Text_PointsEarned">//div[@id='ifTypePoints']//input[@id='ped']</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Text_Per">//input[@id='per']</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Dropdown_CaculatedOn">//select[@id='calculatedon']</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Dropdown_RevenueType">//select[@id='revenueType']</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Dropdown_IncludeMemberLevel">//button[@data-id='rcl']</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Text_IncludeMemberLevel">//*[@id="ruledata"]/div[5]/div[4]/div/div/div/div[1]/input</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Text_IncludeMemberLevel1">//*[@id="ruledata"]/div[5]/div[3]/div/div/div/div[1]/input</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Text_PointsExpiryMonth">//input[@id='pem']</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Button_Save">//button[@id='btnSave']</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Button_Cancel">//button[@id='btnCancel']</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Icon_Close">//div[@id='confirmGenRule']//button[@id='btnClose']</Parameter>
+    <!--END [LoyaltyRules_PointsEarningRules]-->
+
+    <!--Start [Admin_EmailSetUp]-->
+    <Parameter key="Admin_EmailSetUp_Text_Filter">//*[@id='notificationEmails_filter']//input</Parameter>
+    <Parameter key="Admin_EmailSetUp_Icon_Edit">//*[@id='emailSetup']//button[@class='btn btn-secondary btnEdit']</Parameter>
+    <Parameter key="Admin_EmailSetUp_Text_EmailName">//input[@id='emailName']</Parameter>
+    <Parameter key="Admin_EmailSetUp_Text_EmailSubject">//input[@id='emailSubject']</Parameter>
+    <Parameter key="Admin_EmailSetUp_IFrame_EmailContent">emailContent_ifr</Parameter>
+    <Parameter key="Admin_EmailSetUp_Text_EmailContent">tinymce</Parameter>
+    <Parameter key="Admin_EmailSetUp_IFrame_TermsAndCondition">emailTerms_ifr</Parameter>
+    <Parameter key="Admin_EmailSetUp_Text_TermsAndCondition">tinymce</Parameter>
+    <Parameter key="Admin_EmailSetUp_RadioButton_EmailStatus_Active">//*[@id='emailEdit']/div[2]/div[1]/div[1]/div/label[1]/input</Parameter>
+    <Parameter key="Admin_EmailSetUp_RadioButton_EmailStatus_InActive">//*[@id='emailEdit']/div[2]/div[1]/div[1]/div/label[2]/input</Parameter>
+    <Parameter key="Admin_EmailSetUp_Button_Save">//button[contains(text(),'Save')]</Parameter>
+    <Parameter key="Admin_EmailSetUp_Button_Save_old"> //button[@class='btn btn-primary btn-sm btnSave']</Parameter>
+    <Parameter key="Admin_EmailSetUp_Button_Cancel">(//button[contains(text(),'Cancel')])[2]</Parameter>
+    <Parameter key="Admin_EmailSetUp_Button_Cancel_old">//button[@class='btn btn-primary btn-sm btnBack']</Parameter>
+    <!--END [Admin_EmailSetUp]-->
+
+    <!--Start [Admin_Users]-->
+    <Parameter key="Admin_Users_Button_AddUsers">//button[@id='btnAddUser']</Parameter>
+    <Parameter key="Admin_Users_Text_Search">//*[@id='userTable_filter']//input</Parameter>
+    <Parameter key="Admin_Users_Text_Firstname">userFirstName</Parameter>
+    <Parameter key="Admin_Users_Text_Lastname">userLastName</Parameter>
+    <Parameter key="Admin_Users_Dropdown_UserTitle">//select[@id='userRole']</Parameter>
+    <Parameter key="Admin_Users_Dropdown_PropertyName">//*[@id="userProperty"]</Parameter>
+    <Parameter key="Admin_Users_Dropdown_UserPermission">//select[@id='userPermission']</Parameter>
+    <Parameter key="Admin_Users_Text_UserLogin">//*[@id="userLogin"]</Parameter>
+    <Parameter key="Admin_Users_Text_Propertyname">//input[@id='userLogin']</Parameter>
+    <Parameter key="Admin_Users_Text_Password">//*[@id="userPWD"]</Parameter>
+    <Parameter key="Admin_Users_Button_Save">//button[@id='btnSave']</Parameter>
+    <Parameter key="Admin_Users_Button_Close">//button[@id='btnClose']</Parameter>
+    <Parameter key="Admin_Users_Button_Edit">//table[@id='userTable']//a[@class='btn btn-secondary btn-sm btn-edit']</Parameter>
+    <Parameter key="Admin_Users_Button_Delete">//table[@id='userTable']//a[@class='btn btn-secondary btn-sm btn-delete']</Parameter>
+
+    <!--END [Admin_Users]-->
+
+    <!--Start [Admin_ManualMerge]-->
+    <Parameter key="Admin_ManualMerge_Text_MemberID">//input[@id='memNumb']</Parameter>
+    <Parameter key="Admin_ManualMerge_Text_Firstname">//input[@id='fname']</Parameter>
+    <Parameter key="Admin_ManualMerge_Text_Lastname">//input[@id='lname']</Parameter>
+    <Parameter key="Admin_ManualMerge_Text_Email">//input[@id='email']</Parameter>
+    <Parameter key="Admin_ManualMerge_Text_Street">//input[@id='street']</Parameter>
+    <Parameter key="Admin_ManualMerge_Text_City">//input[@id='city']</Parameter>
+    <Parameter key="Admin_ManualMerge_Text_Zip">//input[@id='zip']</Parameter>
+    <Parameter key="Admin_ManualMerge_Button_SearchMember">//button[@id='btnSearchMember']</Parameter>
+    <Parameter key="Admin_ManualMerge_Button_ClearSearch">//button[@id='clearSearch']</Parameter>
+    <Parameter key="Admin_ManualMerge_Button_Review">//a[@id='review_bttn']</Parameter>
+    <Parameter key="Admin_ManualMerge_Button_Cancel">//a[@id='clear_search']</Parameter>
+    <Parameter key="Admin_ManualMerge_Button_Merge">//a[@id='review_merge']</Parameter>
+    <Parameter key="Admin_ManualMerge_Icon_Select1">//*[@id='tbMergeMemberSearch']/tbody/tr[1]/td[1]/a</Parameter>
+    <Parameter key="Admin_ManualMerge_Tab_AccountWinner1">//*[@id='merge']/div[2]/div[2]/div/div[2]/table/thead/tr/th</Parameter>
+    <Parameter key="Admin_ManualMerge_RadioButton_AccountWinner1">//*[@id='merge']/div[2]/div[2]/div/div[2]/table/thead/tr/th/label/input</Parameter>
+    <Parameter key="Admin_ManualMerge_RadioButton_AccountWinner2">//*[@id='merge']/div[2]/div[2]/div/div[3]/table/thead/tr/th/label/input</Parameter>
+    <Parameter key="Admin_ManualMerge_Tab_AccountWinner1_Points">//*[@id='merge']/div[2]/div[2]/div/div[2]/table/tbody/tr[11]/td</Parameter>
+    <Parameter key="Admin_ManualMerge_Tab_AccountWinner2_Points">//*[@id='merge']/div[2]/div[2]/div/div[3]/table/tbody/tr[11]/td</Parameter>
+    <Parameter key="Admin_ManualMerge_Button_Back">backtoReview</Parameter>
+    <Parameter key="Admin_ManualMergeReview_Button_Merge">//*[@id='review']/div[1]/div[2]/a[2]</Parameter>
+    <Parameter key="Admin_ManualMergeReview_Button_Confirm">//*[@id='confirmMerge']/div/div/div[3]/button[2]</Parameter>
+    <Parameter key="Admin_ManualMergeReview_Button_Cancel">//*[@id='confirmMerge']/div/div/div[3]/button[1]</Parameter>
+    <Parameter key="Admin_ManualMerge_SubTab_ManualMerge">//a[contains(text(),'Member Merge')]</Parameter>
+    <Parameter key="Admin_ManualMerge_Value_AccountWinner1_Email">//*[@id='merge']/div[2]/div[2]/div/div[2]/table/tbody/tr[4]/td</Parameter>
+    <Parameter key="Admin_ManualMerge_Value_AccountWinner2_Email">//*[@id='merge']/div[2]/div[2]/div/div[3]/table/tbody/tr[4]/td</Parameter>
+    <Parameter key="Admin_ManualMerge_Value_Status">//*[@id='review']/table/tbody/tr[9]/td[2]</Parameter>
+    <Parameter key="Admin_ManualMerge_MemberMerge_SubTab">//ul[@class='nav nav-tabs']/li[2]/a</Parameter>
+    <!--END [Admin_ManualMerge]-->
+
+    <!--Start [Admin_MembershipSetup]-->
+    <Parameter key="Click_MembershipSetup_Tab">MainNav_MembershipSetup</Parameter>
+	  <Parameter key="Click_MemberLevel_SubTab">//a[@href='#memberLevel']</Parameter>
+	  <Parameter key="MembershipSetup_AddMemershipLevel_Button">btnAddMembershipLevel</Parameter>
+	  <Parameter key="AddMemershipLevel_MembershipLevel">ml_membershiplevel</Parameter>
+	  <Parameter key="AddMemershipLevel_MembershipCode">ml_membershipcode</Parameter>
+	  <Parameter key="AddMemershipLevel_LevelOrder">ml_memberlevelorder</Parameter>
+    <Parameter key="AddMemershipLevel_CanBeProcessedByService_DDM">ml_processbyservice</Parameter>
+	  <Parameter key="Click_AddMemershipLevel_CancelButton">btnCancelMemberLevel</Parameter>
+    <Parameter key="Click_AddMemershipLevel_Close">btnMemberLevelModalClose</Parameter>
+	  <Parameter key="Click_AddMemershipLevel_SaveButton">btnSaveMemberLevel</Parameter>
+	  <Parameter key="Click_DeleteMemershipLevel_SubmitButton">btnConfirmRemoveMembershipLevel</Parameter>
+    <Parameter key="Click_DeleteMemershipLevel_CancelButton">btnCancelRemoveMembershipLevel</Parameter>
+    <Parameter key="Click_Memberlevelrule_Tab">//a[contains(text(),'Member Level Rules')]</Parameter>
+    <Parameter key="Click_AddRule_Button">//*[@id='btnAddGeneralLevelRule']</Parameter>
+    <Parameter key="Select_MemberLevel_Dropdown">//*[@id='ddNewLevel_general']</Parameter>
+    <Parameter key="Select_RuleType_Dropdown">//*[@id='ddRuleType_general']</Parameter>
+    <Parameter key="Select_StayType_Dropdown">//*[@id='ddStayType_general']</Parameter>
+    <Parameter key="Select_DefaultRule_Dropdown">//*[@id='ddDefaultRule_general']</Parameter>
+    <Parameter key="Enter_MonthPeriod_TextBox">//*[@id='monthperiod_general']</Parameter>
+    <Parameter key="Enter_QualifyingNight_TextBox">//*[@id='qualifyingNinghts_general']</Parameter>
+    <Parameter key="Enter_StayProperties_TextBox">//*[@id='stayProperties_general']</Parameter>
+    <Parameter key="Enter_QualifiedStay_TextBox">//*[@id='qualifiedStays_general']</Parameter>
+    <Parameter key="Enter_CheckedOutStay_TextBox">//*[@id='checkoutStays_general']</Parameter>
+    <Parameter key="Enter_Points_TextBox">//*[@id='points_general']</Parameter>
+    <Parameter key="Enter_Revenue_TextBox">//*[@id='minrevenue_general']</Parameter>
+    <Parameter key="Click_MembershipLevelSave_Button">//*[@id='btnSaveGeneralLevel']</Parameter>
+    <Parameter key="Click_MembershipLevelCancel_Button">//*[@id='btnCancelGeneralLevel']</Parameter>
+    <Parameter key="Click_MembershipLevelClose_Icon">//*[@id='btngeneralLevelRuleModalClose']</Parameter>
+    <Parameter key="Enter_MemberLevelRule_Filter">//*[@id='table-generalmemberlevel-rules_filter']//input[@type = 'search']</Parameter>
+    <Parameter key="Click_MemberLevelRuleEdit_Button">//*[@id='table-generalmemberlevel-rules']//button[contains(text(),'Edit')]</Parameter>
+    <Parameter key="Click_LoyaltyRules_AwardEarningRules">//a[contains(.,'Award Earning Rules')]</Parameter>
+    <Parameter key="Click_AwardEarningRules_AddRuleButton">//*[@id='awardsBasedBtn']</Parameter>
+    <Parameter key="Click_AwardEarningRules_AddRule_IncludeMemberLevel">(//*[@id='ruledata']//button)[1]</Parameter>
+    <Parameter key="Click_AwardEarningRules_AddRule_CancelButton">//*[@id='btnCancel']</Parameter>
+    <Parameter key="Click_MemberLevelRule_AddRuleButton">//*[@id='btnAddMemberLevelRule']</Parameter>
+    <Parameter key="Click_MemberLevelRule_AddRuleButton_NewLevel">//*[@id='ddNewLevel']</Parameter>
+   <Parameter key="Click_MemberLevelRule_AddRuleButton_CancelButton">//*[@id='btnCancelLevel']</Parameter>
+
+    <Parameter key="Click_DeleteMemershipLevelRule_CancelButton">//*[@id="btnCancelRemoveMemberGeneralLevelRule"]</Parameter>
+    <Parameter key="Click_DeleteMemershipLevelRule_SubmitButton">//*[@id="btnConfirmRemoveMemberGeneralLevelRule"]</Parameter>
+    <Parameter key="Click_DeleteMemberLevelRule_Button">//*[@id="table-generalmemberlevel-rules"]//button[contains(text(),'Delete')]</Parameter>
+    <Parameter key="Click_EditMemberLevelRule_Button">//*[@id="table-generalmemberlevel-rules"]//button[contains(text(),'Edit')]</Parameter>
+    <Parameter key="Select_MembershipLevel_Entries">//*[@id='table-membershiplevel_length']//select</Parameter>
+    <Parameter key="Enter_MembershipLevel_Filter">//*[@id='table-membershiplevel_filter']//input</Parameter>
+    
+    <!--END [Admin_MembershipSetup]-->
+    <!--Start [Admin_LoyaltyRule_QualifyingRule]-->
+    <Parameter key="Loyalty_Rule_QualifyingRule_General_RuleName">//*[@id='genName']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_General_Description">//*[@id='genDesc']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_General_MinRevenue">//*[@id='genminRev']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_General_ParallelStay">//*[@id='paralStay']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_General_MarketCode">//button[@data-id = 'genIncMarkets']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_General_SourceOfBusiness">//button[@data-id = 'gensobList']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_General_ChannelCode">//button[@data-id = 'channelGList']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_General_ConsecutiveStays">//*[@id='genConsecu']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_General_SaveButton">//*[@id='confirm_genBtnSave']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_General_ChannelCode_Text">//*[@id='GeneralRuleForm']/div[2]/div/div[3]/div[5]/div/div/div/div[1]/input</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_General_MarketCode_Text">//*[@id='GeneralRuleForm']/div[2]/div/div[3]/div[2]/div/div/div/div[1]/input</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_General_SourceOfBusiness_Text">//*[@id='GeneralRuleForm']/div[2]/div/div[3]/div[4]/div/div/div/div[1]/input</Parameter>
+
+    <Parameter key="Loyalty_Rule_QualifyingRule_Night_RuleName">//*[@id='NightName']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_Night_Description">//*[@id='NightDesc']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_Night_MinRevenue">//*[@id='NightminRev']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_Night_MarketCode">//button[@data-id = 'NightIncMarkets']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_Night_Hotel">//button[@data-id = 'incNightHotel']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_Night_RatesCodes">//button[@data-id = 'incNightRate']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_Night_MarketCombo">//select[@id = 'markCombo']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_Night_RateCombo">//select[@id = 'rateCombo']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_Night_Include_Market_RateCombo">//*[@id='mrinclude']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_Night_SourceOfBusiness">//button[@data-id = 'nightsobList']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_Night_ChannelCode">//button[@data-id = 'channelQList']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_Night_SaveButton">//*[@id='confirm_nightBtnSave']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_Night_MarketCode_Text">//*[@id='qualifiedNightRuleForm']/div[2]/div[1]/div[3]/div[3]/div/div/div/div[1]/input</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_Night_Hotel_Text">//*[@id='qualifiedNightRuleForm']/div[2]/div[1]/div[3]/div[2]/div/div/div/div[1]/input</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_Night_RatesCodes_Text">//*[@id='qualifiedNightRuleForm']/div[2]/div[1]/div[3]/div[4]/div/div/div/div[1]/input</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_Night_SourceOfBusiness_Text">//*[@id='qualifiedNightRuleForm']/div[2]/div[3]/div/div/div/div[1]/input</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_Night_ChannelCode_Text">//*[@id='qualifiedNightRuleForm']/div[2]/div[4]/div/div/div/div[1]/input</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_General_SaveButton_Confirm">//*[@id='genBtnSave']</Parameter>
+    <Parameter key="Loyalty_Rule_QualifyingRule_Night_SaveButton_Confirm">//*[@id='nightBtnSave']</Parameter>
+    
+    <!--END [Admin_LoyaltyRule_QualifyingRule]-->
+    <!--Start [Admin_EmailSetup]-->
+    <Parameter key="Button_EmailSetup_Add_Email">//*[@id='btnAddAwardEmail']</Parameter>
+    <Parameter key="Filter_EmailSetup_SearchEmail">//*[@id='notificationEmails_filter']//input</Parameter>
+    <Parameter key="Button_EmailSetup_EditEmail">//*[@id='notificationEmails']//button[contains(text(),'Edit')]</Parameter>
+    <Parameter key="Input_EmailSetup_FromEmail">//*[@id='fromEmail']</Parameter>
+    <Parameter key="Button_EmailSetup_Save">//*[@id='emailEdit']//button[contains(text(),'Save')]</Parameter>
+    <Parameter key="Button_EmailSetup_Cancel">//*[@id='emailEdit']//button[contains(text(),'Cancel')]</Parameter>
+    <!--END [Admin_EmailSetup]-->
+  
+  <!--Start [Admin_LoyaltyRule_RuleRestriction]-->
+    <Parameter key="Enter_Rule_Restrict_MinRevenue">//*[@id='rule-minR']</Parameter>
+    <Parameter key="Enter_Rule_Restrict_MinRoomRevenue">//*[@id='rrf']</Parameter>
+    <Parameter key="Enter_Rule_Restrict_MinFandBRevenue">//*[@id='fbrf']</Parameter>
+    <Parameter key="Enter_Rule_Restrict_MinotherRevenue">//*[@id='orf']</Parameter>
+    <Parameter key="Enter_Rule_Restrict_MinNight">//*[@id='rule-minN']</Parameter>
+    <Parameter key="Enter_Rule_Restrict_MinStay">//*[@id='rule-minS']</Parameter>
+    <Parameter key="Enter_Rule_Restrict_MaxStay">//*[@id='rule-maxS']</Parameter>
+    <Parameter key="Click_Rule_Restrict_MarketCode">//button[@data-id = 'incMarket']</Parameter>
+    <Parameter key="Select_Rule_Restrict_MarketCode">//*[@id = 'incMarket']</Parameter>
+    <Parameter key="Click_Rule_Restrict_RateCode">//button[@data-id = 'incRate']</Parameter>
+    <Parameter key="Select_Rule_Restrict_RateCode">//*[@id = 'incRate']</Parameter>
+    <Parameter key="Click_Rule_Restrict_Hotel">//button[@data-id = 'incHotel']</Parameter>
+    <Parameter key="Select_Rule_Restrict_Hotel">//*[@id = 'incHotel']</Parameter>
+    <Parameter key="Click_Rule_Restrict_RoomType">//button[@data-id = 'incType']</Parameter>
+    <Parameter key="Select_Rule_Restrict_RoomType">//*[@id = 'incType']</Parameter>
+    <Parameter key="Click_Rule_Restrict_SourceOfBusiness">//button[@data-id = 'sobList']</Parameter>
+    <Parameter key="Select_Rule_Restrict_SourceOfBusiness">//*[@id = 'sobList']</Parameter>
+    <Parameter key="Click_Rule_Restrict_ChannelCode">//button[@data-id = 'channelList']</Parameter>
+    <Parameter key="Select_Rule_Restrict_ChannelCode">//*[@id = 'channelList']</Parameter>
+    <Parameter key="Select_Rule_Restrict_BookingDate">//*[@id='bookdatestart']</Parameter>
+    <Parameter key="Select_Rule_Restrict_BookingEndDate">//*[@id='bookdateend']</Parameter>
+    <Parameter key="Select_Rule_Restrict_JoinDate">//*[@id='joindatestart']</Parameter>
+    <Parameter key="Select_Rule_Restrict_JoinEndDate">//*[@id='joindateend']</Parameter>
+    <Parameter key="Click_Rule_Restrict_MarketCombo">//*[@data-id='markComboRest']</Parameter>
+    <Parameter key="Select_Rule_Restrict_MarketCombo">//*[@id='markComboRest']</Parameter>
+    <Parameter key="Click_Rule_Restrict_RateCombo">//*[@data-id='rateComboRest']</Parameter>
+    <Parameter key="Select_Rule_Restrict_RateCombo">//*[@id='rateComboRest']</Parameter>
+    <Parameter key="Click_Rule_Restrict_SaveButton">//*[@id='btnSave']</Parameter>
+    <Parameter key="Click_Rule_Restrict_CancelButton">//*[@id='btnCancel']</Parameter>
+    
+  <!--END [Admin_LoyaltyRule_RuleRestriction]-->
+  </Admin>
+
+  <UI>
+
+    <SignIn>
+      <Parameter key="SignIn_Text_Email">//input[@id='Email']</Parameter>
+      <Parameter key="SignIn_Text_Password">//input[@id='Password']</Parameter>
+      <Parameter key="Login_SSO">JoinNowButtonsso</Parameter>
+      <Parameter key="SignIn_Button_LogIn">//button[@class='btn btn-primary btn-next']</Parameter>
+      <Parameter key="SignIn_Button_LogIn2">//input[@value='Sign In']</Parameter>
+      <Parameter key="SignIn_Button_LogIn3">//input[@value='Welcome Home']</Parameter>
+      <Parameter key="SignIn_Link_ForgotYourLogin">//a[@id='forgot-password']</Parameter>
+      <Parameter key="SignIn_Email_Error_Message">//span[@id='Email-error']</Parameter>
+      <Parameter key="SignIn_Frequently_Asked_Questions">//a[contains(text(),'Frequently Asked Questions')]</Parameter>
+      <Parameter key="SignIn_Footer">//footer[@class='custom-footer-control']</Parameter>
+      <!--<Parameter key="SignIn_Link_ForgotYourLogin2">//a[@id='forgot-password']</Parameter>-->
+      <Parameter key="SignIn_Email_Next_Button">//a[@id='JoinNowButtonsso']</Parameter>
+      <Parameter key="Navigation_Button_Back">//a[@class='btn btn-secondary btn-back']</Parameter>
+      <Parameter key="TFE_SignIn_iFrame">//iframe</Parameter>
+    </SignIn>
+
+
+
+    <SignUp>
+      <Parameter key="SignUp_DropDown_Salutation">prefix</Parameter>
+      <Parameter key="SignUp_Text_SignIn">//*[@id="signup"]/div/div/div[2]/a</Parameter>
+      <Parameter key="SignUp_Text_FirstName">//input[@id='fname']</Parameter>
+      <Parameter key="SignUp_Text_LastName">//input[@id='lname']</Parameter>
+      <Parameter key="SignUp_Text_Email">//input[@id='signUpEmail']</Parameter>
+      <Parameter key="SignUp_Text_Password">//input[@id='pwd']</Parameter>
+      <Parameter key="SignUp_Text_PreferredCardName">//input[@id='card']</Parameter>
+      <Parameter key="SignUp_Text_ConfirmPassword">//input[@id='confirmpwd']</Parameter>
+      <Parameter key="SignUp_CheckBox_TermsAndConditions">//input[@id='signupTerms']</Parameter>
+      <Parameter key="SignUp_Button_Join">//input[@id='JoinNowButton']</Parameter>
+      <Parameter key="SignUp_Icon_Close">//*[@id='signup']/div/div/div[1]/button/span</Parameter>
+      <Parameter key="Click_SignIn">Sign In</Parameter>
+      <Parameter key="SignUp_TermsandCondition_Accept">acceptTermsBtn</Parameter>
+      <Parameter key="SignUp_DateOfBirth">loginDatePicker</Parameter>
+      <Parameter key="SignUp_Date_Picker">//table[@class='ui-datepicker-calendar']</Parameter>
+      <Parameter key="SignUp_TermsandCondition_Close">//*[@id='termsAndConditionsModal']/div/div/div[3]/button[2]</Parameter>
+      <!--<Parameter key="SignInButton_ActivationPage">//input[@id='activationBtn' and @value='Sign In']</Parameter>-->
+      <Parameter key="SignInButton_ActivationPage">//input[@id='activationBtn']</Parameter>
+      <Parameter key="SignUp_Facebook_Link">//a[@id='lnkFacebookSignUp']</Parameter>
+      <Parameter key="SignUp_Twitter_Link">//a[@id='lnkTwitterSignUp']</Parameter>
+      <Parameter key="Facebook_UserName">email</Parameter>
+      <Parameter key="Facebook_Password">pass</Parameter>
+      <Parameter key="Facebook_Login">loginbutton</Parameter>
+      <Parameter key="Twitter_UserName">email</Parameter>
+      <Parameter key="Twitter_Password">//input[@placeholder='Password']</Parameter>
+      <Parameter key="Twitter_Login">//button[contains(text(),'Log in']</Parameter>
+      <Parameter key="Allow_On_Twitter">allow</Parameter>
+      <Parameter key="Wrapper_for_FB_TW">//div[@class='socialWrapper']</Parameter>
+      <Parameter key="SignUp_Footer">//footer[@class='custom-footer-control']</Parameter>
+      <Parameter key="Navigation_Label_Facebook">logoutMenu</Parameter>
+
+      <Parameter key="DOB_Error">//*[@id='loginDatePicker-error']</Parameter>
+      <Parameter key="FirstName_Error">//*[@id='fname-error']</Parameter>
+      <Parameter key="LastName_Error">//*[@id='lname-error']</Parameter>
+      <Parameter key="Email_Error">//*[@id='signUpEmail-error']</Parameter>
+      <Parameter key="Card_Error">//*[@id='card-error']</Parameter>
+      <Parameter key="Password_Error">//*[@id='pwd-error']</Parameter>
+      <Parameter key="ConfirmPassword_Error">//*[@id='confirmpwd-error']</Parameter>
+      <Parameter key="Captcha_Error">//*[@id='signup']/div/div/div[6]/div/span</Parameter>
+      <!-- | //input[@value='Sign In'] | //input[@value='Login In']-->
+      <Parameter key="Password_Eye_Ball">//*[@id='divPwd']/i</Parameter>
+      <Parameter key="ConfirmPassword_Eye_Ball">//*[@id='divConfirmpwd']/i</Parameter>
+
+    </SignUp>
+
+    <Reedem>
+      <Parameter key="Reedem_Button_Redeem">//form[@id='RedeemPerkForm']//button[contains(text(),'Redeem')]</Parameter>
+      <Parameter key="Navigation_Link_Redeem">//a[contains(@href,'/REDEEMPERKS')]</Parameter>
+
+      <Parameter key="Redeem_Button_Frontend">//div[@id='loading']/following::button[1]</Parameter>
+      <Parameter key="Image_On_Redeem_Button_Frontend">//div[@class='modal-header']/img</Parameter>
+      <Parameter key="Ok_Button_On_EGift">//*[@id="confirmeGift"]//button[contains(text(),'Redeem')]</Parameter>
+      <Parameter key="Lable_TotalPoints">//span[@class='cpoints']</Parameter>
+      <Parameter key="Select_AwardImage">(//div[@class='card-1']/child::div/child::a/child::img)[1]</Parameter>
+      <Parameter key="Click_Redeem_eGiftCart">//*[@id='redeemRewardBtn']</Parameter>
+      <Parameter key="Click_Conform_eGiftCart">//button[@id='confirmBtn']</Parameter>
+      <Parameter key="Click_Close_eGiftCart">//div[@id='redeemptionInfoModal']/descendant::button[@class='close']</Parameter>
+      <Parameter key="Click_Redeem_Ok">//*[@id='request']</Parameter>
+      <Parameter key="Click_Redeem_Cancel">//*[@id='requestcancel']</Parameter>
+     <Parameter key="Click_Redeem_CancelButton">(//div[@id='confirmeGift']//following::button[3])[1]</Parameter>
+	   <Parameter key="Get_TotalPoints">//*[@id='panel-body']//span[2]/strong</Parameter>
+     <Parameter key="Get_RedeemedAwardName">(//*[@id='RedeemPerkForm']//h4)[1]</Parameter>
+     <Parameter key="Click_RequestSubmitted_OkButton">(//*[@id='confirm']//button)[2]</Parameter>
+
+    </Reedem>
+
+    <InviteFriends>
+      <Parameter key="InviteFriends_Text_InviteFriends">//form[@id='inviteform']//h1[contains(text(),'Invite Friends')]</Parameter>
+      <Parameter key="InviteFriends_Button_SendMyInvitation">sendInvitation</Parameter>
+      <Parameter key="InviteFriends_Error_Message">emailList-error</Parameter>
+      <Parameter key="EnterText_SendInvitation">//input[@id='emailList']</Parameter>
+      <Parameter key="InviteFriendValidation_CaptchaError">//span[contains(.,'The captcha field is required')]</Parameter>
+
+    </InviteFriends>
+
+    <SpecialOffers>
+      <Parameter key="SpecialOffers_Text_Exclusive">//h2[contains(text(),'Exclusives')]</Parameter>
+      <Parameter key="Specialoffers_LastButton">//div[@id='tandcModalFooter']//preceding::button[1]</Parameter>
+    </SpecialOffers>
+
+    <MySettings>
+      <Parameter key="MySettings_NewPasswordError">//*[@id="NewPassword-error"]</Parameter>
+      <Parameter key="MySettings_ConfirmPasswordError">//*[@id="ConfirmPassword-error"]</Parameter>
+      <Parameter key ="User_MySettings">//*[@id="collapseOne"]/div/div/div[3]/a[2]</Parameter>
+      <Parameter key="MySettings_NewEmailAddress">NewUserName</Parameter>
+      <Parameter key="MySettings_Password">Password</Parameter>
+      <Parameter key="MySettings_UpdateUser">//input[@value='Update User']</Parameter>
+      <Parameter key="MySettings_UpdateLogin">//input[@value='Update Login']</Parameter>
+      <Parameter key="MySettings_CurrentPassword">CurrentPassword</Parameter>
+      <Parameter key="MySettings_NewPassword">NewPassword</Parameter>
+      <Parameter key="MySettings_ConfirmPassword">ConfirmPassword</Parameter>
+      <Parameter key="MySettings_UpdatePassword">//input[@value='Change Password']</Parameter>
+      <!--<Parameter key="MySettings_UpdatePassword">//input[@onclick='UpdatePassword()']</Parameter>-->
+      <Parameter key="MySettings_CurrentEmailAddress">//*[@id="CurrentUserName"]</Parameter>
+      <!--<Parameter key="MySettings_PasswordUpdationConformationPopup">//input[@onclick='PasswordConfirm();']</Parameter>-->
+      <Parameter key="MySettings_PasswordUpdationConformationPopup">//input[@onclick='UpdateEmailConfirm();']</Parameter>
+
+      <Parameter key="MySettings_EmailUpdationConformationPopup">//input[@onclick='UpdateEmailConfirm();']</Parameter>
+    </MySettings>
+
+    <Navigation>
+      <Parameter key="Navigation_Button_SignIn">//*[@id='main-text']/input[2]</Parameter>
+      <Parameter key="Navigation_Button_JoinNow">//a[contains(text(),'Join Now')]</Parameter>
+      <Parameter key="Navigation_Button_JoinNow1">//*[@id='main-text']/input[1]</Parameter>
+      <Parameter key="Navigation_Link_SignIn">//div[@class='navbar-header']/descendant::li/a[ text()='Sign In']</Parameter>
+      <Parameter key="Navigation_Link_Sign_In">//a[contains(text(),'Sign In')]</Parameter>
+      <parameter key="Navigation_Link_Enroll">//div[@class='navbar-header']/descendant::li/a[ text()='Enroll']</parameter>
+      <parameter key="Navigation_Link_FAQ1">//div[@class='navbar-header']/descendant::li/a[ text()='FAQ']</parameter>
+      <Parameter key="Navigation_Link_Join">//a[@href='#signup']</Parameter>
+      <Parameter key="Navigation_Link_Join2">btnEnrollNow</Parameter>
+      <Parameter key="Navigation_Link_MyAccount">//a[contains(text(),'My Account')]</Parameter>
+      <Parameter key="Navigation_Link_MyStays">//a[contains(@href,'/MyStays')]</Parameter>
+      <Parameter key="Navigation_Link_MyProfile">(//a[contains(@href,'/Profile')])[1]</Parameter>
+      <Parameter key="Navigation_Link_MyProfile1">/html/body/div[3]/header/nav/div/div/div/div[3]/div/ul/li[2]/a</Parameter>
+      <Parameter key="Navigation_Link_MyProfile_old">//div[@class=' navbar-header']/descendant::li/child::a[contains(.,'My Profile')]</Parameter>
+      <Parameter key="Navigation_Link_Summary">//a[contains(.,'Summary')]</Parameter>
+      <Parameter key="Navigation_Link_Benefits">//a[contains(.,'Benefits')]</Parameter>
+      <Parameter key="Navigation_Link_FAQ">//div[@class=' navbar-header']/descendant::li/child::a[contains(.,'FAQ')]</Parameter>
+      <Parameter key="Navigation_Link_ContactUs">//a[contains(@href,'/ContactUs')]</Parameter>
+      <Parameter key="Navigation_Link_Un_Authenticated_ContactUs">//a[contains(text(),'Contact')]</Parameter>
+      <Parameter key="Navigation_Link_Redeem">//a[contains(@href,'/REDEEMPERKS')]</Parameter>
+      <Parameter key="Navigation_Link_MyActivity">//a[contains(@href,'/en-US/MyStays')]</Parameter>
+      <Parameter key="Navigation_Link_SignOut">//a[contains(@href,'/Logout')]</Parameter>
+      <Parameter key="Navigation_Link_SignOut2">Sign Out</Parameter>
+      <Parameter key="Navigation_Link_UpdateMyPreferences">//a[contains(.,'Update My Preferences')]</Parameter>
+      <Parameter key="Navigation_Link_UpdateMyProfile">//a[contains(.,'Update My Profile')]</Parameter>
+      <Parameter key="Navigation_Link_MySettings">//a[contains(@href, '/Settings')]</Parameter>
+      <Parameter key="Navigation_LinkText_MySettings">ACCOUNT SETTINGS</Parameter>
+      <Parameter key="Navigation_Link_Facebook">//*[@id="propDEBBC284"]/footer/div/div[3]/ul/li[2]</Parameter>
+      <Parameter key="Navigation_Link_Twitter">//*[@id="propDEBBC284"]/footer/div/div[3]/ul/li[3]</Parameter>
+      <Parameter key="Navigation_Button_ExpandCollapse">//span[@class='glyphicon glyphicon-menu-down']</Parameter>
+      <Parameter key="Overview_MemberSinceDate">//*[@id="collapseOne"]/div/div/div[1]/p[2]/strong</Parameter>
+      <Parameter key="Overview_MemberShipLevel">//*[@id="collapseOne"]/div/div/div[2]/p[1]/strong</Parameter>
+      <Parameter key="Navigation_Link_Exclusives">//a[@href='/en-US/Member/Promotion'][contains(text(),'Exclusives')]</Parameter>
+      <Parameter key="Navigation_Link_LoginExclusives">//a[@href='/en-US/Login/Exclusives'][contains(text(),'Exclusives')]</Parameter>
+      <parameter key="Navigation_Link_MyAward">//*[@id='navbar']//a[contains(text(),'Awards')]</parameter>
+      <parameter key="Navigation_Link_MyAward_Filter">//*[@id="DataTables_Table_0_filter"]//input</parameter>
+      <parameter key="Navigation_SpecialOffer">//div[@class=' navbar-header']//following::a[contains(.,'Offers')]</parameter>
+      <parameter key="Navigation_Link_ProgramOverview">//div[Admin_LoyaltySetUp_Offers_Button_BrowseImage@class=' navbar-header']/descendant::li/child::a[contains(.,'Program Overview')]</parameter>
+      <parameter key="Navigation_Link_InviteFriends">//a[contains(text(),'Invite Friends')]</parameter>
+      <parameter key="Click_Contact_Link">//a[contains(.,'Contact')]</parameter>
+      <parameter key="Navigation_Link_MyAccount_Dropdown">//button[contains(text(),'My Account')]</parameter>
+    </Navigation>
+
+    <MyStays>
+      <Parameter key="MyStays_DropDown_UpcomingStays">//select[@name='DataTables_Table_0_length']</Parameter>
+      <Parameter key="MyStays_DropDown_PastStays">//select[@name='DataTables_Table_1_length']</Parameter>
+      <Parameter key="MyStays_Text_UpcomingStays_Filter">//input[@aria-controls='DataTables_Table_0']</Parameter>
+      <Parameter key="MyStays_Text_PastStays_Filter">//input[@aria-controls='DataTables_Table_1']</Parameter>
+    </MyStays>
+
+    <Awards>
+      <Parameter key="Click_Redeem_Button_In_My_Awards">//tr[@class='even' | @class='odd']//td[contains(text(),'"+awards"')]//following-sibling :: td//button[contains(text(),'Redeem')]</Parameter>
+      <Parameter key="Click_Award_Name">//tr/td[@class='sorting_1']</Parameter>
+      <Parameter key="Click_Award_Tab">//a[contains(text(),'Awards')]</Parameter>
+      <Parameter key="Award_Filter">//div[@id='myPointsTable_filter']//following::input[@type='search']</Parameter>
+      <Parameter key="Click_Redemptions_SubTab">//a[contains(text(),'Redemptions')]</Parameter>
+    </Awards>
+
+    <ContactUs>
+      <Parameter key="ContactUs_Text_YourName">//input[@id='FullName']</Parameter>
+      <Parameter key="ContactUs_Text_EmailAddress">//input[@id='Email']</Parameter>
+      <Parameter key="ContactUs_Text_PhoneNumber">//input[@id='Phone']</Parameter>
+      <Parameter key="ContactUs_Text_FraserWorldMembershipNo">//input[@id='MembershipID']</Parameter>
+      <Parameter key="ContactUs_DDM_Subject">//select[@id='cuSubject']</Parameter>
+	  <Parameter key="DropDownSelect_Authentication_Subject">//select[@id='SubjectCode']</Parameter>
+      <Parameter key="ContactUs_Text_Message">//textarea[@id='Comments']</Parameter>
+      <Parameter key="ContactUs_Button_Captcha">//div[@class='recaptcha-checkbox-checkmark']</Parameter>
+      <Parameter key="ContactUs_Button_Send">//*[@id='cuSubmit']</Parameter>
+      <Parameter key="EnterText_Text_Confirmation_Number">ConfirmationNumber</Parameter>
+      <Parameter key="Select_Contact_US_File">//*[contains(text(),'browse files')]</Parameter>
+    </ContactUs>
+
+    <ForgotPassword>
+      <Parameter key="ForgotPassword_LinkText">forgot-password</Parameter>
+      <Parameter key="ForgotPassword_Email">//input[@id='Email']</Parameter>
+      <Parameter key="ForgotPassword_Recover">password-recovery</Parameter>
+      <Parameter key="ForgotPassword_Cancel">//input[@value="Cancel"]</Parameter>
+      <Parameter key="ForgotPassword_Back">//input[@value="Back"]</Parameter>
+      <Parameter key="ForgotPassword_NewPassword">//*[@id="NewPassword"]</Parameter>
+      <Parameter key="ForgotPassword_NewPasswordConfirm">//*[@id="ConfirmNewPassword"]</Parameter>
+      <Parameter key="ForgotPassword_Recovery">password-recovery-confirm</Parameter>
+      <Parameter key="ForgotPassword_TermsandCondition_Accept">password-recovery-tc</Parameter>
+    </ForgotPassword>
+
+    <Kiosk>
+      <Parameter key="Kiosk_DropDown_Salutation">//*[@id="salutation"]</Parameter>
+      <Parameter key="Kiosk_Text_FirstName">//*[@id="fname"]</Parameter>
+      <Parameter key="Kiosk_Text_LastName">//*[@id="lname"]</Parameter>
+      <Parameter key="Kiosk_Text_Email">//*[@id="signUpEmail"]</Parameter>
+      <Parameter key="Kiosk_Text_SignerName">signerName</Parameter>
+      <Parameter key="Kiosk_DropDown_SignupCode">#signin > div > div.form-group.signupSelectWrapper > div > div.selectize-input.items.has-options.full.has-items</Parameter>
+      <Parameter key="DropDown_SignupCode_Text">//div[7]/div/div</Parameter>
+      <!--//*["@id="signin"]/div/div[7]/div/div[2]/div/div[8]</Parameter>-->
+      <Parameter key="Kiosk_Text_SignUpSource">signupSelect-selectized</Parameter>
+      <Parameter key="Kiosk_CheckBox_TermsAndConditions">//*[@id='signupTerms']</Parameter>
+      <Parameter key="Kiosk_Button_JoinNow">//input[@id='backdoorsignup']</Parameter>
+    </Kiosk>
+
+    <Summary>
+      <Parameter key="Summary_Text_MembershipNo">//*[@id='collapseOne']/div/div/div[1]/p[1]/strong</Parameter>
+      <Parameter key="Summary_Text_MembershipType">//*[@id='collapseOne']/div/div/div[1]/p[1]/strong</Parameter>
+      <Parameter key="Summary_Click_MembershipCard">//a[contains(text(), 'View Member Card')]</Parameter>
+      <Parameter key="Summary_MembershipCard_Name">//div[@class='memberCardName']</Parameter>
+      <Parameter key="Summary_MembershipCard_Number">//div[@class='memberCardNumber']</Parameter>
+      <Parameter key="Summary_MembershipCard_SinceDate">//div[@class='memberCardSinceDate']</Parameter>
+      <Parameter key="Summary_MembershipCard_Close">//button[@class='close']/span</Parameter>
+    </Summary>
+
+    <MyProfile>
+      <Parameter key="MyProfile_Link_MyPersonalProfile_MyProfile">//a[@id='ProfileDomain']</Parameter>
+      <Parameter key="MyProfile_Link_MyPersonalProfile_YourPreferences">//a[@id='GuestPreference']</Parameter>
+      <Parameter key="MyProfile_Text_MembershipNumber">//input[@data-alias ='Membership Number:']</Parameter>
+      <Parameter key="MyProfile_Text_MembershipType">//input[@data-alias ='Member Type:']</Parameter>
+      <Parameter key="MyProfile_DropDown_Title">//select[@data-alias='Title:']</Parameter>
+      <Parameter key="MyProfile_Text_FirstName">//input[@data-alias ='FirstName:']</Parameter>
+      <Parameter key="MyProfile_Text_LastName">//input[@data-alias ='LastName:']</Parameter>
+      <Parameter key="MyProfile_Text_CardName">//input[@data-alias ='Card Name:']</Parameter>
+      <Parameter key="MyProfile_DropDown_Gender">//select[contains(@data-alias,'Gender')]</Parameter>
+      <Parameter key="MyProfile_DropDown_Nationality">//select[@data-alias ='Nationality:']</Parameter>
+      <Parameter key="MyProfile_DropDown_DateOfBirth">//input[@class='bdayDatepicker hasDatepicker']</Parameter>
+      <Parameter key="MyProfile_DropDown_Month">//*[@id='ui-datepicker-div']/div/div/select[1]</Parameter>
+      <Parameter key="MyProfile_DropDown_Year">//*[@id='ui-datepicker-div']/div/div/select[2]</Parameter>
+      <Parameter key="MyProfile_Text_CompanyName">//input[@data-alias ='CompanyName:']</Parameter>
+      <Parameter key="MyProfile_Text_MobilePhoneNumber">//input[@data-alias ='MobilePhoneNumber:']</Parameter>
+      <Parameter key="MyProfile_Text_HomePhoneNumber">//input[@data-alias ='HomePhoneNumber:']</Parameter>
+      <Parameter key="MyProfile_Text_OfficePhoneNumber">//input[@data-alias ='BusinessPhoneNumber:']</Parameter>
+      <Parameter key="MyProfile_Text_FaxPhoneNumber">//input[@data-alias ='Fax No: (xxx)xxx-xxxx']</Parameter>
+      <Parameter key="MyProfile_Text_Address1">//input[@data-alias ='Address 1:']</Parameter>
+      <Parameter key="MyProfile_Text_Address2">//input[@data-alias ='Address 2:']</Parameter>
+      <Parameter key="MyProfile_Text_City">//input[@data-alias ='City:']</Parameter>
+      <Parameter key="MyProfile_DropDown_StateProvince">//select[@id ='Statelist']</Parameter>
+      <Parameter key="MyProfile_DropDown_Country">//select[contains(@class,'CountryList')]</Parameter>
+      <Parameter key="MyProfile_Text_Zip">//input[contains(@class,'ZipCode Numeric')]</Parameter>
+      <Parameter key="MyProfile_Text_ZipExtension">//input[contains(@class,'ZipCodePlus4 Numeric')]</Parameter>
+      <Parameter key="MyProfile_DropDown_PreferredLanguage">//*[@data-alias='Select Preferred Language']</Parameter>
+      <Parameter key="MyProfile_DropDown_RecommendedBy">//*[@id='Questions_22__AnswerValueString']</Parameter>
+      <Parameter key="MyProfile_Link_FraserSuites">//a[@href='http://www.frasershospitality.com/en/about-us/our-brands/fraser-suites.html']</Parameter>
+      <Parameter key="MyProfile_Link_FraserPlace">//a[@href='http://www.frasershospitality.com/en/about-us/our-brands/fraser-place.html']</Parameter>
+      <Parameter key="MyProfile_Link_FraserResidence">//a[@href='http://www.frasershospitality.com/en/about-us/our-brands/fraser-residence.html']</Parameter>
+      <Parameter key="MyProfile_Link_Modena">//a[@href='http://www.frasershospitality.com/en/about-us/our-brands/modena-by-fraser.html']</Parameter>
+      <Parameter key="MyProfile_Link_Capri">//a[@href='http://www.frasershospitality.com/en/about-us/our-brands/capri-by-fraser.html']</Parameter>
+      <Parameter key="MyProfile_Link_Malmaison">//a[@href='http://www.frasershospitality.com/en/about-us/our-brands/malmaison.html']</Parameter>
+      <Parameter key="MyProfile_Link_HotelDuVin">//a[@href='http://www.frasershospitality.com/en/about-us/our-brands/hotel-du-vin.html']</Parameter>
+      <Parameter key="MyProfile_Link_TermsAndCondition">//a[@id='termsAndConditions']</Parameter>
+      <Parameter key="MyProfile_Link_FrequentlyAskedQuestions">//a[@id='frequentlyAskedQuestions']</Parameter>
+      <Parameter key="MyProfile_Link_ContactUs">/html/body/div[3]/footer/div[1]/div[1]/ul/li[3]/a</Parameter>
+      <Parameter key="MyProfile_Link_TermsOfUse">//a[contains(text(),'Term Of Use')]</Parameter>
+      <Parameter key="MyProfile_Link_PrivacyPolicy">/html/body/div[3]/footer/div[3]/div/ul/li[2]/a</Parameter>
+      <Parameter key="MyProfile_Link_BestRateGuarantee">//a[contains(text(),'Best Rate Guarantee')]</Parameter>
+      <Parameter key="MyProfile_Icon_Close">//div[@id='tandcModalFooter']//button|//div[@id='faqModalFooter']//button[2]</Parameter>
+      <Parameter key="MyProfile_FAQ_Icon_Close">//div[@id='tandcModalFooter']//button[2]|//div[@id='faqModalFooter']//button</Parameter>
+      <Parameter key="MyProfile_Button_Next">next-button</Parameter>
+    </MyProfile>
+
+    <MyProfile_Partner>
+      <Parameter key="MyProfile_Partner_Icon_Partner">//*[@id='FamilyProfile']</Parameter>
+      <Parameter key="MyProfile_Partner_Checkbox_Partner">Questions_0__AnswerValueBoolean</Parameter>
+      <Parameter key="MyProfile_Partner_Text_FirstnameLastname">Questions_1__AnswerValueString</Parameter>
+      <Parameter key="MyProfile_Partner_Text_DateOfBirth">Questions_2__AnswerValueString</Parameter>
+      <Parameter key="MyProfile_Partner_Text_AnniversaryDate">Questions_3__AnswerValueString</Parameter>
+      <Parameter key="MyProfile_Partner_Dropdown_Children">Questions_4__AnswerValueInt</Parameter>
+      <Parameter key="MyProfile_Partner_Dropdown_Month">//*[@id='ui-datepicker-div']/div/div/select[1]</Parameter>
+      <Parameter key="MyProfile_Partner_Dropdown_Year">//*[@id='ui-datepicker-div']/div/div/select[2]</Parameter>
+      <Parameter key="MyProfile_Partner_Button_Previous">previous-button</Parameter>
+      <Parameter key="MyProfile_Partner_Button_Next">next-button</Parameter>
+    </MyProfile_Partner>
+
+    <MyProfile_PassionAndInterests>
+      <Parameter key="MyProfile_PassionAndInterests_Checkbox_ArtsandEntertainment">QuestionElements_2__AnswerValueBoolean</Parameter>
+      <Parameter key="MyProfile_PassionAndInterests_Checkbox_FitnessandWellness">QuestionElements_3__AnswerValueBoolean</Parameter>
+      <Parameter key="MyProfile_PassionAndInterests_Checkbox_FoodandWine">QuestionElements_4__AnswerValueBoolean</Parameter>
+      <Parameter key="MyProfile_PassionAndInterests_Checkbox_Golf">QuestionElements_5__AnswerValueBoolean</Parameter>
+      <Parameter key="MyProfile_PassionAndInterests_Checkbox_CultureAndHeritage">QuestionElements_6__AnswerValueBoolean</Parameter>
+      <Parameter key="MyProfile_PassionAndInterests_Checkbox_Nature">QuestionElements_7__AnswerValueBoolean</Parameter>
+      <Parameter key="MyProfile_PassionAndInterests_Checkbox_Nightlife">QuestionElements_8__AnswerValueBoolean</Parameter>
+      <Parameter key="MyProfile_PassionAndInterests_Checkbox_ShoopingandLifestyle">QuestionElements_9__AnswerValueBoolean</Parameter>
+      <Parameter key="MyProfile_PassionAndInterests_Checkbox_TechandGadgets">QuestionElements_10__AnswerValueBoolean</Parameter>
+      <Parameter key="MyProfile_PassionAndInterests_Checkbox_Travel">QuestionElements_11__AnswerValueBoolean</Parameter>
+      <Parameter key="MyProfile_PassionAndInterests_Checkbox_Family">QuestionElements_12__AnswerValueBoolean</Parameter>
+      <Parameter key="MyProfile_PassionAndInterests_Checkbox_Sports">QuestionElements_13__AnswerValueBoolean</Parameter>
+      <Parameter key="MyProfile_PassionAndInterests_Button_Previous">previous-button</Parameter>
+      <Parameter key="MyProfile_PassionAndInterests_Button_Next">next-button</Parameter>
+    </MyProfile_PassionAndInterests>
+
+    <MyProfile_MySubscriptions>
+      <Parameter key="MyProfile_MySubscriptions_Icon_MySubscriptions">//*[@id='Subscriptions']</Parameter>
+      <Parameter key="MyProfile_MySubscriptions_Button_Previous">previous-button</Parameter>
+      <Parameter key="MyProfile_MySubscriptions_Button_Update">/html/body/div[3]/div[3]/div/div/div[4]/div/div[2]/button</Parameter>
+      <Parameter key="MyProfile_MySubscriptions_Button_Submit">next-button</Parameter>
+      <Parameter key="MyProfile_MySubscriptions_RadioButton_SubscribeAllAvailableLists">/html/body/div[3]/div[3]/div/div/div[4]/div/div[1]/div[1]/label/input</Parameter>
+      <Parameter key="MyProfile_MySubscriptions_RadioButton_SubscribeSelectedLists">/html/body/div[3]/div[3]/div/div/div[4]/div/div[1]/div[2]/label/input</Parameter>
+      <Parameter key="MyProfile_MySubscriptions_RadioButton_UnsubscribeEmailCampaigns">/html/body/div[3]/div[3]/div/div/div[4]/div/div[1]/div[2]/label/input</Parameter>
+      <Parameter key="MyProfile_MySubscriptions_CheckBox_MonthlyEStatement">/html/body/div[3]/div[3]/div/div/div[4]/div/div[1]/div[2]/div/span/div[1]/label/input</Parameter>
+      <Parameter key="MyProfile_MySubscriptions_CheckBox_QuarterlyEStatement">/html/body/div[3]/div[3]/div/div/div[4]/div/div[1]/div[2]/div/span/div[2]/label/input</Parameter>
+      <Parameter key="MyProfile_MySubscriptions_CheckBox_MarketingAndPromotionalMaterials">/html/body/div[3]/div[3]/div/div/div[4]/div/div[1]/div[2]/div/span/div[3]/label/input</Parameter>
+      <Parameter key="MyProfile_MySubscriptions_CheckBox_eCacheAndeNewsletter">/html/body/div[3]/div[3]/div/div/div[4]/div/div[1]/div[2]/div/span/div[4]/label/input</Parameter>
+      <Parameter key="MyProfile_MySubscriptions_CheckBox_LifestyleArticlesAndAdvertorial">/html/body/div[3]/div[3]/div/div/div[4]/div/div[1]/div[2]/div/span/div[5]/label/input</Parameter>
+      <Parameter key="MyProfile_MySubscriptions_CheckBox_NotValuableOrRelevant">/html/body/div[3]/div[3]/div/div/div[4]/div/div[1]/div[3]/div/span/div[1]/label/input</Parameter>
+      <Parameter key="MyProfile_MySubscriptions_CheckBox_DonNotRememberSigningUp">/html/body/div[3]/div[3]/div/div/div[4]/div/div[1]/div[3]/div/span/div[2]/label/input</Parameter>
+    </MyProfile_MySubscriptions>
+
+    <CRMAPI>
+      <Parameter key="CRMAPI_btnprimary">API Document</Parameter>
+      <Parameter key="CRMAPI_LoyaltyVersion_1">//*[@id="input_baseUrl"]/option[1]</Parameter>
+      <Parameter key="CRMAPI_LoyaltyVersion_2">//*[@id="input_baseUrl"]/option[2]</Parameter>
+      <Parameter key="CRMAPI_LoyaltyVersion_3">//*[@id="input_baseUrl"]/option[3]</Parameter>
+      <Parameter key="APICredentials">input_apiKey</Parameter>
+      <Parameter key="CRMAPI_btnExplore">explore</Parameter>
+      <Parameter key="CRMAPI_ParentAccList">Account</Parameter>
+      <Parameter key="CRMAPI_AccountLogin">Account/Login</Parameter>
+      <Parameter key="CRMAPI_AccountLogin_Authentication">//div[@id='Account_Account_Login_content']/form/table/tbody/tr/td[2]/textarea</Parameter>
+      <Parameter key="CRMAPI_AccountLogin_MasterPropertyCode">//div[@id='Account_Account_Login_content']/form/table/tbody/tr[2]/td[2]/input</Parameter>
+      <Parameter key="CRMAPI_AccountLogin_SubmitButton">(//input[@value='Try it out!'])[4]</Parameter>
+      <Parameter key="CRMAPI_AccountLogin_ResponseBody">//*[@id="Account_Account_Login_content"]/div[2]/div[3]/pre/code/span[77]</Parameter>
+      <Parameter key="CRMAPI_AccountRegister">Account/Register</Parameter>
+      <Parameter key="CRMAPI_AccountRegister_RegisterAcc">//div[@id='Account_Account_Register_content']/form/table/tbody/tr/td[2]/textarea</Parameter>
+      <Parameter key="CRMAPI_AccountRegister_MasterPropertyCode">//div[@id='Account_Account_Register_content']/form/table/tbody/tr[2]/td[2]/input</Parameter>
+      <Parameter key="CRMAPI_AccountRegister_RegisterButton">//*[@id="Account_Account_Register_content"]/form/div[3]/input</Parameter>
+      <!--//*[@id="Account_Account_Login_content"]/div[2]/div[3]/pre-->
+    </CRMAPI>
+
+    <Exclusives>
+      <Parameter key="Exclusives_Text_ReadMore">//a[@class='revealExclusiveLink']</Parameter>
+      <Parameter key="Exclusives_Button_BookNow">//button[contains(.,'Book Now')]</Parameter>
+      <Parameter key="Exclusives_Link_ShareNow">//a[@id='toggleShareThis']</Parameter>
+    </Exclusives>
+
+  </UI>
+
+</ObjectRepository>

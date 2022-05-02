@@ -1,0 +1,60 @@
+2021-07-05 12:02:37,105 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-07-05 12:02:37,196 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-07-05 12:02:37,210 ::INFO ::[Logger]::  is used for Testing
+2021-07-05 12:02:37,530 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DCAOAFRON%26response_mode%3Dform_post%26response_type%3Dcode%2520id_token%26scope%3Dopenid%2520roles%2520profile%2520write%2520offline_access%2520CendynAccessApi%26state%3DOpenIdConnect.AuthenticationProperties%253DHGil9gUSfNj-2hpDvgMu2XwVamEN3f3p7u83BVo3kUwu7jWzZtQquSlkk0ELycv4xJZO2qXXJXl7FvoEcATWMk9T41_X4ZKPMcyWBO1v90l7V-NMCqaFjeSEP5ICtL2fAEmAxcWnlP792fuyTuGAUA%26nonce%3D637610635594814356.OGQwYzNkMDUtMzZjNS00MGYzLWFhYWEtM2Y0N2YyZTM3ZWI5MzU4MDI2ZDAtZDQwNi00YWEyLTkxOWMtZjVhNmQxNjNiNDVl%26redirect_uri%3Dhttps%253A%252F%252Fqa.cendynaccess.com%26ui_locales%3Den-US
+2021-07-05 12:02:37,532 ::INFO ::[Logger]:: Execution started at:-Jul-05-2021 12-02-37-PM
+2021-07-05 12:02:37,533 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-05 12:02:37,534 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-07-05 12:02:37,534 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_232888         XXXXXXXXXXXXXXXX
+2021-07-05 12:02:37,535 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-05 12:02:37,858 ::INFO ::[Logger]:: Window Size is: {Width=1366, Height=768}
+2021-07-05 12:02:46,282 ::INFO ::[Logger]:: Clicked the Click_NextButton element on the PropertyAdmin page.
+2021-07-05 12:02:51,390 ::INFO ::[Logger]:: The email field is required Found on the page
+2021-07-05 12:02:51,411 ::DEBUG::[Logger]:: 1) The email field is required is Equal to The email field is required
+2021-07-05 12:03:03,595 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Username element on the PropertyAdmin page.
+2021-07-05 12:03:03,598 ::DEBUG::[Logger]:: 2) Entered Invalid Email id = QATest
+2021-07-05 12:03:13,790 ::INFO ::[Logger]:: Clicked the Click_NextButton element on the PropertyAdmin page.
+2021-07-05 12:03:18,818 ::INFO ::[Logger]:: The Enter Your Email field is not a valid e-mail address. Found on the page
+2021-07-05 12:03:18,819 ::DEBUG::[Logger]:: 3) The Enter Your Email field is not a valid e-mail address. is Equal to The Enter Your Email field is not a valid e-mail address.
+2021-07-05 12:03:28,005 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Username element on the PropertyAdmin page.
+2021-07-05 12:03:28,007 ::DEBUG::[Logger]:: 4) Entered Valid Email id = qacendynautomation@cendyn17.com
+2021-07-05 12:03:38,182 ::INFO ::[Logger]:: Clicked the Click_NextButton element on the PropertyAdmin page.
+2021-07-05 12:03:38,184 ::DEBUG::[Logger]:: 5) User submits valid email and proceeds.
+2021-07-05 12:03:48,014 ::INFO ::[Logger]:: Clicked the Click_LoginButton element on the PropertyAdmin page.
+2021-07-05 12:03:53,170 ::INFO ::[Logger]:: The password field is required Found on the page
+2021-07-05 12:03:53,170 ::DEBUG::[Logger]:: 6) The password field is required is Equal to The password field is required
+2021-07-05 12:04:04,126 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Username element on the PropertyAdmin page.
+2021-07-05 12:04:04,128 ::DEBUG::[Logger]:: 7) Entered Valid Email id = qacendynautomation@cendyn17.com
+2021-07-05 12:04:13,956 ::INFO ::[Logger]:: Clicked the Click_NextButton element on the PropertyAdmin page.
+2021-07-05 12:04:19,853 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Password element on the PropertyAdmin page.
+2021-07-05 12:04:19,854 ::DEBUG::[Logger]:: 8) Entered InValid Password = Cendyn1
+2021-07-05 12:04:29,662 ::INFO ::[Logger]:: Clicked the Click_LoginButton element on the PropertyAdmin page.
+2021-07-05 12:04:33,758 ::INFO ::[Logger]:: Invalid login attempt Found on the page
+2021-07-05 12:04:40,578 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Username element on the PropertyAdmin page.
+2021-07-05 12:04:40,579 ::DEBUG::[Logger]:: 9) Entered Valid Email id = qacendynautomation@cendyn17.com
+2021-07-05 12:04:50,494 ::INFO ::[Logger]:: Clicked the Click_NextButton element on the PropertyAdmin page.
+2021-07-05 12:04:56,383 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Password element on the PropertyAdmin page.
+2021-07-05 12:04:56,386 ::DEBUG::[Logger]:: 10) Entered Valid Password = Cendyn123$
+2021-07-05 12:05:06,167 ::INFO ::[Logger]:: Clicked the Click_LoginButton element on the PropertyAdmin page.
+2021-07-05 12:05:10,148 ::DEBUG::[Logger]:: 11) Landed on Select Product Page 
+2021-07-05 12:06:14,717 ::INFO ::[Logger]:: Clicked the Click_eMenus element on the PropertyAdmin page.
+2021-07-05 12:06:14,719 ::DEBUG::[Logger]:: 12) eMenus Product got Selected 
+2021-07-05 12:06:27,036 ::INFO ::[Logger]:: Clicked the Click_Select_PropertyDropdown element on the PropertyAdmin page.
+2021-07-05 12:06:27,037 ::DEBUG::[Logger]:: 13) Clicked on Select Property Drop-down
+2021-07-05 12:06:36,662 ::INFO ::[Logger]:: Inserted text in the Enter_Property_TextBox element on the PropertyAdmin page.
+2021-07-05 12:06:36,663 ::DEBUG::[Logger]:: 14) Entered Property
+2021-07-05 12:06:55,024 ::INFO ::[Logger]:: Selected the Hotel Origami value from the Select_Property_Dropdown drop down.
+2021-07-05 12:06:55,025 ::DEBUG::[Logger]:: 15) Hotel Origami Property got Selected
+2021-07-05 12:06:57,898 ::DEBUG::[Logger]:: 16) User was able to log in successfully.
+2021-07-05 12:07:02,992 ::DEBUG::[Logger]:: TestPlan :- TP_231897 Testcase :- TC_232888
+2021-07-05 12:07:02,994 ::DEBUG::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~Test Data Used~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-05 12:07:02,995 ::DEBUG::[Logger]::  Value for : TC_232888_Property Admin User is : qacendynautomation@cendyn17.com
+2021-07-05 12:07:02,996 ::DEBUG::[Logger]::  Value for : TC_232888_Password is : Cendyn123$
+2021-07-05 12:07:02,999 ::DEBUG::[Logger]::  Value for : TC_232888_Email Validation is : The email field is required
+2021-07-05 12:07:03,001 ::DEBUG::[Logger]::  Value for : TC_232888_Invalid Email Validation is : The Enter Your Email field is not a valid e-mail address.
+2021-07-05 12:07:03,002 ::DEBUG::[Logger]::  Value for : TC_232888_Password Validation is : The password field is required
+2021-07-05 12:07:03,003 ::DEBUG::[Logger]::  Value for : TC_232888_Invalid Credential Validation is : Invalid login attempt
+2021-07-05 12:07:03,004 ::DEBUG::[Logger]::  Value for : TC_232888_Invalid Email is : QATest
+2021-07-05 12:07:03,005 ::DEBUG::[Logger]::  Value for : TC_232888_Invalid Password is : Cendyn1
+2021-07-05 12:07:04,008 ::INFO ::[Logger]:: eMenus:: Script ::Passed
+2021-07-05 12:07:05,954 ::INFO ::[Logger]:: E.N.D

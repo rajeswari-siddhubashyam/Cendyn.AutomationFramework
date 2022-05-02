@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTOSTests", "CTOSTests\CTOSTests.csproj", "{F9A36CAB-9533-4B0A-B616-3578499E46C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CTOS", "CTOS\CTOS.csproj", "{E8F2548A-45B6-478B-8D1F-BE9C0E72A73A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{93FC0E2B-6132-4796-B7B2-0C25C169BF70}"
+	ProjectSection(SolutionItems) = preProject
+		TextFile1.txt = TextFile1.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9A36CAB-9533-4B0A-B616-3578499E46C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9A36CAB-9533-4B0A-B616-3578499E46C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9A36CAB-9533-4B0A-B616-3578499E46C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9A36CAB-9533-4B0A-B616-3578499E46C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8F2548A-45B6-478B-8D1F-BE9C0E72A73A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8F2548A-45B6-478B-8D1F-BE9C0E72A73A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8F2548A-45B6-478B-8D1F-BE9C0E72A73A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8F2548A-45B6-478B-8D1F-BE9C0E72A73A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A21FDD56-78E8-4419-A5B5-4CD72D9DB60F}
+	EndGlobalSection
+EndGlobal

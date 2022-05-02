@@ -1,0 +1,43 @@
+2021-07-18 15:39:09,653 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-07-18 15:39:10,347 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-07-18 15:39:10,359 ::INFO ::[Logger]::  is used for Testing
+2021-07-18 15:39:10,365 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/Account/Login
+2021-07-18 15:39:10,366 ::INFO ::[Logger]:: Execution started at:-Jul-18-2021 15-39-10-PM
+2021-07-18 15:39:10,367 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-18 15:39:10,368 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-07-18 15:39:10,369 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_120447         XXXXXXXXXXXXXXXX
+2021-07-18 15:39:10,370 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-18 15:39:31,612 ::INFO ::[Logger]:: Inserted text in the Text_UserName element on the AdminLogin page.
+2021-07-18 15:39:35,868 ::INFO ::[Logger]:: Inserted text in the Text_Password element on the AdminLogin page.
+2021-07-18 15:39:47,160 ::INFO ::[Logger]:: Clicked the Button_LogIn element on the AdminLogin page.
+2021-07-18 15:39:49,248 ::INFO ::[Logger]:: Logged into ePFull Admin successfully.
+2021-07-18 15:40:00,835 ::INFO ::[Logger]:: Clicked the Button_Properties element on the AdminNavigation page.
+2021-07-18 15:40:06,198 ::INFO ::[Logger]:: Clicked the Link_Search element on the AdminNavigation page.
+2021-07-18 15:40:10,443 ::INFO ::[Logger]:: Inserted text in the Text_Name element on the AdminNavigation page.
+2021-07-18 15:40:15,594 ::INFO ::[Logger]:: Clicked the Button_Search_Search element on the AdminNavigation page.
+2021-07-18 15:40:34,704 ::INFO ::[Logger]:: Clicked the Tab_RoomBlock element on the AdminProperties page.
+2021-07-18 15:40:39,839 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-18 15:40:46,098 ::INFO ::[Logger]:: Clicked the RadioButton_RoomOnWelcome_On element on the AdminProperties_UpdateProperty_RoomBlock page.
+2021-07-18 15:40:51,259 ::INFO ::[Logger]:: Clicked the RadioButton_RoomOnWelcome_DefaultChecked_Off element on the AdminProperties_UpdateProperty_RoomBlock page.
+2021-07-18 15:40:56,385 ::INFO ::[Logger]:: Clicked the RadioButton_RoomOnWelcome_ReadOnly_Off element on the AdminProperties_UpdateProperty_RoomBlock page.
+2021-07-18 15:41:17,376 ::INFO ::[Logger]:: Clicked the Button_Submit element on the AdminProperties_UpdateProperty_RoomBlock page.
+2021-07-18 15:41:17,378 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-18 15:41:55,122 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Email element on the EmployeeLogin page.
+2021-07-18 15:41:55,147 ::DEBUG::[Logger]:: 1) Entered UserName
+2021-07-18 15:42:03,749 ::INFO ::[Logger]:: Clicked the SSOLogin_Next element on the EmployeeLogin page.
+2021-07-18 15:42:07,848 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Password element on the EmployeeLogin page.
+2021-07-18 15:42:07,849 ::DEBUG::[Logger]:: 2) Clicked on Next button and entered password.
+2021-07-18 15:42:15,383 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-18 15:42:15,385 ::DEBUG::[Logger]:: 3) Clicked on Subimt button.
+2021-07-18 15:42:47,994 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-18 15:43:03,173 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-18 15:43:08,259 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-18 15:43:08,263 ::DEBUG::[Logger]:: 4) Logged in successfully.
+2021-07-18 15:43:25,818 ::INFO ::[Logger]:: Clicked the PropertyDropDown_Button element on the EmployeeHome page.
+2021-07-18 15:43:53,210 ::INFO ::[Logger]:: Selected the Cendyn - Hilton Berlin value from the PropertyDropDown_Text drop down.
+2021-07-18 15:43:53,212 ::DEBUG::[Logger]:: 5) Selected the property: Cendyn - Hilton Berlin
+2021-07-18 15:44:16,489 ::INFO ::[Logger]:: Clicked the CreateEdit_eProposalButton element on the EmployeeHome page.
+2021-07-18 15:44:16,490 ::DEBUG::[Logger]:: 6) Landed on the ePropsal Compose page.
+2021-07-18 15:44:18,677 ::INFO ::[Logger]:: 'The Include Offer at the bottom..' message is displayed when the Room On Welcome setting is turned on. 
+2021-07-18 15:44:18,747 ::INFO ::[Logger]:: eProposal:: Script ::Passed
+2021-07-18 15:44:19,458 ::INFO ::[Logger]:: E.N.D

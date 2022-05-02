@@ -1,0 +1,136 @@
+2020-12-30 16:50:00,171 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2020-12-30 16:50:00,310 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2020-12-30 16:50:00,350 ::INFO ::[Logger]::  is used for Testing
+2020-12-30 16:50:00,588 ::INFO ::[Logger]:: This is the login page.https://ssodev.rainmakertest.org/Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://devrhbi.revintel.co/SSOLanding.aspx
+2020-12-30 16:50:00,590 ::INFO ::[Logger]:: Execution started at:-Dec-30-2020 16-50-00-PM
+2020-12-30 16:50:00,600 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2020-12-30 16:50:00,603 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2020-12-30 16:50:00,605 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_252850         XXXXXXXXXXXXXXXX
+2020-12-30 16:50:00,608 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2020-12-30 16:50:03,002 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=744}
+2020-12-30 16:50:03,022 ::INFO ::[Logger]:: Test Case : Validate the Detailed Room Type Availability
+2020-12-30 16:50:07,587 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2020-12-30 16:50:07,592 ::DEBUG::[Logger]:: 1) Email Address displayed
+2020-12-30 16:50:20,636 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2020-12-30 16:50:24,809 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2020-12-30 16:50:24,810 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
+2020-12-30 16:50:36,437 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2020-12-30 16:50:41,563 ::INFO ::[Logger]:: Clicked the Click_Automation element on the Navigation page.
+2020-12-30 16:50:42,700 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
+2020-12-30 16:50:46,104 ::DEBUG::[Logger]:: 4) Client displayed
+2020-12-30 16:51:03,736 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
+2020-12-30 16:51:03,738 ::DEBUG::[Logger]:: 5) Kerzner selected
+2020-12-30 16:51:16,336 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
+2020-12-30 16:51:24,014 ::INFO ::[Logger]:: Clicked the Hamburger_Icon element on the Navigation page.
+2020-12-30 16:51:29,141 ::INFO ::[Logger]:: Clicked the Room_Type element on the Navigation page.
+2020-12-30 16:51:29,142 ::DEBUG::[Logger]:: 7) Room Type menu drop down displayed
+2020-12-30 16:51:36,965 ::INFO ::[Logger]:: Clicked the Click_Detailed_Room_Type_Availability_Report element on the Navigation page.
+2020-12-30 16:51:46,967 ::DEBUG::[Logger]:: 8) User Landed on Detailed Room Type Availability Page
+2020-12-30 16:51:54,417 ::INFO ::[Logger]:: Switching into the iFrame.
+2020-12-30 16:52:00,895 ::INFO ::[Logger]:: Clicked the Click_View_Analysis element on the ReportParameter page.
+2020-12-30 16:52:40,981 ::DEBUG::[Logger]:: 9) Required field validation message is displaying
+2020-12-30 16:54:21,918 ::INFO ::[Logger]:: Inserted text in the Text_StartDate element on the ReportParameter page.
+2020-12-30 16:54:51,041 ::DEBUG::[Logger]:: 10) Enter start date as = 1/1/2020
+2020-12-30 16:54:58,668 ::INFO ::[Logger]:: Inserted text in the Text_EndDate element on the ReportParameter page.
+2020-12-30 16:54:59,421 ::DEBUG::[Logger]:: 11) Enter enddate as = 1/31/2020
+2020-12-30 16:55:18,607 ::INFO ::[Logger]:: Clicked the Click_View_Analysis element on the ReportParameter page.
+2020-12-30 16:56:36,143 ::DEBUG::[Logger]:: 12) Report generated
+2020-12-30 16:56:48,929 ::INFO ::[Logger]:: Clicked the Export_Menu element on the ReportParameter page.
+2020-12-30 16:56:48,930 ::DEBUG::[Logger]:: 13) Export drop down menu displayed
+2020-12-30 16:56:57,105 ::INFO ::[Logger]:: Clicked the Excel element on the ReportParameter page.
+2020-12-30 16:57:17,111 ::DEBUG::[Logger]:: 14) Report exported in excel format
+2020-12-30 16:57:19,536 ::INFO ::[Logger]:: Switching out of the iFrame.
+2020-12-30 16:57:20,547 ::DEBUG::[Logger]:: 15) The template should be downloaded in the csv file format.
+2020-12-30 16:57:34,142 ::DEBUG::[Logger]:: 16) Detailed Room Type Availability matched with Report name 
+2020-12-30 16:57:44,969 ::INFO ::[Logger]:: Clicked the Hamburger_Icon element on the Navigation page.
+2020-12-30 16:57:50,115 ::INFO ::[Logger]:: Clicked the Room_Type element on the Navigation page.
+2020-12-30 16:57:50,122 ::DEBUG::[Logger]:: 17) Room Type menu drop down displayed
+2020-12-30 16:57:58,167 ::INFO ::[Logger]:: Clicked the Click_Detailed_Room_Type_Availability_Report element on the Navigation page.
+2020-12-30 16:58:08,172 ::DEBUG::[Logger]:: 18) User Landed on Booked Room Materialization Page
+2020-12-30 16:58:15,849 ::INFO ::[Logger]:: Switching into the iFrame.
+2020-12-30 16:58:29,593 ::INFO ::[Logger]:: Clicked the Portfolio_RadioButton element on the ReportParameter page.
+2020-12-30 16:58:34,970 ::INFO ::[Logger]:: Clicked the Portfolio_DDL element on the ReportParameter page.
+2020-12-30 16:58:34,972 ::DEBUG::[Logger]:: 19) Portfolio drop down displyed
+2020-12-30 16:58:42,890 ::INFO ::[Logger]:: Clicked the Portfolio_DDL_value element on the ReportParameter page.
+2020-12-30 16:58:42,891 ::DEBUG::[Logger]:: 20) One&Only All -CT,SG,RR,RM,TP,PL,WV,NGSelected
+2020-12-30 16:58:49,679 ::INFO ::[Logger]:: Inserted text in the Text_StartDate element on the ReportParameter page.
+2020-12-30 16:58:54,190 ::INFO ::[Logger]:: Inserted text in the Text_EndDate element on the ReportParameter page.
+2020-12-30 16:58:54,191 ::DEBUG::[Logger]:: 21) Enter start date as = 1/1/2020
+2020-12-30 16:58:56,856 ::DEBUG::[Logger]:: 22) Enter enddate as = 1/31/2020
+2020-12-30 16:59:06,630 ::INFO ::[Logger]:: Clicked the Parameter_Channel element on the ReportParameter page.
+2020-12-30 16:59:06,637 ::DEBUG::[Logger]:: 23) channel drop down displayed
+2020-12-30 16:59:14,655 ::INFO ::[Logger]:: Clicked the Parameter_channel_Hotel_Direct element on the ReportParameter page.
+2020-12-30 16:59:14,657 ::DEBUG::[Logger]:: 24) Hotel DirectSelected as source market
+2020-12-30 16:59:41,338 ::INFO ::[Logger]:: Clicked the Click_View_Analysis element on the ReportParameter page.
+2020-12-30 17:01:01,401 ::DEBUG::[Logger]:: 25) Report generated
+2020-12-30 17:01:08,708 ::INFO ::[Logger]:: Filter(s):  ; Channel: Hotel Direct; Executive Office;  Found on the page
+2020-12-30 17:01:08,714 ::DEBUG::[Logger]:: 26) Applied filter displayed at footer
+2020-12-30 17:01:16,607 ::INFO ::[Logger]:: Clicked the Export_Menu element on the ReportParameter page.
+2020-12-30 17:01:16,608 ::DEBUG::[Logger]:: 27) Export drop down menu displayed
+2020-12-30 17:01:25,169 ::INFO ::[Logger]:: Clicked the Excel element on the ReportParameter page.
+2020-12-30 17:01:45,279 ::DEBUG::[Logger]:: 28) Report exported in excel format
+2020-12-30 17:01:47,794 ::INFO ::[Logger]:: Switching out of the iFrame.
+2020-12-30 17:01:48,814 ::DEBUG::[Logger]:: 29) The template should be downloaded in the csv file format.
+2020-12-30 17:01:57,906 ::INFO ::[Logger]:: Portfolio: One&Only All -CT,SG,RR,RM,TP,PL,WV,NG for dates: 01/01/2020 - 01/31/2020 matched with Report name 
+2020-12-30 17:02:03,047 ::INFO ::[Logger]:: 613 matched with total for 1/31/2020
+2020-12-30 17:02:10,545 ::INFO ::[Logger]:: Clicked the Hamburger_Icon element on the Navigation page.
+2020-12-30 17:02:15,844 ::INFO ::[Logger]:: Clicked the Room_Type element on the Navigation page.
+2020-12-30 17:02:15,852 ::DEBUG::[Logger]:: 30) Room Type menu drop down displayed
+2020-12-30 17:02:23,697 ::INFO ::[Logger]:: Clicked the Click_Detailed_Room_Type_Availability_Report element on the Navigation page.
+2020-12-30 17:02:33,705 ::DEBUG::[Logger]:: 31) User Landed on Detailed Room Type Avaiability Page
+2020-12-30 17:02:41,282 ::INFO ::[Logger]:: Switching into the iFrame.
+2020-12-30 17:02:47,604 ::INFO ::[Logger]:: Clicked the HotelorPortfolio_Dropdown_Arrow element on the ReportParameter page.
+2020-12-30 17:02:53,081 ::INFO ::[Logger]:: Clicked the Select_Hotel_value element on the ReportParameter page.
+2020-12-30 17:02:53,083 ::DEBUG::[Logger]:: 32) Atlantis,The Palmis selected as Hotel
+2020-12-30 17:02:59,851 ::INFO ::[Logger]:: Inserted text in the Text_StartDate element on the ReportParameter page.
+2020-12-30 17:03:04,226 ::INFO ::[Logger]:: Inserted text in the Text_EndDate element on the ReportParameter page.
+2020-12-30 17:03:04,232 ::DEBUG::[Logger]:: 33) Enter start date as = 1/1/2020
+2020-12-30 17:03:06,725 ::DEBUG::[Logger]:: 34) Enter enddate as = 1/31/2020
+2020-12-30 17:03:16,769 ::INFO ::[Logger]:: Clicked the Parameter_Channel element on the ReportParameter page.
+2020-12-30 17:03:16,772 ::DEBUG::[Logger]:: 35) channel drop down displayed
+2020-12-30 17:03:24,623 ::INFO ::[Logger]:: Clicked the Parameter_channel_Hotel_Direct element on the ReportParameter page.
+2020-12-30 17:03:29,885 ::INFO ::[Logger]:: Clicked the Parameter_Channel element on the ReportParameter page.
+2020-12-30 17:03:29,886 ::DEBUG::[Logger]:: 36) Hotel DirectSelected as source market
+2020-12-30 17:03:37,603 ::INFO ::[Logger]:: Clicked the Select_RoomProduct_DDL element on the ReportParameter page.
+2020-12-30 17:03:37,605 ::DEBUG::[Logger]:: 37) Room Product drop down displayed
+2020-12-30 17:03:45,304 ::INFO ::[Logger]:: Clicked the Select_RoomProduct_value element on the ReportParameter page.
+2020-12-30 17:03:45,306 ::DEBUG::[Logger]:: 38) Roomselected for Room Product
+2020-12-30 17:04:13,562 ::INFO ::[Logger]:: Clicked the Click_View_Analysis element on the ReportParameter page.
+2020-12-30 17:05:23,583 ::DEBUG::[Logger]:: 39) Report generated
+2020-12-30 17:05:30,740 ::INFO ::[Logger]:: Filter(s):  ; Channel: Hotel Direct; Executive Office; Found on the page
+2020-12-30 17:05:30,787 ::DEBUG::[Logger]:: 40) Applied filter displayed at footer
+2020-12-30 17:09:19,080 ::INFO ::[Logger]:: Clicked the Export_Menu element on the ReportParameter page.
+2020-12-30 17:09:19,082 ::DEBUG::[Logger]:: 41) Export drop down menu displayed
+2020-12-30 17:09:27,085 ::INFO ::[Logger]:: Clicked the Excel element on the ReportParameter page.
+2020-12-30 17:09:47,092 ::DEBUG::[Logger]:: 42) Report exported in excel format
+2020-12-30 17:09:49,515 ::INFO ::[Logger]:: Switching out of the iFrame.
+2020-12-30 17:09:51,762 ::DEBUG::[Logger]:: 43) The template should be downloaded in the csv file format.
+2020-12-30 17:10:06,720 ::INFO ::[Logger]:: 722 matched with total for 1/2/2020
+2020-12-30 17:10:08,856 ::INFO ::[Logger]:: Scenario 1 : Report with mandatory field is Pass
+2020-12-30 17:10:08,858 ::INFO ::[Logger]:: Scenario 2 : Report with one filter is Pass
+2020-12-30 17:10:08,859 ::INFO ::[Logger]:: Scenario 3 : Report with multiple filter is Pass
+2020-12-30 17:10:10,530 ::DEBUG::[Logger]:: TestPlan :- TP_252846 Testcase :- TC_252850
+2020-12-30 17:10:10,533 ::DEBUG::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~Test Data Used~~~~~~~~~~~~~~~~~~~~~~~~~~
+2020-12-30 17:10:10,536 ::DEBUG::[Logger]::  Value for : TC_252850_username is : Testautomation@cendyn17.com
+2020-12-30 17:10:10,538 ::DEBUG::[Logger]::  Value for : TC_252850_Password is : Cendyn123$
+2020-12-30 17:10:10,542 ::DEBUG::[Logger]::  Value for : TC_252850_environment is : Automation
+2020-12-30 17:10:10,544 ::DEBUG::[Logger]::  Value for : TC_252850_client is : Kerzner
+2020-12-30 17:10:10,547 ::DEBUG::[Logger]::  Value for : TC_252850_Business_Unit is : Hotel
+2020-12-30 17:10:10,549 ::DEBUG::[Logger]::  Value for : TC_252850_Currency is : AUD
+2020-12-30 17:10:10,552 ::DEBUG::[Logger]::  Value for : TC_252850_Hotel is : Atlantis,The Palm
+2020-12-30 17:10:10,554 ::DEBUG::[Logger]::  Value for : TC_252850_startDate is : 1/1/2020
+2020-12-30 17:10:10,559 ::DEBUG::[Logger]::  Value for : TC_252850_endDate is : 1/31/2020
+2020-12-30 17:10:10,561 ::DEBUG::[Logger]::  Value for : TC_252850_reportName is : Detailed Room Type Availability
+2020-12-30 17:10:10,563 ::DEBUG::[Logger]::  Value for : TC_252850_Portfolio_value is : One&Only All -CT,SG,RR,RM,TP,PL,WV,NG
+2020-12-30 17:10:10,565 ::DEBUG::[Logger]::  Value for : TC_252850_Scenario1_parameter1 is : Channel
+2020-12-30 17:10:10,571 ::DEBUG::[Logger]::  Value for : TC_252850_Scenario1_parameter1_value is : Hotel Direct
+2020-12-30 17:10:10,573 ::DEBUG::[Logger]::  Value for : TC_252850_Portfolio_Name_Date is : Portfolio: One&Only All -CT,SG,RR,RM,TP,PL,WV,NG for dates: 01/01/2020 - 01/31/2020
+2020-12-30 17:10:10,575 ::DEBUG::[Logger]::  Value for : TC_252850_Total is : 613
+2020-12-30 17:10:10,577 ::DEBUG::[Logger]::  Value for : TC_252850_Scenario3_Hotel is : Atlantis,The Palm
+2020-12-30 17:10:10,578 ::DEBUG::[Logger]::  Value for : TC_252850_Scenario2_parameter1 is : Channel
+2020-12-30 17:10:10,581 ::DEBUG::[Logger]::  Value for : TC_252850_Scenario2_parameter1_value is : Hotel Direct
+2020-12-30 17:10:10,582 ::DEBUG::[Logger]::  Value for : TC_252850_Scenario2_parameter2 is : Room Product
+2020-12-30 17:10:10,586 ::DEBUG::[Logger]::  Value for : TC_252850_Scenario2_parameter2_value is : Room
+2020-12-30 17:10:10,588 ::DEBUG::[Logger]::  Value for : TC_252850_Thr_Total is : 722
+2020-12-30 17:10:11,592 ::INFO ::[Logger]:: RevIntel:: Script ::Passed
+2020-12-30 17:10:12,705 ::INFO ::[Logger]:: E.N.D

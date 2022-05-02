@@ -1,0 +1,45 @@
+2021-07-18 19:15:21,991 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-07-18 19:15:21,993 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-07-18 19:15:21,994 ::INFO ::[Logger]::  is used for Testing
+2021-07-18 19:15:22,003 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/Account/Login
+2021-07-18 19:15:22,010 ::INFO ::[Logger]:: Execution started at:-Jul-18-2021 19-15-22-PM
+2021-07-18 19:15:22,012 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-18 19:15:22,013 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-07-18 19:15:22,015 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_120446         XXXXXXXXXXXXXXXX
+2021-07-18 19:15:22,016 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-18 19:15:56,263 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Email element on the EmployeeLogin page.
+2021-07-18 19:15:56,265 ::DEBUG::[Logger]:: 1) Entered UserName
+2021-07-18 19:16:04,857 ::INFO ::[Logger]:: Clicked the SSOLogin_Next element on the EmployeeLogin page.
+2021-07-18 19:16:08,998 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Password element on the EmployeeLogin page.
+2021-07-18 19:16:08,999 ::DEBUG::[Logger]:: 2) Clicked on Next button and entered password.
+2021-07-18 19:16:17,616 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-18 19:16:17,618 ::DEBUG::[Logger]:: 3) Clicked on Subimt button.
+2021-07-18 19:16:46,672 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-18 19:17:01,914 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-18 19:17:07,056 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-18 19:17:07,060 ::DEBUG::[Logger]:: 4) Logged in successfully.
+2021-07-18 19:17:25,505 ::INFO ::[Logger]:: Clicked the PropertyDropDown_Button element on the EmployeeHome page.
+2021-07-18 19:17:52,248 ::INFO ::[Logger]:: Selected the Cendyn - Hilton Berlin value from the PropertyDropDown_Text drop down.
+2021-07-18 19:17:52,249 ::DEBUG::[Logger]:: 5) Selected the property: Cendyn - Hilton Berlin
+2021-07-18 19:18:03,819 ::INFO ::[Logger]:: Clicked the Link_UpdateMySettings element on the EmployeeHome page.
+2021-07-18 19:18:14,999 ::INFO ::[Logger]:: Clicked the Tab_StoredContent element on the Settings page.
+2021-07-18 19:18:15,012 ::DEBUG::[Logger]:: 6) Landed on the Stored Content page.
+2021-07-18 19:18:53,266 ::DEBUG::[Logger]:: 7) Content and title are noted.
+2021-07-18 19:19:04,246 ::INFO ::[Logger]:: Clicked the WelcomeButton element on the EmployeeHome page.
+2021-07-18 19:19:17,384 ::INFO ::[Logger]:: Clicked the CreateEdit_eProposalButton element on the EmployeeHome page.
+2021-07-18 19:19:17,385 ::DEBUG::[Logger]:: 8) Land on the Compose page.
+2021-07-18 19:19:20,567 ::INFO ::[Logger]:: The stored content in position 1 matches the title: Welcome Letter
+2021-07-18 19:19:27,183 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-18 19:19:28,253 ::INFO ::[Logger]:: The Welcome Message text contained the passed text.
+2021-07-18 19:19:28,255 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-18 19:19:29,304 ::INFO ::[Logger]:: The stored content in position 2 matches the title: Welcome Paragraph
+2021-07-18 19:19:35,950 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-18 19:19:37,015 ::INFO ::[Logger]:: The Welcome Message text contained the passed text.
+2021-07-18 19:19:37,016 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-18 19:19:38,061 ::INFO ::[Logger]:: The stored content in position 3 matches the title: Closing Paragraph
+2021-07-18 19:19:44,657 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-18 19:19:45,720 ::INFO ::[Logger]:: The Welcome Message text contained the passed text.
+2021-07-18 19:19:45,722 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-18 19:19:46,726 ::DEBUG::[Logger]:: 9) Each text displays the content in the Welcome Message that was previously noted.
+2021-07-18 19:19:49,887 ::INFO ::[Logger]:: eProposal:: Script ::Passed
+2021-07-18 19:19:50,360 ::INFO ::[Logger]:: E.N.D

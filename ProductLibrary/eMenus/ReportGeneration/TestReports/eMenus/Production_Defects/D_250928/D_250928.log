@@ -1,0 +1,55 @@
+2021-06-24 16:06:22,850 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-06-24 16:06:22,852 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-06-24 16:06:22,853 ::INFO ::[Logger]::  is used for Testing
+2021-06-24 16:06:23,155 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DCAOAFRON%26response_mode%3Dform_post%26response_type%3Dcode%2520id_token%26scope%3Dopenid%2520roles%2520profile%2520write%2520offline_access%2520CendynAccessApi%26state%3DOpenIdConnect.AuthenticationProperties%253DQX4u3vapRmInqhwebJHkqu8M9QUOwrhIWczAgWsZ_yjk0Xr0DYvhU2b81ez7R_zIM138KfQj-zrzYjgs2tpcesfno0HHMni1bYcu6PguqyCC1pS4tjPXYWUoDAZ3n3VKc1ypGZPzGjIyBjcGV3W5Dw%26nonce%3D637601277892911732.YzNiNzRlOTYtYWRkZi00ODk1LWIzMDAtMmFjYTk1YjRlYmJiODAwNWI4ZWYtYTBlZC00ZjZiLTkyZjEtNjhkODk4N2ZiYjVj%26redirect_uri%3Dhttps%253A%252F%252Fqa.cendynaccess.com%26ui_locales%3Den-US
+2021-06-24 16:06:23,156 ::INFO ::[Logger]:: Execution started at:-Jun-24-2021 16-06-23-PM
+2021-06-24 16:06:23,157 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-06-24 16:06:23,158 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-06-24 16:06:23,159 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      D_250928         XXXXXXXXXXXXXXXX
+2021-06-24 16:06:23,160 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-06-24 16:06:23,447 ::INFO ::[Logger]:: Window Size is: {Width=1366, Height=768}
+2021-06-24 16:06:24,479 ::DEBUG::[Logger]:: 1) Landed on Admin Login Page
+2021-06-24 16:06:50,780 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Username element on the PropertyAdmin page.
+2021-06-24 16:06:56,963 ::INFO ::[Logger]:: Clicked the Click_NextButton element on the PropertyAdmin page.
+2021-06-24 16:07:02,727 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Password element on the PropertyAdmin page.
+2021-06-24 16:07:02,727 ::DEBUG::[Logger]:: 2) Entered Username =qacendynautomation@cendyn17.com and Password =Cendyn123$
+2021-06-24 16:07:41,249 ::INFO ::[Logger]:: Clicked the Click_LoginButton element on the PropertyAdmin page.
+2021-06-24 16:07:42,123 ::DEBUG::[Logger]:: 3) Landed on Select Product Page 
+2021-06-24 16:08:00,089 ::INFO ::[Logger]:: Clicked the Click_eMenus element on the PropertyAdmin page.
+2021-06-24 16:08:00,090 ::DEBUG::[Logger]:: 4) eMenus Product got Selected 
+2021-06-24 16:08:26,499 ::INFO ::[Logger]:: Clicked the Click_Select_PropertyDropdown element on the PropertyAdmin page.
+2021-06-24 16:08:26,500 ::DEBUG::[Logger]:: 5) Clicked on Select Property Drop-down
+2021-06-24 16:08:47,625 ::INFO ::[Logger]:: Inserted text in the Enter_Property_TextBox element on the PropertyAdmin page.
+2021-06-24 16:08:47,626 ::DEBUG::[Logger]:: 6) Entered Property
+2021-06-24 16:09:13,166 ::INFO ::[Logger]:: Selected the Hotel Origami value from the Select_Property_Dropdown drop down.
+2021-06-24 16:09:13,167 ::DEBUG::[Logger]:: 7) Hotel Origami Property got Selected
+2021-06-24 16:09:27,573 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-06-24 16:09:35,394 ::INFO ::[Logger]:: Clicked the Click_MyMenu_BreakMenu element on the PropertyAdmin page.
+2021-06-24 16:09:35,395 ::DEBUG::[Logger]:: 8) Clicked on Break Menus
+2021-06-24 16:09:59,761 ::INFO ::[Logger]:: Clicked the BreakMenu_EditIcon element on the PropertyAdmin page.
+2021-06-24 16:09:59,762 ::DEBUG::[Logger]:: 9) Edit menu modal should get displayed
+2021-06-24 16:10:03,175 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-06-24 16:10:14,159 ::INFO ::[Logger]:: Clicked the Click_Filter_GlutenFree element on the PropertyAdmin page.
+2021-06-24 16:10:14,161 ::DEBUG::[Logger]:: 10) Gluten Free Filters were added.
+2021-06-24 16:10:27,206 ::INFO ::[Logger]:: Clicked the Click_AddNewMenu_BottomSaveButton element on the PropertyAdmin page.
+2021-06-24 16:10:31,580 ::FATAL::[Logger]:: Unable to click the Click_Publish_Button element on the PropertyAdmin page.OpenQA.Selenium.ElementClickInterceptedException: element click intercepted: Element <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#publishModal">...</button> is not clickable at point (1291, 141). Other element would receive the click: <div class="row small">...</div>
+  (Session info: chrome=89.0.4389.40)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in E:\2020\April\eMenus_Atomation\BaseUtility\Utility\Helper.cs:line 54
+2021-06-24 16:10:33,742 ::ERROR::[Logger]:: eMenus_Flow :: Script::Failed
+OpenQA.Selenium.ElementClickInterceptedException: element click intercepted: Element <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#publishModal">...</button> is not clickable at point (1291, 141). Other element would receive the click: <div class="row small">...</div>
+  (Session info: chrome=89.0.4389.40)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in E:\2020\April\eMenus_Atomation\BaseUtility\Utility\Helper.cs:line 61
+   at eMenus.AppModule.Admin.PropertyAdmin.Click_Publish_Button() in E:\2020\April\eMenus_Atomation\ProductLibrary\eMenus\AppModule\Admin\PropertyAdmin.cs:line 487
+   at eMenus.AppModule.Admin.PropertyAdmin.Publish_Changes() in E:\2020\April\eMenus_Atomation\ProductLibrary\eMenus\AppModule\Admin\PropertyAdmin.cs:line 588
+   at eMenus.AppModule.MainAdminApp.MainAdminApp.D_250928() in E:\2020\April\eMenus_Atomation\ProductLibrary\eMenus\AppModule\MainAdminApp\ProductionDefects.cs:line 285
+   at eMenus.AppModule.MainAdminApp.MainAdminApp.Production_Defects() in E:\2020\April\eMenus_Atomation\ProductLibrary\eMenus\AppModule\MainAdminApp.cs:line 60
+   at eMenus.TestPlan.HotelOrigami.eMenus_ProductionDefects.D_250928() in E:\2020\April\eMenus_Atomation\ProductLibrary\eMenus\TestPlan\HotelOrigami\eMenus_ProductionDefects.cs:line 130
+2021-06-24 16:10:45,337 ::INFO ::[Logger]:: E.N.D

@@ -1,0 +1,51 @@
+2021-06-24 11:13:05,554 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-06-24 11:13:05,556 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-06-24 11:13:05,556 ::INFO ::[Logger]::  is used for Testing
+2021-06-24 11:13:06,333 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DCAOAFRON%26response_mode%3Dform_post%26response_type%3Dcode%2520id_token%26scope%3Dopenid%2520roles%2520profile%2520write%2520offline_access%2520CendynAccessApi%26state%3DOpenIdConnect.AuthenticationProperties%253D5pU_Z2PZdDCcJHg6jWPfhw_nFu7Ec-2AuRi-VZfgRtuuK1uchclGVO_GQuBBf2G80aVo4NbtR3pE-8QjtQcIW2_vLasNUR8fsffsiKAX_NRj5P98KglOe0fNGKkLglGyMEQcglxYR7lDudmxEv19GQ%26nonce%3D637601101915927495.NzFlNjczOTQtYzI1ZS00ZjVlLWEzNjItMzI3Y2RhMjNhOGQ3YzU1YzQ3NzUtYWM3ZC00YWQxLWFlNjctNTE4NjNjNmUyOTIy%26redirect_uri%3Dhttps%253A%252F%252Fqa.cendynaccess.com%26ui_locales%3Den-US
+2021-06-24 11:13:06,335 ::INFO ::[Logger]:: Execution started at:-Jun-24-2021 11-13-06-AM
+2021-06-24 11:13:06,335 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-06-24 11:13:06,336 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-06-24 11:13:06,336 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_232913         XXXXXXXXXXXXXXXX
+2021-06-24 11:13:06,337 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-06-24 11:13:06,620 ::INFO ::[Logger]:: Window Size is: {Width=1366, Height=768}
+2021-06-24 11:13:07,608 ::DEBUG::[Logger]:: 1) Landed on Admin Login Page
+2021-06-24 11:13:20,589 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Username element on the PropertyAdmin page.
+2021-06-24 11:13:26,798 ::INFO ::[Logger]:: Clicked the Click_NextButton element on the PropertyAdmin page.
+2021-06-24 11:13:32,570 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Password element on the PropertyAdmin page.
+2021-06-24 11:13:32,570 ::DEBUG::[Logger]:: 2) Entered Username =qacendynautomation@cendyn17.com and Password =Cendyn123$
+2021-06-24 11:13:45,308 ::INFO ::[Logger]:: Clicked the Click_LoginButton element on the PropertyAdmin page.
+2021-06-24 11:13:46,196 ::DEBUG::[Logger]:: 3) Landed on Select Product Page 
+2021-06-24 11:13:58,655 ::INFO ::[Logger]:: Clicked the Click_eMenus element on the PropertyAdmin page.
+2021-06-24 11:13:58,656 ::DEBUG::[Logger]:: 4) eMenus Product got Selected 
+2021-06-24 11:14:11,019 ::INFO ::[Logger]:: Clicked the Click_Select_PropertyDropdown element on the PropertyAdmin page.
+2021-06-24 11:14:11,020 ::DEBUG::[Logger]:: 5) Clicked on Select Property Drop-down
+2021-06-24 11:14:21,223 ::INFO ::[Logger]:: Inserted text in the Enter_Property_TextBox element on the PropertyAdmin page.
+2021-06-24 11:14:21,224 ::DEBUG::[Logger]:: 6) Entered Property
+2021-06-24 11:14:34,308 ::INFO ::[Logger]:: Selected the Hotel Origami value from the Select_Property_Dropdown drop down.
+2021-06-24 11:14:34,309 ::DEBUG::[Logger]:: 7) Hotel Origami Property got Selected
+2021-06-24 11:14:47,725 ::INFO ::[Logger]:: Clicked the Click_Link_Share element on the PropertyAdmin page.
+2021-06-24 11:14:48,955 ::DEBUG::[Logger]:: 8) Landed on Share Menu Page
+2021-06-24 11:14:57,327 ::INFO ::[Logger]:: Inserted text in the Enter_ShareMenu_Name element on the PropertyAdmin page.
+2021-06-24 11:15:03,497 ::INFO ::[Logger]:: Clicked the Check_Pricing_Checkbox element on the PropertyAdmin page.
+2021-06-24 11:15:03,513 ::DEBUG::[Logger]:: 9) All Details are entered into Set Up Page 
+2021-06-24 11:15:12,266 ::INFO ::[Logger]:: Clicked the Click_Continue_Button element on the PropertyAdmin page.
+2021-06-24 11:15:15,445 ::FATAL::[Logger]:: Unable to click the Check_Menu_For_Pages element on the PropertyAdmin page.OpenQA.Selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=89.0.4389.40)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in E:\2020\April\eMenus_Atomation\BaseUtility\Utility\Helper.cs:line 54
+2021-06-24 11:15:17,678 ::ERROR::[Logger]:: eMenus_Flow :: Script::Failed
+OpenQA.Selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=89.0.4389.40)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in E:\2020\April\eMenus_Atomation\BaseUtility\Utility\Helper.cs:line 61
+   at eMenus.AppModule.Admin.PropertyAdmin.Check_Menu_For_Pages(String value) in E:\2020\April\eMenus_Atomation\ProductLibrary\eMenus\AppModule\Admin\PropertyAdmin.cs:line 1156
+   at eMenus.AppModule.MainAdminApp.MainAdminApp.TC_232913() in E:\2020\April\eMenus_Atomation\ProductLibrary\eMenus\AppModule\MainAdminApp\TP_231897_PropertyAdmin.cs:line 1269
+   at eMenus.AppModule.MainAdminApp.MainAdminApp.TP_231897() in E:\2020\April\eMenus_Atomation\ProductLibrary\eMenus\AppModule\MainAdminApp.cs:line 41
+   at eMenus.TestPlan.HotelOrigami.eMenu_TP_231897_PropertyAdmin.TC_232913() in E:\2020\April\eMenus_Atomation\ProductLibrary\eMenus\TestPlan\HotelOrigami\eMenu_TP_231897_PropertyAdmin.cs:line 385
+2021-06-24 11:15:25,639 ::INFO ::[Logger]:: E.N.D

@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{66E39A10-572A-4A38-B9AF-A30693DFB6A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eInsight</RootNamespace>
+    <AssemblyName>eInsight</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppModule\GetVariableValues.cs" />
+    <Compile Include="AppModule\MainAdminApp.cs" />
+    <Compile Include="AppModule\MainAdminApp\AudienceBuilder\TP_240125_AudienceBuilder_Detail.cs" />
+    <Compile Include="AppModule\MainAdminApp\AudienceBuilder\TP_240298_AudienceBuilder_Clone.cs" />
+    <Compile Include="AppModule\MainAdminApp\AudienceBuilder\TP_240303_AudienceBuilder_History.cs" />
+    <Compile Include="AppModule\MainAdminApp\AudienceBuilder\TP_240302_AudienceBuilder_AssiciatedCampaign.cs" />
+    <Compile Include="AppModule\MainAdminApp\AudienceBuilder\TP_242029_AudienceBuilder_Cancel.cs" />
+    <Compile Include="AppModule\MainAdminApp\AudienceBuilder\TP_242047_AudienceBuilder_Edit.cs" />
+    <Compile Include="AppModule\MainAdminApp\AudienceBuilder\TP_243513_AudienceBuilder_TotalLabelRecord.cs" />
+    <Compile Include="AppModule\MainAdminApp\AudienceBuilder\TP_247212_ForecastAudienceTarget.cs" />
+    <Compile Include="AppModule\MainAdminApp\AudienceBuilder\TP_247216_AudienceBuilder_AudienceCampaignActivation.cs" />
+    <Compile Include="AppModule\MainAdminApp\AudienceBuilder\TP_250054_AudienceBuilder.cs" />
+    <Compile Include="AppModule\MainAdminApp\AudienceBuilder\TP_251284_AudienceBuilder.cs" />
+    <Compile Include="AppModule\MainAdminApp\AudienceBuilder\TP_261351_AudienceDisplayName.cs" />
+    <Compile Include="AppModule\MainAdminApp\AudienceBuilder\TP_261792_AudienceBuilder_Saving.cs" />
+    <Compile Include="AppModule\MainAdminApp\AudienceBuilder\TP_261803_AudienceBuilder_DetailView.cs" />
+    <Compile Include="AppModule\MainAdminApp\AudienceBuilder\TP_262077_AudienceCampaignIntegration.cs" />
+    <Compile Include="AppModule\MainAdminApp\AudienceBuilder\TP_261306_AudienceBuilder_AudienceCampaignDeactivation.cs" />
+    <Compile Include="AppModule\MainAdminApp\Home\TP_97045_RecentlySentCampaign.cs" />
+    <Compile Include="AppModule\MainAdminApp\Login\TP_215017_Login_PasswordSecurity.cs" />
+    <Compile Include="AppModule\MainAdminApp\PostDeployment\TP_276287_PostDeployment.cs" />
+    <Compile Include="AppModule\MainAdminApp\PriorityQ\TP_271585_PriorityQ_Search.cs" />
+    <Compile Include="AppModule\MainAdminApp\PriorityQ\TP_271586_PriorityQ_Edit.cs" />
+    <Compile Include="AppModule\MainAdminApp\PriorityQ\TP_271588_PriorityQ_Send.cs" />
+    <Compile Include="AppModule\MainAdminApp\PriorityQ\TP_271591_PriorityQ_CampaignHistory.cs" />
+    <Compile Include="AppModule\UI\Preferences.cs" />
+    <Compile Include="AppModule\UI\PriorityQ.cs" />
+    <Compile Include="AppModule\UI\TemplateBuilder.cs" />
+    <Compile Include="PageObject\UI\PageObject_PriorityQ.cs" />
+    <Compile Include="PageObject\UI\PageObject_TemplateBuilder.cs" />
+    <Compile Include="TestPlan\AudienceBuilder\eIn_TP_242029_AudienceBuilder_Cancel.cs" />
+    <Compile Include="TestPlan\AudienceBuilder\eIn_TP_243513_AudienceBuilder_TotalLabelRecord.cs" />
+    <Compile Include="TestPlan\AudienceBuilder\eIn_TP_247212_ForecastAudienceTarget.cs" />
+    <Compile Include="TestPlan\AudienceBuilder\eIn_TP_261351_AudienceDisplayName.cs" />
+    <Compile Include="TestPlan\AudienceBuilder\eIn_TP_261792_AudienceBuilder_Saving.cs" />
+    <Compile Include="TestPlan\AudienceBuilder\eIn_TP_261803_AudienceBuilder_DetailView.cs" />
+    <Compile Include="TestPlan\ManageCampaign\eIn_TP_91643_DynamicContent_PlainText.cs" />
+    <Compile Include="AppModule\MainAdminApp\ManageCampaign\TP_124907_SendCampaign.cs" />
+    <Compile Include="AppModule\MainAdminApp\ManageCampaign\TP_128226_CASLNotification.cs" />
+    <Compile Include="AppModule\MainAdminApp\ManageCampaign\TP_174295_Campaign_SubjectLine.cs" />
+    <Compile Include="AppModule\MainAdminApp\ManageCampaign\TP_197270_CreateCampaign.cs" />
+    <Compile Include="AppModule\MainAdminApp\ManageCampaign\TP_259526_Campaign_FromName.cs" />
+    <Compile Include="AppModule\MainAdminApp\ManageCampaign\TP_89853_CriteriaSeedList.cs" />
+    <Compile Include="AppModule\MainAdminApp\Preferences\TP_182388_GlobalDateFormat.cs" />
+    <Compile Include="AppModule\MainAdminApp\Profile\TP_86435_Profile_ProfileData.cs" />
+    <Compile Include="AppModule\MainAdminApp\Profile\TP_106791_Profile.cs" />
+    <Compile Include="AppModule\MainAdminApp\Profile\TP_166736_GlobalCurrency.cs" />
+    <Compile Include="AppModule\MainAdminApp\Profile\TP_234025_Profile_GlobalProfile.cs" />
+    <Compile Include="AppModule\MainAdminApp\Profile\TP_69664_Profile_GlobalProfile_Search.cs" />
+    <Compile Include="AppModule\MainAdminApp\Profile\TP_86434_Profile_CampaignHistory.cs" />
+    <Compile Include="AppModule\UI\Admin\Admin.cs" />
+    <Compile Include="AppModule\UI\AudienceBuilder.cs" />
+    <Compile Include="AppModule\UI\CreateCampaign.cs" />
+    <Compile Include="AppModule\UI\CreateCampaign_Criteria.cs" />
+    <Compile Include="AppModule\UI\FileManager.cs" />
+    <Compile Include="AppModule\UI\Home.cs" />
+    <Compile Include="AppModule\UI\Login.cs" />
+    <Compile Include="AppModule\UI\ManageCampaign.cs" />
+    <Compile Include="AppModule\UI\Navigation.cs" />
+    <Compile Include="AppModule\UI\Profile.cs" />
+    <Compile Include="AppModule\UI\Settings.cs" />
+    <Compile Include="AppModule\UI\UserActions.cs" />
+    <Compile Include="ClientWarehouse\SqlWarehouseVariable\Variables.cs" />
+    <Compile Include="ClientWarehouse\Sqlwarehouse\SqlWarehouse.cs" />
+    <Compile Include="PageObject\Admin\PageObject_Admin.cs" />
+    <Compile Include="PageObject\UI\PageObject_AudienceBuilder.cs" />
+    <Compile Include="PageObject\UI\PageObject_CreateCampaign.cs" />
+    <Compile Include="PageObject\UI\PageObject_CreateCampaign_Criteria.cs" />
+    <Compile Include="PageObject\UI\PageObject_Home.cs" />
+    <Compile Include="PageObject\UI\PageObject_Login.cs" />
+    <Compile Include="PageObject\UI\PageObject_ManageCampaign.cs" />
+    <Compile Include="PageObject\UI\PageObject_Navigation.cs" />
+    <Compile Include="PageObject\UI\PageObject_Profile.cs" />
+    <Compile Include="PageObject\UI\PageObject_Settings.cs" />
+    <Compile Include="PageObject\UI\PageObject_UserActions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestData\TestData.cs" />
+    <Compile Include="TestPlan\AudienceBuilder\eIn_TP_240125_AudienceBuilder_Detail.cs" />
+    <Compile Include="TestPlan\AudienceBuilder\eIn_TP_240298_AudienceBuilder_Clone.cs" />
+    <Compile Include="TestPlan\AudienceBuilder\eIn_TP_240303_AudienceBuilder_History.cs" />
+    <Compile Include="TestPlan\AudienceBuilder\eIn_TP_240302_AudienceBuilder_AssiciatedCampaign.cs" />
+    <Compile Include="TestPlan\AudienceBuilder\eIn_TP_242047_AudienceBuilder_Edit.cs" />
+    <Compile Include="TestPlan\AudienceBuilder\eIn_TP_247216_AudienceBuilder_AudienceCampaignActivation.cs" />
+    <Compile Include="TestPlan\AudienceBuilder\eIn_TP_250054_AudienceBuilder.cs" />
+    <Compile Include="TestPlan\AudienceBuilder\eIn_TP_251284_AudienceBuilder.cs" />
+    <Compile Include="TestPlan\AudienceBuilder\eIn_TP_262077_AudienceCampaignIntegration.cs" />
+    <Compile Include="TestPlan\AudienceBuilder\eIn_TP_261306_AudienceBuilder_AudienceCampaignDeactivation.cs" />
+    <Compile Include="TestPlan\Home\eIn_TP_97045_RecentlySentCampaign.cs" />
+    <Compile Include="TestPlan\Login\eIn_TP_215017_Login_PasswordSecurity.cs" />
+    <Compile Include="TestPlan\ManageCampaign\eIn_TP_124907_SendCampaign.cs" />
+    <Compile Include="TestPlan\ManageCampaign\eIn_TP_128226_CASLNotification.cs" />
+    <Compile Include="TestPlan\ManageCampaign\eIn_TP_174295_Campaign_SubjectLine.cs" />
+    <Compile Include="TestPlan\ManageCampaign\eIn_TP_197270_CreateCampaign.cs" />
+    <Compile Include="TestPlan\ManageCampaign\eIn_TP_259526_Campaign_FromName.cs" />
+    <Compile Include="TestPlan\ManageCampaign\eIn_TP_89853_CriteriaSeedList.cs" />
+    <Compile Include="AppModule\MainAdminApp\ManageCampaign\TP_91643_DynamicContent_PlainText.cs" />
+    <Compile Include="TestPlan\PostDeployment\eIn_TP_276287_EU01_PostDeployment.cs" />
+    <Compile Include="TestPlan\PostDeployment\eIn_TP_276287_EU02_PostDeployment.cs" />
+    <Compile Include="TestPlan\PostDeployment\eIn_TP_276287_PostDeployment.cs" />
+    <Compile Include="TestPlan\Preferences\eIn_TP_182388_GlobalDateFormat.cs" />
+    <Compile Include="TestPlan\PriorityQ\eIn_TP_271585_PriotityQ_Search.cs" />
+    <Compile Include="TestPlan\PriorityQ\eIn_TP_271586_PriorityQ_Edit.cs" />
+    <Compile Include="TestPlan\PriorityQ\eIn_TP_271588_PriorityQ_Send.cs" />
+    <Compile Include="TestPlan\PriorityQ\eIn_TP_271591_PriorityQ_CampaignHistory.cs.cs" />
+    <Compile Include="TestPlan\Profile\eIn_TP_106791_Profile.cs" />
+    <Compile Include="TestPlan\Profile\eIn_TP_166736_GlobalCurrency.cs" />
+    <Compile Include="TestPlan\Profile\eIn_TP_234025_Profile_GlobalProfile.cs" />
+    <Compile Include="TestPlan\Profile\eIn_TP_86434_Profile_CampaignHistory.cs" />
+    <Compile Include="TestPlan\Profile\eIn_TP_86435_Profile_ProfileData.cs" />
+    <Compile Include="Utility\Constants.cs" />
+    <Compile Include="Utility\ObjectRepository.cs" />
+    <Compile Include="Utility\Queries.cs" />
+    <Compile Include="Utility\Setup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppModule\Admin\" />
+    <Folder Include="Entity\" />
+    <Folder Include="ReportGeneration\TestReports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ObjectRepository\OR.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Common.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ClosedXML">
+      <Version>0.95.3</Version>
+    </PackageReference>
+    <PackageReference Include="ExtentReports">
+      <Version>3.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="HtmlAgilityPack">
+      <Version>1.4.9.5</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.Razor">
+      <Version>3.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Office.Interop.Excel">
+      <Version>15.0.4795.1000</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Office.Interop.Word">
+      <Version>15.0.4797.1003</Version>
+    </PackageReference>
+    <PackageReference Include="MongoDB.Bson">
+      <Version>2.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="MongoDB.Driver">
+      <Version>2.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="MongoDB.Driver.Core">
+      <Version>2.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>9.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit">
+      <Version>3.12.0</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit3TestAdapter">
+      <Version>3.16.1</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="RazorEngine">
+      <Version>3.9.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.Firefox.WebDriver">
+      <Version>0.27.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.Support">
+      <Version>3.141.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.WebDriver">
+      <Version>3.141.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver">
+      <Version>96.0.4664.4500</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <Version>4.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BaseUtility\BaseUtility.csproj">
+      <Project>{fe2a5f2f-fa49-4e1c-a89b-430dbb8822d3}</Project>
+      <Name>BaseUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Common.csproj">
+      <Project>{f7f5a9bb-6b92-45c0-83c1-4a10da74b654}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\InfoMessageLogger\InfoMessageLogger.csproj">
+      <Project>{57e9210a-687f-4da5-99a2-052644163f1e}</Project>
+      <Name>InfoMessageLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TestData\TestData.csproj">
+      <Project>{0280eb17-9eb8-4438-ac2b-28c04d1d1091}</Project>
+      <Name>TestData</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="TestData\csv\GuestProfile.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,48 @@
+2021-07-18 16:07:47,665 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-07-18 16:07:47,718 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-07-18 16:07:47,730 ::INFO ::[Logger]::  is used for Testing
+2021-07-18 16:07:47,736 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/Account/Login
+2021-07-18 16:07:47,737 ::INFO ::[Logger]:: Execution started at:-Jul-18-2021 16-07-47-PM
+2021-07-18 16:07:47,738 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-18 16:07:47,739 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-07-18 16:07:47,739 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_84274         XXXXXXXXXXXXXXXX
+2021-07-18 16:07:47,740 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-18 16:08:36,901 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Email element on the EmployeeLogin page.
+2021-07-18 16:08:36,915 ::DEBUG::[Logger]:: 1) Entered UserName
+2021-07-18 16:08:45,507 ::INFO ::[Logger]:: Clicked the SSOLogin_Next element on the EmployeeLogin page.
+2021-07-18 16:08:49,598 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Password element on the EmployeeLogin page.
+2021-07-18 16:08:49,599 ::DEBUG::[Logger]:: 2) Clicked on Next button and entered password.
+2021-07-18 16:08:58,131 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-18 16:08:58,134 ::DEBUG::[Logger]:: 3) Clicked on Subimt button.
+2021-07-18 16:09:27,440 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-18 16:09:42,658 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-18 16:09:47,758 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-18 16:09:47,763 ::DEBUG::[Logger]:: 4) Logged in successfully.
+2021-07-18 16:10:06,267 ::INFO ::[Logger]:: Clicked the PropertyDropDown_Button element on the EmployeeHome page.
+2021-07-18 16:10:33,204 ::INFO ::[Logger]:: Selected the  value from the PropertyDropDown_Text drop down.
+2021-07-18 16:10:33,205 ::DEBUG::[Logger]:: 5) Selected the property: 
+2021-07-18 16:10:54,644 ::INFO ::[Logger]:: Clicked the CreateEdit_eProposalButton element on the EmployeeHome page.
+2021-07-18 16:11:00,646 ::DEBUG::[Logger]:: 6) Land on the Compose page.
+2021-07-18 16:11:07,978 ::INFO ::[Logger]:: Inserted text in the MessageClosingText element on the ProposalCompose page.
+2021-07-18 16:11:07,980 ::DEBUG::[Logger]:: 7) Message is entered.
+2021-07-18 16:13:49,708 ::INFO ::[Logger]:: Default Language is English
+2021-07-18 16:13:55,107 ::INFO ::[Logger]:: Inserted text in the ProposalNameText element on the ProposalCompose page.
+2021-07-18 16:14:01,778 ::INFO ::[Logger]:: Clicked the Client_SearchLink element on the ProposalCompose page.
+2021-07-18 16:14:05,974 ::INFO ::[Logger]:: Inserted text in the Client_SearchText element on the ProposalCompose page.
+2021-07-18 16:14:11,085 ::INFO ::[Logger]:: Clicked the Button_Client_Search_Search element on the ProposalCompose page.
+2021-07-18 16:14:16,214 ::INFO ::[Logger]:: Clicked the Button_ClientSearchResult element on the ProposalCompose page.
+2021-07-18 16:14:27,958 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-18 16:14:30,653 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-18 16:15:02,768 ::INFO ::[Logger]:: Inserted text in the ProposalNameText element on the ProposalCompose page.
+2021-07-18 16:15:10,728 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-18 16:19:49,481 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-18 16:19:52,200 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-18 16:20:03,531 ::INFO ::[Logger]:: Inserted text in the ProposalNameText element on the ProposalCompose page.
+2021-07-18 16:20:09,260 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-18 16:20:18,135 ::DEBUG::[Logger]:: 8) eProposal Name cannot be blank.
+2021-07-18 16:20:28,543 ::INFO ::[Logger]:: Inserted text in the ProposalNameText element on the ProposalCompose page.
+2021-07-18 16:20:29,329 ::DEBUG::[Logger]:: 9) Entered 250 character in eProposal Name textbox. And Clicking on Next Button.
+2021-07-18 16:20:48,358 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-18 16:21:00,767 ::DEBUG::[Logger]:: 10) Landed on Second Page after entering 250 characters of Proposal Name
+2021-07-18 16:21:02,904 ::INFO ::[Logger]:: eProposal:: Script ::Passed
+2021-07-18 16:21:03,352 ::INFO ::[Logger]:: E.N.D

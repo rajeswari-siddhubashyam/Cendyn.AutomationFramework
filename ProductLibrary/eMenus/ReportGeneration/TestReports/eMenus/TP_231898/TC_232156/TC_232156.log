@@ -1,0 +1,22 @@
+2021-07-05 10:56:39,462 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-07-05 10:56:39,464 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-07-05 10:56:39,465 ::INFO ::[Logger]::  is used for Testing
+2021-07-05 10:56:39,782 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DEMACBACK%26redirect_uri%3Dhttps%253A%252F%252Fqacendynadmin.menusaccess.com%26response_mode%3Dform_post%26response_type%3Dcode%2520id_token%26scope%3Dopenid%2520roles%2520profile%2520write%2520offline_access%2520CendynAccessApi%26state%3DOpenIdConnect.AuthenticationProperties%253DS30MmjSEztxtvYboRSse_tYvByjEwF8csjDO81wV6Q22TjwwRDev03dDbAFuRpaXIiUmhOFTwQrMimkhv8btOHVHEQWBAZUm3mPfNiEmnWN6SzDx29zp8RSwPtYBmBgGZe2jLLfR9nFyCI9BYWY0sIdEAFZvztaP7gOBARmxzjhJqGlpaHBltfFWwS3wN7J8_00851GVZP3nwTYWAPZZZnkurak%26nonce%3D637610596026556373.MjAzMTNlNTYtYjI4MS00OWUxLTliNjEtOWY3YWU1ODQ3MzliNTYzMzNmOTQtZDA3Zi00M2I4LTkwZmQtNDI1YWY5N2Q4NTUz%26ui_locales%3Den-US
+2021-07-05 10:56:39,783 ::INFO ::[Logger]:: Execution started at:-Jul-05-2021 10-56-39-AM
+2021-07-05 10:56:39,783 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-05 10:56:39,784 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-07-05 10:56:39,785 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_232156         XXXXXXXXXXXXXXXX
+2021-07-05 10:56:39,786 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-05 10:56:40,105 ::INFO ::[Logger]:: Window Size is: {Width=1366, Height=768}
+2021-07-05 10:56:41,066 ::DEBUG::[Logger]:: 1) Landed on Admin Login Page
+2021-07-05 10:56:50,932 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Username element on the PropertyAdmin page.
+2021-07-05 10:56:57,150 ::INFO ::[Logger]:: Clicked the Click_NextButton element on the PropertyAdmin page.
+2021-07-05 10:57:02,967 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Password element on the PropertyAdmin page.
+2021-07-05 10:57:02,968 ::DEBUG::[Logger]:: 2) Entered Username =qacendynautomation@cendyn17.com and Password =Cendyn123$
+2021-07-05 10:57:12,815 ::INFO ::[Logger]:: Clicked the Click_LoginButton element on the PropertyAdmin page.
+2021-07-05 10:57:26,698 ::INFO ::[Logger]:: Clicked the Click_Dropdown element on the CendynAdmin page.
+2021-07-05 10:57:36,717 ::DEBUG::[Logger]:: 3) Dropdown item is displayed
+2021-07-05 10:57:46,447 ::INFO ::[Logger]:: Clicked the Click_LogOut element on the CendynAdmin page.
+2021-07-05 10:57:46,447 ::DEBUG::[Logger]:: 4) user log out successfully
+2021-07-05 10:57:51,023 ::INFO ::[Logger]:: eMenus:: Script ::Passed
+2021-07-05 10:57:52,952 ::INFO ::[Logger]:: E.N.D

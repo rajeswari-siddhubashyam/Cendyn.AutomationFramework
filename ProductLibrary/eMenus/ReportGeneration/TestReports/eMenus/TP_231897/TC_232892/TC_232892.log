@@ -1,0 +1,93 @@
+2021-07-05 12:21:26,719 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-07-05 12:21:26,720 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-07-05 12:21:26,722 ::INFO ::[Logger]::  is used for Testing
+2021-07-05 12:21:27,048 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DCAOAFRON%26response_mode%3Dform_post%26response_type%3Dcode%2520id_token%26scope%3Dopenid%2520roles%2520profile%2520write%2520offline_access%2520CendynAccessApi%26state%3DOpenIdConnect.AuthenticationProperties%253DZH3YdIM7QiUYFg_IIdxrUqxfkuXR3AnKF5Auv_L5AKDbw08iWYfeFGcBJcoPK4tdih7UURoTsikZ967NgMsXwthvk-N5rycT-zsmrOKT02sqg7HWAteX507CxUpg6TPvJass8lIn1WeQWJChwUU3Bw%26nonce%3D637610646895424840.N2ExNDMyMjktZWZjYS00MTgwLWFlMDctOGNmYTRjZTcwMTA3MWQ2NzhkNDUtOTQ4OC00NDcxLTk0ZjItNzc2OTM3NDljMDg0%26redirect_uri%3Dhttps%253A%252F%252Fqa.cendynaccess.com%26ui_locales%3Den-US
+2021-07-05 12:21:27,050 ::INFO ::[Logger]:: Execution started at:-Jul-05-2021 12-21-27-PM
+2021-07-05 12:21:27,053 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-05 12:21:27,054 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-07-05 12:21:27,055 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_232892         XXXXXXXXXXXXXXXX
+2021-07-05 12:21:27,056 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-05 12:21:27,379 ::INFO ::[Logger]:: Window Size is: {Width=1366, Height=768}
+2021-07-05 12:21:28,491 ::DEBUG::[Logger]:: 1) Landed on Admin Login Page
+2021-07-05 12:21:39,771 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Username element on the PropertyAdmin page.
+2021-07-05 12:21:46,016 ::INFO ::[Logger]:: Clicked the Click_NextButton element on the PropertyAdmin page.
+2021-07-05 12:21:51,873 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Password element on the PropertyAdmin page.
+2021-07-05 12:21:51,873 ::DEBUG::[Logger]:: 2) Entered Username =qacendynautomation@cendyn17.com and Password =Cendyn123$
+2021-07-05 12:22:02,893 ::INFO ::[Logger]:: Clicked the Click_LoginButton element on the PropertyAdmin page.
+2021-07-05 12:22:03,926 ::DEBUG::[Logger]:: 3) Landed on Select Product Page 
+2021-07-05 12:22:17,688 ::INFO ::[Logger]:: Clicked the Click_eMenus element on the PropertyAdmin page.
+2021-07-05 12:22:17,689 ::DEBUG::[Logger]:: 4) eMenus Product got Selected 
+2021-07-05 12:22:29,396 ::INFO ::[Logger]:: Clicked the Click_Select_PropertyDropdown element on the PropertyAdmin page.
+2021-07-05 12:22:29,397 ::DEBUG::[Logger]:: 5) Clicked on Select Property Drop-down
+2021-07-05 12:22:39,681 ::INFO ::[Logger]:: Inserted text in the Enter_Property_TextBox element on the PropertyAdmin page.
+2021-07-05 12:22:39,683 ::DEBUG::[Logger]:: 6) Entered Property
+2021-07-05 12:22:53,033 ::INFO ::[Logger]:: Selected the Hotel Origami value from the Select_Property_Dropdown drop down.
+2021-07-05 12:22:53,034 ::DEBUG::[Logger]:: 7) Hotel Origami Property got Selected
+2021-07-05 12:23:04,169 ::INFO ::[Logger]:: Clicked the Click_MyMenu_Settings element on the PropertyAdmin page.
+2021-07-05 12:23:10,464 ::INFO ::[Logger]:: Clicked the Click_Settings_DynamicPricing element on the PropertyAdmin page.
+2021-07-05 12:23:14,568 ::INFO ::[Logger]:: Dynamic Pricing Name Found on the page
+2021-07-05 12:23:19,413 ::INFO ::[Logger]:: Start Date Found on the page
+2021-07-05 12:23:24,291 ::INFO ::[Logger]:: End Date Found on the page
+2021-07-05 12:23:29,358 ::INFO ::[Logger]:: Actions Found on the page
+2021-07-05 12:23:34,712 ::INFO ::[Logger]:: Add New Found on the page
+2021-07-05 12:23:34,713 ::DEBUG::[Logger]:: 8) Dynamic pricing grid displayed on the page
+2021-07-05 12:23:55,073 ::ERROR::[Logger]:: The //table[@id='dynamicPricingTable']//tr[7]/td[1] element was not found on the page.
+OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id='dynamicPricingTable']//tr[7]/td[1]"}
+  (Session info: chrome=89.0.4389.40)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at BaseUtility.PageObject.PageAction.Find_ElementXPath(String repoName) in E:\2020\April\eMenus_Atomation\BaseUtility\PageObject\PageAction.cs:line 32
+2021-07-05 12:24:02,279 ::INFO ::[Logger]:: Clicked the Click_DynamicPricing_AddNewButton element on the PropertyAdmin page.
+2021-07-05 12:24:02,280 ::DEBUG::[Logger]:: 9) Add Dynamic Price Overlay got displayed
+2021-07-05 12:24:11,354 ::INFO ::[Logger]:: Inserted text in the AddDynamicPricing_DynamicPricingName element on the PropertyAdmin page.
+2021-07-05 12:24:17,681 ::INFO ::[Logger]:: Clicked the AddDynamicPricing_StartDate element on the PropertyAdmin page.
+2021-07-05 12:24:18,864 ::INFO ::[Logger]:: Inserted text in the AddDynamicPricing_StartDate element on the PropertyAdmin page.
+2021-07-05 12:24:25,155 ::INFO ::[Logger]:: Clicked the AddDynamicPricing_EndDate element on the PropertyAdmin page.
+2021-07-05 12:24:26,339 ::INFO ::[Logger]:: Inserted text in the AddDynamicPricing_EndDate element on the PropertyAdmin page.
+2021-07-05 12:24:32,556 ::INFO ::[Logger]:: Clicked the AddDynamicPricing_DynamicPricingName element on the PropertyAdmin page.
+2021-07-05 12:24:32,557 ::DEBUG::[Logger]:: 10) Entered all Details
+2021-07-05 12:24:41,761 ::INFO ::[Logger]:: Clicked the AddDynamicPricing_SaveChangesButton element on the PropertyAdmin page.
+2021-07-05 12:24:41,762 ::DEBUG::[Logger]:: 11) Add Dynamic Price Confirmation Overlay got Displayed
+2021-07-05 12:24:50,654 ::INFO ::[Logger]:: Clicked the Click_AddDynamicPricing_OkButton element on the PropertyAdmin page.
+2021-07-05 12:24:54,750 ::INFO ::[Logger]:: DynamicPriceName_1243291560 Found on the page
+2021-07-05 12:24:54,751 ::DEBUG::[Logger]:: 12) Dynamic Price with data range is added
+2021-07-05 12:25:03,644 ::INFO ::[Logger]:: Clicked the DynamicPricing_Edit_button element on the PropertyAdmin page.
+2021-07-05 12:25:03,645 ::DEBUG::[Logger]:: 13) Edit Dynamic Price Overlay got displayed
+2021-07-05 12:25:12,898 ::INFO ::[Logger]:: Clicked the Edit_DynamicPrice_StartDate element on the PropertyAdmin page.
+2021-07-05 12:25:14,086 ::INFO ::[Logger]:: Inserted text in the Edit_DynamicPrice_StartDate element on the PropertyAdmin page.
+2021-07-05 12:25:20,428 ::INFO ::[Logger]:: Clicked the Edit_DynamicPrice_EndDate element on the PropertyAdmin page.
+2021-07-05 12:25:21,735 ::INFO ::[Logger]:: Inserted text in the Edit_DynamicPrice_EndDate element on the PropertyAdmin page.
+2021-07-05 12:25:27,962 ::INFO ::[Logger]:: Clicked the EditDynamicPricing_DynamicPricingName element on the PropertyAdmin page.
+2021-07-05 12:25:27,963 ::DEBUG::[Logger]:: 14) Start Date and End dates are Updated
+2021-07-05 12:25:37,134 ::INFO ::[Logger]:: Clicked the EditDynamicPricing_SaveChangesButton element on the PropertyAdmin page.
+2021-07-05 12:25:37,135 ::DEBUG::[Logger]:: 15) Edit Dynamic Price Confirmation Overlay got Displayed
+2021-07-05 12:25:46,032 ::INFO ::[Logger]:: Clicked the Click_AddDynamicPricing_OkButton element on the PropertyAdmin page.
+2021-07-05 12:25:50,130 ::INFO ::[Logger]:: DynamicPriceName_1243291560 Found on the page
+2021-07-05 12:25:50,132 ::DEBUG::[Logger]:: 16) Dynamic Price with data range is Edited Successfully
+2021-07-05 12:26:00,144 ::INFO ::[Logger]:: Clicked the Click_MyMenu_Settings element on the PropertyAdmin page.
+2021-07-05 12:26:01,421 ::DEBUG::[Logger]:: 17) Navigate to Advance settings page
+2021-07-05 12:26:10,493 ::INFO ::[Logger]:: Clicked the Click_Settings_DynamicPricing element on the PropertyAdmin page.
+2021-07-05 12:26:12,193 ::DEBUG::[Logger]:: 18) Navigate to Advance settings page
+2021-07-05 12:26:23,383 ::INFO ::[Logger]:: Clicked the DynamicPricing_Delete_button element on the PropertyAdmin page.
+2021-07-05 12:26:23,384 ::DEBUG::[Logger]:: 19) Delete Dynamic Price Overlay got Displayed
+2021-07-05 12:26:32,275 ::INFO ::[Logger]:: Clicked the Click_Delete_Dynamic_Price_Confirmation element on the PropertyAdmin page.
+2021-07-05 12:26:32,276 ::DEBUG::[Logger]:: 20) Dynamic Price got deleted Confirmation Overlay
+2021-07-05 12:26:41,203 ::INFO ::[Logger]:: Clicked the Click_Delete_Dynamic_Price_Confirmation_OK element on the PropertyAdmin page.
+2021-07-05 12:26:41,803 ::DEBUG::[Logger]:: 21) DynamicPriceName_1243291560 Dynamic Price got deleted successfully
+2021-07-05 12:26:46,081 ::DEBUG::[Logger]:: TestPlan :- TP_231897 Testcase :- TC_232892
+2021-07-05 12:26:46,083 ::DEBUG::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~Test Data Used~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-05 12:26:46,084 ::DEBUG::[Logger]::  Value for : TC_232892_User-name is : qacendynautomation@cendyn17.com
+2021-07-05 12:26:46,085 ::DEBUG::[Logger]::  Value for : TC_232892_Password is : Cendyn123$
+2021-07-05 12:26:46,086 ::DEBUG::[Logger]::  Value for : TC_232892_Property Name is : Hotel Origami
+2021-07-05 12:26:46,087 ::DEBUG::[Logger]::  Value for : TC_232892_Dynamic Price Name is : DynamicPriceName_1243291560
+2021-07-05 12:26:46,087 ::DEBUG::[Logger]::  Value for : TC_232892Dynamic Price Start Date is : 07/05/2021
+2021-07-05 12:26:46,088 ::DEBUG::[Logger]::  Value for : TC_232892Dynamic Price End Date is : 07/08/2021
+2021-07-05 12:26:46,089 ::DEBUG::[Logger]::  Value for : TC_232892Dynamic Price Edited Start Date is : 07/08/2021
+2021-07-05 12:26:46,089 ::DEBUG::[Logger]::  Value for : TC_232892Dynamic Price Edited End Date is : 07/11/2021
+2021-07-05 12:26:47,091 ::INFO ::[Logger]:: eMenus:: Script ::Passed
+2021-07-05 12:26:48,782 ::INFO ::[Logger]:: E.N.D

@@ -1,0 +1,119 @@
+2021-07-05 12:10:34,765 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-07-05 12:10:34,767 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-07-05 12:10:34,768 ::INFO ::[Logger]::  is used for Testing
+2021-07-05 12:10:35,094 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DCAOAFRON%26response_mode%3Dform_post%26response_type%3Dcode%2520id_token%26scope%3Dopenid%2520roles%2520profile%2520write%2520offline_access%2520CendynAccessApi%26state%3DOpenIdConnect.AuthenticationProperties%253D-ZMSb80T4QkqSUk6Yc0GrHTKo9rQGT1XoUNUDGsNuUDR6JnX1hs3lv_XdFHqfXxCSV-0A6oGe9ybTPisOhmSCWRak4lDrkgLNzua9UG8QbhItmevs0rdIUuHswoBon7ZWrqK2yIZ-1QcJncSsaYgBQ%26nonce%3D637610640377193194.MzcyOGMwYWYtZGUwOC00MWQxLWE5NTktMzg3YzZkYWNiMTE5MDg4NmMzYzEtZmE3Yy00NTU2LWFhZTEtOTcwYjU4ZWRlY2Iz%26redirect_uri%3Dhttps%253A%252F%252Fqa.cendynaccess.com%26ui_locales%3Den-US
+2021-07-05 12:10:35,096 ::INFO ::[Logger]:: Execution started at:-Jul-05-2021 12-10-35-PM
+2021-07-05 12:10:35,097 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-05 12:10:35,098 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-07-05 12:10:35,100 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_232890         XXXXXXXXXXXXXXXX
+2021-07-05 12:10:35,102 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-05 12:10:35,555 ::INFO ::[Logger]:: Window Size is: {Width=1366, Height=768}
+2021-07-05 12:10:36,576 ::DEBUG::[Logger]:: 1) Landed on Admin Login Page
+2021-07-05 12:10:48,843 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Username element on the PropertyAdmin page.
+2021-07-05 12:10:55,192 ::INFO ::[Logger]:: Clicked the Click_NextButton element on the PropertyAdmin page.
+2021-07-05 12:11:01,071 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Password element on the PropertyAdmin page.
+2021-07-05 12:11:01,073 ::DEBUG::[Logger]:: 2) Entered Username =qacendynautomation@cendyn17.com and Password =Cendyn123$
+2021-07-05 12:11:13,702 ::INFO ::[Logger]:: Clicked the Click_LoginButton element on the PropertyAdmin page.
+2021-07-05 12:11:14,707 ::DEBUG::[Logger]:: 3) Landed on Select Product Page 
+2021-07-05 12:11:28,398 ::INFO ::[Logger]:: Clicked the Click_eMenus element on the PropertyAdmin page.
+2021-07-05 12:11:28,399 ::DEBUG::[Logger]:: 4) eMenus Product got Selected 
+2021-07-05 12:11:40,616 ::INFO ::[Logger]:: Clicked the Click_Select_PropertyDropdown element on the PropertyAdmin page.
+2021-07-05 12:11:40,617 ::DEBUG::[Logger]:: 5) Clicked on Select Property Drop-down
+2021-07-05 12:11:51,024 ::INFO ::[Logger]:: Inserted text in the Enter_Property_TextBox element on the PropertyAdmin page.
+2021-07-05 12:11:51,025 ::DEBUG::[Logger]:: 6) Entered Property
+2021-07-05 12:12:06,634 ::INFO ::[Logger]:: Selected the Hotel Origami value from the Select_Property_Dropdown drop down.
+2021-07-05 12:12:06,636 ::DEBUG::[Logger]:: 7) Hotel Origami Property got Selected
+2021-07-05 12:12:16,989 ::INFO ::[Logger]:: Clicked the Click_MyMenu_Settings element on the PropertyAdmin page.
+2021-07-05 12:12:18,297 ::DEBUG::[Logger]:: 8) Navigate to Advance settings page
+2021-07-05 12:12:27,181 ::INFO ::[Logger]:: Clicked the Click_Social_Media_Tab element on the PropertyAdmin page.
+2021-07-05 12:12:28,522 ::DEBUG::[Logger]:: 9) Navigate to Social Media Page
+2021-07-05 12:12:37,530 ::INFO ::[Logger]:: Clicked the Click_Add_New_Social_Media element on the PropertyAdmin page.
+2021-07-05 12:12:37,543 ::DEBUG::[Logger]:: 10) Add New Social Media Pop-up got Displayed
+2021-07-05 12:12:46,690 ::INFO ::[Logger]:: Clicked the Click_Social_Media_Save_Changes element on the PropertyAdmin page.
+2021-07-05 12:12:52,010 ::INFO ::[Logger]:: Social media type is required. Found on the page
+2021-07-05 12:12:52,988 ::DEBUG::[Logger]:: 11) Social media type is required. is Equal to Social media type is required.
+2021-07-05 12:13:03,090 ::INFO ::[Logger]:: Selected the Yelp value from the Select_Social_Media_Dropdown drop down.
+2021-07-05 12:13:03,091 ::DEBUG::[Logger]:: 12) Social Media is Selected from drop-down
+2021-07-05 12:13:11,986 ::INFO ::[Logger]:: Clicked the Click_Social_Media_Save_Changes element on the PropertyAdmin page.
+2021-07-05 12:13:17,123 ::INFO ::[Logger]:: Please enter URL. Found on the page
+2021-07-05 12:13:17,124 ::DEBUG::[Logger]:: 13) Please enter URL. is Equal to Please enter URL.
+2021-07-05 12:13:25,696 ::INFO ::[Logger]:: Inserted text in the Enter_Social_Media_URL element on the PropertyAdmin page.
+2021-07-05 12:13:31,993 ::INFO ::[Logger]:: Clicked the Click_Social_Media_Save_Changes element on the PropertyAdmin page.
+2021-07-05 12:13:37,100 ::INFO ::[Logger]:: Please enter valid URL that starts with https. Found on the page
+2021-07-05 12:13:37,102 ::DEBUG::[Logger]:: 14) Please enter valid URL that starts with https. is Equal to Please enter valid URL that starts with https.
+2021-07-05 12:13:46,133 ::INFO ::[Logger]:: Clicked the Click_Social_Media_Close element on the PropertyAdmin page.
+2021-07-05 12:13:46,135 ::DEBUG::[Logger]:: 15) Landed back to Add Social Media Page
+2021-07-05 12:13:54,995 ::INFO ::[Logger]:: Clicked the Click_Add_New_Social_Media element on the PropertyAdmin page.
+2021-07-05 12:13:54,997 ::DEBUG::[Logger]:: 16) Add New Social Media Pop-up got Displayed
+2021-07-05 12:14:04,802 ::INFO ::[Logger]:: Selected the Yelp value from the Select_Social_Media_Dropdown drop down.
+2021-07-05 12:14:11,582 ::INFO ::[Logger]:: Inserted text in the Enter_Social_Media_URL element on the PropertyAdmin page.
+2021-07-05 12:14:11,583 ::DEBUG::[Logger]:: 17) All the details are entered correctly
+2021-07-05 12:14:20,746 ::INFO ::[Logger]:: Clicked the Click_Social_Media_Save_Changes element on the PropertyAdmin page.
+2021-07-05 12:14:22,123 ::DEBUG::[Logger]:: 18) Social Media Add confirmation overlay is displaying
+2021-07-05 12:14:31,262 ::INFO ::[Logger]:: Clicked the Click_OK_Button element on the PropertyAdmin page.
+2021-07-05 12:14:35,532 ::INFO ::[Logger]:: Yelp Found on the page
+2021-07-05 12:14:36,636 ::DEBUG::[Logger]:: 19) Social Media is added successfully on the page
+2021-07-05 12:14:47,291 ::INFO ::[Logger]:: Clicked the Click_MyMenus element on the PropertyAdmin page.
+2021-07-05 12:14:47,292 ::DEBUG::[Logger]:: 20) Navigated to My Menu Page
+2021-07-05 12:14:57,261 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-05 12:15:01,393 ::DEBUG::[Logger]:: 21) Added Social Media is displaying on the Admin
+2021-07-05 12:15:11,428 ::INFO ::[Logger]:: Clicked the Click_Social_Media element on the PropertyAdmin page.
+2021-07-05 12:15:11,450 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-05 12:15:19,405 ::DEBUG::[Logger]:: 22) Navigated to = Yelp Social Media
+2021-07-05 12:15:47,692 ::INFO ::[Logger]:: Clicked the Click_Published_View element on the PropertyAdmin page.
+2021-07-05 12:15:53,623 ::DEBUG::[Logger]:: 23) Navigate to Front-end
+2021-07-05 12:16:07,719 ::DEBUG::[Logger]:: 24) Added Social Media is displaying on the Front-end
+2021-07-05 12:16:19,759 ::INFO ::[Logger]:: Clicked the Click_Social_Media element on the PropertyAdmin page.
+2021-07-05 12:16:26,203 ::DEBUG::[Logger]:: 25) Navigated to = Yelp Social Media
+2021-07-05 12:16:53,243 ::INFO ::[Logger]:: Clicked the Click_MyMenu_Settings element on the PropertyAdmin page.
+2021-07-05 12:16:54,531 ::DEBUG::[Logger]:: 26) Navigate to Advance settings page
+2021-07-05 12:17:03,832 ::INFO ::[Logger]:: Clicked the Click_Social_Media_Tab element on the PropertyAdmin page.
+2021-07-05 12:17:05,116 ::DEBUG::[Logger]:: 27) Navigate to Social Media Page
+2021-07-05 12:17:13,997 ::INFO ::[Logger]:: Clicked the Edit_Social_Media element on the PropertyAdmin page.
+2021-07-05 12:17:13,999 ::DEBUG::[Logger]:: 28) Edit Social Media Pop-up got Displayed
+2021-07-05 12:17:26,264 ::INFO ::[Logger]:: Selected the Yelp value from the Edit_Social_Media_Dropdown drop down.
+2021-07-05 12:17:32,177 ::INFO ::[Logger]:: Inserted text in the Edit_Social_Media_URL element on the PropertyAdmin page.
+2021-07-05 12:17:32,178 ::DEBUG::[Logger]:: 29) All the details are entered correctly
+2021-07-05 12:17:41,101 ::INFO ::[Logger]:: Clicked the Click_Edit_Social_Media_Save_Changes element on the PropertyAdmin page.
+2021-07-05 12:17:42,513 ::DEBUG::[Logger]:: 30) Social Media Add confirmation overlay is displaying
+2021-07-05 12:17:51,420 ::INFO ::[Logger]:: Clicked the Click_OK_Button element on the PropertyAdmin page.
+2021-07-05 12:17:55,537 ::INFO ::[Logger]:: Yelp Found on the page
+2021-07-05 12:17:56,186 ::DEBUG::[Logger]:: 31) Social Media is Updated successfully on the page
+2021-07-05 12:18:07,297 ::INFO ::[Logger]:: Clicked the Click_MyMenus element on the PropertyAdmin page.
+2021-07-05 12:18:07,298 ::DEBUG::[Logger]:: 32) Navigated to My Menu Page
+2021-07-05 12:18:16,651 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-05 12:18:20,643 ::DEBUG::[Logger]:: 33) Added Social Media is displaying on the Admin
+2021-07-05 12:18:30,350 ::INFO ::[Logger]:: Clicked the Click_Social_Media element on the PropertyAdmin page.
+2021-07-05 12:18:30,353 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-05 12:18:38,242 ::DEBUG::[Logger]:: 34) Navigated to = Yelp Social Media
+2021-07-05 12:18:58,628 ::DEBUG::[Logger]:: 35) Navigate to Front-end
+2021-07-05 12:19:06,368 ::DEBUG::[Logger]:: 36) Added Social Media is displaying on the Front-end
+2021-07-05 12:19:16,897 ::INFO ::[Logger]:: Clicked the Click_Social_Media element on the PropertyAdmin page.
+2021-07-05 12:19:23,130 ::DEBUG::[Logger]:: 37) Navigated to = Yelp Social Media
+2021-07-05 12:19:44,606 ::INFO ::[Logger]:: Clicked the Click_MyMenu_Settings element on the PropertyAdmin page.
+2021-07-05 12:19:45,893 ::DEBUG::[Logger]:: 38) Navigate to Advance settings page
+2021-07-05 12:19:54,779 ::INFO ::[Logger]:: Clicked the Click_Social_Media_Tab element on the PropertyAdmin page.
+2021-07-05 12:19:56,059 ::DEBUG::[Logger]:: 39) Navigate to Social Media Page
+2021-07-05 12:20:04,935 ::INFO ::[Logger]:: Clicked the Delete_Social_Media element on the PropertyAdmin page.
+2021-07-05 12:20:04,937 ::DEBUG::[Logger]:: 40) Delete Social Media Overlay is got Displayed
+2021-07-05 12:20:13,848 ::INFO ::[Logger]:: Clicked the Click_Yes_Button element on the PropertyAdmin page.
+2021-07-05 12:20:13,876 ::DEBUG::[Logger]:: 41) Delete Social Media Confirmation Overlay is got Displayed
+2021-07-05 12:20:22,765 ::INFO ::[Logger]:: Clicked the Click_OK_Button element on the PropertyAdmin page.
+2021-07-05 12:20:23,374 ::DEBUG::[Logger]:: 42) Yelp Social Media got deleted successfully
+2021-07-05 12:20:34,256 ::INFO ::[Logger]:: Clicked the Click_MyMenus element on the PropertyAdmin page.
+2021-07-05 12:20:40,880 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-05 12:20:44,675 ::DEBUG::[Logger]:: 43) Yelp Social Media got deleted successfully
+2021-07-05 12:20:48,100 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-05 12:20:57,346 ::DEBUG::[Logger]:: 44) Yelp Social Media got deleted successfully
+2021-07-05 12:21:05,672 ::DEBUG::[Logger]:: TestPlan :- TP_231897 Testcase :- TC_232890
+2021-07-05 12:21:05,674 ::DEBUG::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~Test Data Used~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-05 12:21:05,675 ::DEBUG::[Logger]::  Value for : TC_232890_Property Admin User-name is : qacendynautomation@cendyn17.com
+2021-07-05 12:21:05,676 ::DEBUG::[Logger]::  Value for : TC_232890_Property Admin Password is : Cendyn123$
+2021-07-05 12:21:05,677 ::DEBUG::[Logger]::  Value for : TC_232890_Property Name is : Hotel Origami
+2021-07-05 12:21:05,678 ::DEBUG::[Logger]::  Value for : TC_232890_Social Media Type is : Yelp
+2021-07-05 12:21:05,679 ::DEBUG::[Logger]::  Value for : TC_232890_Social Media URL is : https://www.yelp.com/
+2021-07-05 12:21:05,682 ::DEBUG::[Logger]::  Value for : TC_232890_Social Media Edited URL is : https://www.yelp.com/login
+2021-07-05 12:21:05,683 ::DEBUG::[Logger]::  Value for : TC_232890_Social Media Type Validation is : Social media type is required.
+2021-07-05 12:21:05,684 ::DEBUG::[Logger]::  Value for : TC_232890_Social Media URL Validation is : Please enter URL.
+2021-07-05 12:21:06,686 ::INFO ::[Logger]:: eMenus:: Script ::Passed
+2021-07-05 12:21:08,636 ::INFO ::[Logger]:: E.N.D

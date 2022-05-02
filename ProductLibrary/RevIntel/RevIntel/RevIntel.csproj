@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF002B3D-1CDE-44E8-B039-791E1569F0B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RevIntel</RootNamespace>
+    <AssemblyName>RevIntel</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppModule\Admin\Admin.cs" />
+    <Compile Include="AppModule\MainAdminApp.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_251469_SmokeTest.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_252523_RainMaker Menu.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_252636_Portal and Dashboard.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_252734_ReportScheduler.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_252820_Channel.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_252834_Forecast and budget.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_252840_Geo_Source.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_252846_Room_Type_Menu.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_252851_Time_Period.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_252858_Room Rate Menu.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_252864_Administration_Menu.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_253357_Custom.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_274130_Zendesk.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_252578_Booking Trends.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_252700_Business_source.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_252770_MarketMenu.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_253348_Portfolio.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_266462_ChangePassword.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_278124_Post Deployment Plan.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_290735_Compose.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_292744_Room Type analysis_YOY comparison.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_292748_Pace_and_Forecast_YOY_Comparision.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_292758_Market_YOY Comparision.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_274136_ExchangeRate.cs" />
+    <Compile Include="AppModule\UI\BusinessSource.cs" />
+    <Compile Include="AppModule\UI\Email.cs" />
+    <Compile Include="AppModule\UI\ExchangeRate.cs" />
+    <Compile Include="AppModule\UI\Login.cs" />
+    <Compile Include="AppModule\UI\Navigation.cs" />
+    <Compile Include="AppModule\UI\ReportParameter.cs" />
+    <Compile Include="AppModule\UI\ReportScheduler.cs" />
+    <Compile Include="Entity\AccountInfo.cs" />
+    <Compile Include="Entity\AdminVariable.cs" />
+    <Compile Include="Entity\Users.cs" />
+    <Compile Include="PageObject\Admin\PageObject_Admin.cs" />
+    <Compile Include="PageObject\UI\PageObject_BusinessSource.cs" />
+    <Compile Include="PageObject\UI\PageObject_Navigation.cs" />
+    <Compile Include="PageObject\UI\PageObject_Login.cs" />
+    <Compile Include="PageObject\UI\PageObject_ReportParameter.cs" />
+    <Compile Include="PageObject\UI\PageObject_ExchangeRate.cs" />
+    <Compile Include="PageObject\UI\PageObject_ReportScheduler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_274136_ExchangeRate.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_252523_Rainmaker_Menu.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_278124_Post_Deployment.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_252578_Booking_Trends.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_252636_Portal and Dashboard.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_252700_Business_source.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_251469_SmokePlan.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_252734_ReportScheduler.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_252820_Channel.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_252834_Forecast_and_Budget_menu.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_252840_Geo_Source.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_252851_Time_Period.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_252858_Room_Rate_Menu.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_252864_Administration_Menu.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_253357_Custom.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_274130_Zendesk.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_252770_Market_Menu.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_253348_Portfolio.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_266462_ChangePassword.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_252846_Room_Type_Menu.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_290735_Compose.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_292744_RoomTypeAnalysis_YOY_comparison.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_292758_Market_YOY_Comparision.cs" />
+    <Compile Include="TestPlan\RevIntel\Utility.cs" />
+    <Compile Include="TestPlan\RevIntel\RevIntel_TP_292748_Pace_and_Forecast_YOY_Comparision.cs" />
+    <Compile Include="Utility\Constants.cs" />
+    <Compile Include="Utility\GlobalParameter.cs" />
+    <Compile Include="Utility\ObjectRepository.cs" />
+    <Compile Include="Utility\Queries.cs" />
+    <Compile Include="Utility\Setup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ReportGeneration\TestReports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ObjectRepository\OR.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EWSoftware.VSSpellChecker">
+      <Version>2017.1.8</Version>
+    </PackageReference>
+    <PackageReference Include="ExtentReports">
+      <Version>3.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="HtmlAgilityPack">
+      <Version>1.4.9.5</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.Razor">
+      <Version>3.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="MongoDB.Bson">
+      <Version>2.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="MongoDB.Driver">
+      <Version>2.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="MongoDB.Driver.Core">
+      <Version>2.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>9.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit">
+      <Version>3.12.0</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit3TestAdapter">
+      <Version>3.16.1</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="RazorEngine">
+      <Version>3.9.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.Firefox.WebDriver">
+      <Version>0.26.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.Support">
+      <Version>3.141.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.WebDriver">
+      <Version>3.141.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver">
+      <Version>96.0.4664.4500</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <Version>4.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BaseUtility\BaseUtility.csproj">
+      <Project>{fe2a5f2f-fa49-4e1c-a89b-430dbb8822d3}</Project>
+      <Name>BaseUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Common.csproj">
+      <Project>{f7f5a9bb-6b92-45c0-83c1-4a10da74b654}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\InfoMessageLogger\InfoMessageLogger.csproj">
+      <Project>{57e9210a-687f-4da5-99a2-052644163f1e}</Project>
+      <Name>InfoMessageLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TestData\TestData.csproj">
+      <Project>{0280eb17-9eb8-4438-ac2b-28c04d1d1091}</Project>
+      <Name>TestData</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
