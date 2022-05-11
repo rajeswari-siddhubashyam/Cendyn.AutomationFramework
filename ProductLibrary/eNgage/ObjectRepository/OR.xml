@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <UI>
+    <Login>
+      <Parameter key="Login_Email">username</Parameter>
+      <Parameter key="Login_Password">password</Parameter>
+      <Parameter key="Login_Submit">loginSubmit</Parameter>
+      <!--<Parameter key="Login_ForgotPassword">//a[contains(.,'Forgot Password')]</Parameter>
+      <Parameter key="Login_Text_ForgotPassword_Email">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="Login_Button_ForgotPassword_Submit"></Parameter>-->
+      <Parameter key ="Login_LandingPage">.nav .active</Parameter>
+      <Parameter key ="Login_RegisterAccount">registerAccount</Parameter>
+    </Login>
+    <SignUp>
+      <Parameter key ="SignUp_FirstName">firstName</Parameter>
+      <Parameter key ="SignUp_LastName">lastName</Parameter>
+      <Parameter key ="SignUp_Email">registrationEmail</Parameter>
+      <Parameter key ="SignUp_Password">registerPassword</Parameter>
+      <Parameter key ="SignUp_ConfirmPassword">confirmRegisterPassword</Parameter>
+      <Parameter key ="SignUp_PasswordResetQuestion">passwordQuestion</Parameter>
+      <Parameter key ="SignUp_PasswordResetAnswer">passwordAnswer</Parameter>
+      <Parameter key ="SignUp_Register">registerSubmit</Parameter>
+    </SignUp>
+    <Home>
+      <Parameter key="Home_Main">Home</Parameter>
+      <Parameter key="Dashboard_Tiles">dashboard-stat2</Parameter>
+      <Parameter key="Home_Date">homeDate</Parameter>
+      <Parameter key="Home_Calendar_Table">table-condensed</Parameter>
+      <Parameter key="Home_Calendar_Prev_Month">prev</Parameter>
+      <Parameter key="Home_Hamburger_button">hamburger-box</Parameter>
+      <Parameter key="Home_HeaderContainer">headerContainer</Parameter>
+      <Parameter key="Home_SelectedHotel">button</Parameter>
+      <Parameter key="Home_Hotels_List">.dropdown-menu.inner li</Parameter>
+      <Parameter key="Home_Hotels_Active_List">.dropdown-menu.inner li.active</Parameter>
+      <Parameter key="Home_DashboardTile_Res_count">.number h3</Parameter>
+      <Parameter key="Home_Search_hotel">.bs-searchbox input[type='text']</Parameter>
+      <Parameter key="Home_LastUpdated">//span[@data-bind='text: LastUpdated']</Parameter>
+      <Parameter key="Home_Refresh">//button[text()='Refresh']</Parameter>
+      <Parameter key="Home_Departures">//*[@class='dashboard-stat2']/descendant::span[text()='Departures']</Parameter>
+      <Parameter key="Home_DashboardTile_ProgressPercentage">.status-number span</Parameter>
+      <Parameter key="Home_DashboardTile_ProgressBar_Width">.progress-bar</Parameter>
+      <Parameter key="Home_DashboardTile_Text">.number .text-primary</Parameter>
+      <Parameter key="Home_DashboardTile_Icon">.icon i</Parameter>
+    </Home>
+    <Search>
+      <Parameter key="Search_page">Search</Parameter>
+      <Parameter key="Search_Div">SearchTab</Parameter>
+      <Parameter key="Search_Results">resultsTable</Parameter>
+      <Parameter key="Search_Select">field4</Parameter>
+      <Parameter key="Search_Input">field1</Parameter>
+      <Parameter key="Search_submit">//input[@type='submit']</Parameter>
+      <Parameter key="Search_Type_button">#SearchTab .btn-group .btn-secondary</Parameter>
+      <Parameter key="Search_Type_button_values">ButtonSearchType</Parameter>
+    </Search>
+    <Prompts>
+      <Parameter key="Prompts_page">Prompts</Parameter>
+      <Parameter key="Prompts_Container">promptContainer</Parameter>
+      <Parameter key="Prompts_Data">portlet-title</Parameter>
+      <Parameter key="Prompts_Div">.portlet.light</Parameter>
+      <Parameter key="Prompts_Div2">.portlet-title:not(.promptHidden)</Parameter>
+      <Parameter key="Prompts_Text">.caption-subject</Parameter>
+      <Parameter key="Prompts_Responses">impression</Parameter>
+      <Parameter key="Prompts_inputText">//input[contains(@id,'Response')]</Parameter>
+      <Parameter key="Prompts_submit">//input[contains(@id,'Submit')]</Parameter>
+      <Parameter key="Prompts_loader">//div[contains(text(),'Loading Prompts...')]/parent::*</Parameter>
+    </Prompts>
+    <Summary>
+      <Parameter key="Summary_page">Summary</Parameter>
+    </Summary>
+    <Profile>
+      <Parameter key="Profile_page">Profile</Parameter>
+      <Parameter key="Profile_Frame">profileFrame</Parameter>
+    </Profile>
+    <History>
+      <Parameter key="History_page">History</Parameter>
+      <Paremeter key="History_Container">historyTab</Paremeter>
+      <Paremeter key="History_Results_Table">historyTable</Paremeter>
+    </History>
+    <Admin>
+      <Parameter key="Admin_page">Admin</Parameter>
+      <Parameter key="Admin_Container">container</Parameter>
+      <Parameter key="Admin_Tiles">portlet-title</Parameter>
+    </Admin>
+    <Reporting>
+      <Parameter key="Reporting_page">Reporting</Parameter>
+      <Parameter key="Reporting_Container">container</Parameter>
+      <Parameter key="Reporting_Results_Table">resultsTable_wrapper</Parameter>
+    </Reporting>
+    <Preferences>
+      <Parameter key="Preferences_page">Preferences</Parameter>
+      <Parameter key="Preferences_div">5a</Parameter>
+      <Parameter key="Preferences_SelectElements">form-control</Parameter>
+      <Parameter key="Preferences_checkbox">//input[@type='checkbox']</Parameter>
+      <Parameter key="Preferences_save">//input[@value='Save']</Parameter>
+      <Parameter key="Preferences_SavedText">SavedText</Parameter>
+    </Preferences>
+  </UI>
+</ObjectRepository>

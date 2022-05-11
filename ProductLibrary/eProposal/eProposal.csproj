@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{291603A4-57E5-48B1-B206-F1348481EA58}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eProposal</RootNamespace>
+    <AssemblyName>eProposal</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppModule\Admin\AdminClients.cs" />
+    <Compile Include="AppModule\Admin\AdminClients_Search.cs" />
+    <Compile Include="AppModule\Admin\AdminECard.cs" />
+    <Compile Include="AppModule\Admin\AdminEProposal.cs" />
+    <Compile Include="AppModule\Admin\AdminEProposal_SetupModuleSettings.cs" />
+    <Compile Include="AppModule\Admin\AdminLogin.cs" />
+    <Compile Include="AppModule\Admin\AdminNavigation.cs" />
+    <Compile Include="AppModule\Admin\AdminProperties.cs" />
+    <Compile Include="AppModule\Admin\AdminProperties_AddNewLanguage.cs" />
+    <Compile Include="AppModule\Admin\AdminProperties_UpdateProperty_Actions.cs" />
+    <Compile Include="AppModule\Admin\AdminProperties_UpdateProperty_Features.cs" />
+    <Compile Include="AppModule\Admin\AdminProperties_UpdateProperty_RoomBlock.cs" />
+    <Compile Include="AppModule\Admin\AdminUsers.cs" />
+    <Compile Include="AppModule\Admin\CleanUp.cs" />
+    <Compile Include="AppModule\Admin\PreReqs.cs" />
+    <Compile Include="AppModule\MainAdminApp.cs" />
+    <Compile Include="AppModule\MainAdminApp\Features\TP_112907_HiltonRebranding.cs" />
+    <Compile Include="AppModule\MainAdminApp\Post Deploymnet\TP_278103_PostDeployment.cs" />
+    <Compile Include="AppModule\MainAdminApp\UI\Activity\TP_120480_ACTIVITY.cs" />
+    <Compile Include="AppModule\MainAdminApp\UI\Clients\TP_84916_CLIENTS.cs" />
+    <Compile Include="AppModule\MainAdminApp\UI\CreateEdit\eCard\TP_120256_eCard_COMPOSE.cs" />
+    <Compile Include="AppModule\MainAdminApp\UI\CreateEdit\eFaceTime\TP_89339_eFacetime.cs" />
+    <Compile Include="AppModule\MainAdminApp\UI\CreateEdit\eProposal\Compose\TP_84293_eProposal_Compose.cs" />
+    <Compile Include="AppModule\MainAdminApp\UI\MySettings\Profile\TP_120217_SIGNATURES.cs" />
+    <Compile Include="AppModule\MainAdminApp\UI\MySettings\Settings\TP_120245_STOREDCONTENT.cs" />
+    <Compile Include="AppModule\MainAdminApp\UI\MySettings\Settings\TP_120251_CUSTOMIZEPDF.cs" />
+    <Compile Include="AppModule\MainAdminApp\UI\MySettings\Settings\TP_84921_RoomEventBlockComments.cs" />
+    <Compile Include="AppModule\MainAdminApp\UI\MySettings\Settings\TP_84922_SpecialOffers.cs" />
+    <Compile Include="AppModule\MainAdminApp\UI\Reports\TP_120205_REPORTS.cs" />
+    <Compile Include="AppModule\GetVariableDBValues.cs" />
+    <Compile Include="PageObject\Admin\PageObject_AdminClients.cs" />
+    <Compile Include="PageObject\Admin\PageObject_AdminClients_Search.cs" />
+    <Compile Include="PageObject\Admin\PageObject_AdmineCard.cs" />
+    <Compile Include="PageObject\Admin\PageObject_AdminEProposal.cs" />
+    <Compile Include="PageObject\Admin\PageObject_AdminEProposal_SetupModuleSettings.cs" />
+    <Compile Include="PageObject\Admin\PageObject_AdminLogin.cs" />
+    <Compile Include="PageObject\Admin\PageObject_AdminNavigation.cs" />
+    <Compile Include="PageObject\Admin\PageObject_AdminProperties.cs" />
+    <Compile Include="PageObject\Admin\PageObject_AdminProperties_AddNewLanguage.cs" />
+    <Compile Include="PageObject\Admin\PageObject_AdminProperties_UpdateProperty_Actions.cs" />
+    <Compile Include="PageObject\Admin\PageObject_AdminProperties_UpdateProperty_Features.cs" />
+    <Compile Include="PageObject\Admin\PageObject_AdminProperties_UpdateProperty_RoomBlock.cs" />
+    <Compile Include="PageObject\Admin\PageObject_AdminUsers.cs" />
+    <Compile Include="PageObject\UI\PageObject_Activity.cs" />
+    <Compile Include="PageObject\UI\PageObject_ClientEmail.cs" />
+    <Compile Include="PageObject\UI\PageObject_Clients.cs" />
+    <Compile Include="PageObject\UI\PageObject_eCardCompose.cs" />
+    <Compile Include="PageObject\UI\PageObject_eFaceTime.cs" />
+    <Compile Include="PageObject\UI\PageObject_EmployeeHome.cs" />
+    <Compile Include="PageObject\UI\PageObject_EmployeeLogin.cs" />
+    <Compile Include="PageObject\UI\PageObject_Profile.cs" />
+    <Compile Include="PageObject\UI\PageObject_ProposalCendynEventBlock.cs" />
+    <Compile Include="PageObject\UI\PageObject_ProposalCendynRoomBlock.cs" />
+    <Compile Include="PageObject\UI\PageObject_ProposalCompose.cs" />
+    <Compile Include="PageObject\UI\PageObject_ProposalPreview.cs" />
+    <Compile Include="PageObject\UI\PageObject_ProposalSelect.cs" />
+    <Compile Include="PageObject\UI\PageObject_ProposalView.cs" />
+    <Compile Include="PageObject\UI\PageObject_Reports.cs" />
+    <Compile Include="PageObject\UI\PageObject_Settings.cs" />
+    <Compile Include="PageObject\UI\PageObject_Settings_StoredContent.cs" />
+    <Compile Include="TestPlan\Post Deployment\ePFull_TP_278103_PostDeployment.cs" />
+    <Compile Include="TestPlan\UI\ePFull_TP_120217_SIGNATURES.cs" />
+    <Compile Include="AppModule\UI\Activity.cs" />
+    <Compile Include="AppModule\UI\ClientEmail.cs" />
+    <Compile Include="AppModule\UI\Clients.cs" />
+    <Compile Include="AppModule\UI\eCardCompose.cs" />
+    <Compile Include="AppModule\UI\eFaceTime.cs" />
+    <Compile Include="AppModule\UI\EmployeeHome.cs" />
+    <Compile Include="AppModule\UI\EmployeeLogin.cs" />
+    <Compile Include="AppModule\UI\eProposalCendynEventBlock.cs" />
+    <Compile Include="AppModule\UI\eProposalCendynRoomBlock.cs" />
+    <Compile Include="AppModule\UI\eProposalCompose.cs" />
+    <Compile Include="AppModule\UI\eProposalPreview.cs" />
+    <Compile Include="AppModule\UI\eProposalSelect.cs" />
+    <Compile Include="AppModule\UI\eProposalView.cs" />
+    <Compile Include="AppModule\UI\Login.cs" />
+    <Compile Include="AppModule\UI\Profile.cs" />
+    <Compile Include="AppModule\UI\Reports.cs" />
+    <Compile Include="AppModule\UI\Settings.cs" />
+    <Compile Include="AppModule\UI\Settings_StoredContent.cs" />
+    <Compile Include="ClientWarehouse\SqlWarehouseVariable\Variables.cs" />
+    <Compile Include="ClientWarehouse\Sqlwarehouse\SqlWarehouse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestData\TestData.cs" />
+    <Compile Include="TestPlan\Features\ePFull_TP_112907_HiltonRebranding.cs" />
+    <Compile Include="TestPlan\UI\Activity\ePFull_TP_120480_ACTIVITY.cs" />
+    <Compile Include="TestPlan\UI\Clients\ePFull_TP_84916_CLIENTS.cs" />
+    <Compile Include="TestPlan\UI\CreateEdit\eCard\ePFull_TP_120256_eCard_COMPOSE.cs" />
+    <Compile Include="TestPlan\UI\ePFull_TP_89339_eFacetime.cs" />
+    <Compile Include="TestPlan\UI\CreateEdit\eProposal\Compose\ePFull_TP_84293_eProposal_COMPOSE.cs" />
+    <Compile Include="TestPlan\UI\MySettings\Settings\ePFull_TP_120245_STOREDCONTENT.cs" />
+    <Compile Include="TestPlan\UI\MySettings\Settings\ePFull_TP_120251_CUSTOMIZEPDF.cs" />
+    <Compile Include="TestPlan\UI\MySettings\Settings\ePFull_TP_84921_RoomEventBlockComments.cs" />
+    <Compile Include="TestPlan\UI\MySettings\Settings\ePFull_TP_84922_SpecialOffers.cs" />
+    <Compile Include="TestPlan\UI\Reports\ePFull_TP_120205_REPORTS.cs" />
+    <Compile Include="Utility\Constants.cs" />
+    <Compile Include="Utility\ObjectRepository.cs" />
+    <Compile Include="Utility\Project.cs" />
+    <Compile Include="Utility\Queries.cs" />
+    <Compile Include="Utility\Setup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppModule\MainAdminApp\Admin\" />
+    <Folder Include="Entity\" />
+    <Folder Include="ReportGeneration\TestReports\" />
+    <Folder Include="TestPlan\Admin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ObjectRepository\OR.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Common.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UploadFiles\gifFile.gif" />
+    <Content Include="UploadFiles\Image.jpg" />
+    <Content Include="UploadFiles\Logo.jpg" />
+    <Content Include="UploadFiles\pngFile.png" />
+    <Content Include="UploadFiles\SampleVideo.mp4" />
+    <Content Include="UploadFiles\TC_120262.jpg" />
+    <Content Include="UploadFiles\test2.swf" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoItX.Dotnet">
+      <Version>3.3.14.5</Version>
+    </PackageReference>
+    <PackageReference Include="ClosedXML">
+      <Version>0.95.3</Version>
+    </PackageReference>
+    <PackageReference Include="ExtentReports">
+      <Version>3.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="HtmlAgilityPack">
+      <Version>1.4.9.5</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.Razor">
+      <Version>3.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Office.Interop.Excel">
+      <Version>15.0.4795.1000</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Office.Interop.Word">
+      <Version>15.0.4797.1003</Version>
+    </PackageReference>
+    <PackageReference Include="MongoDB.Bson">
+      <Version>2.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="MongoDB.Driver">
+      <Version>2.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="MongoDB.Driver.Core">
+      <Version>2.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>9.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit">
+      <Version>3.12.0</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit3TestAdapter">
+      <Version>3.16.1</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="RazorEngine">
+      <Version>3.9.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.Firefox.WebDriver">
+      <Version>0.26.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.Support">
+      <Version>3.141.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.WebDriver">
+      <Version>4.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver">
+      <Version>101.0.4951.4100</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <Version>4.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BaseUtility\BaseUtility.csproj">
+      <Project>{fe2a5f2f-fa49-4e1c-a89b-430dbb8822d3}</Project>
+      <Name>BaseUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Common.csproj">
+      <Project>{f7f5a9bb-6b92-45c0-83c1-4a10da74b654}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\InfoMessageLogger\InfoMessageLogger.csproj">
+      <Project>{57e9210a-687f-4da5-99a2-052644163f1e}</Project>
+      <Name>InfoMessageLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TestData\TestData.csproj">
+      <Project>{0280eb17-9eb8-4438-ac2b-28c04d1d1091}</Project>
+      <Name>TestData</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="UploadFiles\UploadDocumemt.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AutoItX3Lib">
+      <Guid>{F8937E53-D444-4E71-9275-35B64210CC3B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

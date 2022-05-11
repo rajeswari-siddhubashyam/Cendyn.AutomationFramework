@@ -1,0 +1,128 @@
+2021-07-18 16:29:58,244 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-07-18 16:29:58,295 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-07-18 16:29:58,312 ::INFO ::[Logger]::  is used for Testing
+2021-07-18 16:29:58,319 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/Account/Login
+2021-07-18 16:29:58,320 ::INFO ::[Logger]:: Execution started at:-Jul-18-2021 16-29-58-PM
+2021-07-18 16:29:58,320 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-18 16:29:58,321 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-07-18 16:29:58,322 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_84276         XXXXXXXXXXXXXXXX
+2021-07-18 16:29:58,323 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-18 16:30:47,408 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Email element on the EmployeeLogin page.
+2021-07-18 16:30:47,422 ::DEBUG::[Logger]:: 1) Entered UserName
+2021-07-18 16:30:56,087 ::INFO ::[Logger]:: Clicked the SSOLogin_Next element on the EmployeeLogin page.
+2021-07-18 16:31:00,205 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Password element on the EmployeeLogin page.
+2021-07-18 16:31:00,206 ::DEBUG::[Logger]:: 2) Clicked on Next button and entered password.
+2021-07-18 16:31:08,896 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-18 16:31:08,897 ::DEBUG::[Logger]:: 3) Clicked on Subimt button.
+2021-07-18 16:31:41,474 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-18 16:31:56,693 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-18 16:32:01,813 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-18 16:32:01,816 ::DEBUG::[Logger]:: 4) Logged in successfully.
+2021-07-18 16:32:20,241 ::INFO ::[Logger]:: Clicked the PropertyDropDown_Button element on the EmployeeHome page.
+2021-07-18 16:32:47,768 ::INFO ::[Logger]:: Selected the Cendyn – DEV - BBQ HIlton value from the PropertyDropDown_Text drop down.
+2021-07-18 16:32:47,770 ::DEBUG::[Logger]:: 5) Test property selected: Cendyn – DEV - BBQ HIlton
+2021-07-18 16:33:07,931 ::INFO ::[Logger]:: Clicked the CreateEdit_eProposalButton element on the EmployeeHome page.
+2021-07-18 16:33:13,933 ::DEBUG::[Logger]:: 6) Land on the Compose page.
+2021-07-18 16:33:21,326 ::INFO ::[Logger]:: Inserted text in the MessageClosingText element on the ProposalCompose page.
+2021-07-18 16:33:21,327 ::DEBUG::[Logger]:: 7) Message is entered.
+2021-07-18 16:34:24,368 ::INFO ::[Logger]:: Default Language is English
+2021-07-18 16:34:29,177 ::INFO ::[Logger]:: Inserted text in the ProposalNameText element on the ProposalCompose page.
+2021-07-18 16:34:34,972 ::INFO ::[Logger]:: Clicked the Client_SearchLink element on the ProposalCompose page.
+2021-07-18 16:34:39,176 ::INFO ::[Logger]:: Inserted text in the Client_SearchText element on the ProposalCompose page.
+2021-07-18 16:34:44,294 ::INFO ::[Logger]:: Clicked the Button_Client_Search_Search element on the ProposalCompose page.
+2021-07-18 16:34:49,412 ::INFO ::[Logger]:: Clicked the Button_ClientSearchResult element on the ProposalCompose page.
+2021-07-18 16:35:07,399 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-18 16:35:10,073 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-18 16:35:19,016 ::INFO ::[Logger]:: Clicked the Client_SearchLink element on the ProposalCompose page.
+2021-07-18 16:35:23,164 ::INFO ::[Logger]:: Inserted text in the Client_SearchText element on the ProposalCompose page.
+2021-07-18 16:35:28,254 ::INFO ::[Logger]:: Clicked the Button_Client_Search_Search element on the ProposalCompose page.
+2021-07-18 16:35:33,382 ::INFO ::[Logger]:: Clicked the Button_ClientSearchResult element on the ProposalCompose page.
+2021-07-18 16:35:35,960 ::DEBUG::[Logger]:: 8) All required fields are entered.
+2021-07-18 16:35:45,668 ::INFO ::[Logger]:: Inserted text in the Button_ClientSearchResult element on the ProposalCompose page.
+2021-07-18 16:35:56,002 ::DEBUG::[Logger]:: 9) Added write BCC email address
+2021-07-18 16:36:10,320 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-18 16:36:23,682 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-18 16:42:49,658 ::INFO ::[Logger]:: Default Language is English
+2021-07-18 16:42:53,870 ::INFO ::[Logger]:: Inserted text in the ProposalNameText element on the ProposalCompose page.
+2021-07-18 16:42:58,989 ::INFO ::[Logger]:: Clicked the Client_SearchLink element on the ProposalCompose page.
+2021-07-18 16:43:03,156 ::INFO ::[Logger]:: Inserted text in the Client_SearchText element on the ProposalCompose page.
+2021-07-18 16:43:08,233 ::INFO ::[Logger]:: Clicked the Button_Client_Search_Search element on the ProposalCompose page.
+2021-07-18 16:43:13,377 ::INFO ::[Logger]:: Clicked the Button_ClientSearchResult element on the ProposalCompose page.
+2021-07-18 16:43:18,421 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-18 16:43:21,112 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-18 16:43:31,437 ::INFO ::[Logger]:: Clicked the Client_SearchLink element on the ProposalCompose page.
+2021-07-18 16:43:35,583 ::INFO ::[Logger]:: Inserted text in the Client_SearchText element on the ProposalCompose page.
+2021-07-18 16:43:40,696 ::INFO ::[Logger]:: Clicked the Button_Client_Search_Search element on the ProposalCompose page.
+2021-07-18 16:43:45,781 ::INFO ::[Logger]:: Clicked the Button_ClientSearchResult element on the ProposalCompose page.
+2021-07-18 16:43:48,116 ::DEBUG::[Logger]:: 10) All required fields are entered.
+2021-07-18 16:43:55,815 ::INFO ::[Logger]:: Inserted text in the Button_ClientSearchResult element on the ProposalCompose page.
+2021-07-18 16:43:55,816 ::DEBUG::[Logger]:: 11) Added write BCC email address
+2021-07-18 16:44:12,310 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-18 16:45:11,150 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-18 16:45:33,244 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-18 16:45:51,479 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-18 16:46:05,110 ::INFO ::[Logger]:: The 'Closing Message' is displayed.
+2021-07-18 16:46:28,408 ::INFO ::[Logger]:: Clicked the Button_Send element on the ProposalPreview page.
+2021-07-18 16:46:30,910 ::DEBUG::[Logger]:: 12) eProposal is emailed to the 'Client'.
+2021-07-18 16:51:20,581 ::INFO ::[Logger]:: Inserted text in the Button_Send element on the ProposalPreview page.
+2021-07-18 16:51:25,658 ::INFO ::[Logger]:: Clicked the Button_Send element on the ProposalPreview page.
+2021-07-18 16:51:34,787 ::INFO ::[Logger]:: Inserted text in the Button_Send element on the ProposalPreview page.
+2021-07-18 16:51:34,788 ::DEBUG::[Logger]:: 13) Entered Catchall UserName and Password
+2021-07-18 16:51:39,285 ::FATAL::[Logger]:: Unable to click the Button_Send element on the ProposalPreview page.OpenQA.Selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=91.0.4472.124)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in E:\2020\April\eMenus_Atomation\BaseUtility\Utility\Helper.cs:line 54
+2021-07-18 16:52:36,790 ::INFO ::[Logger]:: Inserted text in the Button_Send element on the ProposalPreview page.
+2021-07-18 16:52:38,708 ::DEBUG::[Logger]:: 14) Entered Catchall UserName and Password
+2021-07-18 16:52:47,786 ::INFO ::[Logger]:: Clicked the Button_Send element on the ProposalPreview page.
+2021-07-18 16:52:55,379 ::INFO ::[Logger]:: The element Element (id = d5349ee0-511b-4faa-a7e5-247cbcbe2305) is selected.
+2021-07-18 16:53:23,358 ::INFO ::[Logger]:: Clicked the Button_Send element on the ProposalPreview page.
+2021-07-18 16:53:32,974 ::INFO ::[Logger]:: Clicked the Button_Send element on the ProposalPreview page.
+2021-07-18 16:54:01,206 ::INFO ::[Logger]:: Clicked the Button_Send element on the ProposalPreview page.
+2021-07-18 16:54:40,439 ::INFO ::[Logger]:: Clicked the Button_Send element on the ProposalPreview page.
+2021-07-18 16:55:16,406 ::DEBUG::[Logger]:: 15) Opened Latest Email with SubjectName Contains - TC_84276
+2021-07-18 16:55:56,134 ::DEBUG::[Logger]:: 16) The email is opened.
+2021-07-18 17:00:14,067 ::FATAL::[Logger]:: Unable to click the Button_Send element on the ProposalPreview page.OpenQA.Selenium.ElementClickInterceptedException: element click intercepted: Element <div id="meInitialsButton" class="_1n_05gxDIBq6yRk2zHIufH _2FMKuLI3AbbpDnxke5MTeF" aria-hidden="true" style="font-size: 16px;">...</div> is not clickable at point (1342, 24). Other element would receive the click: <div class="_2KqWkae0FcyhdNhWQ-Cp-M">...</div>
+  (Session info: chrome=91.0.4472.124)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element)
+2021-07-18 17:02:44,786 ::INFO ::[Logger]:: Clicked the Button_Send element on the ProposalPreview page.
+2021-07-18 17:04:23,522 ::FATAL::[Logger]:: Unable to click the Button_Send element on the ProposalPreview page.OpenQA.Selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=91.0.4472.124)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element)
+2021-07-18 17:05:44,908 ::INFO ::[Logger]:: Clicked the Button_Send element on the ProposalPreview page.
+2021-07-18 17:05:57,666 ::DEBUG::[Logger]:: 17) Logged out from Account.
+2021-07-18 17:07:31,851 ::INFO ::[Logger]:: Clicked the Button_Send element on the ProposalPreview page.
+2021-07-18 17:07:52,786 ::INFO ::[Logger]:: Inserted text in the Button_Send element on the ProposalPreview page.
+2021-07-18 17:07:57,891 ::INFO ::[Logger]:: Clicked the Button_Send element on the ProposalPreview page.
+2021-07-18 17:08:09,035 ::INFO ::[Logger]:: Inserted text in the Button_Send element on the ProposalPreview page.
+2021-07-18 17:08:09,036 ::DEBUG::[Logger]:: 18) Entered Catchall UserName and Password
+2021-07-18 17:08:13,392 ::FATAL::[Logger]:: Unable to click the Button_Send element on the ProposalPreview page.OpenQA.Selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=91.0.4472.124)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element)
+2021-07-18 17:10:03,189 ::INFO ::[Logger]:: Inserted text in the Button_Send element on the ProposalPreview page.
+2021-07-18 17:10:06,402 ::DEBUG::[Logger]:: 19) Entered Catchall UserName and Password
+2021-07-18 17:10:18,088 ::INFO ::[Logger]:: Clicked the Button_Send element on the ProposalPreview page.
+2021-07-18 17:10:33,067 ::INFO ::[Logger]:: The element Element (id = f530cfe4-76e0-4881-962d-57873c412ebe) is selected.
+2021-07-18 17:10:51,021 ::INFO ::[Logger]:: Clicked the Button_Send element on the ProposalPreview page.
+2021-07-18 17:11:21,927 ::INFO ::[Logger]:: Clicked the Button_Send element on the ProposalPreview page.
+2021-07-18 17:11:58,237 ::INFO ::[Logger]:: Clicked the Button_Send element on the ProposalPreview page.
+2021-07-18 17:12:34,049 ::INFO ::[Logger]:: Clicked the Button_Send element on the ProposalPreview page.
+2021-07-18 17:13:04,141 ::DEBUG::[Logger]:: 20) Opened Latest Email with SubjectName Contains - TC_84276
+2021-07-18 17:13:29,472 ::DEBUG::[Logger]:: 21) The email is opened in BCC account
+2021-07-18 17:13:39,708 ::INFO ::[Logger]:: eProposal:: Script ::Passed
+2021-07-18 17:13:41,580 ::INFO ::[Logger]:: E.N.D

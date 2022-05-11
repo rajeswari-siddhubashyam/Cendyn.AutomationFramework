@@ -1,0 +1,58 @@
+2021-07-05 10:44:24,706 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-07-05 10:44:25,064 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-07-05 10:44:25,065 ::INFO ::[Logger]::  is used for Testing
+2021-07-05 10:44:25,517 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DCAOAFRON%26response_mode%3Dform_post%26response_type%3Dcode%2520id_token%26scope%3Dopenid%2520roles%2520profile%2520write%2520offline_access%2520CendynAccessApi%26state%3DOpenIdConnect.AuthenticationProperties%253DUy2V8Ln3Smm0tyrUNegdU1JKh32QBWKWTmNrTYTNX7pXfjxXzoyB3D-1frWXdrK-NV5b_a3B8qiyZZ5mPV0hOwgXGAmeOeD0Fhl8ZCq1dM2QpOMg4HXgWA38D495B-ODljh_v6XuIrDqBMnAkPv1Mw%26nonce%3D637610588677762308.MWQ3YmJiZGYtMTMyMy00M2E1LTk2MzgtNTM3ODM1YzNkZWZjMTU1MjU1MGQtZGNkYi00YjI3LWE1YTctMmJiZWYyMTNmZjhj%26redirect_uri%3Dhttps%253A%252F%252Fqa.cendynaccess.com%26ui_locales%3Den-US
+2021-07-05 10:44:25,581 ::INFO ::[Logger]:: Execution started at:-Jul-05-2021 10-44-25-AM
+2021-07-05 10:44:25,582 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-05 10:44:25,583 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-07-05 10:44:25,584 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      D_233380         XXXXXXXXXXXXXXXX
+2021-07-05 10:44:25,585 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-05 10:44:25,906 ::INFO ::[Logger]:: Window Size is: {Width=1366, Height=768}
+2021-07-05 10:44:28,492 ::DEBUG::[Logger]:: 1) Landed on Admin Login Page
+2021-07-05 10:44:41,553 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Username element on the PropertyAdmin page.
+2021-07-05 10:44:47,795 ::INFO ::[Logger]:: Clicked the Click_NextButton element on the PropertyAdmin page.
+2021-07-05 10:44:53,667 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Password element on the PropertyAdmin page.
+2021-07-05 10:44:53,668 ::DEBUG::[Logger]:: 2) Entered Username =qacendynautomation@cendyn17.com and Password =Cendyn123$
+2021-07-05 10:45:21,982 ::INFO ::[Logger]:: Clicked the Click_LoginButton element on the PropertyAdmin page.
+2021-07-05 10:45:22,913 ::DEBUG::[Logger]:: 3) Landed on Select Product Page 
+2021-07-05 10:45:36,058 ::INFO ::[Logger]:: Clicked the Click_eMenus element on the PropertyAdmin page.
+2021-07-05 10:45:36,060 ::DEBUG::[Logger]:: 4) eMenus Product got Selected 
+2021-07-05 10:45:48,175 ::INFO ::[Logger]:: Clicked the Click_Select_PropertyDropdown element on the PropertyAdmin page.
+2021-07-05 10:45:48,176 ::DEBUG::[Logger]:: 5) Clicked on Select Property Drop-down
+2021-07-05 10:45:58,019 ::INFO ::[Logger]:: Inserted text in the Enter_Property_TextBox element on the PropertyAdmin page.
+2021-07-05 10:45:58,021 ::DEBUG::[Logger]:: 6) Entered Property
+2021-07-05 10:46:10,892 ::INFO ::[Logger]:: Selected the Hotel Origami value from the Select_Property_Dropdown drop down.
+2021-07-05 10:46:10,893 ::DEBUG::[Logger]:: 7) Hotel Origami Property got Selected
+2021-07-05 10:46:24,990 ::INFO ::[Logger]:: Clicked the Click_Link_Share element on the PropertyAdmin page.
+2021-07-05 10:46:26,279 ::DEBUG::[Logger]:: 8) Landed on Share Menu Page
+2021-07-05 10:46:34,762 ::INFO ::[Logger]:: Inserted text in the Enter_ShareMenu_Name element on the PropertyAdmin page.
+2021-07-05 10:46:41,028 ::INFO ::[Logger]:: Clicked the Click_Continue_Button element on the PropertyAdmin page.
+2021-07-05 10:46:46,110 ::INFO ::[Logger]:: Please input share eMenu Name. Found on the page
+2021-07-05 10:46:46,112 ::DEBUG::[Logger]:: 9) User not allowed to share menu with blank space
+2021-07-05 10:46:50,563 ::DEBUG::[Logger]:: TestPlan :- Production_Defects Testcase :- D_233380
+2021-07-05 10:46:50,564 ::DEBUG::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~Test Data Used~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-05 10:46:50,565 ::DEBUG::[Logger]::  Value for : TC_278050_Front-end User-name is : qacendyn@cendyn17.com
+2021-07-05 10:46:50,566 ::DEBUG::[Logger]::  Value for : TC_278050_Front-end Password is : Cendyn123$
+2021-07-05 10:46:50,566 ::DEBUG::[Logger]::  Value for : TC_278050_Property Name is : Hotel Origami
+2021-07-05 10:46:50,568 ::DEBUG::[Logger]::  Value for : TC_278051_Front-end User-name is : qacendyn@cendyn17.com
+2021-07-05 10:46:50,568 ::DEBUG::[Logger]::  Value for : TC_278051_Front-end Password is : Cendyn123$
+2021-07-05 10:46:50,569 ::DEBUG::[Logger]::  Value for : TC_278051_Property Name is : Hotel Origami
+2021-07-05 10:46:50,570 ::DEBUG::[Logger]::  Value for : TC_278052_Front-end User-name is : qacendyn@cendyn17.com
+2021-07-05 10:46:50,571 ::DEBUG::[Logger]::  Value for : TC_278052_Front-end Password is : Cendyn123$
+2021-07-05 10:46:50,571 ::DEBUG::[Logger]::  Value for : TC_278052_Property Name is : Hotel Origami
+2021-07-05 10:46:50,572 ::DEBUG::[Logger]::  Value for : TC_278054_Front-end User-name is : qacendyn@cendyn17.com
+2021-07-05 10:46:50,572 ::DEBUG::[Logger]::  Value for : TC_278054_Front-end Password is : Cendyn123$
+2021-07-05 10:46:50,573 ::DEBUG::[Logger]::  Value for : TC_278054_Property Name is : Hotel Origami
+2021-07-05 10:46:50,574 ::DEBUG::[Logger]::  Value for : TC_278055_Front-end User-name is : qacendyn@cendyn17.com
+2021-07-05 10:46:50,575 ::DEBUG::[Logger]::  Value for : TC_278055_Front-end Password is : Cendyn123$
+2021-07-05 10:46:50,575 ::DEBUG::[Logger]::  Value for : TC_278055_Property Name is : Hotel Origami
+2021-07-05 10:46:50,576 ::DEBUG::[Logger]::  Value for : TC_278056_Front-end User-name is : qacendyn@cendyn17.com
+2021-07-05 10:46:50,577 ::DEBUG::[Logger]::  Value for : TC_278056_Front-end Password is : Cendyn123$
+2021-07-05 10:46:50,578 ::DEBUG::[Logger]::  Value for : TC_278056_Property Name is : Hotel Origami
+2021-07-05 10:46:50,578 ::DEBUG::[Logger]::  Value for : TC_278057_Front-end User-name is : qacendyn@cendyn17.com
+2021-07-05 10:46:50,579 ::DEBUG::[Logger]::  Value for : TC_278057_Front-end Password is : Cendyn123$
+2021-07-05 10:46:50,580 ::DEBUG::[Logger]::  Value for : TC_278057_Property Name is : Hotel Origami
+2021-07-05 10:46:50,581 ::DEBUG::[Logger]::  Value for : D_233380_Property Name is : Hotel Origami
+2021-07-05 10:46:50,582 ::DEBUG::[Logger]::  Value for : D_233380_Error Message is : Please input share eMenu Name.
+2021-07-05 10:46:51,584 ::INFO ::[Logger]:: eMenus:: Script ::Passed
+2021-07-05 10:46:53,522 ::INFO ::[Logger]:: E.N.D

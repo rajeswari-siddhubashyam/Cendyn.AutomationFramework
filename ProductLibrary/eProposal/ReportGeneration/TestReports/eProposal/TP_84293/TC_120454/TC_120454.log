@@ -1,0 +1,43 @@
+2021-07-18 19:20:05,290 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-07-18 19:20:05,291 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-07-18 19:20:05,293 ::INFO ::[Logger]::  is used for Testing
+2021-07-18 19:20:05,302 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/Account/Login
+2021-07-18 19:20:05,303 ::INFO ::[Logger]:: Execution started at:-Jul-18-2021 19-20-05-PM
+2021-07-18 19:20:05,304 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-18 19:20:05,305 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-07-18 19:20:05,321 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_120454         XXXXXXXXXXXXXXXX
+2021-07-18 19:20:05,323 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-18 19:20:39,580 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Email element on the EmployeeLogin page.
+2021-07-18 19:20:39,581 ::DEBUG::[Logger]:: 1) Entered UserName
+2021-07-18 19:20:48,168 ::INFO ::[Logger]:: Clicked the SSOLogin_Next element on the EmployeeLogin page.
+2021-07-18 19:20:52,303 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Password element on the EmployeeLogin page.
+2021-07-18 19:20:52,305 ::DEBUG::[Logger]:: 2) Clicked on Next button and entered password.
+2021-07-18 19:21:00,852 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-18 19:21:00,853 ::DEBUG::[Logger]:: 3) Clicked on Subimt button.
+2021-07-18 19:21:29,826 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-18 19:21:45,021 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-18 19:21:50,128 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-18 19:21:50,132 ::DEBUG::[Logger]:: 4) Logged in successfully.
+2021-07-18 19:22:08,564 ::INFO ::[Logger]:: Clicked the PropertyDropDown_Button element on the EmployeeHome page.
+2021-07-18 19:22:35,431 ::INFO ::[Logger]:: Selected the Cendyn - Hilton Berlin value from the PropertyDropDown_Text drop down.
+2021-07-18 19:22:35,432 ::DEBUG::[Logger]:: 5) Single language property selected: Cendyn - Hilton Berlin
+2021-07-18 19:22:52,337 ::INFO ::[Logger]:: Clicked the CreateEdit_eProposalButton element on the EmployeeHome page.
+2021-07-18 19:22:52,339 ::DEBUG::[Logger]:: 6) Land on the eProposal Compose page.
+2021-07-18 19:23:25,504 ::ERROR::[Logger]:: The ctl00_ctl00_MainContent_MainContent_ddPropertyLanguages element was not found on the page.
+OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#ctl00_ctl00_MainContent_MainContent_ddPropertyLanguages"}
+  (Session info: chrome=91.0.4472.124)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementById(String id)
+   at OpenQA.Selenium.By.<>c__DisplayClass16_0.<Id>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at BaseUtility.PageObject.PageAction.Find_ElementId(String repoName) in E:\2020\April\eMenus_Atomation\BaseUtility\PageObject\PageAction.cs:line 17
+2021-07-18 19:23:25,539 ::INFO ::[Logger]:: There is only one language available for the property.
+2021-07-18 19:23:25,541 ::DEBUG::[Logger]:: 7) The language is displayed as a label.
+2021-07-18 19:23:28,777 ::INFO ::[Logger]:: Clicked the single language tooltip icon.
+2021-07-18 19:23:28,803 ::INFO ::[Logger]:: The single language tooltip message is displayed.
+2021-07-18 19:23:28,803 ::DEBUG::[Logger]:: 8) 'This module is only available in one language' message is displayed.
+2021-07-18 19:23:31,954 ::INFO ::[Logger]:: eProposal:: Script ::Passed
+2021-07-18 19:23:32,365 ::INFO ::[Logger]:: E.N.D

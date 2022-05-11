@@ -1,0 +1,60 @@
+2021-06-24 10:27:24,012 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-06-24 10:27:24,013 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-06-24 10:27:24,014 ::INFO ::[Logger]::  is used for Testing
+2021-06-24 10:27:24,319 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DCAOAFRON%26response_mode%3Dform_post%26response_type%3Dcode%2520id_token%26scope%3Dopenid%2520roles%2520profile%2520write%2520offline_access%2520CendynAccessApi%26state%3DOpenIdConnect.AuthenticationProperties%253DzfUy75EyMiRqwQocroh4yNZPlCLPk7grCmoAEktli_LH79QPurj94pz7ohfU6cw-ESjgxMu0R3P4LZ2VIqEkZkWk0tIRy8Yhckliqwsh1k5mMntjbUTVukjDMjwUN1ArnFlY4YVGBcwsgDAQMRrinA%26nonce%3D637601074495244286.OWY4MzVkZDItOTBlYS00OWIwLTk2ZDgtYTFhOTJmNzhiMGNjNjdlOTJiZDgtZmY2MS00MjViLWE3MmMtYzIzNzM0YjFjYTg3%26redirect_uri%3Dhttps%253A%252F%252Fqa.cendynaccess.com%26ui_locales%3Den-US
+2021-06-24 10:27:24,320 ::INFO ::[Logger]:: Execution started at:-Jun-24-2021 10-27-24-AM
+2021-06-24 10:27:24,321 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-06-24 10:27:24,321 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-06-24 10:27:24,322 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_232891         XXXXXXXXXXXXXXXX
+2021-06-24 10:27:24,322 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-06-24 10:27:24,615 ::INFO ::[Logger]:: Window Size is: {Width=1366, Height=768}
+2021-06-24 10:27:25,689 ::DEBUG::[Logger]:: 1) Landed on Admin Login Page
+2021-06-24 10:27:35,973 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Username element on the PropertyAdmin page.
+2021-06-24 10:27:42,201 ::INFO ::[Logger]:: Clicked the Click_NextButton element on the PropertyAdmin page.
+2021-06-24 10:27:48,033 ::INFO ::[Logger]:: Inserted text in the PropertyAdmin_Password element on the PropertyAdmin page.
+2021-06-24 10:27:48,034 ::DEBUG::[Logger]:: 2) Entered Username =qacendynautomation@cendyn17.com and Password =Cendyn123$
+2021-06-24 10:27:58,609 ::INFO ::[Logger]:: Clicked the Click_LoginButton element on the PropertyAdmin page.
+2021-06-24 10:27:59,521 ::DEBUG::[Logger]:: 3) Landed on Select Product Page 
+2021-06-24 10:28:16,061 ::INFO ::[Logger]:: Clicked the Click_eMenus element on the PropertyAdmin page.
+2021-06-24 10:28:16,062 ::DEBUG::[Logger]:: 4) eMenus Product got Selected 
+2021-06-24 10:28:27,533 ::INFO ::[Logger]:: Clicked the Click_Select_PropertyDropdown element on the PropertyAdmin page.
+2021-06-24 10:28:27,534 ::DEBUG::[Logger]:: 5) Clicked on Select Property Drop-down
+2021-06-24 10:28:37,378 ::INFO ::[Logger]:: Inserted text in the Enter_Property_TextBox element on the PropertyAdmin page.
+2021-06-24 10:28:37,379 ::DEBUG::[Logger]:: 6) Entered Property
+2021-06-24 10:28:50,421 ::INFO ::[Logger]:: Selected the Hotel Origami value from the Select_Property_Dropdown drop down.
+2021-06-24 10:28:50,422 ::DEBUG::[Logger]:: 7) Hotel Origami Property got Selected
+2021-06-24 10:29:00,912 ::INFO ::[Logger]:: Clicked the Click_MyMenu_Settings element on the PropertyAdmin page.
+2021-06-24 10:29:00,913 ::DEBUG::[Logger]:: 8) Settings should get clicked
+2021-06-24 10:29:10,057 ::INFO ::[Logger]:: Clicked the Settings_MenuFilter_Tab element on the PropertyAdmin page.
+2021-06-24 10:29:12,182 ::DEBUG::[Logger]:: 9) Navigated on Menu Filter Page
+2021-06-24 10:29:20,999 ::INFO ::[Logger]:: Clicked the Settings_MenuFilter_AddTag element on the PropertyAdmin page.
+2021-06-24 10:29:26,897 ::INFO ::[Logger]:: Inserted text in the Settings_MenuFilter_AddTag_Name element on the PropertyAdmin page.
+2021-06-24 10:29:26,898 ::DEBUG::[Logger]:: 10) Tag name should get entered
+2021-06-24 10:29:35,749 ::INFO ::[Logger]:: Clicked the Settings_MenuFilter_AddTag_SaveButton element on the PropertyAdmin page.
+2021-06-24 10:29:38,716 ::DEBUG::[Logger]:: 11) Tag save confirmation pop-up should get displayed
+2021-06-24 10:29:47,577 ::INFO ::[Logger]:: Clicked the Click_OK_Button element on the PropertyAdmin page.
+2021-06-24 10:29:47,579 ::DEBUG::[Logger]:: 12) Tag Added Successfully
+2021-06-24 10:30:00,084 ::INFO ::[Logger]:: Clicked the Click_MyMenus element on the PropertyAdmin page.
+2021-06-24 10:30:00,110 ::DEBUG::[Logger]:: 13) Navigated to my menu page
+2021-06-24 10:30:08,713 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-06-24 10:30:16,600 ::INFO ::[Logger]:: Clicked the Click_MyMenu_BreakfastDropdown element on the PropertyAdmin page.
+2021-06-24 10:30:16,601 ::DEBUG::[Logger]:: 14) Clicked on Breakfast Menus
+2021-06-24 10:30:25,953 ::INFO ::[Logger]:: Clicked the MyMenu_BreakfastDropdown_ContinentalBreakfast element on the PropertyAdmin page.
+2021-06-24 10:30:26,527 ::ERROR::[Logger]:: The //input[@id='ColumnID' and @value='1']//following::div[1] element was not found on the page.
+OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='ColumnID' and @value='1']//following::div[1]"}
+  (Session info: chrome=89.0.4389.40)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at BaseUtility.PageObject.PageAction.Find_ElementXPath(String repoName) in E:\2020\April\eMenus_Atomation\BaseUtility\PageObject\PageAction.cs:line 32
+2021-06-24 10:30:28,764 ::ERROR::[Logger]:: eMenus_Flow :: Script::Failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BaseUtility.Utility.Helper.DynamicScroll(IWebDriver driver, IWebElement element) in E:\2020\April\eMenus_Atomation\BaseUtility\Utility\Helper.cs:line 246
+   at eMenus.AppModule.MainAdminApp.MainAdminApp.TC_232891() in E:\2020\April\eMenus_Atomation\ProductLibrary\eMenus\AppModule\MainAdminApp\TP_231897_PropertyAdmin.cs:line 497
+   at eMenus.AppModule.MainAdminApp.MainAdminApp.TP_231897() in E:\2020\April\eMenus_Atomation\ProductLibrary\eMenus\AppModule\MainAdminApp.cs:line 33
+   at eMenus.TestPlan.HotelOrigami.eMenu_TP_231897_PropertyAdmin.TC_232891() in E:\2020\April\eMenus_Atomation\ProductLibrary\eMenus\TestPlan\HotelOrigami\eMenu_TP_231897_PropertyAdmin.cs:line 176
+2021-06-24 10:30:38,250 ::INFO ::[Logger]:: E.N.D

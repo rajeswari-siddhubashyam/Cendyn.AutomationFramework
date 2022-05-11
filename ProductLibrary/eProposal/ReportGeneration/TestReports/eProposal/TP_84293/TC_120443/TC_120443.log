@@ -1,0 +1,134 @@
+2021-07-19 18:11:34,000 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-07-19 18:11:34,396 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-07-19 18:11:34,417 ::INFO ::[Logger]::  is used for Testing
+2021-07-19 18:11:34,431 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/Account/Login
+2021-07-19 18:11:34,433 ::INFO ::[Logger]:: Execution started at:-Jul-19-2021 18-11-34-PM
+2021-07-19 18:11:34,434 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-19 18:11:34,436 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-07-19 18:11:34,437 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_120443         XXXXXXXXXXXXXXXX
+2021-07-19 18:11:34,439 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-19 18:11:54,775 ::INFO ::[Logger]:: Inserted text in the Text_UserName element on the AdminLogin page.
+2021-07-19 18:11:58,911 ::INFO ::[Logger]:: Inserted text in the Text_Password element on the AdminLogin page.
+2021-07-19 18:12:19,181 ::INFO ::[Logger]:: Clicked the Button_LogIn element on the AdminLogin page.
+2021-07-19 18:12:21,234 ::INFO ::[Logger]:: Logged into ePFull Admin successfully.
+2021-07-19 18:12:30,116 ::INFO ::[Logger]:: Clicked the Button_Properties element on the AdminNavigation page.
+2021-07-19 18:12:35,266 ::INFO ::[Logger]:: Clicked the Link_Search element on the AdminNavigation page.
+2021-07-19 18:12:39,454 ::INFO ::[Logger]:: Inserted text in the Text_Name element on the AdminNavigation page.
+2021-07-19 18:12:44,639 ::INFO ::[Logger]:: Clicked the Button_Search_Search element on the AdminNavigation page.
+2021-07-19 18:12:59,559 ::INFO ::[Logger]:: Clicked the AdminProperties_Button_Features element on the AdminProperties page.
+2021-07-19 18:13:04,649 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-19 18:13:05,706 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-19 18:13:50,677 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Email element on the EmployeeLogin page.
+2021-07-19 18:13:52,858 ::DEBUG::[Logger]:: 1) Entered UserName
+2021-07-19 18:14:04,124 ::INFO ::[Logger]:: Clicked the SSOLogin_Next element on the EmployeeLogin page.
+2021-07-19 18:14:09,237 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Password element on the EmployeeLogin page.
+2021-07-19 18:14:10,127 ::DEBUG::[Logger]:: 2) Clicked on Next button and entered password.
+2021-07-19 18:14:20,490 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-19 18:14:21,924 ::DEBUG::[Logger]:: 3) Clicked on Subimt button.
+2021-07-19 18:14:55,698 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-19 18:15:26,241 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-19 18:15:33,191 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-19 18:15:35,249 ::DEBUG::[Logger]:: 4) Logged in successfully.
+2021-07-19 18:15:53,939 ::INFO ::[Logger]:: Clicked the PropertyDropDown_Button element on the EmployeeHome page.
+2021-07-19 18:16:33,974 ::INFO ::[Logger]:: Selected the Cendyn - Hilton Berlin value from the PropertyDropDown_Text drop down.
+2021-07-19 18:16:33,976 ::DEBUG::[Logger]:: 5) Selected the property: Cendyn - Hilton Berlin
+2021-07-19 18:16:55,419 ::INFO ::[Logger]:: Clicked the CreateEdit_eProposalButton element on the EmployeeHome page.
+2021-07-19 18:16:55,420 ::DEBUG::[Logger]:: 6) Landed on the ePropsal Compose page.
+2021-07-19 18:17:03,334 ::INFO ::[Logger]:: Default Language is English
+2021-07-19 18:17:08,980 ::INFO ::[Logger]:: Inserted text in the ProposalNameText element on the ProposalCompose page.
+2021-07-19 18:17:14,717 ::INFO ::[Logger]:: Clicked the Client_SearchLink element on the ProposalCompose page.
+2021-07-19 18:17:18,929 ::INFO ::[Logger]:: Inserted text in the Client_SearchText element on the ProposalCompose page.
+2021-07-19 18:17:24,044 ::INFO ::[Logger]:: Clicked the Button_Client_Search_Search element on the ProposalCompose page.
+2021-07-19 18:17:31,508 ::INFO ::[Logger]:: Clicked the Button_ClientSearchResult element on the ProposalCompose page.
+2021-07-19 18:17:46,956 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-19 18:17:49,825 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-19 18:17:57,639 ::DEBUG::[Logger]:: 7) All required fields are entered.
+2021-07-19 18:18:12,492 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-19 18:18:15,194 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-19 18:18:23,166 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-19 18:18:24,218 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-19 18:18:35,333 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-19 18:19:47,324 ::INFO ::[Logger]:: Default Language is English
+2021-07-19 18:19:51,652 ::INFO ::[Logger]:: Inserted text in the ProposalNameText element on the ProposalCompose page.
+2021-07-19 18:19:56,784 ::INFO ::[Logger]:: Clicked the Client_SearchLink element on the ProposalCompose page.
+2021-07-19 18:20:00,971 ::INFO ::[Logger]:: Inserted text in the Client_SearchText element on the ProposalCompose page.
+2021-07-19 18:20:06,076 ::INFO ::[Logger]:: Clicked the Button_Client_Search_Search element on the ProposalCompose page.
+2021-07-19 18:20:11,182 ::INFO ::[Logger]:: Clicked the Button_ClientSearchResult element on the ProposalCompose page.
+2021-07-19 18:20:16,203 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-19 18:20:18,896 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-19 18:20:24,301 ::DEBUG::[Logger]:: 8) All required fields are entered.
+2021-07-19 18:20:41,161 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-19 18:20:43,870 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-19 18:20:52,119 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-19 18:20:53,159 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-19 18:21:00,074 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-19 18:25:59,429 ::INFO ::[Logger]:: Default Language is English
+2021-07-19 18:26:03,783 ::INFO ::[Logger]:: Inserted text in the ProposalNameText element on the ProposalCompose page.
+2021-07-19 18:26:08,891 ::INFO ::[Logger]:: Clicked the Client_SearchLink element on the ProposalCompose page.
+2021-07-19 18:26:13,094 ::INFO ::[Logger]:: Inserted text in the Client_SearchText element on the ProposalCompose page.
+2021-07-19 18:26:18,192 ::INFO ::[Logger]:: Clicked the Button_Client_Search_Search element on the ProposalCompose page.
+2021-07-19 18:26:23,331 ::INFO ::[Logger]:: Clicked the Button_ClientSearchResult element on the ProposalCompose page.
+2021-07-19 18:26:28,365 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-19 18:26:31,105 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-19 18:26:35,495 ::DEBUG::[Logger]:: 9) All required fields are entered.
+2021-07-19 18:26:43,564 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-19 18:26:46,289 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-19 18:26:53,973 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-19 18:26:55,018 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-19 18:27:12,380 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-19 18:28:31,289 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalSelect page.
+2021-07-19 18:28:31,291 ::DEBUG::[Logger]:: 10) Landed on the Room Block page.
+2021-07-19 18:28:34,689 ::INFO ::[Logger]:: Checked the CheckBox_AddIntroductionToRoomBlock checkbox.
+2021-07-19 18:28:39,703 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-19 18:28:44,940 ::INFO ::[Logger]:: Inserted text in the Text_RoomBlockIntroductionText element on the ProposalCendynRoomBlock page.
+2021-07-19 18:28:44,941 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-19 18:28:50,964 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-19 18:28:52,019 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-19 18:28:58,037 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-19 18:29:03,260 ::INFO ::[Logger]:: Inserted text in the Text_RoomBlock_Comments element on the ProposalCendynRoomBlock page.
+2021-07-19 18:29:03,261 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-19 18:29:09,271 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-19 18:29:10,323 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-19 18:29:24,393 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCendynRoomBlock page.
+2021-07-19 18:29:24,394 ::DEBUG::[Logger]:: 11) Landed on the Event Block page.
+2021-07-19 18:29:31,535 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-19 18:29:36,819 ::INFO ::[Logger]:: Inserted text in the Text_EventBlockComments element on the ProposalCendynEventBlock page.
+2021-07-19 18:29:36,820 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-19 18:29:42,837 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-19 18:29:43,886 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-19 18:29:53,332 ::DEBUG::[Logger]:: 12) eProposal preview is opened in a new window or tab.
+2021-07-19 18:29:55,582 ::DEBUG::[Logger]:: 13) Closed the eProposal preview.
+2021-07-19 18:29:58,867 ::INFO ::[Logger]:: Checked the CheckBox_SaveAsMyFavorite checkbox.
+2021-07-19 18:29:58,868 ::DEBUG::[Logger]:: 14) Selected Save As My Favorite
+2021-07-19 18:30:14,100 ::INFO ::[Logger]:: Clicked the Button_Send element on the ProposalPreview page.
+2021-07-19 18:30:23,958 ::INFO ::[Logger]:: Clicked the WelcomeButton element on the EmployeeHome page.
+2021-07-19 18:30:32,564 ::INFO ::[Logger]:: Clicked the CreateEdit_eProposalButton element on the EmployeeHome page.
+2021-07-19 18:30:32,565 ::DEBUG::[Logger]:: 15) Landed on the ePropsal Compose page.
+2021-07-19 18:30:34,726 ::INFO ::[Logger]:: Default Language is English
+2021-07-19 18:30:39,044 ::INFO ::[Logger]:: Inserted text in the ProposalNameText element on the ProposalCompose page.
+2021-07-19 18:30:44,154 ::INFO ::[Logger]:: Clicked the Client_SearchLink element on the ProposalCompose page.
+2021-07-19 18:30:48,377 ::INFO ::[Logger]:: Inserted text in the Client_SearchText element on the ProposalCompose page.
+2021-07-19 18:30:53,481 ::INFO ::[Logger]:: Clicked the Button_Client_Search_Search element on the ProposalCompose page.
+2021-07-19 18:30:58,629 ::INFO ::[Logger]:: Clicked the Button_ClientSearchResult element on the ProposalCompose page.
+2021-07-19 18:31:03,657 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-19 18:31:06,431 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-19 18:31:07,449 ::DEBUG::[Logger]:: 16) All required fields are entered.
+2021-07-19 18:31:16,724 ::FATAL::[Logger]:: Unable to check the CheckBox_UseMyFavoriteSettings checkbox.
+2021-07-19 18:33:16,727 ::DEBUG::[Logger]:: 17) Selected the Use My Favorite Settings checkbox.
+2021-07-19 18:33:23,881 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-19 18:33:24,982 ::INFO ::[Logger]:: The Welcome Message text contained the passed text.
+2021-07-19 18:33:24,983 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-19 18:33:38,978 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-19 18:34:40,981 ::DEBUG::[Logger]:: 18) The Welcome Message comments matched the saved text.
+2021-07-19 18:34:55,509 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-19 18:35:12,527 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-19 18:35:13,614 ::INFO ::[Logger]:: The Room Block Comments text matches the passed text.
+2021-07-19 18:35:13,616 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-19 18:35:14,625 ::DEBUG::[Logger]:: 19) The Room Block Comments comments matched the saved text.
+2021-07-19 18:35:29,945 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCendynRoomBlock page.
+2021-07-19 18:35:34,954 ::INFO ::[Logger]:: Switching into the iFrame.
+2021-07-19 18:35:36,012 ::INFO ::[Logger]:: The Event Block Comments text matches the passed text.
+2021-07-19 18:35:36,013 ::INFO ::[Logger]:: Switching out of the iFrame.
+2021-07-19 18:35:37,018 ::DEBUG::[Logger]:: 20) The Event Block comments matched the saved text.
+2021-07-19 18:35:39,162 ::INFO ::[Logger]:: eProposal:: Script ::Passed
+2021-07-19 18:35:40,183 ::INFO ::[Logger]:: E.N.D

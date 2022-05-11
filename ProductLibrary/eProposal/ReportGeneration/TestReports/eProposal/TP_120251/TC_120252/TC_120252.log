@@ -1,0 +1,44 @@
+2021-07-11 15:27:39,890 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-07-11 15:27:39,945 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-07-11 15:27:39,959 ::INFO ::[Logger]::  is used for Testing
+2021-07-11 15:27:39,966 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/Account/Login
+2021-07-11 15:27:39,968 ::INFO ::[Logger]:: Execution started at:-Jul-11-2021 15-27-39-PM
+2021-07-11 15:27:39,969 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-11 15:27:39,971 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-07-11 15:27:40,077 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_120252         XXXXXXXXXXXXXXXX
+2021-07-11 15:27:40,078 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-11 15:28:10,203 ::INFO ::[Logger]:: Inserted text in the Text_UserName element on the AdminLogin page.
+2021-07-11 15:28:14,348 ::INFO ::[Logger]:: Inserted text in the Text_Password element on the AdminLogin page.
+2021-07-11 15:28:25,597 ::INFO ::[Logger]:: Clicked the Button_LogIn element on the AdminLogin page.
+2021-07-11 15:28:27,670 ::INFO ::[Logger]:: Logged into ePFull Admin successfully.
+2021-07-11 15:28:27,672 ::DEBUG::[Logger]:: 1) Land on eSALES SUITE ADMINISTRATION
+2021-07-11 15:28:46,911 ::INFO ::[Logger]:: Clicked the Button_eProposal element on the AdminNavigation page.
+2021-07-11 15:28:46,912 ::DEBUG::[Logger]:: 2) Land on eProposal page.
+2021-07-11 15:28:58,275 ::INFO ::[Logger]:: Clicked the AdminProperties_PropertyDropDown_Button element on the AdminProperties page.
+2021-07-11 15:29:20,473 ::INFO ::[Logger]:: Selected the Cendyn - Hilton Dresden value from the AdminProperties_PropertyDropDown_Text drop down.
+2021-07-11 15:29:30,475 ::DEBUG::[Logger]:: 3) Page populates
+2021-07-11 15:29:53,565 ::INFO ::[Logger]:: Clicked the Link_SetupModuleSettings element on the AdminEProposal page.
+2021-07-11 15:29:53,566 ::DEBUG::[Logger]:: 4) Land on Property Module Settings
+2021-07-11 15:30:20,154 ::DEBUG::[Logger]:: 5) Noted.
+2021-07-11 15:31:07,147 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Email element on the EmployeeLogin page.
+2021-07-11 15:31:07,149 ::DEBUG::[Logger]:: 6) Entered UserName
+2021-07-11 15:31:14,721 ::INFO ::[Logger]:: Clicked the SSOLogin_Next element on the EmployeeLogin page.
+2021-07-11 15:31:18,861 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Password element on the EmployeeLogin page.
+2021-07-11 15:31:18,862 ::DEBUG::[Logger]:: 7) Clicked on Next button and entered password.
+2021-07-11 15:31:26,418 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-11 15:31:26,420 ::DEBUG::[Logger]:: 8) Clicked on Subimt button.
+2021-07-11 15:32:11,208 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-11 15:32:37,566 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-11 15:32:46,273 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-11 15:33:15,896 ::INFO ::[Logger]:: Clicked the PropertyDropDown_Button element on the EmployeeHome page.
+2021-07-11 15:33:43,460 ::INFO ::[Logger]:: Selected the Cendyn - Hilton Dresden value from the PropertyDropDown_Text drop down.
+2021-07-11 15:33:55,523 ::INFO ::[Logger]:: Clicked the WelcomeButton element on the EmployeeHome page.
+2021-07-11 15:34:05,957 ::INFO ::[Logger]:: Clicked the Link_UpdateMySettings element on the EmployeeHome page.
+2021-07-11 15:34:05,958 ::DEBUG::[Logger]:: 9) Land on the My Setting page.
+2021-07-11 15:34:19,586 ::INFO ::[Logger]:: Clicked the Tab_CustomizePDF element on the Settings page.
+2021-07-11 15:34:19,588 ::DEBUG::[Logger]:: 10) Land on the Customize PDF page
+2021-07-11 15:34:21,840 ::INFO ::[Logger]:: The module Group that include a Senior Staff Information is displayed.
+2021-07-11 15:34:21,856 ::INFO ::[Logger]:: The module EZ that include a Senior Staff Information is displayed.
+2021-07-11 15:34:21,857 ::DEBUG::[Logger]:: 11) They are!
+2021-07-11 15:34:23,984 ::INFO ::[Logger]:: eProposal:: Script ::Passed
+2021-07-11 15:34:24,539 ::INFO ::[Logger]:: E.N.D

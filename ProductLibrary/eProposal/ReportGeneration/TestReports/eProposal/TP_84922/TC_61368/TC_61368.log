@@ -1,0 +1,36 @@
+2021-07-19 20:07:52,862 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-07-19 20:07:53,022 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-07-19 20:07:53,043 ::INFO ::[Logger]::  is used for Testing
+2021-07-19 20:07:53,049 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/Account/Login
+2021-07-19 20:07:53,051 ::INFO ::[Logger]:: Execution started at:-Jul-19-2021 20-07-53-PM
+2021-07-19 20:07:53,053 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-19 20:07:53,054 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-07-19 20:07:53,055 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_61368         XXXXXXXXXXXXXXXX
+2021-07-19 20:07:53,082 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-19 20:08:13,285 ::INFO ::[Logger]:: Inserted text in the Text_UserName element on the AdminLogin page.
+2021-07-19 20:08:17,426 ::INFO ::[Logger]:: Inserted text in the Text_Password element on the AdminLogin page.
+2021-07-19 20:08:26,775 ::INFO ::[Logger]:: Clicked the Button_LogIn element on the AdminLogin page.
+2021-07-19 20:08:28,835 ::INFO ::[Logger]:: Logged into ePFull Admin successfully.
+2021-07-19 20:08:28,837 ::DEBUG::[Logger]:: 1) Logged in successfully.
+2021-07-19 20:08:40,160 ::INFO ::[Logger]:: Clicked the Button_eProposal element on the AdminNavigation page.
+2021-07-19 20:08:40,161 ::DEBUG::[Logger]:: 2) Land on eProposal page
+2021-07-19 20:08:50,046 ::INFO ::[Logger]:: Clicked the AdminProperties_PropertyDropDown_Button element on the AdminProperties page.
+2021-07-19 20:09:12,251 ::INFO ::[Logger]:: Selected the  value from the AdminProperties_PropertyDropDown_Text drop down.
+2021-07-19 20:09:22,252 ::DEBUG::[Logger]:: 3) Page populates
+2021-07-19 20:09:48,690 ::INFO ::[Logger]:: Clicked the Link_SetupModuleSettings element on the AdminEProposal page.
+2021-07-19 20:09:48,692 ::DEBUG::[Logger]:: 4) Opens in a new window or tab.
+2021-07-19 20:12:14,230 ::ERROR::[Logger]:: eProposal_Flow :: Script::Failed
+OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@id='ctl00_ctl00_MainContent_PageContent_ModuleSettingsGridView_ctl04_lblDisplayName']"}
+  (Session info: chrome=91.0.4472.124)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at eProposal.AppModule.Admin.AdminEProposal.Assign_DisplayNames() in E:\2020\April\eMenus_Atomation\ProductLibrary\eProposal\AppModule\Admin\AdminEProposal.cs:line 68
+   at eProposal.AppModule.MainAdminApp.MainAdminApp.TC_61368() in E:\2020\April\eMenus_Atomation\ProductLibrary\eProposal\AppModule\MainAdminApp\UI\MySettings\Settings\TP_84922_SpecialOffers.cs:line 45
+   at eProposal.AppModule.MainAdminApp.MainAdminApp.TP_84922() in E:\2020\April\eMenus_Atomation\ProductLibrary\eProposal\AppModule\MainAdminApp.cs:line 321
+   at eProposalSpecialOffers.ePFull_TP_84922_SpecialOffers.TC_61368() in E:\2020\April\eMenus_Atomation\ProductLibrary\eProposal\TestPlan\UI\MySettings\Settings\ePFull_TP_84922_SpecialOffers.cs:line 51
+2021-07-19 20:12:26,027 ::INFO ::[Logger]:: E.N.D

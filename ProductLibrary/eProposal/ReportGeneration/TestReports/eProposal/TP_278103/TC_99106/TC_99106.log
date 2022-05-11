@@ -1,0 +1,41 @@
+2021-07-23 17:39:58,454 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-07-23 17:39:58,456 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-07-23 17:39:58,458 ::INFO ::[Logger]::  is used for Testing
+2021-07-23 17:39:58,468 ::INFO ::[Logger]:: This is the login page.https://login.cendynaccess.com/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DCAOAFRON%26response_mode%3Dform_post%26response_type%3Dcode%2520id_token%26scope%3Dopenid%2520roles%2520profile%2520write%2520offline_access%2520CendynAccessApi%26state%3DOpenIdConnect.AuthenticationProperties%253DyRNMHEO8NRP1nDSqA5zLEZLexHxeFLudIbY55BNhqMO1EeidubnBPJV4-zVFUSFvaXDyD2zj9wAjIby7RgDKRbLatzQRsi3AuD8Mv-T9fB8UuFGj_QeomAO0e39V4c_yDnNKqmfWAv0wdM6mEYjgMQ%26nonce%3D637626389910153953.YWM0MDc0NDYtYjU1NC00NTJlLThmMjctZTNkZWQ5MjNhM2MwN2JkNjY5ODMtOTY1Ny00NTZkLTgyMTAtYmNlMWJiYzY4ODFk%26redirect_uri%3Dhttps%253A%252F%252Fwww.cendynaccess.com%26ui_locales%3Den-US
+2021-07-23 17:39:58,902 ::INFO ::[Logger]:: Execution started at:-Jul-23-2021 17-39-58-PM
+2021-07-23 17:39:58,903 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-23 17:39:58,904 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-07-23 17:39:58,905 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_99106         XXXXXXXXXXXXXXXX
+2021-07-23 17:39:58,906 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-23 17:40:33,161 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Email element on the EmployeeLogin page.
+2021-07-23 17:40:33,163 ::DEBUG::[Logger]:: 1) Entered UserName
+2021-07-23 17:40:41,771 ::INFO ::[Logger]:: Clicked the SSOLogin_Next element on the EmployeeLogin page.
+2021-07-23 17:40:45,889 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Password element on the EmployeeLogin page.
+2021-07-23 17:40:45,890 ::DEBUG::[Logger]:: 2) Clicked on Next button and entered password.
+2021-07-23 17:40:54,468 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-23 17:40:54,469 ::DEBUG::[Logger]:: 3) Clicked on Subimt button.
+2021-07-23 17:41:20,317 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-23 17:42:00,356 ::DEBUG::[Logger]:: 4) 
+2021-07-23 17:42:03,617 ::DEBUG::[Logger]:: 5) Logged in successfully.
+2021-07-23 17:42:22,038 ::INFO ::[Logger]:: Clicked the PropertyDropDown_Button element on the EmployeeHome page.
+2021-07-23 17:42:49,127 ::INFO ::[Logger]:: Selected the Cendyn – DEV - BBQ HIlton value from the PropertyDropDown_Text drop down.
+2021-07-23 17:42:49,129 ::DEBUG::[Logger]:: 6) Test property selected: Cendyn – DEV - BBQ HIlton
+2021-07-23 17:43:09,435 ::INFO ::[Logger]:: Clicked the CreateEdit_eProposalButton element on the EmployeeHome page.
+2021-07-23 17:43:15,437 ::DEBUG::[Logger]:: 7) Land on the Compose page.
+2021-07-23 17:43:22,846 ::INFO ::[Logger]:: Inserted text in the ProposalNameText element on the ProposalCompose page.
+2021-07-23 17:43:28,034 ::INFO ::[Logger]:: Clicked the Client_SearchLink element on the ProposalCompose page.
+2021-07-23 17:43:32,247 ::INFO ::[Logger]:: Inserted text in the Client_SearchText element on the ProposalCompose page.
+2021-07-23 17:43:37,353 ::INFO ::[Logger]:: Clicked the Button_Client_Search_Search element on the ProposalCompose page.
+2021-07-23 17:43:43,752 ::INFO ::[Logger]:: Clicked the Button_ClientSearchResult element on the ProposalCompose page.
+2021-07-23 17:43:43,753 ::DEBUG::[Logger]:: 8) Data Entered
+2021-07-23 17:44:02,930 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-23 17:44:08,432 ::DEBUG::[Logger]:: 9) Room Block
+2021-07-23 17:44:25,034 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-23 17:44:27,036 ::DEBUG::[Logger]:: 10) Event Block
+2021-07-23 17:44:44,976 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-23 17:44:46,977 ::DEBUG::[Logger]:: 11) Select
+2021-07-23 17:45:04,026 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-23 17:45:06,028 ::DEBUG::[Logger]:: 12) Review And Send
+2021-07-23 17:45:21,834 ::DEBUG::[Logger]:: 13) Found From Name.
+2021-07-23 17:45:24,171 ::INFO ::[Logger]:: eProposal:: Script ::Passed
+2021-07-23 17:45:24,569 ::INFO ::[Logger]:: E.N.D

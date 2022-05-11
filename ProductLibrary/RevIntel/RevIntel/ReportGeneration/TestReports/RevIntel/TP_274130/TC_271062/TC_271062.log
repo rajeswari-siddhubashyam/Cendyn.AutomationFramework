@@ -1,0 +1,15 @@
+2021-01-04 12:12:24,708 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-01-04 12:12:25,945 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-01-04 12:12:25,968 ::INFO ::[Logger]::  is used for Testing
+2021-01-04 12:12:25,977 ::INFO ::[Logger]:: This is the login page.https://ssodev.rainmakertest.org/Error/General?aspxerrorpath=/Login
+2021-01-04 12:12:25,979 ::INFO ::[Logger]:: Execution started at:-Jan-04-2021 12-12-25-PM
+2021-01-04 12:12:25,980 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-01-04 12:12:25,982 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-01-04 12:12:25,984 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_271062         XXXXXXXXXXXXXXXX
+2021-01-04 12:12:25,985 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-01-04 12:12:28,024 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=744}
+2021-01-04 12:12:28,193 ::INFO ::[Logger]:: This test cases will Verify the Help tool is displaying in all authenticated page
+2021-01-04 12:12:31,685 ::FATAL::[Logger]:: System.NullReferenceException: Object reference not set to an instance of an object.
+   at BaseUtility.Utility.Helper.ElementEnterText(IWebElement element, String text) in E:\CendynQAAutomation\BaseUtility\Utility\Helper.cs:line 325
+2021-01-04 12:12:31,799 ::FATAL::[Logger]:: Unable to select text in the Enter_EmailAddress element on the Login page.
+2021-01-04 12:12:38,632 ::INFO ::[Logger]:: E.N.D

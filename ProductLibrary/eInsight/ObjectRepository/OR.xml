@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <UI>
+    <Login>
+      <Parameter key="Login_Email">Username</Parameter>
+      <Parameter key="Login_Password">Password</Parameter>
+      <Parameter key="Login_Submit">submit</Parameter>
+      <Parameter key="Login_ForgotPassword">//a[contains(.,'Forgot Password')]</Parameter>
+      <Parameter key="Login_ResetPassword">//a[contains(text(), 'Reset Password')]</Parameter>
+      <Parameter key="Login_NewPassword">newPassword</Parameter>
+      <Parameter key="Login_NewConfirmPassword">confirmPassword</Parameter>
+      <Parameter key="Login_ResetPassword_Submit">submitResetPassword</Parameter>
+      <Parameter key="Login_IFrame">//iframe[@title='TrustArc Cookie Consent Manager']</Parameter>
+      <Parameter key="Login_IFrame_AgreeProceed">//a[contains(text(),'Accept all Cookies')]</Parameter>
+      <!--<Parameter key="Login_IFrame_AgreeProceed">//a[contains(text(),'Agree and Proceed')]</Parameter>-->
+      <Parameter key="Login_IFrame_AgreeProceed_Close">//a[contains(text(),'Close')]</Parameter>
+    </Login>
+
+    <UserActions>
+      <!--<Parameter key="User_UserActions">//span[contains(text(), '#EmailAddress#')]</Parameter>--><!--//img[@alt='#Initials#']-->
+      <Parameter key="User_UserActions">user_actions</Parameter>
+      <Parameter key="UserAction_MyPreference">//a[@id='panelemail']</Parameter>
+      <Parameter key="UserAction_MyPreference_Region">RegionPreference</Parameter>
+      <Parameter key="UserAction_MyPreference_Currency">Currency</Parameter>
+      <Parameter key="UserAction_MyPreference_Save">//button[@onclick='savePreference()']</Parameter>
+    </UserActions>
+
+    <Admin>
+      <Parameter key="Admin_AllTabs">//*[contains(text(), 'All Tabs')]</Parameter>
+      <Parameter key="Admin_CompanySetting_HasCompanySetting">//td[contains(text(), '[SettingName]')]//following::a</Parameter>
+      <Parameter key="Admin_Click_CompanySettings">//td[contains(text(), 'Company Settings')]</Parameter>
+      <Parameter key="Admin_CompanySetting_Textbox_SettingValue">SettingValue</Parameter>
+      <Parameter key="Admin_CompanySetting_Button_Submit">submitCompanySettings</Parameter>
+    </Admin>
+
+    <Navigation>
+      <Parameter key="UserProfileIcon">user_actions</Parameter>
+      <Parameter key="AdminLink">//a[(@title='Admin')]</Parameter>
+      <Parameter key="MyPreferenceLink">//a[contains(@onClick,'preference')]</Parameter>
+      <Parameter key="SettingsLink">//a[(@title='Settings')]</Parameter>
+      <Parameter key="Navigation_Home">//a[@href='/Home.mvc']</Parameter>
+      <Parameter key="Navigation_Profile">//a[contains(.,'Profile')]</Parameter>
+      <Parameter key="Navigation_Audiences">//a[contains(.,'Audience')]</Parameter>
+      <Parameter key="Navigation_CreateCampaign">//a[contains(.,'Create Campaign')]</Parameter>
+      <Parameter key="Navigation_ManageCampaign">//a[contains(.,'Manage Campaign')]</Parameter>
+      <Parameter key="Navigation_Calendar">//a[contains(.,'Calendar')]</Parameter>
+      <Parameter key="Navigation_eGallery">//a[contains(.,'eGallery')]</Parameter>
+      <Parameter key="Navigation_Reports"></Parameter>
+      <Parameter key="Navigation_Survey">//a[@href='/Survey.mvc/Survey']</Parameter>
+      <Parameter key="Navigation_Link_Monitoring">//a[@title='Monitoring']</Parameter>
+      <Parameter key="Navigation_Link_Settings">//a[@title='Settings']</Parameter>
+      <Parameter key="Navigation_Link_Admin">//a[@title='eContact Admin']</Parameter>
+      <Parameter key="Navigation_Link_MainMenu">//a[@title='Main Menu']</Parameter>
+      <Parameter key="Navigation_Link_Help">//a[@title='Help']</Parameter>
+      <Parameter key="Navigation_Link_LogOut">//a[@title='Log Out']</Parameter>
+      <Parameter key="Navigation_Link_ProductList_Show">//span[@class='icon down']</Parameter>
+      <Parameter key="Navigation_Link_ProductList_eInsight">/html/body/div[2]/div[2]/div[1]/nav/ul/li/a</Parameter>
+      <Parameter key="Navigation_Link_ProductList_eConcierge">//a[contains(.,'eConcierge')]</Parameter>
+      <Parameter key="Navigation_Link_ProductList_eSurvey">//a[contains(.,'eSurvey')]</Parameter>
+      <Parameter key="Navigation_Link_ProductList_Loyalty">//a[contains(.,'+Loyalty')]</Parameter>
+      <Parameter key="Navigation_Link_ProductList_eInsightReports">//spSearchByan[contains(.,'Insight      Reports')]</Parameter>
+    </Navigation>
+
+    <Profile>
+      <Parameter key="Profile_Client">SelectedClient</Parameter>
+      <!--<Parameter key="Profile_Sub_Client">SelectedCompany</Parameter>-->
+      <Parameter key="Profile_Sub_Client">select2-client_select-container</Parameter>
+      <Parameter key="Profile_Sub_Client_SearchField">select2-search__field</Parameter>
+      <Parameter key="Profile_Company">SelectedCompany</Parameter>
+      <Parameter key="Profile_SearchGuestsTab">//span[contains(.,'Search Guests')]</Parameter>
+      <Parameter key="Profile_AddGuestsTab">//span[contains(.,'Add Guest(s)')]</Parameter>
+      <Parameter key="Profile_UnsubscribesTab">//span[contains(.,'Unsubscribes')]</Parameter>
+      <Parameter key="Profile_MergeGuestRecordsTab">//span[contains(.,'Merge Guest Records Auto Dedupe')]</Parameter>
+
+      <Parameter key="Profile_SearchGuestsSearchExpression">SearchExpression</Parameter>
+      <Parameter key="Profile_SearchGuestsSearchBy">SearchBy</Parameter>
+      <Parameter key="Profile_SearchGuestsSearchFor">q</Parameter>
+      <Parameter key="Profile_SearchGuestsSearch">search</Parameter>
+      <Parameter key="Profile_SearchGuestsCancel">Cancel</Parameter>
+      <Parameter key="Profile_SearchByCustomerPresent">//div[@id='searchResultsRegular']//following::tr[@id='#CustomerID#']</Parameter>
+      <Parameter key="Profile_SearchGuestsFirstResult">/html/body/div[2]/div[2]/table/tbody/tr/td[2]/div[3]/div[3]/div[3]/div[1]/div/div[3]/div/div[3]/div[3]/table/tbody/tr/td[6]/a</Parameter>
+
+      <Parameter key="Profile_AddGuestsUploadNewFileTab">//span[contains(.,'Upload New File')]</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestTab">//span[contains(.,'Manually Add Guest')]</Parameter>
+      <Parameter key="Profile_AddGuestsUploadNewFileCreateNewSourceRb">radioNewSource</Parameter>
+      <Parameter key="Profile_AddGuestsUploadNewFileCreateNewSourceName">txtNewSource</Parameter>
+      <Parameter key="Profile_AddGuestsUploadNewFileCreateNewSourceChooseFile">uploadFile1</Parameter>
+      <Parameter key="Profile_AddGuestsUploadNewFileCreateNewSourceSubmit">submit1</Parameter>
+      <Parameter key="Profile_AddGuestsUploadNewFileCreateNewSourceReset">cancel1</Parameter>
+      <Parameter key="Profile_AddGuestsUploadNewFileUpdateExistingSourceRb">//input[@value='existingsource']</Parameter>
+      <Parameter key="Profile_AddGuestsUploadNewFileUpdateExistingSourceName">selectExisting</Parameter>
+      <Parameter key="Profile_AddGuestsUploadNewFileUpdateExistingSourceName_SelectSource">//select[@id='selectExisting']/option[@value='#SourceID#']</Parameter>
+      <Parameter key="Profile_AddGuestsUploadNewFileUpdateExistingSourceChooseFile">uploadFile2</Parameter>
+      <Parameter key="Profile_AddGuestsUploadNewFileUpdateExistingSourceSubmit">submit2</Parameter>
+      <Parameter key="Profile_AddGuestsUploadNewFileUpdateExistingSourceReset">cancel2</Parameter>
+
+      <Parameter key="Profile_AddGuestsManuallyAddGuestPrefix">//select[@name='prefix']</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestFirstName">//input[@name='firstname']</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestLastName">//input[@name='lastname']</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestAddress1">//input[@name='address']</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestAddress2">//input[@name='address2']</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestCity">//input[@name='city']</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestState">//input[@name='state']</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestZip">//input[@name='zipcode']</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestCountryCode">//select[@name='country']</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestNewSourceNameRb">radioNewSource</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestNewSourceNameText">txtNewSource</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestExistingSourceRb">radioExistingSource</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestExistingSourceDropdown">selectExisting</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestEmail">//input[@name='emailaddress']</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestCompany">//input[@name='company']</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestTitle">//input[@name='title']</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestWorkPhone">//input[@name='workphone']</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestWorkExt">//input[@name='workphoneext']</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestFax">//input[@name='fax']</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestMobile">//input[@name='cellphone']</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestHome">//input[@name='homephone']</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestSourceOfBusiness">//input[@name='sourceofbusiness']</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestNext">//span[contains(.,'Next')]</Parameter>
+      <Parameter key="Profile_AddGuestsManuallyAddGuestReset">//span[contains(.,'Reset')]</Parameter>
+
+      <Parameter key="Profile_UnsubscribesFileUploadTab">//span[contains(.,'Add Unsub - File Upload')]</Parameter>
+      <Parameter key="Profile_UnsubscribesOneAtATimeTab">//span[contains(.,'Add Unsub - One at a Time')]</Parameter>
+      <Parameter key="Profile_UnsubscribesFileUploadSearchUnsubscribedTab">//span[contains(.,'Search Unsubscribed')]</Parameter>
+      <Parameter key="Profile_UnsubscribesFileUploadBrowse">//input[@name='uploadFile']</Parameter>
+      <Parameter key="Profile_UnsubscribesFileUploadSubmit">submit</Parameter>
+      <Parameter key="Profile_UnsubscribesFileUploadCancel">cancel</Parameter>
+      <Parameter key="Profile_UnsubscribesOneAtATimeEmail">email</Parameter>
+      <Parameter key="Profile_UnsubscribesOneAtATimeProjectId">projectid</Parameter>
+      <Parameter key="Profile_UnsubscribesOneAtATimeMethod">method</Parameter>
+      <Parameter key="Profile_UnsubscribesOneAtATimeComments">//input[@name='comments']</Parameter>
+      <Parameter key="Profile_UnsubscribesOneAtATimeSubmit">submitUnsub</Parameter>
+      <Parameter key="Profile_UnsubscribesOneAtATimeCancel">cancel</Parameter>
+      <Parameter key="Profile_UnsubscribesSearchUnsubscribedSearchExpression">UnsubscribeSearchExpression</Parameter>
+      <Parameter key="Profile_UnsubscribesSearchUnsubscribedSearchBy">UnsubscribeSearchBy</Parameter>
+      <Parameter key="Profile_UnsubscribesSearchUnsubscribedSearchFor">UnsubscribeSearchFor</Parameter>
+      <Parameter key="Profile_UnsubscribesSearchUnsubscribedSearch">unsubscribe-search</Parameter>
+      <Parameter key="Profile_UnsubscribesSearchUnsubscribedCancel">unsubscribe-abortSearch</Parameter>
+
+      <Parameter key="Profile_MergeGuestRecordsManualMergeTab">MProcessTab</Parameter>
+      <Parameter key="Profile_MergeGuestRecordsPotentialMergeTab">DDupeCustomerTab</Parameter>
+      <Parameter key="Profile_MergeGuestRecordsMergeHistoryTab">DupeMerge-History-Ref</Parameter>
+      <Parameter key="Profile_MergeGuestRecordsManualMergeFirstName">txtSearchFirst</Parameter>
+      <Parameter key="Profile_MergeGuestRecordsManualMergeLastName">txtSearchLast</Parameter>
+      <Parameter key="Profile_MergeGuestRecordsManualMergeEmail">txtSearchEmail</Parameter>
+      <Parameter key="Profile_MergeGuestRecordsManualMergeZipCode">txtZipCode</Parameter>
+      <Parameter key="Profile_MergeGuestRecordsManualMergeCity">txtCity</Parameter>
+      <Parameter key="Profile_MergeGuestRecordsManualMergeState">txtState</Parameter>
+      <Parameter key="Profile_MergeGuestRecordsManualMergeCompany">txtCompany</Parameter>
+      <Parameter key="Profile_MergeGuestRecordsManualMergeSalutation">txtSalutation</Parameter>
+      <Parameter key="Profile_MergeGuestRecordsManualMergeSearchGuest">merge-search</Parameter>
+      <Parameter key="Profile_MergeGuestRecordsManualMergeCancel">MergeAbortSearch</Parameter>
+      <Parameter key="Profile_MergeGuestRecordsManualMergeAddToMergeProcess">btnAddToDeDup</Parameter>
+      <Parameter key="Profile_MergeGuestRecordsManualMergeRecordsToMerge">btnMoveToDupRecords</Parameter>
+      <Parameter key="Profile_MergeGuestRecordsManualMergeCompare">Compare</Parameter>
+      <Parameter key="Profile_CustomerProfileImage">//div[contains(@class, 'user-picture')]</Parameter>
+      <Parameter key="Profile_CampaignHistory">//a[contains(text(),'Campaigns History')]</Parameter>
+      <Parameter key="Profile_Select_CampaignName">projectid</Parameter>
+      <Parameter key="Profile_StayTab">//a[contains(@href, '#stays-div#CustomerID#')]</Parameter>
+      <Parameter key="Profile_StayTabReservationPresent">//div[@id='staysRegular#CustomerID#']//following::td[contains(text(), '#ReservationNum#')]</Parameter>
+      <Parameter key="Profile_Grid_ReservationNumber">//a[contains(text(), '#ReservationNumber#')]</Parameter>
+      <Parameter key="Profile_Grid_CampaignHistory_NumberofRows">//td[contains(@id, 'campaignHistoryRegularPager#CustomerID#_center')]//following::*//select/option[@value='#Option#']</Parameter>
+    </Profile>
+
+    <Home>
+      <Parameter key="Home_Vertical_Nav_Profile">profile</Parameter>
+      <Parameter key="Home_Tab_AtAGlance_AllActivity">//span[contains(.,'All Activity')]</Parameter>
+      <Parameter key="Home_Tab_AtAGlance_Created">//span[contains(.,'Created')]</Parameter>
+      <Parameter key="Home_Tab_AtAGlance_CriteriaChanged">//span[contains(.,'Criteria Changed')]</Parameter>
+      <Parameter key="Home_Tab_AtAGlance_TemplateChanged">//span[contains(.,'Template Changed')]</Parameter>
+      <Parameter key="Home_Tab_AtAGlance_SentToTestEmailsHistory">//a[contains(.,'Sent to Test Emails History')]</Parameter>
+      <Parameter key="Home_Tab_AtAGlance_DeliveryReportRequested">//span[contains(.,'Delivery Report Requested')]</Parameter>
+      <Parameter key="Home_Tab_AtAGlance_DeliveryReportReceived">//span[contains(.,'Delivery Report Received')]</Parameter>
+      <Parameter key="Home_Tab_AtAGlance_ProceedForApproval">//span[contains(.,'Proceed for Approval')]</Parameter>
+      <Parameter key="Home_Tab_AtAGlance_ApprovalRequested">//a[contains(.,'Approval Requested')]</Parameter>
+      <Parameter key="Home_Tab_AtAGlance_Approved">//span[contains(.,'Approved')]</Parameter>
+      <Parameter key="Home_Tab_AtAGlance_Disapproved">//span[contains(.,'Disapproved')]</Parameter>
+      <Parameter key="Home_Tab_AtAGlance_Scheduled">//a[contains(.,'Scheduled')]</Parameter>
+      <Parameter key="Home_Tab_AtAGlance_Rescheduled">//span[contains(.,'Rescheduled')]</Parameter>
+      <Parameter key="Home_Tab_AtAGlance_ScheduleDeactivated">//span[contains(.,'Schedule Deactivated')]</Parameter>
+      <Parameter key="Home_Tab_AtAGlance_Sent">/html/body/div[2]/div[2]/table/tbody/tr/td[2]/div[3]/div/div[1]/div[2]/div/ul/li[16]/a/span</Parameter>
+      <Parameter key="Home_Tab_AtAGlance_Cancelled">//span[contains(.,'Cancelled')]</Parameter>
+      <Parameter key="Home_Tab_AtAGlance_Previous">//a[contains(.,'«')]</Parameter>
+      <Parameter key="Home_Tab_AtAGlance_Next">//a[contains(.,'»')]</Parameter>
+      <Parameter key="Home_Link_AtAGlance_GoToTab_Menu">//td[contains(.,'Go to Tab')]</Parameter>
+      <Parameter key="Home_Link_AtAGlance_GoToTab_AllActivity">//td[contains(.,'All Activity')]</Parameter>
+      <Parameter key="Home_Link_AtAGlance_GoToTab_Created">//td[contains(.,'Created')]</Parameter>
+      <Parameter key="Home_Link_AtAGlance_GoToTab_CriteriaChanged">//td[contains(.,'Criteria Changed')]</Parameter>
+      <Parameter key="Home_Link_AtAGlance_GoToTab_TemplateChanged">//td[contains(.,'Template Changed')]</Parameter>
+      <Parameter key="Home_Link_AtAGlance_GoToTab_SentToTestEmailsHistory">//td[contains(.,'Sent to Test Emails History')]</Parameter>
+      <Parameter key="Home_Link_AtAGlance_GoToTab_DeliveryReportRequested">//td[contains(.,'Delivery Report Requested')]</Parameter>
+      <Parameter key="Home_Link_AtAGlance_GoToTab_DeliveryReportReceived">//td[contains(.,'Delivery Report Received')]</Parameter>
+      <Parameter key="Home_Link_AtAGlance_GoToTab_ProceedForApproval">//td[contains(.,'Proceed for Approval')]</Parameter>
+      <Parameter key="Home_Link_AtAGlance_GoToTab_ApprovalRequested">//td[contains(.,'Approval Requested')]</Parameter>
+      <Parameter key="Home_Link_AtAGlance_GoToTab_Approved">//td[contains(.,'Approved')]</Parameter>
+      <Parameter key="Home_Link_AtAGlance_GoToTab_Disapproved">//td[contains(.,'Disapproved')]</Parameter>
+      <Parameter key="Home_Link_AtAGlance_GoToTab_Scheduled">//td[contains(.,'Scheduled')]</Parameter>
+      <Parameter key="Home_Link_AtAGlance_GoToTab_Rescheduled">//td[contains(.,'Rescheduled')]</Parameter>
+      <Parameter key="Home_Link_AtAGlance_GoToTab_ScheduleDeactivated">//td[contains(.,'Schedule Deactivated')]</Parameter>
+      <Parameter key="Home_Link_AtAGlance_GoToTab_Sent">//td[contains(.,'Sent')]</Parameter>
+      <Parameter key="Home_Link_AtAGlance_GoToTab_Cancelled">//td[contains(.,'Cancelled')]</Parameter>
+      <Parameter key="Home_Link_AtAGlance_Campaign_1">/html/body/div[2]/div[2]/table/tbody/tr/td[2]/div[3]/div/div[1]/div[2]/div/div[2]/div[1]/div/table/tbody/tr[2]/td[4]/a</Parameter>
+      <Parameter key="Home_Link_AtAGlance_Campaign_2">/html/body/div[2]/div[2]/table/tbody/tr/td[2]/div[3]/div/div[1]/div[2]/div/div[2]/div[1]/div/table/tbody/tr[3]/td[4]/a</Parameter>
+      <Parameter key="Home_Link_AtAGlance_Campaign_3">/html/body/div[2]/div[2]/table/tbody/tr/td[2]/div[3]/div/div[1]/div[2]/div/div[2]/div[1]/div/table/tbody/tr[4]/td[4]/a</Parameter>
+      <Parameter key="Home_Link_AtAGlance_ViewAllActivity">//a[contains(.,'View All Activity')]</Parameter>
+      <Parameter key="Home_Tab_RecentCampaigns">//a[contains(.,'Recent Campaigns')]</Parameter>
+      <Parameter key="Home_Tab_Dashboard">//a[contains(.,'Dashboard')]</Parameter>
+      <Parameter key="Home_DropDown_RecentlySentCampaigns_SelectClient">//select[@id='SelectedClient']</Parameter>
+      <Parameter key="Home_DropDown_RecentlySentCampaigns_SelectCompany">//select[@id='SelectedCompany']</Parameter>
+      <Parameter key="Home_Tab_RecentlySentCampaigns_Email">/html/body/div[2]/div[2]/table/tbody/tr/td[2]/div[3]/div/div[1]/div[3]/div[3]/ul/li[1]/a/span</Parameter>
+      <Parameter key="Home_Tab_RecentlySentCampaigns_RealTime">//span[contains(.,'Real-time')]</Parameter>
+      <Parameter key="Home_Tab_RecentlySentCampaigns_TextMessage">//span[contains(.,'Text Message')]</Parameter>
+      <Parameter key="Home_Tab_RecentlySentCampaigns_KeywordTextMessage">//span[contains(.,'Keyword Text Message')]</Parameter>
+      <Parameter key="Home_Tab_RecentlySentCampaigns_TextMessageResponses">//span[contains(.,'Text Message Responses')]</Parameter>
+      <Parameter key="Home_DropDown_RecentlySentCampaigns_ShowLast">//select[@id='NumbMonths']</Parameter>
+      <Parameter key="Home_RecentlySentCampaign_DateRange_Marketing">MarketingCampaignsNumbMonths</Parameter>
+      <Parameter key="Home_RecentlySentCampaign_DateRange_Trigger">TriggerCampaignsNumbMonths</Parameter>
+      <Parameter key="Home_RecentlySentCampaign_DateRange_Transactionals">NumbDays</Parameter>
+      <Parameter key="Home_Button_RecentlySentCampaigns_CalendarFrom">//input[@id='RecentCampaignsFrom']</Parameter>
+      <Parameter key="Home_Button_RecentlySentCampaigns_CalendarThrough">//input[@id='RecentCampaignsThru']</Parameter>
+      <Parameter key="Home_Button_RecentlySentCampaigns_Merge">//button[@id='emailCampaignsMerger']</Parameter>
+      <Parameter key="Home_Button_RecentlySentCampaigns_FirstPage">//span[@class='ui-icon ui-icon-seek-first']</Parameter>
+      <Parameter key="Home_Button_RecentlySentCampaigns_PreviousPage">//span[@class='ui-icon ui-icon-seek-prev']</Parameter>
+      <Parameter key="Home_Button_RecentlySentCampaigns_NextPage">//span[@class='ui-icon ui-icon-seek-next']</Parameter>
+      <Parameter key="Home_Button_RecentlySentCampaigns_LastPage">//span[@class='ui-icon ui-icon-seek-end']</Parameter>
+      <Parameter key="Home_Text_RecentlySentCampaigns_PageNumber">//input[@class='ui-pg-input']</Parameter>
+      <Parameter key="Home_DropDown_RecentlySentCampaigns_DisplayResultsNumber">//select[@class='ui-pg-selbox']</Parameter>
+      <Parameter key="Home_Button_RecentlySentCampaigns_ExcelReport">//img[@class='download']</Parameter>
+      <Parameter key="Home_Option_DatatableLength_Marketing">//select[contains(@name, 'MarketingCampaignsDt_table_length')]</Parameter>
+      <Parameter key="Home_Option_DatatableLength_Trigger">//select[contains(@name, 'TriggerCampaignsDt_table_length')]</Parameter>
+      <Parameter key="Home_Option_DatatableLength_Transactional">//select[contains(@name, 'RealTimeCampaignsDt_Table_length')]</Parameter>
+          <Parameter key="Home_RecentlySentCampaign_DateRange_Trigger_NoResult">//div[contains(text(),'No Results Available')]</Parameter>
+    </Home>
+
+    <ManageCampaign>
+      <Parameter key="ManageCampaign_ClientDDM">SelectedClient</Parameter>
+      <Parameter key="ManageCampaign_CompanyDDM">SelectedCompany</Parameter>
+      <Parameter key="ManageCampaign_AllTab">lnkManageCampaignsAll</Parameter>
+      <Parameter key="ManageCampaign_DraftTab">lnkManageCampaignsDraft</Parameter>
+      <Parameter key="ManageCampaign_DeliverabilityTab">lnkManageCampaignsAwaitingDeliv</Parameter>
+      <Parameter key="ManageCampaign_AwaitingApprovalTab">lnkManageCampaignsAwaitingApproval</Parameter>
+      <Parameter key="ManageCampaign_ApprovedTab">lnkManageCampaignsApproved</Parameter>
+      <Parameter key="ManageCampaign_RecurringTab">lnkManageCampaignsRecurring</Parameter>
+      <Parameter key="ManageCampaign_ScheduledTab">lnkManageCampaignsScheduled</Parameter>
+      <Parameter key="ManageCampaign_DisapprovedTab">lnkManageCampaignsDisapproved</Parameter>
+      <Parameter key="ManageCampaign_SearchTab">lnkManageCampaignsSearch</Parameter>
+      <Parameter key="ManageCampaign_Search_SearchFieldDDM">SearchFieldMatch</Parameter>
+      <Parameter key="ManageCampaign_Search_ConditionDDM">SearchExpressionMatch</Parameter>
+      <Parameter key="ManageCampaign_Search_Input">querymatchinput</Parameter>
+      <Parameter key="ManageCampaign_Search_SearchDateDDM">SearchFieldDate</Parameter>
+      <Parameter key="ManageCampaign_Search_BetweenFirst">querydateafterinput</Parameter>
+      <Parameter key="ManageCampaign_Search_BetweenSecond">querydatebeforeinput</Parameter>
+      <Parameter key="ManageCampaign_Search_SearchButton">searchcontrolsubmit</Parameter>
+      <Parameter key="ManageCampaign_Search_PreviewLink">//a[contains(.,'Preview')]</Parameter>
+      <Parameter key="ManageCampaign_Search_CriteriaLink">//a[@class='previewTemplateImg iframe_modal xlarge lnkProjectCriteria']</Parameter>
+      <Parameter key="ManageCampaign_Search_CustomerDetails">//a[contains(.,'Customer Details')]</Parameter>
+      <Parameter key="ManageCampaign_Search_DynamicContentLink">//a[contains(.,'Dynamic Content')]</Parameter>
+      <Parameter key="ManageCampaign_Search_HistoryLink">//a[contains(.,'History')]</Parameter>
+      <Parameter key="ManageCampaign_Search_ReportsLink">//a[contains(.,'Reports')]</Parameter>
+      <Parameter key="ManageCampaign_Search_MultiLanguageLink">//a[contains(.,'Multi-Language')]</Parameter>
+      <Parameter key="ManageCampaign_Clone">clone</Parameter>
+      <Parameter key="ManageCampaign_Search_PreviewClose">//span[@title='Close']</Parameter>
+      <Parameter key="ManageCampaign_Search_CriteriaClose">//a[@class='ui-dialog-titlebar-close ui-corner-all ui-state-hover ui-state-focus']</Parameter>
+      <Parameter key="ManageCampaign_Search_CustomerDetailsClose">//a[contains(@class,'ui-dialog-titlebar-close ui-corner-all ui-state-focus ui-state-hover')]</Parameter>
+      <Parameter key="ManageCampaign_Search_DynamicContentClose">//span[@title='Close']</Parameter>
+      <Parameter key="ManageCampaign_Search_HistoryClose">//a[contains(@class,'ui-dialog-titlebar-close ui-corner-all ui-state-focus ui-state-hover')]</Parameter>
+      <Parameter key="ManageCampaign_Search_ReportsClose">//a[contains(@class,'ui-dialog-titlebar-close ui-corner-all ui-state-focus ui-state-hover')]</Parameter>
+      <Parameter key="ManageCampaign_MultiLanguageClose">//span[@title='Close']</Parameter>
+      <Parameter key="ManageCampaign_Button_CDetails_ViewCampaignRecipients">ctecustomerDetails</Parameter>
+      <Parameter key ="ManageCampaign_DDM_SearchBy">Columns</Parameter>
+      <Parameter key ="ManageCampaign_DDM_SearchExpression">Operators</Parameter>
+      <Parameter key ="ManageCampaign_DDM_SearchValue">pattern</Parameter>
+      <Parameter key="ManageCampaign_CustomerDetailsVRD_ClickSearch">customer-details-search</Parameter>
+      <Parameter key="CASL_checkbox">CASL_checkbox</Parameter>
+      <Parameter key="SubmitSendToTestEmail">//*[@id='submitRequestSeedList']</Parameter>
+      <Parameter key="QuickSend_EmailtoSelf">//*[@id='SeedListTree']/ul/li[1]/ul/li/span/span[2]</Parameter>
+      <Parameter key="ManageCampaign_ContinueDraft">//*[@id='DRAFT']</Parameter>
+      <Parameter key="ManageCampaign_EditSchedule">//*[@id='editSchedule']</Parameter>
+      <Parameter key="ManageCampaign_EditSchedule_Confirm">//span[contains(text(), 'Ok')]</Parameter>
+      <!--//*[@id='fullwrap_new']/div[13]/div[11]/button[1]-->
+      <Parameter key="ManageCampaign_EditCampaign">//*[@id = 'edit' and contains(@href, '#ProjectID#')]</Parameter>
+      <Parameter key="ManageCampaign_ScheduleCampaign">//*[@id = 'schedule' and contains(@href, '6417357')]</Parameter>
+      <Parameter key="ManageCampaign_Button_Campaign_BasicValidationReport">//*[@id='basicValidation']</Parameter>
+      <Parameter key="ManageCampaign_Button_Campaign_ScheduleCampaign">schedule</Parameter>
+      <Parameter key="ManageCampaign_Button_Campaign_InactivateSchedule">cancelSchedule</Parameter>
+      <Parameter key="ManageCampaign_Button_Campaign_InactivateScheduleConfirm">//div[@class="e-control e-dialog e-lib e-dlg-modal e-popup e-popup-open"]//button[contains(text(),'Deactivate')]</Parameter>
+      <!--//*[@id='fullwrap_new']/div[11]/div[11]/button[1]-->
+      <Parameter key="ManageCampaign_Button_Campaign_ActivateSchedule">activateSchedule</Parameter>
+      <Parameter key="ManageCampaign_Button_Campaign_ActivateScheduleConfirm">//div[@class='dialogContent']//following::a[contains(text(), 'Activate')]</Parameter>
+      <!--//*[@id='fullwrap_new']/div[13]/div[11]/button[1]-->
+      <Parameter key="ManageCampaign_SendToTest_GroupSeedList">//a[@title = 'GroupName']</Parameter>
+      <Parameter key="ManageCampaign_QuickSend_ReservationSelect">reslist</Parameter>
+      <Parameter key="ManageCampaign_Tab_Sent">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Tab_Disapproved">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Button_First">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Button_Previous">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Button_Next">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Button_Last">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Button_Help">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Link_FirstCampaign_Preview">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Link_FirstCampaign_Criteria">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Link_FirstCampaign_CustomerDetails">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Link_FirstCampaign_DynamicContent">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Link_FirstCampaign_History">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Link_FirstCampaign_Reports">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Link_FirstCampaign_MultiLanguage">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Link_FirstCampaign_ApprovalDashboard">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Button_FirstCampaign_AdvancedDeliverability">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Button_FirstCampaign_SendToTestEmails">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Button_FirstCampaign_RequestResponsive">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Button_FirstCampaign_SendForTranslation">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Button_FirstCampaign_DeleteCampaign">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Button_FirstCampaign_Edit">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Button_FirstCampaign_ProceedForApproval">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Button_FirstCampaign_SaveAsTemplate">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Button_FirstCampaign_SaveAsResent">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Button_FirstCampaign_Clone">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="ManageCampaign_Link_FirstCampaign_Status">AAAAAAAAAAAAAAAA</Parameter>
+      <!--New Manage Campaign Redesign-->
+      <Parameter key="ProjectID_Search">//span[contains(@class, "e-headertext") and text()="ID"]/parent::*/parent::th/div[@class="e-filtermenudiv e-icons e-icon-filter"]</Parameter><!--//span[contains(text(), 'ID')]//following::div-->
+      <Parameter key="ProjectID_SearchExpression">grid-column0-floptr</Parameter>
+      <Parameter key="ProjectID_TextSearch">//div[@id='grid-column0-flmenu']/div[2]/span/input</Parameter><!--textbox_193-->
+      <Parameter key="ProjectID_TextSearchs">//input[@placeholder='Enter the value']</Parameter>
+      <Parameter key="ProjectID_TextSearch_Filter">//div[@id='grid-column0-flmdlg']/div[2]/button</Parameter><!--(//button[@type='button'])[2]-->
+      <Parameter key="ProjectID_TextSearch_Filters">//button[contains(text(),'Filter')]</Parameter>
+      <Parameter key="ProjectID_CampaignDetails_Testing">//a[(contains(@href, '#ProjetID#')) and (contains(text(), 'Testing'))]</Parameter>
+      <Parameter key="ProjectID_CampaignDetails_Testing_Advanced">//a[contains(text(), 'Advanced')]</Parameter>
+      <Parameter key="ProjectID_CampaignDetails_Testing_Advanced_InboxPreview">//a[contains(text(), 'Request New Test')]</Parameter>
+      <Parameter key="ProjectID_CampaignDetails_Testing_Advanced_InboxForecaster">//a[contains(text(), 'Request New Forecast')]</Parameter>
+      <Parameter key="ProjectID_CampaignDetails_Actions">//button[contains(text(), 'Actions')]</Parameter>
+      <Parameter key="CampaignDetails_Actions_Edit">//li[contains(text(), 'Edit')]</Parameter>
+      <Parameter key="CampaignDetails_Actions_Clone">//li[contains(text(), 'Clone')]</Parameter>
+      <Parameter key="CampaignDetails_Actions_Delete">//li[contains(text(), 'Delete')]</Parameter>
+      <Parameter key="CampaignDetails_Actions_SaveAsResend">//li[contains(text(), 'Save as Resend')]</Parameter>
+      <Parameter key="CampaignDetails_Actions_SaveAsTemplate">//li[contains(text(), 'Save as Template')]</Parameter>
+
+
+    </ManageCampaign>
+
+    <Settings>
+      <Parameter key="Settings_AccessControl_MergeGuestCheckbox">(//input[@id='Checkbox8'])[11]</Parameter>
+      <Parameter key="Settings_AccessControl_Save">//span[contains(.,'Submit')]</Parameter>
+      <Parameter key="Settings_AccessControl">//*[contains(text(), 'Access Control')]</Parameter>
+      <!--<Parameter key="Settings_AccessControl_MergeGuest">(//input[@id='Checkbox2'])[12]</Parameter>-->
+    </Settings>
+
+    <CreateCampaign>
+      <Parameter key="CreateCampaign_CriteriaPage_Save">//button[@class = 'btn btn-primary action-criteria-save']</Parameter>
+      <Parameter key="CreateCampaign_CriteriaPage_SaveandContinue">//button[contains(text(), 'Save and Continue')]</Parameter>
+      <Parameter key="CreateCampaign_CriteriaPage_Clear">//button[contains(text(), 'Clear')]</Parameter>
+      <Parameter key="CreateCampaign_TemplatePage_Save">//a[@id='saveOnly']</Parameter>
+      <Parameter key="CreateCampaign_TemplateAndTestingPage_SaveandContinue">//a[@id='save']</Parameter>
+      <!--Also for TestingPage-->
+      <Parameter key="CreateCampaign_ApprovalPage_SaveandContinue"></Parameter>
+
+      <Parameter key="CreateCampaign_Button_Save">saveOnly</Parameter>
+      <!--This is for Draft and Testing Tab-->
+      <Parameter key="CreateCampaign_Button_SaveAndContinue">save</Parameter>
+      <!--continue-->
+      <Parameter key="CreateCampaign_Button_Continue">continue</Parameter>
+      <!--ApprovalPage-->
+      <!--This is for Approval Tab-->
+      <Parameter key="CreateCampaign_Button_SaveAndContinue_Submit">Submit</Parameter>
+      <!--This is for Template Tab-->
+      <Parameter key="CreateCampaign_Button_ChangeTemplate">changeTemplate</Parameter>
+      <Parameter key="CreateCampaign_Link_CriteriaTab">//*[@id="CampaignTab"]</Parameter>
+      <Parameter key="CreateCampaign_CriteriaTab_ForecastTargetAudience">//button[contains(text(), 'Forecast Target Audience')]</Parameter>
+      <Parameter key="CreateCampaign_Link_TemplateTab">//*[@id="tabs"]/ul/li[3]/a</Parameter>
+      <Parameter key="CreateCampaign_Link_TestingTab">//*[@id="tabs"]/ul/li[4]/a</Parameter>
+      <Parameter key="CreateCampaign_Link_ApprovalTab">//*[@id="tabs"]/ul/li[5]/a</Parameter>
+      <Parameter key="CreateCampaign_Link_ScheduleTab">//*[@id="tabs"]/ul/li[6]/a</Parameter>
+      <Parameter key="CreateCampaign_Link_AMResorts">//a[@href='/Project.mvc/Project/Create?companyId=7055']</Parameter>
+      <Parameter key="CreateCampaign_Text_Filter">//input[@name='filter']</Parameter>
+      <Parameter key="CreateCampaign_Link_CendynHotel">//a[@href='/Project.mvc/Project/Create?companyId=621']</Parameter>
+      <Parameter key="CreateCampaign_Link_CendynHotelResort">//a[@href='/Project.mvc/Project/Create?companyId=1387']</Parameter>
+      <Parameter key="CreateCampaign_Button_TestingSendtoTest">RequestTestEmails</Parameter>
+      <Parameter key="CreateCampaign_Testing_SendForApproval">requestApproval</Parameter>
+      <Parameter key="CreateCampaign_Link_Campaign_Disapprove">disapprove</Parameter>
+      <Parameter key="CreateCampaign_Link_Campaign_DisapproveConfirmation">(.//*[normalize-space(text()) and normalize-space(.)='Submitting request for approval, Please wait...'])[1]/following::span[1]</Parameter>
+      <Parameter key="CreateCampaign_Link_Campaign_Approve">approve</Parameter>
+      <Parameter key="CreateCampaign_Link_Campaign_ApproveConfirmation">(.//*[normalize-space(text()) and normalize-space(.)='Submitting request for approval, Please wait...'])[1]/following::button[1]</Parameter>
+      <Parameter key="CreateCampaign_DropDown_Schedule_Hours">sendHour</Parameter>
+      <Parameter key="CreateCampaign_DropDown_Schedule_Minutes">sendMinute</Parameter>
+      <Parameter key="CreateCampaign_DropDown_Schedule_TimeType">sendTimeType</Parameter>
+      <Parameter key="CreateCampaign_Button_Campaign_ScheduleandCompleteCampaign">//*[@id = 'saveSchedule']</Parameter>
+      <Parameter key="CreateCampaign_Button_Campaign_UpdateSchedule">//*[@id = 'updateSchedule']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Text_CampaignName">//input[@id='project_name']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Text_Brand">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Button_Brand_RemoveFirstBrand">//a[@data-option-array-index='0']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Button_Save">AAAAAAAAAAAAAAAA</Parameter>
+      <!--<Parameter key="CreateCampaign_Criteria_Button_SaveAndContinue">continue</Parameter>-->
+      <Parameter key="CreateCampaign_Criteria_Button_Clear">//button[contains(.,'Clear')]</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Text_PropertyList">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Button_PropertyList_RemoveFirstPropertyList">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Text_SeedList">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Button_SeedList_RemoveFirstSeedList">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Button_ForecastTargetAudience">//button[@class='action-show-statistics']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Button_NewSegment_Top">//button[@class='action-prepend-segment']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Button_NewSegment_Bottom">//button[@class='action-append-segment']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Button_TransactionalSettings_HideShow">//button[@class='action-toggle-transactional']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_DropDown_TransactionalSettings_ReservationEvent">//select[@name='reservation_event']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_CheckBox_TransactionalSettings_EmailType_Email">//input[@value='Email']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_CheckBox_TransactionalSettings_EmailType_RESERVATIONEMAIL">//input[@value='UDFC30']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_CheckBox_TransactionalSettings_UseFirstAvailableSelectedEmailType">//input[@name='email_type_first_mode']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_CheckBox_TransactionalSettings_IncludeUnsubscribe">//input[@name='include_unsubscribed']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Button_CollapseAll">//button[@class='action-collapse-all']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Button_ExpandAll">//button[@class='action-expand-all']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Text_Segment_SegmentDescription">//input[@class='segment-name']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_DropDown_Segment_Include">//select[@title='Segment Result Mode']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_DropDown_Segment_AndOrNandNor">//select[@title='Filter Operations']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Button_Segment_CollapseExpand">//button[@title='Collapse / Expand']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Button_Segment_Close">//button[@class='action-segment-close']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Button_Segment_First_SelectAll">//button[@class='action-filter-select-all']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Button_Segment_First_Clone">//button[@title='Clone']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Button_Segment_First_Remove">//button[@class='action-filter-close']</Parameter>
+      <Parameter key="CreateCampaign_Criteria_Text_Segment_DataSource">AAAAAAAAAAAAAAAA</Parameter>
+      <Parameter key="CreateCampaign_EditTemplate_Subject">subject</Parameter>
+      <Parameter key="CreateCampaign_EditTemplate_LinkSubjectTag">linkSubjectTag</Parameter>
+      <Parameter key="CreateCampaign_EditTemplate_LinkSubjectTag_Map">subjectlinemapping1</Parameter>
+      <Parameter key ="CreateCampaign_EditTemplate_FromName">from</Parameter>
+      <Parameter key ="CreateCampaign_EditTemplate_ReplyEmail">reply</Parameter>
+      <Parameter key ="CreateCampaign_AudienceName_ApprovalPage">//dt[contains(text(), 'Audience')]//following::b[contains(text(), '#AudienceName#')]</Parameter>
+      <Parameter key ="CreateCampaign_AudienceName_SchedulePage">//b[contains(text(), 'Audience')]//following::b[contains(text(), '#AudienceName#')]</Parameter>
+      <Parameter key="CreateCampaign_Link_CriteriaTab_TotalArrow">//td[@class=' text-right calc-counts']/child::div/a</Parameter>
+      <Parameter key="CreateCampaign_Link_CriteriaTab_Loader">//div[@class='loader']/parent::*</Parameter>
+      <Parameter key="CreateCampaign_Link_CriteriaTab_Generate">(//button[contains(.,'Generate')])[position()=1]</Parameter>
+      <Parameter key="CreateCampaign_Templates_ListView_Btn">switchButtonlist</Parameter>
+      <Parameter key="CreateCampaign_Templates_ListView_Loader">//div[@id='app']/descendant::div[@class='e-spinner-pane e-spin-show']</Parameter>
+      <Parameter key="CreateCampaign_Templates_ListView_NameFilterIcon">//span[contains(text(),'Name / Editor')]/parent::*/following-sibling::div[last()]</Parameter>
+      <Parameter key="CreateCampaign_Templates_ListView_FilterSelection">//span[@id='selectFilter']</Parameter>
+      <Parameter key="CreateCampaign_Templates_ListView_Filter_Btn">btnFilter</Parameter>
+      <Parameter key="CreateCampaign_Templates_ListView_Input_Filter_Txt">inputFilter</Parameter>
+      <Parameter key="CreateCampaign_Templates_SaveAndContinue_Btn">saveAndContinue</Parameter>
+      
+    </CreateCampaign>
+    
+    <AudienceBuilder>
+      <Parameter key="AB_Button_Add">btnNewAudience</Parameter>
+      <Parameter key="AB_Button_AddSearchField">btnAddFilter</Parameter>
+      <Parameter key="AB_Checkbox_ShowInactive">checkboxShowInactiveAudiences</Parameter>
+      <Parameter key="AB_Button_Reset">btnReset</Parameter>
+      <Parameter key="AB_Button_Search">btnSearch</Parameter>
+      <Parameter key="AB_CustomerDetailsSearchContent">//*[@id="customerDetailsContent"]/div/div[2]/div/div[2]/div[2]/select</Parameter>
+      <Parameter key="AB_Grid_LastPublished">//button[@id='btnPublished']</Parameter>
+      <Parameter key="AB_Grid_LastSaved">//button[@id='btnSaved']</Parameter>
+      <Parameter key="AB_Grid_ButtonAction">//button[@id='btnActions']</Parameter>
+      <Parameter key="AB_Grid_EditAudience">//button[contains(text(), 'Edit')]</Parameter>
+      <Parameter key="AB_Listbox_selectField">selectField</Parameter>
+      <Parameter key="AB_TextBox_FieldValue">(//input[@id='fldValue'])[i]</Parameter>
+      <Parameter key="Click_TotalCounts_Audience">//a[@id='count_1']/span</Parameter>
+      <Parameter key="Click_ABGrid_ButtonDetail">//*[contains(text(), 'Details')]</Parameter>
+      <Parameter key="Click_ABGrid_AudienceClone">btnClone</Parameter>
+      <!--<Parameter key="Click_ABEdit_SavePublishButton">//button[contains(text(), 'Save & Publish')]</Parameter>-->
+      <Parameter key="Click_ABEdit_CancelButton">//div[@class='text-right']//button[contains(text(), 'Cancel')][1]</Parameter>
+      <Parameter key="Click_ABEdit_FirstTime_TotalRecords">//div[@title = 'Please save to generate counts.']</Parameter>
+      <Parameter key="Click_ABEdit_TotalRecords">statisticsPanelLocation</Parameter>
+      <Parameter key="Click_ABEdit_StayOnPage">//button[contains(text(), 'Stay On Page')]</Parameter>
+      <Parameter key="Click_ABEdit_LeavePage">//button[contains(text(), 'Leave Page')]</Parameter>
+      <Parameter key="AB_IFrame">//iframe[@class='audienceFrame']</Parameter>
+    </AudienceBuilder>
+    
+    <PriorityQ>
+      <Parameter key="PriorityQ_SearchFor">select2-param01-container</Parameter>
+      <Parameter key="PriorityQ_Reset">resetForm</Parameter>
+      <Parameter key="PriorityQ_Submit">submitForm</Parameter>
+      <Parameter key="PriorityQ_Filter">//input[@type = 'search']</Parameter>
+      <Parameter key="PriorityQ_ToEmail">reservation_to</Parameter>
+      <Parameter key="PriorityQ_CampaignContainer">select2-selection__arrow</Parameter>
+      <Parameter key="PriorityQ_CampaignContainer_filter">//input[@class='select2-search__field']</Parameter>
+      <Parameter key="PriorityQ_SendtoTest">sendtestemail</Parameter>
+      <Parameter key="PriorityQ_SendtoTestButton">send-test-email-button</Parameter>
+      <Parameter key="PriorityQ_SendEmail_Cancel">//button[@id='sendtestemail']/preceding-sibling::button[contains(text(), 'Cancel')]</Parameter>
+      <Parameter key="PriorityQ_SendEmail_Prompt_Cancel">//h2[contains(text(), 'Confirm')]//following::button[@id='cancel_prompt']</Parameter>
+      <Parameter key="PriorityQ_SendEmail_Modal_Cancel">//button[@id='sendtestemail']/preceding-sibling::button[contains(text(), 'Cancel')]</Parameter>
+    </PriorityQ>
+    <TemplateBuilder>
+      <Parameter key="TemplateBuilder_SearchTemplate">inputSearch</Parameter>
+    </TemplateBuilder>
+  </UI>
+</ObjectRepository>
+

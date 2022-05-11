@@ -1,0 +1,61 @@
+2021-07-05 11:49:04,170 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-07-05 11:49:04,225 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-07-05 11:49:04,239 ::INFO ::[Logger]::  is used for Testing
+2021-07-05 11:49:04,560 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DEMACBACK%26redirect_uri%3Dhttps%253A%252F%252Fqacendynadmin.menusaccess.com%26response_mode%3Dform_post%26response_type%3Dcode%2520id_token%26scope%3Dopenid%2520roles%2520profile%2520write%2520offline_access%2520CendynAccessApi%26state%3DOpenIdConnect.AuthenticationProperties%253DVy2Fwsy8_BWDInlknVq6TaJRjHT9c52sdbQMOircSirQdP2RddnXIEssMFWPskf5dSnhOHCs-RJP2ttfV4rSTFqlobuIJOzsIvudUoWEXFulG-ixXJv04_eSUAZivWUadUc17n9QpYI38lrfCiOOXElshxBAXfhF038QPlhkMA6WX5GtnTcCqSFYC4EIeF90mIpmOKYS8SJCOv4iVkd2zgiYs1M%26nonce%3D637610627468375632.ODg3Y2IzYTItZWQ2OC00MTEyLTlmMmUtYTM0MDVjOTIwMGRjZmU0ZDI5ODUtYzc5Zi00ZTQwLWE4NzAtZDIyYTFkNWE5YjAy%26ui_locales%3Den-US
+2021-07-05 11:49:04,561 ::INFO ::[Logger]:: Execution started at:-Jul-05-2021 11-49-04-AM
+2021-07-05 11:49:04,562 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-05 11:49:04,563 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-07-05 11:49:04,564 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_232154         XXXXXXXXXXXXXXXX
+2021-07-05 11:49:04,565 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-05 11:49:04,891 ::INFO ::[Logger]:: Window Size is: {Width=1366, Height=768}
+2021-07-05 11:49:06,645 ::DEBUG::[Logger]:: 1) Landed on Login Page
+2021-07-05 11:49:14,021 ::DEBUG::[Logger]:: 2) Landed on CatchAll SignIn Page
+2021-07-05 11:49:28,411 ::INFO ::[Logger]:: Inserted text in the CatchAll_SignIn_Email element on the CatchAll page.
+2021-07-05 11:49:34,699 ::INFO ::[Logger]:: Clicked the CatchAll_SignIn_Button element on the CatchAll page.
+2021-07-05 11:49:44,519 ::INFO ::[Logger]:: Inserted text in the CatchAll_SignIn_Password element on the CatchAll page.
+2021-07-05 11:49:44,520 ::DEBUG::[Logger]:: 3) Entered Catchall UserName and Password
+2021-07-05 11:49:54,475 ::INFO ::[Logger]:: Clicked the CatchAll_SignIn_Button element on the CatchAll page.
+2021-07-05 11:49:56,340 ::INFO ::[Logger]:: The element Element (id = 7453d9a1-98ad-4968-b28f-ecfe70315abb) is selected.
+2021-07-05 11:50:04,625 ::INFO ::[Logger]:: Clicked the Catchall_SignIn_Yes_Button element on the CatchAll page.
+2021-07-05 11:50:16,119 ::INFO ::[Logger]:: Clicked the CatchAll_Outlook element on the CatchAll page.
+2021-07-05 11:50:58,748 ::INFO ::[Logger]:: Clicked the Next_Button element on the SignIn page.
+2021-07-05 11:51:02,898 ::INFO ::[Logger]:: The email field is required Found on the page
+2021-07-05 11:51:02,902 ::DEBUG::[Logger]:: 4) Validation message is displayed for blank email Field
+2021-07-05 11:51:14,542 ::INFO ::[Logger]:: Inserted text in the Enter_Email_Address element on the SignIn page.
+2021-07-05 11:51:20,778 ::INFO ::[Logger]:: Clicked the Next_Button element on the SignIn page.
+2021-07-05 11:51:24,871 ::INFO ::[Logger]:: The Enter Your Email field is not a valid e-mail address. Found on the page
+2021-07-05 11:51:24,873 ::DEBUG::[Logger]:: 5) Validation message for invalid email is Displayed
+2021-07-05 11:51:36,501 ::INFO ::[Logger]:: Inserted text in the Enter_Email_Address element on the SignIn page.
+2021-07-05 11:51:42,722 ::INFO ::[Logger]:: Clicked the Next_Button element on the SignIn page.
+2021-07-05 11:51:42,722 ::DEBUG::[Logger]:: 6) Landed on password page
+2021-07-05 11:51:53,226 ::INFO ::[Logger]:: Clicked the Login_Button element on the SignIn page.
+2021-07-05 11:51:57,376 ::INFO ::[Logger]:: The password field is required Found on the page
+2021-07-05 11:51:57,376 ::DEBUG::[Logger]:: 7) Validation message is displayed for blank password Field
+2021-07-05 11:52:08,323 ::INFO ::[Logger]:: Inserted text in the Enter_Email_Password element on the SignIn page.
+2021-07-05 11:52:14,530 ::INFO ::[Logger]:: Clicked the Login_Button element on the SignIn page.
+2021-07-05 11:52:18,931 ::INFO ::[Logger]:: Invalid login attempt Found on the page
+2021-07-05 11:52:18,933 ::DEBUG::[Logger]:: 8) Validation message is displayed for Invalid password 
+2021-07-05 11:52:29,712 ::INFO ::[Logger]:: Inserted text in the Enter_Email_Password element on the SignIn page.
+2021-07-05 11:52:35,920 ::INFO ::[Logger]:: Clicked the Login_Button element on the SignIn page.
+2021-07-05 11:52:36,551 ::ERROR::[Logger]:: The /html/body/div[2]/nav/div/div/ul/li[1]/a element was not found on the page.
+OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/nav/div/div/ul/li[1]/a"}
+  (Session info: chrome=89.0.4389.40)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at BaseUtility.PageObject.PageAction.Find_ElementXPath(String repoName) in E:\2020\April\eMenus_Atomation\BaseUtility\PageObject\PageAction.cs:line 32
+2021-07-05 11:52:38,063 ::DEBUG::[Logger]:: 9) Landed on home page
+2021-07-05 11:52:46,028 ::DEBUG::[Logger]:: TestPlan :- TP_231898 Testcase :- TC_232154
+2021-07-05 11:52:46,030 ::DEBUG::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~Test Data Used~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-05 11:52:46,031 ::DEBUG::[Logger]::  Value for : TC_232154_Valid User Email is : qacendyn@cendyn17.com
+2021-07-05 11:52:46,032 ::DEBUG::[Logger]::  Value for : TC_232154_Password is : Cendyn123$
+2021-07-05 11:52:46,033 ::DEBUG::[Logger]::  Value for : TC_232154_email Validation is : The email field is required
+2021-07-05 11:52:46,034 ::DEBUG::[Logger]::  Value for : TC_232154_Password Validation is : The password field is required
+2021-07-05 11:52:46,035 ::DEBUG::[Logger]::  Value for : TC_232154_InValid Username is : Test
+2021-07-05 11:52:46,036 ::DEBUG::[Logger]::  Value for : TC_232154_InValid Password is : Cendyn1
+2021-07-05 11:52:47,038 ::INFO ::[Logger]:: eMenus:: Script ::Passed
+2021-07-05 11:52:48,987 ::INFO ::[Logger]:: E.N.D

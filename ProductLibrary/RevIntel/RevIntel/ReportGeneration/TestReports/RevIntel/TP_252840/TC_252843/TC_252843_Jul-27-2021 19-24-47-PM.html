@@ -1,0 +1,1125 @@
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+    <meta charset='utf-8' />
+    <meta name='description' content='' />
+    <meta name='robots' content='noodp, noydir' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://cdn.rawgit.com/anshooarora/extentreports-csharp/3b6cc04fd241b9782606e57fc5e84f0e42172c08/dist/css/extent.css' type='text/css' rel='stylesheet' />
+
+    <title>ExtentReports</title>
+
+</head>
+    
+
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+		<nav>
+    <div class="nav-wrapper">
+        <a href="http://extentreports.relevantcodes.com" class="brand-logo blue darken-3">Extent</a>
+
+        <!-- slideout menu -->
+        <ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+            <li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+                        <li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+        </ul>
+
+        <!-- report name -->
+        <span class='report-name'>ExtentReports</span>
+
+        <!-- report headline -->
+        <span class='report-headline'></span>
+
+        <!-- nav-right -->
+        <ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+
+            <a>
+                <span class='suite-start-time label blue darken-3'>7/27/2021 7:24:48 PM India Standard Time</span>
+            </a>
+            <a>
+                <span class="label blue darken-3">3.1.0</span>
+            </a>
+        </ul>
+    </div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+            
+<div id='test-view' class='view'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- test toggle -->
+            <div class='chip transparent'>
+                <a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+                    <i class='material-icons'>warning</i> Status
+                </a>
+                <ul id='tests-toggle' class='dropdown-content'>
+                    <li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+                    <li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+                    <li status='error'><a href='#!'>Error <i class='material-icons red-text lighten-2'>error</i></a></li>
+                    <li status='warning'><a href='#!'>Warning <i class='material-icons orange-text'>warning</i></a></li>
+                    <li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
+                    <li class='divider'></li>
+                    <li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+                </ul>
+            </div>
+            <!-- test toggle -->
+
+            <!-- category toggle -->
+            <!-- category toggle -->
+
+            <!-- clear filters -->
+            <div class='chip transparent hide'>
+                <a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+                    <i class='material-icons'>close</i> Clear
+                </a>
+            </div>
+            <!-- clear filters -->
+
+            <!-- enable dashboard -->
+
+            <div id='toggle-test-view-charts' class='chip transparent'>
+                    <a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+                        <i class='material-icons'>track_changes</i> Dashboard
+                    </a>
+            </div>
+            <!-- enable dashboard -->
+
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+
+
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m6 l6 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box'>
+                    <canvas id='parent-analysis' width='100' height='80'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span><span class='strong'>1</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong'>0</span> test(s) failed, <span class='strong'>0</span> others
+                </div>
+            </div>
+        </div>
+
+            <div class='col s12 m6 l6 np-h'>
+                <div class='card-panel nm-v'>
+                    <div class='left panel-name'>Steps</div>
+                    <div class='chart-box'>
+                        <canvas id='child-analysis' width='100' height='80'></canvas>
+                    </div>
+                    <div class='block text-small'>
+                        <span><span class='strong'>66</span> step(s) passed</span>
+                    </div>
+                    <div class='block text-small'>
+                        <span class='strong'>0</span> step(s) failed, <span class='strong'>74</span> others
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</div>
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Tests</h5>
+
+            <ul id='test-collection' class='test-collection'>
+
+
+                    <li class='test displayed active  pass' status='pass' test-id='1'>
+                        <div class='test-heading'>
+                            <span class='test-name'>RevIntel</span>
+                            <span class='test-time'>7/27/2021 7:24:48 PM</span>
+                            <span class='test-status right pass'>Pass</span>
+                        </div>
+                        <div class='test-content hide'>
+                                <div class='test-time-info'>
+                                    <span class='label start-time'>7/27/2021 7:24:48 PM</span>
+                                    <span class='label end-time'>7/27/2021 7:40:17 PM</span>
+                                    <span class='label time-taken grey lighten-1 white-text'>00:15:28.9319855</span>
+                                </div>
+                                    <div class='test-desc'>-------Execution of RevIntel - TC_252843 Test Begin Script-----</div>
+                                    <div class='test-steps'>
+                                        <table class='bordered table-results'>
+                                            <thead>
+                                                <tr>
+                                                    <th>Status</th>
+                                                    <th>Timestamp</th>
+                                                    <th>Details</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:24:50 PM</td>
+                                                        <td class='step-details'>Chrome is currently being used for testing.</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:24:50 PM</td>
+                                                        <td class='step-details'>is used for Testing</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:24:50 PM</td>
+                                                        <td class='step-details'>This is the login page.https://ssodev.rainmakertest.org/Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://devrhbi.revintel.co/SSOLanding.aspx</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:24:50 PM</td>
+                                                        <td class='step-details'>Execution started at:-Jul-27-2021 19-24-50-PM</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:24:50 PM</td>
+                                                        <td class='step-details'>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:24:50 PM</td>
+                                                        <td class='step-details'>XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:24:50 PM</td>
+                                                        <td class='step-details'>XXXXXXXXXXXXXXXXX      TC_252843         XXXXXXXXXXXXXXXX</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:24:50 PM</td>
+                                                        <td class='step-details'>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:24:50 PM</td>
+                                                        <td class='step-details'>Window Size is: {Width=1382, Height=744}</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:24:50 PM</td>
+                                                        <td class='step-details'>Test Case : Validate the Province and State Analysis</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:24:55 PM</td>
+                                                        <td class='step-details'>Inserted text in the Enter_EmailAddress element on the Login page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:24:58 PM</td>
+                                                        <td class='step-details'>Email Address displayed</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:25:04 PM</td>
+                                                        <td class='step-details'>Clicked the Click_Next_Button element on the Login page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:25:08 PM</td>
+                                                        <td class='step-details'>Inserted text in the Enter_Password element on the Login page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:25:11 PM</td>
+                                                        <td class='step-details'>Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:25:22 PM</td>
+                                                        <td class='step-details'>Clicked the Click_SignIn_Button element on the Login page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:25:27 PM</td>
+                                                        <td class='step-details'>Clicked the Click_Automation element on the Navigation page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:25:28 PM</td>
+                                                        <td class='step-details'>user landed on the Automation RevIntel client selection page</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:25:32 PM</td>
+                                                        <td class='step-details'>Client displayed</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:25:45 PM</td>
+                                                        <td class='step-details'>Clicked the Link_ClientName element on the Navigation page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:25:46 PM</td>
+                                                        <td class='step-details'>Kerzner selected</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:25:59 PM</td>
+                                                        <td class='step-details'>User landed on Montly pickup Dashboard page</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:26:05 PM</td>
+                                                        <td class='step-details'>Clicked the Click_Hamburger_Icon element on the Navigation page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:26:10 PM</td>
+                                                        <td class='step-details'>Clicked the Geo_Source element on the Navigation page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:26:11 PM</td>
+                                                        <td class='step-details'>Geo Source drop down displayed</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:26:18 PM</td>
+                                                        <td class='step-details'>Clicked the Click_Province_and_State_Analysis_Report element on the Navigation page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:26:29 PM</td>
+                                                        <td class='step-details'>User Landed on Province and State Analysis Report Page</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:26:35 PM</td>
+                                                        <td class='step-details'>Switching into the iFrame.</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:26:42 PM</td>
+                                                        <td class='step-details'>Clicked the Click_View_Analysis element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:26:43 PM</td>
+                                                        <td class='step-details'>Required field validation message is displaying</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:26:49 PM</td>
+                                                        <td class='step-details'>Inserted text in the Text_StartDate element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:26:50 PM</td>
+                                                        <td class='step-details'>Enter start date as = 6/1/2020</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:26:56 PM</td>
+                                                        <td class='step-details'>Inserted text in the Text_EndDate element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:26:58 PM</td>
+                                                        <td class='step-details'>Enter enddate as = 6/30/2020</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:27:36 PM</td>
+                                                        <td class='step-details'>Clicked the Click_View_Analysis element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:28:47 PM</td>
+                                                        <td class='step-details'>Report generated</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:28:53 PM</td>
+                                                        <td class='step-details'>Clicked the Export_Menu element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:28:54 PM</td>
+                                                        <td class='step-details'>Export drop down menu displayed</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:29:00 PM</td>
+                                                        <td class='step-details'>Clicked the Excel element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:29:31 PM</td>
+                                                        <td class='step-details'>Report exported in excel format</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:29:32 PM</td>
+                                                        <td class='step-details'>Switching out of the iFrame.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:29:35 PM</td>
+                                                        <td class='step-details'>The template downloaded in the csv file format.</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:29:36 PM</td>
+                                                        <td class='step-details'>File Size in Bytes: 36</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:29:49 PM</td>
+                                                        <td class='step-details'>Province and State Analysis matched with Report name</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:30:00 PM</td>
+                                                        <td class='step-details'>Clicked the Click_Hamburger_Icon element on the Navigation page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:30:06 PM</td>
+                                                        <td class='step-details'>Clicked the Geo_Source element on the Navigation page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:30:07 PM</td>
+                                                        <td class='step-details'>Geo Source Dropdown displayed</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:30:13 PM</td>
+                                                        <td class='step-details'>Clicked the Click_Province_and_State_Analysis_Report element on the Navigation page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:30:20 PM</td>
+                                                        <td class='step-details'>User landed on Province and State Analysis Report  page</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:30:26 PM</td>
+                                                        <td class='step-details'>Switching into the iFrame.</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:30:39 PM</td>
+                                                        <td class='step-details'>Clicked the Portfolio_RadioButton element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:30:44 PM</td>
+                                                        <td class='step-details'>Clicked the Portfolio_DDL element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:30:45 PM</td>
+                                                        <td class='step-details'>Portfolio drop down displyed</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:30:52 PM</td>
+                                                        <td class='step-details'>Clicked the Portfolio_DDL_value element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:30:53 PM</td>
+                                                        <td class='step-details'>One&Only All -CT,SG,RR,RM,TP,PL,WV,NGSelected</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:30:58 PM</td>
+                                                        <td class='step-details'>Inserted text in the Text_StartDate element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:31:03 PM</td>
+                                                        <td class='step-details'>Inserted text in the Text_EndDate element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:31:04 PM</td>
+                                                        <td class='step-details'>Enter start date as = 6/1/2020</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:31:07 PM</td>
+                                                        <td class='step-details'>Enter enddate as = 6/30/2020</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:31:15 PM</td>
+                                                        <td class='step-details'>Clicked the Select_RoomProduct_DDL element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:31:16 PM</td>
+                                                        <td class='step-details'>Room Product drop down displayed</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:31:23 PM</td>
+                                                        <td class='step-details'>Clicked the Select_RoomProduct_value element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:31:24 PM</td>
+                                                        <td class='step-details'>RoomSelected as Room product</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:31:38 PM</td>
+                                                        <td class='step-details'>Clicked the Click_View_Analysis element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:32:50 PM</td>
+                                                        <td class='step-details'>Report generated</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:32:55 PM</td>
+                                                        <td class='step-details'>Filter(s):  ; Room Product: Room; Arabian Court Deluxe Rooms; Found on the page</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:32:56 PM</td>
+                                                        <td class='step-details'>Applied filter displayed at footer</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:33:01 PM</td>
+                                                        <td class='step-details'>Clicked the Export_Menu element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:33:03 PM</td>
+                                                        <td class='step-details'>Export drop down menu displayed</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:33:08 PM</td>
+                                                        <td class='step-details'>Clicked the Excel element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:33:40 PM</td>
+                                                        <td class='step-details'>Report exported in excel format</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:33:41 PM</td>
+                                                        <td class='step-details'>Switching out of the iFrame.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:33:43 PM</td>
+                                                        <td class='step-details'>The template downloaded in the csv file format.</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:33:44 PM</td>
+                                                        <td class='step-details'>File Size in Bytes: 36</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:33:48 PM</td>
+                                                        <td class='step-details'>Portfolio: One&Only All -CT,SG,RR,RM,TP,PL,WV,NG for dates: 06/01/2020 - 06/30/2020 matched with Report name</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:33:51 PM</td>
+                                                        <td class='step-details'>239 matched with Room under Subject section for Africa</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:34:00 PM</td>
+                                                        <td class='step-details'>Clicked the Click_Hamburger_Icon element on the Navigation page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:34:05 PM</td>
+                                                        <td class='step-details'>Clicked the Geo_Source element on the Navigation page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:34:07 PM</td>
+                                                        <td class='step-details'>Geo Source Dropdown displayed</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:34:13 PM</td>
+                                                        <td class='step-details'>Clicked the Click_Province_and_State_Analysis_Report element on the Navigation page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:34:20 PM</td>
+                                                        <td class='step-details'>User landed on Province and State Analysis Page</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:34:26 PM</td>
+                                                        <td class='step-details'>Switching into the iFrame.</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:34:33 PM</td>
+                                                        <td class='step-details'>Clicked the Click_Business_Unit_Dropdown element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:34:39 PM</td>
+                                                        <td class='step-details'>Clicked the Select_Business_Unit_Value element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:34:40 PM</td>
+                                                        <td class='step-details'>AUDis selected as Business Unit</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:34:46 PM</td>
+                                                        <td class='step-details'>Clicked the Click_Currency_Dropdown element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:34:52 PM</td>
+                                                        <td class='step-details'>Clicked the Select_Currency_Value element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:34:53 PM</td>
+                                                        <td class='step-details'>Hotelis selected as Currency</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:34:59 PM</td>
+                                                        <td class='step-details'>Inserted text in the Text_StartDate element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:35:00 PM</td>
+                                                        <td class='step-details'>Enter start date as = 6/1/2020</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:35:06 PM</td>
+                                                        <td class='step-details'>Inserted text in the Text_EndDate element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:35:07 PM</td>
+                                                        <td class='step-details'>Enter enddate as = 6/30/2020</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:35:16 PM</td>
+                                                        <td class='step-details'>Clicked the Parameter_Channel element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:35:17 PM</td>
+                                                        <td class='step-details'>Channel drop down displayed</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:35:24 PM</td>
+                                                        <td class='step-details'>Clicked the Parameter_channel_Hotel_Direct element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:35:29 PM</td>
+                                                        <td class='step-details'>Clicked the Parameter_Channel element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:35:30 PM</td>
+                                                        <td class='step-details'>Selected as Channel</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:35:37 PM</td>
+                                                        <td class='step-details'>Clicked the Select_SourceMarket_DDL element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:35:38 PM</td>
+                                                        <td class='step-details'>Source Market drop down displayed</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:35:45 PM</td>
+                                                        <td class='step-details'>Clicked the Select_SourceMarket_value element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:35:46 PM</td>
+                                                        <td class='step-details'>selected for Source Market</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:36:06 PM</td>
+                                                        <td class='step-details'>Clicked the Click_View_Analysis element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:37:18 PM</td>
+                                                        <td class='step-details'>Report generated</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:37:23 PM</td>
+                                                        <td class='step-details'>Filter(s):  ; Channel: Hotel Direct; Found on the page</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:37:25 PM</td>
+                                                        <td class='step-details'>Applied filter displayed at footer</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:37:30 PM</td>
+                                                        <td class='step-details'>Clicked the Export_Menu element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:37:32 PM</td>
+                                                        <td class='step-details'>Export drop down menu displayed</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:37:37 PM</td>
+                                                        <td class='step-details'>Clicked the Excel element on the ReportParameter page.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:38:08 PM</td>
+                                                        <td class='step-details'>Report exported in excel format</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:38:09 PM</td>
+                                                        <td class='step-details'>Switching out of the iFrame.</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:38:12 PM</td>
+                                                        <td class='step-details'>The template downloaded in the csv file format.</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:38:13 PM</td>
+                                                        <td class='step-details'>File Size in Bytes: 36</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:15 PM</td>
+                                                        <td class='step-details'>125598.45724588 matched with total revenue under Compare section for Africa</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:15 PM</td>
+                                                        <td class='step-details'>Scenario 1 : Report with mandatory field is Pass</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:15 PM</td>
+                                                        <td class='step-details'>Scenario 2 : Report with one filter is Pass</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:15 PM</td>
+                                                        <td class='step-details'>Scenario 3 : Report with multiple filter is Pass</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>TestPlan :- TP_252840 Testcase :- TC_252843</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>~~~~~~~~~~~~~~~~~~~~~~~~~~Test Data Used~~~~~~~~~~~~~~~~~~~~~~~~~~</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>Value for : TC_252843_username is : Testautomation@cendyn17.com</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>Value for : TC_252843_Password is : Cendyn123$</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>Value for : TC_252843_environment is : Automation</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>Value for : TC_252843_client is : Kerzner</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>Value for : TC_252843_Business_Unit is : Hotel</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>Value for : TC_252843_Currency is : AUD</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>Value for : TC_252843_Hotel is : Atlantis,The Palm</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>Value for : TC_252843_startDate is : 6/1/2020</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>Value for : TC_252843_endDate is : 6/30/2020</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>Value for : TC_252843_reportName is : Province and State Analysis</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>Value for : TC_252843_Portfolio_value is : One&Only All -CT,SG,RR,RM,TP,PL,WV,NG</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>Value for : TC_252843_Scenario1_parameter1 is : Room Product</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>Value for : TC_252843_Scenario1_parameter1_value is : Room</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>Value for : TC_252843_Portfolio_Name_Date is : Portfolio: One&Only All -CT,SG,RR,RM,TP,PL,WV,NG for dates: 06/01/2020 - 06/30/2020</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>Value for : TC_252843_Current_Rooms_Sold is : 239</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>Value for : TC_252843_Scenario2_parameter1 is : Room Product</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>Value for : TC_252843_Scenario2_parameter1_value is : Room Product</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>Value for : TC_252843_Scenario2_parameter2 is : Source Market</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>Value for : TC_252843_Scenario2_parameter2_value is : Africa</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:16 PM</td>
+                                                        <td class='step-details'>Value for : TC_252843_Prior_Revenue is : 125598.45724588</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:17 PM</td>
+                                                        <td class='step-details'>RevIntel:: Script ::Passed</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>7/27/2021 7:40:17 PM</td>
+                                                        <td class='step-details'>Script succesfully executed</td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                <ul class='screenshots'>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\1.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\1.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\1.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\2.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\2.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\2.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\3.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\3.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\3.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\4.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\4.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\4.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\5.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\5.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\5.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\6.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\6.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\6.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\7.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\7.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\7.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\8.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\8.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\8.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\9.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\9.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\9.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\10.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\10.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\10.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\11.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\11.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\11.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\12.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\12.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\12.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\13.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\13.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\13.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\14.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\14.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\14.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\15.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\15.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\15.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\16.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\16.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\16.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\17.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\17.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\17.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\18.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\18.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\18.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\19.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\19.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\19.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\20.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\20.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\20.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\21.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\21.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\21.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\22.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\22.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\22.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\23.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\23.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\23.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\24.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\24.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\24.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\25.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\25.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\25.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\26.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\26.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\26.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\27.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\27.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\27.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\28.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\28.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\28.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\29.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\29.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\29.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\30.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\30.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\30.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\31.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\31.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\31.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\32.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\32.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\32.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\33.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\33.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\33.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\34.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\34.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\34.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\35.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\35.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\35.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\36.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\36.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\36.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\37.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\37.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\37.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\38.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\38.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\38.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\39.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\39.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\39.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\40.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\40.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\40.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\41.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\41.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\41.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\42.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\42.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\42.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\43.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\43.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\43.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                        <li><img data-featherlight='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' class='step-img' src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg' data-src='C:\Users\PritamChandak\source\repos\AutomationFramework\ProductLibrary\RevIntel\RevIntel\ReportGeneration\TestReports\\RevIntel\TP_252840\TC_252843\\44.Jpeg'></li>
+                                </ul>
+                        </div>
+                    </li>
+            </ul>
+        </div>
+    </div>
+    <!-- subview left -->
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='test-name'></h5>
+
+            <div id='step-filters' class="right">
+                <span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+                <span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+                <span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+                <span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+                <span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+                <span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+                <span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+                <span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+            </div>
+        </div>
+    </div>
+    <!-- subview right -->
+
+</div>
+<!-- test view -->
+            <!-- category view -->
+            
+
+
+    <div id='exception-view' class='view hide'>
+
+        <section id='controls'>
+            <div class='controls grey lighten-4'>
+                <!-- search -->
+                <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                    <a href="#" class='search-div'>
+                        <i class='material-icons'>search</i> Search
+                    </a>
+
+                    <div class='input-field left hide'>
+                        <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                    </div>
+                </div>
+                <!-- search -->
+            </div>
+        </section>
+
+        <div class='subview-left left'>
+
+            <div class='view-summary'>
+                <h5>Exceptions</h5>
+                <ul id='exception-collection' class='exception-collection'>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class='subview-right left'>
+            <div class='view-summary'>
+                <h5 class='exception-name'></h5>
+            </div>
+        </div>
+    </div>
+<!-- exception view -->
+            
+
+
+<div id='dashboard-view' class='view hide'>
+    <div class='card-panel transparent np-v'>
+        <h5>Dashboard</h5>
+
+        <div class='row'>
+            <div class='col s2'>
+                <div class='card-panel r'>
+ <span>Tests</span>                     <div class='panel-lead'>1</div>
+                </div>
+            </div>
+            <div class='col s2'>
+                <div class='card-panel r'>
+ <span>Steps</span>                     <div class='panel-lead'>140</div>
+                </div>
+            </div>
+            <div class='col s2'>
+                <div class='card-panel r'>
+                    Start
+                    <div class='panel-lead'>7/27/2021 7:24:48 PM</div>
+                </div>
+            </div>
+            <div class='col s2'>
+                <div class='card-panel r'>
+                    End
+                    <div class='panel-lead'>7/27/2021 7:40:38 PM</div>
+                </div>
+            </div>
+            <div class='col s2'>
+                <div class='card-panel r'>
+                    Time Taken
+                    <div class='panel-lead'>00:15:49.9497915</div>
+                </div>
+            </div>
+
+                <div class='col s4'>
+                    <div class='card-panel'>
+                        <span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+
+                        <table>
+                            <tr>
+                                <th>Name</th>
+                                <th>Value</th>
+                            </tr>
+                                <tr>
+                                    <td>Browser Type</td>
+                                    <td>Chrome</td>
+                                </tr>
+                                <tr>
+                                    <td>HostName</td>
+                                    <td>dPLAP67</td>
+                                </tr>
+                                <tr>
+                                    <td>Operating System</td>
+                                    <td>Microsoft Windows NT 10.0.19043.0</td>
+                                </tr>
+                        </table>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+</div>
+<!-- dashboard view -->
+            
+
+
+<!-- exception view -->
+
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+			    passParent: 1,
+			    failParent: 0,
+			    fatalParent: 0,
+			    errorParent: 0,
+			    warningParent: 0,
+			    skipParent: 0,
+				
+			    passChild: 66,
+			    failChild: 0,
+			    fatalChild: 0,
+			    errorChild: 0,
+			    warningChild: 0,
+			    skipChild: 0,
+			    infoChild: 74,
+				
+			    passGrandChild: 0,
+			    failGrandChild: 0,
+			    fatalGrandChild: 0,
+			    errorGrandChild: 0,
+			    warningGrandChild: 0,
+			    skipGrandChild: 0,
+			    infoGrandChild: 0
+			};
+		</script>
+
+		<script src='https://cdn.rawgit.com/anshooarora/extentreports-csharp/e468054d67d93c2fd9c8f0f60e31a7ea09fa3bf6/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+			</body>
+	
+</html>

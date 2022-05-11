@@ -1,0 +1,36 @@
+2021-07-29 16:02:29,168 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-07-29 16:02:29,890 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-07-29 16:02:29,903 ::INFO ::[Logger]::  is used for Testing
+2021-07-29 16:02:29,909 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/Account/Login
+2021-07-29 16:02:29,909 ::INFO ::[Logger]:: Execution started at:-Jul-29-2021 16-02-29-PM
+2021-07-29 16:02:29,910 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-29 16:02:29,912 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-07-29 16:02:29,913 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_120486         XXXXXXXXXXXXXXXX
+2021-07-29 16:02:29,914 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-29 16:03:17,296 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Email element on the EmployeeLogin page.
+2021-07-29 16:03:17,336 ::DEBUG::[Logger]:: 1) Entered UserName
+2021-07-29 16:03:26,064 ::INFO ::[Logger]:: Clicked the SSOLogin_Next element on the EmployeeLogin page.
+2021-07-29 16:03:30,170 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Password element on the EmployeeLogin page.
+2021-07-29 16:03:30,171 ::DEBUG::[Logger]:: 2) Clicked on Next button and entered password.
+2021-07-29 16:03:38,767 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-29 16:03:38,787 ::DEBUG::[Logger]:: 3) Clicked on Subimt button.
+2021-07-29 16:04:20,281 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-29 16:04:35,522 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-29 16:04:40,674 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-29 16:04:40,678 ::DEBUG::[Logger]:: 4) Logged in successfully.
+2021-07-29 16:04:59,203 ::INFO ::[Logger]:: Clicked the PropertyDropDown_Button element on the EmployeeHome page.
+2021-07-29 16:05:27,930 ::INFO ::[Logger]:: Selected the Conrad London St. James value from the PropertyDropDown_Text drop down.
+2021-07-29 16:05:27,932 ::DEBUG::[Logger]:: 5) Test property selected: Conrad London St. James
+2021-07-29 16:05:59,356 ::INFO ::[Logger]:: Clicked the Activity_Navigation_ActivityTab element on the Activity page.
+2021-07-29 16:06:02,876 ::DEBUG::[Logger]:: 6) Land on the Activity page.
+2021-07-29 16:06:10,149 ::INFO ::[Logger]:: Inserted text in the Activity_Text_Search element on the Activity page.
+2021-07-29 16:06:15,297 ::INFO ::[Logger]:: Clicked the Activity_button_Search element on the Activity page.
+2021-07-29 16:06:27,825 ::DEBUG::[Logger]:: 7) A Search Results tab is displayed with proposals matching the keyword that was searched
+2021-07-29 16:06:43,607 ::INFO ::[Logger]:: Clicked the Activity_DatePicker_ExpirationDate element on the Activity page.
+2021-07-29 16:06:43,608 ::DEBUG::[Logger]:: 8) Calender is displayed
+2021-07-29 16:06:59,484 ::INFO ::[Logger]:: Selected the Jul value from the Activity_dropdown_ExpirationMonth drop down.
+2021-07-29 16:07:06,051 ::INFO ::[Logger]:: Selected the 2021 value from the Activity_dropdown_ExpirationYear drop down.
+2021-07-29 16:07:08,826 ::DEBUG::[Logger]:: 9) Error message is displayed Expiration date cannot occur before today.
+2021-07-29 16:07:17,100 ::INFO ::[Logger]:: Clicked the Activity_dropdown_ExpirationYear element on the Activity page.
+2021-07-29 16:07:34,425 ::INFO ::[Logger]:: Clicked the Activity_DatePicker_ExpirationDate element on the Activity page.
+2021-07-29 16:07:46,281 ::INFO ::[Logger]:: Selected the Jul value from the Activity_dropdown_ExpirationMonth drop down.

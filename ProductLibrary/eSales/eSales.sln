@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29827.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eSales", "eSales.csproj", "{6E144827-DBE6-44C2-88A1-0EFFF52C6BEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseUtility", "..\..\BaseUtility\BaseUtility.csproj", "{FE2A5F2F-FA49-4E1C-A89B-430DBB8822D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\..\Common\Common.csproj", "{F7F5A9BB-6B92-45C0-83C1-4A10DA74B654}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoMessageLogger", "..\..\InfoMessageLogger\InfoMessageLogger.csproj", "{57E9210A-687F-4DA5-99A2-052644163F1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestData", "..\..\TestData\TestData.csproj", "{0280EB17-9EB8-4438-AC2B-28C04D1D1091}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E144827-DBE6-44C2-88A1-0EFFF52C6BEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E144827-DBE6-44C2-88A1-0EFFF52C6BEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E144827-DBE6-44C2-88A1-0EFFF52C6BEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E144827-DBE6-44C2-88A1-0EFFF52C6BEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE2A5F2F-FA49-4E1C-A89B-430DBB8822D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE2A5F2F-FA49-4E1C-A89B-430DBB8822D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE2A5F2F-FA49-4E1C-A89B-430DBB8822D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE2A5F2F-FA49-4E1C-A89B-430DBB8822D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7F5A9BB-6B92-45C0-83C1-4A10DA74B654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7F5A9BB-6B92-45C0-83C1-4A10DA74B654}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7F5A9BB-6B92-45C0-83C1-4A10DA74B654}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7F5A9BB-6B92-45C0-83C1-4A10DA74B654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57E9210A-687F-4DA5-99A2-052644163F1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57E9210A-687F-4DA5-99A2-052644163F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57E9210A-687F-4DA5-99A2-052644163F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57E9210A-687F-4DA5-99A2-052644163F1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0280EB17-9EB8-4438-AC2B-28C04D1D1091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0280EB17-9EB8-4438-AC2B-28C04D1D1091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0280EB17-9EB8-4438-AC2B-28C04D1D1091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0280EB17-9EB8-4438-AC2B-28C04D1D1091}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF0964CF-0C3D-4C85-9ECC-614DFC6F67CA}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://dapp-002.cdcservices.net:8080/tfs/esales%20suite
+		SccProjectUniqueName0 = eSales.csproj
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\..\\BaseUtility\\BaseUtility.csproj
+		SccProjectName1 = ../../BaseUtility
+		SccLocalPath1 = ..\\..\\BaseUtility
+		SccProjectUniqueName2 = ..\\..\\Common\\Common.csproj
+		SccProjectName2 = ../../Common
+		SccLocalPath2 = ..\\..\\Common
+		SccProjectUniqueName3 = ..\\..\\InfoMessageLogger\\InfoMessageLogger.csproj
+		SccProjectName3 = ../../InfoMessageLogger
+		SccLocalPath3 = ..\\..\\InfoMessageLogger
+		SccProjectUniqueName4 = ..\\..\\TestData\\TestData.csproj
+		SccProjectName4 = ../../TestData
+		SccLocalPath4 = ..\\..\\TestData
+		SccLocalPath5 = .
+	EndGlobalSection
+EndGlobal

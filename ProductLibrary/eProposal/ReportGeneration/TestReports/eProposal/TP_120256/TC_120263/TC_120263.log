@@ -1,0 +1,28 @@
+2021-09-07 20:31:16,198 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-09-07 20:31:16,200 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-09-07 20:31:16,201 ::INFO ::[Logger]::  is used for Testing
+2021-09-07 20:31:16,492 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/Account/Login
+2021-09-07 20:31:16,493 ::INFO ::[Logger]:: Execution started at:-Sep-07-2021 20-31-16-PM
+2021-09-07 20:31:16,494 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-09-07 20:31:16,496 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-09-07 20:31:16,497 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_120263         XXXXXXXXXXXXXXXX
+2021-09-07 20:31:16,499 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-09-07 20:31:22,954 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Email element on the EmployeeLogin page.
+2021-09-07 20:31:22,955 ::DEBUG::[Logger]:: 1) Entered UserName
+2021-09-07 20:31:39,677 ::INFO ::[Logger]:: Clicked the SSOLogin_Next element on the EmployeeLogin page.
+2021-09-07 20:31:45,264 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Password element on the EmployeeLogin page.
+2021-09-07 20:31:45,265 ::DEBUG::[Logger]:: 2) Clicked on Next button and entered password.
+2021-09-07 20:32:00,890 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-09-07 20:32:00,892 ::DEBUG::[Logger]:: 3) Clicked on Subimt button.
+2021-09-07 20:32:28,721 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-09-07 20:32:50,566 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-09-07 20:32:57,505 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-09-07 20:32:58,015 ::DEBUG::[Logger]:: 4) Logged in successfully.
+2021-09-07 20:33:19,334 ::INFO ::[Logger]:: Clicked the PropertyDropDown_Button element on the EmployeeHome page.
+2021-09-07 20:34:53,621 ::INFO ::[Logger]:: Selected the Cendyn - Hilton Dresden value from the PropertyDropDown_Text drop down.
+2021-09-07 20:35:11,104 ::INFO ::[Logger]:: Clicked the CreateEdit_eCardButton element on the EmployeeHome page.
+2021-09-07 20:35:17,109 ::DEBUG::[Logger]:: 5) Land on the eCard page.
+2021-09-07 20:35:28,649 ::INFO ::[Logger]:: Clicked the EmployeeFromDropDown element on the ProposalCompose page.
+2021-09-07 20:35:28,650 ::DEBUG::[Logger]:: 6) The list of employees are listed in alphabetical order.
+2021-09-07 20:35:33,038 ::INFO ::[Logger]:: eProposal:: Script ::Passed
+2021-09-07 20:35:34,863 ::INFO ::[Logger]:: E.N.D

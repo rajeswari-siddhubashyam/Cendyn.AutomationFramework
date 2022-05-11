@@ -1,0 +1,28 @@
+2021-07-23 17:29:15,638 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-07-23 17:29:15,640 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-07-23 17:29:15,641 ::INFO ::[Logger]::  is used for Testing
+2021-07-23 17:29:15,653 ::INFO ::[Logger]:: This is the login page.https://login.cendynaccess.com/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DCAOAFRON%26response_mode%3Dform_post%26response_type%3Dcode%2520id_token%26scope%3Dopenid%2520roles%2520profile%2520write%2520offline_access%2520CendynAccessApi%26state%3DOpenIdConnect.AuthenticationProperties%253DaCFysaSiijXdd8AmbtTXE8KyKSVkMYqQ6Uj7vKCQ0Q-dQfPll1hoJEvXBZIWyuUQET74In0W-33d2wpSxsRr_tQeF_mzBIWHUJFcE1ovyBGsvwtgG44A8du01EV_GJ47-nUMeocWNqGcO5aL7-O1Nw%26nonce%3D637626383479455048.NThjNTBhOWQtOGJmMi00YTNhLTg1Y2EtNDNjN2E5NjNjNjljNzExMmFkNmMtZGQ5NC00MmU4LWFhMjMtNmYyOTYwZDc4OTcw%26redirect_uri%3Dhttps%253A%252F%252Fwww.cendynaccess.com%26ui_locales%3Den-US
+2021-07-23 17:29:15,655 ::INFO ::[Logger]:: Execution started at:-Jul-23-2021 17-29-15-PM
+2021-07-23 17:29:15,656 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-23 17:29:15,657 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-07-23 17:29:15,658 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_278108         XXXXXXXXXXXXXXXX
+2021-07-23 17:29:15,659 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-23 17:29:49,855 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Email element on the EmployeeLogin page.
+2021-07-23 17:29:49,872 ::DEBUG::[Logger]:: 1) Entered UserName
+2021-07-23 17:29:58,507 ::INFO ::[Logger]:: Clicked the SSOLogin_Next element on the EmployeeLogin page.
+2021-07-23 17:30:02,648 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Password element on the EmployeeLogin page.
+2021-07-23 17:30:02,650 ::DEBUG::[Logger]:: 2) Clicked on Next button and entered password.
+2021-07-23 17:30:11,201 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-23 17:30:11,203 ::DEBUG::[Logger]:: 3) Clicked on Subimt button.
+2021-07-23 17:30:39,670 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-23 17:31:19,700 ::DEBUG::[Logger]:: 4) 
+2021-07-23 17:31:22,847 ::DEBUG::[Logger]:: 5) Logged in successfully.
+2021-07-23 17:31:41,274 ::INFO ::[Logger]:: Clicked the PropertyDropDown_Button element on the EmployeeHome page.
+2021-07-23 17:32:08,317 ::INFO ::[Logger]:: Selected the Cendyn – DEV - BBQ HIlton value from the PropertyDropDown_Text drop down.
+2021-07-23 17:32:08,318 ::DEBUG::[Logger]:: 6) Test property selected: Cendyn – DEV - BBQ HIlton
+2021-07-23 17:32:18,357 ::INFO ::[Logger]:: Clicked the PropertyDropDown_Text element on the EmployeeHome page.
+2021-07-23 17:32:27,220 ::INFO ::[Logger]:: Clicked the PropertyDropDown_Text element on the EmployeeHome page.
+2021-07-23 17:32:29,257 ::INFO ::[Logger]:: Create New eCard Found on the page
+2021-07-23 17:32:29,260 ::DEBUG::[Logger]:: 7) Create New eCard
+2021-07-23 17:32:31,398 ::INFO ::[Logger]:: eProposal:: Script ::Passed
+2021-07-23 17:32:31,830 ::INFO ::[Logger]:: E.N.D

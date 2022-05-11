@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <UI>
+    <SignIn>
+      <Parameter key="SignIn_Email">okta-signin-username</Parameter>
+      <Parameter key="SignIn_Password">okta-signin-password</Parameter>
+      <Parameter key="SignIn_Submit">okta-signin-submit</Parameter>
+    </SignIn>
+  </UI>    
+</ObjectRepository>
+      

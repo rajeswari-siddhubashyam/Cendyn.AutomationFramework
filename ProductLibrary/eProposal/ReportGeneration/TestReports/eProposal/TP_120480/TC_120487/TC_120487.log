@@ -1,0 +1,63 @@
+2021-07-29 16:26:23,267 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-07-29 16:26:23,504 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-07-29 16:26:23,517 ::INFO ::[Logger]::  is used for Testing
+2021-07-29 16:26:23,523 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/Account/Login
+2021-07-29 16:26:23,524 ::INFO ::[Logger]:: Execution started at:-Jul-29-2021 16-26-23-PM
+2021-07-29 16:26:23,525 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-29 16:26:23,526 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-07-29 16:26:23,527 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_120487         XXXXXXXXXXXXXXXX
+2021-07-29 16:26:23,527 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-29 16:27:11,801 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Email element on the EmployeeLogin page.
+2021-07-29 16:27:11,842 ::DEBUG::[Logger]:: 1) Entered UserName
+2021-07-29 16:27:20,549 ::INFO ::[Logger]:: Clicked the SSOLogin_Next element on the EmployeeLogin page.
+2021-07-29 16:27:24,661 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Password element on the EmployeeLogin page.
+2021-07-29 16:27:24,665 ::DEBUG::[Logger]:: 2) Clicked on Next button and entered password.
+2021-07-29 16:27:33,239 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-29 16:27:33,260 ::DEBUG::[Logger]:: 3) Clicked on Subimt button.
+2021-07-29 16:28:16,247 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-29 16:28:31,902 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-29 16:28:37,032 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-29 16:28:37,034 ::DEBUG::[Logger]:: 4) Logged in successfully.
+2021-07-29 16:28:55,482 ::INFO ::[Logger]:: Clicked the PropertyDropDown_Button element on the EmployeeHome page.
+2021-07-29 16:29:24,129 ::INFO ::[Logger]:: Selected the Conrad London St. James value from the PropertyDropDown_Text drop down.
+2021-07-29 16:29:24,130 ::DEBUG::[Logger]:: 5) Test property selected: Conrad London St. James
+2021-07-29 16:30:18,234 ::INFO ::[Logger]:: Clicked the CreateEdit_eProposalButton element on the EmployeeHome page.
+2021-07-29 16:30:24,236 ::DEBUG::[Logger]:: 6) Land on the Compose page.
+2021-07-29 16:31:03,207 ::INFO ::[Logger]:: Inserted text in the ProposalNameText element on the ProposalCompose page.
+2021-07-29 16:31:11,683 ::INFO ::[Logger]:: Clicked the Client_SearchLink element on the ProposalCompose page.
+2021-07-29 16:31:15,850 ::INFO ::[Logger]:: Inserted text in the Client_SearchText element on the ProposalCompose page.
+2021-07-29 16:31:20,934 ::INFO ::[Logger]:: Clicked the Button_Client_Search_Search element on the ProposalCompose page.
+2021-07-29 16:31:32,058 ::INFO ::[Logger]:: Clicked the Button_ClientSearchResult element on the ProposalCompose page.
+2021-07-29 16:31:37,469 ::INFO ::[Logger]:: Inserted text in the CCText element on the ProposalCompose page.
+2021-07-29 16:31:42,289 ::INFO ::[Logger]:: Inserted text in the BCCText element on the ProposalCompose page.
+2021-07-29 16:31:48,681 ::INFO ::[Logger]:: Clicked the EventDate element on the ProposalCompose page.
+2021-07-29 16:32:19,844 ::FATAL::[Logger]:: OpenQA.Selenium.NoSuchElementException: Cannot locate element with text: 2020
+   at OpenQA.Selenium.Support.UI.SelectElement.SelectByText(String text, Boolean partialMatch)
+   at BaseUtility.Utility.Helper.ElementSelectFromDropDown(IWebElement element, String value) in E:\2020\April\eMenus_Atomation\BaseUtility\Utility\Helper.cs:line 38
+2021-07-29 16:32:19,876 ::FATAL::[Logger]:: Unable to select the 2020 value from the EventDate drop down.
+2021-07-29 16:32:19,896 ::FATAL::[Logger]:: OpenQA.Selenium.NoSuchElementException: Cannot locate element with text: 2020
+   at OpenQA.Selenium.Support.UI.SelectElement.SelectByText(String text, Boolean partialMatch)
+   at BaseUtility.Utility.Helper.ElementSelectFromDropDown(IWebElement element, String value) in E:\2020\April\eMenus_Atomation\BaseUtility\Utility\Helper.cs:line 46
+   at eProposal.Utility.Project.Calendar(String month, String day, String year) in E:\2020\April\eMenus_Atomation\ProductLibrary\eProposal\Utility\Project.cs:line 27
+2021-07-29 16:32:19,898 ::FATAL::[Logger]:: Unable to select a date from the calendar.
+2021-07-29 16:34:02,300 ::INFO ::[Logger]:: Clicked the EventDate element on the ProposalCompose page.
+2021-07-29 16:35:38,805 ::FATAL::[Logger]:: OpenQA.Selenium.NoSuchElementException: Cannot locate element with text: 2020
+   at OpenQA.Selenium.Support.UI.SelectElement.SelectByText(String text, Boolean partialMatch)
+   at BaseUtility.Utility.Helper.ElementSelectFromDropDown(IWebElement element, String value) in E:\2020\April\eMenus_Atomation\BaseUtility\Utility\Helper.cs:line 38
+2021-07-29 16:35:38,807 ::FATAL::[Logger]:: Unable to select the 2020 value from the EventDate drop down.
+2021-07-29 16:37:00,172 ::FATAL::[Logger]:: OpenQA.Selenium.NoSuchElementException: Cannot locate element with text: 2020
+   at OpenQA.Selenium.Support.UI.SelectElement.SelectByText(String text, Boolean partialMatch)
+   at BaseUtility.Utility.Helper.ElementSelectFromDropDown(IWebElement element, String value) in E:\2020\April\eMenus_Atomation\BaseUtility\Utility\Helper.cs:line 46
+   at eProposal.Utility.Project.Calendar(String month, String day, String year) in E:\2020\April\eMenus_Atomation\ProductLibrary\eProposal\Utility\Project.cs:line 27
+2021-07-29 16:37:01,173 ::FATAL::[Logger]:: Unable to select a date from the calendar.
+2021-07-29 16:41:30,257 ::INFO ::[Logger]:: Selected the 2021 value from the EventDate drop down.
+2021-07-29 16:41:38,126 ::INFO ::[Logger]:: Selected the calendar year.
+2021-07-29 16:42:11,960 ::FATAL::[Logger]:: OpenQA.Selenium.NoSuchElementException: Cannot locate element with text: Jun
+   at OpenQA.Selenium.Support.UI.SelectElement.SelectByText(String text, Boolean partialMatch)
+   at BaseUtility.Utility.Helper.ElementSelectFromDropDown(IWebElement element, String value) in E:\2020\April\eMenus_Atomation\BaseUtility\Utility\Helper.cs:line 38
+2021-07-29 16:42:11,961 ::FATAL::[Logger]:: Unable to select the Jun value from the EventDate drop down.
+2021-07-29 16:42:28,057 ::FATAL::[Logger]:: OpenQA.Selenium.NoSuchElementException: Cannot locate element with text: Jun
+   at OpenQA.Selenium.Support.UI.SelectElement.SelectByText(String text, Boolean partialMatch)
+   at BaseUtility.Utility.Helper.ElementSelectFromDropDown(IWebElement element, String value) in E:\2020\April\eMenus_Atomation\BaseUtility\Utility\Helper.cs:line 46
+   at eProposal.Utility.Project.Calendar(String month, String day, String year)
+2021-07-29 16:42:30,505 ::FATAL::[Logger]:: Unable to select a date from the calendar.

@@ -1,0 +1,60 @@
+2020-07-31 15:19:27,218 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2020-07-31 15:19:27,220 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2020-07-31 15:19:27,220 ::INFO ::[Logger]::  is used for Testing
+2020-07-31 15:19:27,228 ::INFO ::[Logger]:: This is the login page.https://ssodev.rainmakertest.org/Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://devrhbi.revintel.co/SSOLanding.aspx
+2020-07-31 15:19:27,229 ::INFO ::[Logger]:: Execution started at:-Jul-31-2020 15-19-27-PM
+2020-07-31 15:19:27,230 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2020-07-31 15:19:27,231 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2020-07-31 15:19:27,232 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_256851         XXXXXXXXXXXXXXXX
+2020-07-31 15:19:27,232 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2020-07-31 15:19:29,250 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=744}
+2020-07-31 15:19:29,486 ::INFO ::[Logger]:: Test Case : Validate the Agent Analysis report (one filter)
+2020-07-31 15:19:33,789 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2020-07-31 15:19:33,792 ::DEBUG::[Logger]:: 1) Email Address displayed
+2020-07-31 15:19:43,564 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2020-07-31 15:19:48,029 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2020-07-31 15:19:48,035 ::DEBUG::[Logger]:: 2) Login in with Username =rshende@delaplex.com and Password =Cendyn111$
+2020-07-31 15:19:59,154 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2020-07-31 15:20:03,290 ::INFO ::[Logger]:: Clicked the UAT element on the Navigation page.
+2020-07-31 15:20:03,293 ::DEBUG::[Logger]:: 3) user landed on the UAT RevIntel client selection page
+2020-07-31 15:20:06,678 ::DEBUG::[Logger]:: 4) Client displayed
+2020-07-31 15:20:24,654 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
+2020-07-31 15:20:24,687 ::DEBUG::[Logger]:: 5) Kerzner selected
+2020-07-31 15:20:37,800 ::INFO ::[Logger]:: Clicked the AgentAnalysis element on the Navigation page.
+2020-07-31 15:20:37,801 ::DEBUG::[Logger]:: 6) Agent Analysis report selected
+2020-07-31 15:20:50,257 ::INFO ::[Logger]:: Clicked the BusinessSource element on the Navigation page.
+2020-07-31 15:20:51,262 ::DEBUG::[Logger]:: 7) Agent Analysis gets displayed
+2020-07-31 15:20:59,308 ::INFO ::[Logger]:: Switching into the iFrame.
+2020-07-31 15:21:05,267 ::INFO ::[Logger]:: Inserted text in the Text_StartDate element on the ReportParameter page.
+2020-07-31 15:21:05,270 ::DEBUG::[Logger]:: 8) Enter start date as = 4/1/2020
+2020-07-31 15:21:12,548 ::INFO ::[Logger]:: Inserted text in the Text_EndDate element on the ReportParameter page.
+2020-07-31 15:21:12,554 ::DEBUG::[Logger]:: 9) Enter enddate as = 4/30/2020
+2020-07-31 15:21:19,596 ::INFO ::[Logger]:: Clicked the Parameter_market element on the ReportParameter page.
+2020-07-31 15:21:19,597 ::DEBUG::[Logger]:: 10) Click on parameter market drop down
+2020-07-31 15:21:26,464 ::INFO ::[Logger]:: Clicked the Parameter_market_Direct element on the ReportParameter page.
+2020-07-31 15:21:26,467 ::DEBUG::[Logger]:: 11) Direct parameter for marget got selected
+2020-07-31 15:21:56,961 ::INFO ::[Logger]:: Clicked the Click_View_Analysis element on the ReportParameter page.
+2020-07-31 15:22:06,979 ::DEBUG::[Logger]:: 12) Report generated
+2020-07-31 15:22:13,272 ::DEBUG::[Logger]:: 13) Applied filter displayed at footer
+2020-07-31 15:22:20,382 ::INFO ::[Logger]:: Clicked the Export_Menu element on the ReportParameter page.
+2020-07-31 15:22:20,394 ::DEBUG::[Logger]:: 14) Export drop down menu displayed
+2020-07-31 15:22:27,747 ::INFO ::[Logger]:: Clicked the Excel element on the ReportParameter page.
+2020-07-31 15:22:27,756 ::DEBUG::[Logger]:: 15) Report exported in excel format
+2020-07-31 15:22:30,415 ::INFO ::[Logger]:: Switching out of the iFrame.
+2020-07-31 15:22:31,442 ::DEBUG::[Logger]:: 16) The template should be downloaded in the csv file format.
+2020-07-31 15:22:44,657 ::DEBUG::[Logger]:: 17) Agent Analysis matched with Report name 
+2020-07-31 15:22:48,983 ::DEBUG::[Logger]:: 18) Hotel: Atlantis, The Palm for dates: 04/01/2020 - 04/30/2020 matched with Hotel name and Stay date 
+2020-07-31 15:22:53,376 ::DEBUG::[Logger]:: 19) Nbr Resv display under current Year section
+2020-07-31 15:23:00,258 ::DEBUG::[Logger]:: 20) Rooms Sold display under current Year section
+2020-07-31 15:23:04,802 ::DEBUG::[Logger]:: 21) Mix% display under current Year section
+2020-07-31 15:23:11,299 ::DEBUG::[Logger]:: 22) ADR display under current Year section
+2020-07-31 15:23:16,533 ::DEBUG::[Logger]:: 23) Revenue display under current Year section
+2020-07-31 15:23:20,898 ::DEBUG::[Logger]:: 24) Nbr Resv display under Prior Year section
+2020-07-31 15:23:25,513 ::DEBUG::[Logger]:: 25) Rooms Sold display under Prior Year section
+2020-07-31 15:23:30,131 ::DEBUG::[Logger]:: 26) Mix % display under Prior Year section
+2020-07-31 15:23:34,529 ::DEBUG::[Logger]:: 27) ADR display under Prior Year section
+2020-07-31 15:23:38,902 ::DEBUG::[Logger]:: 28) Revenue display under Prior Year section
+2020-07-31 15:23:44,632 ::DEBUG::[Logger]:: 29)  matched with Total Revenue
+2020-07-31 15:23:47,124 ::DEBUG::[Logger]:: 30) Test case passed successfully
+2020-07-31 15:23:49,598 ::INFO ::[Logger]:: RevIntel:: Script ::Passed
+2020-07-31 15:23:49,940 ::INFO ::[Logger]:: E.N.D

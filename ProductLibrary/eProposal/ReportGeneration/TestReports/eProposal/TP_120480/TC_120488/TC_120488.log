@@ -1,0 +1,58 @@
+2021-07-06 21:19:27,822 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2021-07-06 21:19:27,824 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2021-07-06 21:19:27,825 ::INFO ::[Logger]::  is used for Testing
+2021-07-06 21:19:27,834 ::INFO ::[Logger]:: This is the login page.https://qalogin.cendynaccess.com/Account/Login
+2021-07-06 21:19:27,836 ::INFO ::[Logger]:: Execution started at:-Jul-06-2021 21-19-27-PM
+2021-07-06 21:19:27,837 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-06 21:19:27,838 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2021-07-06 21:19:27,864 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_120488         XXXXXXXXXXXXXXXX
+2021-07-06 21:19:27,865 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2021-07-06 21:20:02,356 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Email element on the EmployeeLogin page.
+2021-07-06 21:20:02,358 ::DEBUG::[Logger]:: 1) Entered UserName
+2021-07-06 21:20:10,953 ::INFO ::[Logger]:: Clicked the SSOLogin_Next element on the EmployeeLogin page.
+2021-07-06 21:20:15,072 ::INFO ::[Logger]:: Inserted text in the SSOLogin_Password element on the EmployeeLogin page.
+2021-07-06 21:20:15,073 ::DEBUG::[Logger]:: 2) Clicked on Next button and entered password.
+2021-07-06 21:20:23,639 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-06 21:20:23,640 ::DEBUG::[Logger]:: 3) Clicked on Subimt button.
+2021-07-06 21:20:53,138 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-06 21:21:08,316 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-06 21:21:13,430 ::INFO ::[Logger]:: Clicked the SSOLogin_Submit element on the EmployeeLogin page.
+2021-07-06 21:21:13,434 ::DEBUG::[Logger]:: 4) Logged in successfully.
+2021-07-06 21:21:31,898 ::INFO ::[Logger]:: Clicked the PropertyDropDown_Button element on the EmployeeHome page.
+2021-07-06 21:21:58,285 ::INFO ::[Logger]:: Selected the Conrad Chicago value from the PropertyDropDown_Text drop down.
+2021-07-06 21:21:58,286 ::DEBUG::[Logger]:: 5) Test property selected: Conrad Chicago
+2021-07-06 21:22:18,020 ::INFO ::[Logger]:: Clicked the CreateEdit_eProposalButton element on the EmployeeHome page.
+2021-07-06 21:22:18,021 ::DEBUG::[Logger]:: 6) Land on the Compose page.
+2021-07-06 21:22:25,414 ::INFO ::[Logger]:: Inserted text in the ProposalNameText element on the ProposalCompose page.
+2021-07-06 21:22:30,564 ::INFO ::[Logger]:: Clicked the Client_SearchLink element on the ProposalCompose page.
+2021-07-06 21:22:34,780 ::INFO ::[Logger]:: Inserted text in the Client_SearchText element on the ProposalCompose page.
+2021-07-06 21:22:39,868 ::INFO ::[Logger]:: Clicked the Button_Client_Search_Search element on the ProposalCompose page.
+2021-07-06 21:22:44,986 ::INFO ::[Logger]:: Clicked the Button_ClientSearchResult element on the ProposalCompose page.
+2021-07-06 21:22:44,987 ::DEBUG::[Logger]:: 7) Data Entered
+2021-07-06 21:23:00,175 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-06 21:23:05,686 ::DEBUG::[Logger]:: 8) Land on the Step 2 page.
+2021-07-06 21:23:21,089 ::INFO ::[Logger]:: Clicked the Activity_Navigation_ActivityTab element on the Activity page.
+2021-07-06 21:23:24,590 ::DEBUG::[Logger]:: 9) Land on the Activity page.
+2021-07-06 21:23:27,784 ::INFO ::[Logger]:: Sending Status for this eProposal states Not Sent.
+2021-07-06 21:23:27,809 ::DEBUG::[Logger]:: 10) Its is not sent
+2021-07-06 21:23:38,652 ::INFO ::[Logger]:: Clicked the WelcomeButton element on the EmployeeHome page.
+2021-07-06 21:23:53,946 ::INFO ::[Logger]:: Clicked the PropertyDropDown_Button element on the EmployeeHome page.
+2021-07-06 21:24:21,434 ::INFO ::[Logger]:: Selected the Conrad Chicago value from the PropertyDropDown_Text drop down.
+2021-07-06 21:24:37,578 ::INFO ::[Logger]:: Clicked the CreateEdit_eProposalButton element on the EmployeeHome page.
+2021-07-06 21:24:41,841 ::INFO ::[Logger]:: Inserted text in the ProposalNameText element on the ProposalCompose page.
+2021-07-06 21:24:46,956 ::INFO ::[Logger]:: Clicked the Client_SearchLink element on the ProposalCompose page.
+2021-07-06 21:24:51,101 ::INFO ::[Logger]:: Inserted text in the Client_SearchText element on the ProposalCompose page.
+2021-07-06 21:24:56,217 ::INFO ::[Logger]:: Clicked the Button_Client_Search_Search element on the ProposalCompose page.
+2021-07-06 21:25:01,341 ::INFO ::[Logger]:: Clicked the Button_ClientSearchResult element on the ProposalCompose page.
+2021-07-06 21:25:01,342 ::DEBUG::[Logger]:: 11) Data Entered
+2021-07-06 21:25:18,498 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-06 21:25:24,001 ::DEBUG::[Logger]:: 12) Land on the Step 2 page.
+2021-07-06 21:25:46,019 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-06 21:26:08,495 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-06 21:26:28,668 ::INFO ::[Logger]:: Clicked the Button_Next element on the ProposalCompose page.
+2021-07-06 21:27:04,427 ::INFO ::[Logger]:: Clicked the Activity_Navigation_ActivityTab element on the Activity page.
+2021-07-06 21:27:07,929 ::DEBUG::[Logger]:: 13) Land on the Activity page.
+2021-07-06 21:27:11,107 ::INFO ::[Logger]:: Sending Status for this eProposal states is Not Sent.
+2021-07-06 21:27:11,108 ::DEBUG::[Logger]:: 14) It is sent
+2021-07-06 21:27:14,223 ::INFO ::[Logger]:: eProposal:: Script ::Passed
+2021-07-06 21:27:14,756 ::INFO ::[Logger]:: E.N.D
