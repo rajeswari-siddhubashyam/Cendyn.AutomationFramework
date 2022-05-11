@@ -23,7 +23,7 @@ namespace CHC_Unified_Profile.TestPlan.Profiles
             TestPlanId = Constants.TP_356196;
 
             //Initialize the test case set up.
-            InitializeSetup(Constants.TP_356196, Constants.clientEnv.CHCAutoQA, Enums.TestDataType.Controller, Enums.CaseType.NA, "CHCAuto");
+            InitializeSetup(Constants.TP_356196, Constants.clientEnv.CHC_UP_AutoQA, Enums.TestDataType.Controller, Enums.CaseType.NA, "CHCUPAuto");
 
             //Assign the test data test plan file location
             TestDataFile = TestDataLocation.POCExcel;
@@ -32,39 +32,13 @@ namespace CHC_Unified_Profile.TestPlan.Profiles
             Driver.Navigate().GoToUrl(ProjectDetails.CommonFrontendURL);
             Thread.Sleep(6000);
         }
-
-        /*  */
-        [Test, Category("Smoke - QA")]
-        public static void TC_340276()
-        {
-            try
-            {
-
-                /**Test execution - Start**/
-                SetupTestCase(Constants.TC_340276, "Excel", CHC_Unified_Profile.Utility.Constants.clientEnv.CHCAutoQA, Enums.TestDataType.FrontEnd, Enums.CaseType.TestCase);
-
-                Logger.DeleteOldFolder();
-
-                //Start
-                MainAdminApp.TP_356196();
-
-                /**Test execution - End**/
-                TestHandling.TestEnd();
-            }
-            catch (Exception e)
-            {
-                TestHandling.TestFailed(e);
-                throw;
-            }
-        }
-
+  
         /*  */
         [Test, Category("Smoke - QA")]
         public static void TC_340278()
         {
             try
             {
-
                 /**Test execution - Start**/
                 SetupTestCase(Constants.TC_340278, "Excel", CHC_Unified_Profile.Utility.Constants.clientEnv.CHCAutoQA, Enums.TestDataType.FrontEnd, Enums.CaseType.TestCase);
 
@@ -89,7 +63,6 @@ namespace CHC_Unified_Profile.TestPlan.Profiles
         {
             try
             {
-
                 /**Test execution - Start**/
                 SetupTestCase(Constants.TC_340284, "Excel", CHC_Unified_Profile.Utility.Constants.clientEnv.CHCAutoQA, Enums.TestDataType.FrontEnd, Enums.CaseType.TestCase);
 
@@ -114,7 +87,6 @@ namespace CHC_Unified_Profile.TestPlan.Profiles
         {
             try
             {
-
                 /**Test execution - Start**/
                 SetupTestCase(Constants.TC_340283, "Excel", CHC_Unified_Profile.Utility.Constants.clientEnv.CHCAutoQA, Enums.TestDataType.FrontEnd, Enums.CaseType.TestCase);
 
@@ -139,7 +111,6 @@ namespace CHC_Unified_Profile.TestPlan.Profiles
         {
             try
             {
-
                 /**Test execution - Start**/
                 SetupTestCase(Constants.TC_340280, "Excel", CHC_Unified_Profile.Utility.Constants.clientEnv.CHCAutoQA, Enums.TestDataType.FrontEnd, Enums.CaseType.TestCase);
 
@@ -156,32 +127,7 @@ namespace CHC_Unified_Profile.TestPlan.Profiles
                 TestHandling.TestFailed(e);
                 throw;
             }
-        }
-
-        /*  */
-        [Test, Category("Smoke - QA")]
-        public static void TC_340291()
-        {
-            try
-            {
-
-                /**Test execution - Start**/
-                SetupTestCase(Constants.TC_340291, "Excel", CHC_Unified_Profile.Utility.Constants.clientEnv.CHCAutoQA, Enums.TestDataType.FrontEnd, Enums.CaseType.TestCase);
-
-                Logger.DeleteOldFolder();
-
-                //Start
-                MainAdminApp.TP_356196();
-
-                /**Test execution - End**/
-                TestHandling.TestEnd();
-            }
-            catch (Exception e)
-            {
-                TestHandling.TestFailed(e);
-                throw;
-            }
-        }
+        }      
 
         /*  */
         [Test, Category("Smoke - QA")]
@@ -189,7 +135,6 @@ namespace CHC_Unified_Profile.TestPlan.Profiles
         {
             try
             {
-
                 /**Test execution - Start**/
                 SetupTestCase(Constants.TC_340281, "Excel", CHC_Unified_Profile.Utility.Constants.clientEnv.CHCAutoQA, Enums.TestDataType.FrontEnd, Enums.CaseType.TestCase);
 

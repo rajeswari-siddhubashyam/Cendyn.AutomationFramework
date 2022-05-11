@@ -8,7 +8,7 @@ namespace CHC_Unified_Profile.Entity
 {
     class Reservation_DB
     {
-            public int ExternalResID1 { set; get; }        
+        public int ExternalResID1 { set; get; }        
         public string ConfirmationNum { set; get; }
         public string Reservationid { set; get; }
         public string ResArriveDate { set; get; }

@@ -2,14 +2,18 @@
 <ObjectRepository>
 	<UI>
 		<SignIn>
+			
 			<Parameter key="SignIn_Email">okta-signin-username</Parameter>
 			<Parameter key="SignIn_Password">okta-signin-password</Parameter>
 			<Parameter key="SignIn_Email_Testuser">okta-signin-username</Parameter>
 			<Parameter key="SignIn_Password_Testuser">okta-signin-password</Parameter>
 			<Parameter key="SignIn_Submit">okta-signin-submit</Parameter>
+			<Parameter key="SignIn_Text">//h2[@class='okta-form-title o-form-head']</Parameter>
+			
 		</SignIn>
 
 		<Home>
+			
 			<Parameter key="Navigation_Configuration_App">//div[@class='home row']//*[@class='card-body']/span[text()='Configuration']</Parameter>
 			<Parameter key="Navigation_Marketing_Automation_App">//div[@class='home row']//*[@class='card-body']/span[text()='Marketing Automation']</Parameter>
 			<Parameter key="Navigation_Starling_App">//div[@class='home row']//*[@class='card-body']/span[text()='Starling']</Parameter>
@@ -20,11 +24,14 @@
 			<Parameter key="UserAccountMouseover">//span[contains(@class,'rounded-circle')]</Parameter>
 			<Parameter key="User_Logout">//*[text()='Logout']</Parameter>
 			<Parameter key="ExpandableIcon">//*[contains(text(),'Accounts')]//following::*[contains(@class,'e-icon-expandable')]</Parameter>
-			<Parameter key="Accounts">//*[contains(text(),'Accounts')]//following::p[@class='tree-view-title']</Parameter>
-			<Parameter key="AccountPageName">orgSwitch</Parameter>
-		</Home>
+			
+			<Parameter key="Accounts">//div[@class='tree-view-item']</Parameter>
+			<Parameter key="AccountPageName">orgSwitch</Parameter>						
+			
+		</Home> //div[@class='tree-view-item']
 
-		<Profiles>
+		<Profiles>			
+
 			<Parameter key="Filter_By_Email">//input[contains(@id,'filter-searchbar')]</Parameter>
 			<Parameter key="Search_Icon">//*[@class='data-grid-filter']//*[contains(@class,'base-icon search')]</Parameter>
 			<Parameter key="table">//table[@class='e-table']</Parameter>
@@ -34,7 +41,7 @@
 			<Parameter key="Sort_Button">//div[text()='Sort']</Parameter>
 			<Parameter key="Sort_Applybutton">//button[contains(@id,'sort-btn') and contains(text(),'Apply')]</Parameter>
 			<Parameter key="Sort_Clearbutton">//button[contains(@id,'sort-btn') and contains(text(),'Clear')]</Parameter>
-			<Parameter key="Profileidfield_ContainsFilter">//input[contains(@id,'string-ExternalProfileId1')]</Parameter>
+			<Parameter key="Profileidfield_ContainsFilter">//input[contains(@id,'number-ProfileId')]</Parameter>
 			<Parameter key="ProfileIdRecordontable">//a[@class='e-focus']</Parameter>
 			<Parameter key="ViewProfileName">//div[@class='e-control e-tooltip e-lib']/h1</Parameter>
 			<Parameter key="View_Profilerecordon_Viewpage">//div[contains(text(),'External Profile ID')]//following::span[1]</Parameter>
@@ -44,9 +51,10 @@
 			<Parameter key="Applauncher">//button[@id='app_launcher']</Parameter>
 			<Parameter key="Applauncher_Applications">//div[@class='row application-cards']//span</Parameter>
 			<Parameter key="Clickonfistrecord">//table[@class='e-table']//td[1]/a</Parameter>
+			<Parameter key="Clickonfistrecordsecondontable">(//table[@class='e-table']//td[1]/a)[2]</Parameter>
 			<Parameter key="Verifyviewreservationrecord">//div[contains(text(),'Reservation ID')]//following::div[1]</Parameter>
-			
-			<Parameter key="Verifyviewreservationrecord">//div[contains(text(),'Reservation ID')]//following::div[1]</Parameter>
+           
+            <Parameter key="Click_on_applybutton_Filter">//button[@class='btn btn-primary btn-sm']</Parameter>			
 			<Parameter key="View_ContactDetails">//span[contains(text(),' Contact Details ')]</Parameter>
 			<Parameter key="ContactDetails">//span[contains(text(),' Contact ')]</Parameter>
 			<Parameter key="Home_Button">//button[contains(@id,'home_btn')]</Parameter>
@@ -64,19 +72,50 @@
 			<Parameter key="Manage_Campaign_Filter_UpdatedOn_Input">//small[contains(text(),'Updated On')]/parent::*/following::input[@placeholder='Select a date']</Parameter>
 			<Parameter key="Manage_Campaign_Filter_ID_Text">//small[contains(text(),'ID')]</Parameter> 
             <Parameter key="ViewProfile_Historytab">//span[contains(text(),' History ')]</Parameter>
-		</Profiles>
 
-		<!--<Navigation>
-      <Parameter key="Navigation_Button_Campaigns">//a[@href="/create-campaigns"]</Parameter>
-      <Parameter key="Navigation_Button_Campaigns_Sidebar">//nav[@id='sidebar']/descendant::span[contains(text(),'Campaigns')]/preceding-sibling::span</Parameter>
-      <Parameter key="Navigation_text_MAutomation">//nav[@id='sidebar']/descendant::*[contains(text(),'MARKETING AUTOMATION ')]</Parameter>
-      <Parameter key="Navigation_Button_Templates">//ul[@class='navbar-nav']//span[text() = 'Templates' ]</Parameter>
+			<Parameter key="Text_Summary">//span[contains(text(),' Summary ')]</Parameter>
+			<Parameter key="Text_ContactDetails">//span[contains(text(),' Contact Details ')]</Parameter>
+			<Parameter key="Text_Profile">//span[contains(text(),' Profile ')]</Parameter>
+			<Parameter key="Text_Reservations">//span[contains(text(),' Reservations ')]</Parameter>
+			<Parameter key="Text_History">//span[contains(text(),' History ')]</Parameter>
+			<Parameter key="Text_Statusonreservationindexpage">//span[contains(@class,'badge')]</Parameter>
+
+			<Parameter key="Link_Needhelp_signin">//div[@class='auth-footer']/a</Parameter>
+			<Parameter key="Link_ForgotPassword">Forgot password?</Parameter>
+			<Parameter key="Enter_RecoveryEmail">//input[@id='account-recovery-username']</Parameter>
+			<Parameter key="Click_Reset_ViaEmail">Reset via Email</Parameter>
+			<Parameter key="Click_BackTo_Signin">Back to sign in</Parameter>
+			<Parameter key="Click_Reset_Password">Reset Password</Parameter>
+			<Parameter key="Enter_NewPassword">//input[contains(@name,'newPassword')]</Parameter>
+			<Parameter key="Enter_ConfirmPassword">//input[contains(@name,'confirmPassword')]</Parameter>
+			<Parameter key="Click_Reset_Resetpassword">//div[@class='o-form-button-bar']/input</Parameter>
+
+			<Parameter key="Unlock_EmailUsername">//input[@id='account-recovery-username']</Parameter>
+			<Parameter key="Unlock_SendEmail">Send Email</Parameter>
+
+			<Parameter key="Outlook_UnlockAccount">Unlock Account</Parameter>
+
+			<Parameter key="NeedHelp_UnlockAccount">Unlock account?</Parameter>
+
+			<Parameter key="Table_Allcolumns">//span[@class='e-headertext']</Parameter>
+
+			<Parameter key="Ellipse">//div[@class='grid-template__icon']</Parameter>
+
+			<Parameter key="UnlockAccount_LinkExpired">//div[@class='okta-form-infobox-error infobox infobox-error']</Parameter>
+			<Parameter key="UserName_LeftBlank">//p[contains(@id,'input-container')]</Parameter>
+			<Parameter key="OutLook_Text">(//table[@class='x_wrapper']//table[@class='x_wrapper'])[3]</Parameter>
+
+			<Parameter key="Ellipse_SubRes_Number">//div[contains(text(),' Sub Res Number ')]</Parameter>
+			
+		</Profiles>		
+		<!--<Navigation>       
       <Parameter key="TotalNavigatingNavbar">//div[@class='navbar-module'][1]/ul</Parameter>
       -->
 		<!-- TODOPK: Temporary Remove it later-->
 		<!--
       <Parameter key="Navigation_Button_Audiences">//nav[@id='sidebar']/descendant::span[contains(text(),'Audience')]/preceding-sibling::span</Parameter>
       <Parameter key="Navigation_To_MAutomation_FromCHC">//div[contains(@class,'home')]//div[@class='card-body']//span[text()='Marketing Automation']</Parameter>
+	  <Parameter key="Accounts">//*[contains(text(),'Accounts')]//following::p[@class='tree-view-title']</Parameter>
     </Navigation>-->
 
 	</UI>

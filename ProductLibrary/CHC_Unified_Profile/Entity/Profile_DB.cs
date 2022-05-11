@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CHC_Unified_Profile.Entity
 {
-    class Profile_DB
+    public class Profile_DB
     {
         public string ExternalProfileId1 { set; get; }
         public string CMData { set; get; }
@@ -15,16 +15,15 @@ namespace CHC_Unified_Profile.Entity
         public string SourceCreateUser { set; get; }
         public string DateInserted { set; get; }
         public string DateUpdated { set; get; }
-        public string Salutation { set; get; }
+
         public string FirstName { set; get; }
-        public string MiddleName { set; get; }
-        public string FamiliarName { set; get; }
         public string LastName { set; get; }
         public string Suffix { set; get; }
+        
         public string PrimaryLanguage { set; get; }
         public string GenderCode { set; get; }
         public string Nationality { set; get; }
-        public string JobTitle { set; get; }
+       
         public string Address1 { set; get; }
         public string Address2 { set; get; }
         public string City { set; get; }
@@ -32,11 +31,20 @@ namespace CHC_Unified_Profile.Entity
         public string PostalCode { set; get; }
         public string CountryCode { set; get; }
         public string IsPrimary { set; get; }
-        public string AddressLanguage { set; get; }
-        public string CustomerMembershipID { set; get; }
-        public string VIPID { set; get; }
-        public string VIPCode { set; get; }
+        public string AddressLanguage { set; get; }        
+       
         public string Reservationid { set; get; }
+        public string ExternalResID1 { set; get; }
+        public string ConfirmationNum { set; get; }
+        public string CancellationCode { set; get; }
+        public string RateCode { set; get; }
+        public string ChannelCode { set; get; }
+        public string RoomTypeCode { set; get; }
+        public string TotalRoomRevenue { set; get; }
+        public string TotalFBRevenue { set; get; }
+        public string TotalOtherRevenue { set; get; }
+        public string MarketCodeCategory { set; get; }
+
         public Dictionary<string, int> AttributeNames_Values { set; get; }
     }
 }

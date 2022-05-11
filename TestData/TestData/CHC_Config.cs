@@ -15,6 +15,13 @@ namespace TestData
             AddTestData_Frontend(clientName);
         }
 
+        public static void AddCHC_UPData(string clientName)
+        {
+
+            AddTestData_ClientUP(clientName);
+            AddTestData_Frontend(clientName);
+        }
+
         private static void AddTestData_ClientConfig(string clientName)
         {
             if (clientName == "CHC_ConfigQA")
@@ -30,6 +37,19 @@ namespace TestData
             {
                 TestDataHelper.AddTestData_ClientConfig(clientName, "", "", "https://demo.gocendyn.com/", "", "", "");
             }*/
+
+        }
+
+        private static void AddTestData_ClientUP(string clientName)
+        {
+            if (clientName == "CHC_UPQA")
+            {
+                TestDataHelper.AddTestData_ClientConfig(clientName, "", "", "https://qa.gocendyn.com/", "", "", "");
+            }
+            else if (clientName == "CHC_UPDEV")
+            {
+                TestDataHelper.AddTestData_ClientConfig(clientName, "", "", "https://dev.gocendyn.com/", "", "", "");
+            }
 
         }
 
@@ -105,6 +125,25 @@ namespace TestData
               
             }
             else if (clientName == "CHC_ConfigDEV")
+            {
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_323199", "TC_309589", "1", "TRUE", "email", "testuser10@cendyn17.com");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_323199", "TC_309589", "2", "TRUE", "password", "Cendyn123$");
+            }
+
+        }
+
+        private static void AddTestData_TestPlan_TP_356196(string clientName)
+        {
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_356196", "TC_340276", "1", "TRUE", "allenv", "BothEnv");
+
+            if (clientName == "CHC_UPQA")
+            {
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_356196", "TC_340276", "1", "TRUE", "email", "testuser10@cendyn17.com");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_356196", "TC_340276", "2", "TRUE", "password", "Cendyn123$");
+
+                //TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_323199", "TC_309602", "3", "TRUE", "create_chain", "Create Chain");
+            }
+            else if (clientName == "CHC_UPDEV")
             {
                 TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_323199", "TC_309589", "1", "TRUE", "email", "testuser10@cendyn17.com");
                 TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_323199", "TC_309589", "2", "TRUE", "password", "Cendyn123$");

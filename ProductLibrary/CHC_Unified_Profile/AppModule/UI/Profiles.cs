@@ -11,7 +11,7 @@ using System.Threading;
 
 namespace CHC_Unified_Profile.AppModule.UI
 {
-    class Profile : Helper
+    public class Profile : Helper
     {
         /// <summary>
         /// This method will click on Filter by Email search on the  Starling Profiles page.
@@ -55,7 +55,7 @@ namespace CHC_Unified_Profile.AppModule.UI
         {
             WaitTillBrowserLoad();
             ElementClick(PageObject_Profiles.Btn_Sort());
-            Logger.WriteDebugMessage("Sort popup displayed with Clear and Choose buttons");
+            //Logger.WriteDebugMessage("Sort popup displayed with Clear and Choose buttons");
         }
 
         public static void Clickon_Homebutton()
@@ -82,10 +82,39 @@ namespace CHC_Unified_Profile.AppModule.UI
             ElementClick(PageObject_Profiles.Link_Help());
         }
 
-        public static void Clickon_ProfileRecord()
+        /// <summary>
+        /// This method will Check the Profile - Headers in a unified profile table
+        /// </summary>
+        public static void Verify_TableHeaders()
         {
-            ElementClick(PageObject_Profiles.Ele_ViewProfile());
-            Logger.WriteDebugMessage("View Profile page should display");
+            string[] tableHeaders = { "Res. No", "Property Name", "Revenue", "Guests", "Status", "Arrival Date","Departure Date" };
+            IList<IWebElement> lst_TableHeaders = PageObject_Profiles.AllColumns_OnTable();
+
+            for(int i = 0; i < lst_TableHeaders.Count-1; i++)
+            {
+               if(Helper.GetText(lst_TableHeaders[i]).ToLower().Equals(tableHeaders[i].ToLower())){
+                    Logger.WriteInfoMessage("Table Header columns matched successfully " + tableHeaders[i] );
+                    Logger.WriteDebugMessage("Table Header columns " + tableHeaders[i] );
+                }
+                else
+                {
+                    Logger.WriteInfoMessage("Table Header columns not matched successfully " + tableHeaders[i]);
+                    Logger.WriteDebugMessage("Table Header columns not matches");
+                }
+            }            
+        }
+        
+        //public static void Verify_AllColumns_onTable()
+        //{
+        //    ElementClick(PageObject_Profiles.Ele_ViewProfile());
+        //    Logger.WriteDebugMessage("View Profile page should display");
+        //    Helper.WaitForAjaxControls(30);
+        //}
+
+        public static void Click_OnEllipse_OnRes_table()
+        {
+            ElementClick(PageObject_Profiles.Click_Ellipse());
+            Logger.WriteDebugMessage("User Clicked on Ellipse and should view the More details of reservation");
             Helper.WaitForAjaxControls(30);
         }
 
@@ -135,7 +164,6 @@ namespace CHC_Unified_Profile.AppModule.UI
             Logger.WriteDebugMessage("User lands on Profile related Contact Details page");
             Helper.WaitForAjaxControls(30);
         }
-        
 
         public static void Clickon_OrgSwitcher()
         {
@@ -147,7 +175,7 @@ namespace CHC_Unified_Profile.AppModule.UI
         public static void Clickon_ApplyonSort()
         {
             ElementClick(PageObject_Profiles.VerifyApplybuttononSort());
-            Logger.WriteDebugMessage("User Click on Apply button on Sort tab & Should display the data based on Search");
+            //Logger.WriteDebugMessage("User Click on Apply button on Sort tab & Should display the data based on Search");
             Helper.WaitForAjaxControls(30);
         }
 
@@ -157,7 +185,14 @@ namespace CHC_Unified_Profile.AppModule.UI
             ElementClick(PageObject_Profiles.View_Profile_Historytab());
             Logger.WriteDebugMessage("User Click on History tab");
             Helper.WaitForAjaxControls(30);
-        }      
+        }
+        
+        public static void Clickon_Apply_Button_on_Filter()
+        {            
+            ElementClick(PageObject_Profiles.Btn_Click_on_Applybutton_Filter());
+            Logger.WriteDebugMessage("User Clicked on Apply button on filter");
+            Helper.WaitForAjaxControls(30);
+        }
 
         public static void VerifyApply_ClearPopuponfilter()
         {
@@ -174,8 +209,8 @@ namespace CHC_Unified_Profile.AppModule.UI
         public static void Enter_txt_on_ProfileidfieldFilter_Contains(string profileid)
         {
             ElementEnterText(PageObject_Profiles.Txt_Profileidfieldcontainsfilter(), profileid);
-            Logger.WriteDebugMessage("User enter the Externalprofileid " + profileid + " and click on Apply button");
-            ElementClick(PageObject_Profiles.VerifyApplybuttononfilter());
+            Logger.WriteDebugMessage("User enter the profileid " + profileid );
+            //ElementClick(PageObject_Profiles.VerifyApplybuttononfilter());
 
             Helper.WaitForAjaxControls(30);
         }
@@ -184,7 +219,7 @@ namespace CHC_Unified_Profile.AppModule.UI
         {
             if (propertyName.Equals("Profile Id"))
             {
-                propertyName = "ExternalProfileId";
+                propertyName = "ProfileId";
             }
             else if (propertyName.Equals("Name"))
             {
@@ -249,7 +284,7 @@ namespace CHC_Unified_Profile.AppModule.UI
             Helper.WaitForAjaxControls(30);
 
             //Enter value
-            if (propertyName.Equals("Property Id"))
+            if (propertyName.Equals("Property Id") || propertyName.Equals("Profile Id"))
             {
                 ElementEnterText(PageAction.Find_ElementXPath("//input[starts-with(@id,'number-" + propertyLocatorName + "')]"), propertyValue);
             }
@@ -284,6 +319,7 @@ namespace CHC_Unified_Profile.AppModule.UI
                 Thread.Sleep(3000);
 
                 ElementClick(PageAction.Find_ElementXPath("//*[contains(@class,'e-popup-open')]//*[contains(text(),'" + propertyValue + "')]"));
+                //Logger.WriteDebugMessage("User select the "+propertyValue+" from Order By drop down");
             }
             else if (propertyName.Equals("Direction"))
             {
@@ -292,7 +328,7 @@ namespace CHC_Unified_Profile.AppModule.UI
                 ElementClick(PageAction.Find_ElementXPath("//*[contains(@aria-owns,'-sort-order_options')]"));
                 Thread.Sleep(3000);
                 ElementClick(PageAction.Find_ElementXPath("//*[contains(@class,'e-popup-open')]//*[text()='" + propertyValue + "']"));
-
+                //Logger.WriteDebugMessage("User select the " + propertyValue + " from Direction drop down");
             }
         }
         public static void Verifyprofileid(string value)
@@ -303,22 +339,139 @@ namespace CHC_Unified_Profile.AppModule.UI
 
         public static void ClickonProfilerecord()
         {
-
             ElementClick(PageObject_Profiles.Lnk_clickonProfilerecord());
-            Logger.WriteDebugMessage("User click on profile id URl and navigates to View Profile page");
+            Logger.WriteDebugMessage("User click on Profile id URl and navigates to View Profile page");
+            Helper.WaitForAjaxControls(30);
+        }
+
+        public static void ClickonNeedhelp()
+        {
+            ElementClick(PageObject_Profiles.Lnk_NeedHelp());
+            Logger.WriteDebugMessage("User clicked on Need Help Signin Link");
+            Helper.WaitForAjaxControls(30);
+        }
+
+        public static void ClickonForgot()
+        {
+            ElementClick(PageObject_Profiles.Lnk_Forgot());
+            Logger.WriteDebugMessage("User clicked on Forgot Password Link and Navigates to Reset Password page");
+            Helper.WaitForAjaxControls(30);
+        }
+
+        public static void EnterRecovery_Email(string email)
+        {
+            ElementEnterText(PageObject_Profiles.Lnk_Recovery(), email);
+            Logger.WriteDebugMessage("User entered Recovery email");
+            Helper.WaitForAjaxControls(30);
+        }        
+
+        public static void Clickon_ResetviaEmail()
+        {
+            ElementClick(PageObject_Profiles.Lnk_Reset());
+            Logger.WriteDebugMessage("User clicked on Reset via Email button");
+            Helper.WaitForAjaxControls(30);
+        }
+
+        public static void Clickon_BacktoSignin()
+        {
+            ElementClick(PageObject_Profiles.Lnk_Backtosignin());
+            Logger.WriteDebugMessage("User clicked on Back to Signin button and navigates to Signin/Login page");
+            Helper.WaitForAjaxControls(30);
+        }
+        
+        public static void Enter_ResetPassword()
+        {
+            ElementClick(PageObject_Profiles.Btn_Resetpassword());
+            Logger.WriteDebugMessage("User entered New Password");
+            Helper.WaitForAjaxControls(30); 
+        }
+
+        public static void Enter_NewPassword(string password)
+        {
+            ElementEnterText(PageObject_Profiles.Txt_Newpassword(), password);            
+            Logger.WriteDebugMessage("User entered New Password");
+            Helper.WaitForAjaxControls(30); 
+        }
+
+        public static void Enter_ConfirmationPassword(string password)
+        {
+            ElementEnterText(PageObject_Profiles.Txt_ConfirmPassword(), password);
+            Logger.WriteDebugMessage("User entered Confirmation Password");
+            Helper.WaitForAjaxControls(30); 
+        }
+
+        public static void Clickon_ResetPasswordbutton()
+        {
+            ElementClick(PageObject_Profiles.Lnk_Resetpassword());
+            Logger.WriteDebugMessage("User clicked on Reset Password");
+            Helper.WaitForAjaxControls(30); 
+        }
+
+        public static void Enter_Unlock_Username(string email)
+        {
+            ElementEnterText(PageObject_Profiles.Txt_UnlockUsername(), email);
+            Logger.WriteDebugMessage("User entered Confirmation Password");
+            Helper.WaitForAjaxControls(30);
+        }
+
+        public static void Clickon_Unlock_SendEmail()
+        {
+            ElementClick(PageObject_Profiles.Lnk_Unlock_SendEmail());
+            Logger.WriteDebugMessage("User clicked on Reset Password");
+            Helper.WaitForAjaxControls(30); 
+        }
+
+        public static void Clickon_Outlook_Unlock_Account()
+        {
+            ElementClick(PageObject_Profiles.Lnk_Clcikon_Outlook_UnlockAccount());
+            Logger.WriteDebugMessage("User clicked on Reset Password");
+            Helper.WaitForAjaxControls(30); 
+        }
+        
+
+        public static void Clickon_SignIn_Unlock_Account() 
+        {
+            ElementClick(PageObject_Profiles.Lnk_Clcikon_SignIn_UnlockAccount());
+            Logger.WriteDebugMessage("User clicked on Reset Password");
+            Helper.WaitForAjaxControls(30); 
+        }
+
+        public static void Verify_LinkExpired(string value)
+        {
+            Assert.IsTrue(GetText(PageObject_Profiles.Lnk_LinkExpired()).Contains(value), "");
+            Logger.WriteDebugMessage("User clicked on Reset Password");
+            Helper.WaitForAjaxControls(30); 
+        }
+
+        public static void Verify_EmailBlank_Validation(string value)
+        {
+            Assert.IsTrue(GetText(PageObject_Profiles.Txt_Email_LeaveBlank()).Contains(value), "");
+            Logger.WriteDebugMessage("User clicked on Reset Password");
+            Helper.WaitForAjaxControls(30);
+        }
+
+        public static void Verify_TextPresent(string value)
+        {
+            Assert.IsTrue(GetText(PageObject_Profiles.Txt_OutLook()).Contains(value), "");
+            Logger.WriteDebugMessage("User clicked on Reset Password");
             Helper.WaitForAjaxControls(30);
         }
 
         public static void ClickonProfilerecordSecondonprofiletable()
         {
-
             ElementClick(PageObject_Profiles.Lnk_clickonProfilerecordSecond());
             Helper.WaitForAjaxControls(30);
         }
 
         public static void VerifyViewprofileName(string value)
         {
-            Assert.IsTrue(GetText(PageObject_Profiles.Viewprofilerecordonviewpage()).Contains(value), "Profile id not matches with selected profile name");
+            Assert.IsTrue(GetText(PageObject_Profiles.Viewprofilerecordonviewpage()).Contains(value), "Profile Name not matches with selected profile Id");
+            Helper.WaitForAjaxControls(30);
+        }
+
+        public static void Verify_SigiIN_Text(string value)
+        {
+            Assert.IsTrue(GetText(PageObject_SignIn.Login_Signin_Text()).Contains(value), "SigIn text is not present");
             Helper.WaitForAjaxControls(30);
         }
 
@@ -327,8 +480,6 @@ namespace CHC_Unified_Profile.AppModule.UI
             Assert.IsTrue(GetText(PageObject_Profiles.Check_Hometext()).Contains(value), "Navigates to Home page after close the Cendyn Help tab");
             Helper.WaitForAjaxControls(30);
         }
-
-
 
         public static void VerifyViewreservationid(string value)
         {
@@ -340,20 +491,39 @@ namespace CHC_Unified_Profile.AppModule.UI
             Helper.ElementWait(PageObject_Profiles.Reservationstab(), 10);
             ElementClickUsingJavascript(PageObject_Profiles.Reservationstab());
             Helper.WaitForAjaxControls(30);
-            Logger.WriteDebugMessage("User click on Reservations tab in Profile dashboard page");
-        }
+            Logger.WriteDebugMessage("User click on Reservations tab in View Profile page");
+        }        
 
         public static void Verifytestpresentonreservations()
         {
             Assert.IsTrue(IsElementDisplayed(PageObject_Profiles.Verifyreservtionrecord()), "Reservation is not displayed selected value");
         }
 
+        public static void VerifytestpresentonViewProfile()
+        {
+            Assert.IsTrue(IsElementDisplayed(PageObject_Profiles.Txt_Summary_ChecktextonViewProfile()), "Summary tab is not displayed in view profile");
+            Logger.WriteDebugMessage("Summary tabs is presented in view profile page");
+            Assert.IsTrue(IsElementDisplayed(PageObject_Profiles.Txt_ContactDetails_ChecktextonViewProfile()), "ContactDetails tab is not displayed in view profile");
+            Logger.WriteDebugMessage("Contact Details tabs is presented in view profile page");
+            Assert.IsTrue(IsElementDisplayed(PageObject_Profiles.Txt_Profile_ChecktextonViewProfile()), "Profile tab is not displayed in view profile");
+            Logger.WriteDebugMessage("Profile tabs is presented in view profile page");
+            Assert.IsTrue(IsElementDisplayed(PageObject_Profiles.Txt_Reservation_ChecktextonViewProfile()), "Reservation tab is not displayed in view profile");
+            Logger.WriteDebugMessage("Reservations tabs is presented in view profile page");
+            Assert.IsTrue(IsElementDisplayed(PageObject_Profiles.Txt_History_ChecktextonViewProfile()), "History tab is not displayed in view profile");
+            Logger.WriteDebugMessage("History tabs is presented in view profile page");
+            Logger.WriteDebugMessage("Summary - Contact details - Profile - Reservations - History tabs are presented in view profile page");
+        }
+        
+        public static void VerifyStatustestpresentonReservationindex()
+        {
+            Assert.IsTrue(IsElementDisplayed(PageObject_Profiles.Txt_Status_Checktextonreservationindex()), "Status text not displayed in Reservation index page");
+            Logger.WriteDebugMessage("Status text displayed in Reservation index page");
+        } //h1[@class='header-title']     
+
         public static string Clickonreservationrecordontable()
         {
-
             string text = GetText(PageObject_Profiles.Reservationrecord());
             ElementClick(PageObject_Profiles.Reservationrecord());
-
             Helper.WaitForAjaxControls(30);
             return text;
         }
@@ -365,10 +535,10 @@ namespace CHC_Unified_Profile.AppModule.UI
 
         public static string ClickonProfilerecordonprofilestable()
         {
-            Helper.ElementWait(PageObject_Profiles.FirstRecordonprofiletable(), 10);
-            string text = GetText(PageObject_Profiles.FirstRecordonprofiletable());
-            ElementClick(PageObject_Profiles.FirstRecordonprofiletable());
-            Logger.WriteDebugMessage("User click on the 448361759 profile id");
+            Helper.ElementWait(PageObject_Profiles.Lnk_clickonProfilerecord(), 10);
+            string text = GetText(PageObject_Profiles.Lnk_clickonProfilerecord());
+            ElementClick(PageObject_Profiles.Lnk_clickonProfilerecord());
+            Logger.WriteDebugMessage("User click on the "+ text + " profile id URL");
             return text;
         }
 
@@ -382,21 +552,187 @@ namespace CHC_Unified_Profile.AppModule.UI
             }
         }
 
-        public static void VerifyDBValuesInProfilePage(Profile_DB profile)
+        /// <summary>
+        /// This method will Check the Details in column wise data with DB values.
+        /// </summary>
+        /// <param name="fieldName"></param>
+        /// <returns></returns>
+        public static string GetFieldXpath(string fieldName)
         {
-            VerifyTextOnPageAndHighLight(profile.ExternalProfileId1);
-            VerifyTextOnPageAndHighLight(profile.ProfileId);
+            string fieldXpath = "//div[contains(text(),'" + fieldName + "')]//parent::li//span";
 
-            string db_DateInserted = profile.DateInserted;
-            string db_DateInsertedFormat = DateTime.Parse(db_DateInserted).ToString("MMM dd, yyyy hh:mm:ss tt");
-            VerifyTextOnPageAndHighLight(db_DateInsertedFormat);
-
-            string db_DateUpdated = profile.DateUpdated;
-            string db_DateUpdatedFormat = DateTime.Parse(db_DateUpdated).ToString("MMM dd, yyyy hh:mm:ss tt");
-            VerifyTextOnPageAndHighLight(db_DateUpdatedFormat);
-            Logger.WriteDebugMessage("Main section Details fields should match with DB as below  - External profile id - Profile id - Date Inserted - Last updated");
+            return fieldXpath;
         }
 
+        /// <summary>
+        /// This method will Check the Details in ellipse column wise data with DB values.
+        /// </summary>
+        /// <param name="fieldName"></param>
+        /// <returns></returns>
+        public static string GetFieldXpath_Ellipse(string fieldName)
+        {
+            string fieldXpath = "//div[contains(text(), '" + fieldName + "')]//parent::div//following-sibling::div/div";
+            //string fieldXpath = "//div[contains(text(),'" + fieldName + "')]//parent::li//span";
+
+            return fieldXpath;
+        }
+        
+        /// <summary>
+        /// This method will Check the Details in table view data with DB values.
+        /// </summary>
+        /// <param name="fieldName"></param>
+        /// <returns></returns>
+        public static string GetFieldXpath_Table(string fieldName)
+        {
+            string fieldXpath = "//h4[contains(text(),'"+ fieldName+"')]//parent::div//following-sibling::div[@class='card-body']";
+
+            return fieldXpath;
+        }
+
+        /// <summary>
+        /// This method will Check the Profile - Details of Main Section on view profile page - data with DB values.
+        /// </summary>
+        /// <param name="profile"></param>
+        public static void VerifyDBValuesInUnifiedProfile_MainSection(Profile_DB profile)
+        {
+            VerifyTextOnPageAndHighLight(profile.ProfileId, GetFieldXpath(" Guest ID "));
+            VerifyTextOnPageAndHighLight(profile.CMData, GetFieldXpath(" Email "));
+
+            Logger.WriteDebugMessage("Main section Details fields should match with DB as below  - " +
+                "Profile id " + profile.ProfileId + "" +
+                "- CMDate(Email) " + profile.CMData + "");
+        }
+
+        /// <summary>
+        /// This method will Check the Profile - Details of Main Section on view profile page - data with DB values.
+        /// </summary>
+        /// <param name="profile"></param>
+        public static void VerifyDBValuesInUnifiedProfile_Ellipse(Profile_DB profile)
+        {
+            VerifyTextOnPageAndHighLight(profile.ConfirmationNum, GetFieldXpath_Ellipse(" Sub Res Number "));
+            //string db_DateInserted = profile.DateInserted;
+            //string db_DateInsertedFormat = DateTime.Parse(db_DateInserted).ToString("MMM dd, yyyy");
+            VerifyTextOnPageAndHighLight(DateTime.Parse(profile.DateInserted).ToString("MMM dd, yyyy"), GetFieldXpath_Ellipse(" Booked Date "));
+            //VerifyTextOnPageAndHighLight(profile.DateInserted, GetFieldXpath_Ellipse(" Booked Date "));
+            VerifyTextOnPageAndHighLight(profile.CancellationCode, GetFieldXpath_Ellipse(" Cancellation Date "));
+            VerifyTextOnPageAndHighLight(profile.RateCode, GetFieldXpath_Ellipse(" Rate Code "));
+            VerifyTextOnPageAndHighLight(profile.MarketCodeCategory, GetFieldXpath_Ellipse(" Market Segment "));
+            //VerifyTextOnPageAndHighLight(profile.ConfirmationNum, GetFieldXpath_Ellipse(" Source Of Business "));
+            VerifyTextOnPageAndHighLight(profile.ChannelCode, GetFieldXpath_Ellipse(" Channel "));
+            VerifyTextOnPageAndHighLight(profile.TotalRoomRevenue, GetFieldXpath_Ellipse(" Room Revenue "));
+            VerifyTextOnPageAndHighLight(profile.RoomTypeCode, GetFieldXpath_Ellipse(" Room Type "));
+            VerifyTextOnPageAndHighLight(profile.TotalFBRevenue, GetFieldXpath_Ellipse(" F&B Revenue "));
+            VerifyTextOnPageAndHighLight(profile.TotalOtherRevenue, GetFieldXpath_Ellipse(" Other Revenue "));
+
+            Logger.WriteDebugMessage("Ellipse Details fields should match with DB as below  - " +
+                " Sub Res Number " + profile.ConfirmationNum  + " , " +
+                " Booked Date " + profile.DateInserted + " , " +
+                " Cancellation Date " + profile.CancellationCode + " , " +
+                " Rate Code " + profile.RateCode + " , " +
+                " Market Segment " + profile.MarketCodeCategory + " , " +
+                " Channel " + profile.ChannelCode + ",  " +
+                " Room Revenue " + profile.TotalRoomRevenue + " , " +
+                " Room Type " + profile.RoomTypeCode + " , " +
+                " F&B Revenue " + profile.TotalFBRevenue + " , " +
+                " Other Revenue " + profile.TotalOtherRevenue 
+                );
+        }
+        
+        /// <summary>
+        /// This method will Check the Profile - Details of Email Section on view profile page - data with DB values.
+        /// </summary>
+        /// <param name="profile"></param>
+        public static void VerifyDBValuesInUnifiedProfile_ContactDetails_EmailSection(Profile_DB profile)
+        {            
+            VerifyTextOnPageAndHighLight(profile.CMData, GetFieldXpath_Table(" Email "));          
+            Logger.WriteDebugMessage("Email - CMDate(Email) " + profile.CMData + "");
+        }
+
+        /// <summary>
+        /// This method will Check the Profile - Details of Phone Section on view profile page - data with DB values.
+        /// </summary>
+        /// <param name="profile"></param>
+        public static void VerifyDBValuesInUnifiedProfile_ContactDetails_PhoneSection(Profile_DB profile)
+        {
+            VerifyTextOnPageAndHighLight(profile.CMData, GetFieldXpath_Table("Phone "));
+            Logger.WriteDebugMessage("Phone Details should match with DB as below - CMDate(Phone) " + profile.CMData + "");
+        }
+
+        /// <summary>
+        /// This method will Check the Profile - Details of Fax Section on view profile page - data with DB values.
+        /// </summary>
+        /// <param name="profile"></param>
+        public static void VerifyDBValuesInUnifiedProfile_ContactDetails_FaxSection(Profile_DB profile)
+        {
+            VerifyTextOnPageAndHighLight(profile.CMData, GetFieldXpath_Table(" Fax "));
+            Logger.WriteDebugMessage("Fax Details should match with DB as below - CMDate(Fax) " + profile.CMData + "");
+        }
+
+        /// <summary>
+        /// This method will Check the Profile - Details of Address Section on view profile page - data with DB values.
+        /// </summary>
+        /// <param name="profile"></param>
+        public static void VerifyDBValuesInUnifiedProfile_ContactDetails_AddressSection(Profile_DB profile)
+        {
+            VerifyTextOnPageAndHighLight(profile.Address1 , GetFieldXpath_Table(" Known Addresses "));
+            if (!string.IsNullOrEmpty(profile.City) && string.IsNullOrEmpty(profile.StateProvince) && string.IsNullOrEmpty(profile.PostalCode))
+            {
+                VerifyTextOnPageAndHighLight(profile.City, GetFieldXpath_Table(" Known Addresses "));
+                VerifyTextOnPageAndHighLight(profile.StateProvince, GetFieldXpath_Table(" Known Addresses "));
+                VerifyTextOnPageAndHighLight(profile.PostalCode, GetFieldXpath_Table(" Known Addresses "));
+            }
+
+            VerifyTextOnPageAndHighLight(profile.CountryCode, GetFieldXpath_Table(" Known Addresses "));
+
+            Logger.WriteDebugMessage("Knowun Address -Address1 Details should match with DB as below - Address1 " + profile.Address1 + " and "+profile.CountryCode+"");
+        }
+
+        /// <summary>
+        /// This method will Check the UP Profile - Details of Main Section on view profile page - data with DB values.
+        /// </summary>
+        /// <param name="profile"></param>
+        public static void VerifyDBValuesInUnifiedProfile_MainSection_Phone(Profile_DB profile)
+        {            
+            VerifyTextOnPageAndHighLight(profile.CMData, GetFieldXpath(" Phone "));
+
+            Logger.WriteDebugMessage("Main section Details fields should match with DB as below  - CMData(Phone) " + profile.CMData + " ");
+        }
+
+        /// <summary>
+        /// This method will Check the UP Profile - Details of Contact Section on view profile page - data with DB values.
+        /// </summary>
+        /// <param name="profile"></param>
+
+        public static void VerifyDBValuesInUnifiedProfile_ContactDetailsSection(Profile_DB profile)
+        {
+            VerifyTextOnPageAndHighLight(profile.PrimaryLanguage, GetFieldXpath(" Gender "));
+            VerifyTextOnPageAndHighLight(profile.GenderCode, GetFieldXpath(" Language "));
+
+            Logger.WriteDebugMessage("Main section Details fields should match with DB as below  - " +
+                "PrimaryLanguage " + profile.PrimaryLanguage + "" +
+                "- GenderCode " + profile.GenderCode + "");
+        }
+
+        /// <summary>
+        /// This method will Check the UP Profile - Details of Personal Section on view profile page - data with DB values.
+        /// </summary>
+        /// <param name="profile"></param>
+        public static void VerifyDBValuesInUnifiedProfile_PersonalDetailsSection(Profile_DB profile)
+        {
+            VerifyTextOnPageAndHighLight(profile.Suffix, GetFieldXpath(" Prefix "));
+            //VerifyTextOnPageAndHighLight(profile.GenderCode, GetFieldXpath(" Language "));
+
+            Logger.WriteDebugMessage("Main section Details fields should match with DB as below  - " +
+                " Prefix " + profile.Suffix+ "" +
+                //"- GenderCode " + profile.GenderCode + "" +
+                "");
+        }
+
+        /// <summary>
+        /// This method will Check the Verify text on page and Highlight - data with DB values.
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="xpath"></param>
         public static void VerifyTextOnPageAndHighLight(string text, string xpath)
         {
             if (string.IsNullOrEmpty(text))
@@ -445,129 +781,36 @@ namespace CHC_Unified_Profile.AppModule.UI
             }
         }
 
-        public static void VerifyDBValuesInProfilePage_PersonalDetails(Profile_DB profile)
-        {
-            //VerifyTextOnPageAndHighLight(profile.Salutation, GetFieldXpath("Salutation"));
-            VerifyTextOnPageAndHighLight(profile.FirstName, GetFieldXpath("First Name"));
-            VerifyTextOnPageAndHighLight(profile.FamiliarName, GetFieldXpath("Familiar Name"));
-            VerifyTextOnPageAndHighLight(profile.MiddleName, GetFieldXpath("Middle Name"));
-            VerifyTextOnPageAndHighLight(profile.LastName, GetFieldXpath("Last Name"));
-            VerifyTextOnPageAndHighLight(profile.Nationality, GetFieldXpath("Nationality"));
-            VerifyTextOnPageAndHighLight(profile.Suffix, GetFieldXpath("Suffix"));
-            VerifyTextOnPageAndHighLight(profile.JobTitle, GetFieldXpath("Job Title"));
-            VerifyTextOnPageAndHighLight(profile.PrimaryLanguage, GetFieldXpath("Primary Language"));
-            VerifyTextOnPageAndHighLight(profile.GenderCode, GetFieldXpath("Gender Code"));
-            Logger.WriteDebugMessage("Personal Details fields should match with DB data as below - FirstName - Last name - Suffix - Job Title - Primary Language - Gender Code - Nationality - Date of Birth ");
-        }
-
-        public static void VerifyDBValuesInProfilePage_AddressDetails(Profile_DB profile)
-        {
-
-            VerifyTextOnPageAndHighLight(profile.Address1, GetFieldXpath("Address 1"));
-            VerifyTextOnPageAndHighLight(profile.Address2, GetFieldXpath("Address 2"));
-            VerifyTextOnPageAndHighLight(profile.StateProvince, GetFieldXpath("State/Province"));
-            VerifyTextOnPageAndHighLight(profile.City, GetFieldXpath("City"));
-            VerifyTextOnPageAndHighLight(profile.PostalCode, GetFieldXpath("Postal Code"));
-            VerifyTextOnPageAndHighLight(profile.CountryCode, GetFieldXpath("Country"));
-            //VerifyTextOnPageAndHighLight(profile.IsPrimary, GetFieldXpath("Primary Address"));
-            VerifyTextOnPageAndHighLight(profile.AddressLanguage, GetFieldXpath("Address Language"));
-
-            //string db_DateInserted = profile.DateInserted;
-            //string db_DateInsertedFormat = DateTime.Parse(db_DateInserted).ToString("MMM dd, yyyy hh:mm:ss tt");
-            //VerifyTextOnPageAndHighLight(db_DateInsertedFormat);
-
-            //string db_DateUpdated = profile.DateUpdated;
-            //string db_DateUpdatedFormat = DateTime.Parse(db_DateUpdated).ToString("MMM dd, yyyy hh:mm:ss tt");
-            //VerifyTextOnPageAndHighLight(db_DateUpdatedFormat);
-            Logger.WriteDebugMessage("Personal Details fields should match with DB as below - Address1 - State / Province - City - Postal Code - Country - Address Language - Primary Address - Record Status - Inserted - Last updated");
-        }
-
-        public static void VerifyDBValuesIncontacrdetails1(string attributeName, string attributeValue)
-        {
-            string elementXpath;
-            if (attributeValue.Equals("True") || attributeValue.Equals("1"))
-            {
-                elementXpath = GetFieldXpath_CheckIcon(attributeName);
-            }
-            else if (attributeValue.Equals("False") || attributeValue.Equals("0"))
-            {
-                elementXpath = GetFieldXpath_CrossIcon(attributeName);
-            }
-            else
-            {
-                elementXpath = GetFieldXpath_CheckEmpty(attributeName);
-            }
-            VerifyElementOnPageAndHighLight(elementXpath);
-        }
-
-        
-
-       
-
-        public static void VerifyDBValuesInContactDetailsPage(Profile_DB cmdata)
-        {
-            VerifyTextOnPageAndHighLight(cmdata.CMData, GetFieldXpath("Value"));
-            //VerifyTextOnPageAndHighLight(cmdata.CMOptOut, GetFieldXpath("Opt Out"));
-            VerifyDBValuesIncontacrdetails1("Opt Out", cmdata.CMOptOut);
-            VerifyDBValuesIncontacrdetails1("Primary IP", cmdata.IsPrimary);
-
-            //VerifyTextOnPageAndHighLight(cmdata.IsPrimary, GetFieldXpath("Primary Email"));
-
-            string db_DateInserted = cmdata.DateInserted;
-            string db_DateInsertedFormat = DateTime.Parse(db_DateInserted).ToString("MMM dd, yyyy hh:mm:ss tt");
-            VerifyTextOnPageAndHighLight(db_DateInsertedFormat);
-
-            string db_DateUpdated = cmdata.DateUpdated;
-            string db_DateUpdatedFormat = DateTime.Parse(db_DateUpdated).ToString("MMM dd, yyyy hh:mm:ss tt");
-            VerifyTextOnPageAndHighLight(db_DateUpdatedFormat);
-            Logger.WriteDebugMessage("Contact Details fields should match with DB as below  - Value " + cmdata.CMData + " - CMOptOut " + cmdata.CMOptOut + " - IsPrimary " + cmdata.IsPrimary + " - Date Inserted " + cmdata.DateInserted + " - Last updated " + cmdata.DateUpdated + " ");
-        }
-
-       
-
-        
-
-       
-
-
-
-       
-
-        public static void VerifyDBValuesInReservationsPage_RevenueDetails(Reservation_DB reservation)
-        {
-            VerifyTextOnPageAndHighLight(reservation.TotalRoomRevenue, GetFieldXpath("Total Room"));
-            VerifyTextOnPageAndHighLight(reservation.TotalOtherRevenue, GetFieldXpath("Total Other"));
-            VerifyTextOnPageAndHighLight(reservation.TotalTax, GetFieldXpath("Total Tax"));
-            VerifyTextOnPageAndHighLight(reservation.TotalFees, GetFieldXpath("Total Fees"));
-            VerifyTextOnPageAndHighLight(reservation.TotalRevenue, GetFieldXpath("Total Revenue"));
-
-            Logger.WriteDebugMessage("Revenue Details fields should match with DB data as below - TotalRoom - Total Other - Total Tax - Total Fees - Total Revenue ");
-        }
-
-        public static void VerifyDBValuesInReservationsPage_PoliciesDetails(Reservation_DB reservation)
-        {
-            VerifyTextOnPageAndHighLight(reservation.GuaranteedByCode, GetFieldXpath(" Guaranteed by Code "));
-            VerifyTextOnPageAndHighLight(reservation.MethodOfPayment, GetFieldXpath(" Method of Payment "));
-            VerifyTextOnPageAndHighLight(reservation.RateConfidential, GetFieldXpath(" Rate Confidential "));
-            VerifyTextOnPageAndHighLight(reservation.DiscountCode, GetFieldXpath(" Discount Code "));
-            VerifyTextOnPageAndHighLight(reservation.DiscountAmount, GetFieldXpath(" Discount Amount "));
-            VerifyTextOnPageAndHighLight(reservation.DiscountPercent, GetFieldXpath(" Discount Percent "));
-            VerifyTextOnPageAndHighLight(reservation.DiscountReasonCode, GetFieldXpath(" Discount Reason Code "));
-            //VerifyTextOnPageAndHighLight(reservation.IsNotRefundable, GetFieldXpath("Salutation"));
-            VerifyTextOnPageAndHighLight(reservation.ApplyTax, GetFieldXpath(" Apply Tax "));
-            Logger.WriteDebugMessage("Personal Details fields should match with DB data as below - GuaranteedByCode - MethodOfPayment - RateConfidential - DiscountCode - DiscountAmount - DiscountPercent - DiscountReasonCode - ApplyTax ");
-        }
         /// <summary>
-        /// 
+        /// This method will Check the list of profiles in the first page of the table.
         /// </summary>
-        /// <param name="reservation"></param>
-        public static void VerifyDBValuesInReservationsPage_AssociatedProfileDetails(Reservation_DB reservation)
+        /// <param name="lst_ProfileDb"></param>
+        public static void VerifyTableData(List<Profile_DB> lst_ProfileDb)
+        {            
+            for (int i = 0; i < lst_ProfileDb.Count; i++)
+            {
+               Profile_DB profileDb = lst_ProfileDb[i];
+               string profileId =  profileDb.ProfileId;
+
+                VerifyTextOnPageAndHighLight(profileId, "//table[@class='e-table']//tr["+(i+1)+"]/td[1]");
+                Logger.WriteDebugMessage("User verify the profile id is "+ profileId + " ");                             
+            }
+        }
+
+        /// <summary>
+        /// This method will Check the list of profiles in the first page of the table.
+        /// </summary>
+        /// <param name="lst_ProfileDb"></param>
+        public static void Verify_Res_TableData(List<Profile_DB> lst_ProfileDb)
         {
-            VerifyTextOnPageAndHighLight(reservation.CompanyCode, GetFieldXpath(" Company Code "));
-            VerifyTextOnPageAndHighLight(reservation.CompanyName, GetFieldXpath(" Company Name "));
-            VerifyTextOnPageAndHighLight(reservation.TravelAgentCode, GetFieldXpath(" Travel Agent Code "));
-            VerifyTextOnPageAndHighLight(reservation.TravelAgentName, GetFieldXpath(" Travel Agent Name "));
-            Logger.WriteDebugMessage("Personal Details fields should match with DB data as below - CompanyCode - CompanyName - TravelAgentCode - TravelAgentName ");
+            for (int i = 0; i < lst_ProfileDb.Count; i++)
+            {
+                Profile_DB profileDb = lst_ProfileDb[i];
+                string externalResID1 = profileDb.ExternalResID1;
+
+                VerifyTextOnPageAndHighLight(externalResID1, "//table[@class='e-table']//tr["+(i+1)+"]/td[1]");
+                Logger.WriteDebugMessage("User verify the ExternalReservation id is " + externalResID1 + " ");
+            }
         }
 
         /// <summary>
@@ -575,167 +818,168 @@ namespace CHC_Unified_Profile.AppModule.UI
         /// </summary>
         /// <param name="fieldName"></param>
         /// <returns></returns>
-        public static string GetFieldXpath(string fieldName)
-        {
-            string fieldXpath = "//div[contains(text(),'" + fieldName + "')]//parent::li//span";
-
-            return fieldXpath;
-        }
-
-        public static string GetFieldXpath_Table(string fieldName)
-        {
-            string fieldXpath = "//*[contains(text(),'" + fieldName + "')]//following::tr[@role='row']/td[contains(@aria-label,'" + fieldName + "')]";
-
-            return fieldXpath;
-        }
-
-        /// <summary>
-        /// This method will Check the list of accounts to select the Org.
-        /// </summary>
-        /// <param name="fieldName"></param>
-        /// <returns></returns>
-        public static string GetFieldXpath_CrossIcon(string fieldName)
-        {
-            fieldName = GetFieldUIName(fieldName);
-            string fieldXpath = "//div[contains(text(),'" + fieldName + "')]/parent::li//*[name()='svg' and @class='base-icon x']";
-
-            return fieldXpath;
-        }
-
-        public static string GetFieldXpath_CheckIcon(string fieldName)
-        {
-            fieldName = GetFieldUIName(fieldName);
-            string fieldXpath = "//div[contains(text(),'" + fieldName + "')]/parent::li//*[name()='svg' and @class='base-icon check']";
-
-            return fieldXpath;
-        }
-
-        public static string GetFieldXpath_CheckEmpty(string fieldName)
-        {
-            fieldName = GetFieldUIName(fieldName);
-            string fieldXpath = "//div[contains(text(),'" + fieldName + "')]/parent::li//*[contains(text(),'--')]";
-
-            return fieldXpath;
-        }
-
-        public static string GetFieldUIName(string fieldNameDB)
-        {
-            string fieldName = null;
-            if (fieldNameDB.Equals("GuestPriv"))
-            {
-                fieldName = "Guest Priv";
-            }
-            else if (fieldNameDB.Equals("AllowMail"))
-            {
-                fieldName = "Allow Mail";
-            }
-            else if (fieldNameDB.Equals("AllowEMail"))
-            {
-                fieldName = "Allow Email";
-            }
-            else if (fieldNameDB.Equals("AllowPhone"))
-            {
-                fieldName = "Allow Phone";
-            }
-            else if (fieldNameDB.Equals("AllowSMS"))
-            {
-                fieldName = "Allow SMS";
-            }
-            else if (fieldNameDB.Equals("AllowHistory"))
-            {
-                fieldName = "Allow History";
-            }
-            else if (fieldNameDB.Equals("AllowMarketResearch"))
-            {
-                fieldName = "Allow Market Research";
-            }
-            else if (fieldNameDB.Equals("AllowThirdParty"))
-            {
-                fieldName = "Allow Third Party";
-            }
-            else if (fieldNameDB.Equals("AllowLoyaltyProgram"))
-            {
-                fieldName = "Allow Loyalty Program";
-            }
-            else
-            {
-                fieldName = fieldNameDB;
-            }
-
-            return fieldName;
-        }
-
-        //public static void EnterFilterValues(string filterOption, string filterType, string value)
+        //public static string GetFieldXpath(string fieldName)
         //{
-        //    IList<IWebElement> options = null;
-        //    string filterTypeInputXpath = "//small[contains(text(),'" + filterOption + "')]/parent::*/following-sibling::div/descendant::span";
-        //    string filterValueInputXpath = "//small[contains(text(),'" + filterOption + "')]/parent::*/following::input[@placeholder='Enter a value']";
-        //    if (filterOption.Equals("ID") || filterOption.Equals("Name") || filterOption.Equals("Property Id")
-        //        || filterOption.Equals("Audience") || filterOption.Equals("Updated By"))
-        //    {
-        //        Helper.ElementClick(Helper.Driver.FindElement(By.XPath(filterTypeInputXpath)));
-        //        for (int i = 0; i < 5; i++) { options = PageObject_ManageCampaign.Campaign_Filter_DropDown_FilterOptions(); }
-        //        foreach (var item in options)
-        //        {
-        //            if (item.Text.Equals(filterType))
-        //            {
-        //                item.Click();
-        //                break;
-        //            }
-        //        }
-        //        //Helper.ElementClick(PageObject_ManageCampaign.Campaign_Filter_ID_Text());
-        //        Helper.ElementWait(Helper.Driver.FindElement(By.XPath(filterValueInputXpath)), 10);
-        //        if (value.Length > 200)
-        //            value = value.Substring(0, 20);
-        //        Helper.ElementEnterText(Helper.Driver.FindElement(By.XPath(filterValueInputXpath)), value.Trim());
-        //    }
-        //    else if (filterOption.Equals("Status"))
-        //    {
-        //        Helper.ElementClick(Helper.Driver.FindElement(By.XPath(filterTypeInputXpath)));
-        //        for (int i = 0; i < 5; i++) { options = PageObject_ManageCampaign.Campaign_Filter_DropDown_FilterOptions(); }
-        //        foreach (var item in options)
-        //        {
-        //            if (item.Text.Equals(filterType))
-        //            {
-        //                item.Click();
-        //                break;
-        //            }
-        //        }
-        //        //Helper.ElementClick(PageObject_ManageCampaign.Campaign_Filter_ID_Text());
-        //        //Helper.ElementWait(PageObject_ManageCampaign.Campaign_Filter_Status_DropDown_Arrow(), 10);
-        //        Helper.ElementClick(PageObject_ManageCampaign.Campaign_Filter_Status_DropDown_Arrow());
-        //        //Helper.ElementEnterText(PageObject_ManageCampaign.Campaign_Filter_Status_DropDown_Input(), value);
-        //        IList<IWebElement> statusOption = null;
-        //        Helper.WaitForAjaxControls(50);
-        //        for (int i = 0; i < 5; i++) { statusOption = PageObject_ManageCampaign.Campaign_Filter_Status_DropDown_Options(); }
-        //        foreach (var item in statusOption)
-        //        {
-        //            if (item.Text.Equals(value))
-        //            {
-        //                Helper.ElementWait(item, 5);
-        //                Helper.ElementClick(item);
-        //                break;
-        //            }
-        //        }
-        //        Helper.ElementClick(PageObject_ManageCampaign.Campaign_Filter_ID_Text());
-        //    }
-        //    if (filterOption.Equals("Updated On") || filterOption.Equals("Check In"))
-        //    {
-        //        Helper.ElementClick(Helper.Driver.FindElement(By.XPath(filterTypeInputXpath)));
-        //        for (int i = 0; i < 5; i++) { options = PageObject_ManageCampaign.Campaign_Filter_DropDown_FilterOptions(); }
-        //        foreach (var item in options)
-        //        {
-        //            if (item.Text.Equals(filterType))
-        //            {
-        //                item.Click();
-        //                break;
-        //            }
-        //        }
-        //        Helper.ElementClick(PageObject_ManageCampaign.Campaign_Filter_ID_Text());
-        //        var date = Convert.ToDateTime(value).ToString("MMM dd, yyyy");
-        //        Helper.ElementEnterText(PageObject_ManageCampaign.Campaign_Filter_UpdatedOn_Input(), date);
-        //        Helper.ElementClick(PageObject_ManageCampaign.Campaign_Filter_ID_Text());
-        //    }
+        //    string fieldXpath = "//div[contains(text(),'" + fieldName + "')]//parent::li//span";
+
+        //    return fieldXpath;
         //}
+
+        //public static string GetFieldXpath_Table(string fieldName)
+        //{
+        //    string fieldXpath = "//*[contains(text(),'" + fieldName + "')]//following::tr[@role='row']/td[contains(@aria-label,'" + fieldName + "')]";
+
+        //    return fieldXpath;
+        //}
+
+        ///// <summary>
+        ///// This method will Check the list of accounts to select the Org.
+        ///// </summary>
+        ///// <param name="fieldName"></param>
+        ///// <returns></returns>
+        //public static string GetFieldXpath_CrossIcon(string fieldName)
+        //{
+        //    fieldName = GetFieldUIName(fieldName);
+        //    string fieldXpath = "//div[contains(text(),'" + fieldName + "')]/parent::li//*[name()='svg' and @class='base-icon x']";
+
+        //    return fieldXpath;
+        //}
+
+        //public static string GetFieldXpath_CheckIcon(string fieldName)
+        //{
+        //    fieldName = GetFieldUIName(fieldName);
+        //    string fieldXpath = "//div[contains(text(),'" + fieldName + "')]/parent::li//*[name()='svg' and @class='base-icon check']";
+
+        //    return fieldXpath;
+        //}
+
+        //public static string GetFieldXpath_CheckEmpty(string fieldName)
+        //{
+        //    fieldName = GetFieldUIName(fieldName);
+        //    string fieldXpath = "//div[contains(text(),'" + fieldName + "')]/parent::li//*[contains(text(),'--')]";
+
+        //    return fieldXpath;
+        //}
+
+        //public static string GetFieldUIName(string fieldNameDB)
+        //{
+        //    string fieldName = null;
+        //    if (fieldNameDB.Equals("GuestPriv"))
+        //    {
+        //        fieldName = "Guest Priv";
+        //    }
+        //    else if (fieldNameDB.Equals("AllowMail"))
+        //    {
+        //        fieldName = "Allow Mail";
+        //    }
+        //    else if (fieldNameDB.Equals("AllowEMail"))
+        //    {
+        //        fieldName = "Allow Email";
+        //    }
+        //    else if (fieldNameDB.Equals("AllowPhone"))
+        //    {
+        //        fieldName = "Allow Phone";
+        //    }
+        //    else if (fieldNameDB.Equals("AllowSMS"))
+        //    {
+        //        fieldName = "Allow SMS";
+        //    }
+        //    else if (fieldNameDB.Equals("AllowHistory"))
+        //    {
+        //        fieldName = "Allow History";
+        //    }
+        //    else if (fieldNameDB.Equals("AllowMarketResearch"))
+        //    {
+        //        fieldName = "Allow Market Research";
+        //    }
+        //    else if (fieldNameDB.Equals("AllowThirdParty"))
+        //    {
+        //        fieldName = "Allow Third Party";
+        //    }
+        //    else if (fieldNameDB.Equals("AllowLoyaltyProgram"))
+        //    {
+        //        fieldName = "Allow Loyalty Program";
+        //    }
+        //    else
+        //    {
+        //        fieldName = fieldNameDB;
+        //    }
+
+        //    return fieldName;
+        //}
+
+        ////public static void EnterFilterValues(string filterOption, string filterType, string value)
+        ////{
+        ////    IList<IWebElement> options = null;
+        ////    string filterTypeInputXpath = "//small[contains(text(),'" + filterOption + "')]/parent::*/following-sibling::div/descendant::span";
+        ////    string filterValueInputXpath = "//small[contains(text(),'" + filterOption + "')]/parent::*/following::input[@placeholder='Enter a value']";
+        ////    if (filterOption.Equals("ID") || filterOption.Equals("Name") || filterOption.Equals("Property Id")
+        ////        || filterOption.Equals("Audience") || filterOption.Equals("Updated By"))
+        ////    {
+        ////        Helper.ElementClick(Helper.Driver.FindElement(By.XPath(filterTypeInputXpath)));
+        ////        for (int i = 0; i < 5; i++) { options = PageObject_ManageCampaign.Campaign_Filter_DropDown_FilterOptions(); }
+        ////        foreach (var item in options)
+        ////        {
+        ////            if (item.Text.Equals(filterType))
+        ////            {
+        ////                item.Click();
+        ////                break;
+        ////            }
+        ////        }
+        ////        //Helper.ElementClick(PageObject_ManageCampaign.Campaign_Filter_ID_Text());
+        ////        Helper.ElementWait(Helper.Driver.FindElement(By.XPath(filterValueInputXpath)), 10);
+        ////        if (value.Length > 200)
+        ////            value = value.Substring(0, 20);
+        ////        Helper.ElementEnterText(Helper.Driver.FindElement(By.XPath(filterValueInputXpath)), value.Trim());
+        ////    }
+        ////    else if (filterOption.Equals("Status"))
+        ////    {
+        ////        Helper.ElementClick(Helper.Driver.FindElement(By.XPath(filterTypeInputXpath)));
+        ////        for (int i = 0; i < 5; i++) { options = PageObject_ManageCampaign.Campaign_Filter_DropDown_FilterOptions(); }
+        ////        foreach (var item in options)
+        ////        {
+        ////            if (item.Text.Equals(filterType))
+        ////            {
+        ////                item.Click();
+        ////                break;
+        ////            }
+        ////        }
+        ////        //Helper.ElementClick(PageObject_ManageCampaign.Campaign_Filter_ID_Text());
+        ////        //Helper.ElementWait(PageObject_ManageCampaign.Campaign_Filter_Status_DropDown_Arrow(), 10);
+        ////        Helper.ElementClick(PageObject_ManageCampaign.Campaign_Filter_Status_DropDown_Arrow());
+        ////        //Helper.ElementEnterText(PageObject_ManageCampaign.Campaign_Filter_Status_DropDown_Input(), value);
+        ////        IList<IWebElement> statusOption = null;
+        ////        Helper.WaitForAjaxControls(50);
+        ////        for (int i = 0; i < 5; i++) { statusOption = PageObject_ManageCampaign.Campaign_Filter_Status_DropDown_Options(); }
+        ////        foreach (var item in statusOption)
+        ////        {
+        ////            if (item.Text.Equals(value))
+        ////            {
+        ////                Helper.ElementWait(item, 5);
+        ////                Helper.ElementClick(item);
+        ////                break;
+        ////            }
+        ////        }
+        ////        Helper.ElementClick(PageObject_ManageCampaign.Campaign_Filter_ID_Text());
+        ////    }
+        ////    if (filterOption.Equals("Updated On") || filterOption.Equals("Check In"))
+        ////    {
+        ////        Helper.ElementClick(Helper.Driver.FindElement(By.XPath(filterTypeInputXpath)));
+        ////        for (int i = 0; i < 5; i++) { options = PageObject_ManageCampaign.Campaign_Filter_DropDown_FilterOptions(); }
+        ////        foreach (var item in options)
+        ////        {
+        ////            if (item.Text.Equals(filterType))
+        ////            {
+        ////                item.Click();
+        ////                break;
+        ////            }
+        ////        }
+        ////        Helper.ElementClick(PageObject_ManageCampaign.Campaign_Filter_ID_Text());
+        ////        var date = Convert.ToDateTime(value).ToString("MMM dd, yyyy");
+        ////        Helper.ElementEnterText(PageObject_ManageCampaign.Campaign_Filter_UpdatedOn_Input(), date);
+        ////        Helper.ElementClick(PageObject_ManageCampaign.Campaign_Filter_ID_Text());
+        ////    }
+        ////}
     }
 }
+

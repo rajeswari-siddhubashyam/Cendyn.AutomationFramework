@@ -35,7 +35,7 @@ namespace CTOS
 		{
 			foreach (var key in _buttonStyles.Keys)
 			{
-				if (_webElement.GetAttribute("class").ToLower().Contains(key))
+				if (WebElement.GetAttribute("class").ToLower().Contains(key))
 				{
 					return _buttonStyles[key];
 				}
@@ -46,7 +46,7 @@ namespace CTOS
 
 		public bool IsEnabled()
 		{
-			if (_webElement.GetDomAttribute("disabled") != "true")
+			if (WebElement.GetDomAttribute("disabled") != "true")
 				return true;
 
 			return false;

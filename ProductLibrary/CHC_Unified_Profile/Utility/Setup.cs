@@ -25,10 +25,10 @@ namespace CHC_Unified_Profile.Utility
             SetupApplicationPath();
             Setup.build = Environment.GetEnvironmentVariable("LT_BUILD") == null ? "CHC_LambdaTestExecution_" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("dd") + DateTime.Now.ToString("yyyy") : Environment.GetEnvironmentVariable("LT_BUILD");
             //Initialize the test case set up.
-            SetupTestPlan(eProduct.CHCAuto, clientName, testDataType, caseType, projectName);
+            SetupTestPlan(eProduct.CHC_UP, clientName, testDataType, caseType, projectName);
 
             //Set Connection String
-            SetupConnectionString(Constants.clientEnv.CHCAutoQA);
+            SetupConnectionString(Constants.clientEnv.CHC_UP_AutoQA);
 
             //Navigate to the URL
             //Driver.Navigate().GoToUrl(url);
@@ -38,7 +38,6 @@ namespace CHC_Unified_Profile.Utility
         public static void SetupConnectionString(Enum clientName)
         {
             ConnectionString = ConfigurationManager.ConnectionStrings[GetEnumDescription(clientName)].ConnectionString;
-
         }
 
         public static void SetupApplicationPath()

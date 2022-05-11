@@ -28,13 +28,18 @@ namespace TestData
             AMR_Agent_Production,
             [Description("MarketingAutoQA")]
             MarketingAutoQA,
+            [Description("CHC_UP_AutoQA")]
+            CHC_UP_AutoQA,
             [Description("MarketingAutoDEV")]
             MarketingAutoDEV,
+            [Description("CMSQA")]
+            CMSQA,
+            [Description("CMSDEV")]
+            CMSDEV,
             [Description("CHC_ConfigQA")]
             CHC_ConfigQA,
             [Description("CHC_ConfigDEV")]
             CHC_ConfigDEV
-
         }
 
         public enum TestDataType
@@ -59,9 +64,13 @@ namespace TestData
             RevIntel,
             [Description("MarketingAuto")]
             MarketingAuto,
+            [Description("CMS")]
+            CMS,
             [Description("CHC_Config")]
-            CHC_Config
-
+            CHC_Config,
+            
+            [Description("CHCUPAuto")]
+            CHCUPAuto
         }
         public enum CaseType
         {

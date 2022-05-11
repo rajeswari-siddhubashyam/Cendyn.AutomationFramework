@@ -13,7 +13,8 @@
         AMR_Agent = 9,
         MarketingAuto = 10,
         CHCAuto = 11,
-        CHC_Config = 12
-
+        CHC_Config = 12,
+        CHC_UP = 13,
+        CMS = 14
     }
 }

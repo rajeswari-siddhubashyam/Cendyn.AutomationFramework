@@ -11,10 +11,7 @@ namespace CHC_Unified_Profile.AppModule.MainAdminApp
         public static void TP_356196()
         {
             switch (TestCaseId)
-            {
-                case "TC_340276":
-                    TC_340276();
-                    break;
+            {               
                 case "TC_340278":
                     TC_340278();
                     break;
@@ -26,14 +23,49 @@ namespace CHC_Unified_Profile.AppModule.MainAdminApp
                     break;
                 case "TC_340280":
                     TC_340280();
-                    break;
-                case "TC_340291":
-                    TC_340291();
-                    break;
+                    break;                
                 case "TC_340281":
                     TC_340281();
                     break;
             }
         }
+
+        public static void TP_358861()
+        {
+            switch (TestCaseId)
+            {
+                case "TC_312067":
+                    TC_312067();
+                    break;
+                case "TC_312069":
+                    TC_312069();
+                    break;
+                case "TC_312070":
+                    TC_312070();
+                    break;
+            }
+        }
+
+        public static void TP_356194()
+        {
+            switch (TestCaseId)
+            {
+                case "TC_326178":
+                    TC_326178();
+                    break;
+            }
+        }
+
+        public static void TP_369438()
+        {
+            switch (TestCaseId)
+            {
+                case "TC_332462":
+                    TC_332462();
+                    break;
+            }
+        }
+
     }
+    
 }

@@ -17,6 +17,14 @@ namespace CHC_Unified_Profile.PageObject.UI
             return PageAction.Find_ElementId(ObjectRepository.SignIn_Email);
         }
 
+        public static IWebElement Login_Signin_Text()
+        {
+            ScanPage(Constants.SignIn);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementId(ObjectRepository.SignIn_Text);
+        }
+
         public static IWebElement Input_Password()
         {
             ScanPage(Constants.SignIn);

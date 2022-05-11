@@ -16,10 +16,10 @@ namespace CTOS.Components
 		}
 
 		public bool IsEnabled() 
-			=> _webElement.Enabled;
+			=> WebElement.Enabled;
 
 		public bool IsSelected()
-			=> _webElement.GetDomAttribute("checked") == "true" ? true : false;
+			=> WebElement.GetDomAttribute("checked") == "true" ? true : false;
 
 		public ILabel GetLabel()
 			=> _radioLabel;
@@ -30,7 +30,7 @@ namespace CTOS.Components
 			Actions actions = new Actions(_driver);
 			if (IsEnabled())
 				actions
-					.MoveToElement(_webElement, 4, 4)
+					.MoveToElement(WebElement, 4, 4)
 					.Click()
 					.Perform();
 			else

@@ -16,7 +16,7 @@ namespace CTOS.Components
             => Click();
 
         public string GetLabelText()
-            => _webElement.Text;
+            => WebElement.Text;
 
 		public new string GetCssValue(string propertyName)
             => GetCssValue(propertyName);

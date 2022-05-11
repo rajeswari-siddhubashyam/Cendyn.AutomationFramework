@@ -16,6 +16,7 @@ namespace CHC_Unified_Profile.Utility
         public static string SignIn_Email_Testuser { get; set; }
         public static string SignIn_Password_Testuser { get; set; }
         public static string SignIn_Submit { get; set; }
+        public static string SignIn_Text { get; set; }
         #endregion[SignIn]
 
         #region[Navigation]
@@ -41,7 +42,8 @@ namespace CHC_Unified_Profile.Utility
         #region[Profiles]
         public static string Filter_By_Email { get; set; }
         public static string Search_Icon { get; set; }
-        public static string Filter_Button { get; set; }
+        public static string Filter_Button { get; set; }        
+        public static string Click_on_applybutton_Filter { get; set; }
         public static string Filter_Applybutton { get; set; }
         public static string Filter_Clearbutton { get; set; }
         public static string Sort_Applybutton { get; set; }
@@ -65,6 +67,7 @@ namespace CHC_Unified_Profile.Utility
         public static string View_ContactDetails { get; set; }
         public static string ViewProfile_Historytab { get; set; }
 
+        public static string Ellipse { get; set; }
         public static string Home_Button { get; set; }
         public static string Help_Link { get; set; }
         public static string HelpMouseOver { get; set; }
@@ -78,6 +81,38 @@ namespace CHC_Unified_Profile.Utility
         public static string Manage_Campaign_Filter_UpdatedOn_Input { get; set; }
         public static string Manage_Campaign_Filter_ID_Text { get; set; }
         public static string Home_Text_Homepage { get; set; }
+
+        public static string Text_Summary { get; set; }
+        public static string Text_ContactDetails { get; set; }
+        public static string Text_Profile { get; set; }
+        public static string Text_Reservations { get; set; }
+        public static string Text_History { get; set; }
+        public static string Text_Statusonreservationindexpage { get; set; }
+
+        public static string Link_Needhelp_signin { get; set; }
+        public static string Link_ForgotPassword { get; set; }
+        public static string Enter_RecoveryEmail { get; set; }
+        public static string Click_Reset_ViaEmail { get; set; }
+        public static string Click_BackTo_Signin { get; set; }
+        public static string Click_Reset_Password { get; set; }
+        public static string Enter_NewPassword { get; set; }
+        public static string Enter_ConfirmPassword { get; set; }
+        public static string Click_Reset_Resetpassword { get; set; }
+
+        public static string Unlock_EmailUsername { get; set; }
+        public static string Unlock_SendEmail { get; set; }
+
+        public static string Outlook_UnlockAccount { get; set; }
+
+        public static string NeedHelp_UnlockAccount { get; set; }
+
+        public static string UnlockAccount_LinkExpired { get; set; }
+
+        public static string UserName_LeftBlank { get; set; }
+
+        public static string OutLook_Text { get; set; }
+        public static string Table_Allcolumns { get; set; }
+
         #endregion[Profiles]     
 
         #region[Reservations] 
@@ -157,6 +192,8 @@ namespace CHC_Unified_Profile.Utility
                         View_Profile = pair.Value;
                     if (pair.Key == "Filter_Applybutton")
                         Filter_Applybutton = pair.Value;
+                    if (pair.Key == "Click_on_applybutton_Filter")
+                        Click_on_applybutton_Filter = pair.Value;                    
                     if (pair.Key == "Filter_Clearbutton")
                         Filter_Clearbutton = pair.Value;
                     if (pair.Key == "Sort_Applybutton")
@@ -193,9 +230,9 @@ namespace CHC_Unified_Profile.Utility
                         View_ContactDetails = pair.Value;
                     else if (pair.Key == "ViewProfile_Historytab")
                         ViewProfile_Historytab = pair.Value;
-                    else if (pair.Key == "Home_Button") 
+                    else if (pair.Key == "Home_Button")
                         Home_Button = pair.Value;
-                    else if (pair.Key == "Help_Link") 
+                    else if (pair.Key == "Help_Link")
                         Help_Link = pair.Value;
                     else if (pair.Key == "HelpMouseOver")
                         HelpMouseOver = pair.Value;
@@ -219,6 +256,62 @@ namespace CHC_Unified_Profile.Utility
                         Manage_Campaign_Filter_ID_Text = pair.Value;
                     else if (pair.Key == "Home_Text_Homepage")
                         Home_Text_Homepage = pair.Value;
+
+                    else if (pair.Key == "Text_Summary")
+                        Text_Summary = pair.Value;
+                    else if (pair.Key == "Text_ContactDetails")
+                        Text_ContactDetails = pair.Value;
+                    else if (pair.Key == "Text_Profile")
+                        Text_Profile = pair.Value;
+                    else if (pair.Key == "Text_Reservations")
+                        Text_Reservations = pair.Value;
+                    else if (pair.Key == "Text_History")
+                        Text_History = pair.Value;
+                    else if (pair.Key == "Text_Statusonreservationindexpage")
+                        Text_Statusonreservationindexpage = pair.Value;
+
+                    else if (pair.Key == "Link_Needhelp_signin")
+                        Link_Needhelp_signin = pair.Value;
+                    else if (pair.Key == "Link_ForgotPassword")
+                        Link_ForgotPassword = pair.Value;
+                    else if (pair.Key == "Enter_RecoveryEmail")
+                        Enter_RecoveryEmail = pair.Value;
+                    else if (pair.Key == "Click_Reset_ViaEmail")
+                        Click_Reset_ViaEmail = pair.Value;
+                    else if (pair.Key == "Click_BackTo_Signin")
+                        Click_BackTo_Signin = pair.Value;
+                    else if (pair.Key == "Click_Reset_Password")
+                        Click_Reset_Password = pair.Value;
+                    else if (pair.Key == "Enter_NewPassword")
+                        Enter_NewPassword = pair.Value;
+                    else if (pair.Key == "Enter_ConfirmPassword")
+                        Enter_ConfirmPassword = pair.Value;
+                    else if (pair.Key == "Click_Reset_Resetpassword")
+                        Click_Reset_Resetpassword = pair.Value;
+
+                    else if (pair.Key == "Unlock_EmailUsername")
+                        Unlock_EmailUsername = pair.Value;
+                    else if (pair.Key == "Unlock_SendEmail")
+                        Unlock_SendEmail = pair.Value;
+
+                    else if (pair.Key == "Outlook_UnlockAccount")
+                        Outlook_UnlockAccount = pair.Value;
+
+                    else if (pair.Key == "NeedHelp_UnlockAccount")
+                        NeedHelp_UnlockAccount = pair.Value;
+
+                    else if (pair.Key == "UnlockAccount_LinkExpired")
+                        UnlockAccount_LinkExpired = pair.Value;
+                    else if (pair.Key == "UserName_LeftBlank")
+                        UserName_LeftBlank = pair.Value;
+                    else if (pair.Key == "OutLook_Text")
+                        OutLook_Text = pair.Value;
+                    else if (pair.Key == "SignIn_Text")
+                        SignIn_Text = pair.Value;
+                    else if (pair.Key == "Table_Allcolumns")
+                        Table_Allcolumns = pair.Value;
+                    else if (pair.Key == "Ellipse")
+                        Ellipse = pair.Value;
                 }
                 #endregion[Profiles] 
 
@@ -234,3 +327,4 @@ namespace CHC_Unified_Profile.Utility
         }
     }
 }
+

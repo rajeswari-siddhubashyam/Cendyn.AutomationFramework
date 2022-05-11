@@ -11,7 +11,7 @@ using System.Threading;
 
 namespace CTOS
 {
-    public class CendynElement
+    public class CendynElement : IWebElement
     {
         /// <summary>
         /// The time it will take for the test to fail a single action in milliseconds.
@@ -27,7 +27,7 @@ namespace CTOS
         protected readonly IWebDriver _driver;
         protected By _selector;
 
-        protected IWebElement _webElement
+        protected IWebElement WebElement
         {
             get
             {
@@ -36,13 +36,13 @@ namespace CTOS
                 return _lazyLoadElement;
             }
         }
-        protected string TagName { get => _webElement.TagName; }
-        protected string Text { get => _webElement.Text; }
-        protected bool Enabled { get => _webElement.Enabled; }
-        protected bool Selected { get => _webElement.Selected; }
-        protected Point Location { get => _webElement.Location; }
-        protected Size Size { get => _webElement.Size; }
-        protected bool Displayed { get => _webElement.Displayed; }
+        public string TagName { get => WebElement.TagName; }
+        public string Text { get => WebElement.Text; }
+        public bool Enabled { get => WebElement.Enabled; }
+        public bool Selected { get => WebElement.Selected; }
+        public Point Location { get => WebElement.Location; }
+        public Size Size { get => WebElement.Size; }
+        public bool Displayed { get => WebElement.Displayed; }
 
         public CendynElement(IWebDriver driver, By selector)
         {
@@ -59,29 +59,37 @@ namespace CTOS
         public CendynElement(IWebDriver driver, CendynElement cendynElement)
         {
             _driver = driver;
-            _lazyLoadElement = cendynElement._webElement;
+            _lazyLoadElement = cendynElement.WebElement;
         }
-
+        
+        public string GetAttribute(string attributeName)
+            => WebElement.GetAttribute(attributeName);
         public string GetDomAttribute(string attributeName)
-            => _webElement.GetDomAttribute(attributeName);
+            => WebElement.GetDomAttribute(attributeName);
 
         public string GetDomProperty(string propertyName)
-            => _webElement.GetDomProperty(propertyName);
+            => WebElement.GetDomProperty(propertyName);
+
+        public string GetProperty(string attributeName)
+            => WebElement.GetDomProperty(attributeName);
 
         public string GetCssValue(string propertyName)
-            => _webElement.GetCssValue(propertyName);
+            => WebElement.GetCssValue(propertyName);
 
-        protected ISearchContext GetShadowRoot()
-            => _webElement.GetShadowRoot();
+        public ISearchContext GetShadowRoot()
+            => WebElement.GetShadowRoot();
 
-        protected void Click()
-            => TryAndWait(() => _webElement.Click());
-        protected void SendKeys(string text)
-            => TryAndWait(() => _webElement.SendKeys(text));
-        protected void Clear()
-            => TryAndWait(() => _webElement.Clear());
-        protected void Submit()
-            => TryAndWait(() => _webElement.Submit());
+        public void Click()
+            => TryAndWait(() => WebElement.Click());
+
+        public void SendKeys(string text)
+            => TryAndWait(() => WebElement.SendKeys(text));
+
+        public void Clear()
+            => TryAndWait(() => WebElement.Clear());
+
+        public void Submit()
+            => TryAndWait(() => WebElement.Submit());
 
         /// <summary>
         /// Finds an element in relation to the current element. Selectors will begin their position starting from this element.
@@ -91,7 +99,7 @@ namespace CTOS
         public IWebElement FindElement(By by)
         {
             IWebElement element = null;
-            TryAndWait(() => element = _webElement.FindElement(by));
+            TryAndWait(() => element = WebElement.FindElement(by));
             return element;
         }
 
@@ -105,7 +113,7 @@ namespace CTOS
         public IWebElement FindElement(By by, int timeoutMs, int retryTimeout)
         {
             IWebElement element = null;
-            TryAndWait(() => element = _webElement.FindElement(by), timeoutMs, retryTimeout);
+            TryAndWait(() => element = WebElement.FindElement(by), timeoutMs, retryTimeout);
             return element;
         }
 
@@ -163,6 +171,19 @@ namespace CTOS
                     if (i == (timeoutMs / retryTimeout))
                         throw;
                 };
+            }
+        }
+
+        public bool IsElementPresent(By by)
+        {
+            try
+            {
+                FindElement(by);
+                return true;
+            }
+            catch (NoSuchElementException)
+            {
+                return false;
             }
         }
     }

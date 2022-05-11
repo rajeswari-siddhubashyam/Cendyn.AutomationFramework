@@ -1,16 +1,16 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using CTOS;
+using CTOS.Components;
 using CTOS.Models;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using CTOS.Components;
-using System.Windows;
-using System.Threading;
-using CTOS;
+using System;
+using System.Configuration;
+using System.Threading.Tasks;
 
 namespace CTOSTests.Tests
 {
+    [TestFixture]
     public class CTOSTests
     {
         IWebDriver driver;
@@ -21,6 +21,7 @@ namespace CTOSTests.Tests
         {
             // This can be put into a test case, like original framework
             // Quick add here for demonstration
+
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.AddArgument("--start-maximized");
             chromeOptions.AddArgument("enable-automation");
@@ -29,7 +30,7 @@ namespace CTOSTests.Tests
 
             driver = new ChromeDriver(chromeOptions);
             _ = driver.Manage().Timeouts().ImplicitWait;
-            driver.Navigate().GoToUrl("https://uikit.gocendyn.com/");
+            driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["BaseURL"]);
             Task.Delay(3000).Wait();
             NavBar = new NavigationPanel(driver, By.XPath("//*[@id='sidebar']"));
             try
@@ -45,25 +46,36 @@ namespace CTOSTests.Tests
         [Test]
         public void TestingCalendar()
 		{
-            NavBar.NavigateTo("Date Picker");
-            var Calendar1 = new DatePicker(driver, By.XPath("//span[contains(@class, 'e-input-group e-control-wrapper e-date-wrapper')][1]"));
-            var Calendar2 = new DatePicker(driver, By.XPath("//span[contains(@class, 'e-input-group e-control-wrapper e-date-wrapper')][2]"));
-            var Calendar3 = new DatePicker(driver, By.XPath("//span[contains(@class, 'e-input-group e-control-wrapper e-date-wrapper')][3]"));
+            NavBar.NavigateTo("C-DatePicker");
+            var Calendar1 = new DatePicker(driver, By.XPath("(//span[contains(@class, 'e-input-group e-control-wrapper e-date-wrapper')])[1]"));
+            var Calendar2 = new DatePicker(driver, By.XPath("(//span[contains(@class, 'e-input-group e-control-wrapper e-date-wrapper')])[2]"));
+            var Calendar3 = new DatePicker(driver, By.XPath("(//span[contains(@class, 'e-input-group e-control-wrapper e-date-wrapper')])[3]"));
+            var Calendar4 = new DatePicker(driver, By.XPath("(//span[contains(@class, 'e-input-group e-control-wrapper e-date-wrapper')])[4]"));
+
+            Calendar1.SetDateByInput(DateTime.Today.AddYears(-1).AddMonths(2));
+            Calendar1.SetDateByInput(DateTime.Now);
 
             Calendar1.OpenCalendar();
-			Calendar1.SetDateByGUI(DateTime.Now.AddDays(4));
+            Calendar1.SetDateByGUI(DateTime.Now.AddDays(-30));
+            Calendar1.OpenCalendar();
+            Calendar1.SetDateByGUI(DateTime.Now.AddDays(12));
 
             Calendar2.OpenCalendar();
-            Calendar2.SetDateByGUI(DateTime.Now.AddDays(6));
-            
-			try
-			{
+            Calendar2.SetDateByGUI(DateTime.Today.AddYears(-1).AddMonths(1));
+
+            Calendar4.OpenCalendar();
+            Calendar4.SetDateByGUI(DateTime.Now.AddDays(12));
+            Calendar4.SetDateByInput(DateTime.Now);
+
+            try
+            {
                 Calendar3.OpenCalendar();
-                Assert.Fail("Calendar3 is disabled but OpenCalendar did not throw an exception.");
+                Calendar3.IsDisabled();
+                //Assert.Fail("Calendar3 is disabled but OpenCalendar did not throw an exception.");
             }
-			catch
-			{
-			}
+            catch
+            {
+            }
         }
 
         [Test]
@@ -172,6 +184,13 @@ namespace CTOSTests.Tests
 
             Radio5.Select();
             Radio6.Select();
+        }
+
+        [OneTimeTearDown]
+        public void CloseBrowser()
+        {
+            driver.Close(); //current window instance
+            driver.Quit(); //all window instances
         }
     }
 }
