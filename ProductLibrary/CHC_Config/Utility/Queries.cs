@@ -40,10 +40,10 @@ namespace CHC_Config.Utility
         public static void GetAccountDetails(AccountInfo acc, string chain)
         {
             query = "select r.Description as 'ReleaseDesc', s.Description as 'StatusDesc',a.*, " +
-                    "ad.Address1 +', '+ ad.City +', '+ad.StateProvince +' '+ad.PostalCode +' '+ad.CountryCode as 'Address' from Account a " + 
-                    "join ReleaseMode r on r.ReleaseModeId = a.ReleaseModeId "+
-                    "join AccountStatusType s on s.AccountStatusTypeId = a.StatusId "+
-                    "join AccountAddress ad on ad.AccountId=a.AccountId "+
+                    "ad.Address1 +', '+ ad.Address2 +', '+ ad.City +', '+ad.StateProvince +' '+ad.PostalCode +' '+ad.CountryCode as 'Address' from Account a " + 
+                    "left join ReleaseMode r on r.ReleaseModeId = a.ReleaseModeId "+
+                    "left join AccountStatusType s on s.AccountStatusTypeId = a.StatusId "+
+                    "left join AccountAddress ad on ad.AccountId=a.AccountId "+
                     "where Name = '" + chain + "'";
 
             using (SqlConnection connection = DBHelper.SqlConn())
@@ -63,7 +63,14 @@ namespace CHC_Config.Utility
                             acc.AccountID = reader["AccountId"].ToString();
                             acc.ReleaseMode = reader["ReleaseDesc"].ToString();
                             acc.Status = reader["StatusDesc"].ToString();
-                            acc.AccountType = reader["AccountType"].ToString();
+                            string accountType = reader["AccountType"].ToString();
+                            if (accountType == "3")
+                                acc.PropertyType = "Hotel";
+                            else if (accountType=="2")
+                                acc.PropertyType = "Brand";
+                            else
+                                acc.PropertyType = "Chain";
+
                             acc.AccountParentID = reader["AccountParentId"].ToString();
                             acc.Address = reader["Address"].ToString();
                         }
@@ -170,11 +177,17 @@ namespace CHC_Config.Utility
                 connection.Close();
             }
         }
-        public static void GetAddress(List<AccountLinks> links, string chainId)
+        public static void GetPropertyAdvancedConfig(PropertyAdvancedConfig p, string propId)
         {
-            query = "select link.CendynPropertyId as'AccountID',link.Url,t.Description from PropertyUrlLink link " +
-                    "join LinkType t on t.LinkTypeId = link.Type " +
-                    "where accountID = '" + chainId + "'";
+            query = "select a.AccountId, i.Latitude,i.Longitude,i.NumberBeds,i.NumberRooms,c.ChainScaleDescription,t.PropertyTypeDescription,o.OperationDescription,l.LocationName,r.RegionName,r.SubRegion from Account a " +
+                    "left join PropertyInfo i on i.AccountId = a.AccountId " +
+                    "left join ChainScale c on c.ChainScaleId = i.ChainScaleId " +
+                    "left join PropertyType t on t.PropertyTypeId = i.PropertyTypeId " +
+                    "left join PropertyOperationType o on o.PropertyOperationTypeId = i.PropertyOperationTypeId " +
+                    "left join PropertyLocation l on l.LocationId = i.LocationId " +
+                    "left join Region r on r.RegionId=i.RegionId "+
+                    "where a.AccountId = '" + propId + "'";
+
 
             using (SqlConnection connection = DBHelper.SqlConn())
             {
@@ -187,17 +200,24 @@ namespace CHC_Config.Utility
                     {
                         while (reader.Read())
                         {
-                            AccountLinks l = new AccountLinks();
-                            l.AccountID = reader["AccountID"].ToString();
-                            l.Url = reader["Url"].ToString();
-                            l.Description = reader["Description"].ToString();
-                            links.Add(l);
+                            p.AccountID = reader["AccountId"].ToString();
+                            p.Latitude = reader["Latitude"].ToString();
+                            p.Longitude = reader["Longitude"].ToString();
+                            p.NumberOfBeds = reader["NumberBeds"].ToString();
+                            p.NumberOfRooms = reader["NumberRooms"].ToString();
+                            p.STRChainScale = reader["ChainScaleDescription"].ToString();
+                            p.PropertyType = reader["PropertyTypeDescription"].ToString();
+                            p.STROperation = reader["OperationDescription"].ToString();
+                            p.STRLocation = reader["LocationName"].ToString();
+                            p.UNRegion = reader["RegionName"].ToString();
+                            p.UNSubRegion = reader["SubRegion"].ToString();
                         }
                     }
                 }
                 connection.Close();
             }
         }
+        
         public static void GetBrandsForChain(List<AccountInfo> brands, string chainId)
         {
             query = "select Name, FORMAT(InsertDate, 'MMM dd yyyy') as 'DateAdded' from Account "+
@@ -254,5 +274,84 @@ namespace CHC_Config.Utility
                 connection.Close();
             }
         }
+        public static void GetPropertiesForBrand(List<AccountInfo> properties, string brandId)
+        {
+            query = "select Name, FORMAT(InsertDate, 'MMM dd yyyy') as 'DateAdded' from Account " +
+                    "where AccountType = '3' " +
+                    "and AccountParentId = '" + brandId + "' "+
+                     "order by Name ";
+
+            using (SqlConnection connection = DBHelper.SqlConn())
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.CommandTimeout = 60;
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            AccountInfo acc = new AccountInfo();
+                            acc.Name = reader["Name"].ToString();
+                            acc.DateAdded = reader["DateAdded"].ToString();
+                            properties.Add(acc);
+                        }
+                    }
+                }
+                connection.Close();
+            }
+        }
+        public static void GetParentAccount(AccountInfo acc, string propId)
+        {
+            query = "select AccountId, Name, FORMAT(InsertDate, 'MMM dd yyyy') as 'DateAdded' from Account " +
+                    "where AccountId in (select AccountParentId from Account where AccountId = '" + propId + "')" ;        
+
+            using (SqlConnection connection = DBHelper.SqlConn())
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.CommandTimeout = 60;
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            acc.Name = reader["Name"].ToString();
+                            acc.DateAdded = reader["DateAdded"].ToString();
+                            acc.AccountID = reader["AccountId"].ToString();                           
+                        }
+                    }
+                }
+                connection.Close();
+            }
+        }
+        public static void GetFacilities(List<string> facilities, string propId)
+        {
+            query = "select f.FacilityDescription from PropertyFacility f "+
+                    "join PropertyFacilityMapping m on m.FacilityCode = f.FacilityCode "+
+                    "where m.AccountId = '" + propId + "' order by f.FacilityDescription";
+                    
+            using (SqlConnection connection = DBHelper.SqlConn())
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.CommandTimeout = 60;
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            facilities.Add(reader["FacilityDescription"].ToString());
+                        }
+                    }
+                }
+                connection.Close();
+            }
+        }
+
+
     }
 }

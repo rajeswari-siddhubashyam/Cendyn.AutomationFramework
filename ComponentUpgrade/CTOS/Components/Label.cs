@@ -10,13 +10,19 @@ namespace CTOS.Components
     {
         public Label(IWebDriver driver, By selector) : base(driver, selector)
         {
+
+        }
+
+        public Label(IWebDriver driver, IWebElement webElement) : base(driver, webElement)
+        {
+
         }
 
         public new void Click()
             => Click();
 
         public string GetLabelText()
-            => WebElement.Text;
+            => base.Text;
 
 		public new string GetCssValue(string propertyName)
             => GetCssValue(propertyName);

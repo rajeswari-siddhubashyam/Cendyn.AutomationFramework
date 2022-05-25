@@ -45,7 +45,12 @@ namespace CHC_Config.Utility
         public static string SearchResults_Chain { get; set; }
         public static string OrgIndex_loading { get; set; }
         public static string Create_List { get; set; }
-        
+        public static string Filter_Button { get; set; }
+        public static string Filter_Options { get; set; }
+        public static string Filter_Options_Select { get; set; }
+        public static string Filter_Options_Text { get; set; }
+        public static string Filter_Applybutton { get; set; }
+        public static string Filter_Clearbutton { get; set; }
         #endregion[OrgIndex]
 
         #region[Dashboard]
@@ -71,6 +76,8 @@ namespace CHC_Config.Utility
         public static string ChainDashboard_address { get; set; }
         public static string Dashboard_status { get; set; }
         public static string ChainDashboard_property_details { get; set; }
+        public static string BrandDashboard_property_details { get; set; }
+        public static string PropertyDashboard_property_details { get; set; }
         public static string Dashboard_sideColumnName { get; set; }
         public static string Dashboard_sideColumnValue { get; set; }
         public static string ChainDashboard_Link_image { get; set; }
@@ -88,15 +95,28 @@ namespace CHC_Config.Utility
         public static string Dashboard_Prop_Names { get; set; }
         public static string ChainDashboard_FirstBrand { get; set; }
         public static string ChainDashboard_FirstProperty { get; set; }
+
+        public static string PropertyDashboard_Metadata { get; set; }
+        public static string PropertyDashboard_AdvancedConfig { get; set; }
+        public static string PropertyDashboard_Facilities { get; set; }
+        public static string PropertyDashboard_Rooms { get; set; }
+        public static string PropertyDashboard_Beds { get; set; }
+        public static string PropertyDashboard_ColumnName { get; set; }
+        public static string PropertyDashboard_ColumnValue { get; set; }
         
-            
         #endregion[Dashboard]
 
         #region[Create]
         public static string Create_Button { get; set; }
         public static string create_cancel { get; set; }
         public static string createPage_header { get; set; }
-        
+        public static string Manage_Property { get; set; }
+        public static string Manage_Brand { get; set; }
+        public static string Edit_Details { get; set; }
+        public static string input_chain { get; set; }
+        public static string input_brand { get; set; }
+        public static string input_property { get; set; }
+
         #endregion[Create]
         public static ObjectRepository ReadElement(string location, string nodeModule)
         {
@@ -176,7 +196,19 @@ namespace CHC_Config.Utility
                         OrgIndex_loading = pair.Value;
                     else if (pair.Key == "Create_List")
                         Create_List = pair.Value;
-                    
+                    else if (pair.Key == "Filter_Button")
+                        Filter_Button = pair.Value;
+                    else if (pair.Key == "Filter_Options")
+                        Filter_Options = pair.Value;
+                    else if (pair.Key == "Filter_Options_Select")
+                        Filter_Options_Select = pair.Value;
+                    else if (pair.Key == "Filter_Options_Text")
+                        Filter_Options_Text = pair.Value;
+                    else if (pair.Key == "Filter_Applybutton")
+                        Filter_Applybutton = pair.Value;
+                    else if (pair.Key == "Filter_Clearbutton")
+                        Filter_Clearbutton = pair.Value;
+
                 }
                 #endregion[OrgIndex]
                 #region[Dashboard]
@@ -226,6 +258,8 @@ namespace CHC_Config.Utility
                         Dashboard_status = pair.Value;
                     else if (pair.Key == "ChainDashboard_property_details")
                         ChainDashboard_property_details = pair.Value;
+                    else if (pair.Key == "BrandDashboard_property_details")
+                        BrandDashboard_property_details = pair.Value;
                     else if (pair.Key == "Dashboard_sideColumnName")
                         Dashboard_sideColumnName = pair.Value;
                     else if (pair.Key == "Dashboard_sideColumnValue")
@@ -258,9 +292,22 @@ namespace CHC_Config.Utility
                         ChainDashboard_FirstBrand = pair.Value;
                     else if (pair.Key == "ChainDashboard_FirstProperty")
                         ChainDashboard_FirstProperty = pair.Value;
-
-
-
+                    else if (pair.Key == "PropertyDashboard_property_details")
+                        PropertyDashboard_property_details = pair.Value;
+                    else if (pair.Key == "PropertyDashboard_Metadata")
+                        PropertyDashboard_Metadata = pair.Value;
+                    else if (pair.Key == "PropertyDashboard_AdvancedConfig")
+                        PropertyDashboard_AdvancedConfig = pair.Value;
+                    else if (pair.Key == "PropertyDashboard_Facilities")
+                        PropertyDashboard_Facilities = pair.Value;
+                    else if (pair.Key == "PropertyDashboard_Rooms")
+                        PropertyDashboard_Rooms = pair.Value;
+                    else if (pair.Key == "PropertyDashboard_Beds")
+                        PropertyDashboard_Beds = pair.Value;                    
+                    else if (pair.Key == "PropertyDashboard_ColumnName")
+                        PropertyDashboard_ColumnName = pair.Value;
+                    else if (pair.Key == "PropertyDashboard_ColumnValue")
+                        PropertyDashboard_ColumnValue = pair.Value;
                 }
                 #endregion[Dashboard]
                 #region[Create]
@@ -272,6 +319,18 @@ namespace CHC_Config.Utility
                         create_cancel = pair.Value;
                     else if (pair.Key == "createPage_header")
                         createPage_header = pair.Value;
+                    else if (pair.Key == "Manage_Property")
+                        Manage_Property = pair.Value;
+                    else if (pair.Key == "Manage_Brand")
+                        Manage_Brand = pair.Value;
+                    else if (pair.Key == "Edit_Details")
+                        Edit_Details = pair.Value;
+                    else if (pair.Key == "input_chain")
+                        input_chain = pair.Value;
+                    else if (pair.Key == "input_brand")
+                        input_brand = pair.Value;
+                    else if (pair.Key == "input_property")
+                        input_property = pair.Value;
                 }
                 #endregion[Create]
             }

@@ -17,10 +17,10 @@ namespace CHC_Config.AppModule.UI
         public static void verifyAccountLocalizationDetails(string prop, AccountLocalization localization)
         {
             IList<IWebElement> local_fields = null;
-            if (prop.ToLower() == "chain")
-            {
+            //if (prop.ToLower() == "chain")
+           // {
                 local_fields = PageObject_Dashboard.ChainDashboard_Localization();
-            }
+           // }
             /*else if(prop.ToLower()=="brand")
                 local_fields =PageObject_Dashboard.Bran*/
             bool pass = true;
@@ -65,15 +65,21 @@ namespace CHC_Config.AppModule.UI
         {
 
             IWebElement status = PageObject_Dashboard.Dashboard_status();
-            IWebElement address = null;
-            IList<IWebElement> prop_fields  = PageObject_Dashboard.ChainDashboard_property_details();
+            IWebElement address = PageObject_Dashboard.ChainDashboard_address(); 
+            IList<IWebElement> prop_fields=null;
             if (prop.ToLower() == "chain")
             {
-                address = PageObject_Dashboard.ChainDashboard_address();
+                prop_fields = PageObject_Dashboard.ChainDashboard_property_details();
             }
-            /*else if(prop.ToLower()=="brand")
-                local_fields =PageObject_Dashboard.Bran*/
-
+            else if (prop.ToLower() == "brand")
+            {
+                prop_fields = PageObject_Dashboard.BrandDashboard_property_details();
+            }
+            else if (prop.ToLower() == "property")
+            {
+                prop_fields = PageObject_Dashboard.PropertyDashboard_property_details();
+            }
+            
             /*--------- verifying status----------*/
             if (status.Text.Trim() == account.Status)
             {
@@ -84,8 +90,19 @@ namespace CHC_Config.AppModule.UI
                 Logger.WriteDebugMessage("Status does not match - UI value = " + status.Text + " & DB value = " + account.Status);
                 Assert.Fail("status not matching");
             }
+            /* --------------Verifying address--------- */
+            string addr = address.Text;
+            addr = addr.Replace("\r\n", " ");
 
-            
+            if (addr.Trim() == account.Address)
+            {
+                Logger.WriteDebugMessage("Address matching - UI value = " + address.Text + " & DB value = " + account.Address);
+            }
+            else
+            {
+                Logger.WriteDebugMessage("Address not matching - UI value = " + address.Text + " & DB value = " + account.Address);
+                Assert.Fail("Address not matching");
+            }
             /* ------------Verify fields in the list ---------*/
             foreach (IWebElement i in prop_fields)
             {
@@ -103,7 +120,7 @@ namespace CHC_Config.AppModule.UI
 
                     if (DBValue == "")
                         DBValue = "--";
-                    if (DBValue == col_value.Text.Trim())
+                    if (DBValue.Trim() == col_value.Text.Trim())
                     {
                         HighlightElement(col_value);
                         Logger.WriteDebugMessage("Value matches DB- " + columnName + " = " + DBValue);
@@ -115,16 +132,17 @@ namespace CHC_Config.AppModule.UI
                         Assert.Fail("Values not matching for " + columnName);
                     }
                 }
+                
             }
         }
         public static void VerifyPhone(string prop, List<AccountPhone> phone)
         {
             ScrollDown();
             IList<IWebElement> local_fields = null;
-            if (prop.ToLower() == "chain")
-            {
+            //if (prop.ToLower() == "chain")
+           // {
                 local_fields = PageObject_Dashboard.ChainDashboard_Phone();
-            }
+           // }
             /*else if(prop.ToLower()=="brand")
                 local_fields =PageObject_Dashboard.Bran*/
 
@@ -149,7 +167,7 @@ namespace CHC_Config.AppModule.UI
                 }
            
 
-                if (DBValue == colValue)//col_value.Text.Trim())
+                if (DBValue.Trim() == colValue.Trim())//col_value.Text.Trim())
                 {
                     HighlightElement(col_value);
                     Logger.WriteDebugMessage("Value matches DB - " + columnName + " = " + DBValue);
@@ -157,7 +175,7 @@ namespace CHC_Config.AppModule.UI
                 }
                 else
                 {
-                    Logger.WriteDebugMessage("Values not matching for " + columnName + " - UI value = " + col_value.Text.Trim() + " DB Value = " + DBValue);
+                    Logger.WriteDebugMessage("Values not matching for " + columnName + " - UI value = " + colValue.Trim() + " DB Value = " + DBValue);
                     Assert.Fail("Values not matching for " + columnName);
                 }
 
@@ -166,10 +184,10 @@ namespace CHC_Config.AppModule.UI
         public static void VerifyLinks(string prop, List<AccountLinks> links)
         {
             IList<IWebElement> local_fields = null;
-            if (prop.ToLower() == "chain")
-            {
+            //if (prop.ToLower() == "chain")
+            //{
                 local_fields = PageObject_Dashboard.ChainDashboard_Link();
-            }
+            //}
             /*else if(prop.ToLower()=="brand")
                 local_fields =PageObject_Dashboard.Bran*/
             bool pass = true;
@@ -219,7 +237,7 @@ namespace CHC_Config.AppModule.UI
             brandTab.Click();
             //IsElementDisplayed(PageObject_Dashboard.Dashboard_loading)
             FindLoaderAndWaitTillHide(ObjectRepository.Dashboard_loading);
-                  
+            ElementWait(PageObject_Dashboard.Dashboard_Brandtable_Row()[0], 15);
             IWebElement div = PageObject_Dashboard.Dashboard_Brand_div();
             //IWebElement Brand = Driver.FindElement(By.XPath("//div[@id='chaintabsContent']/div[@id='nav-chaintabs-2']//table[contains(@id,'_content_table')]/tbody/tr[@class='e-row']//td[1]"));
             IList<IWebElement> BrandRow = PageObject_Dashboard.Dashboard_Brandtable_Row();
@@ -253,6 +271,7 @@ namespace CHC_Config.AppModule.UI
             PropTab.Click();
             //IsElementDisplayed(PageObject_Dashboard.Dashboard_loading)
             FindLoaderAndWaitTillHide(ObjectRepository.Dashboard_loading);
+            AddDelay(2000);
 
             IWebElement div = PageObject_Dashboard.Dashboard_Prop_div();
             //IWebElement Brand = Driver.FindElement(By.XPath("//div[@id='chaintabsContent']/div[@id='nav-chaintabs-3']//table[contains(@id,'_content_table')]/tbody/tr[@class='e-row']//td[contains(@class,'e-templatecell')]"));
@@ -340,6 +359,126 @@ namespace CHC_Config.AppModule.UI
             //Back_to_Org.Click();
             Driver.Navigate().Back();
             WaitTillBrowserLoad();
+        }
+
+        public static void VerifyMetadata(PropertyAdvancedConfig ac)
+        {
+            ScrollDown();
+            IList<IWebElement> prop_fields = null;
+
+            prop_fields = PageObject_Dashboard.PropertyDashboard_Metadata();
+            foreach (IWebElement i in prop_fields)
+            {
+                IWebElement col_name = PageObject_Dashboard.PropertyDashboard_ColumnName(i);
+                IWebElement col_value = PageObject_Dashboard.PropertyDashboard_ColumnValue(i);
+
+                string columnName = col_name.Text.Trim();
+                
+                    columnName = columnName.Replace(" ", ""); //string.Empty
+                    string DBValue = DataBinder.Eval(ac, columnName).ToString();
+                if (columnName.Contains("UN")==false)
+                {
+                    DBValue = DBValue.Replace(" ", "");
+                }
+               
+                
+                    if (DBValue == "")
+                        DBValue = "--";
+                    if (DBValue.ToLower() == col_value.Text.Trim().ToLower())
+                    {
+                        HighlightElement(col_value);
+                        Logger.WriteDebugMessage("Value matches DB- " + columnName + " = " + DBValue);
+                        RemoveHighlightElement(col_value);
+                    }
+                    else
+                    {
+                        Logger.WriteDebugMessage("Values not matching for " + columnName + " - UI value = " + col_value.Text.Trim() + " DB Value = " + DBValue);
+                        Assert.Fail("Values not matching for " + columnName);
+                    }
+                
+
+            }
+        }
+        public static void VerifyAdvancedConfig(PropertyAdvancedConfig ac)
+        {
+            ScrollDown();
+            IList<IWebElement> prop_fields = null;
+
+            prop_fields = PageObject_Dashboard.PropertyDashboard_AdvancedConfig();
+            foreach (IWebElement i in prop_fields)
+            {
+                IWebElement col_name = PageObject_Dashboard.PropertyDashboard_ColumnName(i);
+                IWebElement col_value = PageObject_Dashboard.PropertyDashboard_ColumnValue(i);
+
+                string columnName = col_name.Text.Trim();
+
+                columnName = columnName.Replace(" ", ""); //string.Empty
+                string DBValue = DataBinder.Eval(ac, columnName).ToString();
+               
+                DBValue = DBValue.Replace(" ", "");
+                if (DBValue == "")
+                    DBValue = "--";
+                if (DBValue.ToLower() == col_value.Text.Trim().ToLower())
+                {
+                    HighlightElement(col_value);
+                    Logger.WriteDebugMessage("Value matches DB- " + columnName + " = " + DBValue);
+                    RemoveHighlightElement(col_value);
+                }
+                else
+                {
+                    Logger.WriteDebugMessage("Values not matching for " + columnName + " - UI value = " + col_value.Text.Trim() + " DB Value = " + DBValue);
+                    Assert.Fail("Values not matching for " + columnName);
+                }
+            }
+        }
+        public static void VerifyNumberOfRooms(PropertyAdvancedConfig ac)
+        {
+            ScrollDown();
+            IWebElement Rooms = PageObject_Dashboard.PropertyDashboard_Rooms();
+            IWebElement Beds = PageObject_Dashboard.PropertyDashboard_Beds();
+            if (ac.NumberOfRooms == Rooms.Text.Trim())
+                {
+                    HighlightElement(Rooms);
+                    Logger.WriteDebugMessage("Value matches DB- " + Rooms.Text + " = " + ac.NumberOfRooms);
+                    RemoveHighlightElement(Rooms);
+                }
+             else
+                {
+                    Logger.WriteDebugMessage("Values not matching for Number Of Rooms + - UI value = " + Rooms.Text + " DB Value = " + ac.NumberOfRooms);
+                    Assert.Fail("Values not matching for Number Of Rooms");
+                }
+
+             if (ac.NumberOfBeds == Beds.Text.Trim())
+                {
+                    HighlightElement(Beds);
+                    Logger.WriteDebugMessage("Value matches DB- " + Beds.Text + " = " + ac.NumberOfBeds);
+                    RemoveHighlightElement(Beds);
+                }
+             else
+                {
+                    Logger.WriteDebugMessage("Values not matching for Number Of Rooms + - UI value = " + Beds.Text + " DB Value = " + ac.NumberOfBeds);
+                    Assert.Fail("Values not matching for Number Of Beds");
+                }
+        }
+        public static void VerifyFacilities(List<string> facilitiesDB)
+        {
+            ScrollDown();
+            IList<IWebElement> prop_fields = PageObject_Dashboard.PropertyDashboard_Facilities();
+                      
+            for (int i=0; i<facilitiesDB.Count;i++)
+            {
+                if (facilitiesDB[i]==prop_fields[i].Text.Trim())
+                {
+                    HighlightElement(prop_fields[i]);
+                    Logger.WriteDebugMessage("Value matches DB- " + prop_fields[i].Text.Trim() + " = " + facilitiesDB[i]);
+                    RemoveHighlightElement(prop_fields[i]);
+                }
+                else
+                {
+                    Logger.WriteDebugMessage("Values not matching for Facilities  - UI value = " + prop_fields[i].Text.Trim() + " DB Value = " + facilitiesDB[i]);
+                    Assert.Fail("Values not matching for " + prop_fields[i].Text.Trim());
+                }
+            }
         }
     }
 }

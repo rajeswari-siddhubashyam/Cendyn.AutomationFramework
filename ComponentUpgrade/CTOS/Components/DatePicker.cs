@@ -1,8 +1,11 @@
-﻿using CTOS.Models;
-using OpenQA.Selenium;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+using CTOS.Models;
+using OpenQA.Selenium;
 
 namespace CTOS
 {
@@ -10,8 +13,10 @@ namespace CTOS
     {
         private string[] stringSeparators = new string[] { " " };
         private string pattern = "dd-MMM-yyyy";
+
         private CendynElement CalendarInput { get; }
         private CendynElement CalendarGUI { get; }
+        ////private IWebDriver _driver { get; }
         private CendynElement CalendarCloseBtn { get; }
 
         public DatePicker(IWebDriver driver, By selector) : base(driver, selector)
@@ -21,16 +26,22 @@ namespace CTOS
             CalendarCloseBtn = new CendynElement(driver, By.XPath("./child::span[@class = 'e-clear-icon e-clear-icon-hide']"));
         }
 
-        public CendynElement GetWebElement()
-            => CalendarGUI;
+        //public DatePicker(IWebDriver driver, CendynElement cendynElement) : base(driver, cendynElement)
+        //{
+
+        //}
+
+        //public CendynElement GetWebElement()
+        //    => CalendarGUI;
 
         public void OpenCalendar()
         {
             if (IsDisabled())
                 throw new InvalidElementStateException("Could not open Calendar. Input is disabled.");
 
+            //Task.Delay(1000).Wait();
             if (!IsCalendarOpen())
-			{
+            {
                 CalendarInput.FindElement(By.XPath("./child::span[contains(@class, 'e-input-group-icon e-date-icon e-icons')]")).Click();
                 //By.XPath($"../*[@class='e-input-group-icon e-date-icon e-icons']")).Click();
                 //By.XPath("./self::span[contains(@class, 'e-active')]")
@@ -41,21 +52,22 @@ namespace CTOS
         {
             Task.Delay(1000).Wait();
             try
-			{
-                //FindElement(By.CssSelector(".e-datepicker.e-popup-wrapper.e-lib.e-popup.e-control"));
+            {
                 FindElement(By.XPath("//div[contains(@class,'e-datepicker e-popup-wrapper e-lib e-popup e-control')]"));
+                //CalendarInput.FindElement(By.XPath("./child::div[@class ='e-datepicker e-popup-wrapper e-lib e-popup e-control e-popup-open']"));
                 return true;
             }
-			catch(Exception e)
-			{
+            catch (Exception e)
+            {
                 Console.WriteLine(e);
                 return false;
-			}
+            }
         }
 
         public void SetDateByInput(DateTime date)
         {
             string inputDate = date.ToString(pattern);
+            CalendarInput.FindElement(By.XPath("./child::input[@class ='e-control e-datepicker e-lib e-input e-keyboard']"));
             if (IsDisabled())
                 throw new InvalidElementStateException("Could not set Date. Input is disabled.");
 
@@ -74,23 +86,22 @@ namespace CTOS
 
             //compares the target date should be the same as selected date
 
+
             int res = date.Date.CompareTo(selectedDate.Date);
             if (res != 0)
             {
                 //log -dates are not equal
+                Console.WriteLine("Dates are not equal");
             }
         }
 
         public void SetDateByGUI(DateTime date)
         {
-            if (IsDisabled())
-                throw new InvalidElementStateException("Could not set Date. Input is disabled.");
-
-            //if (CalendarInput.Enabled)
-            //{
-            //    CalendarInput.FindElement(By.XPath("./child::input[@class = 'e-control e-datepicker e-lib e-input e-keyboard']")).Clear();
-            //    //CalendarCloseBtn.Click();
-            //}
+            if (CalendarInput.Enabled)
+            {
+                CalendarInput.FindElement(By.XPath("./child::input[@class = 'e-control e-datepicker e-lib e-input e-keyboard']")).Clear();
+                //CalendarCloseBtn.Click();
+            }
 
             string finaltargetDate = date.ToString(DateTimeFormatInfo.CurrentInfo.LongDatePattern);
             //string finaltargetDate = date.ToUniversalTime().ToString("r");
@@ -157,11 +168,12 @@ namespace CTOS
             if (res != 0)
             {
                 //log -dates are not equal
+                Console.WriteLine("Dates are not equal");
             }
         }
 
         public bool IsDisabled()
-		{
+        {
             var attrVal = CalendarInput.FindElement(By.XPath("./child::input[@class ='e-control e-datepicker e-lib e-input e-keyboard']")).GetDomAttribute("readonly");
             if (attrVal == "true")
                 return true;

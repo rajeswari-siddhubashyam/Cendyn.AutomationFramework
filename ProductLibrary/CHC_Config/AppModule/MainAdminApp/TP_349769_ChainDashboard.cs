@@ -136,21 +136,24 @@ namespace CHC_Config.AppModule.MainAdminApp
                 Navigation.Click_Configurations_App();
                 WaitTillBrowserLoad();
 
-                Navigation.VerifyPopup();
+               /* Navigation.VerifyPopup();
 
                 //Click on Choose button
                 Navigation.ClickOnChooseOnPopup();
 
-
+                WaitTillBrowserLoad();
                 //Step5  Verify the Accounts listed & Select the Org
                 Navigation.VerifyAccounts();
                 Navigation.ClickExpandIcons();
                 string accountName = "Kirigami Hotels (Chain)";
-                Navigation.Click_Accounts(accountName);
-               // Navigation.VerifyAccountPage(accountName);
+                Navigation.Click_Accounts(accountName);*/
+                // Navigation.VerifyAccountPage(accountName);
 
-
-                OrgIndex.SearchPropertyName();
+                WaitTillBrowserLoad();
+               
+                // OrgIndex.SearchPropertyName();
+                Driver.Navigate().Refresh();
+                OrgIndex.Filter_Options_ByPropertyName();
                 OrgIndex.ViewChainDashboard();
 
                 string searchText = TestData.ExcelData.TestDataReader.ReadData(6, "chain_name");

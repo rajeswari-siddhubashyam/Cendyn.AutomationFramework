@@ -163,7 +163,7 @@ namespace CHC_Config.PageObject.UI
             ScanPage(Constants.PropertyDashboard);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
-            return PageAction.Find_ElementClassName(ObjectRepository.ChainDashboard_address);
+            return PageAction.Find_ElementXPath(ObjectRepository.ChainDashboard_address);
         }
         public static IWebElement Dashboard_status()
         {
@@ -178,6 +178,20 @@ namespace CHC_Config.PageObject.UI
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementsXPath(ObjectRepository.ChainDashboard_property_details);
+        }
+        public static IList<IWebElement> BrandDashboard_property_details()
+        {
+            ScanPage(Constants.PropertyDashboard);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementsXPath(ObjectRepository.BrandDashboard_property_details);
+        }
+        public static IList<IWebElement> PropertyDashboard_property_details()
+        {
+            ScanPage(Constants.PropertyDashboard);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementsXPath(ObjectRepository.PropertyDashboard_property_details);
         }
         public static IWebElement Dashboard_sideColumnName(IWebElement element)
         {
@@ -272,6 +286,57 @@ namespace CHC_Config.PageObject.UI
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath(ObjectRepository.ChainDashboard_FirstProperty);
         }
+        public static IList<IWebElement> PropertyDashboard_Metadata()
+        {
+            ScanPage(Constants.PropertyDashboard);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementsXPath(ObjectRepository.PropertyDashboard_Metadata);
+        }
+        public static IList<IWebElement> PropertyDashboard_AdvancedConfig()
+        {
+            ScanPage(Constants.PropertyDashboard);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementsXPath(ObjectRepository.PropertyDashboard_AdvancedConfig);
+        }
+        public static IList<IWebElement> PropertyDashboard_Facilities()
+        {
+            ScanPage(Constants.PropertyDashboard);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementsXPath(ObjectRepository.PropertyDashboard_Facilities);
+        }
+        public static IWebElement PropertyDashboard_Rooms()
+        {
+            ScanPage(Constants.PropertyDashboard);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.PropertyDashboard_Rooms);
+        }
+        public static IWebElement PropertyDashboard_Beds()
+        {
+            ScanPage(Constants.PropertyDashboard);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.PropertyDashboard_Beds);
+        }
+        public static IWebElement PropertyDashboard_ColumnName(IWebElement element)
+        {
+            ScanPage(Constants.PropertyDashboard);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return element.FindElement(By.ClassName(ObjectRepository.PropertyDashboard_ColumnName));
+        }
+        public static IWebElement PropertyDashboard_ColumnValue(IWebElement element)
+        {
+            ScanPage(Constants.PropertyDashboard);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return element.FindElement(By.ClassName(ObjectRepository.PropertyDashboard_ColumnValue));
+        }
+     
+        
 
 
     }

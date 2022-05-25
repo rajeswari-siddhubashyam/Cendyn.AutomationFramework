@@ -32,7 +32,49 @@ namespace CHC_Config.PageObject.UI
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath(ObjectRepository.create_cancel);
         }
-        
+
+        public static IWebElement Manage_Property()
+        {
+            ScanPage(Constants.Create);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.Manage_Property);
+        }
+        public static IWebElement Manage_Brand()
+        {
+            ScanPage(Constants.Create);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.Manage_Brand);
+        }
+        public static IWebElement Edit_Details()
+        {
+            ScanPage(Constants.Create);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.Edit_Details);
+        }
+        public static IWebElement input_chain()
+        {
+            ScanPage(Constants.Create);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.input_chain);
+        }
+        public static IWebElement input_brand()
+        {
+            ScanPage(Constants.Create);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.input_brand);
+        }
+        public static IWebElement input_property()
+        {
+            ScanPage(Constants.Create);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.input_property);
+        }
 
     }
 }

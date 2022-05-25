@@ -13,12 +13,14 @@ namespace CHC_Config.AppModule.UI
             Logger.WriteDebugMessage("Home tab");
             Helper.WaitTillBrowserLoad();
             //WaittillElementDisplay(PageObject_Navigation.Configuration_App());
-            ElementWait(PageObject_Navigation.Configuration_App(), 10);
+            ElementWait(PageObject_Navigation.Configuration_App(), 40);
+            AddDelay(2000);
             Helper.ElementClick(PageObject_Navigation.Configuration_App());
             Helper.WaitTillBrowserLoad();
         }
         public static void VerifyPopup()
         {
+            Helper.ElementWait(PageObject_Navigation.Btn_PopupChoose(), 10);
             Assert.IsTrue(IsElementVisible(PageObject_Navigation.Btn_PopupChoose()), "Choose button not present in popup");
             Assert.IsTrue(IsElementVisible(PageObject_Navigation.Btn_PopupCancel()), "Cancel button not present in popup");
         }
@@ -29,6 +31,7 @@ namespace CHC_Config.AppModule.UI
 
         public static void VerifyAccounts()
         {
+            Helper.ElementWait(PageObject_Navigation.Lnk_Accounts()[0], 10);
             Assert.IsTrue(IsElementDisplayed(PageObject_Navigation.Lnk_Accounts()[0]), "Accounts are not loaded");
         }
         public static void ClickExpandIcons()
