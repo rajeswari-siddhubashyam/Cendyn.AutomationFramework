@@ -11,6 +11,11 @@ namespace CTOS.Components
 		//private Label _radioLabel;
 		private CendynElement radioButton { get; }
 
+		/// <summary>
+		/// constructor method to add the radio button
+		/// </summary>
+		/// <param name="driver"></param>
+		/// <param name="Selector"></param>
 		public Radio(IWebDriver driver, By Selector) : base(driver, Selector)
 		{	
 			radioButton = new CendynElement(driver, Selector);
