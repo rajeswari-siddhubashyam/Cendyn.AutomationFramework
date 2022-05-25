@@ -81,7 +81,49 @@ namespace CHC_Config.PageObject.UI
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementsXPath(ObjectRepository.Create_List);
         }
-        
+        public static IWebElement FilterButton()
+        {
+            ScanPage(Constants.OrgIndex);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.Filter_Button);
+        }
+        public static IList<IWebElement> Filter_Options()
+        {
+            ScanPage(Constants.OrgIndex);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementsXPath(ObjectRepository.Filter_Options);
+        }
+        public static IWebElement Filter_Options_Select(IWebElement div)
+        {
+            ScanPage(Constants.OrgIndex);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return div.FindElement(By.XPath(ObjectRepository.Filter_Options_Select));
+        }
+        public static IWebElement Filter_Options_Text(IWebElement div)
+        {
+            ScanPage(Constants.OrgIndex);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return div.FindElement(By.XPath(ObjectRepository.Filter_Options_Text));
+        }
+        public static IWebElement Filter_Applybutton(IWebElement div)
+        {
+            ScanPage(Constants.OrgIndex);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return div.FindElement(By.XPath(ObjectRepository.Filter_Applybutton));
+        }
+        public static IWebElement Filter_Clearbutton(IWebElement div)
+        {
+            ScanPage(Constants.OrgIndex);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return div.FindElement(By.XPath(ObjectRepository.Filter_Clearbutton));
+        }
+
 
     }
 }

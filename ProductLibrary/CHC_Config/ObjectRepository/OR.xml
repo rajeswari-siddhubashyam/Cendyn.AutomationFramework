@@ -18,8 +18,9 @@
       <Parameter key="Home_PopupCancel">//*[text()='Cancel']</Parameter>
       <Parameter key="UserAccountMouseover">//span[contains(@class,'rounded-circle')]</Parameter>
       <Parameter key="User_Logout">//*[text()='Logout']</Parameter>
-      <Parameter key="ExpandableIcon">//*[contains(text(),'Accounts')]//following::*[contains(@class,'e-icon-expandable')]</Parameter>
-      <Parameter key="Accounts">//*[contains(text(),'Accounts')]//following::p[@class='tree-view-title']</Parameter>
+      <Parameter key="ExpandableIcon">//*[@id="org-home-selector"]//following::*[contains(@class,'e-icon-expandable')]</Parameter>
+      <Parameter key="Accounts">//*[@id="org-home-selector"]//following::p[@class='tree-view-title']</Parameter>-->
+      <!--<Parameter key="Accounts">//*[contains(text(),'Accounts')]//following::p[@class='tree-view-title']</Parameter>-->
       <Parameter key="AccountPageName">orgSwitch</Parameter>
     </Home>
     
@@ -30,10 +31,14 @@
         <Parameter key="Filter_PropertyName">//*[contains(@id,'filter-searchbar')]</Parameter>
         <Parameter key="SearchResults_Row">//*[@id="orgs-grid_content_table"]/tbody/tr</Parameter>
         <Parameter key="SearchResults_PropertyName">//*[@id="orgs-grid_content_table"]/tbody/tr/td[2]/div/a</Parameter>
-        <Parameter key="SearchResults_Brand">//*[@id="orgs-grid_content_table"]/tbody/tr/td[3]</Parameter>
+        <Parameter key="SearchResults_Brand">//*[@id="orgs-grid_content_table"]/tbody/tr/td[3]/div/a</Parameter>
         <Parameter key="SearchResults_Chain">//*[@id="orgs-grid_content_table"]/tbody/tr/td[4]</Parameter>
         <Parameter key="Filter_PropertyName_Search">//input[contains(@id,'filter-searchbar')]//following::*[contains(@class,'input-group-append')]</Parameter>
         <Parameter key="Filter_Button">//div[text()='Filter']</Parameter>
+        <!-- search - after u click filter button-->
+        <Parameter key="Filter_Options">//*[@class='filter-form']//child::div[@class='row']</Parameter>
+        <Parameter key="Filter_Options_Select">//select[contains(@id,'operator-name')]</Parameter>
+        <Parameter key="Filter_Options_Text">//input[contains(@id,'string-name')]</Parameter>
         <Parameter key="Filter_Applybutton">//button[contains(@id,'filter-btn') and contains(text(),'Apply')]</Parameter>
         <Parameter key="Filter_Clearbutton">//button[contains(@id,'filter-btn') and contains(text(),'Clear')]</Parameter>
         <Parameter key="Sort_Button">//div[text()='Sort']</Parameter>
@@ -56,20 +61,31 @@
         <Parameter key="Dashboard_navTabs">//*div[contains(@class,'nav-tabs')]//*li[@class='nav-item']</Parameter>
         <Parameter key="Dashboard_GeneralTab">//*[@role='tablist']//child::li[@class='nav-item' and contains(text(),'General')]</Parameter>
         <Parameter key="Dashboard_BrandTab">//*[@id='nav-tab-chaintabs-2']</Parameter>
-        <Parameter key="Dashboard_PropTab">//*[@id='nav-tab-chaintabs-3']</Parameter>
+        <!--<Parameter key="Dashboard_PropTab">//*[@id='nav-tab-chaintabs-3']</Parameter>-->
+        <Parameter key="Dashboard_PropTab">//span[text()=' Properties ']</Parameter>
         
         <Parameter key="Dashboard_General_Localization_div">//*[@class='card-header-title' and contains(text(),'Localization')]//parent::div[@class='card']</Parameter>
-        <Parameter key="ChainDashboard_Localization">//*[@id='chain_locales']//child::li[@class='list-view__group-item']</Parameter>
+        <!--<Parameter key="ChainDashboard_Localization">//*[@id='chain_locales']//child::li[@class='list-view__group-item']</Parameter>
         <Parameter key="ChainDashboard_Phone">//*[@id='chain_phones']//child::li[@class='list-view__group-item']</Parameter>
+        <Parameter key="ChainDashboard_Link_Div">//*[@class='card-header-title' and contains(text(),'Links')]//parent::div[@class='card']//child::a</Parameter>
+        <Parameter key="ChainDashboard_Link">//*[@class='social-media-icon']//parent::a</Parameter>
+        <Parameter key="ChainDashboard_Link_image">img</Parameter>-->
+        <Parameter key="ChainDashboard_Localization">//*[contains(@id,'_locales')]//child::li[@class='list-view__group-item']</Parameter>
+        <Parameter key="ChainDashboard_Phone">//*[contains(@id,'_phones')]//child::li[@class='list-view__group-item']</Parameter>
         <Parameter key="ChainDashboard_Link_Div">//*[@class='card-header-title' and contains(text(),'Links')]//parent::div[@class='card']//child::a</Parameter>
         <Parameter key="ChainDashboard_Link">//*[@class='social-media-icon']//parent::a</Parameter>
         <Parameter key="ChainDashboard_Link_image">img</Parameter>
         <Parameter key="Dashboard_ColumnName">list-view__group-item-col-label</Parameter>
         <Parameter key="Dashboard_ColumnValue">list-view__group-item-col-value</Parameter>
-        <Parameter key="ChainDashboard_Basic_details_div">//*[@class='org-chain__general-card__name']</Parameter>
-        <Parameter key="ChainDashboard_address">org-chain__general-card__address</Parameter>
+        <!--<Parameter key="ChainDashboard_Basic_details_div">//*[@class='org-chain__general-card__name']</Parameter>
+        <Parameter key="ChainDashboard_address">org-chain__general-card__address</Parameter>-->
+        <Parameter key="ChainDashboard_Basic_details_div">//*[contains(@class,'__general-card__name')]</Parameter>
+        <Parameter key="ChainDashboard_address">//*[contains(@class,'__general-card__address')]</Parameter>
         <Parameter key="Dashboard_status">mb-5</Parameter>
         <Parameter key="ChainDashboard_property_details">//*[@id='prop_list']//child::li[contains(@class,'list-view__group-item')]</Parameter>
+        <Parameter key="BrandDashboard_property_details">//*[@id='brand_card']//child::li[contains(@class,'list-view__group-item')]</Parameter>
+        <Parameter key="PropertyDashboard_property_details">//*[contains(@class,'org-property__general-card')]//child::li[contains(@class,'list-view__group-item')]</Parameter>
+        
         <Parameter key="Dashboard_sideColumnName">list-view__group-item-slot-label</Parameter>
         <Parameter key="Dashboard_sideColumnValue">list-view__group-item-slot-value</Parameter>
 
@@ -82,13 +98,24 @@
         <Parameter key="Dashboard_Brandtable_DateAdded">//td[2]</Parameter>
         <Parameter key="Dashboard_loading">e-spinner-pane</Parameter>
 
-        <Paramerer key="Dashboard_Prop_div">//div[@id='chaintabsContent']/div[@id='nav-chaintabs-3']</Paramerer>
+        <!--<Paramerer key="Dashboard_Prop_div">//div[@id='chaintabsContent']/div[@id='nav-chaintabs-3']</Paramerer>
         <Parameter key="Dashboard_Proptable_Row">//div[@id='chaintabsContent']/div[@id='nav-chaintabs-3']//table[contains(@id,'_content_table')]/tbody/tr[contains(@class,'e-row')]</Parameter>
+        -->
+        <Paramerer key="Dashboard_Prop_div">//div[contains(@id,'tabsContent')]//div[contains(@id,'properties-grid')]</Paramerer>
+        <Parameter key="Dashboard_Proptable_Row">//div[contains(@id,'tabsContent')]//div[contains(@id,'properties-grid')]//table[contains(@id,'_content_table')]/tbody/tr[contains(@class,'e-row')]</Parameter>
+
         <Parameter key="Dashboard_Prop_Names">//td[contains(@class,'e-templatecell')]</Parameter>
 
         <Parameter key="ChainDashboard_FirstBrand">//div[@id='chaintabsContent']/div[@id='nav-chaintabs-2']//table[contains(@id,'_content_table')]/tbody/tr[@class='e-row']//td[contains(@class,'e-templatecell')]//a</Parameter>
         <Parameter key="ChainDashboard_FirstProperty">//div[@id='chaintabsContent']/div[@id='nav-chaintabs-3']//table[contains(@id,'_content_table')]/tbody/tr[@class='e-row']//td[contains(@class,'e-templatecell')]//a</Parameter>
-        
+
+        <Parameter key="PropertyDashboard_Metadata">//*[@class='card-header-title' and contains(text(),'Metadata')]//ancestor::div[@class='card']//child::li[@class='list-view__group-item']</Parameter>
+        <Parameter key="PropertyDashboard_AdvancedConfig">//*[@class='card-header-title' and contains(text(),'Advanced Configuration')]//ancestor::div[@class='card']//child::li[@class='list-view__group-item']</Parameter>
+        <Parameter key="PropertyDashboard_Facilities">//*[contains(@class,'badge--is-facilities')]</Parameter>
+        <Parameter key="PropertyDashboard_Rooms">//*[@alt='Number of Rooms']//following::div[contains(@class,'list-view__group-item-col-value')]</Parameter>
+        <Parameter key="PropertyDashboard_Beds">//*[@alt='Number of Beds']//following::div[contains(@class,'list-view__group-item-col-value')]</Parameter>
+        <Parameter key="PropertyDashboard_ColumnName">list-view__group-item-col-label</Parameter>
+        <Parameter key="PropertyDashboard_ColumnValue">list-view__group-item-col-value</Parameter>
       </PropertyDashboard>
       <Create>
         <Parameter key="Create_Button">create</Parameter>
@@ -106,8 +133,14 @@
 
         <Parameter key="createPage_header">//*[@class='header-title']</Parameter>
         <Parameter key="create_cancel">//button[contains(text(),'Cancel')]</Parameter>
+        <Parameter key="Manage_Property">//*[@id='manageProperty']</Parameter>
+        <Parameter key="Manage_Brand">//*[@id='manageBrand']</Parameter>
+        <Parameter key="Edit_Details">//*[@id='editDetails']</Parameter>
+        <Parameter key="input_chain">//*[@id='chain']</Parameter>
+        <Parameter key="input_brand">//input[@id='brand']</Parameter>
+        <Parameter key="input_property">//input[@id='property']</Parameter>
       </Create>
-
+      
     </Config>
   </UI>
 </ObjectRepository>

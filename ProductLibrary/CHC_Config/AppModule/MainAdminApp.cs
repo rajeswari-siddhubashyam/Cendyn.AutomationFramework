@@ -50,6 +50,42 @@ namespace CHC_Config.AppModule.MainAdminApp
                     break;
             }
         }
-        
+        public static void TP_349772()
+        {
+            switch (TestCaseId)
+            {
+                case "TC_314618":
+                    TC_314618();
+                    break;
+                case "TC_314610":
+                    TC_314610();
+                    break;
+                case "TC_314590":
+                    TC_314590();
+                    break;
+                case "TC_349764":
+                    TC_349764();
+                    break;
+            }
+        }
+        public static void TP_349775()
+        {
+            switch (TestCaseId)
+            {
+                case "TC_314570":
+                    TC_314570();
+                    break;
+                case "TC_314204":
+                    TC_314204();
+                    break;
+                case "TC_314581":
+                    TC_314581();
+                    break;
+                case "TC_349765":
+                    TC_349765();
+                    break;
+            }
+        }
+
     }
 }

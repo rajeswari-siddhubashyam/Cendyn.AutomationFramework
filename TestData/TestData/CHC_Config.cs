@@ -122,7 +122,37 @@ namespace TestData
                 TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_323199", "TC_314190", "4", "TRUE", "chain_dashboard", "Chain Dashboard");
                 TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_323199", "TC_314190", "6", "TRUE", "chain_name", "Ikigai Hotels");
                 TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_323199", "TC_314190", "2", "TRUE", "property_dashboard", "Property Dashboard");
-              
+                //Brand Dashboard
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349772", "TC_314618", "1", "TRUE", "search", "Hotel Kanbina");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349772", "TC_314618", "3", "TRUE", "brand_dashboard", "Brand Dashboard");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349772", "TC_314618", "5", "TRUE", "brand_name", "Wabi-Sabi Hotels");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349772", "TC_314610", "1", "TRUE", "search", "Hotel Kanbina");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349772", "TC_314610", "3", "TRUE", "brand_dashboard", "Brand Dashboard");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349772", "TC_314610", "5", "TRUE", "brand_name", "Wabi-Sabi Hotels");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349772", "TC_314590", "1", "TRUE", "search", "Hotel Kanbina");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349772", "TC_314590", "3", "TRUE", "brand_dashboard", "Brand Dashboard");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349772", "TC_314590", "5", "TRUE", "brand_name", "Wabi-Sabi Hotels");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349772", "TC_349764", "1", "TRUE", "search", "Hotel Kanbina");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349772", "TC_349764", "3", "TRUE", "brand_dashboard", "Brand Dashboard");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349772", "TC_349764", "2", "TRUE", "edit_brand", "Edit Brand");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349772", "TC_349764", "5", "TRUE", "brand_name", "Wabi-Sabi Hotels");
+
+                //Property Dahsboard 
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349775", "TC_314581", "1", "TRUE", "search", "Test QA Prop 1");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349775", "TC_314581", "2", "TRUE", "property_dashboard", "Property Dashboard");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349775", "TC_314581", "7", "TRUE", "property_name", "Test QA Prop 1");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349775", "TC_314204", "1", "TRUE", "search", "Test QA Prop 1");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349775", "TC_314204", "2", "TRUE", "property_dashboard", "Property Dashboard");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349775", "TC_314204", "7", "TRUE", "property_name", "Test QA Prop 1");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349775", "TC_314570", "1", "TRUE", "search", "Test QA Prop 1");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349775", "TC_314570", "2", "TRUE", "property_dashboard", "Property Dashboard");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349775", "TC_314570", "7", "TRUE", "property_name", "Test QA Prop 1");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_323199", "TC_309602", "1", "TRUE", "create_property", "Create Property");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349772", "TC_349765", "1", "TRUE", "search", "Test QA Prop 1");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349772", "TC_349765", "2", "TRUE", "property_dashboard", "Property Dashboard");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349772", "TC_349765", "3", "TRUE", "edit_property", "Edit Property");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_349772", "TC_349765", "5", "TRUE", "property_name", "Test QA Prop 1");
+
             }
             else if (clientName == "CHC_ConfigDEV")
             {

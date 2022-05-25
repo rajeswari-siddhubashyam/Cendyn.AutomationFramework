@@ -24,6 +24,8 @@ namespace CHC_Config.Utility
         public static string TP_323199 = "TP_323199";
         public static string TP_349769 = "TP_349769";
         public static string TP_000000 = "TP_000000";
+        public static string TP_349772 = "TP_349772";
+        public static string TP_349775 = "TP_349775";
         //public static string TP_339264 = "TP_339264";
         #endregion
 
@@ -44,16 +46,26 @@ namespace CHC_Config.Utility
         public static string TC_314190 = "TC_314190";
         public static string TC_314192 = "TC_314192";
 
+        public static string TC_314590 = "TC_314590";
+        public static string TC_314618 = "TC_314618";
+        public static string TC_314610 = "TC_314610";
+        public static string TC_349764 = "TC_349764";
+
+        public static string TC_314581 = "TC_314581";
+        public static string TC_314570 = "TC_314570";
+        public static string TC_314204 = "TC_314204";
+        public static string TC_349765 = "TC_349765";
+
         //public static string TC_339266 = "TC_339266";
-        #endregion 
+        #endregion
 
         #region[CommonData]
-        public static string FrontEndEmail = "testuser10@cendyn17.com";
-        public static string FrontEndEmail_Test = "testlogin3@cendyn17.com";
-        //public static string FrontEndEmail = "amoorthy@cendyn.com";
+        //public static string FrontEndEmail = "testuser10@cendyn17.com";
+        //public static string FrontEndEmail_Test = "testlogin3@cendyn17.com";
+        public static string FrontEndEmail = "amoorthy@cendyn.com";
         //#pragma warning disable CS0108 // Member hides inherited member; missing new keyword
-        public static string CommonPassword = "Cendyn321$";
-       
+        //public static string CommonPassword = "Cendyn321$";
+        public static string CommonPassword = "Amma1234";
         public static string CommonPassword_Test = "Cendyn4321$";
         //#pragma warning restore CS0108 // Member hides inherited member; missing new keyword
         #endregion[CommonData]

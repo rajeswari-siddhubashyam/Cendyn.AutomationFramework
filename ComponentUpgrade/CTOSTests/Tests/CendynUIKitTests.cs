@@ -71,10 +71,10 @@ namespace CTOSTests.Tests
             {
                 Calendar3.OpenCalendar();
                 Calendar3.IsDisabled();
-                //Assert.Fail("Calendar3 is disabled but OpenCalendar did not throw an exception.");
             }
             catch
             {
+
             }
         }
 
@@ -148,42 +148,30 @@ namespace CTOSTests.Tests
         [Test]
         public void TestingRadios()
         {
-            Task.Delay(10000).Wait();
+            //Task.Delay(10000).Wait();
 
             NavBar.NavigateTo("C-RadioButton");
 
-            var Radio1 = new Radio(driver, By.XPath("//div[1]/div[contains(@class, 'e-radio-wrapper e-wrapper')]/input")); ;
-            var Radio2 = new Radio(driver, By.XPath("//div[2]/div[contains(@class, 'e-radio-wrapper e-wrapper')]/input"));
-            var Radio3 = new Radio(driver, By.XPath("//div[3]/div[contains(@class, 'e-radio-wrapper e-wrapper')]/input"));
-            var Radio4 = new Radio(driver, By.XPath("//div[4]/div[contains(@class, 'e-radio-wrapper e-wrapper')]/input"));
-            var Radio5 = new Radio(driver, By.XPath("//div[5]/div[contains(@class, 'e-radio-wrapper e-wrapper')]/input"));
-            var Radio6 = new Radio(driver, By.XPath("//div[6]/div[contains(@class, 'e-radio-wrapper e-wrapper')]/input"));
+            var Radio1 = new Radio(driver, By.XPath("(//div[contains(@class, 'e-radio-wrapper e-wrapper')]/input)[1]"));   // //div[1]/div[contains(@class, 'e-radio-wrapper e-wrapper')]/input"));
+            var Radio2 = new Radio(driver, By.XPath("(//div[contains(@class, 'e-radio-wrapper e-wrapper')]/input)[2]"));
+            var Radio3 = new Radio(driver, By.XPath("(//div[contains(@class, 'e-radio-wrapper e-wrapper')]/input)[3]"));
+            var Radio4 = new Radio(driver, By.XPath("(//div[contains(@class, 'e-radio-wrapper e-wrapper')]/input)[4]"));
+            var Radio5 = new Radio(driver, By.XPath("(//div[contains(@class, 'e-radio-wrapper e-wrapper')]/input)[5]"));
+            var Radio6 = new Radio(driver, By.XPath("(//div[contains(@class, 'e-radio-wrapper e-wrapper')]/input)[6]"));
 
-            Radio1.GetLabel();
-
-			Radio1.Select();
+            Radio1.Select();
             Radio2.Select();
+            bool isEnabled = Radio1.IsEnabled();
+            bool isSelected = Radio1.IsSelected();
 
-            try
-            {
-                Radio3.Select();
-                Assert.Fail("Radio 3 is disabled but Select did not throw an exception.");
-            }
-            catch
-            {
-            }
-
-            try
-            {
-                Radio4.Select();
-                Assert.Fail("Radio 4 is disabled but Select did not throw an exception.");
-            }
-            catch
-            {
-            }
-
+            Radio3.Select();
+            Radio4.Select();
             Radio5.Select();
             Radio6.Select();
+
+            Label label5 = Radio5.GetLabel();
+            string label5Name = label5.GetLabelText();
+            Label label1 = Radio1.GetLabel();
         }
 
         [OneTimeTearDown]

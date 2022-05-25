@@ -1,18 +1,12 @@
-﻿namespace CTOS.Models
+﻿using CTOS.Components;
+
+namespace CTOS.Models
 {
     public interface IRadio
     {
         bool IsEnabled();
         bool IsSelected();
-        ILabel GetLabel();
+        Label GetLabel();
         void Select();
-        RadioStyle GetRadioStyle();
     }
-
-    public enum RadioStyle
-	{
-        OptionThenLabel,
-        LabelThenOption,
-        NoLabel
-	}
 }

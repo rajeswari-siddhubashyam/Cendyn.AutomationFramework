@@ -609,32 +609,31 @@ namespace CHC_Unified_Profile.AppModule.UI
         /// <param name="profile"></param>
         public static void VerifyDBValuesInUnifiedProfile_Ellipse(Profile_DB profile)
         {
-            VerifyTextOnPageAndHighLight(profile.ConfirmationNum, GetFieldXpath_Ellipse(" Sub Res Number "));
-            //string db_DateInserted = profile.DateInserted;
-            //string db_DateInsertedFormat = DateTime.Parse(db_DateInserted).ToString("MMM dd, yyyy");
-            VerifyTextOnPageAndHighLight(DateTime.Parse(profile.DateInserted).ToString("MMM dd, yyyy"), GetFieldXpath_Ellipse(" Booked Date "));
-            //VerifyTextOnPageAndHighLight(profile.DateInserted, GetFieldXpath_Ellipse(" Booked Date "));
-            VerifyTextOnPageAndHighLight(profile.CancellationCode, GetFieldXpath_Ellipse(" Cancellation Date "));
+            VerifyTextOnPageAndHighLight(profile.ConfirmationNum, GetFieldXpath_Ellipse(" Sub Res Number "));                     
+            VerifyTextOnPageAndHighLight(DateTime.Parse(profile.DateInserted).ToString("MMM dd, yyyy"), GetFieldXpath_Ellipse(" Booked Date "));         
+            VerifyTextOnPageAndHighLight(DateTime.Parse(profile.CancellationDate).ToString("MMM dd, yyyy"), GetFieldXpath_Ellipse(" Cancellation Date "));
             VerifyTextOnPageAndHighLight(profile.RateCode, GetFieldXpath_Ellipse(" Rate Code "));
             VerifyTextOnPageAndHighLight(profile.MarketCodeCategory, GetFieldXpath_Ellipse(" Market Segment "));
-            //VerifyTextOnPageAndHighLight(profile.ConfirmationNum, GetFieldXpath_Ellipse(" Source Of Business "));
+            VerifyTextOnPageAndHighLight(profile.ResSourceCode, GetFieldXpath_Ellipse(" Source Of Business "));
             VerifyTextOnPageAndHighLight(profile.ChannelCode, GetFieldXpath_Ellipse(" Channel "));
-            VerifyTextOnPageAndHighLight(profile.TotalRoomRevenue, GetFieldXpath_Ellipse(" Room Revenue "));
             VerifyTextOnPageAndHighLight(profile.RoomTypeCode, GetFieldXpath_Ellipse(" Room Type "));
-            VerifyTextOnPageAndHighLight(profile.TotalFBRevenue, GetFieldXpath_Ellipse(" F&B Revenue "));
-            VerifyTextOnPageAndHighLight(profile.TotalOtherRevenue, GetFieldXpath_Ellipse(" Other Revenue "));
+            VerifyTextOnPageAndHighLight(Convert.ToInt32(Convert.ToDouble(profile.TotalRoomRevenue)).ToString(), GetFieldXpath_Ellipse(" Room Revenue "));            
+            VerifyTextOnPageAndHighLight(Convert.ToInt32(Convert.ToDouble(profile.TotalFBRevenue)).ToString(), GetFieldXpath_Ellipse(" F&B Revenue "));
+            VerifyTextOnPageAndHighLight(Convert.ToInt32(Convert.ToDouble(profile.TotalOtherRevenue)).ToString(), GetFieldXpath_Ellipse(" Other Revenue "));
+            VerifyTextOnPageAndHighLight(profile.ExternalResID1, GetFieldXpath_Ellipse(" BE Res Number "));
 
             Logger.WriteDebugMessage("Ellipse Details fields should match with DB as below  - " +
-                " Sub Res Number " + profile.ConfirmationNum  + " , " +
-                " Booked Date " + profile.DateInserted + " , " +
-                " Cancellation Date " + profile.CancellationCode + " , " +
-                " Rate Code " + profile.RateCode + " , " +
-                " Market Segment " + profile.MarketCodeCategory + " , " +
-                " Channel " + profile.ChannelCode + ",  " +
-                " Room Revenue " + profile.TotalRoomRevenue + " , " +
-                " Room Type " + profile.RoomTypeCode + " , " +
-                " F&B Revenue " + profile.TotalFBRevenue + " , " +
-                " Other Revenue " + profile.TotalOtherRevenue 
+                " Sub Res Number " + " - " +  profile.ConfirmationNum  + " , " +
+                " Booked Date " + " - " + profile.DateInserted + " , " +
+                " Rate Code " + " - " + profile.RateCode + " , " +
+                " Market Segment " + " - " + profile.MarketCodeCategory + " , " +
+                " Source Of Business " + " - " + profile.ResSourceCode + ",  " +
+                " Channel " + " - " + profile.ChannelCode + ",  " +
+                " Room Revenue " + " - " + profile.TotalRoomRevenue + " , " +
+                " Room Type " + " - " + profile.RoomTypeCode + " , " +
+                " F&B Revenue " + " - " + profile.TotalFBRevenue + " , " +
+                " Other Revenue " + " - " + profile.TotalOtherRevenue + " , " +
+                " BE Res Number " + " - " + profile.ExternalResID1
                 );
         }
         

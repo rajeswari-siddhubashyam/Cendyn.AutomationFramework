@@ -208,7 +208,7 @@ namespace CHC_Unified_Profile.Utility
             //clear the old items from the list
             //data.clientCards.Clear();           
 
-            query = " select * from up.Profile where profileid = '3237' ";
+            query = " select * from up.Profile where profileid = '3240' ";
 
             using (SqlConnection connection = DBHelper.SqlConn())
             {
@@ -234,7 +234,7 @@ namespace CHC_Unified_Profile.Utility
             //clear the old items from the list
             //data.clientCards.Clear();           
 
-            query = " select * from Reservation r join MarketSegmentInfo m on r.MarketSegmentInfoId = m.MarketsegmentInfoId join Guest g on g.ReservationId = r.ReservationId join Profile p on g.ProfileId = p.ProfileId where p.ProfileId = '4579' ";
+            query = " select * from Reservation r join MarketSegmentInfo m on r.MarketSegmentInfoId = m.MarketsegmentInfoId join Guest g on g.ReservationId = r.ReservationId join Profile p on g.ProfileId = p.ProfileId where p.ProfileId = '4583' ";
 
             using (SqlConnection connection = DBHelper.SqlConn())
             {
@@ -247,12 +247,13 @@ namespace CHC_Unified_Profile.Utility
                     {
                         while (reader.Read())
                         {
-                            profile.Reservationid = reader["Reservationid"].ToString();
+                            profile.ExternalResID1 = reader["ExternalResID1"].ToString();
                             profile.ConfirmationNum = reader["ConfirmationNum"].ToString();
                             profile.DateInserted = reader["DateInserted"].ToString();
-                            profile.CancellationCode = reader["CancellationCode"].ToString();
+                            profile.CancellationDate = reader["CancellationDate"].ToString();
                             profile.RateCode = reader["RateCode"].ToString();
                             profile.MarketCodeCategory = reader["MarketCodeCategory"].ToString();
+                            profile.ResSourceCode = reader["ResSourceCode"].ToString();
                             profile.ChannelCode = reader["ChannelCode"].ToString();
                             profile.RoomTypeCode = reader["RoomTypeCode"].ToString();
                             profile.TotalRoomRevenue = reader["TotalRoomRevenue"].ToString();
@@ -379,7 +380,7 @@ namespace CHC_Unified_Profile.Utility
             //clear the old items from the list
             //data.clientCards.Clear();           
 
-            query = " select top 10 * from Reservation r join Guest g on g.ReservationId = r.ReservationId join Profile p on g.ProfileId = p.ProfileId where p.ProfileId = '4579' order by p.profileid desc ";
+            query = " select top 10 * from Reservation r join Guest g on g.ReservationId = r.ReservationId join Profile p on g.ProfileId = p.ProfileId where p.ProfileId = '4583' order by p.profileid desc ";
             //List<Profile_DB> lst = new List<Profile_DB>();
 
             using (SqlConnection connection = DBHelper.SqlConn())

@@ -159,8 +159,16 @@ namespace BaseUtility.Utility
         /// <returns></returns>
         public static IWebElement ElementWait(IWebElement element, int time)
         {
-            var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(time));
-            return wait.Until(ExpectedConditions.ElementToBeClickable(element));
+            try
+            {
+                var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(time));
+                return wait.Until(ExpectedConditions.ElementToBeClickable(element));
+            }
+            catch(Exception e)
+            {
+                Logger.WriteErrorMessage("Element not found",e);
+            }
+            return element;
         }
 
         public static void WaitTillPageLoadbyXpath(string path, double time)

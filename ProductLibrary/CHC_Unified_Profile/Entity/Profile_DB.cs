@@ -36,7 +36,7 @@ namespace CHC_Unified_Profile.Entity
         public string Reservationid { set; get; }
         public string ExternalResID1 { set; get; }
         public string ConfirmationNum { set; get; }
-        public string CancellationCode { set; get; }
+        public string CancellationDate { set; get; }
         public string RateCode { set; get; }
         public string ChannelCode { set; get; }
         public string RoomTypeCode { set; get; }
@@ -44,6 +44,7 @@ namespace CHC_Unified_Profile.Entity
         public string TotalFBRevenue { set; get; }
         public string TotalOtherRevenue { set; get; }
         public string MarketCodeCategory { set; get; }
+        public string ResSourceCode { set; get; }
 
         public Dictionary<string, int> AttributeNames_Values { set; get; }
     }

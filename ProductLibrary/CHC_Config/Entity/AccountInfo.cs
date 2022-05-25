@@ -13,10 +13,12 @@ namespace CHC_Config.Entity
         public string BillingReference { set; get; }
         public string ManagementCompany { set; get; }     
         public string Name { set; get; }
-        public string AccountType { set; get; }
+        public string PropertyType { set; get; }
         public string ReleaseMode { set; get; }
         public string Status { set; get; }
 
+        public string Chain { set; get; }
+        public string Brand { set; get; }
         public string Address { set; get; }
         public string DateAdded { set; get; }
       

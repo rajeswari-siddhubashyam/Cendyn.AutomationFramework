@@ -7,6 +7,7 @@ using System.Reflection;
 using OpenQA.Selenium;
 using System;
 using CHC_Config.Utility;
+using OpenQA.Selenium.Support.UI;
 
 namespace CHC_Config.AppModule.UI
 {
@@ -89,6 +90,61 @@ namespace CHC_Config.AppModule.UI
                     
                 }
            
+            }
+            Assert.AreEqual(searchResult_PropertyName.Text.Trim().ToLower(), searchText.ToLower().Trim(), "Search results not matching");
+        }
+        public static void Filter_Options_ByPropertyName()
+        {
+            FindLoaderAndWaitTillHide(ObjectRepository.OrgIndex_loading);
+            string searchText = TestData.ExcelData.TestDataReader.ReadData(1, "search");
+            WaitTillBrowserLoad();
+            FindLoaderAndWaitTillHide(ObjectRepository.OrgIndex_loading);
+            ElementWait(PageObject_OrgIndex.FilterButton(), 20);
+            IWebElement filter = PageObject_OrgIndex.FilterButton();
+            AddDelay(2000);
+            filter.Click();
+            IList<IWebElement> Filter_Options = PageObject_OrgIndex.Filter_Options();
+            foreach(IWebElement i in Filter_Options)
+            {
+                if (i.Text.Contains("Property"))
+                {
+                    if(i.Text.Contains("Property ID")!=true)
+                    {
+                        IWebElement dropdown = PageObject_OrgIndex.Filter_Options_Select(i);
+                        SelectElement s = new SelectElement(dropdown);
+                        s.SelectByValue("startswith");
+                        PageObject_OrgIndex.Filter_Options_Text(i).SendKeys(searchText);
+                        PageObject_OrgIndex.Filter_Applybutton(i).Click();
+                        break;
+                    }
+                }
+            }
+            //filter.SendKeys(searchText);
+            Logger.WriteDebugMessage("Searching Property Name -" + searchText);
+            //WaitTillBrowserLoad();
+            //PageObject_OrgIndex.Filter_PropertyName_Search().Click();
+            //WaitTillBrowserLoad();
+            //FindLoaderAndWaitTillHide(ObjectRepository.OrgIndex_loading);
+
+            //AddDelay(1000);
+            IWebElement searchResult_PropertyName = PageObject_OrgIndex.SearchResults_PropertyName();
+            //Verify searched text is equal to the Property displayed in the table           
+            if (searchResult_PropertyName.Text.Trim().ToLower() == searchText.ToLower().Trim())
+            {
+                Logger.WriteDebugMessage("Search result displays matching Property Details for " + searchText);
+            }
+            else
+            {   // Check No records to display
+                if (PageObject_OrgIndex.SearchResults_Row().Text.Trim() == TestData.ExcelData.TestDataReader.ReadData(2, "noRecords"))
+                {
+                    Logger.WriteWarnMessage("Search Results returned blank");
+                }
+                else
+                {
+                    Logger.WriteWarnMessage("Search result does not match");
+
+                }
+
             }
             Assert.AreEqual(searchResult_PropertyName.Text.Trim().ToLower(), searchText.ToLower().Trim(), "Search results not matching");
         }

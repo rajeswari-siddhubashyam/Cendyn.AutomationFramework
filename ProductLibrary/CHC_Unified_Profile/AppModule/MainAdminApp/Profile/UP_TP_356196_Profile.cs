@@ -560,7 +560,7 @@ namespace CHC_Unified_Profile.AppModule.MainAdminApp
                 Home.VerifyApplications();
 
                 //Step3 - Click on Unified Porfile App
-                Navigation.Click_Unified_Profile_App();
+                Navigation.Click_Starling_App();
                 Logger.WriteDebugMessage("User should view the Org selector");
 
                 //Step4 - Verify the Org selector popup
@@ -577,7 +577,7 @@ namespace CHC_Unified_Profile.AppModule.MainAdminApp
                 Home.Click_Accounts(accountName);
                 Home.VerifyAccountPage(accountName);
                 Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                Logger.WriteDebugMessage("User is landed on Unified Porfile application");
+                //Logger.WriteDebugMessage("User is landed on Unified Porfile application");
 
                 Profile_DB profile = new Profile_DB();
                 Queries.Get_Profile(profile);

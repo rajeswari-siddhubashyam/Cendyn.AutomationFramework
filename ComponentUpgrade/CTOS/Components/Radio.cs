@@ -8,38 +8,54 @@ namespace CTOS.Components
 {
 	public class Radio : CendynElement, IRadio
 	{
-		private Label _radioLabel;
+		//private Label _radioLabel;
+		private CendynElement radioButton { get; }
+
 		public Radio(IWebDriver driver, By Selector) : base(driver, Selector)
-		{
-			_selector = Selector;
-			_radioLabel = new Label(driver, By.XPath("../label"));
+		{	
+			radioButton = new CendynElement(driver, Selector);
 		}
 
-		public bool IsEnabled() 
-			=> WebElement.Enabled;
+		public bool IsEnabled()
+			=> base.Enabled;
 
 		public bool IsSelected()
-			=> WebElement.GetDomAttribute("checked") == "true" ? true : false;
+			=> base.GetDomAttribute("checked") == "true" ? true : false;
 
-		public ILabel GetLabel()
-			=> _radioLabel;
+		public Label GetLabel()
+		{
+			Label radioLabel = new Label(_driver, radioButton.FindElement(By.XPath("./ancestor::div[contains(@class, 'e-radio-wrapper e-wrapper')]/label")));
+			return radioLabel;
+		}
+		//	=> _radioLabel;
 
 		public void Select()
 		{
-			Task.Delay(1500).Wait();
-			Actions actions = new Actions(_driver);
-			if (IsEnabled())
-				actions
-					.MoveToElement(WebElement, 4, 4)
-					.Click()
-					.Perform();
-			else
-				throw new ElementNotInteractableException("Radio element is not selectable: " + _selector);
-		}
-		           
-		public RadioStyle GetRadioStyle()
-		{
-			throw new NotImplementedException();
+			bool lablefl = radioButton.IsElementPresent(By.XPath("./ancestor::div[contains(@class, 'e-radio-wrapper e-wrapper')]/label[@class = 'e-right']"));
+			Task.Delay(1000).Wait();
+			bool fl = IsEnabled();
+			try
+			{
+				if (fl == true)
+				{
+					if (lablefl == true)
+					{
+						radioButton.FindElement(By.XPath("./ancestor::div[contains(@class, 'e-radio-wrapper e-wrapper')]/label[@class = 'e-right']")).Click();
+					}
+					else
+					{
+						base.Click();
+					}
+				}
+				else
+				{
+					Console.WriteLine("Radio Button is disabled");
+				}
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine(e);
+			}
 		}
 	}
 }
