@@ -1,0 +1,42 @@
+name: Cendyn.CTOS Build $(buildversion.major).$(buildversion.minor).$(patchVersion)
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  buildConfiguration: 'Release'
+  buildprojects: '*$(System.DefaultWorkingDirectory)/ComponentUpgrade/CTOS/CTOS.csproj'
+  buildPlatform: 'Any CPU'
+  patchVersion: $[counter(variables['buildversion.minor'], 100)]
+
+steps:
+- task: DotNetCoreCLI@2
+  displayName: dotnet restore
+  inputs:
+    command: restore
+    projects: '$(buildprojects)'
+    feedsToUse: 'config'
+    nugetConfigPath: '$(System.DefaultWorkingDirectory)/ComponentUpgrade/nuget.config'
+    includeNuGetOrg: true
+
+- task: DotNetCoreCLI@2
+  displayName: Build
+  inputs:
+    projects: '$(buildprojects)'
+    arguments: '--configuration $(buildConfiguration) /p:AssemblyVersion=$(buildversion.major).$(buildversion.minor).$(patchVersion)'
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet pack'
+  inputs:
+    command: pack
+    packagesToPack: $(buildprojects)
+    includesymbols: true
+    versioningScheme: byBuildNumber
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'CTOS'
+    publishLocation: 'Container'
