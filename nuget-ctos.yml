@@ -7,7 +7,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  buildprojects: '*$(System.DefaultWorkingDirectory)/ComponentUpgrade/CTOS/CTOS.csproj'
+  buildprojects: '$(System.DefaultWorkingDirectory)/ComponentUpgrade/CTOS/CTOS.csproj'
   buildPlatform: 'Any CPU'
   patchVersion: $[counter(variables['buildversion.minor'], 100)]
 
