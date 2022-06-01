@@ -31,7 +31,7 @@ namespace CTOSTests.Tests
             driver = new ChromeDriver(chromeOptions);
             _ = driver.Manage().Timeouts().ImplicitWait;
             driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["BaseURL"]);
-            Task.Delay(3000).Wait();
+            Task.Delay(1000).Wait();
             NavBar = new NavigationPanel(driver, By.XPath("//*[@id='sidebar']"));
             try
             {
@@ -148,8 +148,6 @@ namespace CTOSTests.Tests
         [Test]
         public void TestingRadios()
         {
-            //Task.Delay(10000).Wait();
-
             NavBar.NavigateTo("C-RadioButton");
 
             var Radio1 = new Radio(driver, By.XPath("(//div[contains(@class, 'e-radio-wrapper e-wrapper')]/input)[1]"));   // //div[1]/div[contains(@class, 'e-radio-wrapper e-wrapper')]/input"));
@@ -171,7 +169,40 @@ namespace CTOSTests.Tests
 
             Label label5 = Radio5.GetLabel();
             string label5Name = label5.GetLabelText();
+            Console.WriteLine(label5Name);
             Label label1 = Radio1.GetLabel();
+        }
+
+        [Test]
+        public void InputText()
+        {
+            NavBar.NavigateTo("C-Input");
+
+            var Input1 = new Input(driver, By.XPath("(//div[contains(@class, 'form-group')]/input[@type= 'text'])[1]"));
+            var Input2 = new Input(driver, By.XPath("(//div[contains(@class, 'form-group')]/input[@type= 'text'])[2]"));
+            var Input3 = new Input(driver, By.XPath("(//div[contains(@class, 'form-group')]/input[@type= 'text'])[3]"));
+            var Input4 = new Input(driver, By.XPath("(//div[contains(@class, 'form-group')]/input[@type= 'text'])[4]"));
+
+            Input1.EnterInput("testing123");
+            Input2.EnterInput("###");
+            Input3.EnterInput("^%^&%^%^&%");
+            Input4.EnterInput("AaBbCc7890()");
+
+            string inputText1 = Input1.GetInputText();
+            Console.WriteLine(inputText1);
+            string inputText2 = Input2.GetInputText();
+            Console.WriteLine(inputText2);
+            string inputText3 = Input3.GetInputText();
+            Console.WriteLine(inputText3);
+            string inputText4 = Input4.GetInputText();
+            Console.WriteLine(inputText4);
+
+            bool input1Enabled = Input1.IsInputEnabled();
+            Console.WriteLine(input1Enabled);
+
+            Label label1 = Input1.GetInputLabel();
+            string label1Name = label1.GetLabelText();
+            Console.WriteLine(label1Name);
         }
 
         [OneTimeTearDown]
