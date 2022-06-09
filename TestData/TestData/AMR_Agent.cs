@@ -114,11 +114,16 @@ namespace TestData
         }
         public static void AddTestData_FrontEnd_TC_37513()
         {
+            // TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_38859", "TC_37513", "1", "TRUE", "Country", "Canada");
+            //TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_38859", "TC_37513", "1", "TRUE", "Providence", "Ontario");
+            // TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_38859", "TC_37513", "1", "TRUE", "Address", "25 Sheppard Ave W");
+            // TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_38859", "TC_37513", "1", "TRUE", "City", "North York");
+            //TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_38859", "TC_37513", "1", "TRUE", "Zip", "M2N 6S6");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_38859", "TC_37513", "1", "TRUE", "Country", "Canada");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_38859", "TC_37513", "1", "TRUE", "Providence", "Ontario");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_38859", "TC_37513", "1", "TRUE", "Address", "25 Sheppard Ave W");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_38859", "TC_37513", "1", "TRUE", "City", "North York");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_38859", "TC_37513", "1", "TRUE", "Zip", "M2N 6S6");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_38859", "TC_37513", "1", "TRUE", "Address", "City Hall 100 Queen St W");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_38859", "TC_37513", "1", "TRUE", "City", "Toranto");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_38859", "TC_37513", "1", "TRUE", "Zip", "M5H 2N1");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_38859", "TC_37513", "1", "TRUE", "IATA", "10672071");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_38859", "TC_37513", "1", "TRUE", "CLIA", "307403");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_38859", "TC_37513", "1", "TRUE", "ARC", "5512216");

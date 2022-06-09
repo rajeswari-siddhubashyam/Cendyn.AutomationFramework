@@ -182,9 +182,12 @@ namespace AMR_Agent.Utility
 
 
         //Urls to confirm
-        public static string AMRewardsPointsAvailableURL_TC37604 = "https://travelagentloyaltyprogram.qa.cendyn.com/home.mvc/AccountSummary/Index";
-        public static string AMRewardsPointsRedeemedURL_TC37604 = "https://travelagentloyaltyprogram.qa.cendyn.com/home.mvc/RedemptionRequest/Index";
-        public static string AMRewardsPointsExpiringURL_TC37604 = "https://travelagentloyaltyprogram.qa.cendyn.com/home.mvc/PointsHistory/Index";
+        //public static string AMRewardsPointsAvailableURL_TC37604 = "https://travelagentloyaltyprogram.qa.cendyn.com/home.mvc/AccountSummary/Index";
+        public static string AMRewardsPointsAvailableURL_TC37604 = "https://travelagentloyaltyprogram.qaeloyaltyadmin.com/home.mvc/AccountSummary/Index";
+        // public static string AMRewardsPointsRedeemedURL_TC37604 = "https://travelagentloyaltyprogram.qa.cendyn.com/home.mvc/RedemptionRequest/Index";
+        public static string AMRewardsPointsRedeemedURL_TC37604 = "https://travelagentloyaltyprogram.qaeloyaltyadmin.com/home.mvc/RedemptionRequest/Index";
+        //public static string AMRewardsPointsExpiringURL_TC37604 = "https://travelagentloyaltyprogram.qa.cendyn.com/home.mvc/PointsHistory/Index";
+        public static string AMRewardsPointsExpiringURL_TC37604 = "https://travelagentloyaltyprogram.qaeloyaltyadmin.com/home.mvc/PointsHistory/Index";
 
 
         //Nunit Nodes to read data from Nunit.xml
@@ -219,7 +222,8 @@ namespace AMR_Agent.Utility
         public static string Common_AdminEmail = "rjoshi@delaplex.in";
         public static string Common_PostDeploymentAdminEmail = "CendynAutomation@cendyn.com";
         public static string Common_AdminPassword = "Cendyn123$";
-        public static string Common_FrontEndEmail = "ruchitest121@cendyn17.com";
+       //public static string Common_FrontEndEmail = "ruchitest121@cendyn17.com";
+        public static string Common_FrontEndEmail = "sendgrid003@cendyn17.com";
         public static string Common_FrontEndPass = "Cendyn123$";
 
 

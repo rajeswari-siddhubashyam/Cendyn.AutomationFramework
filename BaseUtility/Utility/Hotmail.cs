@@ -24,7 +24,8 @@ namespace BaseUtility.Utility.Hotmail
         private static string SearchBox = "//input[@aria-label='Search']";
         //private static string Search = "//span[contains(@class,'_n_m owaimg ms-Icon--search ms-icon-font-size-20 ms-fcl-ts-b')]";
         private static string Search = "//span[contains(@class,'_fc_3 owaimg ms-Icon--search ms-icon-font-size-20 ms-fcl-ts-b')]";
-        private static string OutLookIcon = "ShellMail_link_text";
+        //private static string OutLookIcon = "ShellMail_link_text";
+        private static string OutLookIcon = "//div[@class='___thwl1f0 f1022m68'][4]";
         private static string FirstMessage = "//div[@role='heading'][@tabindex='-1']/following-sibling::div[@data-convid][1]";
         //private static string OutLookIconXPath = "//*[@id='ShellMail_link']";//"//a[@id='app-gallery-ShellMail-workspace-0-all']"
         private static string OutLookIconXPath = "//button[@aria-label='Go to your Outlook']";
@@ -45,7 +46,7 @@ namespace BaseUtility.Utility.Hotmail
 
         public static void ClickOutLook()
         {
-            ElementClick(Driver.FindElement(By.Id(OutLookIcon)));
+            ElementClick(Driver.FindElement(By.XPath(OutLookIcon)));
         }
 
         public static void NavigateToWebmail(string URL)

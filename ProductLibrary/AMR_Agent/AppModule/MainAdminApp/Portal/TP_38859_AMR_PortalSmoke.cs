@@ -930,6 +930,7 @@ namespace AMR_Agent.AppModule.MainAdminApp
                 AddDelay(2000);
 
                 //3.Click AMRewards
+                Driver.Navigate().Refresh();
                 PageObject_AMRAgentsNav.AMRAgentsAMRewards().Click();
                 AddDelay(5000);
                 Logger.WriteDebugMessage("Landed on the AMRewards page.");
@@ -1089,7 +1090,7 @@ namespace AMR_Agent.AppModule.MainAdminApp
                 Logger.WriteDebugMessage("Confirmed the registered user is validated on the admin site when selecting Canada and using an IATA code.");
 
                 //Verify thanks you email generated  and is available in webmail.cendyn.com: Login to Webmail.cendyn.com Search for agent email address
-                Driver.Navigate().GoToUrl("https://outlook.office365.com/owa/?realm=cendyn17.com&exsvurl=1&ll-cc=1033&modurl=0");
+               // Driver.Navigate().GoToUrl("https://outlook.office365.com/owa/?realm=cendyn17.com&exsvurl=1&ll-cc=1033&modurl=0");
                 AddDelay(2500);
                 Hotmail.NavigateAndLogIntoCatchAll();
                 AddDelay(15000);

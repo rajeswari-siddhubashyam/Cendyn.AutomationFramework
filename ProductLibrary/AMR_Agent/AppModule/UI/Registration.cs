@@ -289,6 +289,10 @@ namespace AMR_Agent.AppModule.UI
             //    PageObject_Registration.RegisterconfirmationPopup().Click();
             //}
             Logger.WriteDebugMessage("Entered Address Details");
+            if (country == "Canada")
+            {
+                Driver.FindElement(By.XPath("(//button[@type='button'])[3]")).Click();
+            }
             PageObject_Registration.RegisterWorkPhonePrefix().SendKeys(Constants.Common_Registration_WorkPhonePrefix);
             AddDelay(1000);
             PageObject_Registration.RegisterWorkPhoneAreaCode().SendKeys(Constants.Common_Registration_WorkPhoneAreaCode);

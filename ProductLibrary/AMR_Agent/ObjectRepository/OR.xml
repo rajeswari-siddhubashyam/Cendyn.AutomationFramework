@@ -210,7 +210,7 @@
 			<Parameter key = "AccountSummary_IneligibleTab">ineligibleTab</Parameter>
 			<Parameter key = "AccountSummaryNotYetTraveledTable">//*[@id="BookingsNotYetTraveledViewDivSummary"]/div[1]/h2</Parameter>
 			<Parameter key = "AccountSummary_NotYetTraveled_FirstName">FirstName</Parameter>
-			<Parameter key = "AccountSummary_SummaryBookings_NotYetTraveled_BookingNo">/html/body/div[2]/div[2]/div/div[5]/div[3]/div[3]/div/div/div[1]/div[7]/div[5]/div[1]/table/tbody/tr[1]/td[1]/div[3]</Parameter>
+			<Parameter key = "AccountSummary_SummaryBookings_NotYetTraveled_BookingNo">/html/body/div[2]/div[2]/div/div[5]/div[3]/div[3]/div/div/div[1]/div[9]/div[4]/div[1]/table/tbody/tr/td[1]/div[3]</Parameter>
 			<Parameter key = "AccountSummary_SummaryBookings_NotYetTraveled_GuestFirstName">/html/body/div[2]/div[2]/div/div[5]/div[3]/div[3]/div/div/div[1]/div[7]/div[5]/div[1]/table/tbody/tr[1]/td[2]/div</Parameter>
 			<Parameter key = "AccountSummary_SummaryBookings_NotYetTraveled_GuestLastName">/html/body/div[2]/div[2]/div/div[5]/div[3]/div[3]/div/div/div[1]/div[7]/div[5]/div[1]/table/tbody/tr[1]/td[3]/div</Parameter>
 			<Parameter key = "AccountSummary_SummaryBookings_NotYetTraveled_Resort">/html/body/div[2]/div[2]/div/div[5]/div[3]/div[3]/div/div/div[1]/div[7]/div[5]/div[1]/table/tbody/tr[1]/td[4]/div</Parameter>

@@ -954,7 +954,8 @@ namespace eLoyaltyV3.AppModule.UI
         private static string SearchBox = "//input[@aria-label='Search']";
         //private static string Search = "//span[contains(@class,'_n_m owaimg ms-Icon--search ms-icon-font-size-20 ms-fcl-ts-b')]";
         private static string Search = "//span[contains(@class,'_fc_3 owaimg ms-Icon--search ms-icon-font-size-20 ms-fcl-ts-b')]";
-        private static string OutLookIcon = "ShellMail_link_text";
+        //private static string OutLookIcon = "ShellMail_link_text";
+        private static string OutLookIcon = "//div[@class='___thwl1f0 f1022m68'][4]";
         private static string NewOutLookIcon = "ShellMail_link";
         private static string FirstMessage = "//div[@role='heading'][@tabindex='-1']/following-sibling::div[@data-convid][1]";
         private static string catchalladvancebutton = "//*[@id='details-button']";
@@ -1033,7 +1034,7 @@ namespace eLoyaltyV3.AppModule.UI
                 //Had to use the URL since the landing page randomly changes.
                 try
                 { 
-                    ElementClick(Driver.FindElement(By.Id(OutLookIcon)));
+                    ElementClick(Driver.FindElement(By.XPath(OutLookIcon)));
                 }
                 catch(Exception)
                 {
@@ -1101,11 +1102,13 @@ namespace eLoyaltyV3.AppModule.UI
                 //((IJavaScriptExecutor)Driver).ExecuteScript("arguments[0].removeAttribute('style')", element);
                 //AddDelay(2500);
                 //ElementClick(Driver.FindElement(By.XPath("//div[@role='heading'][@tabindex='-1']/following-sibling::div[@data-convid][1]")));                
-                DoubleClickElement(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
+               // DoubleClickElement(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
+                ElementClick(Driver.FindElement(By.XPath("//div[@role='region']//div[@data-convid][4]")));
             }
             catch (Exception ex)
             {
-                DoubleClickElement(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
+                //DoubleClickElement(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
+                ElementClick(Driver.FindElement(By.XPath("//div[@role='region']//div[@data-convid][1]")));
                 Logger.WriteDebugMessage("Failed due to below error" + ex.Message);
             }
         }
