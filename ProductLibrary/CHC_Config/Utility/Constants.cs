@@ -18,6 +18,7 @@ namespace CHC_Config.Utility
         public static string OrgIndex = "OrgIndex";
         public static string PropertyDashboard = "PropertyDashboard";
         public static string Create = "Create";
+        public static string CreateUser = "CreateUser";
         #endregion ObjectRepository UI Module Names
 
         #region[Test Plans]
@@ -27,6 +28,7 @@ namespace CHC_Config.Utility
         public static string TP_349772 = "TP_349772";
         public static string TP_349775 = "TP_349775";
         //public static string TP_339264 = "TP_339264";
+        public static string TP_389110 = "TP_389110";
         #endregion
 
         #region[Test Cases]
@@ -56,16 +58,18 @@ namespace CHC_Config.Utility
         public static string TC_314204 = "TC_314204";
         public static string TC_349765 = "TC_349765";
 
-        //public static string TC_339266 = "TC_339266";
+        public static string TC_336529 = "TC_336529";
         #endregion
 
         #region[CommonData]
         //public static string FrontEndEmail = "testuser10@cendyn17.com";
         //public static string FrontEndEmail_Test = "testlogin3@cendyn17.com";
-        public static string FrontEndEmail = "amoorthy@cendyn.com";
+        //public static string FrontEndEmail = "amoorthy@cendyn.com";
+        public static string FrontEndEmail = "hreddy@cendyn.com";
         //#pragma warning disable CS0108 // Member hides inherited member; missing new keyword
         //public static string CommonPassword = "Cendyn321$";
-        public static string CommonPassword = "Amma1234";
+        //public static string CommonPassword = "Amma1234";
+        public static string CommonPassword = "Cendyn@123";
         public static string CommonPassword_Test = "Cendyn4321$";
         //#pragma warning restore CS0108 // Member hides inherited member; missing new keyword
         #endregion[CommonData]

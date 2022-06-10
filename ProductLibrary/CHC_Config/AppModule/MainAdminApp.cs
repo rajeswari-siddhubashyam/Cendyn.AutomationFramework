@@ -87,5 +87,15 @@ namespace CHC_Config.AppModule.MainAdminApp
             }
         }
 
+        public static void TP_389110()
+        {
+            switch (TestCaseId)
+            {
+                case "TC_336529":
+                    TC_336529();
+                    break;               
+            }
+        }
+
     }
 }

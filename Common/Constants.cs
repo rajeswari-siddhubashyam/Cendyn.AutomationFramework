@@ -77,8 +77,8 @@ namespace Common
         public static string ManageTemplate = "ManageTemplate";
         public static string Configuration_App = "Configuration_App";
         public static string Marketing_Automation_App = "Configuration_App";
-        public static string Starling_App = "Configuration_App";
-        public static string Unified_Profile_App = "Configuration_App";
+        public static string Starling_App = "Starling_App";
+        public static string Unified_Profile_App = "Unified_Profie_App";
         public static string Email = "Email";
         //public static string ForgotPassword = "ForgotPassword";
         //public static string Kiosk = "Kiosk";
@@ -88,6 +88,7 @@ namespace Common
         //public static string MyAccount_Summary = "MyAccount_Summary";
         //public static string ContactUs = "ContactUs";
         public static string Home = "Home";
+        public static string CreateUser = "CreateUser";
         public static string Profiles = "Profiles";
         public static string Reservations = "Reservations";
         #endregion ObjectRepository UI Module Names

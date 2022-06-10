@@ -118,6 +118,28 @@ namespace CHC_Config.Utility
         public static string input_property { get; set; }
 
         #endregion[Create]
+
+        #region[CreateUser]
+
+        public static string User_Tab_Leftnav { get; set; }
+        public static string User_Create_User_Button { get; set; }
+        public static string User_Popup_Proceed { get; set; }
+        public static string User_Popup_Cancel { get; set; }
+        public static string User_Popup_Enter_Email { get; set; }
+        public static string User_Popup_Enter_Email_Error { get; set; }
+        public static string User_Create_User_FirstName { get; set; }
+        public static string User_Create_User_LastName { get; set; }
+        public static string User_Create_User_Email { get; set; }
+        public static string User_Create_User_JobTitle { get; set; }
+        public static string User_Create_User_FirstName_ErrorMsg { get; set; }
+        public static string User_Create_User_LastName_ErrorMsg { get; set; }
+        public static string User_Create_User_Continue_Button { get; set; }
+        public static string User_Create_User_AssignOrg { get; set; }
+        public static string User_CraeteUser_AssignApp { get; set; }
+        public static string User_Create_User_AssignRoles { get; set; }
+        
+        #endregion[CreateUser]
+
         public static ObjectRepository ReadElement(string location, string nodeModule)
         {
 
@@ -170,9 +192,9 @@ namespace CHC_Config.Utility
                         Accounts = pair.Value;
                     else if (pair.Key == "AccountPageName")
                         AccountPageName = pair.Value;
-
                 }
                 #endregion[Home] 
+
                 #region[OrgIndex]
                 if (nodeModule == Constants.OrgIndex)
                 {
@@ -208,9 +230,9 @@ namespace CHC_Config.Utility
                         Filter_Applybutton = pair.Value;
                     else if (pair.Key == "Filter_Clearbutton")
                         Filter_Clearbutton = pair.Value;
-
                 }
                 #endregion[OrgIndex]
+
                 #region[Dashboard]
                 if (nodeModule == Constants.PropertyDashboard)
                 {
@@ -310,6 +332,7 @@ namespace CHC_Config.Utility
                         PropertyDashboard_ColumnValue = pair.Value;
                 }
                 #endregion[Dashboard]
+
                 #region[Create]
                 if (nodeModule == Constants.Create)
                 {
@@ -333,6 +356,44 @@ namespace CHC_Config.Utility
                         input_property = pair.Value;
                 }
                 #endregion[Create]
+
+                #region[CreateUser]
+                if (nodeModule == Constants.Create)
+                {
+                    if (pair.Key == "User_Tab_Leftnav")
+                        User_Tab_Leftnav = pair.Value;
+                    else if (pair.Key == "User_Create_User_Button")
+                        User_Create_User_Button = pair.Value;
+                    else if (pair.Key == "User_Popup_Proceed")
+                        User_Popup_Proceed = pair.Value;
+                    else if (pair.Key == "User_Popup_Cancel")
+                        User_Popup_Cancel = pair.Value;
+                    else if (pair.Key == "User_Popup_Enter_Email")
+                        User_Popup_Enter_Email = pair.Value;
+                    else if (pair.Key == "User_Popup_Enter_Email_Error")
+                        User_Popup_Enter_Email_Error = pair.Value;
+                    else if (pair.Key == "User_Create_User_FirstName")
+                        User_Create_User_FirstName = pair.Value;
+                    else if (pair.Key == "User_Create_User_LastName")
+                        User_Create_User_LastName = pair.Value;
+                    else if (pair.Key == "User_Create_User_Email")
+                        User_Create_User_Email = pair.Value;
+                    else if (pair.Key == "User_Create_User_JobTitle")
+                        User_Create_User_JobTitle = pair.Value;
+                    else if (pair.Key == "User_Create_User_FirstName_ErrorMsg")
+                        User_Create_User_FirstName_ErrorMsg = pair.Value;
+                    else if (pair.Key == "User_Create_User_LastName_ErrorMsg")
+                        User_Create_User_LastName_ErrorMsg = pair.Value;
+                    else if (pair.Key == "User_Create_User_Continue_Button")
+                        User_Create_User_Continue_Button = pair.Value;
+                    else if (pair.Key == "User_Create_User_AssignOrg")
+                        User_Create_User_AssignOrg = pair.Value;
+                    else if (pair.Key == "User_CraeteUser_AssignApp")
+                        User_CraeteUser_AssignApp = pair.Value;
+                    else if (pair.Key == "User_Create_User_AssignRoles")
+                        User_Create_User_AssignRoles = pair.Value;                    
+                }
+                #endregion[CreateUser]
             }
             return obj;
             
