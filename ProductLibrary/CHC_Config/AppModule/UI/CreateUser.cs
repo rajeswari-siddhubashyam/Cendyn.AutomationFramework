@@ -19,8 +19,15 @@ namespace CHC_Config.AppModule.UI
         /// </summary>
         public static void Clickon_Users_SideNav()
         {
-            WaitTillBrowserLoad();
-            ElementClick(PageObject_CreateUser.Users_Tab());
+            //WaitTillBrowserLoad();
+            //ElementClick(PageObject_CreateUser.Users_Tab());            
+
+            Logger.WriteDebugMessage("Users tab");
+            Helper.WaitTillBrowserLoad();            
+            ElementWait(PageObject_CreateUser.Users_Tab(), 20);
+            AddDelay(2000);
+            Helper.ElementClick(PageObject_CreateUser.Users_Tab());
+            Helper.WaitTillBrowserLoad();
             Logger.WriteDebugMessage("User clicked on Users tab & Users tab should display");
         }
 
@@ -41,7 +48,14 @@ namespace CHC_Config.AppModule.UI
         {
             Assert.IsTrue(IsElementVisible(PageObject_CreateUser.Create_User_Proceed_Button()), "Proceed button not present in popup");
             Assert.IsTrue(IsElementVisible(PageObject_CreateUser.Create_User_Cancel_Button()), "Cancel button not present in popup");
-        }        
+        }
+
+        public static void Click_On_Proceed_Button()
+        {
+            WaitTillBrowserLoad();
+            ElementClick(PageObject_CreateUser.Create_User_Proceed_Button());
+            Logger.WriteDebugMessage("User clicked on Proceed button ");
+        }
 
         /// <summary>
         /// This method is to enter the email in email text box in Popup
@@ -145,6 +159,34 @@ namespace CHC_Config.AppModule.UI
             WaitTillBrowserLoad();
             ElementClick(PageObject_CreateUser.Create_User_Continue_Button());
             Logger.WriteDebugMessage("User click on Continue button & should lands on Organizations scetion step");
+        }
+
+        public static void Select_Org_ToUser(string accountname)
+        {
+            WaitTillBrowserLoad();
+            ElementClick(PageObject_CreateUser.Create_User_AssignOrg());
+            Logger.WriteDebugMessage("User select the Organization to the User");
+        }
+
+        public static void Select_SelectAll_Org_ToUser()
+        {
+            WaitTillBrowserLoad();
+            ElementClick(PageObject_CreateUser.Create_User_Select_All());
+            Logger.WriteDebugMessage("User click on SelectAll button");
+        }
+
+        public static void Assign_App_ToUser()
+        {
+            WaitTillBrowserLoad();
+            ElementClick(PageObject_CreateUser.Create_User_AssignApp());
+            Logger.WriteDebugMessage("Assign the application to the User");
+        }
+
+        public static void Assign_App_Roles_ToUser()
+        {
+            WaitTillBrowserLoad();
+            ElementClick(PageObject_CreateUser.Create_User_AssignRoles());
+            Logger.WriteDebugMessage("Assign the application roles to the User");
         }
 
     }

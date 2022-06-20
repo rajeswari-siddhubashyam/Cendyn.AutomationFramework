@@ -11,12 +11,12 @@ namespace CHC_Config.PageObject.UI
         public static string PageName = CHC_Config.Utility.Constants.Home;
         public static IWebElement Configuration_App()
         {
-            ScanPage(Constants.Home);
+            ScanPage(Constants.Navigation);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath(ObjectRepository.Navigation_Configuration_App);
-
         }
+
         public static IWebElement Btn_PopupChoose()
         {
             ScanPage(Constants.Home);
@@ -24,6 +24,7 @@ namespace CHC_Config.PageObject.UI
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath(ObjectRepository.Home_PopupChoose);
         }
+
         public static IWebElement Btn_PopupCancel()
         {
             ScanPage(Constants.Home);
@@ -47,7 +48,6 @@ namespace CHC_Config.PageObject.UI
                 return null;
             }
         }
-
         public static IList<IWebElement> Lnk_Accounts()
         {
             ScanPage(Constants.Home);
@@ -55,6 +55,7 @@ namespace CHC_Config.PageObject.UI
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementsXPath(ObjectRepository.Accounts);
         }
+
         public static IWebElement Ele_AccountPageName()
         {
             ScanPage(Constants.Home);

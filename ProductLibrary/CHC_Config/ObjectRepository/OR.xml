@@ -23,6 +23,10 @@
       <!--<Parameter key="Accounts">//*[contains(text(),'Accounts')]//following::p[@class='tree-view-title']</Parameter>-->
       <Parameter key="AccountPageName">orgSwitch</Parameter>
     </Home>
+
+	  <Navigation>
+		  <Parameter key="Navigation_Configuration_App">//div[@class='home row']//*[@class='card-body']/span[text()='Configuration']</Parameter>		  
+	  </Navigation>
     
     <Config>
       <OrgIndex>
@@ -47,7 +51,7 @@
         <Parameter key ="OrgIndex_loading">//*[@class='e-spinner-pane']</Parameter>
         <Parameter key="Create_List">//a[@id='cproperty']/parent::*/child::a</Parameter>
        </OrgIndex>
-      <PropertyDashboard>
+		<PropertyDashboard>
         <Parameter key="PropertyDashboard_Org">//*[@id='property-dashboard']//child::li[contains(text(),'Organizations')]</Parameter>
         <Parameter key="PropertyDashboard_header">//*[@id='property-dashboard']//child::div[@class='header-wrap']</Parameter>
         <Parameter key="Dashboard_Property_Name">org-property__general-card__name</Parameter>
@@ -141,9 +145,11 @@
         <Parameter key="input_property">//input[@id='property']</Parameter>
       </Create>				
 	</Config>
+	  
+
 
 	  <CreateUser>
-		  <Parameter key="User_Tab_Leftnav">//a[@id='pageUsers']</Parameter>
+		  <Parameter key="User_Tab_Leftnav">//span[contains(text(),'Users')]</Parameter>
 		  <Parameter key="User_Create_User_Button">//button[@id='btn-create-user']</Parameter>
 
 		  <Parameter key="User_Popup_Proceed">//button[@id='user-modal-button-proceed']</Parameter>
@@ -151,7 +157,7 @@
 		  <Parameter key="User_Popup_Enter_Email">//input[@id='user-modal-input-email']</Parameter>
 		  <Parameter key="User_Popup_Enter_Email_Error">//div[@id='user-modal-input-email-error']</Parameter>
 
-		  <Parameter key="User_Create_User_FirstName">//input[@id='uf-firstname']]</Parameter>
+		  <Parameter key="User_Create_User_FirstName">//input[@id='uf-firstname']</Parameter>
 		  <Parameter key="User_Create_User_LastName">//input[@id='uf-lastname']</Parameter>
 		  <Parameter key="User_Create_User_Email">//input[@id='uf-email']</Parameter>
 		  <Parameter key="User_Create_User_JobTitle">//input[@id='uf-jobtitle']</Parameter>
@@ -165,7 +171,17 @@
 		  <Parameter key="User_CraeteUser_AssignApp">//span[@class='e-switch-handle e-switch-active']</Parameter>
 		  <Parameter key="User_Create_User_AssignRoles">//span[@class='e-icons e-frame']</Parameter>
 
-	  </CreateUser>
+		  <Parameter key="User_Create_User_AssignOrg12">(//div[@class='card-body']//span)[3]</Parameter>
+
+		  <Parameter key="User_Create_User_Select_All">(//button[contains(@id,'ostt-btn-select-all')])[1]</Parameter>
+
+		  <Parameter key="User_Create_User_AssignApp12">(//span[@class='e-switch-on'])[2]</Parameter>
+
+		  <Parameter key="User_Create_User_AssignRoles12">(//span[@class='e-icons e-frame'])[4]</Parameter>
+
+	  </CreateUser> 
+		  
 	  
+
   </UI>
 </ObjectRepository>

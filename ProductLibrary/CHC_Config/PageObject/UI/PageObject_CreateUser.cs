@@ -11,7 +11,7 @@ namespace CHC_Config.PageObject.UI
         public static string PageName = CHC_Config.Utility.Constants.CreateUser;
         public static IWebElement Users_Tab()
         {
-            ScanPage(Constants.Create);
+            ScanPage(Constants.CreateUser);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath(ObjectRepository.User_Tab_Leftnav);
@@ -19,7 +19,7 @@ namespace CHC_Config.PageObject.UI
 
         public static IWebElement Craete_User_Button()
         {
-            ScanPage(Constants.Create);
+            ScanPage(Constants.CreateUser);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath(ObjectRepository.User_Create_User_Button);
@@ -27,7 +27,7 @@ namespace CHC_Config.PageObject.UI
 
         public static IWebElement Create_User_Proceed_Button()
         {
-            ScanPage(Constants.Create);
+            ScanPage(Constants.CreateUser);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath(ObjectRepository.User_Popup_Proceed);
@@ -35,7 +35,7 @@ namespace CHC_Config.PageObject.UI
 
         public static IWebElement Create_User_Cancel_Button()
         {
-            ScanPage(Constants.Create);
+            ScanPage(Constants.CreateUser);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath(ObjectRepository.User_Popup_Cancel);
@@ -43,7 +43,7 @@ namespace CHC_Config.PageObject.UI
 
         public static IWebElement Create_User_Email()
         {
-            ScanPage(Constants.Create);
+            ScanPage(Constants.CreateUser);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath(ObjectRepository.User_Popup_Enter_Email);
@@ -51,7 +51,7 @@ namespace CHC_Config.PageObject.UI
 
         public static IWebElement Create_User_Email_Error()
         {
-            ScanPage(Constants.Create);
+            ScanPage(Constants.CreateUser);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath(ObjectRepository.User_Popup_Enter_Email_Error);
@@ -59,7 +59,7 @@ namespace CHC_Config.PageObject.UI
 
         public static IWebElement Create_User_FirstName()
         {
-            ScanPage(Constants.Create);
+            ScanPage(Constants.CreateUser);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath(ObjectRepository.User_Create_User_FirstName);
@@ -67,7 +67,7 @@ namespace CHC_Config.PageObject.UI
 
         public static IWebElement Create_User_LastName()
         {
-            ScanPage(Constants.Create);
+            ScanPage(Constants.CreateUser);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath(ObjectRepository.User_Create_User_LastName);
@@ -75,7 +75,7 @@ namespace CHC_Config.PageObject.UI
 
         public static IWebElement Create_User_Email_Disabled()
         {
-            ScanPage(Constants.Create);
+            ScanPage(Constants.CreateUser);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath(ObjectRepository.User_Create_User_Email);
@@ -83,7 +83,7 @@ namespace CHC_Config.PageObject.UI
 
         public static IWebElement Create_User_JobTitle()
         {
-            ScanPage(Constants.Create);
+            ScanPage(Constants.CreateUser);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath(ObjectRepository.User_Create_User_JobTitle);
@@ -91,7 +91,7 @@ namespace CHC_Config.PageObject.UI
 
         public static IWebElement Create_User_FirstName_Error_Msg()
         {
-            ScanPage(Constants.Create);
+            ScanPage(Constants.CreateUser);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath(ObjectRepository.User_Create_User_FirstName_ErrorMsg);
@@ -99,7 +99,7 @@ namespace CHC_Config.PageObject.UI
 
         public static IWebElement Create_User_LastName_Error_Msg()
         {
-            ScanPage(Constants.Create);
+            ScanPage(Constants.CreateUser);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath(ObjectRepository.User_Create_User_LastName_ErrorMsg);
@@ -107,10 +107,42 @@ namespace CHC_Config.PageObject.UI
 
         public static IWebElement Create_User_Continue_Button()
         {
-            ScanPage(Constants.Create);
+            ScanPage(Constants.CreateUser);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath(ObjectRepository.User_Create_User_Continue_Button);
+        }
+
+        public static IWebElement Create_User_AssignOrg()
+        {
+            ScanPage(Constants.CreateUser);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.User_Create_User_AssignOrg);
+        }
+
+        public static IWebElement Create_User_Select_All()
+        {
+            ScanPage(Constants.CreateUser);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.User_Create_User_Select_All);
+        }
+
+        public static IWebElement Create_User_AssignApp()
+        {
+            ScanPage(Constants.CreateUser);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.User_Create_User_AssignApp);
+        }
+
+        public static IWebElement Create_User_AssignRoles()
+        {
+            ScanPage(Constants.CreateUser);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.User_Create_User_AssignRoles);
         }
 
     }

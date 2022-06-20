@@ -19,7 +19,7 @@ namespace CHC_Config.Utility
         #endregion[SignIn]
 
         #region[Home]
-        public static string Navigation_Configuration_App { get; set; }
+        //public static string Navigation_Configuration_App { get; set; }
         public static string Navigation_Marketing_Automation_App { get; set; }
         public static string Navigation_GetCardBody_App { get; set; }
         public static string Navigation_Starling_App { get; set; }
@@ -33,6 +33,10 @@ namespace CHC_Config.Utility
         public static string Accounts { get; set; }
         public static string AccountPageName { get; set; }
         #endregion[Home]
+
+        #region[Navigation]
+        public static string Navigation_Configuration_App { get; set; }
+        #endregion[Navigation]
 
         #region[OrgIndex]
         public static string OrgIndex_table { get; set; }
@@ -135,9 +139,9 @@ namespace CHC_Config.Utility
         public static string User_Create_User_LastName_ErrorMsg { get; set; }
         public static string User_Create_User_Continue_Button { get; set; }
         public static string User_Create_User_AssignOrg { get; set; }
-        public static string User_CraeteUser_AssignApp { get; set; }
-        public static string User_Create_User_AssignRoles { get; set; }
-        
+        public static string User_Create_User_Select_All { get; set; }
+        public static string User_Create_User_AssignApp { get; set; }
+        public static string User_Create_User_AssignRoles { get; set; }                           
         #endregion[CreateUser]
 
         public static ObjectRepository ReadElement(string location, string nodeModule)
@@ -168,9 +172,10 @@ namespace CHC_Config.Utility
                 #region[Home]
                 if (nodeModule == Constants.Home)
                 {
-                    if (pair.Key == "Navigation_Configuration_App")
-                        Navigation_Configuration_App = pair.Value;
-                    else if (pair.Key == "Navigation_Marketing_Automation_App")
+                    //if (pair.Key == "Navigation_Configuration_App")
+                    //    Navigation_Configuration_App = pair.Value;
+                    //else 
+                    if (pair.Key == "Navigation_Marketing_Automation_App")
                         Navigation_Marketing_Automation_App = pair.Value;
                     else if (pair.Key == "Navigation_Starling_App")
                         Navigation_Starling_App = pair.Value;
@@ -194,6 +199,14 @@ namespace CHC_Config.Utility
                         AccountPageName = pair.Value;
                 }
                 #endregion[Home] 
+
+                #region[Navigation]
+                if (nodeModule == Constants.Navigation)
+                {
+                    if (pair.Key == "Navigation_Configuration_App")
+                        Navigation_Configuration_App = pair.Value;                    
+                }
+                #endregion[Navigation] 
 
                 #region[OrgIndex]
                 if (nodeModule == Constants.OrgIndex)
@@ -358,7 +371,7 @@ namespace CHC_Config.Utility
                 #endregion[Create]
 
                 #region[CreateUser]
-                if (nodeModule == Constants.Create)
+                if (nodeModule == Constants.CreateUser)
                 {
                     if (pair.Key == "User_Tab_Leftnav")
                         User_Tab_Leftnav = pair.Value;
@@ -388,8 +401,10 @@ namespace CHC_Config.Utility
                         User_Create_User_Continue_Button = pair.Value;
                     else if (pair.Key == "User_Create_User_AssignOrg")
                         User_Create_User_AssignOrg = pair.Value;
-                    else if (pair.Key == "User_CraeteUser_AssignApp")
-                        User_CraeteUser_AssignApp = pair.Value;
+                    else if (pair.Key == "User_Create_User_Select_All")
+                        User_Create_User_Select_All = pair.Value;
+                    else if (pair.Key == "User_Create_User_AssignApp")
+                        User_Create_User_AssignApp = pair.Value;
                     else if (pair.Key == "User_Create_User_AssignRoles")
                         User_Create_User_AssignRoles = pair.Value;                    
                 }

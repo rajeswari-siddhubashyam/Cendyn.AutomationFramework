@@ -45,6 +45,46 @@ namespace CHC_Config.AppModule.MainAdminApp
                 //Step7: Verify Enter wrong Email in email text box
                 CreateUser.Verify_Email_Txt("abcd@cendyn17.com");
 
+                //Step8: Click on Proceed button
+                CreateUser.Click_On_Proceed_Button();
+
+                //Step9: Enter First name
+                //CreateUser.Txt_FirstName("@#@#@@");
+                CreateUser.Txt_FirstName("abcd");
+
+                //Step10: Enter Last name
+                //CreateUser.Txt_LastName("&%*^$%d");
+                CreateUser.Txt_LastName("abcd");
+
+                //Step11: Enter Job Title
+                //CreateUser.Txt_JobTitle("^#$#^&^^");
+                CreateUser.Txt_JobTitle("Manager");
+
+                //Step12: Click on Continue button
+                CreateUser.Clickon_Continue_Button();
+
+                //Step13: User select the Organization to user
+                string accountName = "Kirigami Hotels (Chain)";
+                CreateUser.Select_Org_ToUser(accountName);
+                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");                
+                
+                //Step14: User click on Select all button
+                //CreateUser.Select_SelectAll_Org_ToUser();
+
+                //Step15: User click on Continue button
+                CreateUser.Clickon_Continue_Button();
+
+                //Step16: Assign application to User
+                CreateUser.Assign_App_ToUser();
+
+                //Step17: Assign application roles to user
+                CreateUser.Assign_App_Roles_ToUser();
+
+                //Step18: Click on Continue button
+                CreateUser.Clickon_Continue_Button();
+
+                //Step19: User click on Create user button
+                CreateUser.Clickon_CreateUser_Button();
             }
         }
         #endregion[TP_389110]
