@@ -41,7 +41,7 @@
 			<Parameter key="Sort_Button">//div[text()='Sort']</Parameter>
 			<Parameter key="Sort_Applybutton">//button[contains(@id,'sort-btn') and contains(text(),'Apply')]</Parameter>
 			<Parameter key="Sort_Clearbutton">//button[contains(@id,'sort-btn') and contains(text(),'Clear')]</Parameter>
-			<Parameter key="Profileidfield_ContainsFilter">//input[contains(@id,'number-ProfileId')]</Parameter>
+			<Parameter key="Profileidfield_ContainsFilter">//input[contains(@id,'number-profileId')]</Parameter>
 			<Parameter key="ProfileIdRecordontable">//a[@class='e-focus']</Parameter>
 			<Parameter key="ViewProfileName">//div[@class='e-control e-tooltip e-lib']/h1</Parameter>
 			<Parameter key="View_Profilerecordon_Viewpage">//div[contains(text(),'External Profile ID')]//following::span[1]</Parameter>
@@ -53,8 +53,9 @@
 			<Parameter key="Clickonfistrecord">//table[@class='e-table']//td[1]/a</Parameter>
 			<Parameter key="Clickonfistrecordsecondontable">(//table[@class='e-table']//td[1]/a)[2]</Parameter>
 			<Parameter key="Verifyviewreservationrecord">//div[contains(text(),'Reservation ID')]//following::div[1]</Parameter>
-           
-            <Parameter key="Click_on_applybutton_Filter">//button[@class='btn btn-primary btn-sm']</Parameter>			
+			<Parameter key="Click_On_First_Profile_Record">(//span[@class='grid-cell__text'])[1]</Parameter>
+			
+			<Parameter key="Click_on_applybutton_Filter">//button[@class='btn btn-primary btn-sm']</Parameter>			
 			<Parameter key="View_ContactDetails">//span[contains(text(),' Contact Details ')]</Parameter>
 			<Parameter key="ContactDetails">//span[contains(text(),' Contact ')]</Parameter>
 			<Parameter key="Home_Button">//button[contains(@id,'home_btn')]</Parameter>

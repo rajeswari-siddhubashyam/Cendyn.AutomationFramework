@@ -59,6 +59,10 @@ namespace CHC_Unified_Profile.Utility
         public static string Reservationrecordontable { get; set; }
         public static string View_Profilerecordon_Viewpage { get; set; }
         public static string Clickonfistrecord { get; set; }
+
+        public static string Click_On_First_Profile_Record { get; set; }
+
+        
         public static string Clickonfistrecordsecondontable { get; set; }
         public static string Applauncher { get; set; }
         public static string Verifyviewreservationrecord { get; set; }
@@ -216,6 +220,8 @@ namespace CHC_Unified_Profile.Utility
                         Reservationrecordontable = pair.Value;
                     if (pair.Key == "Clickonfistrecord")
                         Clickonfistrecord = pair.Value;
+                    if (pair.Key == "Click_On_First_Profile_Record")
+                        Click_On_First_Profile_Record = pair.Value;
                     if (pair.Key == "Clickonfistrecordsecondontable")
                         Clickonfistrecordsecondontable = pair.Value;
                     if (pair.Key == "Verifyviewreservationrecord")

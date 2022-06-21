@@ -336,7 +336,7 @@ namespace CHC_Unified_Profile.PageObject.UI
             ScanPage(Constants.Profiles);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
-            return PageAction.Find_ElementXPath(ObjectRepository.Clickonfistrecord);
+            return PageAction.Find_ElementXPath(ObjectRepository.Click_On_First_Profile_Record);
         }
 
         public static IWebElement Btn_Click_on_Applybutton_Filter()

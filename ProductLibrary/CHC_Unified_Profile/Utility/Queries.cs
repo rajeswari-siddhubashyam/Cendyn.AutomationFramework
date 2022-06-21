@@ -16,7 +16,7 @@ namespace CHC_Unified_Profile.Utility
             //clear the old items from the list
             //data.clientCards.Clear();           
 
-            query = " select * from up.profile p join up.ContactMethod c on p.ProfileId = c.ProfileId  where ContactMethodTypeId = 7 and p.profileid=1375 ";
+            query = " select * from up.profile p join up.ContactMethod c on p.ProfileId = c.ProfileId  where ContactMethodTypeId = 1 and p.profileid=3201 ";
 
             using (SqlConnection connection = DBHelper.SqlConn())
             {
@@ -43,7 +43,7 @@ namespace CHC_Unified_Profile.Utility
             //clear the old items from the list
             //data.clientCards.Clear();           
 
-            query = " select * from up.profile p join up.ContactMethod  c on p.ProfileId = c.ProfileId where ContactMethodTypeId = 5 and p.profileid=300 ";
+            query = " select * from up.profile p join up.ContactMethod  c on p.ProfileId = c.ProfileId where ContactMethodTypeId = 2 and p.profileid=3201 ";
 
             using (SqlConnection connection = DBHelper.SqlConn())
             {
@@ -97,7 +97,7 @@ namespace CHC_Unified_Profile.Utility
             //clear the old items from the list
             //data.clientCards.Clear();           
 
-            query = " select * from up.address where profileid=300 ";
+            query = " select * from up.Address where profileid=3201 ";
 
             using (SqlConnection connection = DBHelper.SqlConn())
             {
@@ -182,7 +182,7 @@ namespace CHC_Unified_Profile.Utility
             //clear the old items from the list
             //data.clientCards.Clear();           
 
-            query = " select* from up.profile where profileid = 1375 ";
+            query = " select* from up.profile where profileid = 3201 ";
 
             using (SqlConnection connection = DBHelper.SqlConn())
             {
@@ -209,6 +209,32 @@ namespace CHC_Unified_Profile.Utility
             //data.clientCards.Clear();           
 
             query = " select * from up.Profile where profileid = '3240' ";
+
+            using (SqlConnection connection = DBHelper.SqlConn())
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.CommandTimeout = 60;
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            profile.ProfileId = reader["ProfileId"].ToString();
+                        }
+                    }
+                }
+                connection.Close();
+            }
+        }
+
+        public static void Get_Profile1(Profile_DB profile)
+        {
+            //clear the old items from the list
+            //data.clientCards.Clear();           
+
+            query = " select * from up.Profile where profileid = '1047' ";
 
             using (SqlConnection connection = DBHelper.SqlConn())
             {
@@ -297,7 +323,7 @@ namespace CHC_Unified_Profile.Utility
             //clear the old items from the list
             //data.clientCards.Clear();           
 
-            query = "select * from up.profile p join up.ContactMethod c on c.ProfileId=p.ProfileId where c.ContactMethodId = 2165 and p.ProfileId = '1375' ";
+            query = " select * from up.profile where ProfileId = '3201' ";
 
             using (SqlConnection connection = DBHelper.SqlConn())
             {
@@ -380,7 +406,7 @@ namespace CHC_Unified_Profile.Utility
             //clear the old items from the list
             //data.clientCards.Clear();           
 
-            query = " select top 10 * from Reservation r join Guest g on g.ReservationId = r.ReservationId join Profile p on g.ProfileId = p.ProfileId where p.ProfileId = '4583' order by p.profileid desc ";
+            query = " select top 10 * from Reservation r join Guest g on g.ReservationId = r.ReservationId join Profile p on g.ProfileId = p.ProfileId where p.ProfileId = '1047' order by p.profileid desc ";
             //List<Profile_DB> lst = new List<Profile_DB>();
 
             using (SqlConnection connection = DBHelper.SqlConn())
