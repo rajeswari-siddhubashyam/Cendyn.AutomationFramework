@@ -3,6 +3,7 @@ using CHC_Config.Utility;
 using OpenQA.Selenium;
 using System.Collections.Generic;
 using System.Reflection;
+using NUnit.Framework;
 
 namespace CHC_Config.PageObject.UI
 {
@@ -15,6 +16,14 @@ namespace CHC_Config.PageObject.UI
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath(ObjectRepository.User_Tab_Leftnav);
+        }
+
+        public static IList<IWebElement> CreateUser_Org_Accounts()
+        {
+            ScanPage(Constants.CreateUser);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementsXPath(ObjectRepository.Org_Accounts);
         }
 
         public static IWebElement Craete_User_Button()
@@ -118,7 +127,7 @@ namespace CHC_Config.PageObject.UI
             ScanPage(Constants.CreateUser);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
-            return PageAction.Find_ElementXPath(ObjectRepository.User_Create_User_AssignOrg);
+            return PageAction.Find_ElementXPath(ObjectRepository.Org_Accounts);
         }
 
         public static IWebElement Create_User_Select_All()
@@ -134,7 +143,7 @@ namespace CHC_Config.PageObject.UI
             ScanPage(Constants.CreateUser);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
-            return PageAction.Find_ElementXPath(ObjectRepository.User_Create_User_AssignApp);
+            return PageAction.Find_ElementXPath(ObjectRepository.User_CreateUser_AssignApp);
         }
 
         public static IWebElement Create_User_AssignRoles()
@@ -145,5 +154,22 @@ namespace CHC_Config.PageObject.UI
             return PageAction.Find_ElementXPath(ObjectRepository.User_Create_User_AssignRoles);
         }
 
+        public static IWebElement Create_User_AssignRoles_Starling_Readonly()
+        {
+            ScanPage(Constants.CreateUser);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.User_Create_User_Roles_Starling_Readonly);
+        }
+
+        public static IWebElement Verify_Indexpage_Title()
+        {            
+                ScanPage(Constants.CreateUser);
+                CurrentPageName = PageName;
+                CurrentElementName = MethodBase.GetCurrentMethod().Name;
+                return PageAction.Find_ElementXPath(ObjectRepository.User_Index);
+            }
+        }
+
     }
-}
+

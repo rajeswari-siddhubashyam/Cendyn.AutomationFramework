@@ -22,13 +22,13 @@ namespace CHC_Config.AppModule.UI
             //WaitTillBrowserLoad();
             //ElementClick(PageObject_CreateUser.Users_Tab());            
 
-            Logger.WriteDebugMessage("Users tab");
+            Logger.WriteDebugMessage( "Users tab" );
             Helper.WaitTillBrowserLoad();            
             ElementWait(PageObject_CreateUser.Users_Tab(), 20);
             AddDelay(2000);
             Helper.ElementClick(PageObject_CreateUser.Users_Tab());
             Helper.WaitTillBrowserLoad();
-            Logger.WriteDebugMessage("User clicked on Users tab & Users tab should display");
+            Logger.WriteDebugMessage( "User clicked on Users tab & Users tab should display" );
         }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace CHC_Config.AppModule.UI
         {
             WaitTillBrowserLoad();
             ElementClick(PageObject_CreateUser.Craete_User_Button());
-            Logger.WriteDebugMessage("User clicked on Create User button & Should display the Email popup to validate email");
+            Logger.WriteDebugMessage( "User clicked on Create User button & Should display the Email popup to validate email" );
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace CHC_Config.AppModule.UI
         {
             WaitTillBrowserLoad();
             ElementClick(PageObject_CreateUser.Create_User_Proceed_Button());
-            Logger.WriteDebugMessage("User clicked on Proceed button ");
+            Logger.WriteDebugMessage( "User clicked on Proceed button " );
         }
 
         /// <summary>
@@ -65,17 +65,17 @@ namespace CHC_Config.AppModule.UI
         {
             WaitTillBrowserLoad();
             ElementEnterText(PageObject_CreateUser.Create_User_Email(),email);
-            Logger.WriteDebugMessage("User entered Email in Email text box");
+            Logger.WriteDebugMessage("User entered Email  " + email + "  in Email text box");
         }
 
         /// <summary>
         /// This method to verify the email validation
         /// </summary>
-        public static void Verify_Email_Txt_Error_Msg()
+        public static void Verify_Email_Txt_Error_Msg(string text)
         {
-            WaitTillBrowserLoad();
-            ElementClick(PageObject_CreateUser.Create_User_Email_Error());
-            Logger.WriteDebugMessage("User entered Email in Email text box");
+            WaitTillBrowserLoad();            
+            //Logger.WriteDebugMessage( "User entered wrong Email in Email text box" );
+            Assert.IsTrue(GetText(PageObject_CreateUser.Create_User_Email_Error()).Contains(text), "Wrong email not showing validation message");            
         }
 
         /// <summary>
@@ -84,9 +84,9 @@ namespace CHC_Config.AppModule.UI
         /// <param name="firstname"></param>
         public static void Txt_FirstName(string firstname)
         {
-            WaitTillBrowserLoad();            
+            WaitTillBrowserLoad();
             ElementEnterText(PageObject_CreateUser.Create_User_FirstName(), firstname);
-            Logger.WriteDebugMessage("User entered Email in Email text box");
+            Logger.WriteDebugMessage( "User entered Firstname " + firstname + " in Firstname text box" );
         }
 
         /// <summary>
@@ -97,7 +97,7 @@ namespace CHC_Config.AppModule.UI
         {
             WaitTillBrowserLoad();
             ElementEnterText(PageObject_CreateUser.Create_User_LastName(), lastname);
-            Logger.WriteDebugMessage("User entered Email in Email text box");
+            Logger.WriteDebugMessage("User entered Lastname " + lastname + " in Lastname text box");
         }
 
         /// <summary>
@@ -107,7 +107,7 @@ namespace CHC_Config.AppModule.UI
         {
             WaitTillBrowserLoad();
             ElementClick(PageObject_CreateUser.Create_User_Email_Disabled());
-            Logger.WriteDebugMessage("User entered Email in Email text box");
+            Logger.WriteDebugMessage( "User entered Email in Email text box" );
         }
 
         /// <summary>
@@ -118,7 +118,7 @@ namespace CHC_Config.AppModule.UI
         {
             WaitTillBrowserLoad();
             ElementEnterText(PageObject_CreateUser.Create_User_JobTitle(), jobtitle);
-            Logger.WriteDebugMessage("User entered Email in Email text box");
+            Logger.WriteDebugMessage("User entered Jobtitle " + jobtitle + " in Job Title text box");
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace CHC_Config.AppModule.UI
         {
             WaitTillBrowserLoad();
             ElementClick(PageObject_CreateUser.Create_User_FirstName_Error_Msg());
-            Logger.WriteDebugMessage("User entered Email in Email text box");
+            Logger.WriteDebugMessage( "User entered Email in Email text box" );
         }
 
         /// <summary>
@@ -138,7 +138,7 @@ namespace CHC_Config.AppModule.UI
         {
             WaitTillBrowserLoad();
             ElementClick(PageObject_CreateUser.Create_User_LastName_Error_Msg());
-            Logger.WriteDebugMessage("User entered Email in Email text box");
+            Logger.WriteDebugMessage( "User entered Email in Email text box" );
         }
 
         /// <summary>
@@ -148,7 +148,7 @@ namespace CHC_Config.AppModule.UI
         {
             WaitTillBrowserLoad();
             ElementClick(PageObject_CreateUser.Create_User_Continue_Button());
-            Logger.WriteDebugMessage("User entered Email in Email text box");
+            Logger.WriteDebugMessage( "User entered Email in Email text box" );
         }
 
         /// <summary>
@@ -158,35 +158,59 @@ namespace CHC_Config.AppModule.UI
         {
             WaitTillBrowserLoad();
             ElementClick(PageObject_CreateUser.Create_User_Continue_Button());
-            Logger.WriteDebugMessage("User click on Continue button & should lands on Organizations scetion step");
+            //Logger.WriteDebugMessage("User click on Continue button & should lands on Organizations scetion step");
+        }
+
+        public static void Click_Org_Accounts(string accountName)
+        {
+            foreach (IWebElement ele_Account in PageObject_CreateUser.CreateUser_Org_Accounts())
+            {
+                //if (GetText(ele_Account).Contains(accountName))
+                //{
+                ElementClick(ele_Account);
+                    //break;
+                }
+            //}
         }
 
         public static void Select_Org_ToUser(string accountname)
         {
             WaitTillBrowserLoad();
             ElementClick(PageObject_CreateUser.Create_User_AssignOrg());
-            Logger.WriteDebugMessage("User select the Organization to the User");
+            Logger.WriteDebugMessage( "User select the Organization to the User" );
         }
 
         public static void Select_SelectAll_Org_ToUser()
         {
             WaitTillBrowserLoad();
             ElementClick(PageObject_CreateUser.Create_User_Select_All());
-            Logger.WriteDebugMessage("User click on SelectAll button");
+            Logger.WriteDebugMessage( "User click on SelectAll button" );
         }
 
         public static void Assign_App_ToUser()
         {
             WaitTillBrowserLoad();
-            ElementClick(PageObject_CreateUser.Create_User_AssignApp());
-            Logger.WriteDebugMessage("Assign the application to the User");
+            ElementClickUsingJavascript(PageObject_CreateUser.Create_User_AssignApp());
+            Logger.WriteDebugMessage( "Assign the Configuration application to the User" );
         }
 
-        public static void Assign_App_Roles_ToUser()
+        public static void Assign_App_Roles_Config_SuperAdmin_ToUser()
         {
             WaitTillBrowserLoad();
             ElementClick(PageObject_CreateUser.Create_User_AssignRoles());
-            Logger.WriteDebugMessage("Assign the application roles to the User");
+            Logger.WriteDebugMessage( "Assign the Cendyn Super Admin role to the User" );
+        }
+
+        public static void Assign_App_Roles_Starling_Readonly_ToUser()
+        {
+            WaitTillBrowserLoad();
+            ElementClick(PageObject_CreateUser.Create_User_AssignRoles_Starling_Readonly());
+            Logger.WriteDebugMessage("Assign the Read Only role to the User");
+        }
+
+        public static void Verify_Users_On_IndexUser()
+        {
+            Assert.IsTrue(IsElementVisible(PageObject_CreateUser.Verify_Indexpage_Title()), "User Index page not displayed");
         }
 
     }

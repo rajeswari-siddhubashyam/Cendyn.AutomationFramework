@@ -88,6 +88,9 @@
     <PackageReference Include="AutoItX.Dotnet">
       <Version>3.3.14.5</Version>
     </PackageReference>
+    <PackageReference Include="CTOS">
+      <Version>2022.6.27.1</Version>
+    </PackageReference>
     <PackageReference Include="EWSoftware.VSSpellChecker">
       <Version>2017.1.8</Version>
     </PackageReference>

@@ -139,11 +139,15 @@ namespace CHC_Config.Utility
         public static string User_Create_User_LastName_ErrorMsg { get; set; }
         public static string User_Create_User_Continue_Button { get; set; }
         public static string User_Create_User_AssignOrg { get; set; }
+        public static string Org_Accounts { get; set; }
+        public static string Org_ExpandableIcon { get; set; }
         public static string User_Create_User_Select_All { get; set; }
-        public static string User_Create_User_AssignApp { get; set; }
-        public static string User_Create_User_AssignRoles { get; set; }                           
-        #endregion[CreateUser]
-
+        public static string User_CreateUser_AssignApp { get; set; }
+        public static string User_Create_User_AssignRoles { get; set; }
+        public static string User_Create_User_Roles_Starling_Readonly { get; set; }
+        public static string User_Index { get; set; }
+        #endregion[CreateUser] 
+        
         public static ObjectRepository ReadElement(string location, string nodeModule)
         {
 
@@ -403,15 +407,24 @@ namespace CHC_Config.Utility
                         User_Create_User_AssignOrg = pair.Value;
                     else if (pair.Key == "User_Create_User_Select_All")
                         User_Create_User_Select_All = pair.Value;
-                    else if (pair.Key == "User_Create_User_AssignApp")
-                        User_Create_User_AssignApp = pair.Value;
+                    else if (pair.Key == "User_CreateUser_AssignApp")
+                        User_CreateUser_AssignApp = pair.Value;
                     else if (pair.Key == "User_Create_User_AssignRoles")
-                        User_Create_User_AssignRoles = pair.Value;                    
+                        User_Create_User_AssignRoles = pair.Value;
+                    else if (pair.Key == "Org_Accounts")
+                        Org_Accounts = pair.Value;
+                    else if (pair.Key == "Org_ExpandableIcon")
+                        Org_ExpandableIcon = pair.Value;
+                    else if (pair.Key == "User_Create_User_Roles_Starling_Readonly")
+                        User_Create_User_Roles_Starling_Readonly = pair.Value;
+                    else if (pair.Key == "User_Index")
+                        User_Index = pair.Value;
                 }
-                #endregion[CreateUser]
+                #endregion[CreateUser] 
             }
-            return obj;
-            
+            return obj; 
+
+
         }
     }
 }

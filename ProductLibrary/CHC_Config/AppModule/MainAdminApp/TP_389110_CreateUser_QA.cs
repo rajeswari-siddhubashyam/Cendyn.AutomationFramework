@@ -35,56 +35,58 @@ namespace CHC_Config.AppModule.MainAdminApp
                 //Step4: Click on Craete User button
                 CreateUser.Clickon_CreateUser_Button();
 
-                //Step5: Verify Popup with Proceed and Cancel buttons
-                CreateUser.VerifyProceed_CancelPopup();
-
-                //Step6: Enter Email in email text box
-                //CreateUser.Verify_Email_Txt.clear();
+                //Step6: Enter Email in email text box                
                 CreateUser.Verify_Email_Txt("abcd@cendyn17.");
+                Logger.WriteDebugMessage("User entered Wrong Email address in Email text box");
+
+                CreateUser.Verify_Email_Txt_Error_Msg("The Email field format is invalid");
 
                 //Step7: Verify Enter wrong Email in email text box
-                CreateUser.Verify_Email_Txt("abcd@cendyn17.com");
+                CreateUser.Verify_Email_Txt("Jsmith7@cendyn17.com");
 
                 //Step8: Click on Proceed button
                 CreateUser.Click_On_Proceed_Button();
 
                 //Step9: Enter First name
-                //CreateUser.Txt_FirstName("@#@#@@");
-                CreateUser.Txt_FirstName("abcd");
+                CreateUser.Txt_FirstName("John");
 
                 //Step10: Enter Last name
-                //CreateUser.Txt_LastName("&%*^$%d");
-                CreateUser.Txt_LastName("abcd");
+                CreateUser.Txt_LastName("Smith");
 
                 //Step11: Enter Job Title
-                //CreateUser.Txt_JobTitle("^#$#^&^^");
                 CreateUser.Txt_JobTitle("Manager");
 
                 //Step12: Click on Continue button
                 CreateUser.Clickon_Continue_Button();
 
                 //Step13: User select the Organization to user
-                string accountName = "Kirigami Hotels (Chain)";
-                CreateUser.Select_Org_ToUser(accountName);
-                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");                
-                
-                //Step14: User click on Select all button
-                //CreateUser.Select_SelectAll_Org_ToUser();
+                string accountName = "Brand Hotel";
+                Thread.Sleep(5000);
+                CreateUser.Click_Org_Accounts(accountName);
+                Logger.WriteDebugMessage("User Selected the Origami(Brand) Organization");
+                Logger.WriteDebugMessage("User click on Continue button & should lands on Organizations scetion step");
 
-                //Step15: User click on Continue button
+                //Step14: User click on Continue button
                 CreateUser.Clickon_Continue_Button();
+                Logger.WriteDebugMessage("User click on Continue button & should lands on Assign Application scetion step");
 
-                //Step16: Assign application to User
+                //Step15: Assign application to User
                 CreateUser.Assign_App_ToUser();
 
-                //Step17: Assign application roles to user
-                CreateUser.Assign_App_Roles_ToUser();
+                //Step16: Assign application roles to user
+                CreateUser.Assign_App_Roles_Starling_Readonly_ToUser();
 
-                //Step18: Click on Continue button
+                //Step17: Click on Continue button
                 CreateUser.Clickon_Continue_Button();
+                Logger.WriteDebugMessage("User click on Continue button & should lands on Summary scetion step");
 
-                //Step19: User click on Create user button
-                CreateUser.Clickon_CreateUser_Button();
+                //Step18: User click on Create user button
+                CreateUser.Clickon_Continue_Button();
+                Logger.WriteDebugMessage("User click on Create User button & should lands on User Index page");
+
+                //Step19: User navigates to index page after user is created
+                CreateUser.Verify_Users_On_IndexUser();
+
             }
         }
         #endregion[TP_389110]

@@ -375,6 +375,24 @@ namespace BaseUtility.Utility
             }
         }
 
+        public static void ElementEnterText_CTOS(IWebElement element, string text)
+        {
+            try
+            {
+                element.Clear();
+                CTOS.Input input = new CTOS.Input(Driver, element);
+                input.EnterInput(text);
+                AddDelay(1500);
+                Logger.WriteInfoMessage("Inserted text in the " + CurrentElementName + " element on the " + CurrentPageName + " page.");
+            }
+            catch (Exception e)
+            {
+                Logger.WriteFatalMessage(e);
+                Logger.WriteFatalMessage("Unable to select text in the " + CurrentElementName + " element on the " + CurrentPageName + " page.");
+                throw;
+            }
+        }
+
         /// <summary>
         /// Get Enum Description
         /// </summary>
