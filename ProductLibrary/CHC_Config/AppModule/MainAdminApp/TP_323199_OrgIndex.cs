@@ -52,13 +52,16 @@ namespace CHC_Config.AppModule.MainAdminApp
                 WaitTillBrowserLoad();
                 Navigation.Click_Configurations_App();
                 WaitTillBrowserLoad();
-                OrgIndex.SearchPropertyName();
+                //OrgIndex.SearchPropertyName();
+                OrgIndex.Filter_Options_ByPropertyName();
                 OrgIndex.ViewPropertyDashboard();
                 OrgIndex.BackToOrganization("Property");
-                OrgIndex.SearchPropertyName();
+                //OrgIndex.SearchPropertyName();
+                OrgIndex.Filter_Options_ByPropertyName();
                 OrgIndex.ViewBrandDashboard();
                 OrgIndex.BackToOrganization("Brand");
-                OrgIndex.SearchPropertyName();
+                //OrgIndex.SearchPropertyName();
+                OrgIndex.Filter_Options_ByPropertyName();
                 OrgIndex.ViewChainDashboard();
                 OrgIndex.BackToOrganization("Chain");
             }

@@ -38,7 +38,8 @@
         <!-- search - after u click filter button-->
         <Parameter key="Filter_Options">//*[@class='filter-form']//child::div[@class='row']</Parameter>
         <Parameter key="Filter_Options_Select">//select[contains(@id,'operator-name')]</Parameter>
-        <Parameter key="Filter_Options_Text">//input[contains(@id,'string-name')]</Parameter>
+        <!--<Parameter key="Filter_Options_Text">//input[contains(@id,'string-name')]</Parameter>-->
+        <Parameter key="Filter_Options_Text">//input[contains(@id,'string-property')]</Parameter>
         <Parameter key="Filter_Applybutton">//button[contains(@id,'filter-btn') and contains(text(),'Apply')]</Parameter>
         <Parameter key="Filter_Clearbutton">//button[contains(@id,'filter-btn') and contains(text(),'Clear')]</Parameter>
         <Parameter key="Sort_Button">//div[text()='Sort']</Parameter>
@@ -59,7 +60,8 @@
         <Parameter key="ChainDashboard_header">//*[@id='chain-dashboard']//child::div[@class='header-wrap']</Parameter>
         
         <Parameter key="Dashboard_navTabs">//*div[contains(@class,'nav-tabs')]//*li[@class='nav-item']</Parameter>
-        <Parameter key="Dashboard_GeneralTab">//*[@role='tablist']//child::li[@class='nav-item' and contains(text(),'General')]</Parameter>
+        <!--<Parameter key="Dashboard_GeneralTab">//*[@role='tablist']//child::li[@class='nav-item' and contains(text(),'General')]</Parameter>-->
+        <Parameter key="Dashboard_GeneralTab">//span[text()=' General ']</Parameter>
         <Parameter key="Dashboard_BrandTab">//*[@id='nav-tab-chaintabs-2']</Parameter>
         <!--<Parameter key="Dashboard_PropTab">//*[@id='nav-tab-chaintabs-3']</Parameter>-->
         <Parameter key="Dashboard_PropTab">//span[text()=' Properties ']</Parameter>
@@ -90,10 +92,15 @@
         <Parameter key="Dashboard_sideColumnValue">list-view__group-item-slot-value</Parameter>
 
         <Parameter key="Dashboard_Brand_header">//*div[@id='nav-chaintabs-2']//child::span[@class='e-headertext' and contains(text(),'Brand')</Parameter>
-        <Paramerer key="Dashboard_Brand_div">//div[@id='chaintabsContent']/div[@id='nav-chaintabs-2']</Paramerer>
+        <!--<Paramerer key="Dashboard_Brand_div">//div[@id='chaintabsContent']/div[@id='nav-chaintabs-2']</Paramerer>-->
         <Parameter key="Dashboard_Prop_header">//*div[@id='nav-chaintabs-3']//child::span[@class='e-headertext' and contains(text(),'Property')</Parameter>
      
-        <Parameter key="Dashboard_Brandtable_Row">//div[@id='chaintabsContent']/div[@id='nav-chaintabs-2']//table[contains(@id,'_content_table')]/tbody/tr[contains(@class,'e-row')]</Parameter>
+        <!--<Parameter key="Dashboard_Brandtable_Row">//div[@id='chaintabsContent']/div[@id='nav-chaintabs-2']//table[contains(@id,'_content_table')]/tbody/tr[contains(@class,'e-row')]</Parameter>-->
+        <!--<Parameter key="Dashboard_Brandtable_Row">//*[@id='chain-brands-grid_content_table']/tbody/tr</Parameter>-->
+        <Paramerer key="Dashboard_Brand_div">//div[@id='chain-brands-grid']</Paramerer>
+        <Paramerer key="Dashboard_Brandtable">//table[@id='chain-brands-grid_content_table']</Paramerer>
+        <Paramerer key="Dashboard_BrandLink">a</Paramerer>
+        <Parameter key="Dashboard_Brandtable_Row">//table[@id='chain-brands-grid_content_table']/tbody/tr[contains(@class,'e-row')]</Parameter>
         <Parameter key="Dashboard_Brandtable_Names">//td[contains(@class,'e-templatecell')]</Parameter>
         <Parameter key="Dashboard_Brandtable_DateAdded">//td[2]</Parameter>
         <Parameter key="Dashboard_loading">e-spinner-pane</Parameter>

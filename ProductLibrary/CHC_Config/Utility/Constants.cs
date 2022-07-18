@@ -60,12 +60,12 @@ namespace CHC_Config.Utility
         #endregion
 
         #region[CommonData]
-        //public static string FrontEndEmail = "testuser10@cendyn17.com";
+        public static string FrontEndEmail = "testuser10@cendyn17.com";
         //public static string FrontEndEmail_Test = "testlogin3@cendyn17.com";
-        public static string FrontEndEmail = "amoorthy@cendyn.com";
+      
         //#pragma warning disable CS0108 // Member hides inherited member; missing new keyword
-        //public static string CommonPassword = "Cendyn321$";
-        public static string CommonPassword = "Amma1234";
+        public static string CommonPassword = "Cendyn321#";
+       
         public static string CommonPassword_Test = "Cendyn4321$";
         //#pragma warning restore CS0108 // Member hides inherited member; missing new keyword
         #endregion[CommonData]

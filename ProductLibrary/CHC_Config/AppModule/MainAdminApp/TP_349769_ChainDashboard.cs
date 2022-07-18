@@ -29,31 +29,32 @@ namespace CHC_Config.AppModule.MainAdminApp
             if (TestCaseId == Constants.TC_314185)
             {
                 //Step1 - Navigate to CHC and log in as a valid Admin user
-               /*  SignIn.EnterEmailAddress(Constants.FrontEndEmail);
-                 SignIn.EnterPassword(Constants.CommonPassword);
-                 SignIn.ClickOnSignInButton();
-                 WaitTillBrowserLoad();
-                 Navigation.Click_Configurations_App();
-                 WaitTillBrowserLoad();
+                /*  SignIn.EnterEmailAddress(Constants.FrontEndEmail);
+                  SignIn.EnterPassword(Constants.CommonPassword);
+                  SignIn.ClickOnSignInButton();
+                  WaitTillBrowserLoad();
+                  Navigation.Click_Configurations_App();
+                  WaitTillBrowserLoad();
 
 
-                  Navigation.VerifyPopup();
+                   Navigation.VerifyPopup();
 
-                //Click on Choose button
-                Navigation.ClickOnChooseOnPopup();
-
-
-                //Step5  Verify the Accounts listed & Select the Org
-                Navigation.VerifyAccounts();
-                Navigation.ClickExpandIcons();
-                string accountName = "Kirigami Hotels (Chain)";
-                Navigation.Click_Accounts(accountName);
-                Navigation.VerifyAccountPage(accountName);
+                 //Click on Choose button
+                 Navigation.ClickOnChooseOnPopup();
 
 
-                OrgIndex.SearchPropertyName();
-                OrgIndex.ViewChainDashboard();*/
+                 //Step5  Verify the Accounts listed & Select the Org
+                 Navigation.VerifyAccounts();
+                 Navigation.ClickExpandIcons();
+                 string accountName = "Kirigami Hotels (Chain)";
+                 Navigation.Click_Accounts(accountName);
+                 Navigation.VerifyAccountPage(accountName);
+
+
+                 OrgIndex.SearchPropertyName();
+                 OrgIndex.ViewChainDashboard();*/
                 /* Verify Localization - TC314185*/
+                Dashboard.ClickGeneralTab();
                 string searchText = TestData.ExcelData.TestDataReader.ReadData(6, "chain_name");
                 Logger.WriteDebugMessage("Chain Name - " + searchText);
                 AccountInfo account = new AccountInfo();

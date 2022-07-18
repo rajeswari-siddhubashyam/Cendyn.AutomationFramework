@@ -68,14 +68,14 @@ namespace TestData
             if (clientName == "CHC_ConfigQA")
             {
                  TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_000000", "TC_000000", "1", "TRUE", "email", "testuser10@cendyn17.com");
-                 TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_000000", "TC_000000", "2", "TRUE", "password", "Cendyn321$");
+                 TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_000000", "TC_000000", "2", "TRUE", "password", "Cendyn321#");
             
 
             }
             else if (clientName == "CHC_ConfigDEV")
             {
                 TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_000000", "TC_000000", "1", "TRUE", "email", "testuser10@cendyn17.com");
-                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_000000", "TC_000000", "2", "TRUE", "password", "Cendyn321$");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_000000", "TC_000000", "2", "TRUE", "password", "Cendyn321#");
             }
             /*else if (clientName == "CHC_ConfigDEMO")
             {

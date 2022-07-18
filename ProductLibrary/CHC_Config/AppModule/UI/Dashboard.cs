@@ -233,30 +233,36 @@ namespace CHC_Config.AppModule.UI
         public static void VerifyBrands(List<AccountInfo> brands)
         {
             //IList<IWebElement> tabs = PageObject_Dashboard.Dashboard_navTabs();
+            AddDelay(100);
             IWebElement brandTab = PageObject_Dashboard.Dashboard_BrandTab();
             brandTab.Click();
             //IsElementDisplayed(PageObject_Dashboard.Dashboard_loading)
             FindLoaderAndWaitTillHide(ObjectRepository.Dashboard_loading);
-            ElementWait(PageObject_Dashboard.Dashboard_Brandtable_Row()[0], 15);
-            IWebElement div = PageObject_Dashboard.Dashboard_Brand_div();
-            //IWebElement Brand = Driver.FindElement(By.XPath("//div[@id='chaintabsContent']/div[@id='nav-chaintabs-2']//table[contains(@id,'_content_table')]/tbody/tr[@class='e-row']//td[1]"));
-            IList<IWebElement> BrandRow = PageObject_Dashboard.Dashboard_Brandtable_Row();
+            ElementWait(PageObject_Dashboard.Dashboard_Brandtable(), 15);
+            IWebElement Brandtable = PageObject_Dashboard.Dashboard_Brandtable();
+            //IWebElement BrandTable = Driver.FindElement(By.XPath("//table[@id='chain-brands-grid_content_table']"));
+            IList<IWebElement> BrandLink = PageObject_Dashboard.Dashboard_BrandLink(Brandtable);
+            //IList<IWebElement> BrandRow = Driver.FindElements(By.XPath("//table[@id='chain-brands-grid_content_table']/tbody/tr[contains(@class,'e-row')]"));
+            //IList<IWebElement> BrandRow = PageObject_Dashboard.Dashboard_Brandtable_Row();
+           
             int j = 0;
                 for(int i=0;i<brands.Count;i++)
                 {
-
-                    //if (BrandRow[j].Displayed == false)
-                    //    j++;
-                    IWebElement NameColumn = PageObject_Dashboard.Dashboard_Brandtable_Names(BrandRow[j]);
-                    if (brands[i].Name == NameColumn.Text)
+                HighlightElement(BrandLink[j]);
+                //if (BrandRow[j].Displayed == false)
+                //    j++;
+                //IWebElement NameColumn = BrandRow[j].FindElement(By.XPath("//td[1]"));
+                //IWebElement NameColumn = PageObject_Dashboard.Dashboard_Brandtable_Names(BrandRow[j]);
+              
+                    if (brands[i].Name.ToLower() == BrandLink[j].Text.ToLower())
                         {
-                            HighlightElement(NameColumn);
-                            Logger.WriteDebugMessage("Brand name matches DB - " + NameColumn);
-                            RemoveHighlightElement(NameColumn);
+                            HighlightElement(BrandLink[j]);
+                            Logger.WriteDebugMessage("Brand name matches DB - " + BrandLink[j]);
+                            RemoveHighlightElement(BrandLink[j]);
                         }
                     else
                         {
-                            Logger.WriteWarnMessage("Brand not found " + NameColumn);
+                            Logger.WriteWarnMessage("Brand not found " + BrandLink[j]);
                             Assert.Fail("Brand not found");
                         }
                 j++;
@@ -376,10 +382,10 @@ namespace CHC_Config.AppModule.UI
                 
                     columnName = columnName.Replace(" ", ""); //string.Empty
                     string DBValue = DataBinder.Eval(ac, columnName).ToString();
-                if (columnName.Contains("UN")==false)
+                /*if (columnName.Contains("UN")==false)
                 {
                     DBValue = DBValue.Replace(" ", "");
-                }
+                }*/
                
                 
                     if (DBValue == "")
@@ -479,6 +485,11 @@ namespace CHC_Config.AppModule.UI
                     Assert.Fail("Values not matching for " + prop_fields[i].Text.Trim());
                 }
             }
+        }
+        public static void ClickGeneralTab()
+        {
+            IWebElement GeneralTab = PageObject_Dashboard.Dashboard_GeneralTab();
+            Helper.ElementClick(GeneralTab);
         }
     }
 }
