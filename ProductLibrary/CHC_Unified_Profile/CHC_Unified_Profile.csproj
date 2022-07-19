@@ -133,7 +133,7 @@
       <Version>4.1.1</Version>
     </PackageReference>
     <PackageReference Include="Selenium.WebDriver.ChromeDriver">
-      <Version>101.0.4951.4100</Version>
+      <Version>103.0.5060.5300</Version>
     </PackageReference>
     <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation">
       <Version>4.0.0</Version>

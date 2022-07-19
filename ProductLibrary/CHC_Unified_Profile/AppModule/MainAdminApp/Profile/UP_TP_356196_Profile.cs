@@ -6,7 +6,8 @@ using Queries = CHC_Unified_Profile.Utility.Queries;
 using System.Collections.Generic;
 using InfoMessageLogger;
 using TestData;
-using OpenQA.Selenium.Support.UI;
+
+using OpenQA.Selenium;
 using System.Threading;
 using CHC_Unified_Profile.PageObject.UI;
 using BaseUtility.Utility.Hotmail;
