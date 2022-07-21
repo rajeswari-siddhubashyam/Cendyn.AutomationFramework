@@ -40,7 +40,7 @@ namespace CHC.Utility
         {
             //clear the old items from the list
             //data.clientCards.Clear();
-            query = "select  top 1* from ContactMethod where ContactMethodTypeId = 9 and RecordStatus = 1 and CMOptOut = 1";
+            query = " select  top 1 * from ContactMethod where ContactMethodTypeId = 3 and RecordStatus = 1 and profileid = '2056' ";
             //select top 1 * from ContactMethod where ContactMethodTypeId = 1 and RecordStatus = 1 and CMOptOut = 1
 
             using (SqlConnection connection = DBHelper.SqlConn())

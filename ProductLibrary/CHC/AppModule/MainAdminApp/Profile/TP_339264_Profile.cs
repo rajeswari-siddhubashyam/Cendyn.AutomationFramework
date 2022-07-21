@@ -30,23 +30,29 @@ namespace CHC.AppModule.MainAdminApp
 
                 //Step3 - Click on Starling App
                 Home.ClickOnStarlingApp();
-                Logger.WriteDebugMessage("User should view the Org selector");
+                //Logger.WriteDebugMessage("User should view the Org selector");
 
-                //Step4 - Verify the Org selector popup
-                Home.VerifyPopup();
+                ////Step4 - Verify the Org selector popup
+                //Home.VerifyPopup();
 
-                //Click on Choose button
-                Home.ClickOnChooseOnPopup();
-                Logger.WriteDebugMessage("User should view the list of Orgs");
+                ////Click on Choose button
+                //Home.ClickOnChooseOnPopup();
+                //Logger.WriteDebugMessage("User should view the list of Orgs");
 
-                //Step5  Verify the Accounts listed & Select the Org
-                Home.VerifyAccounts();
-                Home.ClickExpandIcons();
-                string accountName = "Kirigami Hotels (Chain)";
-                Home.Click_Accounts(accountName);
-                Home.VerifyAccountPage(accountName);
-                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                Logger.WriteDebugMessage("User is landed on Starling application");
+                ////Step5  Verify the Accounts listed & Select the Org
+                //Home.VerifyAccounts();
+                //Home.ClickExpandIcons();
+                //string accountName = "Kirigami Hotels (Chain)";
+                //Home.Click_Accounts(accountName);
+                //Home.VerifyAccountPage(accountName);
+                //Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
+                //Logger.WriteDebugMessage("User is landed on Starling application");
+
+                Logger.WriteDebugMessage("User is landed on default application - Unified Profile");
+
+                Profiles.Clickon_Data_Inspection();
+
+                Profiles.Clickon_Data_Inspection_Raw_Profiles();
 
                 //Click on Logout                
                 Home.ClickUserLogout();
@@ -71,23 +77,27 @@ namespace CHC.AppModule.MainAdminApp
 
                 //Step3 - Click on Starling App
                 Home.ClickOnStarlingApp();
-                Logger.WriteDebugMessage("User should view the Org selector");
+                //Logger.WriteDebugMessage("User should view the Org selector");
 
                 //Step4 - Verify the Org selector popup
-                Home.VerifyPopup();
+                //Home.VerifyPopup();
 
                 //Click on Choose button
-                Home.ClickOnChooseOnPopup();
-                Logger.WriteDebugMessage("User should view the list of Orgs");
+                //Home.ClickOnChooseOnPopup();
+                //Logger.WriteDebugMessage("User should view the list of Orgs");
 
                 //Step5  Verify the Accounts listed & Select the Org
-                Home.VerifyAccounts();
-                Home.ClickExpandIcons();
-                string accountName = "Kirigami Hotels (Chain)";
-                Home.Click_Accounts(accountName);
-                Home.VerifyAccountPage(accountName);
-                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                Logger.WriteDebugMessage("User is landed on Starling application");
+                //Home.VerifyAccounts();
+                //Home.ClickExpandIcons();
+                //string accountName = "Kirigami Hotels (Chain)";
+                //Home.Click_Accounts(accountName);
+                //Home.VerifyAccountPage(accountName);
+                //Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
+                Logger.WriteDebugMessage("User is landed on default application - Unified Profile");
+
+                Profiles.Clickon_Data_Inspection();
+
+                Profiles.Clickon_Data_Inspection_Raw_Profiles();
 
                 //Step5 - Enter email in Search filter & click on Search icon
                 Profile_DB ProfileTable = new Profile_DB();
@@ -127,23 +137,29 @@ namespace CHC.AppModule.MainAdminApp
 
                 //Step3 - Click on Starling App
                 Home.ClickOnStarlingApp();
-                Logger.WriteDebugMessage("User should view the Org selector");
+                //Logger.WriteDebugMessage("User should view the Org selector");
 
-                //Step4 - Verify the Org selector popup
-                Home.VerifyPopup();
+                ////Step4 - Verify the Org selector popup
+                //Home.VerifyPopup();
 
-                //Click on Choose button
-                Home.ClickOnChooseOnPopup();
-                Logger.WriteDebugMessage("User should view the list of Orgs");
+                ////Click on Choose button
+                //Home.ClickOnChooseOnPopup();
+                //Logger.WriteDebugMessage("User should view the list of Orgs");
 
-                //Step5  Verify the Accounts listed & Select the Org
-                Home.VerifyAccounts();
-                Home.ClickExpandIcons();
-                string accountName = "Kirigami Hotels (Chain)";
-                Home.Click_Accounts(accountName);
-                Home.VerifyAccountPage(accountName);
-                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                Logger.WriteDebugMessage("User is landed on Starling application");                
+                ////Step5  Verify the Accounts listed & Select the Org
+                //Home.VerifyAccounts();
+                //Home.ClickExpandIcons();
+                //string accountName = "Kirigami Hotels (Chain)";
+                //Home.Click_Accounts(accountName);
+                //Home.VerifyAccountPage(accountName);
+                //Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
+                //Logger.WriteDebugMessage("User is landed on Starling application");
+                
+                Logger.WriteDebugMessage("User is landed on default application - Unified Profile");
+
+                Profiles.Clickon_Data_Inspection();
+
+                Profiles.Clickon_Data_Inspection_Raw_Profiles();
 
                 //Step5 - Verify the Filter button
                 Profiles.ClickonFilterbutton();
@@ -174,23 +190,29 @@ namespace CHC.AppModule.MainAdminApp
 
                 //Step3 - Click on Starling App
                 Home.ClickOnStarlingApp();
-                Logger.WriteDebugMessage("User should view the Org selector");
+                //Logger.WriteDebugMessage("User should view the Org selector");
 
-                //Step4 - Verify the Org selector popup
-                Home.VerifyPopup();
+                ////Step4 - Verify the Org selector popup
+                //Home.VerifyPopup();
 
-                //Click on Choose button
-                Home.ClickOnChooseOnPopup();
-                Logger.WriteDebugMessage("User should view the list of Orgs");
+                ////Click on Choose button
+                //Home.ClickOnChooseOnPopup();
+                //Logger.WriteDebugMessage("User should view the list of Orgs");
 
-                //Step5  Verify the Accounts listed & Select the Org
-                Home.VerifyAccounts();
-                Home.ClickExpandIcons();
-                string accountName = "Kirigami Hotels (Chain)";
-                Home.Click_Accounts(accountName);
-                Home.VerifyAccountPage(accountName);
-                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                Logger.WriteDebugMessage("User is landed on Starling application");
+                ////Step5  Verify the Accounts listed & Select the Org
+                //Home.VerifyAccounts();
+                //Home.ClickExpandIcons();
+                //string accountName = "Kirigami Hotels (Chain)";
+                //Home.Click_Accounts(accountName);
+                //Home.VerifyAccountPage(accountName);
+                //Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
+                //Logger.WriteDebugMessage("User is landed on Starling application");
+
+                Logger.WriteDebugMessage("User is landed on default application - Unified Profile");
+
+                Profiles.Clickon_Data_Inspection();
+
+                Profiles.Clickon_Data_Inspection_Raw_Profiles();
 
                 //Step5 - Verify the Sort button
                 Profiles.ClickonSortbutton();
@@ -221,23 +243,29 @@ namespace CHC.AppModule.MainAdminApp
 
                 //Step3 - Click on Starling App
                 Home.ClickOnStarlingApp();
-                Logger.WriteDebugMessage("User should view the Org selector");
+                //Logger.WriteDebugMessage("User should view the Org selector");
 
-                //Step4 - Verify the Org selector popup
-                Home.VerifyPopup();
+                ////Step4 - Verify the Org selector popup
+                //Home.VerifyPopup();
 
-                //Click on Choose button
-                Home.ClickOnChooseOnPopup();
-                Logger.WriteDebugMessage("User should view the list of Orgs");
+                ////Click on Choose button
+                //Home.ClickOnChooseOnPopup();
+                //Logger.WriteDebugMessage("User should view the list of Orgs");
 
-                //Step5  Verify the Accounts listed & Select the Org
-                Home.VerifyAccounts();
-                Home.ClickExpandIcons();
-                string accountName = "Kirigami Hotels (Chain)";
-                Home.Click_Accounts(accountName);
-                Home.VerifyAccountPage(accountName);
-                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                Logger.WriteDebugMessage("User is landed on Starling application");
+                ////Step5  Verify the Accounts listed & Select the Org
+                //Home.VerifyAccounts();
+                //Home.ClickExpandIcons();
+                //string accountName = "Kirigami Hotels (Chain)";
+                //Home.Click_Accounts(accountName);
+                //Home.VerifyAccountPage(accountName);
+                //Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
+                //Logger.WriteDebugMessage("User is landed on Starling application");
+
+                Logger.WriteDebugMessage("User is landed on default application - Unified Profile");
+
+                Profiles.Clickon_Data_Inspection();
+
+                Profiles.Clickon_Data_Inspection_Raw_Profiles();
 
                 Profiles.ClickonApplauncher();
                 Logger.WriteDebugMessage("User Should view the Applications on App launcher");
@@ -288,21 +316,27 @@ namespace CHC.AppModule.MainAdminApp
                 Home.VerifyApplications();
                 
                 Home.ClickOnStarlingApp();
-                Logger.WriteDebugMessage("User should view the Org selector");
+                //Logger.WriteDebugMessage("User should view the Org selector");
 
-                Home.VerifyPopup();                
+                //Home.VerifyPopup();                
 
-                Home.ClickOnChooseOnPopup();
-                Logger.WriteDebugMessage("User should view the list of Orgs");
+                //Home.ClickOnChooseOnPopup();
+                //Logger.WriteDebugMessage("User should view the list of Orgs");
 
-                //Step5  Verify the Accounts listed & Select the Org
-                Home.VerifyAccounts();
-                //Home.ClickExpandIcons();
-                string accountName = "Kirigami Hotels (Chain)";
-                Home.Click_Accounts(accountName);
-                Home.VerifyAccountPage(accountName);
-                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                Logger.WriteDebugMessage("User is landed on Starling application");
+                ////Step5  Verify the Accounts listed & Select the Org
+                //Home.VerifyAccounts();
+                ////Home.ClickExpandIcons();
+                //string accountName = "Kirigami Hotels (Chain)";
+                //Home.Click_Accounts(accountName);
+                //Home.VerifyAccountPage(accountName);
+                //Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
+                //Logger.WriteDebugMessage("User is landed on Starling application");
+
+                Logger.WriteDebugMessage("User is landed on default application - Unified Profile");
+
+                Profiles.Clickon_Data_Inspection();
+
+                Profiles.Clickon_Data_Inspection_Raw_Profiles();
 
                 //Step5 - Verify the Filter button
 
@@ -340,21 +374,27 @@ namespace CHC.AppModule.MainAdminApp
                 Home.VerifyApplications();
 
                 Home.ClickOnStarlingApp();
-                Logger.WriteDebugMessage("User should view the Org selector");
+                //Logger.WriteDebugMessage("User should view the Org selector");
 
-                Home.VerifyPopup();
+                //Home.VerifyPopup();
 
-                Home.ClickOnChooseOnPopup();
-                Logger.WriteDebugMessage("User should view the list of Orgs");
+                //Home.ClickOnChooseOnPopup();
+                //Logger.WriteDebugMessage("User should view the list of Orgs");
 
-                //Step5  Verify the Accounts listed & Select the Org
-                Home.VerifyAccounts();
-                //Home.ClickExpandIcons();
-                string accountName = "Kirigami Hotels (Chain)";
-                Home.Click_Accounts(accountName);
-                Home.VerifyAccountPage(accountName);
-                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                Logger.WriteDebugMessage("User is landed on Starling application");
+                ////Step5  Verify the Accounts listed & Select the Org
+                //Home.VerifyAccounts();
+                ////Home.ClickExpandIcons();
+                //string accountName = "Kirigami Hotels (Chain)";
+                //Home.Click_Accounts(accountName);
+                //Home.VerifyAccountPage(accountName);
+                //Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
+                //Logger.WriteDebugMessage("User is landed on Starling application");
+
+                Logger.WriteDebugMessage("User is landed on default application - Unified Profile");
+
+                Profiles.Clickon_Data_Inspection();
+
+                Profiles.Clickon_Data_Inspection_Raw_Profiles();
 
                 Profiles.ClickonFilterbutton();               
 
@@ -393,21 +433,27 @@ namespace CHC.AppModule.MainAdminApp
                 Home.VerifyApplications();                
 
                 Home.ClickOnStarlingApp();
-                Logger.WriteDebugMessage("User should view the Org selector");
+                //Logger.WriteDebugMessage("User should view the Org selector");
 
-                Home.VerifyPopup();
+                //Home.VerifyPopup();
 
-                Home.ClickOnChooseOnPopup();
-                Logger.WriteDebugMessage("User should view the list of Orgs");
+                //Home.ClickOnChooseOnPopup();
+                //Logger.WriteDebugMessage("User should view the list of Orgs");
 
-                //Step5  Verify the Accounts listed & Select the Org
-                Home.VerifyAccounts();
-                Home.ClickExpandIcons();
-                string accountName = "Kirigami Hotels (Chain)";
-                Home.Click_Accounts(accountName);
-                Home.VerifyAccountPage(accountName);
-                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                Logger.WriteDebugMessage("User is landed on Starling application");
+                ////Step5  Verify the Accounts listed & Select the Org
+                //Home.VerifyAccounts();
+                //Home.ClickExpandIcons();
+                //string accountName = "Kirigami Hotels (Chain)";
+                //Home.Click_Accounts(accountName);
+                //Home.VerifyAccountPage(accountName);
+                //Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
+                //Logger.WriteDebugMessage("User is landed on Starling application");
+
+                Logger.WriteDebugMessage("User is landed on default application - Unified Profile");
+
+                Profiles.Clickon_Data_Inspection();
+
+                Profiles.Clickon_Data_Inspection_Raw_Profiles();
 
                 Profiles.ClickonFilterbutton();
                 Helper.WaitForAjaxControls(20);
@@ -463,22 +509,28 @@ namespace CHC.AppModule.MainAdminApp
                     Home.ClickOnStarlingApp();
 
                     //Step4 - Verify the Org selector popup
-                    Logger.WriteDebugMessage("User should view the Org selector");
-                    Home.VerifyPopup();
+                    //Logger.WriteDebugMessage("User should view the Org selector");
+                    //Home.VerifyPopup();
 
-                    //Click on Choose button
-                    Home.ClickOnChooseOnPopup();
+                    ////Click on Choose button
+                    //Home.ClickOnChooseOnPopup();
 
-                    //Step5  Verify the Accounts listed & Select the Org
-                    Home.VerifyAccounts();
-                    Home.ClickExpandIcons();
-                    string accountName = "Kirigami Hotels (Chain)";
-                    Home.Click_Accounts(accountName);
-                    Home.VerifyAccountPage(accountName);
-                    Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                    Logger.WriteDebugMessage("User is landed on Starling application");
+                    ////Step5  Verify the Accounts listed & Select the Org
+                    //Home.VerifyAccounts();
+                    //Home.ClickExpandIcons();
+                    //string accountName = "Kirigami Hotels (Chain)";
+                    //Home.Click_Accounts(accountName);
+                    //Home.VerifyAccountPage(accountName);
+                    //Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
+                    //Logger.WriteDebugMessage("User is landed on Starling application");
 
-                Reservation_DB reservation = new Reservation_DB();
+                    Logger.WriteDebugMessage("User is landed on default application - Unified Profile");
+
+                    Profiles.Clickon_Data_Inspection();
+
+                    Profiles.Clickon_Data_Inspection_Raw_Profiles();
+
+                    Reservation_DB reservation = new Reservation_DB();
                     CHC.Utility.Queries.GetReservation(reservation);
 
                     Profiles.ClickonFilterbutton();
@@ -515,23 +567,29 @@ namespace CHC.AppModule.MainAdminApp
                 Home.ClickOnStarlingApp();
 
                 //Step4 - Verify the Org selector popup
-                Logger.WriteDebugMessage("User should view the Org selector");
-                Home.VerifyPopup();
+                //Logger.WriteDebugMessage("User should view the Org selector");
+                //Home.VerifyPopup();
 
-                //Click on Choose button
-                Home.ClickOnChooseOnPopup();
-                Logger.WriteDebugMessage("User should view the list of Orgs");
+                ////Click on Choose button
+                //Home.ClickOnChooseOnPopup();
+                //Logger.WriteDebugMessage("User should view the list of Orgs");
 
-                //Step5  Verify the Accounts listed & Select the Org
-                Home.VerifyAccounts();
-                Home.ClickExpandIcons();
+                ////Step5  Verify the Accounts listed & Select the Org
+                //Home.VerifyAccounts();
+                //Home.ClickExpandIcons();
 
-                string accountName = "Kirigami Hotels (Chain)";
-                Home.Click_Accounts(accountName);
+                //string accountName = "Kirigami Hotels (Chain)";
+                //Home.Click_Accounts(accountName);
 
-                Home.VerifyAccountPage(accountName);
-                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                Logger.WriteDebugMessage("User is landed on Starling application");
+                //Home.VerifyAccountPage(accountName);
+                //Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
+                //Logger.WriteDebugMessage("User is landed on Starling application");
+
+                Logger.WriteDebugMessage("User is landed on default application - Unified Profile");
+
+                Profiles.Clickon_Data_Inspection();
+
+                Profiles.Clickon_Data_Inspection_Raw_Profiles();
 
                 Reservation_DB reservation = new Reservation_DB();
                 CHC.Utility.Queries.GetReservation(reservation);
@@ -570,23 +628,29 @@ namespace CHC.AppModule.MainAdminApp
                 Home.ClickOnStarlingApp();
 
                 //Step4 - Verify the Org selector popup
-                Logger.WriteDebugMessage("User should view the Org selector");
-                Home.VerifyPopup();
+                //Logger.WriteDebugMessage("User should view the Org selector");
+                //Home.VerifyPopup();
 
-                //Click on Choose button
-                Home.ClickOnChooseOnPopup();
-                Logger.WriteDebugMessage("User should view the list of Org's");
+                ////Click on Choose button
+                //Home.ClickOnChooseOnPopup();
+                //Logger.WriteDebugMessage("User should view the list of Org's");
 
-                //Step5  Verify the Accounts listed & Select the Org
-                Home.VerifyAccounts();
-                Home.ClickExpandIcons();
+                ////Step5  Verify the Accounts listed & Select the Org
+                //Home.VerifyAccounts();
+                //Home.ClickExpandIcons();
 
-                string accountName = "Kirigami Hotels (Chain)";
-                Home.Click_Accounts(accountName);
+                //string accountName = "Kirigami Hotels (Chain)";
+                //Home.Click_Accounts(accountName);
 
-                Home.VerifyAccountPage(accountName);
-                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                Logger.WriteDebugMessage("User is landed on Starling application");
+                //Home.VerifyAccountPage(accountName);
+                //Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
+                //Logger.WriteDebugMessage("User is landed on Starling application");
+
+                Logger.WriteDebugMessage("User is landed on default application - Unified Profile");
+
+                Profiles.Clickon_Data_Inspection();
+
+                Profiles.Clickon_Data_Inspection_Raw_Profiles();
 
                 Reservation_DB reservation = new Reservation_DB();
                 CHC.Utility.Queries.GetReservation(reservation);
@@ -625,23 +689,29 @@ namespace CHC.AppModule.MainAdminApp
                 Home.ClickOnStarlingApp();
 
                 //Step4 - Verify the Org selector popup
-                Logger.WriteDebugMessage("User should view the Org selector");
-                Home.VerifyPopup();
+                //Logger.WriteDebugMessage("User should view the Org selector");
+                //Home.VerifyPopup();
 
-                //Click on Choose button
-                Home.ClickOnChooseOnPopup();
-                Logger.WriteDebugMessage("User should view the list of Org's");
+                ////Click on Choose button
+                //Home.ClickOnChooseOnPopup();
+                //Logger.WriteDebugMessage("User should view the list of Org's");
 
-                //Step5  Verify the Accounts listed & Select the Org
-                Home.VerifyAccounts();
-                Home.ClickExpandIcons();
+                ////Step5  Verify the Accounts listed & Select the Org
+                //Home.VerifyAccounts();
+                //Home.ClickExpandIcons();
 
-                string accountName = "Kirigami Hotels (Chain)";
-                Home.Click_Accounts(accountName);
+                //string accountName = "Kirigami Hotels (Chain)";
+                //Home.Click_Accounts(accountName);
 
-                Home.VerifyAccountPage(accountName);
-                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                Logger.WriteDebugMessage("User is landed on Starling application");
+                //Home.VerifyAccountPage(accountName);
+                //Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
+                //Logger.WriteDebugMessage("User is landed on Starling application");
+
+                Logger.WriteDebugMessage("User is landed on default application - Unified Profile");
+
+                Profiles.Clickon_Data_Inspection();
+
+                Profiles.Clickon_Data_Inspection_Raw_Profiles();
 
                 Reservation_DB reservation = new Reservation_DB();
                 CHC.Utility.Queries.GetReservation(reservation);
@@ -680,23 +750,29 @@ namespace CHC.AppModule.MainAdminApp
                 Home.ClickOnStarlingApp();
 
                 //Step4 - Verify the Org selector popup
-                Logger.WriteDebugMessage("User should view the Org selector");
-                Home.VerifyPopup();
+                //Logger.WriteDebugMessage("User should view the Org selector");
+                //Home.VerifyPopup();
 
-                //Click on Choose button
-                Home.ClickOnChooseOnPopup();
-                Logger.WriteDebugMessage("User should view the list of Org's");
+                ////Click on Choose button
+                //Home.ClickOnChooseOnPopup();
+                //Logger.WriteDebugMessage("User should view the list of Org's");
 
-                //Step5  Verify the Accounts listed & Select the Org
-                Home.VerifyAccounts();
-                Home.ClickExpandIcons();
+                ////Step5  Verify the Accounts listed & Select the Org
+                //Home.VerifyAccounts();
+                //Home.ClickExpandIcons();
 
-                string accountName = "Kirigami Hotels (Chain)";
-                Home.Click_Accounts(accountName);
+                //string accountName = "Kirigami Hotels (Chain)";
+                //Home.Click_Accounts(accountName);
 
-                Home.VerifyAccountPage(accountName);
-                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                Logger.WriteDebugMessage("User is landed on Starling application");
+                //Home.VerifyAccountPage(accountName);
+                //Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
+                //Logger.WriteDebugMessage("User is landed on Starling application");
+
+                Logger.WriteDebugMessage("User is landed on default application - Unified Profile");
+
+                Profiles.Clickon_Data_Inspection();
+
+                Profiles.Clickon_Data_Inspection_Raw_Profiles();
 
                 Reservation_DB reservation = new Reservation_DB();
                 CHC.Utility.Queries.GetReservation(reservation);
@@ -739,20 +815,26 @@ namespace CHC.AppModule.MainAdminApp
                 Home.ClickOnStarlingApp();
 
                 //Step4 - Verify the Org selector popup
-                Logger.WriteDebugMessage("User should view the Org selector");
-                Home.VerifyPopup();
+                //Logger.WriteDebugMessage("User should view the Org selector");
+                //Home.VerifyPopup();
 
-                //Click on Choose button
-                Home.ClickOnChooseOnPopup();
+                ////Click on Choose button
+                //Home.ClickOnChooseOnPopup();
 
-                //Step5  Verify the Accounts listed & Select the Org
-                Home.VerifyAccounts();
-                Home.ClickExpandIcons();
-                string accountName = "Kirigami Hotels (Chain)";
-                Home.Click_Accounts(accountName);
-                Home.VerifyAccountPage(accountName);
-                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                Logger.WriteDebugMessage("User is landed on Starling application");
+                ////Step5  Verify the Accounts listed & Select the Org
+                //Home.VerifyAccounts();
+                //Home.ClickExpandIcons();
+                //string accountName = "Kirigami Hotels (Chain)";
+                //Home.Click_Accounts(accountName);
+                //Home.VerifyAccountPage(accountName);
+                //Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
+                //Logger.WriteDebugMessage("User is landed on Starling application");
+
+                Logger.WriteDebugMessage("User is landed on default application - Unified Profile");
+
+                Profiles.Clickon_Data_Inspection();
+
+                Profiles.Clickon_Data_Inspection_Raw_Profiles();
 
                 Reservation_DB reservation = new Reservation_DB();
                 CHC.Utility.Queries.GetReservation(reservation);
@@ -800,20 +882,26 @@ namespace CHC.AppModule.MainAdminApp
                 Home.ClickOnStarlingApp();
 
                 //Step4 - Verify the Org selector popup
-                Logger.WriteDebugMessage("User should view the Org selector");
-                Home.VerifyPopup();
+                //Logger.WriteDebugMessage("User should view the Org selector");
+                //Home.VerifyPopup();
 
-                //Click on Choose button
-                Home.ClickOnChooseOnPopup();
+                ////Click on Choose button
+                //Home.ClickOnChooseOnPopup();
 
-                //Step5  Verify the Accounts listed & Select the Org
-                Home.VerifyAccounts();
-                Home.ClickExpandIcons();
-                string accountName = "Kirigami Hotels (Chain)";
-                Home.Click_Accounts(accountName);
-                Home.VerifyAccountPage(accountName);
-                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                Logger.WriteDebugMessage("User is landed on Starling application");
+                ////Step5  Verify the Accounts listed & Select the Org
+                //Home.VerifyAccounts();
+                //Home.ClickExpandIcons();
+                //string accountName = "Kirigami Hotels (Chain)";
+                //Home.Click_Accounts(accountName);
+                //Home.VerifyAccountPage(accountName);
+                //Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
+                //Logger.WriteDebugMessage("User is landed on Starling application");
+
+                Logger.WriteDebugMessage("User is landed on default application - Unified Profile");
+
+                Profiles.Clickon_Data_Inspection();
+
+                Profiles.Clickon_Data_Inspection_Raw_Profiles();
 
                 Profiles.ClickonFilterbutton();
                 Profiles.Enter_FilterValues("Name", "Starts With", "s");
@@ -858,20 +946,26 @@ namespace CHC.AppModule.MainAdminApp
                 Home.ClickOnStarlingApp();
 
                 //Step4 - Verify the Org selector popup
-                Logger.WriteDebugMessage("User should view the Org selector");
-                Home.VerifyPopup();
+                //Logger.WriteDebugMessage("User should view the Org selector");
+                //Home.VerifyPopup();
 
-                //Click on Choose button
-                Home.ClickOnChooseOnPopup();
+                ////Click on Choose button
+                //Home.ClickOnChooseOnPopup();
 
-                //Step5  Verify the Accounts listed & Select the Org
-                Home.VerifyAccounts();
-                Home.ClickExpandIcons();
-                string accountName = "Kirigami Hotels (Chain)";
-                Home.Click_Accounts(accountName);
-                Home.VerifyAccountPage(accountName);
-                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                Logger.WriteDebugMessage("User is landed on Starling application");
+                ////Step5  Verify the Accounts listed & Select the Org
+                //Home.VerifyAccounts();
+                //Home.ClickExpandIcons();
+                //string accountName = "Kirigami Hotels (Chain)";
+                //Home.Click_Accounts(accountName);
+                //Home.VerifyAccountPage(accountName);
+                //Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
+                //Logger.WriteDebugMessage("User is landed on Starling application");
+
+                Logger.WriteDebugMessage("User is landed on default application - Unified Profile");
+
+                Profiles.Clickon_Data_Inspection();
+
+                Profiles.Clickon_Data_Inspection_Raw_Profiles();
 
                 Profiles.ClickonFilterbutton();
                 Profiles.Enter_FilterValues("Email", "Starts With", "k");
@@ -916,20 +1010,26 @@ namespace CHC.AppModule.MainAdminApp
                 Home.ClickOnStarlingApp();
 
                 //Step4 - Verify the Org selector popup
-                Logger.WriteDebugMessage("User should view the Org selector");
-                Home.VerifyPopup();
+                //Logger.WriteDebugMessage("User should view the Org selector");
+                //Home.VerifyPopup();
 
-                //Click on Choose button
-                Home.ClickOnChooseOnPopup();
+                ////Click on Choose button
+                //Home.ClickOnChooseOnPopup();
 
-                //Step5  Verify the Accounts listed & Select the Org
-                Home.VerifyAccounts();
-                Home.ClickExpandIcons();
-                string accountName = "Kirigami Hotels (Chain)";
-                Home.Click_Accounts(accountName);
-                Home.VerifyAccountPage(accountName);
-                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                Logger.WriteDebugMessage("User is landed on Starling application");
+                ////Step5  Verify the Accounts listed & Select the Org
+                //Home.VerifyAccounts();
+                //Home.ClickExpandIcons();
+                //string accountName = "Kirigami Hotels (Chain)";
+                //Home.Click_Accounts(accountName);
+                //Home.VerifyAccountPage(accountName);
+                //Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
+                //Logger.WriteDebugMessage("User is landed on Starling application");
+
+                Logger.WriteDebugMessage("User is landed on default application - Unified Profile");
+
+                Profiles.Clickon_Data_Inspection();
+
+                Profiles.Clickon_Data_Inspection_Raw_Profiles();
 
                 Profiles.ClickonFilterbutton();
                 Profiles.Enter_FilterValues("Country", "Starts With", "U");
@@ -963,20 +1063,26 @@ namespace CHC.AppModule.MainAdminApp
                 Home.ClickOnStarlingApp();
 
                 //Step4 - Verify the Org selector popup
-                Logger.WriteDebugMessage("User should view the Org selector");
-                Home.VerifyPopup();
+                //Logger.WriteDebugMessage("User should view the Org selector");
+                //Home.VerifyPopup();
 
-                //Click on Choose button
-                Home.ClickOnChooseOnPopup();
+                ////Click on Choose button
+                //Home.ClickOnChooseOnPopup();
 
-                //Step5  Verify the Accounts listed & Select the Org
-                Home.VerifyAccounts();
-                Home.ClickExpandIcons();
-                string accountName = "Kirigami Hotels (Chain)";
-                Home.Click_Accounts(accountName);
-                Home.VerifyAccountPage(accountName);
-                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                Logger.WriteDebugMessage("User is landed on Starling application");
+                ////Step5  Verify the Accounts listed & Select the Org
+                //Home.VerifyAccounts();
+                //Home.ClickExpandIcons();
+                //string accountName = "Kirigami Hotels (Chain)";
+                //Home.Click_Accounts(accountName);
+                //Home.VerifyAccountPage(accountName);
+                //Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
+                //Logger.WriteDebugMessage("User is landed on Starling application");
+
+                Logger.WriteDebugMessage("User is landed on default application - Unified Profile");
+
+                Profiles.Clickon_Data_Inspection();
+
+                Profiles.Clickon_Data_Inspection_Raw_Profiles();
 
                 Profiles.ClickonFilterbutton();
                 Profiles.Enter_FilterValues("Date", "Greater Than", "Feb 08, 2022");
@@ -1025,20 +1131,26 @@ namespace CHC.AppModule.MainAdminApp
                 Home.ClickOnStarlingApp();
 
                 //Step4 - Verify the Org selector popup
-                Logger.WriteDebugMessage("User should view the Org selector");
-                Home.VerifyPopup();
+                //Logger.WriteDebugMessage("User should view the Org selector");
+                //Home.VerifyPopup();
 
-                //Click on Choose button
-                Home.ClickOnChooseOnPopup();
+                ////Click on Choose button
+                //Home.ClickOnChooseOnPopup();
 
-                //Step5  Verify the Accounts listed & Select the Org
-                Home.VerifyAccounts();
-                Home.ClickExpandIcons();
-                string accountName = "Kirigami Hotels (Chain)";
-                Home.Click_Accounts(accountName);
-                Home.VerifyAccountPage(accountName);
-                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                Logger.WriteDebugMessage("User is landed on Starling application");
+                ////Step5  Verify the Accounts listed & Select the Org
+                //Home.VerifyAccounts();
+                //Home.ClickExpandIcons();
+                //string accountName = "Kirigami Hotels (Chain)";
+                //Home.Click_Accounts(accountName);
+                //Home.VerifyAccountPage(accountName);
+                //Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
+                //Logger.WriteDebugMessage("User is landed on Starling application");
+
+                Logger.WriteDebugMessage("User is landed on default application - Unified Profile");
+
+                Profiles.Clickon_Data_Inspection();
+
+                Profiles.Clickon_Data_Inspection_Raw_Profiles();
 
                 Profiles.ClickonFilterbutton();
                 Profiles.Enter_FilterValues("Source", "Is", "PMS");
@@ -1067,20 +1179,26 @@ namespace CHC.AppModule.MainAdminApp
                 Home.ClickOnStarlingApp();
 
                 //Step4 - Verify the Org selector popup
-                Logger.WriteDebugMessage("User should view the Org selector");
-                Home.VerifyPopup();
+                //Logger.WriteDebugMessage("User should view the Org selector");
+                //Home.VerifyPopup();
 
-                //Click on Choose button
-                Home.ClickOnChooseOnPopup();
+                ////Click on Choose button
+                //Home.ClickOnChooseOnPopup();
 
-                //Step5  Verify the Accounts listed & Select the Org
-                Home.VerifyAccounts();
-                Home.ClickExpandIcons();
-                string accountName = "Kirigami Hotels (Chain)";
-                Home.Click_Accounts(accountName);
-                Home.VerifyAccountPage(accountName);
-                Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
-                Logger.WriteDebugMessage("User is landed on Starling application");
+                ////Step5  Verify the Accounts listed & Select the Org
+                //Home.VerifyAccounts();
+                //Home.ClickExpandIcons();
+                //string accountName = "Kirigami Hotels (Chain)";
+                //Home.Click_Accounts(accountName);
+                //Home.VerifyAccountPage(accountName);
+                //Logger.WriteDebugMessage("User Selected the Kirigami Hotels (Chain) Organization");
+                //Logger.WriteDebugMessage("User is landed on Starling application");
+
+                Logger.WriteDebugMessage("User is landed on default application - Unified Profile");
+
+                Profiles.Clickon_Data_Inspection();
+
+                Profiles.Clickon_Data_Inspection_Raw_Profiles();
 
                 Profiles.ClickonFilterbutton();
                 Profiles.Enter_FilterValues("Profile Id", "Equal", "250908126");

@@ -56,7 +56,7 @@ namespace CHC.Utility
         public static string Verifyreservationdetail { get; set; }
         public static string Reservationrecordontable { get; set; }
         public static string View_Profilerecordon_Viewpage { get; set; }
-        public static string Clickonfistrecord { get; set; }
+        public static string Clickonfirstrecord { get; set; }
         public static string Clickonfistrecordsecondontable { get; set; }
         public static string Applauncher { get; set; }
         public static string Verifyviewreservationrecord { get; set; }
@@ -75,6 +75,8 @@ namespace CHC.Utility
         public static string Manage_Campaign_Filter_UpdatedOn_Input { get; set; }
         public static string Manage_Campaign_Filter_ID_Text { get; set; }
         public static string Home_Text_Homepage { get; set; }
+        public static string Data_Inspection { get; set; }
+        public static string Data_Inspection_Raw_Profiles { get; set; }
         #endregion[Profiles]     
 
         #region[Reservations] 
@@ -174,8 +176,8 @@ namespace CHC.Utility
                         Verifyreservationdetail = pair.Value;
                     if (pair.Key == "Reservationrecordontable")
                         Reservationrecordontable = pair.Value;
-                    if (pair.Key == "Clickonfistrecord")
-                        Clickonfistrecord = pair.Value;
+                    if (pair.Key == "Clickonfirstrecord")
+                        Clickonfirstrecord = pair.Value;
                     if (pair.Key == "Clickonfistrecordsecondontable")
                         Clickonfistrecordsecondontable = pair.Value;
                     if (pair.Key == "Verifyviewreservationrecord")
@@ -212,6 +214,10 @@ namespace CHC.Utility
                         Manage_Campaign_Filter_ID_Text = pair.Value;
                     else if (pair.Key == "Home_Text_Homepage")
                         Home_Text_Homepage = pair.Value;
+                    else if (pair.Key == "Data_Inspection")
+                        Data_Inspection = pair.Value;
+                    else if (pair.Key == "Data_Inspection_Raw_Profiles")
+                        Data_Inspection_Raw_Profiles = pair.Value;
                 }
                 #endregion[Profiles] 
 

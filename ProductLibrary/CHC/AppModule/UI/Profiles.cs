@@ -43,6 +43,20 @@ namespace CHC.AppModule.UI
             ElementClick(PageObject_Profiles.Btn_Filter());
             Logger.WriteDebugMessage("Filter popup displayed with Clear and Choose buttons");
         }
+        
+        public static void Clickon_Data_Inspection()
+        {
+            WaitTillBrowserLoad();
+            ElementClick(PageObject_Profiles.Lnk_Data_Inspection());
+            Logger.WriteDebugMessage("User clicked on Data inspection drop down link");
+        }
+
+        public static void Clickon_Data_Inspection_Raw_Profiles()
+        {
+            WaitTillBrowserLoad();
+            ElementClick(PageObject_Profiles.Lnk_Data_Inspection_Raw_Profiles());
+            Logger.WriteDebugMessage("User clicked on Raw Profile from Data inspection drop down link");
+        }
 
         public static void ClickonSortbutton()
         {

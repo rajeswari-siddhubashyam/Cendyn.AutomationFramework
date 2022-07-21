@@ -44,7 +44,8 @@
 		  <Parameter key="Reservationrecordontable">//table[@class='e-table']//td[contains(@aria-label,'Reservation Id')]/a</Parameter>
 		  <Parameter key="Applauncher">//button[@id='app_launcher']</Parameter>
 		  <Parameter key="Applauncher_Applications">//div[@class='row application-cards']//span</Parameter>
-		  <Parameter key="Clickonfistrecord">//table[@class='e-table']//td[1]/a</Parameter>
+		  //<Parameter key="Clickonfistrecord">//table[@class='e-table']//td[1]/a</Parameter>
+		  <Parameter key="Clickonfirstrecord">(//table[@class='e-table']//td[1])[1]</Parameter>
 		  <Parameter key="Clickonfistrecordsecondontable">(//table[@class='e-table']//td[1]/a)[2]</Parameter>
 		  <Parameter key="Verifyviewreservationrecord">//div[contains(text(),'Reservation ID')]//following::div[1]</Parameter>
 		  <Parameter key="ContactDetails">//span[contains(text(),' Contact ')]</Parameter>
@@ -62,10 +63,13 @@
 		  <Parameter key="Manage_Campaign_Filter_Status_DropDown_Options">//div[contains(@class,'e-popup-open')]/descendant::li</Parameter>
 		  <Parameter key="Manage_Campaign_Filter_UpdatedOn_Input">//small[contains(text(),'Updated On')]/parent::*/following::input[@placeholder='Select a date']</Parameter>
 		  <Parameter key="Manage_Campaign_Filter_ID_Text">//small[contains(text(),'ID')]</Parameter>
+		  <Parameter key="Data_Inspection">//span[contains(text(),'Data Inspection')]</Parameter>
+		  <Parameter key="Data_Inspection_Raw_Profiles">//span[contains(text(),'Raw Profiles')]</Parameter>
 	  </Profiles>  
 
 	  <Reservations>
-		  
+		  //span[contains(text(),'Raw Profiles')]
+
 		  <Parameter key="ReservationID_Search">//input[contains(@id,'filter-searchbar')]</Parameter>
 	  </Reservations>
 

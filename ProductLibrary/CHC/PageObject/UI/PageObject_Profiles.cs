@@ -19,6 +19,22 @@ namespace CHC.PageObject.UI
             return PageAction.Find_ElementXPath(ObjectRepository.Filter_By_Email);
         }
 
+        public static IWebElement Lnk_Data_Inspection()
+        {
+            ScanPage(Constants.Profiles);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.Data_Inspection);
+        }
+
+        public static IWebElement Lnk_Data_Inspection_Raw_Profiles()
+        {
+            ScanPage(Constants.Profiles);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.Data_Inspection_Raw_Profiles);
+        }
+
         public static IWebElement Lnk_OrgSwitcher()
         {
             ScanPage(Constants.Profiles);
@@ -167,7 +183,7 @@ namespace CHC.PageObject.UI
             ScanPage(Constants.Profiles);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
-            return PageAction.Find_ElementXPath(ObjectRepository.Clickonfistrecord);
+            return PageAction.Find_ElementXPath(ObjectRepository.Clickonfirstrecord);
         }
 
         public static IWebElement Lnk_clickonProfilerecordSecond()
@@ -239,7 +255,7 @@ namespace CHC.PageObject.UI
             ScanPage(Constants.Profiles);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
-            return PageAction.Find_ElementXPath(ObjectRepository.Clickonfistrecord);
+            return PageAction.Find_ElementXPath(ObjectRepository.Clickonfirstrecord);
         }
 
         public static IWebElement Applauncherbutton()

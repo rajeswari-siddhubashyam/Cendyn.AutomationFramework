@@ -89,7 +89,7 @@ namespace CHC.Utility
         //#pragma warning disable CS0108 // Member hides inherited member; missing new keyword
         public static string CommonPassword = "Cendyn@123";
         public static string CommonPassword_Demo = "@Sc@A6Ffs#mrY#eX";
-        public static string CommonPassword_Test = "Cendyn4321$";
+        public static string CommonPassword_Test = "Cendyn123$";
         //#pragma warning restore CS0108 // Member hides inherited member; missing new keyword
         #endregion[CommonData]
     }
