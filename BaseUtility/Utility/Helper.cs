@@ -360,30 +360,30 @@ namespace BaseUtility.Utility
             return capturedValue;
         }
 
-        public static void ElementEnterTextold(IWebElement element, string text)
-        {
-            try
-            {
-                element.Clear();
-                AddDelay(2500);
-                element.SendKeys(text);
-                AddDelay(1500);
-                Logger.WriteInfoMessage("Inserted text in the " + CurrentElementName + " element on the " + CurrentPageName + " page.");
-            }
-            catch (Exception e)
-            {
-                Logger.WriteFatalMessage(e);
-                Logger.WriteFatalMessage("Unable to select text in the " + CurrentElementName + " element on the " + CurrentPageName + " page.");
-                throw;
-            }
-        }
+        //public static void ElementEnterTextold(IWebElement element, string text)
+        //{
+        //    try
+        //    {
+        //        element.Clear();
+        //        AddDelay(2500);
+        //        element.SendKeys(text);
+        //        AddDelay(1500);
+        //        Logger.WriteInfoMessage("Inserted text in the " + CurrentElementName + " element on the " + CurrentPageName + " page.");
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Logger.WriteFatalMessage(e);
+        //        Logger.WriteFatalMessage("Unable to select text in the " + CurrentElementName + " element on the " + CurrentPageName + " page.");
+        //        throw;
+        //    }
+        //}
 
         //We have implemented this new CTOS addition
         public static void ElementEnterText(IWebElement element, string text)
         {
             try
             {
-                CTOS.Input input = new CTOS.Input(Driver, element);
+                CTOS.Models.IInput input = new CTOS.Input(Driver, element);
                 input.EnterInput(text);
                 AddDelay(1500);
 
