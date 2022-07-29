@@ -1,8 +1,5 @@
 ﻿using System;
-
-
-
-
+using System.Configuration;
 
 namespace TestData
 {
@@ -24,7 +21,7 @@ namespace TestData
         {
             if (clientName == "MarketingAutoQA")
             {
-                TestDataHelper.AddTestData_ClientConfig(clientName, "", "", "https://qa.gocendyn.com/login", "", "", "");
+                TestDataHelper.AddTestData_ClientConfig(clientName, "", "", ConfigurationManager.AppSettings["BaseURL"], "", "", "");
             }
             else if (clientName == "MarketingAutoDEV")
             {
