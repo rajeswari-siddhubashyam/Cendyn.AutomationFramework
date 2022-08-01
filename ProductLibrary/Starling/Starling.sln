@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CHC", "CHC.csproj", "{06562F30-54BC-4468-A3E4-E771303AB57C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Starling", "Starling.csproj", "{06562F30-54BC-4468-A3E4-E771303AB57C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseUtility", "..\..\BaseUtility\BaseUtility.csproj", "{FE2A5F2F-FA49-4E1C-A89B-430DBB8822D3}"
 EndProject

@@ -226,7 +226,7 @@ namespace MarketingAutomation.Utility
 
         #region[CommonData]
         public static string FrontEndEmail = "AdminQA@cendyn17.com";
-        public static string CommonPassword = "Admin1234$";
+        public static string CommonPassword = "Admin12345$";
         public static string Username = "Admin QA";
         public static string FrontEndEmailDev = "gbhole@cendyn.com";
         public static string CommonPasswordDev = "Admin@20221414";
