@@ -195,8 +195,9 @@ namespace CHC.AppModule.UI
             }
             else if (propertyName.Equals("Source"))
             {
-                propertyName = "sourceName";
+                propertyName = "integrationType";
             }
+
             else if (propertyName.Equals("Property Id"))
             {
                 propertyName = "cendynPropertyID";
@@ -389,7 +390,7 @@ namespace CHC.AppModule.UI
 
         public static void VerifyTextOnPageAndHighLight(string text, string xpath)
         {
-            if (string.IsNullOrEmpty(text))
+            if (string.IsNullOrEmpty(text) ||  text.Equals("0"))
             {
                 text = "--";
             }
@@ -512,7 +513,22 @@ namespace CHC.AppModule.UI
                 VerifyElementOnPageAndHighLight(elementXpath);
 
             }
+        }
 
+        /// <summary>
+        /// This method will Check the list of profiles in the first page of the table.
+        /// </summary>
+        /// <param name="lst_ProfileDb"></param>
+        public static void Verify_Res_TableData(List<Profile_DB> lst_ProfileDb)
+        {
+            for (int i = 0; i < lst_ProfileDb.Count; i++)
+            {
+                Profile_DB profileDb = lst_ProfileDb[i];
+                string propertyAccountId = profileDb.PropertyAccountId;
+
+                VerifyTextOnPageAndHighLight(propertyAccountId, "//table[@class='e-table']//tr[" + (i + 1) + "]/td[1]");
+                Logger.WriteDebugMessage("User verify the ExternalReservation id is " + propertyAccountId + " ");
+            }
         }
 
         public static void VerifyDBValuesInProfilePage_ExternalMembershipid(Profile_DB profile)
@@ -532,7 +548,7 @@ namespace CHC.AppModule.UI
             VerifyTextOnPageAndHighLight(cmdata.CMData, GetFieldXpath("Value"));
             //VerifyTextOnPageAndHighLight(cmdata.CMOptOut, GetFieldXpath("Opt Out"));
             VerifyDBValuesIncontacrdetails1("Opt Out", cmdata.CMOptOut);
-            VerifyDBValuesIncontacrdetails1("Primary IP", cmdata.IsPrimary);
+            //VerifyDBValuesIncontacrdetails1("Primary IP", cmdata.IsPrimary);
 
             //VerifyTextOnPageAndHighLight(cmdata.IsPrimary, GetFieldXpath("Primary Email"));
 
@@ -550,13 +566,11 @@ namespace CHC.AppModule.UI
         {
             VerifyTextOnPageAndHighLight(reservation.ExternalResID1.ToString(), GetFieldXpath("Reservation ID"));          
             VerifyTextOnPageAndHighLight(reservation.ConfirmationNum, GetFieldXpath(" Confirmation Number "));
-            Logger.WriteDebugMessage("Personal Details fields should match with DB data as below - Reservation ID - Confirmation Number - Arrival - Departure - Nights - Adults - Children - Rooms - DateInserted - DateUpdated ");
+            Logger.WriteDebugMessage("Main Reservation Details fields should match with DB data as below - Reservation ID - Confirmation Number - Arrival - Departure - Nights - Adults - Children - Rooms - DateInserted - DateUpdated ");
         }
 
         public static void VerifyDBValuesInReservationsPage_MainResDetails_Room(Reservation_DB reservation)
-        {
-            
-
+        {           
             string db_ResArriveDate = reservation.ResArriveDate;
             string db_ResArriveDateFormat = DateTime.Parse(db_ResArriveDate).ToString("MMM dd, yyyy");
             VerifyTextOnPageAndHighLight(db_ResArriveDateFormat, GetFieldXpath_Table("Arrival"));
@@ -571,22 +585,32 @@ namespace CHC.AppModule.UI
             VerifyTextOnPageAndHighLight(reservation.NumRooms, GetFieldXpath_Table("Rooms"));
 
 
-            Logger.WriteDebugMessage("Personal Details fields should match with DB data as below - FirstName - Last name - Suffix - Job Title - Primary Language - Gender Code - Nationality - Date of Birth ");
+            Logger.WriteDebugMessage("Main Reservation Details fields should match with DB data as below - FirstName - Last name - Suffix - Job Title - Primary Language - Gender Code - Nationality - Date of Birth ");
         }
 
         public static void VerifyDBValuesInReservationsPage_GuestDetails(Reservation_DB reservation)
         {
-            VerifyTextOnPageAndHighLight(reservation.TotalRoomRevenue, GetFieldXpath("Total Room"));
+            //VerifyTextOnPageAndHighLight(reservation.ExternalProfileId1, GetFieldXpath("Total Room"));
+            VerifyTextOnPageAndHighLight(reservation.ExternalResID1.ToString(), GetFieldXpath_Table("Profile Id"));
             
-            Logger.WriteDebugMessage("Personal Details fields should match with DB data as below - FirstName - Last name - Suffix - Job Title - Primary Language - Gender Code - Nationality - Date of Birth ");
+
+            //if (!string.IsNullOrEmpty(reservation.FirstName) && string.IsNullOrEmpty(reservation.LastName))
+            //{
+            //    VerifyTextOnPageAndHighLight(reservation.FirstName, GetFieldXpath_Table("Full Name"));
+            //    VerifyTextOnPageAndHighLight(reservation.LastName, GetFieldXpath_Table("Full Name"));                
+            //}
+
+            //VerifyTextOnPageAndHighLight(reservation.IsPrimary, GetFieldXpath("Primary"));
+
+            Logger.WriteDebugMessage("Guest Details fields should match with DB data as below - FirstName - Last name - Suffix - Job Title - Primary Language - Gender Code - Nationality - Date of Birth ");
         }
 
         public static void VerifyDBValuesInReservationsPage_StayDetails(Reservation_DB reservation)
-        {
-           // VerifyTextOnPageAndHighLight(reservation.StayDate, GetFieldXpath_Table("Stay Date"));
+        {           
             string db_StayDate = reservation.StayDate;
             string db_StayDateFormat = DateTime.Parse(db_StayDate).ToString("MMM dd, yyyy");
             VerifyTextOnPageAndHighLight(db_StayDateFormat, GetFieldXpath_Table("Stay Date"));
+
             VerifyTextOnPageAndHighLight(reservation.SourceRoomType, GetFieldXpath_Table("Room Type"));
             VerifyTextOnPageAndHighLight(reservation.SourceRateType, GetFieldXpath_Table("Rate Type"));
             VerifyTextOnPageAndHighLight(reservation.CurrencyCode, GetFieldXpath_Table("Currency"));
@@ -594,30 +618,33 @@ namespace CHC.AppModule.UI
             string db_DailyRate = reservation.DailyRate;
             string db_DailyRateFormat = Convert.ToInt32(Convert.ToDouble(db_DailyRate)).ToString();
             VerifyTextOnPageAndHighLight(db_DailyRateFormat, GetFieldXpath_Table("Daily Rate"));
-            VerifyTextOnPageAndHighLight(reservation.MarketCode, GetFieldXpath_Table("Market Segment"));
-            //VerifyTextOnPageAndHighLight(reservation.ResSourceCode, GetFieldXpath_Table("Source Of Business"));
+
+            VerifyTextOnPageAndHighLight(reservation.MarketSegmentCode, GetFieldXpath_Table("Market Segment"));
+            VerifyTextOnPageAndHighLight(reservation.ResSourceCode, GetFieldXpath_Table("Source Of Business"));
+            VerifyTextOnPageAndHighLight(reservation.ChannelCode, GetFieldXpath_Table("Channel Code"));            
+           
             string db_DateInserted = reservation.DateInserted;
-            string db_DateInsertedFormat = DateTime.Parse(db_DateInserted).ToString("MMM dd, yyyy hh:mm:ss tt");
+            string db_DateInsertedFormat = DateTime.Parse(db_DateInserted).ToString("MMM dd, yyyy");
             VerifyTextOnPageAndHighLight(db_DateInsertedFormat, GetFieldXpath_Table("Inserted"));
 
             string db_DateUpdated = reservation.DateUpdated;
-            string db_DateUpdatedFormat = DateTime.Parse(db_DateUpdated).ToString("MMM dd, yyyy hh:mm:ss tt");
+            string db_DateUpdatedFormat = DateTime.Parse(db_DateUpdated).ToString("MMM dd, yyyy");
             VerifyTextOnPageAndHighLight(db_DateUpdatedFormat, GetFieldXpath_Table("Last Updated"));
-            Logger.WriteDebugMessage("Personal Details fields should match with DB data as below - Stay Date - SourceRoomType - SourceRateType - CurrenyCode - DailyRate - MarketCode - ResSourceCode ");
+            Logger.WriteDebugMessage("Stay Details fields should match with DB data as below - Stay Date - SourceRoomType - SourceRateType - CurrenyCode - DailyRate - MarketCode - ResSourceCode ");
         }
 
         public static void VerifyDBValuesInReservationsPage_TransactionDetails(Profile_DB profile)
         {
             VerifyTextOnPageAndHighLight(profile.Salutation, GetFieldXpath("Salutation"));
             
-            Logger.WriteDebugMessage("Personal Details fields should match with DB data as below - FirstName - Last name - Suffix - Job Title - Primary Language - Gender Code - Nationality - Date of Birth ");
+            Logger.WriteDebugMessage("Transaction Details fields should match with DB data as below - FirstName - Last name - Suffix - Job Title - Primary Language - Gender Code - Nationality - Date of Birth ");
         }
 
         public static void VerifyDBValuesInReservationsPage_PackageDetails(Profile_DB profile)
         {
             VerifyTextOnPageAndHighLight(profile.Salutation, GetFieldXpath("Salutation"));
             
-            Logger.WriteDebugMessage("Personal Details fields should match with DB data as below - FirstName - Last name - Suffix - Job Title - Primary Language - Gender Code - Nationality - Date of Birth ");
+            Logger.WriteDebugMessage("Package Details fields should match with DB data as below - FirstName - Last name - Suffix - Job Title - Primary Language - Gender Code - Nationality - Date of Birth ");
         }
 
         public static void VerifyDBValuesInReservationsPage_RevenueDetails(Reservation_DB reservation)
@@ -641,8 +668,8 @@ namespace CHC.AppModule.UI
             VerifyTextOnPageAndHighLight(reservation.DiscountPercent, GetFieldXpath(" Discount Percent "));
             VerifyTextOnPageAndHighLight(reservation.DiscountReasonCode, GetFieldXpath(" Discount Reason Code "));
             //VerifyTextOnPageAndHighLight(reservation.IsNotRefundable, GetFieldXpath("Salutation"));
-            VerifyTextOnPageAndHighLight(reservation.ApplyTax, GetFieldXpath(" Apply Tax "));
-            Logger.WriteDebugMessage("Personal Details fields should match with DB data as below - GuaranteedByCode - MethodOfPayment - RateConfidential - DiscountCode - DiscountAmount - DiscountPercent - DiscountReasonCode - ApplyTax ");
+            //VerifyTextOnPageAndHighLight(reservation.ApplyTax, GetFieldXpath(" Apply Tax "));
+            Logger.WriteDebugMessage("Policies Details fields should match with DB data as below - GuaranteedByCode - MethodOfPayment - RateConfidential - DiscountCode - DiscountAmount - DiscountPercent - DiscountReasonCode - ApplyTax ");
         }        
         /// <summary>
         /// 
@@ -654,7 +681,7 @@ namespace CHC.AppModule.UI
             VerifyTextOnPageAndHighLight(reservation.CompanyName, GetFieldXpath(" Company Name "));
             VerifyTextOnPageAndHighLight(reservation.TravelAgentCode, GetFieldXpath(" Travel Agent Code "));
             VerifyTextOnPageAndHighLight(reservation.TravelAgentName, GetFieldXpath(" Travel Agent Name "));
-            Logger.WriteDebugMessage("Personal Details fields should match with DB data as below - CompanyCode - CompanyName - TravelAgentCode - TravelAgentName ");
+            Logger.WriteDebugMessage("AssociatedProfile Details fields should match with DB data as below - CompanyCode - CompanyName - TravelAgentCode - TravelAgentName ");
         }
 
         /// <summary>

@@ -39,6 +39,9 @@ namespace CHC.AppModule.MainAdminApp
                 case "TC_339271":
                     TC_339271();
                     break;
+                case "TC_326065":
+                    TC_326065();
+                    break;
             }
         }
 

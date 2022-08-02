@@ -60,6 +60,31 @@ namespace CHC.TestPlan.Profile
 
         /*  */
         [Test, Category("Smoke - QA")]
+        public static void TC_326065()
+        {
+            try
+            {
+
+                /**Test execution - Start**/
+                SetupTestCase(Constants.TC_326065, "Excel", CHC.Utility.Constants.clientEnv.CHCAutoQA, Enums.TestDataType.FrontEnd, Enums.CaseType.TestCase);
+
+                Logger.DeleteOldFolder();
+
+                //Start
+                MainAdminApp.TP_339264();
+
+                /**Test execution - End**/
+                TestHandling.TestEnd();
+            }
+            catch (Exception e)
+            {
+                TestHandling.TestFailed(e);
+                throw;
+            }
+        }
+
+        /*  */
+        [Test, Category("Smoke - QA")]
         public static void TC_339267()
         {
             try

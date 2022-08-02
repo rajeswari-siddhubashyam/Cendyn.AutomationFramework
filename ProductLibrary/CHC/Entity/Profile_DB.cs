@@ -9,6 +9,7 @@ namespace CHC.Entity
     public class Profile_DB
     {
         public string ExternalProfileId1 { set; get; }
+        public string ExternalResID1 { set; get; }
         public string CMData { set; get; }
         public string CMOptOut { set; get; }
         public string IsPrimary { set; get; }
@@ -32,16 +33,17 @@ namespace CHC.Entity
         public string StateProvince { set; get; }
         public string PostalCode { set; get; }
         public string CountryCode { set; get; }
-        //public string IsPrimary { set; get; }
+        public string MarketSegmentCode { set; get; }
         public string AddressLanguage { set; get; }
         public string CustomerMembershipID { set; get; }
         public string VIPID { set; get; }
         public string VIPCode { set; get; }
         public string Reservationid { set; get; }
-        
+        public string PropertyAccountId { set; get; }
+
         public Dictionary<string, int> AttributeNames_Values { set; get; }
     }    
-} 
+}
 
 
 

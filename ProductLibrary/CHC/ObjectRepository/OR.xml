@@ -41,10 +41,11 @@
 		  <Parameter key="View_Profilerecordon_Viewpage">//div[contains(text(),'External Profile ID')]//following::span[1]</Parameter>
 		  <Parameter key="Reservations_Tab">//a[@data-toggle='tab']//span[contains(text(),'Reservations')]</Parameter>
 		  <Parameter key="Verifyreservationdetail">//input[contains(@id,'filter-searchbar')]</Parameter>
-		  <Parameter key="Reservationrecordontable">//table[@class='e-table']//td[contains(@aria-label,'Reservation Id')]/a</Parameter>
+		  <!--<Parameter key="Reservationrecordontable">//table[@class='e-table']//td[contains(@aria-label,'Reservation Id')]/a</Parameter>-->
+		  <Parameter key="Reservationrecordontable">//table[@class='e-table']//td[contains(@aria-label,'Confirmation No')]</Parameter>
 		  <Parameter key="Applauncher">//button[@id='app_launcher']</Parameter>
 		  <Parameter key="Applauncher_Applications">//div[@class='row application-cards']//span</Parameter>
-		  //<Parameter key="Clickonfistrecord">//table[@class='e-table']//td[1]/a</Parameter>
+		  <Parameter key="Clickonfistrecord">//table[@class='e-table']//td[1]/a</Parameter>
 		  <Parameter key="Clickonfirstrecord">(//table[@class='e-table']//td[1])[1]</Parameter>
 		  <Parameter key="Clickonfistrecordsecondontable">(//table[@class='e-table']//td[1]/a)[2]</Parameter>
 		  <Parameter key="Verifyviewreservationrecord">//div[contains(text(),'Reservation ID')]//following::div[1]</Parameter>
@@ -52,11 +53,12 @@
 		  <Parameter key="Home_Button">//button[contains(@id,'home_btn')]</Parameter>
 		  <Parameter key="HelpMouseOver">//*[@class='base-icon help-circle']</Parameter>
 		  <Parameter key="Help_Link">//a[contains(text(),' Help ')]</Parameter>
-		  <Parameter key="Help_ScheduleMeeting">//a[contains(text(),'Schedule a demo')]</Parameter>
+		  <!--<Parameter key="Help_ScheduleMeeting">//a[contains(text(),'Schedule a demo')]</Parameter>-->
+		  <Parameter key="Help_ScheduleMeeting">(//a[contains(text(),'Schedule a demo')])[1]</Parameter>
 		  <Parameter key="Org_Swithcer_Top_Nav">//span[@class='org_switcher--name']</Parameter>
 		  <Parameter key="Org_Swithcer_Select">//button[contains(text(),' Select ')]</Parameter>
 		  <Parameter key="Home_Text_Homepage">//h1[contains(text(),' Home ')]</Parameter>
-
+		  
 		  <Parameter key="Manage_Campaign_Filter_DropDown_FilterOptions">//div[@class='e-ddl e-popup e-lib e-control e-popup-open']/descendant::li</Parameter>
 		  <Parameter key="Manage_Campaign_Filter_Status_DropDown_Arrow">//*[contains(text(),'Status')]/parent::*/following::input[@placeholder='Select a value']/following::span[contains(@class,'icon')]</Parameter>
 		  <Parameter key="Manage_Campaign_Filter_Status_DropDown_Input">//div[@class='e-ddl e-popup e-multi-select-list-wrapper e-checkbox e-lib e-control e-popup-open']/descendant::input</Parameter>
@@ -65,10 +67,9 @@
 		  <Parameter key="Manage_Campaign_Filter_ID_Text">//small[contains(text(),'ID')]</Parameter>
 		  <Parameter key="Data_Inspection">//span[contains(text(),'Data Inspection')]</Parameter>
 		  <Parameter key="Data_Inspection_Raw_Profiles">//span[contains(text(),'Raw Profiles')]</Parameter>
-	  </Profiles>  
-
-	  <Reservations>
-		  //span[contains(text(),'Raw Profiles')]
+	  </Profiles>
+	  
+	  <Reservations>		  
 
 		  <Parameter key="ReservationID_Search">//input[contains(@id,'filter-searchbar')]</Parameter>
 	  </Reservations>

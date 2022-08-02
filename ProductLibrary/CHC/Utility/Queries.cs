@@ -92,7 +92,7 @@ namespace CHC.Utility
             //clear the old items from the list
             //data.clientCards.Clear();           
            
-            query = "select top 1* from profile where PropertyAccountId = 40 and ExternalProfileId1 = '" + externalprofileid + "' ";
+            query = "select top 1* from profile where PropertyAccountId = 5 and ExternalProfileId1 = '" + externalprofileid + "' ";
 
             using (SqlConnection connection = DBHelper.SqlConn())
             {
@@ -117,11 +117,38 @@ namespace CHC.Utility
             }
         }
 
+        public static void GetProfiles1(Profile_DB profile)
+        {
+            //clear the old items from the list
+            //data.clientCards.Clear();           
+
+            query = "select top 1* from profile p join Address a on p.profileid = a.ProfileId where ExternalProfileId1 = 'GB150722' ";
+
+            using (SqlConnection connection = DBHelper.SqlConn())
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.CommandTimeout = 60;
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            profile.ExternalProfileId1 = reader["ExternalProfileId1"].ToString();
+                            profile.ProfileId = reader["ProfileId"].ToString();                            
+                        }
+                    }
+                }
+                connection.Close();
+            }
+        }
+
         public static void GetPersonalDetails(Profile_DB profile, string profileid)
                 {
                     //clear the old items from the list
                     //data.clientCards.Clear();
-                    query = "select top 1* from profile where PropertyAccountId = 40 and ExternalProfileId1 = '" + profileid + "'";
+                    query = "select top 1* from profile where ExternalProfileId1 = '" + profileid + "'";
 
                     using (SqlConnection connection = DBHelper.SqlConn())
                     {
@@ -266,7 +293,7 @@ namespace CHC.Utility
         {
             //clear the old items from the list
             //data.clientCards.Clear();
-            query = "select top 1 * from contactmethod c join profile p on c.profileid = p.profileid order by c.DateInserted desc ";
+            query = " select * from profile p join ContactMethod c on p.profileid = c.ProfileId where c.ContactMethodId = '2988' and p.ProfileId = '5244' ";
 
             using (SqlConnection connection = DBHelper.SqlConn())
             {
@@ -284,6 +311,32 @@ namespace CHC.Utility
                             profile.IsPrimary = reader["IsPrimary"].ToString();
                             profile.DateInserted = reader["DateInserted"].ToString();
                             profile.DateUpdated = reader["DateUpdated"].ToString();
+                        }
+                    }
+                }
+                connection.Close();
+            }
+        }
+
+        public static void Get_Profile(Profile_DB profile)
+        {
+            //clear the old items from the list
+            //data.clientCards.Clear();
+            query = " select * from profile where ExternalProfileId1 = 'GB150722' ";
+
+            using (SqlConnection connection = DBHelper.SqlConn())
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.CommandTimeout = 60;
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            profile.ExternalProfileId1 = reader["ExternalProfileId1"].ToString();
+                            profile.ProfileId = reader["ProfileId"].ToString();
                         }
                     }
                 }
@@ -357,11 +410,11 @@ namespace CHC.Utility
             }
         }
 
-        public static void GetGuestsDetails(Profile_DB profile, string profileid)
+        public static void GetGuestsDetails(Profile_DB profile, Reservation_DB reservation)
         {
             //clear the old items from the list
             //data.clientCards.Clear();
-            query = "select top 1* from profile where PropertyAccountId = 40 and ExternalProfileId1 = '" + profileid + "'";
+            query = "select * from Guest g join reservation r on r.ReservationId = g.ReservationId join profile p on p.ProfileId = g.ProfileId where ExternalResID1= '" + reservation.ExternalResID1 + "'  ";
 
             using (SqlConnection connection = DBHelper.SqlConn())
             {
@@ -374,13 +427,13 @@ namespace CHC.Utility
                     {
                         while (reader.Read())
                         {
-                            profile.FamiliarName = reader["Profile ID"].ToString();
+                            profile.ExternalResID1 = reader["ExternalResID1"].ToString();
                             profile.FirstName = reader["FirstName"].ToString();
                             profile.LastName = reader["LastName"].ToString();
-                            profile.Salutation = reader["Email"].ToString();
-                            profile.MiddleName = reader["Phone"].ToString();
-                            profile.Suffix = reader["Country"].ToString();                            
-                            profile.Nationality = reader["Is Promary"].ToString();
+                            //profile.Email = reader["Email"].ToString();
+                            //profile.Phone = reader["Phone"].ToString();
+                            //profile.Suffix = reader["Country"].ToString();                            
+                            //profile.Nationality = reader["Is Primary"].ToString();
                             profile.DateInserted = reader["DateInserted"].ToString();
                             profile.DateUpdated = reader["DateUpdated"].ToString();
                         }
@@ -394,7 +447,7 @@ namespace CHC.Utility
         {
             //clear the old items from the list
             //data.clientCards.Clear();
-            query = "select * from Reservation r join StayDetail d on d.ReservationId = r.ReservationId where ExternalResID1 =  '" + reservation.ExternalResID1 + "' ";
+            query = "select r.ExternalResID1,r.ReservationId,StayDate,d.SourceRoomType,d.SourceRateType,r.CurrencyCode,DailyRate,MarketSegmentCode,d.ResSourceCode,SDH.ChannelCode,r.DateInserted,r.DateUpdated from Reservation r join StayDetail d on d.ReservationId = r.ReservationId join StayDetailHeader SDH on SDH.ReservationId = r.ReservationId where ExternalResID1 =  '" + reservation.ExternalResID1 + "' ";
 
             using (SqlConnection connection = DBHelper.SqlConn())
             {
@@ -412,8 +465,9 @@ namespace CHC.Utility
                             reservation.SourceRateType = reader["SourceRateType"].ToString();
                             reservation.CurrencyCode = reader["CurrencyCode"].ToString();
                             reservation.DailyRate = reader["DailyRate"].ToString();
-                            reservation.MarketCode = reader["MarketCode"].ToString();
+                            reservation.MarketSegmentCode = reader["MarketSegmentCode"].ToString();
                             reservation.ResSourceCode = reader["ResSourceCode"].ToString();
+                            reservation.ChannelCode = reader["ChannelCode"].ToString();
                             reservation.DateInserted = reader["DateInserted"].ToString();
                             reservation.DateUpdated = reader["DateUpdated"].ToString();
                         }
@@ -539,8 +593,8 @@ namespace CHC.Utility
                             reservation.DiscountAmount = reader["DiscountAmount"].ToString();
                             reservation.DiscountPercent = reader["DiscountPercent"].ToString();
                             reservation.DiscountReasonCode = reader["DiscountReasonCode"].ToString();
-                            //reservation.IsNotRefundable = reader["IsNotRefundable"].ToString();
-                            reservation.ApplyTax = reader["ApplyTax"].ToString();                            
+                            reservation.IsNotRefundable = reader["IsNotRefundable"].ToString();
+                            //reservation.ApplyTax = reader["ApplyTax"].ToString();                            
                         }
                     }
                 }
@@ -574,7 +628,36 @@ namespace CHC.Utility
                 }
                 connection.Close();
             }
-        }        
+        }
+
+        public static void GetListfrom_Reservationtable(List<Profile_DB> lst_ProfileDb)
+        {
+            //clear the old items from the list
+            //data.clientCards.Clear();           
+
+            query = " select top 10 * from Reservation r join Guest g on g.ReservationId = r.ReservationId join Profile p on g.ProfileId = p.ProfileId where r.ExternalResID1 = '374784465' order by p.profileid desc ";
+            //List<Profile_DB> lst = new List<Profile_DB>();
+
+            using (SqlConnection connection = DBHelper.SqlConn())
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.CommandTimeout = 60;
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Profile_DB profile = new Profile_DB();
+                            profile.PropertyAccountId = reader["PropertyAccountId"].ToString();
+                            lst_ProfileDb.Add(profile);
+                        }
+                    }
+                }
+                connection.Close();
+            }
+        }
     }
 }
 

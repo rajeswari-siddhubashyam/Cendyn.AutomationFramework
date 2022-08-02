@@ -28,6 +28,7 @@ namespace CHC.Entity
         public string CurrencyCode { set; get; }
         public string DailyRate { set; get; }
         public string MarketCode { set; get; }
+        public string MarketSegmentCode { set; get; }
         public string ResSourceCode { set; get; }
         public string ChannelCode { set; get; }
         public string DateInserted { set; get; }
@@ -45,5 +46,11 @@ namespace CHC.Entity
         public string CompanyName { set; get; }
         public string TravelAgentCode { set; get; }
         public string TravelAgentName { set; get; }
+        public string FirstName { set; get; }
+        public string LastName { set; get; }
+        public string IsPrimary { set; get; }
+        public string ExternalProfileId1 { set; get; }
+        public string ProfileId { set; get; }
+        public string PropertyAccountId { set; get; }
     }
 }

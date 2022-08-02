@@ -34,7 +34,7 @@ namespace CHC.TestPlan.Profile
         }
 
         /*  */
-        [Test, Category("Smoke - QA")]
+        [Test, Category("Regression - QA")]
         public static void TC_314420()
         {
             try
@@ -58,7 +58,7 @@ namespace CHC.TestPlan.Profile
         }
 
         /*  */
-        [Test, Category("Smoke - QA")]
+        [Test, Category("Regression - QA")]
         public static void TC_314421()
         {
             try
@@ -82,7 +82,7 @@ namespace CHC.TestPlan.Profile
         }
 
         /*  */
-        [Test, Category("Smoke - QA")]
+        [Test, Category("Regression - QA")]
         public static void TC_314422()
         {
             try
@@ -106,7 +106,7 @@ namespace CHC.TestPlan.Profile
         }
 
         /*  */
-        [Test, Category("Smoke - QA")]
+        [Test, Category("Regression - QA")]
         public static void TC_314423()
         {
             try
@@ -130,7 +130,7 @@ namespace CHC.TestPlan.Profile
         }
 
         /*  */
-        [Test, Category("Smoke - QA")]
+        [Test, Category("Regression - QA")]
         public static void TC_314424()
         {
             try
@@ -154,7 +154,7 @@ namespace CHC.TestPlan.Profile
         }
 
         /*  */
-        [Test, Category("Smoke - QA")]
+        [Test, Category("Regression - QA")]
         public static void TC_314425()
         {
             try
@@ -178,7 +178,7 @@ namespace CHC.TestPlan.Profile
         }
 
         /*  */
-        [Test, Category("Smoke - QA")]
+        [Test, Category("Regression - QA")]
         public static void TC_314426()
         {
             try
@@ -202,7 +202,7 @@ namespace CHC.TestPlan.Profile
         }
 
         /*  */
-        [Test, Category("Smoke - QA")]
+        [Test, Category("Regression - QA")]
         public static void TC_314427()
         {
             try

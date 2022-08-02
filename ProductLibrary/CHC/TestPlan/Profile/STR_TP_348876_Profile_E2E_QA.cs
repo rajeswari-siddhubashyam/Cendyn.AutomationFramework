@@ -34,7 +34,7 @@ namespace CHC.TestPlan.Profile
         }
 
         /*  */
-        [Test, Category("End2End - QA")]
+        [Test, Category("Regression - QA")]
         public static void TC_348879()
         {
             try
@@ -58,7 +58,7 @@ namespace CHC.TestPlan.Profile
         }
 
         /*  */
-        [Test, Category("End2End - QA")]
+        [Test, Category("Regression - QA")]
         public static void TC_348890()
         {
             try
@@ -82,7 +82,7 @@ namespace CHC.TestPlan.Profile
         }
 
         /*  */
-        [Test, Category("End2End - QA")]
+        [Test, Category("Regression - QA")]
         public static void TC_348889()
         {
             try
@@ -106,7 +106,7 @@ namespace CHC.TestPlan.Profile
         }
 
         /*  */
-        [Test, Category("End2End - QA")]
+        [Test, Category("Regression - QA")]
         public static void TC_348888()
         {
             try
@@ -130,7 +130,7 @@ namespace CHC.TestPlan.Profile
         }
 
         /*  */
-        [Test, Category("End2End - QA")]
+        [Test, Category("Regression - QA")]
         public static void TC_348887()
         {
             try
@@ -154,7 +154,7 @@ namespace CHC.TestPlan.Profile
         }
 
         /*  */
-        [Test, Category("End2End - QA")]
+        [Test, Category("Regression - QA")]
         public static void TC_348886()
         {
             try
@@ -178,7 +178,7 @@ namespace CHC.TestPlan.Profile
         }
 
         /*  */
-        [Test, Category("End2End - QA")]
+        [Test, Category("Regression - QA")]
         public static void TC_348885()
         {
             try
@@ -202,7 +202,7 @@ namespace CHC.TestPlan.Profile
         }
 
         /*  */
-        [Test, Category("End2End - QA")]
+        [Test, Category("Smoke - QA")]
         public static void TC_348882()
         {
             try
@@ -226,7 +226,7 @@ namespace CHC.TestPlan.Profile
         }
 
         /*  */
-        [Test, Category("End2End - QA")]
+        [Test, Category("Regression - QA")]
         public static void TC_348881()
         {
             try
@@ -250,7 +250,7 @@ namespace CHC.TestPlan.Profile
         }
 
         /*  */
-        [Test, Category("End2End - QA")]
+        [Test, Category("Regression - QA")]
         public static void TC_348880()
         {
             try
@@ -274,7 +274,7 @@ namespace CHC.TestPlan.Profile
         }
 
         /*  */
-        [Test, Category("End2End - QA")]
+        [Test, Category("Regression - QA")]
         public static void TC_348878()
         {
             try
@@ -298,7 +298,7 @@ namespace CHC.TestPlan.Profile
         }
 
         /*  */
-        [Test, Category("End2End - QA")]
+        [Test, Category("Regression - QA")]
         public static void TC_311423()
         {
             try
