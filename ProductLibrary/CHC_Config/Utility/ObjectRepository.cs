@@ -83,8 +83,8 @@ namespace CHC_Config.Utility
         public static string ChainDashboard_Link_image { get; set; }
         public static string Dashboard_Brand_header { get; set; }
         public static string Dashboard_Brand_div { get; set; }
-        public static string Dashboard_Brandtable_Names { get; set; }
-        public static string Dashboard_Brandtable_Row { get; set; }
+        public static string Dashboard_Brandtable { get; set; }
+        public static string Dashboard_BrandLink { get; set; }
         public static string Dashboard_Brandtable_DateAdded { get; set; }
         public static string Dashboard_Prop_header { get; set; }
         public static string Dashboard_Prop_div { get; set; }
@@ -270,10 +270,10 @@ namespace CHC_Config.Utility
                         Dashboard_Brand_header = pair.Value;
                     else if (pair.Key == "Dashboard_Brand_div")
                         Dashboard_Brand_div = pair.Value;
-                    else if (pair.Key == "Dashboard_Brandtable_Names")
-                        Dashboard_Brandtable_Names = pair.Value;
-                    else if (pair.Key == "Dashboard_Brandtable_Row")
-                        Dashboard_Brandtable_Row = pair.Value;
+                    else if (pair.Key == "Dashboard_Brandtable")
+                        Dashboard_Brandtable = pair.Value;
+                    else if (pair.Key == "Dashboard_BrandLink")
+                        Dashboard_BrandLink = pair.Value;
                     else if (pair.Key == "Dashboard_Brandtable_DateAdded")
                         Dashboard_Brandtable_DateAdded = pair.Value;
                     else if (pair.Key == "Dashboard_Prop_header")

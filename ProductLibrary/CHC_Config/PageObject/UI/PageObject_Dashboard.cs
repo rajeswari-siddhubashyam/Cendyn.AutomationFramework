@@ -222,26 +222,26 @@ namespace CHC_Config.PageObject.UI
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath(ObjectRepository.Dashboard_Brand_div);
         }
-        public static IList<IWebElement> Dashboard_Brandtable_Row()
+      /*  public static IList<IWebElement> Dashboard_Brandtable_Row()
         {
             ScanPage(Constants.PropertyDashboard);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementsXPath(ObjectRepository.Dashboard_Brandtable_Row);
-        }
-        public static IWebElement Dashboard_Brandtable_Names(IWebElement element)
+        }*/
+        public static IWebElement Dashboard_Brandtable()
         {
             ScanPage(Constants.PropertyDashboard);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
-            return element.FindElement(By.XPath(ObjectRepository.Dashboard_Brandtable_Names));
+            return PageAction.Find_ElementXPath(ObjectRepository.Dashboard_Brandtable);
         }
-        public static IList<IWebElement> Dashboard_Brandtable_DateAdded(IWebElement element)
+        public static IList<IWebElement> Dashboard_BrandLink(IWebElement element)
         {
             ScanPage(Constants.PropertyDashboard);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
-            return element.FindElements(By.XPath(ObjectRepository.Dashboard_Brandtable_DateAdded));
+            return element.FindElements(By.TagName(ObjectRepository.Dashboard_BrandLink));
         }
         
         public static IWebElement Dashboard_loading(IWebElement element)

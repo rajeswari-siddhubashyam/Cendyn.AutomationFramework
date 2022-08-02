@@ -106,6 +106,9 @@ namespace CHC_Config.AppModule.UI
             IList<IWebElement> Filter_Options = PageObject_OrgIndex.Filter_Options();
             foreach(IWebElement i in Filter_Options)
             {
+                Logger.WriteDebugMessage("i.Text " + i.Text);
+                string text = i.Text;
+                
                 if (i.Text.Contains("Property"))
                 {
                     if(i.Text.Contains("Property ID")!=true)
