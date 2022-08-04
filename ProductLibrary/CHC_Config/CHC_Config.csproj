@@ -84,6 +84,7 @@
     <Compile Include="TestPlan\Org_Dashboard\CHC_TP_349772_BrandDashboard.cs" />
     <Compile Include="TestPlan\Org_Dashboard\CHC_TP_349775_PropertyDashboard.cs" />
     <Compile Include="TestPlan\Org_Index\CHC_TP_323199_OrgIndex.cs" />
+    <Compile Include="TestPlan\User_Management\CHC_TP_422702_Users_SmokeTest.cs" />
     <Compile Include="Utility\Constants.cs" />
     <Compile Include="Utility\ObjectRepository.cs" />
     <Compile Include="Utility\Queries.cs" />
