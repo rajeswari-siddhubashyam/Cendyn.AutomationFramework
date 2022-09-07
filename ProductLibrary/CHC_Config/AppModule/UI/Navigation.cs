@@ -3,6 +3,7 @@ using InfoMessageLogger;
 using CHC_Config.PageObject.UI;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using System.Threading;
 
 namespace CHC_Config.AppModule.UI
 {
@@ -10,13 +11,16 @@ namespace CHC_Config.AppModule.UI
     {
         public static void Click_Configurations_App()
         {
+            Thread.Sleep(9000);
             Logger.WriteDebugMessage("Home tab");
-            Helper.WaitTillBrowserLoad();
-            //WaittillElementDisplay(PageObject_Navigation.Configuration_App());
-            ElementWait(PageObject_Navigation.Configuration_App(), 40);
-            AddDelay(2000);
+            //Thread.Sleep(5000);
+            //Helper.WaitTillBrowserLoad();            
+            //ElementWait(PageObject_Navigation.Configuration_App(), 40);
+            //AddDelay(5000);
             Helper.ElementClick(PageObject_Navigation.Configuration_App());
             Helper.WaitTillBrowserLoad();
+            Thread.Sleep(9000);
+            Logger.WriteDebugMessage("User Clicked on Configuration App & Navigates to Org Index page");
         }
         public static void VerifyPopup()
         {

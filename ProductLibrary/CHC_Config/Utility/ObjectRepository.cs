@@ -118,6 +118,61 @@ namespace CHC_Config.Utility
         public static string input_property { get; set; }
 
         #endregion[Create]
+
+        #region[CreateUser]
+        public static string User_Tab_Leftnav { get; set; }
+        public static string User_Create_User_Button { get; set; }
+        public static string User_Popup_Proceed { get; set; }
+        public static string User_Popup_Cancel { get; set; }
+        public static string User_Popup_Enter_Email { get; set; }
+        public static string User_Popup_Enter_Email_Error { get; set; }
+        public static string User_Create_User_FirstName { get; set; }
+        public static string User_Create_User_LastName { get; set; }
+        public static string User_Create_User_Email { get; set; }
+        public static string User_Create_User_JobTitle { get; set; }
+        public static string User_Create_User_FirstName_ErrorMsg { get; set; }
+        public static string User_Create_User_LastName_ErrorMsg { get; set; }
+        public static string User_Create_User_Continue_Button { get; set; }
+        public static string User_Create_User_AssignOrg { get; set; }
+        public static string Org_Accounts { get; set; }
+        public static string Org_ExpandableIcon { get; set; }
+        public static string User_Create_User_Select_All { get; set; }
+        public static string User_CreateUser_AssignApp { get; set; }
+        public static string User_Create_User_AssignRoles { get; set; }
+        public static string User_Create_User_Roles_Starling_Readonly { get; set; }
+        public static string User_Index { get; set; }
+        public static string User_Create_Search { get; set; }
+        public static string User_Create_Clickon_Searchicon { get; set; }
+        public static string Profileidfield_ContainsFilter { get; set; }
+        public static string Table_Allcolumns { get; set; }
+        public static string Sort_Button { get; set; }
+        public static string Clickonfirstrecord { get; set; }
+        public static string User_Dashboard_Chain_tab { get; set; }
+        public static string User_Dashboard_Brand_tab { get; set; }
+        public static string User_Dashboard_Applications_Roles_tab { get; set; }
+        public static string User_Dashboard_History_tab { get; set; }
+        public static string CreateUser_Sort { get; set; }
+        public static string CreateUser_Dashboard_propertytab { get; set; }
+        public static string Verify_ChainId { get; set; }
+        public static string Verify_BrandId { get; set; }
+        public static string Verify_Application_Roles { get; set; }
+        public static string CreateUser_History_Tab { get; set; }
+
+        public static string Verify_History_ProfileCreated { get; set; }
+        public static string Verify_History_ProfileUpdated { get; set; }
+        public static string UserIndex_Moredetails { get; set; }
+        public static string UserIndex_Moredetails_Edit { get; set; }
+        public static string Edit_User { get; set; }
+        public static string Edit_User_Access_Roles { get; set; }
+        public static string UserDashboard_EditUser { get; set; }
+        public static string User_Create_User_AssignOrg12 { get; set; }
+        public static string EditUser_Back { get; set; }
+        public static string EditUser_Cancel { get; set; }
+        public static string UserIndex_Sort_Applybutton { get; set; }
+        public static string UserIndex_Filter_Applybutton { get; set; }
+
+        #endregion[CreateUser] 
+
         public static ObjectRepository ReadElement(string location, string nodeModule)
         {
 
@@ -333,9 +388,116 @@ namespace CHC_Config.Utility
                         input_property = pair.Value;
                 }
                 #endregion[Create]
+
+                #region[CreateUser]
+                if (nodeModule == Constants.CreateUser)
+                {
+                    if (pair.Key == "User_Tab_Leftnav")
+                        User_Tab_Leftnav = pair.Value;
+                    else if (pair.Key == "User_Create_User_Button")
+                        User_Create_User_Button = pair.Value;
+                    else if (pair.Key == "User_Popup_Proceed")
+                        User_Popup_Proceed = pair.Value;
+                    else if (pair.Key == "User_Popup_Cancel")
+                        User_Popup_Cancel = pair.Value;
+                    else if (pair.Key == "User_Popup_Enter_Email")
+                        User_Popup_Enter_Email = pair.Value;
+                    else if (pair.Key == "User_Popup_Enter_Email_Error")
+                        User_Popup_Enter_Email_Error = pair.Value;
+                    else if (pair.Key == "User_Create_User_FirstName")
+                        User_Create_User_FirstName = pair.Value;
+                    else if (pair.Key == "User_Create_User_LastName")
+                        User_Create_User_LastName = pair.Value;
+                    else if (pair.Key == "User_Create_User_Email")
+                        User_Create_User_Email = pair.Value;
+                    else if (pair.Key == "User_Create_User_JobTitle")
+                        User_Create_User_JobTitle = pair.Value;
+                    else if (pair.Key == "User_Create_User_FirstName_ErrorMsg")
+                        User_Create_User_FirstName_ErrorMsg = pair.Value;
+                    else if (pair.Key == "User_Create_User_LastName_ErrorMsg")
+                        User_Create_User_LastName_ErrorMsg = pair.Value;
+                    else if (pair.Key == "User_Create_User_Continue_Button")
+                        User_Create_User_Continue_Button = pair.Value;
+                    else if (pair.Key == "User_Create_User_AssignOrg")
+                        User_Create_User_AssignOrg = pair.Value;
+                    else if (pair.Key == "User_Create_User_Select_All")
+                        User_Create_User_Select_All = pair.Value;
+                    else if (pair.Key == "User_CreateUser_AssignApp")
+                        User_CreateUser_AssignApp = pair.Value;
+                    else if (pair.Key == "User_Create_User_AssignRoles")
+                        User_Create_User_AssignRoles = pair.Value;
+                    else if (pair.Key == "Org_Accounts")
+                        Org_Accounts = pair.Value;
+                    else if (pair.Key == "Org_ExpandableIcon")
+                        Org_ExpandableIcon = pair.Value;
+                    else if (pair.Key == "User_Create_User_Roles_Starling_Readonly")
+                        User_Create_User_Roles_Starling_Readonly = pair.Value;
+                    else if (pair.Key == "User_Index")
+                        User_Index = pair.Value;
+                    else if (pair.Key == "User_Create_Search")
+                        User_Create_Search = pair.Value;
+                    else if (pair.Key == "User_Create_Clickon_Searchicon")
+                        User_Create_Clickon_Searchicon = pair.Value;
+                    else if (pair.Key == "Profileidfield_ContainsFilter")
+                        Profileidfield_ContainsFilter = pair.Value;
+                    else if (pair.Key == "Table_Allcolumns")
+                        Table_Allcolumns = pair.Value;
+                    else if (pair.Key == "Sort_Button")
+                        Sort_Button = pair.Value;
+                    else if (pair.Key == "Clickonfirstrecord")
+                        Clickonfirstrecord = pair.Value;
+                    else if (pair.Key == "User_Dashboard_Chain_tab")
+                        User_Dashboard_Chain_tab = pair.Value;
+                    else if (pair.Key == "User_Dashboard_Brand_tab")
+                        User_Dashboard_Brand_tab = pair.Value;
+                    else if (pair.Key == "User_Dashboard_Applications_Roles_tab")
+                        User_Dashboard_Applications_Roles_tab = pair.Value;
+                    else if (pair.Key == "User_Dashboard_History_tab")
+                        User_Dashboard_History_tab = pair.Value;
+                    else if (pair.Key == "CreateUser_Sort")
+                        CreateUser_Sort = pair.Value;
+                    else if (pair.Key == "CreateUser_Dashboard_propertytab")
+                        CreateUser_Dashboard_propertytab = pair.Value;
+                    else if (pair.Key == "Verify_ChainId")
+                        Verify_ChainId = pair.Value;
+                    else if (pair.Key == "Verify_BrandId")
+                        Verify_BrandId = pair.Value;
+                    else if (pair.Key == "Verify_Application_Roles")
+                        Verify_Application_Roles = pair.Value;
+                    else if (pair.Key == "CreateUser_History_Tab")
+                        CreateUser_History_Tab = pair.Value;
+                    else if (pair.Key == "Verify_History_ProfileCreated")
+                        Verify_History_ProfileCreated = pair.Value;
+                    else if (pair.Key == "Verify_History_ProfileUpdated")
+                        Verify_History_ProfileUpdated = pair.Value;
+                    else if (pair.Key == "UserIndex_Moredetails")
+                        UserIndex_Moredetails = pair.Value;
+                    else if (pair.Key == "UserIndex_Moredetails_Edit")
+                        UserIndex_Moredetails_Edit = pair.Value;
+                    else if (pair.Key == "Edit_User")
+                        Edit_User = pair.Value;
+                    else if (pair.Key == "Edit_User_Access_Roles")
+                        Edit_User_Access_Roles = pair.Value;
+                    else if (pair.Key == "UserDashboard_EditUser")
+                        UserDashboard_EditUser = pair.Value;
+                    else if (pair.Key == "User_Create_User_AssignOrg12")
+                        User_Create_User_AssignOrg12 = pair.Value;
+                    else if (pair.Key == "EditUser_Back")
+                        EditUser_Back = pair.Value;
+                    else if (pair.Key == "EditUser_Cancel")
+                        EditUser_Cancel = pair.Value;
+                    else if (pair.Key == "UserIndex_Sort_Applybutton")
+                        UserIndex_Sort_Applybutton = pair.Value;
+                    else if (pair.Key == "UserIndex_Filter_Applybutton")
+                        UserIndex_Filter_Applybutton = pair.Value;
+                }
+                #endregion[CreateUser] 
+
             }
+
             return obj;
             
         }
+        
     }
 }

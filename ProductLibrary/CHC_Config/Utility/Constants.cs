@@ -18,6 +18,7 @@ namespace CHC_Config.Utility
         public static string OrgIndex = "OrgIndex";
         public static string PropertyDashboard = "PropertyDashboard";
         public static string Create = "Create";
+        public static string CreateUser = "CreateUser";
         #endregion ObjectRepository UI Module Names
 
         #region[Test Plans]
@@ -26,7 +27,10 @@ namespace CHC_Config.Utility
         public static string TP_000000 = "TP_000000";
         public static string TP_349772 = "TP_349772";
         public static string TP_349775 = "TP_349775";
-        //public static string TP_339264 = "TP_339264";
+
+        public static string TP_422702 = "TP_422702";
+
+        public static string TP_401440 = "TP_401440";
         #endregion
 
         #region[Test Cases]
@@ -56,7 +60,23 @@ namespace CHC_Config.Utility
         public static string TC_314204 = "TC_314204";
         public static string TC_349765 = "TC_349765";
 
-        //public static string TC_339266 = "TC_339266";
+        public static string TC_335464 = "TC_335464";
+        public static string TC_335441 = "TC_335441";
+        public static string TC_335444 = "TC_335444";
+
+        public static string TC_334574 = "TC_334574";
+        public static string TC_334582 = "TC_334582";
+        public static string TC_334583 = "TC_334583";
+        public static string TC_334597 = "TC_334597";
+        public static string TC_334598 = "TC_334598";
+        public static string TC_380075 = "TC_380075";
+        public static string TC_380077 = "TC_380077";
+
+        public static string TC_372371 = "TC_372371";
+        public static string TC_422391 = "TC_422391";
+
+        public static string TC_326760 = "TC_326760";
+        public static string TC_326761 = "TC_326761";
         #endregion
 
         #region[CommonData]

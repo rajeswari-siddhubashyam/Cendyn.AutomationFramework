@@ -59,7 +59,10 @@
     <Compile Include="AppModule\MainAdminApp\TP_349769_ChainDashboard.cs" />
     <Compile Include="AppModule\MainAdminApp\TP_349772_BrandDashboard.cs" />
     <Compile Include="AppModule\MainAdminApp\TP_349775_PropertyDashboard.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_422702_Users_Edit_Index_Dashboard.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_Reg_401440_Org_Index_Sort_Filter.cs" />
     <Compile Include="AppModule\UI\Create.cs" />
+    <Compile Include="AppModule\UI\CreateUser.cs" />
     <Compile Include="AppModule\UI\Dashboard.cs" />
     <Compile Include="AppModule\UI\Navigation.cs" />
     <Compile Include="AppModule\UI\OrgIndex.cs" />
@@ -73,17 +76,21 @@
     <Compile Include="Entity\Users.cs" />
     <Compile Include="PageObject\Admin\PageObject_Admin.cs" />
     <Compile Include="PageObject\UI\PageObject_Create.cs" />
+    <Compile Include="PageObject\UI\PageObject_CreateUser.cs" />
     <Compile Include="PageObject\UI\PageObject_Dashboard.cs" />
+    <Compile Include="PageObject\UI\PageObject_EditUser_Smoke.cs.cs" />
     <Compile Include="PageObject\UI\PageObject_Home.cs" />
     <Compile Include="PageObject\UI\PageObject_Navigation.cs" />
     <Compile Include="PageObject\UI\PageObject_OrgIndex.cs" />
     <Compile Include="PageObject\UI\PageObject_SignIn.cs" />
+    <Compile Include="PageObject\UI\PageObject_UserDashBoard_Smoke.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestPlan\ClientName\ClientName_TP_000000_ModuleName.cs" />
     <Compile Include="TestPlan\Org_Dashboard\CHC_TP_349769_ChainDashboard.cs" />
     <Compile Include="TestPlan\Org_Dashboard\CHC_TP_349772_BrandDashboard.cs" />
     <Compile Include="TestPlan\Org_Dashboard\CHC_TP_349775_PropertyDashboard.cs" />
     <Compile Include="TestPlan\Org_Index\CHC_TP_323199_OrgIndex.cs" />
+    <Compile Include="TestPlan\Reg_Org_Index_Sort_Filter\CHC_TP_Reg_401440_Org_Index_Sort_Filter.cs" />
     <Compile Include="TestPlan\User_Management\CHC_TP_422702_Users_SmokeTest.cs" />
     <Compile Include="Utility\Constants.cs" />
     <Compile Include="Utility\ObjectRepository.cs" />
@@ -97,6 +104,9 @@
     <Content Include="ObjectRepository\OR.xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="CTOS">
+      <Version>2022.7.21.1</Version>
+    </PackageReference>
     <PackageReference Include="ExtentReports">
       <Version>3.1.3</Version>
     </PackageReference>

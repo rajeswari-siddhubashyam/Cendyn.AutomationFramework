@@ -87,5 +87,64 @@ namespace CHC_Config.AppModule.MainAdminApp
             }
         }
 
+        public static void TP_422702()
+        {
+            switch (TestCaseId)
+            {
+                case "TC_335464":
+                    TC_335464();
+                    break;
+                case "TC_335441":
+                    TC_335441();
+                    break;
+                case "TC_335444":
+                    TC_335444();
+                    break;
+                case "TC_334574":
+                    TC_334574();
+                    break;
+                case "TC_334582":
+                    TC_334582();
+                    break;
+                case "TC_334583":
+                    TC_334583();
+                    break;
+                case "TC_334597":
+                    TC_334597();
+                    break;
+                case "TC_334598":
+                    TC_334598();
+                    break;
+                case "TC_380075":
+                    TC_380075();
+                    break;
+                case "TC_380077":
+                    TC_380077();
+                    break;
+                case "TC_372371":
+                    TC_372371();
+                    break;
+                case "TC_422391":
+                    TC_422391();
+                    break;
+            }
+        }
+        public static void TP_401440()
+        {
+            switch (TestCaseId)
+            {
+                case "TC_326760":
+                    TC_326760();
+                    break;
+                case "TC_326761":
+                    TC_326761();
+                    break;
+            }
+        }
     }
 }
+
+
+
+
+    

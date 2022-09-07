@@ -384,6 +384,7 @@ namespace BaseUtility.Utility
             try
             {
                 CTOS.Models.IInput input = new CTOS.Input(Driver, element);
+                element.Clear();
                 input.EnterInput(text);
                 AddDelay(1500);
 

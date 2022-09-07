@@ -16,7 +16,7 @@ namespace CHC_Config.Utility
         {
             //clear the old items from the list
             //data.clientCards.Clear();
-            query = "select top 1 * from ContactMethod where ContactMethodTypeId = 1 and RecordStatus = 1 and CMOptOut = 1";
+            query = " select top 1 * from ContactMethod where ContactMethodTypeId = 1 and RecordStatus = 1 and CMOptOut = 1";
 
             using (SqlConnection connection = DBHelper.SqlConn())
             {
@@ -352,6 +352,59 @@ namespace CHC_Config.Utility
             }
         }
 
+        public static void GetUser(Users user)
+        {
+            //clear the old items from the list
+            //data.clientCards.Clear();
+            query = " select * from Users where userid = 472 ";
+
+            using (SqlConnection connection = DBHelper.SqlConn())
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.CommandTimeout = 60;
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            user.UserId = reader["UserId"].ToString();
+                        }
+                    }
+                }
+                connection.Close();
+            }
+        }
+
+        public static void GetListfrom_Usersetable(List<Users> lst_ProfileDb)
+        {
+            //clear the old items from the list
+            //data.clientCards.Clear();           
+
+            query = " select top 10 * from Users order by userid ";
+            //List<Profile_DB> lst = new List<Profile_DB>();
+
+            using (SqlConnection connection = DBHelper.SqlConn())
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.CommandTimeout = 60;
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Users profile = new Users();
+                            profile.UserId = reader["UserId"].ToString();
+                            lst_ProfileDb.Add(profile);
+                        }
+                    }
+                }
+                connection.Close();
+            }
+        }
 
     }
 }
