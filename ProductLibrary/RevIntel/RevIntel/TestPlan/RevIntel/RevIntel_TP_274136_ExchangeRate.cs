@@ -18,6 +18,7 @@ namespace RevIntelExchangeRate
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
+        public RevIntel_TP_274136_ExchangeRate() { }
         /// <summary>
         /// Method is used to initialised the test plan
         /// </summary>

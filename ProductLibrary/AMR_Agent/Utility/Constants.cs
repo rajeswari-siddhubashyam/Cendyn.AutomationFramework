@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -210,7 +211,7 @@ namespace AMR_Agent.Utility
         //public static string IeDriver = String.Concat(TestDataLocation.actualPath, Convert.ToString(ConfigurationManager.AppSettings["IEDriver"]));
 
         //Common
-        public static string Common_AdminURL = "https://traveladminloyaltyprogram.qaeloyaltyadmin.com/";
+        public static string Common_AdminURL = ConfigurationManager.AppSettings["BaseURL"]; //"https://traveladminloyaltyprogram.qaeloyaltyadmin.com/";
         public static string Common_PostDeploymentAdminURL = "https://traveladminloyaltyprogram.cendyn.com/";
         public static string Common_FrontendURL = "https://travelagentloyaltyprogram.qaeloyaltyadmin.com/";
         public static string Common_PostDeploymentFrontendURL = "https://amrewards.amragents.com/";

@@ -17,6 +17,8 @@ namespace RevIntel
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
+        public RevIntel_TP_292748_Pace_and_Forecast_YOY_Comparision() { }
+
         /// <summary>
         /// Method is used to initialised the test plan
         /// </summary>

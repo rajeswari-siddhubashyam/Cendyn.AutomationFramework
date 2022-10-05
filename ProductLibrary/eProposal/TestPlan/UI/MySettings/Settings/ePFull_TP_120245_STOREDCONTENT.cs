@@ -20,6 +20,8 @@ namespace eProposalStoredContent
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public ePFull_TP_120245_STOREDCONTENT()
+        { }
 
         [SetUp]
         public static void Initialize()

@@ -16,7 +16,7 @@ namespace ePlanner.TestPlan.HotelOrigami
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
-
+        public ePlanner_TP_277743_PostDeplyment() { }
         [SetUp]
         public static void Initialize()
         {

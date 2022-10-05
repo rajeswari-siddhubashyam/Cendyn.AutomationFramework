@@ -16,6 +16,10 @@ namespace eInsightCampaignAudienceDeactivate
     class eIn_TP_261306_AudienceBuilder_AudienceCampaignDeactivation : eInsightSetup
     {
         public static string GetProjectName = System.Reflection.Assembly.GetCallingAssembly().GetName().Name;
+
+        public eIn_TP_261306_AudienceBuilder_AudienceCampaignDeactivation()
+        { }
+
         public eIn_TP_261306_AudienceBuilder_AudienceCampaignDeactivation(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

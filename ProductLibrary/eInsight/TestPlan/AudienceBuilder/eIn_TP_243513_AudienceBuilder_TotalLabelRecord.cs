@@ -17,6 +17,10 @@ namespace eInsightABTotalLabelRecord
     class eIn_TP_243513_AudienceBuilder_TotalLabelRecord : eInsightSetup
     {
         public static string GetProjectName = System.Reflection.Assembly.GetCallingAssembly().GetName().Name;
+
+        public eIn_TP_243513_AudienceBuilder_TotalLabelRecord()
+        { }
+
         public eIn_TP_243513_AudienceBuilder_TotalLabelRecord(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

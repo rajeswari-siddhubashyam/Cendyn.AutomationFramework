@@ -22,6 +22,8 @@ namespace eInsightPriorityQEdit
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public eIn_TP_271586_PriorityQ_Edit()
+        { }
         [SetUp]
         public static void Initialize()
         {

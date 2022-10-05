@@ -18,6 +18,8 @@ namespace HotelOrigami
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public HotelOrigami_TP_256428_Admin_Membership_Setup()
+        { }
         [SetUp]
         public static void Initialize()
         {

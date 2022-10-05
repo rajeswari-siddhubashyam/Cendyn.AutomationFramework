@@ -20,6 +20,7 @@ namespace HotelOrigami
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public HotelOrigami_TP_121737_ForgotPassword() { }
         [SetUp]
         public static void Initialize()
         {

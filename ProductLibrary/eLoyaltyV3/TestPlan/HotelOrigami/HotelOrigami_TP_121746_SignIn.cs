@@ -17,7 +17,8 @@ namespace HotelOrigami
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
-
+        public HotelOrigami_TP_121746_SignIn()
+        { }
         [SetUp]
         public static void Initialize()
         {

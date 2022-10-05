@@ -17,6 +17,9 @@ namespace eInsightRecentlySentCampaign
     class eIn_TP_97045_RecentlySentCampaign : eInsightSetup
     {
         public static string GetProjectName = System.Reflection.Assembly.GetCallingAssembly().GetName().Name;
+        public eIn_TP_97045_RecentlySentCampaign()
+        { }
+
         public eIn_TP_97045_RecentlySentCampaign(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

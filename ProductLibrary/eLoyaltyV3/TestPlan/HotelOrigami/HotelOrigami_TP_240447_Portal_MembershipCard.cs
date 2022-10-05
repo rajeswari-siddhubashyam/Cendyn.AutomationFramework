@@ -19,6 +19,8 @@ namespace HotelOrigami
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public HotelOrigami_TP_240447_Portal_MembershipCard()
+        { }
         [SetUp]
         public static void Initialize()
         {

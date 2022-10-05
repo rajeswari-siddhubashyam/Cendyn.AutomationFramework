@@ -21,7 +21,7 @@ namespace eProposalRoomEventBlockComments
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
-
+        public ePFull_TP_84921_RoomEventBlockComments() { }
         [SetUp]
         public static void Initialize()
         {

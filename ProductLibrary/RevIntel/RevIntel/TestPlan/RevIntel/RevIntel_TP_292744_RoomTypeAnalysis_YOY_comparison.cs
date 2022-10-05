@@ -17,6 +17,7 @@ namespace RevIntel
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
+        public RevIntel_TP_292744_RoomTypeAnalysis_YOY_comparison() { }
         /// <summary>
         /// Method is used to initialised the test plan
         /// </summary>

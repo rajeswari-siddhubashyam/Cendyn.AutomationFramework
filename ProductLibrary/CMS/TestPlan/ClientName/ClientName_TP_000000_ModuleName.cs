@@ -17,6 +17,7 @@ namespace CMS.TestPlan.QA
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
+        public ClientName_TP_000000_ModuleName() { }
         [SetUp]
         public static void Initialize()
         {

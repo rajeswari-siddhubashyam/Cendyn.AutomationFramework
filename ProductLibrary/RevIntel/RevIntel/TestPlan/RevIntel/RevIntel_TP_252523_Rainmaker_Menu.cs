@@ -12,12 +12,12 @@ namespace RevIntel
 {
     class RevIntel_TP_252523_Rainmaker_Menu : RevIntel.Utility.Setup
     {
-
         public RevIntel_TP_252523_Rainmaker_Menu(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
+        public RevIntel_TP_252523_Rainmaker_Menu() { }
         /// <summary>
         /// Method is used to initialised the test plan
         /// </summary>

@@ -12,11 +12,11 @@ namespace RevIntel
 {
     class RevIntel_TP_252834_Forecast_and_Budget_menu : RevIntel.Utility.Setup
     {
-
         public RevIntel_TP_252834_Forecast_and_Budget_menu(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public RevIntel_TP_252834_Forecast_and_Budget_menu() { }
         [SetUp]
         public static void Initialize()
         {

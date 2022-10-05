@@ -20,7 +20,7 @@ namespace eProposalReports
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
-
+        public ePFull_TP_120205_REPORTS() { }
         [SetUp]
         public static void Initialize()
         {

@@ -17,6 +17,8 @@ namespace CHC_Config.TestPlan.Org_Index
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
+        public CHC_TP_323199_OrgIndex()
+        { }
         [SetUp]
         public static void Initialize()
         {

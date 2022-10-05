@@ -16,8 +16,10 @@ namespace CHC_Config.TestPlan.Org_Dashboard
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public CHC_TP_349769_ChainDashboard()
+        { }
 
-        [OneTimeSetUp]
+        [SetUp]
         public static void Initialize()
         {
             TestPlanId = Constants.TP_349769;

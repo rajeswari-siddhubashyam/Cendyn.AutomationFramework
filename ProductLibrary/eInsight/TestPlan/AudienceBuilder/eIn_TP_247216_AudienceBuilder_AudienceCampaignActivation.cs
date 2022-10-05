@@ -16,6 +16,9 @@ namespace eInsightCampaignAudienceActivate
     class eIn_TP_247216_AudienceBuilder_AudienceCampaignActivation : eInsightSetup
     {
         public static string GetProjectName = System.Reflection.Assembly.GetCallingAssembly().GetName().Name;
+        public eIn_TP_247216_AudienceBuilder_AudienceCampaignActivation()
+        { }
+
         public eIn_TP_247216_AudienceBuilder_AudienceCampaignActivation(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

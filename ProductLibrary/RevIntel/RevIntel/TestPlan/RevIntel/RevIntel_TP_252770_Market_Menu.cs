@@ -17,7 +17,8 @@ namespace RevIntel
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
-        [SetUp]
+        public RevIntel_TP_252770_Market_Menu() { }
+       [SetUp]
         public static void Initialize()
         {
             TestPlanId = Constants.TP_252770;

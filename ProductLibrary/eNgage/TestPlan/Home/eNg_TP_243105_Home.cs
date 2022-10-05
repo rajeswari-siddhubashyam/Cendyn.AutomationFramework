@@ -21,6 +21,7 @@ namespace eNgageHome
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public eNg_TP_243105_Home() { }
         [SetUp]
         public static void Initialize()
         {

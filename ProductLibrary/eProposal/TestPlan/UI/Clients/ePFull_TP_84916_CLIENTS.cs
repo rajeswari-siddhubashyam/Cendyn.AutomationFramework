@@ -22,6 +22,8 @@ namespace eProposalClients
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
+        public ePFull_TP_84916_CLIENTS()
+        { }
         [SetUp]
         public static void Initialize()
         {

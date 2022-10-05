@@ -12,6 +12,9 @@ namespace MarketingAutomation.TestPlan.QA
 {
     class MA_TP_332222_E2E___Campaign : MarketingAutomation.Utility.Setup
     {
+        public MA_TP_332222_E2E___Campaign()
+        { }
+
         public MA_TP_332222_E2E___Campaign(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

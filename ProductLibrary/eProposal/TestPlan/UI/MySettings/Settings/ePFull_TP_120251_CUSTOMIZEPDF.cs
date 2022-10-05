@@ -20,6 +20,7 @@ namespace eProposalCustomizePDF
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public ePFull_TP_120251_CUSTOMIZEPDF() { }
 
         [SetUp]
         public static void Initialize()

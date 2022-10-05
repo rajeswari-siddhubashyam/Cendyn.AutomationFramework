@@ -16,7 +16,7 @@ namespace eMenus.TestPlan.HotelOrigami
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
-
+        public eMenu_TP_277741_PostDeployment() { }
         [SetUp]
         public static void Initialize()
         {

@@ -21,7 +21,7 @@ namespace eNgageAdmin
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
-
+        public eNg_TP_243163_Admin() { }
         [SetUp]
         public static void Initialize()
         {

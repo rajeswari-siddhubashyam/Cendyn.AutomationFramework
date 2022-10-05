@@ -21,6 +21,8 @@ namespace eProposaleCard
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public ePFull_TP_120256_eCard_COMPOSE()
+        { }
         [SetUp]
         public static void Initialize()
         {

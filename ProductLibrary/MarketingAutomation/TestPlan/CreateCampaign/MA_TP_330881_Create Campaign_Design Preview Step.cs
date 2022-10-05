@@ -13,6 +13,9 @@ namespace MarketingAutomation.TestPlan.QA
 
     class MA_TP_330881_Create_Campaign_Design_Preview_Step : MarketingAutomation.Utility.Setup
     {
+        public MA_TP_330881_Create_Campaign_Design_Preview_Step()
+        { }
+
         public MA_TP_330881_Create_Campaign_Design_Preview_Step(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

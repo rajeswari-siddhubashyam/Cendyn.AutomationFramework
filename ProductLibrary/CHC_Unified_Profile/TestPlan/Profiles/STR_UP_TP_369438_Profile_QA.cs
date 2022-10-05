@@ -17,6 +17,7 @@ namespace CHC_Unified_Profile.TestPlan.Profiles
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
+        public STR_UP_TP_369438_Profile_QA() { }
         [SetUp]
         public static void Initialize()
         {

@@ -21,124 +21,124 @@ namespace eProposaleFaceTime
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
-
+        public ePFull_TP_89339_eFacetime() { }
  //       [SetUp]
-//        public static void Initialize()
-//        {
-//            TestPlanId = Constants.TP_89339;
+ //        public static void Initialize()
+ //        {
+ //            TestPlanId = Constants.TP_89339;
 
-//            //Initialize the test case set up.
-//            InitializeSetup(TestPlanId, GetProjectName);
+        //            //Initialize the test case set up.
+        //            InitializeSetup(TestPlanId, GetProjectName);
 
-//            //Assign the test data test plan file location
-//            //TestDataFile = TestDataLocation.TP_89339;
+        //            //Assign the test data test plan file location
+        //            //TestDataFile = TestDataLocation.TP_89339;
 
-//            //Navigate to the URL
-//            //Driver.Navigate().GoToUrl(LegacyTestData.CommonDemoURL);
-//            AddDelay(1500);
-//        }
+        //            //Navigate to the URL
+        //            //Driver.Navigate().GoToUrl(LegacyTestData.CommonDemoURL);
+        //            AddDelay(1500);
+        //        }
 
-//        /* Testing in the ePFull project. */
+        //        /* Testing in the ePFull project. */
 
-//        /* This test case will Verify eFacetime uses the correct VIPE link without using a database */
+        //        /* This test case will Verify eFacetime uses the correct VIPE link without using a database */
 
-//        [Test, Category("ePFull TP 89339 eFacetime")]
-//        public static void TC_87928()
-//        {
-//            try
-//            {
-//                /**Test execution - Start**/
-//                Legacy_SetupTestCase(Constants.TC_87928);
+        //        [Test, Category("ePFull TP 89339 eFacetime")]
+        //        public static void TC_87928()
+        //        {
+        //            try
+        //            {
+        //                /**Test execution - Start**/
+        //                Legacy_SetupTestCase(Constants.TC_87928);
 
-//                //Start
-//                MainAdminApp.TP_89339();
+        //                //Start
+        //                MainAdminApp.TP_89339();
 
-//                /**Test execution - End**/
-//                TestHandling.TestEnd();
-//            }
-//            catch (Exception e)
-//            {
-//                TestHandling.TestFailed(e);
-//                throw;
-//            }
-//        }
+        //                /**Test execution - End**/
+        //                TestHandling.TestEnd();
+        //            }
+        //            catch (Exception e)
+        //            {
+        //                TestHandling.TestFailed(e);
+        //                throw;
+        //            }
+        //        }
 
-//        /* This test case will Verify eFacetime uses the correct VIPE link by checking the database. */
+        //        /* This test case will Verify eFacetime uses the correct VIPE link by checking the database. */
 
-//        [Test, Category("ePFull TP 89339 eFacetime")]
-//        public static void TC_89354()
-//        {
-//            try
-//            {
-//                /**Test execution - Start**/
-//                Legacy_SetupTestCase(Constants.TC_89354);
+        //        [Test, Category("ePFull TP 89339 eFacetime")]
+        //        public static void TC_89354()
+        //        {
+        //            try
+        //            {
+        //                /**Test execution - Start**/
+        //                Legacy_SetupTestCase(Constants.TC_89354);
 
-//                //Start
-//                MainAdminApp.TP_89339();
+        //                //Start
+        //                MainAdminApp.TP_89339();
 
-//                /**Test execution - End**/
-//                TestHandling.TestEnd();
-//            }
-//            catch (Exception e)
-//            {
-//                TestHandling.TestFailed(e);
-//                throw;
-//            }
-//        }
+        //                /**Test execution - End**/
+        //                TestHandling.TestEnd();
+        //            }
+        //            catch (Exception e)
+        //            {
+        //                TestHandling.TestFailed(e);
+        //                throw;
+        //            }
+        //        }
 
-//        /* This test case will Validate adding one eFaceTime video to an existing folder. */
+        //        /* This test case will Validate adding one eFaceTime video to an existing folder. */
 
-//        [Test, Category("ePFull TP 89339 eFacetime")]
-//        public static void TC_90245()
-//        {
-//            try
-//            {
-//                /**Test execution - Start**/
-//                Legacy_SetupTestCase(Constants.TC_90245);
+        //        [Test, Category("ePFull TP 89339 eFacetime")]
+        //        public static void TC_90245()
+        //        {
+        //            try
+        //            {
+        //                /**Test execution - Start**/
+        //                Legacy_SetupTestCase(Constants.TC_90245);
 
-//                //Start
-//                MainAdminApp.TP_89339();
+        //                //Start
+        //                MainAdminApp.TP_89339();
 
-//                /**Test execution - End**/
-//                TestHandling.TestEnd();
-//            }
-//            catch (Exception e)
-//            {
-//                TestHandling.TestFailed(e);
-//                throw;
-//            }
-//        }
+        //                /**Test execution - End**/
+        //                TestHandling.TestEnd();
+        //            }
+        //            catch (Exception e)
+        //            {
+        //                TestHandling.TestFailed(e);
+        //                throw;
+        //            }
+        //        }
 
-//        /* This test case will Validate adding multiple eFaceTime videos to an existing folder. */
+        //        /* This test case will Validate adding multiple eFaceTime videos to an existing folder. */
 
-//        [Test, Category("ePFull TP 89339 eFacetime")]
-//        public static void TC_90246()
-//        {
-//            try
-//            {
-//                /**Test execution - Start**/
-//                Legacy_SetupTestCase(Constants.TC_90246);
+        //        [Test, Category("ePFull TP 89339 eFacetime")]
+        //        public static void TC_90246()
+        //        {
+        //            try
+        //            {
+        //                /**Test execution - Start**/
+        //                Legacy_SetupTestCase(Constants.TC_90246);
 
-//                //Start
-//                MainAdminApp.TP_89339();
+        //                //Start
+        //                MainAdminApp.TP_89339();
 
-//                /**Test execution - End**/
-//                TestHandling.TestEnd();
-//            }
-//            catch (Exception e)
-//            {
-//                TestHandling.TestFailed(e);
-//                throw;
-//            }
-//        }
+        //                /**Test execution - End**/
+        //                TestHandling.TestEnd();
+        //            }
+        //            catch (Exception e)
+        //            {
+        //                TestHandling.TestFailed(e);
+        //                throw;
+        //            }
+        //        }
 
-//        /// <summary>
-//        /// Method is executed after every Test Script.
-//        /// </summary>
-//        [TearDown]
-//        public void Close()
-//        {
-//            TestHandling.TearDown();
-//        }
-   }
+        //        /// <summary>
+        //        /// Method is executed after every Test Script.
+        //        /// </summary>
+        //        [TearDown]
+        //        public void Close()
+        //        {
+        //            TestHandling.TearDown();
+        //        }
+    }
 }

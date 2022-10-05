@@ -13,6 +13,8 @@ namespace eLoyaltyV3.TestPlan.HotelOrigami.WindowsServices.Scenario_Validation
 {
     class HotelOrigami_Service_Preconditions : eLoyaltyV3.Utility.Setup
     {
+        public HotelOrigami_Service_Preconditions()
+        { }
         public HotelOrigami_Service_Preconditions(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

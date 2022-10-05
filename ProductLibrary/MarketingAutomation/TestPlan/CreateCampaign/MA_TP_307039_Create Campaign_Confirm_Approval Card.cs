@@ -12,6 +12,9 @@ namespace MarketingAutomation.TestPlan.QA
 {
     class MA_TP_307039_Create_Campaign_Confirm_Approval_Card : MarketingAutomation.Utility.Setup
     {
+        public MA_TP_307039_Create_Campaign_Confirm_Approval_Card()
+        { }
+
         public MA_TP_307039_Create_Campaign_Confirm_Approval_Card(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

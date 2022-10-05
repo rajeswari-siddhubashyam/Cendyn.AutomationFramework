@@ -13,6 +13,9 @@ namespace MarketingAutomation.TestPlan.QA
 
     class MA_TP_346036_Manage_Campaign_Status_Actions_Card_View : MarketingAutomation.Utility.Setup
     {
+        public MA_TP_346036_Manage_Campaign_Status_Actions_Card_View()
+        { }
+
         public MA_TP_346036_Manage_Campaign_Status_Actions_Card_View(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

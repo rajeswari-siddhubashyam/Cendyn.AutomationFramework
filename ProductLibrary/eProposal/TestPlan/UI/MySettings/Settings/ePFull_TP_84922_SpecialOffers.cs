@@ -20,6 +20,7 @@ namespace eProposalSpecialOffers
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public ePFull_TP_84922_SpecialOffers() { }
 
         [SetUp]
         public static void Initialize()

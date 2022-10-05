@@ -18,6 +18,9 @@ namespace HotelOrigami
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
+        public HotelOrigami_Production_SmokeTest()
+        { }
+
         [SetUp]
         public static void Initialize()
         {

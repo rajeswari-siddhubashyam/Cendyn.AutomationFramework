@@ -13,6 +13,8 @@ namespace HotelOrigami
 {
     class HotelOrigami_TP_109659_Admin_Update_Offers : eLoyaltyV3.Utility.Setup
     {
+        public HotelOrigami_TP_109659_Admin_Update_Offers()
+        { }
         public HotelOrigami_TP_109659_Admin_Update_Offers(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

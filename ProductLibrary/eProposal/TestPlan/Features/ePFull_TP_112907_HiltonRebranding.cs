@@ -21,6 +21,9 @@ namespace eProposalFeatures
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
+        public ePFull_TP_112907_HiltonRebranding()
+        { }
+
         [SetUp]
         public static void Initialize()
         {

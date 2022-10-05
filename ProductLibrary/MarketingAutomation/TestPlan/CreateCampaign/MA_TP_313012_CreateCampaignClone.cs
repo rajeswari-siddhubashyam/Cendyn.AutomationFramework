@@ -13,6 +13,9 @@ namespace MarketingAutomation.TestPlan.QA
 {
     class MA_TP_313012_CreateCampaignClone : MarketingAutomation.Utility.Setup
     {
+        public MA_TP_313012_CreateCampaignClone()
+        { }
+
         public MA_TP_313012_CreateCampaignClone(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

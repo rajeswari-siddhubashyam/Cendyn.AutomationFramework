@@ -17,6 +17,7 @@ namespace RevIntel
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public RevIntel_TP_252846_Room_Type_Menu() { }
         [SetUp]
         public static void Initialize()
         {

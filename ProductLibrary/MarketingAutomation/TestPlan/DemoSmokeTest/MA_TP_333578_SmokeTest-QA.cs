@@ -12,6 +12,9 @@ namespace MarketingAutomation.TestPlan.QA
 {
     class MA_TP_333578_SmokeTest_QA : MarketingAutomation.Utility.Setup
     {
+        public MA_TP_333578_SmokeTest_QA()
+        { }
+
         public MA_TP_333578_SmokeTest_QA(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();
