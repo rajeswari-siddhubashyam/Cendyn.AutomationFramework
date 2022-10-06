@@ -12,6 +12,9 @@ namespace MarketingAutomation.TestPlan.CreateTemplate
 {
     class MA_TP_342879_Create_Template_Settings_Step : MarketingAutomation.Utility.Setup
     {
+        public MA_TP_342879_Create_Template_Settings_Step()
+        { }
+
         public MA_TP_342879_Create_Template_Settings_Step(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

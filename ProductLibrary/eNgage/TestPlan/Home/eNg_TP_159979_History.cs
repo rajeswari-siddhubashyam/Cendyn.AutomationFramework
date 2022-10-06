@@ -21,7 +21,7 @@ namespace eNgageHomeHistory
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
-
+        public eNg_TP_159979_History() { }
         [SetUp]
         public static void Initialize()
         {

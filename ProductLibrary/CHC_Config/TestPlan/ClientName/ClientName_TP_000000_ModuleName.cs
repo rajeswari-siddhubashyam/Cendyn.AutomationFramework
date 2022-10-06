@@ -17,6 +17,8 @@ namespace CHC_Config.TestPlan.ClientName
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public ClientName_TP_000000_ModuleName()
+        { }
 
         [SetUp]
         public static void Initialize()

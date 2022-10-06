@@ -12,6 +12,9 @@ namespace MarketingAutomation.TestPlan.QA
 {
     class MA_TP_326093_Manage_Audience_Campaigns_Column_Filter : MarketingAutomation.Utility.Setup
     {
+        public MA_TP_326093_Manage_Audience_Campaigns_Column_Filter()
+        { }
+
             public MA_TP_326093_Manage_Audience_Campaigns_Column_Filter(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
             {
                 Drivers = new ThreadLocal<IWebDriver>();

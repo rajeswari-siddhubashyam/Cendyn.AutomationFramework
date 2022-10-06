@@ -12,11 +12,12 @@ namespace CHC_Unified_Profile.TestPlan.Profiles
 {
     public class STR_UP_TP_356194_Profile_QA : CHC_Unified_Profile.Utility.Setup
     {
-        public STR_UP_TP_356194_Profile_QA (string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
+        public STR_UP_TP_356194_Profile_QA(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
+        public STR_UP_TP_356194_Profile_QA() { }
         [SetUp]
         public static void Initialize()
         {

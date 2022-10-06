@@ -20,6 +20,7 @@ namespace eNgageCreateAccount
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public eNg_TP_160103_CreateAccount() { }
         [SetUp]
         public static void Initialize()
         {

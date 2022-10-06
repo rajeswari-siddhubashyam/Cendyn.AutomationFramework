@@ -16,7 +16,7 @@ namespace eMenusLite.TestPlan.HotelOrigami
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
-
+        public eMenusLite_TP_277742_PostDeployment() { }
         [SetUp]
         public static void Initialize()
         {

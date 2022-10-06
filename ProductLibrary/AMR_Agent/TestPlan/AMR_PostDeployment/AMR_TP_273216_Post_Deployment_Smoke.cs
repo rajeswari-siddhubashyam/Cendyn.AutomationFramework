@@ -15,9 +15,11 @@ using TestData;
 
 namespace AMR_Agent.TestPlans
 {
-    //[TestFixture]
     public class AMR_TP_273216_Post_Deployment_Smoke : AMR_Agent.Utility.Setup
     {
+        public AMR_TP_273216_Post_Deployment_Smoke()
+        { }
+
         public AMR_TP_273216_Post_Deployment_Smoke(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

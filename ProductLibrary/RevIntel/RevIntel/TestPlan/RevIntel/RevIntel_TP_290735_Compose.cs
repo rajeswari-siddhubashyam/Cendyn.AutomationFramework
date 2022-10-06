@@ -17,6 +17,8 @@ namespace RevIntel
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
+        public RevIntel_TP_290735_Compose() { }
+
         /// <summary>
         /// Method is used to initialised the test plan
         /// </summary>

@@ -15,6 +15,7 @@ using System.Text.RegularExpressions;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium.Interactions;
 using DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming;
+using SeleniumExtras.WaitHelpers;
 
 namespace eInsight.AppModule.UI
 {

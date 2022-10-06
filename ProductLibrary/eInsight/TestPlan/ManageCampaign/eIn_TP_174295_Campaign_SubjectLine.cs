@@ -17,6 +17,8 @@ namespace eInsightCampaignSubjectLine
     public class eIn_TP_174295_Campaign_SubjectLine : eInsightSetup
     {
         public static string GetProjectName = System.Reflection.Assembly.GetCallingAssembly().GetName().Name;
+        public eIn_TP_174295_Campaign_SubjectLine()
+        { }
         public eIn_TP_174295_Campaign_SubjectLine(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

@@ -18,6 +18,7 @@ namespace RevIntel
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
+        public RevIntel_TP_251469_SmokePlan() { }
         /// <summary>
         /// Method is used to initialised the test plan
         /// </summary>

@@ -19,6 +19,8 @@ namespace HotelOrigami
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public HotelOrigami_TP_ProductionDefect()
+        { }
         [SetUp]
         public static void Initialize()
         {

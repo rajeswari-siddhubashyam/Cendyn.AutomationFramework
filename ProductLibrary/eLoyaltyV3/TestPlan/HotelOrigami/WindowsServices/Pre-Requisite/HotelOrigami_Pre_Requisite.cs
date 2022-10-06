@@ -13,6 +13,8 @@ namespace HotelOrigami
 {
     class HotelOrigami_Pre_Requisite : eLoyaltyV3.Utility.Setup
     {
+        public HotelOrigami_Pre_Requisite()
+        { }
         public HotelOrigami_Pre_Requisite(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

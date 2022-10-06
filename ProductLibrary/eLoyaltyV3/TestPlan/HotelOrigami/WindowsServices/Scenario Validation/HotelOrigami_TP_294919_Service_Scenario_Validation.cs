@@ -13,6 +13,8 @@ namespace eLoyaltyV3.TestPlan.HotelOrigami.WindowsServices.Scenario_Validation
 {
     class HotelOrigami_TP_294919_Service_Scenario_Validation : eLoyaltyV3.Utility.Setup
     {
+        public HotelOrigami_TP_294919_Service_Scenario_Validation()
+        { }
         public HotelOrigami_TP_294919_Service_Scenario_Validation(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

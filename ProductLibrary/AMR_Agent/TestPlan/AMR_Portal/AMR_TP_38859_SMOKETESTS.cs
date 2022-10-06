@@ -18,6 +18,8 @@ namespace AMR_Agent.TestPlans
     //[TestFixture]
     public class AMR_TP_38859_SMOKETESTS : AMR_Agent.Utility.Setup
     {
+        public AMR_TP_38859_SMOKETESTS()
+        { }
 
         /*
          * Method that is executed before every test.

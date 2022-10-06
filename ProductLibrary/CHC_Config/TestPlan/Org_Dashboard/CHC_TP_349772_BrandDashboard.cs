@@ -17,7 +17,10 @@ namespace CHC_Config.TestPlan.Org_Dashboard
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
-        [OneTimeSetUp]
+        public CHC_TP_349772_BrandDashboard()
+        { }
+
+        [SetUp]
         public static void Initialize()
         {
             TestPlanId = Constants.TP_349772;

@@ -22,6 +22,8 @@ namespace eProposalPostDeployment
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
+        public ePFull_TP_278103_PostDeployment() { }
+
         [SetUp]
         public static void Initialize()
         {

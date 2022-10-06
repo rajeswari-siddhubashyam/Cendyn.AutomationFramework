@@ -17,6 +17,7 @@ namespace RevIntel
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public RevIntel_TP_274130_Zendesk() { }
         [SetUp]
         public static void Initialize()
         {

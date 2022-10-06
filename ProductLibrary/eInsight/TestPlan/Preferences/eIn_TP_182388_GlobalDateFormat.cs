@@ -22,6 +22,8 @@ namespace eInsightGlobalDatePreferences
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
+        public eIn_TP_182388_GlobalDateFormat()
+        { }
         [SetUp]
         public static void Initialize()
         {

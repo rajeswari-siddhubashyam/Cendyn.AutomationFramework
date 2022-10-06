@@ -13,6 +13,9 @@ namespace MarketingAutomation.TestPlan.QA
 
     class MA_TP_320503_ManageCampaign_Grid_View_without_Filter_and_sort : MarketingAutomation.Utility.Setup
     {
+        public MA_TP_320503_ManageCampaign_Grid_View_without_Filter_and_sort()
+        { }
+
         public MA_TP_320503_ManageCampaign_Grid_View_without_Filter_and_sort(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

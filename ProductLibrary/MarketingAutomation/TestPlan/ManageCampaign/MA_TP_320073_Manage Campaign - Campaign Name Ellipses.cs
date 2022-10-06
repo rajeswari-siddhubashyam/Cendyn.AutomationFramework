@@ -13,6 +13,9 @@ namespace MarketingAutomation.TestPlan.QA
 
     class MA_TP_320073_Manage_Campaign___Campaign_Name_Ellipses : MarketingAutomation.Utility.Setup
     {
+        public MA_TP_320073_Manage_Campaign___Campaign_Name_Ellipses()
+        { }
+
         public MA_TP_320073_Manage_Campaign___Campaign_Name_Ellipses(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

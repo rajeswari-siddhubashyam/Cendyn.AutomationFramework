@@ -20,6 +20,8 @@ namespace eNgageReports
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+
+        public eNg_TP_243161_Reporting() { }
         [SetUp]
         public static void Initialize()
         {

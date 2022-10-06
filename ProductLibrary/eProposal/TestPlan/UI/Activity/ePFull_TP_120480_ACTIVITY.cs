@@ -20,6 +20,8 @@ namespace ePFullActivity
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public ePFull_TP_120480_ACTIVITY()
+        { }
 
         [SetUp]
         public static void Initialize()

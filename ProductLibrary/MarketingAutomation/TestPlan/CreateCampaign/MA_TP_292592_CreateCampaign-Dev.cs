@@ -12,6 +12,9 @@ namespace MarketingAutomation.TestPlan.Dev
 {
     class MA_TP_292592_CreateCampaign : MarketingAutomation.Utility.Setup
     {
+        public MA_TP_292592_CreateCampaign()
+        { }
+
         public MA_TP_292592_CreateCampaign(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

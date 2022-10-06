@@ -22,6 +22,8 @@ namespace eProposalCreateCompose
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public ePFull_TP_84293_eProposal_COMPOSE()
+        { }
         [SetUp]
         public static void Initialize()
         {

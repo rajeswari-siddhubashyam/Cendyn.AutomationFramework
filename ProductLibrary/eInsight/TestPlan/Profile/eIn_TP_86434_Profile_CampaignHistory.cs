@@ -16,6 +16,8 @@ namespace eInsightProfileCampaignHistory
     class eIn_TP_86434_Profile_CampaignHistory : eInsightSetup
     {
         public static string GetProjectName = System.Reflection.Assembly.GetCallingAssembly().GetName().Name;
+        public eIn_TP_86434_Profile_CampaignHistory()
+        { }
         public eIn_TP_86434_Profile_CampaignHistory(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

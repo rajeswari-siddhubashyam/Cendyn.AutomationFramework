@@ -17,6 +17,9 @@ namespace eInsightAudienceBuilderDisplayName
     class eIn_TP_261351_AudienceDisplayName : eInsightSetup
     {
         public static string GetProjectName = System.Reflection.Assembly.GetCallingAssembly().GetName().Name;
+        public eIn_TP_261351_AudienceDisplayName()
+        { }
+
         public eIn_TP_261351_AudienceDisplayName(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

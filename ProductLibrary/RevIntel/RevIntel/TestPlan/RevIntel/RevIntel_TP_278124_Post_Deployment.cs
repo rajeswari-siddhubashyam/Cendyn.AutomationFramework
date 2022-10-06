@@ -18,6 +18,7 @@ namespace RevIntel
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
+        public RevIntel_TP_278124_Post_Deployment() { }
         /// <summary>
         /// Method is used to initialised the test plan
         /// </summary>

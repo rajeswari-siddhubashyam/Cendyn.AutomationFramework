@@ -20,7 +20,8 @@ namespace eNgageSearch
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
-        [SetUp]
+        public eNg_TP_160101_Search() { }
+       [SetUp]
         public static void Initialize()
         {
             TestPlanId = Constants.TP_160101;

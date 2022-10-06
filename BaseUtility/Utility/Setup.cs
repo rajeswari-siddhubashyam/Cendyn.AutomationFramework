@@ -12,11 +12,14 @@ using System.Collections.Generic;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Edge;
+using System.Collections;
+using System.Configuration;
 
 namespace BaseUtility.Utility
 {
+    [TestFixture]
     //Chrome
-    [TestFixture(Helper.BROWSER_CHROME, "100", "Windows 10", "1366x768")]
+    //[TestFixture(Helper.BROWSER_CHROME, "100", "Windows 10", "1366x768")]
     //[TestFixture("Chrome", "78", "Windows 10", "1280x1024")]
     //[TestFixture("Chrome", "89", "Windows 8.1", "1280x1024")]
     //Firefox
@@ -32,21 +35,34 @@ namespace BaseUtility.Utility
 
     public class Setup : Helper
     {
-        public static int LocalMachineExecution = 0; //1 means local & 0 means Lambdatest
-        public static string LT_USERNAME = "sborade";
+        public static int LocalMachineExecution = Convert.ToInt32(ConfigurationManager.AppSettings["SetupExec"]); //1 means local & 0 means Lambdatest
+        public static string LT_USERNAME = ConfigurationManager.AppSettings["LTUserName"];
         //Environment.GetEnvironmentVariable("LT_USERNAME") ==null ? "your username" : Environment.GetEnvironmentVariable("LT_USERNAME");
-        public static string LT_ACCESS_KEY = "KjfLHzAi54WQDIWauYpwEE8wx9NPdAmyldXzx3h3apEqaQD9jw";
+        public static string LT_ACCESS_KEY = ConfigurationManager.AppSettings["LTAccessKey"];
         //Environment.GetEnvironmentVariable("LT_ACCESS_KEY") == null ? "your accessKey" : Environment.GetEnvironmentVariable("LT_ACCESS_KEY");
         public static bool tunnel = Boolean.Parse(Environment.GetEnvironmentVariable("LT_TUNNEL") == null ? "False" : Environment.GetEnvironmentVariable("LT_TUNNEL"));
         public static string build = Environment.GetEnvironmentVariable("LT_BUILD") == null ? "LambdaTestExecution_" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("dd") + DateTime.Now.ToString("yyyy") : Environment.GetEnvironmentVariable("LT_BUILD");
-        public static string seleniumUri = "https://sborade:KjfLHzAi54WQDIWauYpwEE8wx9NPdAmyldXzx3h3apEqaQD9jw@hub.lambdatest.com/wd/hub";
+        public static string seleniumUri = $"https://{LT_USERNAME}:{LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub";
         //ThreadLocal<IWebDriver> driver = new ThreadLocal<IWebDriver>();
+
         public static String _browser;// r= "Firefox";
         public static String _version;//="71.0";
         public static String _os;//="windows";
         public static String _resolution;
+
         static string defGroupNo = "1";
         static eProduct _product;
+
+        [OneTimeSetUp]
+        public void Init()
+        {
+            BrowserType = ConfigurationManager.AppSettings["Browser"];
+            _browser = ConfigurationManager.AppSettings["Browser"];
+            _version = ConfigurationManager.AppSettings["Version"];
+            _os = ConfigurationManager.AppSettings["OS"];
+            _resolution = ConfigurationManager.AppSettings["Resolution"];
+        }
+
         /// <summary>
         /// POC excel
         /// </summary>
@@ -138,6 +154,7 @@ namespace BaseUtility.Utility
 
         public Setup()
         {
+            
         }
         
         public Setup(string browser, string version, string os, string resolution)
@@ -147,6 +164,7 @@ namespace BaseUtility.Utility
             _os = os;
             _resolution = resolution;
         }
+
        /* public static void InitializeLambda()
         {
             DesiredCapabilities capabilities = new DesiredCapabilities();

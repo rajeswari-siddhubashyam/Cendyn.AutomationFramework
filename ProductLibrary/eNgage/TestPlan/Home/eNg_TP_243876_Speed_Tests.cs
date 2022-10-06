@@ -21,6 +21,7 @@ namespace eNgageSpeedTest
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public eNg_TP_243876_Speed_Tests() { }
 
         [SetUp]
         public static void Initialize()

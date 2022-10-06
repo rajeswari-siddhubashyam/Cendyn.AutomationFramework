@@ -20,6 +20,7 @@ namespace eNgageHomePrompts
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public eNg_TP_242772_Prompts() { }
         [SetUp]
         public static void Initialize()
         {

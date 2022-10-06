@@ -13,6 +13,8 @@ namespace HotelOrigami
 {
     class HotelOrigami_TP_267813_Portal_Offers : eLoyaltyV3.Utility.Setup
     {
+        public HotelOrigami_TP_267813_Portal_Offers()
+        { }
         public HotelOrigami_TP_267813_Portal_Offers(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

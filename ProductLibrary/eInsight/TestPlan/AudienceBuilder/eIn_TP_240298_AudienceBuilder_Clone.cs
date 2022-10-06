@@ -17,6 +17,9 @@ namespace eInsightAudienceBuilderClone
     public class eIn_TP_240298_AudienceBuilder_Clone : eInsightSetup
     {
         public static string GetProjectName = System.Reflection.Assembly.GetCallingAssembly().GetName().Name;
+        public eIn_TP_240298_AudienceBuilder_Clone()
+        { }
+
         public eIn_TP_240298_AudienceBuilder_Clone(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

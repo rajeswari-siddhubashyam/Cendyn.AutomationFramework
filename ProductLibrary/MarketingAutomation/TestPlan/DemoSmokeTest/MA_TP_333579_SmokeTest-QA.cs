@@ -13,6 +13,9 @@ namespace MarketingAutomation.TestPlan.QA
 
     class MA_TP_333579_Manage_Common_Grid_List : MarketingAutomation.Utility.Setup
     {
+        public MA_TP_333579_Manage_Common_Grid_List()
+        { }
+
         public MA_TP_333579_Manage_Common_Grid_List(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

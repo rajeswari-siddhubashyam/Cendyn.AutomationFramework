@@ -13,6 +13,9 @@ namespace AMR_Agent.TestPlans
     //[TestFixture]
     class AMR_TP_38860_SMOKETESTS_ADMIN : AMR_Agent.Utility.Setup
     {
+        public AMR_TP_38860_SMOKETESTS_ADMIN()
+        { }
+
         public AMR_TP_38860_SMOKETESTS_ADMIN(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

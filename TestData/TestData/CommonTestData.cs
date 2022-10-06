@@ -1,4 +1,6 @@
-﻿namespace TestData
+﻿using System.Configuration;
+
+namespace TestData
 {
     public class CommonTestData
     {
@@ -16,18 +18,18 @@
         #region Common Test Data
         private static void AddTestData_Common()
         {
-            TestDataHelper.AddRecord("ALL", "ALL", "NA", "0", "0", "1", "TRUE", "Password", "Cendyn123$");
+            TestDataHelper.AddRecord("ALL", "ALL", "NA", "0", "0", "1", "TRUE", "Password", ConfigurationManager.AppSettings["CommonPassword"]);
         }
 
         private static void AddTestData_CatchAll()
         {
-            TestDataHelper.AddRecord("ALL", "Catchall", "NA", "0", "0", "1", "TRUE", "Username", "catchall@cendyn17.com");
-            TestDataHelper.AddRecord("ALL", "Catchall", "NA", "0", "0", "1", "TRUE", "Password", "Cendyn1234$");
+            TestDataHelper.AddRecord("ALL", "Catchall", "NA", "0", "0", "1", "TRUE", "Username", ConfigurationManager.AppSettings["CatchUsername"]);
+            TestDataHelper.AddRecord("ALL", "Catchall", "NA", "0", "0", "1", "TRUE", "Password", ConfigurationManager.AppSettings["CatchPassword"]);
         }
 
         private static void AddTestData_Controller()
         {
-            TestDataHelper.AddRecord("ALL", "Controller", "NA", "0", "0", "1", "TRUE", "Browser", "Chrome");
+            TestDataHelper.AddRecord("ALL", "Controller", "NA", "0", "0", "1", "TRUE", "Browser", ConfigurationManager.AppSettings["Browser"]);
         }
 
         private static void AddTestData_CRMAPI()

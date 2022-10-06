@@ -20,6 +20,8 @@ namespace eInsightPriorityQSearch
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public eIn_TP_271585_PriotityQ_Search()
+        { }
         [SetUp]
         public static void Initialize()
         {

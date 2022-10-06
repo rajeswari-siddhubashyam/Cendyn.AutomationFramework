@@ -19,6 +19,8 @@ namespace HotelOrigami
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public HotelOrigami_TP_111963_LoyaltyRules_PointEarningRule_AddRule()
+        { }
         [SetUp]
         public static void Initialize()
         {

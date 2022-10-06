@@ -17,6 +17,7 @@ namespace RevIntel
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public RevIntel_TP_252700_Business_source() { }
         [SetUp]
         public static void Initialize()
         {

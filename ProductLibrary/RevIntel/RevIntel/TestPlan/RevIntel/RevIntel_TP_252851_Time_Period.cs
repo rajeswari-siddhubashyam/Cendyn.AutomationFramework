@@ -17,6 +17,7 @@ namespace RevIntel
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public RevIntel_TP_252851_Time_Period() { }
         [SetUp]
         public static void Initialize()
         {

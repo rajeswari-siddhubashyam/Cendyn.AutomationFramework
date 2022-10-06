@@ -13,6 +13,9 @@ namespace MarketingAutomation.TestPlan.QA
 
     class MA_TP_313306_CreateCampaignDesignListView: MarketingAutomation.Utility.Setup
     {
+        public MA_TP_313306_CreateCampaignDesignListView()
+        { }
+
         public MA_TP_313306_CreateCampaignDesignListView(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();

@@ -20,6 +20,8 @@ namespace HotelOrigami
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
+        public HotelOrigami_TP_166488_Admin_ManualMerge()
+        { }
         [SetUp]
         public static void Initialize()
         {

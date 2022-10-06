@@ -21,6 +21,7 @@ namespace eNgagePreferences
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public eNg_TP_243159_Preferences() { }
 
         [SetUp]
         public static void Initialize()

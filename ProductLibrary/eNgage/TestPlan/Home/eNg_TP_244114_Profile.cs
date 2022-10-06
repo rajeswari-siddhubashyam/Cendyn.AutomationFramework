@@ -22,6 +22,7 @@ namespace eNgageProfile
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
+        public eNg_TP_244114_Profile() { }
         [SetUp]
         public static void Initialize()
         {

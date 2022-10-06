@@ -23,6 +23,9 @@ namespace eInsightEU01PostDeployment
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
+        public eIn_TP_276287_EU01_PostDeployment()
+        { }
+
         [SetUp]
         public static void Initialize()
         {

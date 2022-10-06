@@ -17,6 +17,7 @@ namespace RevIntel
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public RevIntel_TP_252636_Portaland_Dashboard() { }
         [SetUp]
         public static void Initialize()
         {

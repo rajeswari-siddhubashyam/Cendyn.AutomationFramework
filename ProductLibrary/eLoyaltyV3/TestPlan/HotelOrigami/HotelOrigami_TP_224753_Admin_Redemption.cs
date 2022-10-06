@@ -17,6 +17,8 @@ namespace HotelOrigami
         {
             Drivers = new ThreadLocal<IWebDriver>();
         }
+        public HotelOrigami_TP_224753_Admin_Redemption()
+        { }
         [SetUp]
         public static void Initialize()
         {

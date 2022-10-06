@@ -17,6 +17,7 @@ namespace CHC.TestPlan.Profile
             Drivers = new ThreadLocal<IWebDriver>();
         }
 
+        public STR_TP_345770_Profile_E2E_QA() { }
         [SetUp]
         public static void Initialize()
         {
