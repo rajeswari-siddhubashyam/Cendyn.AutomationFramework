@@ -11,11 +11,13 @@ namespace CHC_Config.AppModule.UI
         public static void Click_Configurations_App()
         {
             Logger.WriteDebugMessage("Home tab");
-            Helper.WaitTillBrowserLoad();
+            //Helper.WaitTillBrowserLoad();
             //WaittillElementDisplay(PageObject_Navigation.Configuration_App());
-            ElementWait(PageObject_Navigation.Configuration_App(), 40);
-            AddDelay(2000);
+            ElementWait(PageObject_Navigation.Configuration_App(), 80);
+            AddDelay(8000);
             Helper.ElementClick(PageObject_Navigation.Configuration_App());
+            AddDelay(8000);
+            Logger.WriteDebugMessage("Configuration app");
             Helper.WaitTillBrowserLoad();
         }
         public static void VerifyPopup()
