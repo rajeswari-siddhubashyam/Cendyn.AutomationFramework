@@ -147,7 +147,103 @@
         <Parameter key="input_brand">//input[@id='brand']</Parameter>
         <Parameter key="input_property">//input[@id='property']</Parameter>
       </Create>
-      
-    </Config>
+
+		<CreateUser>
+			
+
+			<Parameter key="Userdashboard_Filter_Enter_value">//*[contains(@id,'filter')]</Parameter>
+			<Parameter key="Userdashboard_Filter_Apply_Button">//button[contains(text(),'Apply')]</Parameter>
+			<Parameter key="User_Tab_Leftnav">//span[contains(text(),'Users')]</Parameter>
+			<Parameter key="User_Create_User_Button">//button[@id='btn-create-user']</Parameter>
+
+			<Parameter key="User_Popup_Proceed">//button[@id='user-modal-button-proceed']</Parameter>
+			<Parameter key="User_Popup_Cancel">(//button[@id='user-modal-button-cancel'])[1]</Parameter>
+			<Parameter key="User_Popup_Enter_Email">//input[@id='user-modal-input-email']</Parameter>
+			<Parameter key="User_Popup_Enter_Email_Error">//*[contains(text(),'The Email field format is invalid')]</Parameter>
+
+			<Parameter key="User_Create_User_FirstName">//input[@id='uf-firstname']</Parameter>
+			<Parameter key="User_Create_User_LastName">//input[@id='uf-lastname']</Parameter>
+			<Parameter key="User_Create_User_Email">//input[@id='uf-email']</Parameter>
+			<Parameter key="User_Create_User_JobTitle">//input[@id='uf-jobtitle']</Parameter>
+
+			<Parameter key="User_Create_User_FirstName_ErrorMsg">//div[@id='uf-firstname-error']</Parameter>
+			<Parameter key="User_Create_User_LastName_ErrorMsg">//div[@id='uf-lastname-error']</Parameter>
+
+			<Parameter key="User_Create_User_Continue_Button">//button[@id='cuf-btn-continue']</Parameter>
+
+			<Parameter key="User_Create_User_AssignOrg">//button[@id='btn-create-user']</Parameter>
+			<Parameter key="User_CreateUser_AssignApp">//*[contains(text(),"Starling")]//parent::div//parent::div//following-sibling::span[@class='e-switch-off']</Parameter>
+			<Parameter key="User_Create_User_AssignRoles">(//span[contains(text(),'Cendyn Super Admin')])[1]</Parameter>
+
+			<Parameter key="User_Create_User_AssignOrg12">(//div[@class='card-body']//span)[3]</Parameter>
+
+			<Parameter key="User_Index">//*[@class='header-title']</Parameter>
+
+			<Parameter key="User_Create_User_Select_All">(//button[contains(@id,'ostt-btn-select-all')])[1]</Parameter>
+
+			<Parameter key="User_Create_User_AssignApp12">(//span[@class='e-switch-on'])[2]</Parameter>
+
+			<Parameter key="User_Create_User_Roles_Starling_Readonly">(//span[contains(text(),'Read Only')])[3]</Parameter>
+
+			<Parameter key="User_Create_User_AssignRoles12">(//span[@class='e-icons e-frame'])[4]</Parameter>
+
+			<!--<Parameter key="Org_Accounts">(//*[contains(@class,"card-body")]//following::p[@class='tree-view-title'])[2]</Parameter>-->
+
+			<Parameter key="Org_Accounts">(//*[contains(@class,"card-body")]//following::*[@role='checkbox'])[29]</Parameter>
+
+			<!--<Parameter key="Org_Accounts_Checkbox">//*[contains(text(),"Starling")]//parent::div//parent::div//following-sibling::span[@class='e-switch-off']</Parameter>-->
+			<Parameter key="User_Create_Search">//input[contains(@id,'filter-searchbar')]</Parameter>
+
+			<Parameter key="User_Create_Clickon_Searchicon">(//div[@class='input-group-text'])[3]</Parameter>
+
+			<Parameter key="Profileidfield_ContainsFilter">//input[contains(@id,'number-userId')]</Parameter>
+
+			<Parameter key="Table_Allcolumns">//div[@class='headertext']</Parameter>
+
+			<Parameter key="Clickonfirstrecord">//span[@class='grid-cell__link-text']</Parameter>
+
+			<Parameter key="User_Dashboard_Properties_tab">//span[contains(text(),' Properties ')]</Parameter>
+			<Parameter key="User_Dashboard_Chain_tab">//span[contains(text(),' Chains ')]</Parameter>
+			<Parameter key="User_Dashboard_Brand_tab">//span[contains(text(),' Brands ')]</Parameter>
+			<Parameter key="User_Dashboard_Applications_Roles_tab">//span[contains(text(),'Applications ')]</Parameter>
+			<Parameter key="User_Dashboard_History_tab">//span[contains(text(),' History ')]</Parameter>
+
+			<Parameter key="CreateUser_Sort">//div[text()='Sort']</Parameter>
+
+			<Parameter key="CreateUser_Dashboard_propertytab">//div[@class='headertext']</Parameter>
+			<Parameter key="Verify_ChainId">//div[text()='Chain Id']</Parameter>
+			<Parameter key="Verify_BrandId">//div[text()='Brand Id']</Parameter>
+			<Parameter key="Verify_Application_Roles">(//span[@class='ml-2'])[1]</Parameter>
+			<Parameter key="CreateUser_History_Tab">//span[text()=' History ']</Parameter>
+			<Parameter key="Verify_History_ProfileCreated">//*[text()=' Profile Created ']</Parameter>
+			<Parameter key="Verify_History_ProfileUpdated">(//*[text()=' Profile Updated '])[1]</Parameter>
+			<Parameter key="UserIndex_Moredetails">(//div[@class='dropdown'])[1]</Parameter>
+			<Parameter key="UserIndex_Moredetails_Edit">(//*[contains(text(),'Edit')])[1]</Parameter>
+			<Parameter key="Edit_User">//*[@class='header-title']</Parameter>
+			<Parameter key="Edit_User_Access_Roles">//span[contains(text(),'Access')]</Parameter>
+			<Parameter key="UserDashboard_EditUser">//button[@id='ud-edit-user']</Parameter>
+			<Parameter key="EditUser_Back">//button[@id='cuf-btn-back']</Parameter>
+			<Parameter key="EditUser_Cancel">//button[@id='cuf-btn-cancel']</Parameter>
+			<Parameter key="UserIndex_Sort_Applybutton">//button[contains(@id,'sort-btn') and contains(text(),' Apply ')]</Parameter>
+			<Parameter key="UserIndex_Filter_Applybutton">//button[contains(@id,'filter-btn') and contains(text(),' Apply ')]</Parameter>
+
+			<Parameter key="UserDashboard_EditUser_Button">//*[@id='ud-edit-user']</Parameter>
+
+			<Parameter key="UserDashboard_Apps_Roles_CMS_app">//div[@class='card-header']//span[contains(text(),' CMS ')]</Parameter>
+
+			<Parameter key="UserDashboard_Proeprty_tab_PropertyId_filter">(//div[@class='e-filtermenudiv e-icons e-icon-filter'])[1]</Parameter>
+			<Parameter key="UserDashboard_Proeprty_tab_PropertyName_filter">(//div[@class='e-filtermenudiv e-icons e-icon-filter'])[3]</Parameter>
+
+			<Parameter key="UserDashboard_Chain_tab_ChainId_filter">(//div[@class='e-filtermenudiv e-icons e-icon-filter'])[1]</Parameter>
+			<Parameter key="UserDashboard_Chain_tab_ChainName_filter">(//div[@class='e-filtermenudiv e-icons e-icon-filter'])[3]</Parameter>
+
+			<Parameter key="UserDashboard_Brand_tab_BrandId_filter">(//div[@class='e-filtermenudiv e-icons e-icon-filter'])[1]</Parameter>
+			<Parameter key="UserDashboard_Brand_tab_BrandName_filter">(//div[@class='e-filtermenudiv e-icons e-icon-filter'])[3]</Parameter>
+
+			<Parameter key="Config_Organization">//span[contains(text(),'Organizations')]</Parameter>
+
+		</CreateUser>
+		
+	</Config>
   </UI>
 </ObjectRepository>
