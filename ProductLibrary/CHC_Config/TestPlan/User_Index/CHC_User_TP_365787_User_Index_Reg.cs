@@ -10,7 +10,10 @@ using Constants = CHC_Config.Utility.Constants;
 
 namespace CHC_Config.TestPlan.User_Index
 {
+    
     class CHC_User_TP_365787_User_Index_Reg
     {
+        public CHC_User_TP_365787_User_Index_Reg()
+        { }
     }
 }

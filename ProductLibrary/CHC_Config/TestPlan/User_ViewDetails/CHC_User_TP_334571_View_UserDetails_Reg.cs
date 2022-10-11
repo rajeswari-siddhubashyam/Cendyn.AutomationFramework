@@ -12,6 +12,8 @@ namespace CHC_Config.TestPlan.User_ViewDetails
 {
     class CHC_User_TP_334571_View_UserDetails_Reg : CHC_Config.Utility.Setup
     {
+        public CHC_User_TP_334571_View_UserDetails_Reg()
+        { }
         public CHC_User_TP_334571_View_UserDetails_Reg(string browser, string version, string os, string resolution) : base(browser, version, os, resolution)
         {
             Drivers = new ThreadLocal<IWebDriver>();
