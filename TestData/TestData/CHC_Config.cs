@@ -180,6 +180,25 @@ namespace TestData
             }
 
         }
+
+        private static void AddTestData_TestPlan_TP_334571(string clientName)
+        {
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_334571", "TC_334578", "1", "TRUE", "allenv", "BothEnv");
+
+            if (clientName == "CHC_UPQA")
+            {
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_334571", "TC_334578", "1", "TRUE", "email", "testuser10@cendyn17.com");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_334571", "TC_334578", "2", "TRUE", "password", "Cendyn123$");
+
+                //TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_323199", "TC_309602", "3", "TRUE", "create_chain", "Create Chain");
+            }
+            else if (clientName == "CHC_UPDEV")
+            {
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_334571", "TC_334578", "1", "TRUE", "email", "testuser10@cendyn17.com");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_334571", "TC_334578", "2", "TRUE", "password", "Cendyn123$");
+            }
+
+        }
         #endregion
     }
 }

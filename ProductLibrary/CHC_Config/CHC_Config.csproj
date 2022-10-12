@@ -56,10 +56,13 @@
     <Compile Include="AppModule\MainAdminApp\TP_000000_ModuleName.cs" />
     <Compile Include="AppModule\MainAdminApp\TP_000000_SignIn.cs" />
     <Compile Include="AppModule\MainAdminApp\TP_323199_OrgIndex.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_334571_View_UserDetails_Reg.cs" />
     <Compile Include="AppModule\MainAdminApp\TP_349769_ChainDashboard.cs" />
     <Compile Include="AppModule\MainAdminApp\TP_349772_BrandDashboard.cs" />
     <Compile Include="AppModule\MainAdminApp\TP_349775_PropertyDashboard.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_365785_User_Index_Reg.cs" />
     <Compile Include="AppModule\UI\Create.cs" />
+    <Compile Include="AppModule\UI\CreateUser.cs" />
     <Compile Include="AppModule\UI\Dashboard.cs" />
     <Compile Include="AppModule\UI\Navigation.cs" />
     <Compile Include="AppModule\UI\OrgIndex.cs" />
@@ -73,6 +76,7 @@
     <Compile Include="Entity\Users.cs" />
     <Compile Include="PageObject\Admin\PageObject_Admin.cs" />
     <Compile Include="PageObject\UI\PageObject_Create.cs" />
+    <Compile Include="PageObject\UI\PageObject_CreateUser.cs" />
     <Compile Include="PageObject\UI\PageObject_Dashboard.cs" />
     <Compile Include="PageObject\UI\PageObject_Home.cs" />
     <Compile Include="PageObject\UI\PageObject_Navigation.cs" />
@@ -84,6 +88,8 @@
     <Compile Include="TestPlan\Org_Dashboard\CHC_TP_349772_BrandDashboard.cs" />
     <Compile Include="TestPlan\Org_Dashboard\CHC_TP_349775_PropertyDashboard.cs" />
     <Compile Include="TestPlan\Org_Index\CHC_TP_323199_OrgIndex.cs" />
+    <Compile Include="TestPlan\User_Index\CHC_User_TP_365787_User_Index_Reg.cs" />
+    <Compile Include="TestPlan\User_ViewDetails\CHC_User_TP_334571_View_UserDetails_Reg.cs" />
     <Compile Include="Utility\Constants.cs" />
     <Compile Include="Utility\ObjectRepository.cs" />
     <Compile Include="Utility\Queries.cs" />
@@ -96,6 +102,9 @@
     <Content Include="ObjectRepository\OR.xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="CTOS">
+      <Version>2022.10.6.1</Version>
+    </PackageReference>
     <PackageReference Include="ExtentReports">
       <Version>3.1.3</Version>
     </PackageReference>
