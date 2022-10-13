@@ -116,9 +116,9 @@ namespace BaseUtility.Utility
                     TestHandling.BrowserSetup();
                 else
                     InitializeLambdaSeleniumFour();
-                    //InitializeLambda();
             }
         }
+
         //public static void SetupTestPlan_WithooutLamda(eProduct product, Enum clientName, Enum testDataType, Enum caseType, string projectName = null)
         //{
         //    _product = product;
@@ -165,34 +165,6 @@ namespace BaseUtility.Utility
             _resolution = resolution;
         }
 
-       /* public static void InitializeLambda()
-        {
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.SetCapability(CapabilityType.BrowserName, _browser);
-            capabilities.SetCapability(CapabilityType.Version, _version);
-            capabilities.SetCapability(CapabilityType.Platform, _os);
-            capabilities.SetCapability("resolution", _resolution);
-            capabilities.SetCapability("idleTimeout", "1800"); //extends idle timeout 
-            capabilities.SetCapability("console", true);
-            capabilities.SetCapability("network", false);
-            //Requires a named tunnel.
-            if (tunnel)
-            {
-                capabilities.SetCapability("tunnel", tunnel);
-            }
-            if (build != null)
-            {
-                capabilities.SetCapability("build", build);
-            }
-
-            capabilities.SetCapability("user", LT_USERNAME);
-            capabilities.SetCapability("accessKey", LT_ACCESS_KEY);
-            capabilities.SetCapability("name", String.Format("{0}:{1}", TestContext.CurrentContext.Test.ClassName, TestContext.CurrentContext.Test.MethodName));
-            Driver = new RemoteWebDriver(new Uri(seleniumUri), capabilities, TimeSpan.FromSeconds(600));
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(40);
-            Driver.Manage().Timeouts().PageLoad= TimeSpan.FromSeconds(40);
-            Console.Out.WriteLine(Driver);
-        } */
         /// <summary>
         /// POC excel
         /// </summary>
@@ -230,6 +202,7 @@ namespace BaseUtility.Utility
             var capabilities = Helper.GetBrowserDriverOptions(_browser);
             capabilities.BrowserVersion = _version;
             Dictionary<string, object> ltOptions = new Dictionary<string, object>();
+            ltOptions.Add("selenium_version", "4.0.0");
             ltOptions.Add("user", LT_USERNAME);
             ltOptions.Add("accessKey", LT_ACCESS_KEY);
             ltOptions.Add("platformName", _os);
@@ -237,6 +210,8 @@ namespace BaseUtility.Utility
             ltOptions.Add("idleTimeout", "1800"); //extends idle timeout 
             ltOptions.Add("console", true);
             ltOptions.Add("network", false);
+            ltOptions.Add("w3c", true);
+            ltOptions.Add("plugin", "c#-nunit");
             ltOptions.Add("name", String.Format("{0}:{1}", TestContext.CurrentContext.Test.ClassName, TestContext.CurrentContext.Test.MethodName));
             //Requires a named tunnel.
             if (tunnel)
