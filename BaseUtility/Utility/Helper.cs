@@ -1319,7 +1319,7 @@ namespace BaseUtility.Utility
         {
             //*** Upload image- Begin***//
             var Au3 = new AutoItX3();
-            if (BrowserType == "Mozilla")
+            if (BrowserType == "Firefox")
             {
                 /**Upload Method for Mozilla browser using Au3 freeWare scripting commands-Start**/
                 element.Click();

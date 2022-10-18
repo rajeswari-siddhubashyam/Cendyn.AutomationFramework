@@ -44,7 +44,7 @@ namespace BaseUtility.Utility
                 //Driver.Manage().Window.Size = new Size(1600, 900);
                 ((IJavaScriptExecutor)Driver).ExecuteScript("document.body.style.transform='scale(0.8)';");
             }
-            if (BrowserType == "Mozilla")
+            if (BrowserType == "Firefox")
             {
                 //var profile = new FirefoxProfile();
                 //profile.AcceptUntrustedCertificates = true;
@@ -75,14 +75,14 @@ namespace BaseUtility.Utility
                 Driver = new InternetExplorerDriver();
                 Driver.Manage().Window.Maximize();
             }
-            if (BrowserType != "Mozilla")
+            if (BrowserType != "Firefox")
             {
                 //Set wait times for Selenium 3.0.0
                 Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
             }
 
             //Setup Action obj
-            if (BrowserType != "Mozilla")
+            if (BrowserType != "Firefox")
             {
                 Actions = new Actions(Driver);
             }
@@ -103,7 +103,7 @@ namespace BaseUtility.Utility
                 chromeOptions.AddArgument("no-sandbox");
                 Driver = new ChromeDriver(chromeOptions);
             }
-            if (BrowserType == "Mozilla")
+            if (BrowserType == "Firefox")
             {
                 //var profile = new FirefoxProfile();
                 //profile.AcceptUntrustedCertificates = true;
@@ -132,14 +132,14 @@ namespace BaseUtility.Utility
                 Driver.Manage().Window.Maximize();
             }
 
-            if (BrowserType != "Mozilla")
+            if (BrowserType != "Firefox")
             {
                 //Set wait times for Selenium 3.0.0
                 Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
             }
 
             //Setup Action obj
-            if (BrowserType != "Mozilla")
+            if (BrowserType != "Firefox")
             {
                 Actions = new Actions(Driver);
             }
@@ -224,7 +224,7 @@ namespace BaseUtility.Utility
 
         public static IEnumerable<String> BrowserToRunWith()
         {
-            String[] browser = { "Chrome", "InternetExplorer", "Mozilla" };
+            String[] browser = { "Chrome", "InternetExplorer", "Firefox" };
             foreach (String b in browser)
             {
                 yield return b;

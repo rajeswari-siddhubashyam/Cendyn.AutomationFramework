@@ -52,7 +52,7 @@ namespace Common
 
         #region Browsers
 
-        public static string FireFox = "Mozilla";
+        public static string FireFox = "Firefox";
         public static string Chrome = "Chrome";
         public static string IE = "IE";
 
