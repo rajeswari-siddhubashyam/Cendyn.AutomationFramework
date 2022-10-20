@@ -1054,7 +1054,7 @@ namespace BaseUtility.Utility
             //    Driver = new ChromeDriver();
             //    Driver.Manage().Window.Maximize();
             //}
-            //if (BrowserType == "Mozilla")
+            //if (BrowserType == "Firefox")
             //{
             //    var profile = new FirefoxOptions();
             //    profile.AcceptInsecureCertificates = true;
