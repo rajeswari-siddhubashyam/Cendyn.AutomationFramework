@@ -9,5 +9,6 @@ namespace CHC_Config.Entity
     public class Users
     {
         public string CMData { set; get; }
+        public string UserId { set; get; }
     }
 }

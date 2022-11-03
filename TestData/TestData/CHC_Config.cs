@@ -27,7 +27,7 @@ namespace TestData
             if (clientName == "CHC_ConfigQA")
             {
                 //TestDataHelper.AddTestData_ClientConfig(clientName, "", "", "https://dev.gocendyn.com/", "", "", "");
-                TestDataHelper.AddTestData_ClientConfig(clientName, "", "", "https://qa.gocendyn.com/", "", "", "");
+                TestDataHelper.AddTestData_ClientConfig(clientName, "", "", "https://qa01.gocendyn.com/", "", "", "");
             }
             else if (clientName == "CHC_ConfigDEV")
             {
@@ -44,7 +44,7 @@ namespace TestData
         {
             if (clientName == "CHC_UPQA")
             {
-                TestDataHelper.AddTestData_ClientConfig(clientName, "", "", "https://qa.gocendyn.com/", "", "", "");
+                TestDataHelper.AddTestData_ClientConfig(clientName, "", "", "https://qa01.gocendyn.com/", "", "", "");
             }
             else if (clientName == "CHC_UPDEV")
             {
@@ -75,12 +75,12 @@ namespace TestData
             else if (clientName == "CHC_ConfigDEV")
             {
                 TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_000000", "TC_000000", "1", "TRUE", "email", "testuser10@cendyn17.com");
-                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_000000", "TC_000000", "2", "TRUE", "password", "Cendyn321#");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_000000", "TC_000000", "2", "TRUE", "password", "Cendyn123#");
             }
             /*else if (clientName == "CHC_ConfigDEMO")
             {
                 TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_000000", "TC_000000", "1", "TRUE", "email", "testuser10@cendyn17.com");
-                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_000000", "TC_000000", "2", "TRUE", "password", "Cendyn321$");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_000000", "TC_000000", "2", "TRUE", "password", "Cendyn123$");
             }*/
 
         }
@@ -199,6 +199,27 @@ namespace TestData
             }
 
         }
+
+        private static void AddTestData_TestPlan_TP_422701(string clientName)
+        {
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_422701", "TC_334578", "1", "TRUE", "allenv", "BothEnv");
+
+            if (clientName == "CHC_ConfigQA")
+            {
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_422701", "TC_335464", "1", "TRUE", "email", "testuser10@cendyn17.com");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_422701", "TC_335464", "2", "TRUE", "password", "Cendyn123$");
+
+                //TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_323199", "TC_309602", "3", "TRUE", "create_chain", "Create Chain");
+            }
+            else if (clientName == "CHC_ConfigDEV")
+            {
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_422701", "TC_334578", "1", "TRUE", "email", "testuser10@cendyn17.com");
+                TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_422701", "TC_334578", "2", "TRUE", "password", "Cendyn123$");
+            }
+
+        }
+
+
         #endregion
     }
 }

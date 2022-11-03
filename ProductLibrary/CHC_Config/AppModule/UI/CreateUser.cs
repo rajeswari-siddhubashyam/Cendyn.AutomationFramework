@@ -30,6 +30,22 @@ namespace CHC_Config.AppModule.UI
         }
 
         /// <summary>
+        /// This method will Check the list of profiles in the first page of the table.
+        /// </summary>
+        /// <param name="lst_ProfileDb"></param>
+        public static void VerifyTableData(List<Users> lst_ProfileDb)
+        {
+            for (int i = 0; i < lst_ProfileDb.Count; i++)
+            {
+                Users profileDb = lst_ProfileDb[i];
+                string profileId = profileDb.UserId;
+
+                VerifyTextOnPageAndHighLight(profileId, "//table[@class='e-table']//tr[" + (i + 1) + "]/td[1]");
+                Logger.WriteDebugMessage("User verify the profile id is " + profileId + " ");
+            }
+        }
+
+        /// <summary>
         /// This method is to create a new user with CraeteUser button
         /// </summary>
         public static void Clickon_CreateUser_Button()
