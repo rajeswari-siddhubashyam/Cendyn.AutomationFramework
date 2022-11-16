@@ -61,6 +61,7 @@
     <Compile Include="AppModule\MainAdminApp\TP_349772_BrandDashboard.cs" />
     <Compile Include="AppModule\MainAdminApp\TP_349775_PropertyDashboard.cs" />
     <Compile Include="AppModule\MainAdminApp\TP_365785_User_Index_Reg.cs" />
+    <Compile Include="AppModule\MainAdminApp\TP_422701_Users_Smoke.cs" />
     <Compile Include="AppModule\UI\Create.cs" />
     <Compile Include="AppModule\UI\CreateUser.cs" />
     <Compile Include="AppModule\UI\Dashboard.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="TestPlan\Org_Dashboard\CHC_TP_349772_BrandDashboard.cs" />
     <Compile Include="TestPlan\Org_Dashboard\CHC_TP_349775_PropertyDashboard.cs" />
     <Compile Include="TestPlan\Org_Index\CHC_TP_323199_OrgIndex.cs" />
+    <Compile Include="TestPlan\Users_Smoke\CHC-Users-TP-422701-Smoke.cs" />
     <Compile Include="TestPlan\User_Index\CHC_User_TP_365787_User_Index_Reg.cs" />
     <Compile Include="TestPlan\User_ViewDetails\CHC_User_TP_334571_View_UserDetails_Reg.cs" />
     <Compile Include="Utility\Constants.cs" />

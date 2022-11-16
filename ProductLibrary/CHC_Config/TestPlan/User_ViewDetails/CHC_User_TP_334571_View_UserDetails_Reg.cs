@@ -37,13 +37,13 @@ namespace CHC_Config.TestPlan.User_ViewDetails
 
         /* Config - Org Index - Verify Property Details table */
         [Test, Category("Regression - QA")]
-        public static void TC_334578()
+        public static void TC_335464()
         {
             try
             {
 
                 /**Test execution - Start**/
-                SetupTestCase(Constants.TC_334578, "Excel", CHC_Config.Utility.Constants.clientEnv.CHC_ConfigQA, Enums.TestDataType.FrontEnd, Enums.CaseType.TestCase);
+                SetupTestCase(Constants.TC_335464, "Excel", CHC_Config.Utility.Constants.clientEnv.CHC_ConfigQA, Enums.TestDataType.FrontEnd, Enums.CaseType.TestCase);
 
                 Logger.DeleteOldFolder();
 
