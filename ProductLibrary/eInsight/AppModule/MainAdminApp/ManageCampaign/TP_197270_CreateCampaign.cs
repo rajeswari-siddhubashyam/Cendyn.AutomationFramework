@@ -648,8 +648,8 @@ namespace eInsight.AppModule.MainAdminApp
                     DynamicScroll(Driver, PageObject_CreateCampaign.CreateCampaign_EditTemplate_Subject());
                     ManageCampaign.EnterCampaignSubject(subjectName);
 
-                    ScrollDownUsingJavaScript(Driver, -1000);
-
+                    ScrollDownUsingJavaScript(Driver, -1500);
+                    
                     CreateCampaign.CreateCampaign_Button_SaveandContinue();
 
                     Navigation.MenuNavigation("ManageCampaign");
