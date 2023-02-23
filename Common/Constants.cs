@@ -97,7 +97,7 @@ namespace Common
         public static string CommonPassword = "Cendyn123$";
         public static string CommonPassword_Demo = "@Sc@A6Ffs#mrY#eX";
         public static string CatchAllEmail = "catchall@cendyn17.com";
-        public static string CatchAllPassword = "Cendyn1234$";
+        public static string CatchAllPassword = "AutoCendyn12345$";
         #endregion[CommonData]
     }
 }

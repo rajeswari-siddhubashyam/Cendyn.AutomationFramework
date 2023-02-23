@@ -1234,7 +1234,7 @@ namespace eInsight.AppModule.UI
         {
             /*Add Sub Client*/
             AddDelay(30000);
-            ScrollDownUsingJavaScript(Driver, -1000);
+              ScrollDownUsingJavaScript(Driver, -1000);
             //Profile.SelectClient(parentCompany);
             Profile.SelectSubClient(companyName);
             AddDelay(20000);
@@ -1253,7 +1253,7 @@ namespace eInsight.AppModule.UI
                     ElementEnterText(PageObject_ManageCampaign.ManageCampaign_SearchProjectIDText(), searchText);
                     ElementClick(PageObject_ManageCampaign.ManageCampaign_SearchProjectID_Filter());
                     Helper.WaitTillInvisibilityOfLoader(loader1, 180);
-                    ElementWait(Driver.FindElement(By.XPath("//span[contains(text(), 'ID')]//following::*[contains(text(), '" + searchText + "')]")), 30);
+                    ElementWait(Driver.FindElement(By.XPath("//span[contains(text(), 'ID')]//following::*[contains(text(), '"+ searchText.Trim() +"')]")), 30);
                     if (IsElementPresent(By.XPath("//span[contains(text(), 'ID')]//following::*[contains(text(), '" + searchText + "')]")))
                     {
                         Logger.WriteDebugMessage("Search and Filtered ProjectID - " + searchText);

@@ -141,7 +141,7 @@ namespace BaseUtility.Utility.Hotmail
             ElementEnterText(Driver.FindElement(By.XPath(SignIn_Email)), Email);
             ElementClick(Driver.FindElement(By.XPath(SignIn_Button)));
             AddDelay(25000);
-            ElementEnterText(Driver.FindElement(By.XPath(SignIn_Password)), Password);
+            ElementEnterText(Driver.FindElement(By.XPath(SignIn_Password)), "DevAuto.123429$");
             Logger.WriteDebugMessage("Entered Catchall UserName and Password");
             ElementClick(Driver.FindElement(By.XPath(SignIn_Button)));
 
