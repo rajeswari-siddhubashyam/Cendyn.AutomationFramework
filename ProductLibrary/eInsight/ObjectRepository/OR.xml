@@ -3,6 +3,7 @@
   <UI>
     <Login>
       <Parameter key="Login_Email">Username</Parameter>
+      <Parameter key="Login_NextButton">Next</Parameter>
       <Parameter key="Login_Password">Password</Parameter>
       <Parameter key="Login_Submit">submit</Parameter>
       <Parameter key="Login_ForgotPassword">//a[contains(.,'Forgot Password')]</Parameter>

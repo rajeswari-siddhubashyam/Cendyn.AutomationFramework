@@ -25,7 +25,9 @@ namespace eInsight.Utility
         public static string Login_IFrame_AgreeProceed { get; set; }
         public static string Login_IFrame_AgreeProceed_Close { get; set; }
         public static string Login_Email { get; set; }
+        public static string Login_NextButton { get; set; }
         public static string Login_Password { get; set; }
+        
         public static string Login_Submit { get; set; }
         public static string Login_ForgotPassword { get; set; }
         public static string Login_ResetPassword { get; set; }

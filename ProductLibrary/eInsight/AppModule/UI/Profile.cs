@@ -63,7 +63,7 @@ namespace eInsight.AppModule.UI
                 {
                     Logger.WriteInfoMessage("Selecting the Property " + client);
                     //ElementWait(PageObject_Profile.Profile_Sub_Client(), 320);
-                    PageObject_Profile.Profile_Sub_Client().Click();
+                     PageObject_Profile.Profile_Sub_Client().Click();
                     AddDelay(5000);
                     PageObject_Profile.Profile_Sub_Client_SearchField().SendKeys(client);
                     var cList = Driver.FindElement(By.Id("client_select"));
@@ -1028,7 +1028,7 @@ namespace eInsight.AppModule.UI
         }
         public static void EnterResendEmailAddress()
         {
-            ElementEnterText(Driver.FindElement(By.Id("alt_email")), "cendynautomation@cendyn.com");
+            ElementEnterText(Driver.FindElement(By.Id("alt_email")), ",cendynautomation@cendyn.com");
         }
 
         public static void SelectCampaignName(string campaignName)

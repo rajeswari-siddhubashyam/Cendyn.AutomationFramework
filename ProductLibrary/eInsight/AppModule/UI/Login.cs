@@ -24,7 +24,7 @@ namespace eInsight.AppModule.UI
         public static void EnterUserName(string username)
         {
             ElementEnterText(PageObject_Login.Email(), username);
-        }
+        }        
 
         /// <summary>
         /// This method will enter the password on the eInsight login page.
@@ -95,6 +95,21 @@ namespace eInsight.AppModule.UI
         }
 
         /// <summary>
+        /// This method will click the Next button on the eInsight login page.
+        /// </summary>
+        public static void ClickNextButton()
+        {
+            if (IsElementPresent(By.Id("Next")))
+            {
+                ElementClick(Driver.FindElement(By.Id("Next")));
+            }
+            else
+            {
+                ElementClick(Driver.FindElement(By.Id("Next")));
+            }
+        }
+
+        /// <summary>
         /// This method will click the Submit button on the eInsight login page.
         /// </summary>
         public static void ClickSubmit()
@@ -132,6 +147,7 @@ namespace eInsight.AppModule.UI
             }
             ElementWait(PageObject_Login.Email(), 60);
             EnterUserName(LegacyTestData.CommonFrontendEmail);
+            ClickNextButton();
             EnterPassword(LegacyTestData.CommonFrontendPassword);
             ClickSubmit();
 

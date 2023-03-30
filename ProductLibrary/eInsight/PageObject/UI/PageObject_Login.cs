@@ -50,7 +50,15 @@ namespace eInsight.PageObject.UI
             return PageAction.Find_ElementId(ObjectRepository.Login_Password);
         }
 
-        public static IWebElement Submit()
+        public static IWebElement NextButton()
+        {
+            ScanPage(Constants.Login);
+        CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementId(ObjectRepository.Login_NextButton);
+        }
+
+    public static IWebElement Submit()
         {
             ScanPage(Constants.Login);
             CurrentPageName = PageName;
