@@ -1,0 +1,31 @@
+2023-04-27 19:11:14,437 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-04-27 19:11:14,439 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-04-27 19:11:14,441 ::INFO ::[Logger]::  is used for Testing
+2023-04-27 19:11:14,448 ::INFO ::[Logger]:: This is the login page.data:,
+2023-04-27 19:11:14,448 ::INFO ::[Logger]:: Execution started at:-Apr-27-2023 19-11-14-PM
+2023-04-27 19:11:14,448 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-04-27 19:11:14,448 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-04-27 19:11:14,448 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_294941         XXXXXXXXXXXXXXXX
+2023-04-27 19:11:14,448 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-04-27 19:11:14,448 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-04-27 19:11:33,319 ::ERROR::[Logger]:: eLoyaltyV3_Flow :: Script::Failed
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at eLoyaltyV3.Utility.Queries.GetRuleByName(Users data, String ruleName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\Utility\Queries.cs:line 3385
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TC_294941() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp\WindowsService\Scenario Validation\Scenario_Validation.cs:line 8103
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TP_294919() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp.cs:line 1068
+   at eLoyaltyV3.TestPlan.HotelOrigami.WindowsServices.Scenario_Validation.HotelOrigami_TP_294919_Service_Scenario_Validation.TC_294941() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\TestPlan\HotelOrigami\WindowsServices\Scenario Validation\HotelOrigami_TP_294919_Service_Scenario_Validation.cs:line 555
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2023-04-27 19:11:40,409 ::INFO ::[Logger]:: E.N.D

@@ -1,0 +1,45 @@
+2023-04-29 21:07:50,886 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-04-29 21:07:52,690 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-04-29 21:07:52,705 ::INFO ::[Logger]::  is used for Testing
+2023-04-29 21:07:52,883 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.godevcendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goDEVcendyn.com/SSOLanding.aspx
+2023-04-29 21:07:52,885 ::INFO ::[Logger]:: Execution started at:-Apr-29-2023 21-07-52-PM
+2023-04-29 21:07:52,891 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-04-29 21:07:52,893 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-04-29 21:07:52,895 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_266464         XXXXXXXXXXXXXXXX
+2023-04-29 21:07:52,897 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-04-29 21:07:52,987 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-04-29 21:07:53,144 ::INFO ::[Logger]:: Test Case : Verify Change Password functionality will not be successful when Current password is incorrect
+2023-04-29 21:07:56,985 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-04-29 21:07:56,985 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-04-29 21:08:07,966 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-04-29 21:08:09,667 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2023-04-29 21:08:09,791 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
+2023-04-29 21:08:20,340 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2023-04-29 21:08:20,340 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
+2023-04-29 21:08:23,866 ::DEBUG::[Logger]:: 4) Client displayed
+2023-04-29 21:08:43,252 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
+2023-04-29 21:08:43,256 ::DEBUG::[Logger]:: 5) D Rock selected
+2023-04-29 21:08:56,822 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
+2023-04-29 21:09:00,217 ::DEBUG::[Logger]:: 7) Actual url = https://revintelbi.godevcendyn.com/revintel.aspx match with Expected url = https://revintelbi.godevcendyn.com/revintel.aspx
+2023-04-29 21:09:07,865 ::INFO ::[Logger]:: Clicked the Click_TA element on the Navigation page.
+2023-04-29 21:09:07,897 ::DEBUG::[Logger]:: 8) change password displayed
+2023-04-29 21:10:10,785 ::ERROR::[Logger]:: The //span[contains(text(),'change password')] element was not found on the page.
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:63853/session/87d4a68865838f37416d474ae2714533/element timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at BaseUtility.PageObject.PageAction.Find_ElementXPath(String repoName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\PageObject\PageAction.cs:line 33

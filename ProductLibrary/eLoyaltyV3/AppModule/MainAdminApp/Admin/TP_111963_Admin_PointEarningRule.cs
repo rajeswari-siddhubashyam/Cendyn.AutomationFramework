@@ -239,7 +239,8 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Logger.WriteDebugMessage("Clicked on Canceled button for Add Points earning Rule");
 
                 //Add New Points Earning Rule with Already Used Priority of Inactive rule
-                Queries.GetLoyaltyRules(data, "0", "Points");
+                Queries.GetLoyaltyRulesRandom(data, "0", "Points");
+                Helper.ElementClearText(PageObject_Admin.PointsEarningRules_Text_Filter());
                 Admin.Enter_PointsEarningRules_Text_Filter(data.RuleName);
                 AddDelay(2500);
                 VerifyTextOnPageAndHighLight(data.RuleName);
@@ -255,8 +256,9 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                     data.MembershipLevel, ProjectName);
                 Logger.WriteDebugMessage("user should be able to Enter all the fields with Priority of existing Inactive Rule");
                 Admin.Click_PointsEarningRules_Button_Save();
-                
+
                 //Verify the added Rule
+                Helper.ElementClearText(PageObject_Admin.PointsEarningRules_Text_Filter());
                 Admin.Enter_PointsEarningRules_Text_Filter(name);
                 AddDelay(2500);
                 VerifyTextOnPageAndHighLight(name);
@@ -641,6 +643,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Logger.WriteDebugMessage("Existing Rule got displaying on Grid");
                 Admin.Click_PointsEarningRules_Icon_Edit();
                 Logger.WriteDebugMessage("Edit Overlay got Displayed");
+                Helper.ElementClearText(PageObject_Admin.PointsEarningRules_Text_Name());
                 Admin.Enter_PointsEarningRules_Text_Name(name);
                 Logger.WriteDebugMessage("User should be able to edit title");
                 Admin.Click_PointsEarningRules_Button_Save();
@@ -648,6 +651,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Logger.WriteDebugMessage(titleValidation + "= Validation message displaying on the page");
 
                 //Close the Overlay
+                Helper.ElementClearText(PageObject_Admin.PointsEarningRules_Text_Name());
                 Admin.Enter_PointsEarningRules_Text_Name(gridName);
                 Logger.WriteDebugMessage("Name update as before");
                 Admin.Click_PointsEarningRules_Button_Cancel();
@@ -655,6 +659,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Logger.WriteDebugMessage("Overlay got  closed");
 
                 //Update the Rule with Past date, so that it will not impact on Testing
+                Helper.ElementClearText(PageObject_Admin.PointsEarningRules_Text_Filter());
                 Admin.Enter_PointsEarningRules_Text_Filter(name);
                 Logger.WriteDebugMessage("Added Award got displayed");
                 Admin.Click_PointsEarningRules_Icon_Edit();
@@ -743,6 +748,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Logger.WriteDebugMessage("Existing Rule got dispayed on the grid");
                 Admin.Click_PointsEarningRules_Icon_Edit();
                 Logger.WriteDebugMessage("Edit Overlay got displayed on the Page");
+                Helper.ElementClearText(PageObject_Admin.PointsEarningRules_Text_Priority());
                 Admin.Enter_PointsEarningRules_Text_Priority(priority);
                 Logger.WriteDebugMessage("User should be able to edit priority");
                 Admin.Click_PointsEarningRules_Button_Save();
@@ -750,6 +756,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Logger.WriteDebugMessage(priorityValidation + "= Validation message displaying on the page");
 
                 //Update priority to as it was before 
+                Helper.ElementClearText(PageObject_Admin.PointsEarningRules_Text_Priority());
                 Admin.Enter_PointsEarningRules_Text_Priority(gridPriority);
                 Logger.WriteDebugMessage("Priority updated as before");
                 Admin.Click_PointsEarningRules_Button_Save();
@@ -1090,6 +1097,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
 
                 // Select any existing rule whose status is Active and Verify User is able to update Priority
                 Queries.GetLoyaltyRules(data, "1", "Points");
+                Helper.ElementClearText(PageObject_Admin.PointsEarningRules_Text_Filter());
                 Admin.Enter_PointsEarningRules_Text_Filter(data.RuleName);
                 string gridName = PageObject_Admin.Get_PointsEarningRule_GridName().GetAttribute("innerHTML");
                 Logger.WriteDebugMessage("Active Rule got Displayed on the grid");
@@ -1136,24 +1144,28 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Logger.WriteDebugMessage("Rule got Displayed on the Page");
                 Admin.Click_PointsEarningRules_Icon_Edit();
                 Logger.WriteDebugMessage("Edit Overlay got Displayed");
+                Helper.ElementClearText(PageObject_Admin.PointsEarningRules_Text_Priority());
                 Admin.Enter_PointsEarningRules_Text_Priority(priority);
                 Logger.WriteDebugMessage("Priority updated");
                 Admin.Click_PointsEarningRules_Button_Save();
                 if (PageObject_Admin.PointsEarningRules_Button_Save().Displayed)
                     Assert.Fail("Changes are not saved");
                 else
-                { 
+                {
+                    Helper.ElementClearText(PageObject_Admin.PointsEarningRules_Text_Filter());
                     Admin.Enter_PointsEarningRules_Text_Filter(gridName);
                     VerifyTextOnPageAndHighLight(priority);
                     Logger.WriteDebugMessage("Priority updated and displayed on grid");
                 }
 
                 // For Scheduled rule
-                Admin.Enter_PointsEarningRules_Text_Filter("Scheduled");
+                Helper.ElementClearText(PageObject_Admin.PointsEarningRules_Text_Filter());
+                Admin.Enter_PointsEarningRules_Text_Filter("Scheduled1");
                 string gridName1 = PageObject_Admin.Get_PointsEarningRule_GridName().GetAttribute("innerHTML");
                 Logger.WriteDebugMessage("Schedule rule got displayed");
                 Admin.Click_PointsEarningRules_Icon_Edit();
                 Logger.WriteDebugMessage("Edit Overlay got diaplyed");
+                Helper.ElementClearText(PageObject_Admin.PointsEarningRules_Text_Priority());
                 Admin.Enter_PointsEarningRules_Text_Priority(priority1);
                 Logger.WriteDebugMessage("Priority updated");
                 Admin.Click_PointsEarningRules_Button_Save();
@@ -1169,6 +1181,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
 
 
                 //For Inactive rule
+                Helper.ElementClearText(PageObject_Admin.PointsEarningRules_Text_Filter());
                 Admin.Enter_PointsEarningRules_Text_Filter("Inactive");
                 Admin.Click_PointsEarningRules_Icon_Edit();
                 Logger.WriteDebugMessage("Edit button clicked");

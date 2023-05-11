@@ -1,62 +1,59 @@
-2020-08-04 17:26:45,651 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
-2020-08-04 17:26:45,784 ::INFO ::[Logger]:: Chrome is currently being used for testing.
-2020-08-04 17:26:45,810 ::INFO ::[Logger]::  is used for Testing
-2020-08-04 17:26:45,820 ::INFO ::[Logger]:: This is the login page.https://ssodev.rainmakertest.org/Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://devrhbi.revintel.co/SSOLanding.aspx
-2020-08-04 17:26:45,822 ::INFO ::[Logger]:: Execution started at:-Aug-04-2020 17-26-45-PM
-2020-08-04 17:26:45,824 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2020-08-04 17:26:45,826 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
-2020-08-04 17:26:46,834 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_252394         XXXXXXXXXXXXXXXX
-2020-08-04 17:26:46,835 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2020-08-04 17:26:48,852 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=744}
-2020-08-04 17:26:48,867 ::INFO ::[Logger]:: Test Case : Verify logged in user is able to navigate to all menu and generate random reports
-2020-08-04 17:26:53,392 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
-2020-08-04 17:26:53,394 ::DEBUG::[Logger]:: 1) Email Address displayed
-2020-08-04 17:27:02,872 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
-2020-08-04 17:27:07,128 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
-2020-08-04 17:27:07,135 ::DEBUG::[Logger]:: 2) Login in with Username =rshende@delaplex.com and Password =Cendyn111$
-2020-08-04 17:27:16,945 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
-2020-08-04 17:27:21,096 ::INFO ::[Logger]:: Clicked the UAT element on the Navigation page.
-2020-08-04 17:27:21,107 ::DEBUG::[Logger]:: 3) user landed on the UAT RevIntel client selection page
-2020-08-04 17:27:24,510 ::DEBUG::[Logger]:: 4) Client displayed
-2020-08-04 17:27:38,077 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
-2020-08-04 17:27:38,091 ::DEBUG::[Logger]:: 5) Kerzner selected
-2020-08-04 17:27:50,487 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
-2020-08-04 17:27:54,274 ::DEBUG::[Logger]:: 7) Hotel Dropdown displayed
-2020-08-04 17:28:01,503 ::INFO ::[Logger]:: Clicked the Hotel element on the Navigation page.
-2020-08-04 17:28:01,506 ::INFO ::[Logger]:: User landed on monthly pickup report page
-2020-08-04 17:28:02,861 ::DEBUG::[Logger]:: 8) BusinessSource DropDown displayed
-2020-08-04 17:28:09,372 ::INFO ::[Logger]:: Clicked the BusinessSource element on the Navigation page.
-2020-08-04 17:28:10,722 ::DEBUG::[Logger]:: 9) Market DropDown displayed
-2020-08-04 17:28:17,218 ::INFO ::[Logger]:: Clicked the Market element on the Navigation page.
-2020-08-04 17:28:18,551 ::DEBUG::[Logger]:: 10) Booking_Trends Dropdown displayed
-2020-08-04 17:28:25,118 ::INFO ::[Logger]:: Clicked the Booking_Trends element on the Navigation page.
-2020-08-04 17:28:26,482 ::DEBUG::[Logger]:: 11) Channel Dropdown displayed
-2020-08-04 17:28:32,956 ::INFO ::[Logger]:: Clicked the Channel element on the Navigation page.
-2020-08-04 17:28:34,323 ::DEBUG::[Logger]:: 12) Forecast_and_Budget Dropdown displayed
-2020-08-04 17:28:40,881 ::INFO ::[Logger]:: Clicked the Forecast_and_Budget element on the Navigation page.
-2020-08-04 17:28:42,233 ::DEBUG::[Logger]:: 13) Adhoc Dropdown displayed
-2020-08-04 17:28:48,706 ::INFO ::[Logger]:: Clicked the Adhoc element on the Navigation page.
-2020-08-04 17:28:50,071 ::DEBUG::[Logger]:: 14) Geo_Source Dropdown displayed
-2020-08-04 17:28:56,690 ::INFO ::[Logger]:: Clicked the Geo_Source element on the Navigation page.
-2020-08-04 17:29:00,867 ::INFO ::[Logger]:: Clicked the Hamburger_Icon element on the Navigation page.
-2020-08-04 17:29:00,868 ::DEBUG::[Logger]:: 15) All reports under Hamburger_Icon dropdown Displayed
-2020-08-04 17:29:37,808 ::INFO ::[Logger]:: Clicked the Hamburger_Icon element on the Navigation page.
-2020-08-04 17:29:54,386 ::INFO ::[Logger]:: Clicked the AgentAnalysis element on the Navigation page.
-2020-08-04 17:30:28,269 ::DEBUG::[Logger]:: 16) Agent Analysis report selected
-2020-08-04 17:30:42,385 ::INFO ::[Logger]:: Clicked the BusinessSource element on the Navigation page.
-2020-08-04 17:30:58,469 ::DEBUG::[Logger]:: 17) Agent Analysis gets displayed
-2020-08-04 17:31:09,424 ::INFO ::[Logger]:: Switching into the iFrame.
-2020-08-04 17:31:16,130 ::INFO ::[Logger]:: Inserted text in the Text_StartDate element on the ReportParameter page.
-2020-08-04 17:31:16,932 ::DEBUG::[Logger]:: 18) Enter start date as = 4/1/2020
-2020-08-04 17:31:24,765 ::INFO ::[Logger]:: Inserted text in the Text_EndDate element on the ReportParameter page.
-2020-08-04 17:31:26,099 ::DEBUG::[Logger]:: 19) Enter enddate as = 4/30/2020
-2020-08-04 17:31:34,185 ::INFO ::[Logger]:: Clicked the Parameter_market element on the ReportParameter page.
-2020-08-04 17:31:35,683 ::DEBUG::[Logger]:: 20) Click on parameter market drop down
-2020-08-04 17:31:44,034 ::INFO ::[Logger]:: Clicked the Parameter_market_Direct element on the ReportParameter page.
-2020-08-04 17:31:45,209 ::DEBUG::[Logger]:: 21) Direct parameter for marget got selected
-2020-08-04 17:32:33,072 ::INFO ::[Logger]:: Clicked the Click_View_Analysis element on the ReportParameter page.
-2020-08-04 17:32:52,543 ::DEBUG::[Logger]:: 22) Report generated
-2020-08-04 17:33:14,271 ::DEBUG::[Logger]:: 23) Applied filter displayed at footer
-2020-08-04 17:33:18,257 ::DEBUG::[Logger]:: 24) Test case passed successfully
-2020-08-04 17:33:37,148 ::INFO ::[Logger]:: RevIntel:: Script ::Passed
-2020-08-04 17:33:41,486 ::INFO ::[Logger]:: E.N.D
+2023-04-29 17:19:34,500 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-04-29 17:19:35,533 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-04-29 17:19:35,540 ::INFO ::[Logger]::  is used for Testing
+2023-04-29 17:19:35,619 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.godevcendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goDEVcendyn.com/SSOLanding.aspx
+2023-04-29 17:19:35,619 ::INFO ::[Logger]:: Execution started at:-Apr-29-2023 17-19-35-PM
+2023-04-29 17:19:35,619 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-04-29 17:19:35,633 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-04-29 17:19:35,635 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_252394         XXXXXXXXXXXXXXXX
+2023-04-29 17:19:35,635 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-04-29 17:19:35,697 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-04-29 17:19:36,027 ::INFO ::[Logger]:: Test Case : Verify logged in user is able to navigate to all menu and generate random reports
+2023-04-29 17:19:38,703 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-04-29 17:19:38,764 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-04-29 17:19:48,324 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-04-29 17:19:50,025 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2023-04-29 17:19:50,073 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
+2023-04-29 17:20:00,398 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2023-04-29 17:20:00,423 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
+2023-04-29 17:20:04,051 ::DEBUG::[Logger]:: 4) Client displayed
+2023-04-29 17:20:16,076 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
+2023-04-29 17:20:16,080 ::DEBUG::[Logger]:: 5) D Rock selected
+2023-04-29 17:20:28,420 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
+2023-04-29 17:20:30,686 ::DEBUG::[Logger]:: 7) Actual url = https://revintelbi.godevcendyn.com/revintel.aspx match with Expected url = https://revintelbi.godevcendyn.com/revintel.aspx
+2023-04-29 17:20:34,123 ::DEBUG::[Logger]:: 8) Hotel Dropdown displayed
+2023-04-29 17:20:50,992 ::DEBUG::[Logger]:: 9) User landed on Hotel Event Calender Report page
+2023-04-29 17:20:54,258 ::DEBUG::[Logger]:: 10) BusinessSource Dropdown displayed
+2023-04-29 17:21:01,921 ::INFO ::[Logger]:: Clicked the AgentAnalysis element on the Navigation page.
+2023-04-29 17:21:22,033 ::DEBUG::[Logger]:: 11) User landed on Agent Analysis Report page
+2023-04-29 17:21:25,496 ::DEBUG::[Logger]:: 12) market Dropdown displayed
+2023-04-29 17:21:33,133 ::INFO ::[Logger]:: Clicked the Market_Performance element on the Navigation page.
+2023-04-29 17:21:53,225 ::DEBUG::[Logger]:: 13) User landed on Market Report page
+2023-04-29 17:21:56,597 ::DEBUG::[Logger]:: 14) Booking Trends Dropdown displayed
+2023-04-29 17:22:04,622 ::INFO ::[Logger]:: Clicked the Length_of_Stay_Report element on the Navigation page.
+2023-04-29 17:22:24,722 ::DEBUG::[Logger]:: 15) User landed on Lenght of Stay Report  page
+2023-04-29 17:22:29,038 ::DEBUG::[Logger]:: 16) channel Drop down Displayed
+2023-04-29 17:22:37,428 ::INFO ::[Logger]:: Clicked the Channel_Report element on the Navigation page.
+2023-04-29 17:22:47,497 ::DEBUG::[Logger]:: 17) User landed on Channel Report  page
+2023-04-29 17:22:54,911 ::INFO ::[Logger]:: Clicked the Click_Hamburger_Icon element on the Navigation page.
+2023-04-29 17:23:11,650 ::INFO ::[Logger]:: Clicked the Room_Type element on the Navigation page.
+2023-04-29 17:23:11,666 ::DEBUG::[Logger]:: 18) Room Type Drop down Displayed
+2023-04-29 17:23:22,610 ::INFO ::[Logger]:: Clicked the Room_Type_Analysis element on the Navigation page.
+2023-04-29 17:23:32,706 ::DEBUG::[Logger]:: 19) User landed on Room Type analysis Report  page
+2023-04-29 17:23:37,318 ::DEBUG::[Logger]:: 20) Booking Trends Drop down displayed
+2023-04-29 17:23:45,437 ::INFO ::[Logger]:: Clicked the Pace_Trend element on the Navigation page.
+2023-04-29 17:24:05,492 ::DEBUG::[Logger]:: 21) User landed on Pace Trend  page
+2023-04-29 17:24:13,777 ::INFO ::[Logger]:: Switching into the iFrame.
+2023-04-29 17:24:23,994 ::INFO ::[Logger]:: Clicked the Click_View_Analysis element on the ReportParameter page.
+2023-04-29 17:25:14,253 ::DEBUG::[Logger]:: 22) Report generated
+2023-04-29 17:25:16,900 ::DEBUG::[Logger]:: 23) Report dispalyed for Pace and Forecast Report
+2023-04-29 17:25:21,333 ::DEBUG::[Logger]:: TestPlan :- TP_251469 Testcase :- TC_252394
+2023-04-29 17:25:21,333 ::DEBUG::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~Test Data Used~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-04-29 17:25:21,379 ::DEBUG::[Logger]::  Value for : TC_252394_User Email is : Testautomation@cendyn17.com
+2023-04-29 17:25:21,442 ::DEBUG::[Logger]::  Value for : TC_252394_Password is : Cendyn123$
+2023-04-29 17:25:21,458 ::DEBUG::[Logger]::  Value for : TC_252394_environment is : Automation
+2023-04-29 17:25:21,458 ::DEBUG::[Logger]::  Value for : TC_252394_client is : D Rock
+2023-04-29 17:25:21,489 ::DEBUG::[Logger]::  Value for : TC_252394_startDate is : 4/1/2020
+2023-04-29 17:25:21,537 ::DEBUG::[Logger]::  Value for : TC_252394_enddate is : 4/30/2020
+2023-04-29 17:25:22,606 ::INFO ::[Logger]:: RevIntel:: Script ::Passed
+2023-04-29 17:26:15,016 ::INFO ::[Logger]:: E.N.D

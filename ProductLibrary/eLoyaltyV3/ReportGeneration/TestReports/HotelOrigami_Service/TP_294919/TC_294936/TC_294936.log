@@ -1,0 +1,31 @@
+2023-05-01 20:47:54,004 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-01 20:47:54,004 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-01 20:47:54,004 ::INFO ::[Logger]::  is used for Testing
+2023-05-01 20:47:54,004 ::INFO ::[Logger]:: This is the login page.data:,
+2023-05-01 20:47:54,004 ::INFO ::[Logger]:: Execution started at:-May-01-2023 20-47-54-PM
+2023-05-01 20:47:54,004 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-01 20:47:54,004 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-01 20:47:54,020 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_294936         XXXXXXXXXXXXXXXX
+2023-05-01 20:47:54,020 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-01 20:47:54,020 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-01 20:48:38,036 ::ERROR::[Logger]:: eLoyaltyV3_Flow :: Script::Failed
+System.Data.SqlClient.SqlException (0x80131904): No Enough Points To Deduct
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at eLoyaltyV3.Utility.Queries.DeductPoints(Int32 pointsToDeduct, Int32 profileId, String trasanctionType, String description, String performBy) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\Utility\Queries.cs:line 4563
+   at eLoyaltyV3.AppModule.UI.Admin.RedeemPointsForServiceTestingPhaseTwo(String filePath, String worksheetname, Int32 rowNumber) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\Admin\Admin.cs:line 4568
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TC_294936() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp\WindowsService\Scenario Validation\Scenario_Validation.cs:line 5364
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TP_294919() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp.cs:line 1053
+   at eLoyaltyV3.TestPlan.HotelOrigami.WindowsServices.Scenario_Validation.HotelOrigami_TP_294919_Service_Scenario_Validation.TC_294936() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\TestPlan\HotelOrigami\WindowsServices\Scenario Validation\HotelOrigami_TP_294919_Service_Scenario_Validation.cs:line 438
+ClientConnectionId:bc166a91-6aa8-4876-a9b2-bdb211384778
+Error Number:50000,State:1,Class:11
+2023-05-01 20:48:45,174 ::INFO ::[Logger]:: E.N.D

@@ -1,0 +1,12 @@
+2023-05-01 13:42:56,543 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-01 13:42:56,544 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-01 13:42:56,545 ::INFO ::[Logger]::  is used for Testing
+2023-05-01 13:42:56,551 ::INFO ::[Logger]:: This is the login page.data:,
+2023-05-01 13:42:56,553 ::INFO ::[Logger]:: Execution started at:-May-01-2023 13-42-56-PM
+2023-05-01 13:42:56,553 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-01 13:42:56,554 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-01 13:42:56,555 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_InsertStay01_12         XXXXXXXXXXXXXXXX
+2023-05-01 13:42:56,556 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-01 13:42:56,560 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-01 14:02:35,777 ::INFO ::[Logger]:: HotelOrigami_Service:: Script ::Passed
+2023-05-01 14:02:36,215 ::INFO ::[Logger]:: E.N.D

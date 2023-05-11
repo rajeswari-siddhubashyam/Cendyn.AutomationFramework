@@ -1,0 +1,13 @@
+2023-05-01 13:36:22,259 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-01 13:36:22,326 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-01 13:36:22,335 ::INFO ::[Logger]::  is used for Testing
+2023-05-01 13:36:22,344 ::INFO ::[Logger]:: This is the login page.data:,
+2023-05-01 13:36:22,344 ::INFO ::[Logger]:: Execution started at:-May-01-2023 13-36-22-PM
+2023-05-01 13:36:22,345 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-01 13:36:22,345 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-01 13:36:22,347 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_UpdateQualifyingRuleFor_1to12         XXXXXXXXXXXXXXXX
+2023-05-01 13:36:22,347 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-01 13:36:22,352 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-01 13:37:13,062 ::INFO ::[Logger]:: Qualifying Stay Rule and Qualifying Night Rule is Updated
+2023-05-01 13:37:13,063 ::INFO ::[Logger]:: HotelOrigami_Service:: Script ::Passed
+2023-05-01 13:37:13,208 ::INFO ::[Logger]:: E.N.D

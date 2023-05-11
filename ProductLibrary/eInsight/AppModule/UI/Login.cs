@@ -113,7 +113,7 @@ namespace eInsight.AppModule.UI
         public static void CommonLogin(string CommonFrontendURL)
         {
             Driver.Navigate().GoToUrl(CommonFrontendURL);
-            AddDelay(25000);
+            AddDelay(5000);
             if (CommonFrontendURL != "https://qa2einsight.cendyn.com/")
             {
                 string IFrame = "//iframe[@title='TrustArc Cookie Consent Manager']";
@@ -132,6 +132,7 @@ namespace eInsight.AppModule.UI
             }
             ElementWait(PageObject_Login.Email(), 60);
             EnterUserName(LegacyTestData.CommonFrontendEmail);
+            Profile.ClickAddGuestsNext();
             EnterPassword(LegacyTestData.CommonFrontendPassword);
             ClickSubmit();
 

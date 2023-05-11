@@ -1,0 +1,31 @@
+2023-05-01 14:04:32,691 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-01 14:04:32,691 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-01 14:04:32,691 ::INFO ::[Logger]::  is used for Testing
+2023-05-01 14:04:32,691 ::INFO ::[Logger]:: This is the login page.data:,
+2023-05-01 14:04:32,691 ::INFO ::[Logger]:: Execution started at:-May-01-2023 14-04-32-PM
+2023-05-01 14:04:32,691 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-01 14:04:32,691 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-01 14:04:32,707 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_276902         XXXXXXXXXXXXXXXX
+2023-05-01 14:04:32,707 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-01 14:04:32,707 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-01 14:04:48,722 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_1 = 0
+2023-05-01 14:04:50,804 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_2 = 0
+2023-05-01 14:04:52,892 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_3 = 0
+2023-05-01 14:04:56,562 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_4 = 0
+2023-05-01 14:05:21,024 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_2 = 0
+2023-05-01 14:05:22,882 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_3 = 0
+2023-05-01 14:05:24,854 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_4 = 0
+2023-05-01 14:05:48,730 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_2 = 0
+2023-05-01 14:05:50,551 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_3 = 0
+2023-05-01 14:05:52,391 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_4 = 0
+2023-05-01 14:06:13,675 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_1 = 0
+2023-05-01 14:06:16,092 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_2 = 0
+2023-05-01 14:06:19,318 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_3 = 0
+2023-05-01 14:06:21,745 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_4 = 0
+2023-05-01 14:06:27,104 ::ERROR::[Logger]:: eLoyaltyV3_Flow :: Script::Failed
+NUnit.Framework.AssertionException: Scenario : Profile with 4 stay Fail
+   at NUnit.Framework.Assert.ReportFailure(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 394
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TC_276902() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp\WindowsService\Scenario Validation\Scenario_Validation.cs:line 466
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TP_276897() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp.cs:line 915
+   at eLoyaltyV3.TestPlan.HotelOrigami.WindowsServices.Scenario_Validation.HotelOrigami_TP_276897_Service_Scenario_Validation.TC_276902() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\TestPlan\HotelOrigami\WindowsServices\Scenario Validation\HotelOrigami_TP_276897_Service_Scenario_Validation.cs:line 229
+2023-05-01 14:06:34,081 ::INFO ::[Logger]:: E.N.D

@@ -1,0 +1,14 @@
+2023-05-02 09:45:02,720 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-02 09:45:02,774 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-02 09:45:02,782 ::INFO ::[Logger]::  is used for Testing
+2023-05-02 09:45:02,789 ::INFO ::[Logger]:: This is the login page.data:,
+2023-05-02 09:45:02,790 ::INFO ::[Logger]:: Execution started at:-May-02-2023 09-45-02-AM
+2023-05-02 09:45:02,790 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-02 09:45:02,791 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-02 09:45:02,792 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_276900         XXXXXXXXXXXXXXXX
+2023-05-02 09:45:02,792 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-02 09:45:02,795 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-02 09:45:37,528 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_1 = 0
+2023-05-02 09:45:58,186 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_2 = 0
+2023-05-02 09:46:06,624 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_3 = 0
+2023-05-02 09:46:28,911 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_4 = 0

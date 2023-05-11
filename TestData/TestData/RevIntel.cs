@@ -224,7 +224,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253360", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253360", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253360", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253360", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253360", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253360", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253360", "1", "TRUE", "Hotel", "Atlantis,The Palm");
@@ -247,7 +247,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253359", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253359", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253359", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253359", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253359", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253359", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253359", "1", "TRUE", "Hotel", "Atlantis,The Palm");
@@ -270,7 +270,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253358", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253358", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253358", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253358", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253358", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253358", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253358", "1", "TRUE", "Hotel", "Atlantis,The Palm");
@@ -297,12 +297,12 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_251470", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_251470", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_251470", "1", "TRUE", "environment", "QA");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "2", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "3", "TRUE", "client", "Benchmark Hospitality");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "1", "TRUE", "url", "https://devrhbi.revintel.co");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "2", "TRUE", "url", "https://devbi.revintel.co");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "3", "TRUE", "url", "https://devcloud.revintel.co");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "2", "TRUE", "url", "https://revintelrhbi.godevcendyn.com");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "3", "TRUE", "url", "https://revintelrhbi.godevcendyn.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "1", "TRUE", "revIntel_RHBI", "https://devrhbi.revintel.co/revintel.aspx");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "1", "TRUE", "revIntel_BI", "https://devbi.revintel.co/SSOLanding.aspx");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "1", "TRUE", "revIntel_Cloud", "https://devcloud.revintel.co/SSOLanding.aspx");
@@ -312,7 +312,7 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_251470", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_251470", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_251470", "1", "TRUE", "environment", "UAT");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_251470", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_251470", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_251470", "2", "TRUE", "client", "Filament");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_251470", "3", "TRUE", "client", "Benchmark Hospitality");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_251470", "1", "TRUE", "url", "https://rhbi.revintel.co");
@@ -327,7 +327,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252718", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252718", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252718", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252718", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252718", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252718", "1", "TRUE", "Portfolio", "One&Only All -CT,SG,RR,RM,TP,PL,WV,NG");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252718", "1", "TRUE", "Business_Unit", "Hotel");
@@ -343,7 +343,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_256851", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_256851", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_256851", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_256851", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_256851", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_256851", "1", "TRUE", "hotel", "Atlantis, The Palm");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_256851", "1", "TRUE", "Currency", "AUD");
@@ -374,7 +374,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_256852", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_256852", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_256852", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_256852", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_256852", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_256852", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_256852", "1", "TRUE", "Business_Unit", "Hotel");
@@ -406,16 +406,16 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252390", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252390", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252390", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252390", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252390", "1", "TRUE", "environment", "Automation");
         }
         private static void AddTestData_SmokeTest_TC_252482()
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252482", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252482", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252482", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252482", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252482", "1", "TRUE", "environment", "Automation");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252482", "1", "TRUE", "url", "https://devauto.revintel.co/revintel.aspx");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252482", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252482", "1", "TRUE", "url1", "https://help.cendyn.com/hc/en-us/categories/360004357731-revintel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252482", "1", "TRUE", "url2", "https://help.cendyn.com/hc/en-us/sections/360010838372-General-Use");
         }
@@ -424,52 +424,52 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252494", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252494", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252494", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252494", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252494", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252494", "1", "TRUE", "user_ID", "rshende");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252494", "1", "TRUE", "email", "rshende@delaplex.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252494", "1", "TRUE", "firstName", "ruchi");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252494", "1", "TRUE", "lastName", "shende");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252494", "1", "TRUE", "url", "https://devauto.revintel.co/revintel.aspx");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252494", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");
         }
 
         private static void AddTestData_SmokeTest_TC_252496()
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252496", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252496", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252496", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252496", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252496", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252496", "1", "TRUE", "Portfolio_Name", "One & Only RM & TP");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252496", "1", "TRUE", "validation", "Portfolio One & Only RM & TP already exists!");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252496", "1", "TRUE", "url", "https://devauto.revintel.co/revintel.aspx");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252496", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");
         }
         private static void AddTestData_SmokeTest_TC_252394()
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252394", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252394", "1", "TRUE", "password", "Cendyn123$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252394", "1", "TRUE", "Environment", "Automation");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252394", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252394", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252394", "1", "TRUE", "startDate", "4/1/2020");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252394", "1", "TRUE", "enddate", "4/30/2020");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252394", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252394", "1", "TRUE", "Portfolio_value", "One&Only All -CT,SG,RR,RM,TP,PL,WV,NG");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252394", "1", "TRUE", "url", "https://devauto.revintel.co/revintel.aspx");           
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252394", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");           
         }
 
         private static void AddTestData_SmokeTest_TC_252401()
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252401", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252401", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252401", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252401", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252401", "1", "TRUE", "environment", "Automation");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252401", "1", "TRUE", "url", "https://devauto.revintel.co/revintel.aspx");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252401", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");
         }
 
         private static void AddTestData_TestPlan_TC_252719()
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252719", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252719", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252719", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252719", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252719", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252719", "1", "TRUE", "hotel", "Atlantis,The Palm");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252719", "1", "TRUE", "Portfolio", "One&Only All -CT,SG,RR,RM,TP,PL,WV,NG");
@@ -510,7 +510,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252720", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252720", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252720", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252720", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252720", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252720", "1", "TRUE", "hotel", "Atlantis, The Palm");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252720", "1", "TRUE", "Currency", "AUD");
@@ -532,7 +532,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252721", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252721", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252721", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252721", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252721", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252721", "1", "TRUE", "Portfolio", "One&Only All -CT,SG,RR,RM,TP,PL,WV,NG");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252721", "1", "TRUE", "Currency", "AUD");
@@ -552,7 +552,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252722", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252722", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252722", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252722", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252722", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252722", "1", "TRUE", "hotel", "Atlantis,The Palm");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252722", "1", "TRUE", "Portfolio_value", "One&Only All -CT,SG,RR,RM,TP,PL,WV,NG");
@@ -573,7 +573,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252723", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252723", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252723", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252723", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252723", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252723", "1", "TRUE", "hotel", "Atlantis, The Palm");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252723", "1", "TRUE", "RoomProduct_value", "Room");
@@ -591,7 +591,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252724", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252724", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252724", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252724", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252724", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252724", "1", "TRUE", "reportName", "Company Summary");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252724", "1", "TRUE", "Portfoliodate_name", "Portfolio: One&Only All -CT,SG,RR,RM,TP,PL,WV,NG for dates: 06/01/2020 - 06/30/2020");
@@ -608,7 +608,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252725", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252725", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252725", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252725", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252725", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252725", "1", "TRUE", "hotel", "Atlantis, The Palm");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252725", "1", "TRUE", "startDate", "4/1/2020");
@@ -627,7 +627,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252726", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252726", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252726", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252726", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252726", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252726", "1", "TRUE", "hotel", "Atlantis, The Palm");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252726", "1", "TRUE", "startDate", "1/1/2020");
@@ -652,7 +652,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252728", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252728", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252728", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252728", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252728", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252728", "1", "TRUE", "hotel", "Atlantis, The Palm");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252728", "1", "TRUE", "startDate", "2/1/2020");
@@ -678,7 +678,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252727", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252727", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252727", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252727", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252729", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252727", "1", "TRUE", "hotel", "Atlantis, The Palm");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252727", "1", "TRUE", "startDate", "12/1/2019");
@@ -705,7 +705,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252729", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252729", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252729", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252729", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252729", "1", "TRUE", "hotel", "Atlantis, The Palm");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_252729", "1", "TRUE", "environment", "Automation");
 
@@ -751,7 +751,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_264418", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_264418", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_264418", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_264418", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_264418", "1", "TRUE", "hotel", "Atlantis, The Palm");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_264418", "1", "TRUE", "environment", "Automation");
 
@@ -797,7 +797,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253349", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253349", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253349", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253349", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253349", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253349", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253349", "1", "TRUE", "Business_Unit", "Hotel");
@@ -819,7 +819,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253350", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253350", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253350", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253350", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253350", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253350", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253350", "1", "TRUE", "Business_Unit", "Hotel");
@@ -844,7 +844,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253351", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253351", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253351", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253351", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253351", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253351", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253351", "1", "TRUE", "Business_Unit", "Hotel");
@@ -865,7 +865,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253352", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253352", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253352", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253352", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253352", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253352", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253352", "1", "TRUE", "Business_Unit", "Hotel");
@@ -887,7 +887,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253353", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253353", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253353", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253353", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253353", "1", "TRUE", "Currency", "USD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253353", "1", "TRUE", "environment", "DEV");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253353", "1", "TRUE", "Business_Unit", "Hotel");
@@ -908,7 +908,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253354", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253354", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253354", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253354", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253354", "1", "TRUE", "Currency", "USD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253354", "1", "TRUE", "environment", "DEV");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253354", "1", "TRUE", "Business_Unit", "Hotel");
@@ -929,7 +929,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253355", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253355", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253355", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253355", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253355", "1", "TRUE", "Currency", "USD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253355", "1", "TRUE", "environment", "DEV");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253355", "1", "TRUE", "Business_Unit", "Hotel");
@@ -950,7 +950,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253356", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253356", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253356", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253356", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253356", "1", "TRUE", "Currency", "USD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253356", "1", "TRUE", "environment", "DEV");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253348", "TC_253356", "1", "TRUE", "Business_Unit", "Hotel");
@@ -971,7 +971,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252597", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252597", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252597", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252597", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252597", "1", "TRUE", "Currency", "USD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252597", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252597", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -995,7 +995,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252598", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252598", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252598", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252598", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252598", "1", "TRUE", "Currency", "USD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252598", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252598", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -1013,7 +1013,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252599", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252599", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252599", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252599", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252599", "1", "TRUE", "Currency", "USD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252599", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252599", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -1031,7 +1031,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252600", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252600", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252600", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252600", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252600", "1", "TRUE", "Currency", "USD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252600", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252600", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -1055,7 +1055,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252601", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252601", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252601", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252601", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252601", "1", "TRUE", "Currency", "USD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252601", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252601", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -1079,7 +1079,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252602", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252602", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252602", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252602", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252602", "1", "TRUE", "Currency", "USD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252602", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252602", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -1103,7 +1103,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252603", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252603", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252603", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252603", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252603", "1", "TRUE", "Currency", "USD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252603", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252603", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -1127,7 +1127,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252604", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252604", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252604", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252604", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252604", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252604", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252604", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -1152,7 +1152,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252643", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252643", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252643", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252643", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252643", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252643", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252643", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -1173,7 +1173,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252644", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252644", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252644", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252644", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252644", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252644", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252644", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -1196,7 +1196,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252645", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252645", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252645", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252645", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252645", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252645", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252645", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -1218,7 +1218,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252605", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252605", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252605", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252605", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252605", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252605", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252605", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -1244,7 +1244,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252606", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252606", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252606", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252606", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252606", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252606", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252606", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -1262,7 +1262,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252607", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252607", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252607", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252607", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252607", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252607", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252607", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -1284,7 +1284,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252608", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252608", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252608", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252608", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252608", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252608", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252608", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -1307,7 +1307,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252609", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252609", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252609", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252609", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252609", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252609", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252609", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -1330,7 +1330,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252610", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252610", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252610", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252610", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252610", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252610", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252578", "TC_252610", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -1353,33 +1353,33 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266463", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266463", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266463", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266463", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266463", "1", "TRUE", "environment", "Automation");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266463", "1", "TRUE", "url", "https://devauto.revintel.co/revintel.aspx");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266463", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");
         }
 
         private static void AddTestData_TestPlan_TC_266464()
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266464", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266464", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266464", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266464", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266464", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266464", "1", "TRUE", "Current_Password", "Cendyn111$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266464", "1", "TRUE", "New_Password", "Cendyn333$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266464", "1", "TRUE", "Confirm_Password", "Cendyn333$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266464", "1", "TRUE", "url", "https://devauto.revintel.co/revintel.aspx");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266464", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");
         }
 
         private static void AddTestData_TestPlan_TC_266466()
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266466", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266466", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266466", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266466", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266466", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266466", "1", "TRUE", "Current_Password", "Cendyn222$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266466", "1", "TRUE", "New_Password", "Cendyn333$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266466", "1", "TRUE", "Confirm_Password", "Cendyn321$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266466", "1", "TRUE", "url", "https://devauto.revintel.co/revintel.aspx");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266466", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");
         }
 
         private static void AddTestData_TestPlan_TC_266467()
@@ -1387,7 +1387,7 @@ namespace TestData
 
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266467", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266467", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266467", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266467", "1", "TRUE", "client", "D Rock");
 
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266467", "1", "TRUE", "Current_Password", "Cendyn123$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266467", "1", "TRUE", "New_Password", "Cen13$");
@@ -1409,15 +1409,15 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266467", "5", "TRUE", "New_Password", "rshende@delaplex.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266467", "5", "TRUE", "Confirm_Password", "rshende@delaplex.com");
 
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266467", "1", "TRUE", "url", "https://devauto.revintel.co/revintel.aspx");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266467", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");
         }
 
         private static void AddTestData_TestPlan_TC_266468()
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266468", "1", "TRUE", "username", "rshende@delaplex.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266468", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266468", "1", "TRUE", "client", "Kerzner");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266468", "1", "TRUE", "url", "https://devauto.revintel.co/revintel.aspx");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266468", "1", "TRUE", "client", "D Rock");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266468", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266468", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266468", "1", "TRUE", "New_Set_Password", "Cendyn111$");
 
@@ -1458,7 +1458,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252810", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252810", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252810", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252810", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252810", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252810", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252810", "1", "TRUE", "Currency", "AUD");
@@ -1481,7 +1481,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252811", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252811", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252811", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252811", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252811", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252811", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252811", "1", "TRUE", "Currency", "AUD");
@@ -1505,7 +1505,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252812", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252812", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252812", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252812", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252812", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252812", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252812", "1", "TRUE", "Currency", "AUD");
@@ -1529,7 +1529,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252813", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252813", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252813", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252813", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252813", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252813", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252813", "1", "TRUE", "Currency", "AUD");
@@ -1551,7 +1551,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252814", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252814", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252814", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252814", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252814", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252814", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252814", "1", "TRUE", "Currency", "AUD");
@@ -1573,7 +1573,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252815", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252815", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252815", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252815", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252815", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252815", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252815", "1", "TRUE", "Currency", "AUD");
@@ -1593,7 +1593,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252816", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252816", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252816", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252816", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252816", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252816", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252816", "1", "TRUE", "Currency", "AUD");
@@ -1615,7 +1615,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252817", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252817", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252817", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252817", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252817", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252817", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252817", "1", "TRUE", "Currency", "AUD");
@@ -1637,7 +1637,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252818", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252818", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252818", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252818", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252818", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252818", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252818", "1", "TRUE", "Currency", "AUD");
@@ -1660,7 +1660,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252819", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252819", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252819", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252819", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252819", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252819", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252770", "TC_252819", "1", "TRUE", "Currency", "AUD");
@@ -1681,7 +1681,7 @@ namespace TestData
         }
         private static void AddTestData_TestPlan_TC_271064()
         {
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_274130", "TC_271064", "1", "TRUE", "Client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_274130", "TC_271064", "1", "TRUE", "Client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_274130", "TC_271064", "1", "TRUE", "SearchTest", "Revintel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_274130", "TC_271064", "2", "TRUE", "SearchTest", "Report");
 
@@ -1689,7 +1689,7 @@ namespace TestData
         }
         private static void AddTestData_TestPlan_TC_271065()
         {
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_274130", "TC_271065", "1", "TRUE", "Client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_274130", "TC_271065", "1", "TRUE", "Client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_274130", "TC_271065", "1", "TRUE", "Name", "TestUser_");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_274130", "TC_271065", "1", "TRUE", "Subject", "Test_Subject_");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_274130", "TC_271065", "1", "TRUE", "Property", "Test_Property_");
@@ -1700,7 +1700,7 @@ namespace TestData
         }
         private static void AddTestData_TestPlan_TC_271066()
         {
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_274130", "TC_271066", "1", "TRUE", "Client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_274130", "TC_271066", "1", "TRUE", "Client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_274130", "TC_271066", "1", "TRUE", "RandomText", "ABCDEF 12345%");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_274130", "TC_271066", "1", "TRUE", "Validation", "Try searching for something else.");
 
@@ -1710,7 +1710,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252834", "TC_252838", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252834", "TC_252838", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252834", "TC_252838", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252834", "TC_252838", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252834", "TC_252838", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252834", "TC_252838", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252834", "TC_252838", "1", "TRUE", "Currency", "AUD");
@@ -1729,7 +1729,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252841", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252841", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252841", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252841", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252841", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252841", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252841", "1", "TRUE", "Currency", "AUD");
@@ -1752,7 +1752,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252842", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252842", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252842", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252842", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252842", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252842", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252842", "1", "TRUE", "Currency", "AUD");
@@ -1776,7 +1776,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252843", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252843", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252843", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252843", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252843", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252843", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252843", "1", "TRUE", "Currency", "AUD");
@@ -1800,7 +1800,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252844", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252844", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252844", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252844", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252844", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252844", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252840", "TC_252844", "1", "TRUE", "Currency", "AUD");
@@ -1824,7 +1824,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252847", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252847", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252847", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252847", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252847", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252847", "1", "TRUE", "Business_Unit", "Hotel") ;
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252847", "1", "TRUE", "Currency", "AUD");
@@ -1846,7 +1846,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252848", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252848", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252848", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252848", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252848", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252848", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252848", "1", "TRUE", "Currency", "AUD");
@@ -1868,7 +1868,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252849", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252849", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252849", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252849", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252849", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252849", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252849", "1", "TRUE", "Currency", "AUD");
@@ -1890,7 +1890,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252850", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252850", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252850", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252850", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252850", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252850", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252846", "TC_252850", "1", "TRUE", "Currency", "AUD");
@@ -2055,7 +2055,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252734", "TC_265427", "1", "TRUE", "UserName", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252734", "TC_265427", "1", "TRUE", "Password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252734", "TC_265427", "1", "TRUE", "Client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252734", "TC_265427", "1", "TRUE", "Client", "D Rock");
             
         }
         private static void AddTestData_TestPlan_TC_265426()
@@ -2075,7 +2075,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252734", "TC_265424", "1", "TRUE", "UserName", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252734", "TC_265424", "1", "TRUE", "Password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252734", "TC_265424", "1", "TRUE", "Client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252734", "TC_265424", "1", "TRUE", "Client", "D Rock");
 
         }
         private static void AddTestData_TestPlan_TC_265415()
@@ -2088,7 +2088,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252852", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252852", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252852", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252852", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252852", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252852", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252852", "1", "TRUE", "Currency", "AUD");
@@ -2110,7 +2110,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252853", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252853", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252853", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252853", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252853", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252853", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252853", "1", "TRUE", "Currency", "AUD");
@@ -2133,7 +2133,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252854", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252854", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252854", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252854", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252854", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252854", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252854", "1", "TRUE", "Currency", "AUD");
@@ -2155,7 +2155,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252855", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252855", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252855", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252855", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252855", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252855", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252855", "1", "TRUE", "Currency", "AUD");
@@ -2177,7 +2177,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252856", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252856", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252856", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252856", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252856", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252856", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252856", "1", "TRUE", "Currency", "AUD");
@@ -2199,7 +2199,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252857", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252857", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252857", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252857", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252857", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252857", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252851", "TC_252857", "1", "TRUE", "Currency", "AUD");
@@ -2226,7 +2226,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253361", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253361", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253361", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253361", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253361", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253361", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253361", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -2251,7 +2251,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253362", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253362", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253362", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253362", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253362", "1", "TRUE", "Currency", "USD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253362", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253362", "1", "TRUE", "Hotel", "Atlantis,The Palm");
@@ -2276,7 +2276,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253363", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253363", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253363", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253363", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253363", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253363", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253363", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -2293,7 +2293,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253364", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253364", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253364", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253364", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253364", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253364", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_253364", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -2311,7 +2311,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_280393", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_280393", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_280393", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_280393", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_280393", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_280393", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_253357", "TC_280393", "1", "TRUE", "Hotel", "Atlantis,The Palm");
@@ -2339,7 +2339,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252870", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252870", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252870", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252870", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252870", "1", "TRUE", "environment", "UAT");
         }
 
@@ -2347,7 +2347,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252871", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252871", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252871", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252871", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252871", "1", "TRUE", "environment", "UAT");
         }
 
@@ -2355,7 +2355,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252877", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252877", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252877", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252877", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252877", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252877", "1", "TRUE", "user_ID", "k_rshende");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252877", "1", "TRUE", "user_email", "Rshende1@cendyn17.com");
@@ -2367,7 +2367,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252879", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252879", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252879", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252879", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252879", "1", "TRUE", "environment", "UAT");
         }
 
@@ -2375,7 +2375,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252894", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252894", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252894", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252894", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252894", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252894", "1", "TRUE", "startDate", "11/1/2020");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252894", "1", "TRUE", "enddate", "11/30/2020");
@@ -2386,7 +2386,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252878", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252878", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252878", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252878", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252864", "TC_252878", "1", "TRUE", "environment", "UAT");
         }
         
@@ -2395,7 +2395,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252858", "TC_252860", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252858", "TC_252860", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252858", "TC_252860", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252858", "TC_252860", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252858", "TC_252860", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252858", "TC_252860", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252858", "TC_252860", "1", "TRUE", "Currency", "AUD");
@@ -2417,7 +2417,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252858", "TC_252861", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252858", "TC_252861", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252858", "TC_252861", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252858", "TC_252861", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252858", "TC_252861", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252858", "TC_252861", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252858", "TC_252861", "1", "TRUE", "Currency", "AUD");
@@ -2439,7 +2439,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252649", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252649", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252649", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252649", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252649", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252649", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252649", "1", "TRUE", "hotel", "Atlantis,The Palm");
@@ -2453,7 +2453,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252648", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252648", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252648", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252648", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252648", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252648", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252648", "1", "TRUE", "Hotel", "Atlantis,The Palm");
@@ -2473,7 +2473,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252650", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252650", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252650", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252650", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252650", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252650", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252650", "1", "TRUE", "Hotel", "Atlantis,The Palm");
@@ -2486,7 +2486,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252651", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252651", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252651", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252651", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252651", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252651", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252651", "1", "TRUE", "Hotel", "Atlantis,The Palm");
@@ -2498,7 +2498,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252652", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252652", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252652", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252652", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252652", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252652", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252652", "1", "TRUE", "Hotel", "Atlantis,The Palm");
@@ -2510,7 +2510,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252653", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252653", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252653", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252653", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252653", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252653", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252653", "1", "TRUE", "Hotel", "Atlantis,The Palm");
@@ -2523,7 +2523,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252654", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252654", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252654", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252654", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252654", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252654", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252654", "1", "TRUE", "Hotel", "Atlantis,The Palm");
@@ -2536,7 +2536,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252655", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252655", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252655", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252655", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252655", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252655", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252655", "1", "TRUE", "Hotel", "Atlantis,The Palm");
@@ -2548,7 +2548,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252656", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252656", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252656", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252656", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252656", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252656", "1", "TRUE", "environment", "UAT");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_222636", "TC_252656", "1", "TRUE", "Hotel", "Atlantis,The Palm");
@@ -2561,7 +2561,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252831", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252831", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252831", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252831", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252831", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252831", "1", "TRUE", "Hotel", "Atlantis, The Palm");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252831", "1", "TRUE", "startDate", "12/1/2020");
@@ -2587,7 +2587,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252832", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252832", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252832", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252832", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252832", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252832", "1", "TRUE", "Hotel", "Atlantis, The Palm");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252832", "1", "TRUE", "Compare_Start_Date", "11/1/2020");
@@ -2617,7 +2617,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252833", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252833", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252833", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252833", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252833", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252833", "1", "TRUE", "Hotel", "Atlantis, The Palm");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252820", "TC_252833", "1", "TRUE", "startDate", "10/1/2020");
@@ -2645,7 +2645,7 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283459", "1", "TRUE", "password", "Cendyn321$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283459", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283459", "1", "TRUE", "Currency", "AUD");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283459", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283459", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283459", "2", "TRUE", "client", "Filament");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283459", "3", "TRUE", "client", "Benchmark Hospitality");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283459", "1", "TRUE", "url", "https://rhbi.revintel.co");
@@ -2660,7 +2660,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283461", "1", "TRUE", "username", "rshende@cendyn.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283461", "1", "TRUE", "password", "Cendyn321$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283461", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283461", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283461", "1", "TRUE", "url", "https://rhbi.revintel.co/revintel.aspx");
         }
 
@@ -2668,7 +2668,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283475", "1", "TRUE", "username", "rshende@cendyn.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283475", "1", "TRUE", "password", "Cendyn321$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283475", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283475", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283475", "1", "TRUE", "url", "https://rhbi.revintel.co/revintel.aspx");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283475", "1", "TRUE", "url1", "https://help.cendyn.com/hc/en-us/categories/360004357731-revintel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283475", "1", "TRUE", "url2", "https://help.cendyn.com/hc/en-us/sections/360010838372-General-Use");
@@ -2678,7 +2678,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283457", "1", "TRUE", "username", "rshende@cendyn.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283457", "1", "TRUE", "password", "Cendyn321$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283457", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283457", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283457", "1", "TRUE", "user_ID", "rshende");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283457", "1", "TRUE", "email", "rshende@delaplex.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283457", "1", "TRUE", "firstName", "ruchi");
@@ -2690,7 +2690,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283456", "1", "TRUE", "username", "rshende@cendyn.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283456", "1", "TRUE", "password", "Cendyn321$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283456", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283456", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283456", "1", "TRUE", "Portfolio_Name", "One & Only RM & TP");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283456", "1", "TRUE", "validation", "Portfolio One & Only RM & TP already exists!");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283456", "1", "TRUE", "url", "https://rhbi.revintel.co/revintel.aspx");
@@ -2700,7 +2700,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283460", "1", "TRUE", "username", "rshende@cendyn.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283460", "1", "TRUE", "password", "Cendyn321$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283460", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283460", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283460", "1", "TRUE", "startDate", "4/1/2020");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283460", "1", "TRUE", "enddate", "4/30/2020");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283460", "1", "TRUE", "environment", "Automation");
@@ -2712,7 +2712,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283458", "1", "TRUE", "username", "rshende@cendyn.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283458", "1", "TRUE", "password", "Cendyn321$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283458", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283458", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283458", "1", "TRUE", "url", "https://rhbi.revintel.co/revintel.aspx");
         }
 
@@ -2720,7 +2720,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283468", "1", "TRUE", "username", "rshende@cendyn.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283468", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283468", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283468", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283468", "1", "TRUE", "url", "https://rhbi.revintel.co/revintel.aspx");
         }
 
@@ -2728,7 +2728,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283470", "1", "TRUE", "username", "rshende@cendyn.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283470", "1", "TRUE", "password", "Cendyn321$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283470", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283470", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283470", "1", "TRUE", "Current_Password", "Cendyn111$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283470", "1", "TRUE", "New_Password", "Cendyn333$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283470", "1", "TRUE", "Confirm_Password", "Cendyn333$");
@@ -2739,7 +2739,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283472", "1", "TRUE", "username", "rshende@cendyn.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283472", "1", "TRUE", "password", "Cendyn321$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283472", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283472", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283472", "1", "TRUE", "Current_Password", "Cendyn222$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283472", "1", "TRUE", "New_Password", "Cendyn333$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283472", "1", "TRUE", "Confirm_Password", "Cendyn321$");
@@ -2750,7 +2750,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283471", "1", "TRUE", "username", "rshende@cendyn.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283471", "1", "TRUE", "password", "Cendyn321$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283471", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283471", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283471", "1", "TRUE", "Current_Password_1", "Cendyn123$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283471", "1", "TRUE", "New_Password_1", "Cendyn666$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283471", "1", "TRUE", "Confirm_Password_1", "Cendyn666$");
@@ -2782,7 +2782,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283469", "1", "TRUE", "username", "rshende@cendyn.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283469", "1", "TRUE", "password", "Cendyn321$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283469", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283469", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283469", "1", "TRUE", "url", "https://rhbi.revintel.co/revintel.aspx");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_278124", "TC_283469", "1", "TRUE", "New_Set_Password", "Cendyn111$");
 
@@ -2842,7 +2842,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252734", "TC_265402", "1", "TRUE", "UserName", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252734", "TC_265402", "1", "TRUE", "Password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252734", "TC_265402", "1", "TRUE", "Client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252734", "TC_265402", "1", "TRUE", "Client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252734", "TC_265402", "1", "TRUE", "HotelListValue", "Hotel/Portfolio");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252734", "TC_265402", "2", "TRUE", "HotelListValue", "Business Unit");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252734", "TC_265402", "3", "TRUE", "HotelListValue", "Currency");
@@ -2857,7 +2857,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252734", "TC_265404", "1", "TRUE", "UserName", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252734", "TC_265404", "1", "TRUE", "Password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252734", "TC_265404", "1", "TRUE", "Client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252734", "TC_265404", "1", "TRUE", "Client", "D Rock");
         }
 
         private static void AddTestData_TestPlan_TC_252552()
@@ -2865,7 +2865,7 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_252552", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_252552", "1", "TRUE", "password", "Cendyn123$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_252552", "1", "TRUE", "environment", "Automation");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_252552", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_252552", "1", "TRUE", "client", "D Rock");
         }
 
         private static void AddTestData_TestPlan_TC_252554()
@@ -2873,7 +2873,7 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_252554", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_252554", "1", "TRUE", "password", "Cendyn123$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_252554", "1", "TRUE", "environment", "Automation");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_252554", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_252554", "1", "TRUE", "client", "D Rock");
         }
 
         private static void AddTestData_TestPlan_TC_254239()
@@ -2881,7 +2881,7 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_254239", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_254239", "1", "TRUE", "password", "Cendyn123$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_254239", "1", "TRUE", "environment", "Automation");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_254239", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_254239", "1", "TRUE", "client", "D Rock");
         }
 
         private static void AddTestData_TestPlan_TC_253552()
@@ -2889,7 +2889,7 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_253552", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_253552", "1", "TRUE", "password", "Cendyn123$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_253552", "1", "TRUE", "environment", "Automation");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_253552", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_253552", "1", "TRUE", "client", "D Rock");
         }
 
         private static void AddTestData_TestPlan_TC_252553()
@@ -2897,7 +2897,7 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_252553", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_252553", "1", "TRUE", "password", "Cendyn123$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_252553", "1", "TRUE", "environment", "Automation");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_252553", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_252553", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_252553", "1", "TRUE", "username2", "testaccess@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252523", "TC_252553", "1", "TRUE", "password2", "Cendyn123$");
         }
@@ -2918,7 +2918,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279701", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279701", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279701", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279701", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279701", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279701", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279701", "1", "TRUE", "Currency", "AUD");
@@ -2935,7 +2935,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279700", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279700", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279700", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279700", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279700", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279700", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279700", "1", "TRUE", "Currency", "AUD");
@@ -2957,7 +2957,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279699", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279699", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279699", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279699", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279699", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279699", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279699", "1", "TRUE", "Currency", "AUD");
@@ -2976,7 +2976,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279698", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279698", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279698", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279698", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279698", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279698", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279698", "1", "TRUE", "Currency", "AUD");
@@ -2997,7 +2997,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279697", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279697", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279697", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279697", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279697", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279697", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279697", "1", "TRUE", "Currency", "AUD");
@@ -3018,7 +3018,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279696", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279696", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279696", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279696", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279696", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279696", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292744", "TC_279696", "1", "TRUE", "Currency", "AUD");
@@ -3037,7 +3037,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290742", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290742", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290742", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290742", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290742", "1", "TRUE", "environment", "Automation");
         }
 
@@ -3045,7 +3045,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290745", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290745", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290745", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290745", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290745", "1", "TRUE", "environment", "Automation");
         }
 
@@ -3053,7 +3053,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290743", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290743", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290743", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290743", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290743", "1", "TRUE", "environment", "Automation");
         }
 
@@ -3061,7 +3061,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290751", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290751", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290751", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290751", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290751", "1", "TRUE", "environment", "Automation");
         }
 
@@ -3069,7 +3069,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290752", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290752", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290752", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290752", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290752", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290752", "1", "TRUE", "validation", "Report Name must be at least three character long");           
         }
@@ -3078,7 +3078,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290753", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290753", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290753", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290753", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290753", "1", "TRUE", "environment", "Automation");
         }
 
@@ -3086,7 +3086,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290757", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290757", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290757", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290757", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290757", "1", "TRUE", "environment", "Automation");
         }
 
@@ -3094,7 +3094,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290744", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290744", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290744", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290744", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290744", "1", "TRUE", "environment", "Automation");
         }
 
@@ -3102,7 +3102,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290754", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290754", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290754", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290754", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290754", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290754", "1", "TRUE", "New_Report_Name", "Rename report pop up");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290754", "1", "TRUE", "validation1", "New user report saved!");
@@ -3113,7 +3113,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290739", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290739", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290739", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290739", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290739", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290739", "1", "TRUE", "validation", "New user report saved!");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_290735", "TC_290739", "1", "TRUE", "Report_Name", "new Report");
@@ -3123,7 +3123,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269887", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269887", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269887", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269887", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269887", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269887", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269887", "1", "TRUE", "Currency", "AUD");
@@ -3138,7 +3138,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269888", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269888", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269888", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269888", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269888", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269888", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269888", "1", "TRUE", "Currency", "AUD");
@@ -3156,7 +3156,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269889", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269889", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269889", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269889", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269889", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269889", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269889", "1", "TRUE", "Currency", "AUD");
@@ -3173,7 +3173,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269890", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269890", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269890", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269890", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269890", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269890", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269890", "1", "TRUE", "Currency", "AUD");
@@ -3192,7 +3192,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269891", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269891", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269891", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269891", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269891", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269891", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269891", "1", "TRUE", "Currency", "AUD");
@@ -3210,7 +3210,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269892", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269892", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269892", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269892", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269892", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269892", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269892", "1", "TRUE", "Currency", "AUD");
@@ -3225,7 +3225,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279694", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279694", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279694", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279694", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279694", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279694", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279694", "1", "TRUE", "Currency", "AUD");
@@ -3242,7 +3242,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279691", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279691", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279691", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279691", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279691", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279691", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279691", "1", "TRUE", "Currency", "AUD");
@@ -3259,7 +3259,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279690", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279690", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279690", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279690", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279690", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279690", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279690", "1", "TRUE", "Currency", "AUD");
@@ -3276,7 +3276,7 @@ namespace TestData
         {
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279689", "1", "TRUE", "username", "Testautomation@cendyn17.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279689", "1", "TRUE", "password", "Cendyn123$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279689", "1", "TRUE", "client", "Kerzner");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279689", "1", "TRUE", "client", "D Rock");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279689", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279689", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292748", "TC_279689", "1", "TRUE", "Currency", "AUD");

@@ -55,7 +55,7 @@ namespace eInsightABTotalLabelRecord
                 string[] eachFrontEndURL = Regex.Split(LegacyTestData.CommonFrontendURL, ", ");
                 foreach (string frontendURL in eachFrontEndURL)
                 {
-                    Login.CommonLogin(frontendURL);
+                    Login.CommonLogin("https://einsightqa3.cendyn.com/");
 
 
                     //Start

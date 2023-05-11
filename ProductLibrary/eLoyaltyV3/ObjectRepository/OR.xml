@@ -261,7 +261,7 @@
     <Parameter key="Admin_AdminUpdates_Icon_View1">//*[@id='tbAdminUpdates001']/tbody/tr[1]/td[4]/a</Parameter>
     <Parameter key="Admin_AdminUpdates_Button_Next">//div[@id='tbAdminUpdates001_paginate']//a[text()='Next']</Parameter>
     <Parameter key="Admin_AdminUpdates_Button_Last">//div[@id='tbAdminUpdates001_paginate']//a[text()='Last']</Parameter>
-    <Parameter key="Admin_AdminUpdates_Button_Prev">//div[@id='tbAdminUpdates001_paginate']//a[text()='Prev']</Parameter>
+    <Parameter key="Admin_AdminUpdates_Button_Prev">//div[@id='tbAdminUpdates001_paginate']//a[contains(text(),'Prev')]</Parameter>
     <Parameter key="Admin_AdminUpdates_Button_First">//div[@id='tbAdminUpdates001_paginate']//a[text()='First']</Parameter>
     <Parameter key="Admin_AdminUpdates_Search_Clear">//*[@id="tbAdminUpdates001_filter"]//input</Parameter>
     <Parameter key="Click_AdminUpdates_Button_Close">//*[@id='adminLogDetail']//button[@type='button']</Parameter>
@@ -437,7 +437,7 @@
     <Parameter key="Admin_LoyaltySetUp_Offers_Pagination_Dropdown">//*[@id='offersTable_length']//select</Parameter>
     <Parameter key="Admin_LoyaltySetUp_Offers_Pagination_Prev_Button">//*[@id='offersTable_paginate']//a[contains(text(),'Prev')]</Parameter>
     <Parameter key="Admin_LoyaltySetUp_Offers_Pagination_Next_Button">//*[@id='offersTable_paginate']//a[contains(text(),'Next')]</Parameter>
-	<Parameter key="Click_LoyaltySetUp_Promotion_Filter">//*[@id='promo-table_filter']/form/label/input</Parameter>
+	<Parameter key="Click_LoyaltySetUp_Promotion_Filter">(//*[@id='promo-table_filter'])/label/input</Parameter>
     
     <!--END [LoyaltySetUp_Offers]-->
 
@@ -463,7 +463,7 @@
     <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Text_IncludeMemberLevel1">//*[@id="ruledata"]/div[5]/div[3]/div/div/div/div[1]/input</Parameter>
     <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Text_PointsExpiryMonth">//input[@id='pem']</Parameter>
     <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Button_Save">//button[@id='btnSave']</Parameter>
-    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Button_Cancel">//button[@id='btnCancel']</Parameter>
+    <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Button_Cancel">(//button[@id='btnCancel'])[3]</Parameter>
     <Parameter key="Admin_LoyaltyRules_PointsEarningRules_Icon_Close">//div[@id='confirmGenRule']//button[@id='btnClose']</Parameter>
     <!--END [LoyaltyRules_PointsEarningRules]-->
 

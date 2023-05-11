@@ -1,0 +1,61 @@
+2023-04-29 02:04:36,584 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-04-29 02:04:36,584 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-04-29 02:04:36,599 ::INFO ::[Logger]::  is used for Testing
+2023-04-29 02:04:36,599 ::INFO ::[Logger]:: This is the login page.https://devrhbi.revintel.co/
+2023-04-29 02:04:36,599 ::INFO ::[Logger]:: Execution started at:-Apr-29-2023 02-04-36-AM
+2023-04-29 02:04:36,615 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-04-29 02:04:36,615 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-04-29 02:04:36,615 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_252609         XXXXXXXXXXXXXXXX
+2023-04-29 02:04:36,615 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-04-29 02:04:36,615 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-04-29 02:04:36,631 ::INFO ::[Logger]:: Test Case :Validate Sold Out Night Analysis
+2023-04-29 02:05:36,771 ::ERROR::[Logger]:: The //*[@id="emailAddress"] element was not found on the page.
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:50841/session/2c4fbe93f0a5155645f331ff9101286d/element timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at BaseUtility.PageObject.PageAction.Find_ElementXPath(String repoName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\PageObject\PageAction.cs:line 33
+2023-04-29 02:06:13,967 ::FATAL::[Logger]:: System.ArgumentNullException: by cannot be null
+Parameter name: by
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at CTOS.CendynElement.<get_CenElement>b__6_0()
+   at CTOS.CendynElement.TryAndWait(Action action, CancellationToken cancellationToken, Int32 timeoutMs, Int32 retryTimeout)
+   at CTOS.CendynElement.get_CenElement()
+   at CTOS.CendynElement.<>c__DisplayClass32_0.<SendKeys>b__0()
+   at CTOS.CendynElement.TryAndWait(Action action, CancellationToken cancellationToken, Int32 timeoutMs, Int32 retryTimeout)
+   at CTOS.CendynElement.SendKeys(String text)
+   at CTOS.Input.EnterInput(String inputText)
+   at BaseUtility.Utility.Helper.ElementEnterText(IWebElement element, String text) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 387
+2023-04-29 02:06:13,967 ::FATAL::[Logger]:: Unable to select text in the Enter_EmailAddress element on the Login page.
+2023-04-29 02:06:13,967 ::ERROR::[Logger]:: RevIntel_Flow :: Script::Failed
+System.ArgumentNullException: by cannot be null
+Parameter name: by
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at CTOS.CendynElement.<get_CenElement>b__6_0()
+   at CTOS.CendynElement.TryAndWait(Action action, CancellationToken cancellationToken, Int32 timeoutMs, Int32 retryTimeout)
+   at CTOS.CendynElement.get_CenElement()
+   at CTOS.CendynElement.<>c__DisplayClass32_0.<SendKeys>b__0()
+   at CTOS.CendynElement.TryAndWait(Action action, CancellationToken cancellationToken, Int32 timeoutMs, Int32 retryTimeout)
+   at CTOS.CendynElement.SendKeys(String text)
+   at CTOS.Input.EnterInput(String inputText)
+   at BaseUtility.Utility.Helper.ElementEnterText(IWebElement element, String text) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 396
+   at RevIntel.AppModule.UI.Login.Enter_EmailAddress(String str) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\Login.cs:line 13
+   at RevIntel.AppModule.UI.Login.Frontend_SignIn(String username, String password) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\Login.cs:line 41
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TC_252609() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp\TP_252578_Booking Trends.cs:line 2681
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TP_252578() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp.cs:line 75
+   at RevIntel.RevIntel_TP_252578_Booking_Trends.TC_252609() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\TestPlan\RevIntel\RevIntel_TP_252578_Booking_Trends.cs:line 457
+2023-04-29 02:06:56,833 ::INFO ::[Logger]:: E.N.D

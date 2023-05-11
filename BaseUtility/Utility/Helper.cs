@@ -514,7 +514,7 @@ namespace BaseUtility.Utility
             element.TagName, element.GetAttribute("id"));
 
             //Get WebDriver to look for elements and execute javaScript
-            var webDriver = ((RemoteWebElement)element).WrappedDriver;
+            var webDriver = ((WebElement)element).WrappedDriver;
 
             //Build and execute the javaScript
             var script = String.Format(@"return $(""{0}"").val()", cssSelector);

@@ -1,0 +1,10 @@
+2023-05-01 20:49:05,677 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-01 20:49:05,677 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-01 20:49:05,677 ::INFO ::[Logger]::  is used for Testing
+2023-05-01 20:49:05,677 ::INFO ::[Logger]:: This is the login page.data:,
+2023-05-01 20:49:05,677 ::INFO ::[Logger]:: Execution started at:-May-01-2023 20-49-05-PM
+2023-05-01 20:49:05,677 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-01 20:49:05,677 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-01 20:49:05,677 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_294938         XXXXXXXXXXXXXXXX
+2023-05-01 20:49:05,692 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-01 20:49:05,692 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}

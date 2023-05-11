@@ -1,0 +1,20 @@
+2023-05-01 14:34:31,163 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-01 14:34:31,165 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-01 14:34:31,165 ::INFO ::[Logger]::  is used for Testing
+2023-05-01 14:34:31,171 ::INFO ::[Logger]:: This is the login page.data:,
+2023-05-01 14:34:31,172 ::INFO ::[Logger]:: Execution started at:-May-01-2023 14-34-31-PM
+2023-05-01 14:34:31,173 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-01 14:34:31,174 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-01 14:34:31,176 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_276920         XXXXXXXXXXXXXXXX
+2023-05-01 14:34:31,177 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-01 14:34:31,182 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-01 14:34:49,479 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_1 = 0
+2023-05-01 14:34:52,141 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_2 = 0
+2023-05-01 14:34:54,625 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_3 = 0
+2023-05-01 14:35:03,320 ::ERROR::[Logger]:: eLoyaltyV3_Flow :: Script::Failed
+NUnit.Framework.AssertionException: Scenarion : Points are NOT earned as Expected
+   at NUnit.Framework.Assert.ReportFailure(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 394
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TC_276920() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp\WindowsService\Scenario Validation\Scenario_Validation.cs:line 1843
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TP_276897() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp.cs:line 966
+   at eLoyaltyV3.TestPlan.HotelOrigami.WindowsServices.Scenario_Validation.HotelOrigami_TP_276897_Service_Scenario_Validation.TC_276920() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\TestPlan\HotelOrigami\WindowsServices\Scenario Validation\HotelOrigami_TP_276897_Service_Scenario_Validation.cs:line 698
+2023-05-01 14:35:10,312 ::INFO ::[Logger]:: E.N.D

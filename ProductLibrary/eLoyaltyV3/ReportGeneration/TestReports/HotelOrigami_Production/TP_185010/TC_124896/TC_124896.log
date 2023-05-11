@@ -1,0 +1,34 @@
+2023-05-08 12:24:54,845 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-08 12:24:54,845 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-08 12:24:54,845 ::INFO ::[Logger]::  is used for Testing
+2023-05-08 12:24:54,861 ::INFO ::[Logger]:: This is the login page.https://origamiloyalty.cendyn.com/en-US/Login?ReturnUrl=%2Fen-US%2FOverview
+2023-05-08 12:24:54,861 ::INFO ::[Logger]:: Execution started at:-May-08-2023 12-24-54-PM
+2023-05-08 12:24:54,861 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-08 12:24:54,861 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-08 12:24:54,861 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_124896         XXXXXXXXXXXXXXXX
+2023-05-08 12:24:54,861 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-08 12:24:54,869 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-08 12:25:01,950 ::INFO ::[Logger]:: Clicked the Link_ForgotYourLogin element on the SignIn page.
+2023-05-08 12:25:02,030 ::DEBUG::[Logger]:: 1) user landed on forget password page
+2023-05-08 12:25:19,051 ::ERROR::[Logger]:: eLoyaltyV3_Flow :: Script::Failed
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at eLoyaltyV3.Utility.Queries.GetActiveMemberEmail(Users data, String projectname) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\Utility\Queries.cs:line 2618
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TC_124896() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp\Frontend\TP_121737_Forgot_Password.cs:line 30
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TP_185010(String ProjectName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp.cs:line 839
+   at HotelOrigami.Portal_PostDeployment_TP_185010.TC_124896() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\TestPlan\HotelOrigami\Portal_PostDeployment_TP_185010 .cs:line 49
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2023-05-08 12:25:26,324 ::INFO ::[Logger]:: E.N.D

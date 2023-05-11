@@ -2632,6 +2632,7 @@ namespace eLoyaltyV3.AppModule.UI
         public static void LoyaltySetUp_Offers_Text_Filter(string value)
         {
             Helper.ElementWait(PageObject_Admin.LoyaltySetUp_Offers_Text_Filter(), 240);
+            Helper.ElementClearText(PageObject_Admin.LoyaltySetUp_Offers_Text_Filter());
             Helper.ElementEnterText(PageObject_Admin.LoyaltySetUp_Offers_Text_Filter(), value);
         }
 

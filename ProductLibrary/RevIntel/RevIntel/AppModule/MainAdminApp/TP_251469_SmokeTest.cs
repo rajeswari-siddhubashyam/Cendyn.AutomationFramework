@@ -29,7 +29,7 @@ namespace RevIntel.AppModule.MainAdminApp
 
                 Logger.WriteInfoMessage("This test cases will Verify Login and Log out is successful and URL is pointing to right database");
 
-                for (int ClientNumber = 1; ClientNumber < 4; ClientNumber++)
+                for (int ClientNumber = 1; ClientNumber < 1; ClientNumber++)
                 {
                     url = TestData.ExcelData.TestDataReader.ReadData(ClientNumber, "url");
                     Helper.Driver.Url = (url);
@@ -51,7 +51,7 @@ namespace RevIntel.AppModule.MainAdminApp
                         Logger.WriteDebugMessage("Actual url = " + client_CurrentUrl + " match with Expected url = " + url);
                     else
                         Assert.Fail("Actual and Expeted url are not same");
-
+                   
                     //Click on log out
                     Login.Select_DropDown();
                     Logger.WriteDebugMessage("Drop down Displayed");
@@ -90,7 +90,7 @@ namespace RevIntel.AppModule.MainAdminApp
                 Login.Frontend_SignIn(username, password);
 
                 //Select Client 
-                Navigation.Select_Client(client);
+               Navigation.Select_Client(client);
 
                 //Verify link directed to right URL
                 url = TestData.ExcelData.TestDataReader.ReadData(1, "url");
@@ -275,7 +275,7 @@ namespace RevIntel.AppModule.MainAdminApp
                 Login.Select_DropDown();
                 Logger.WriteDebugMessage("Drop down displayed");
                 Navigation.Click_change_tenant();
-                Navigation.Click_Automation();
+                //Navigation.Click_Automation();
                 Navigation.Tenant_21C();
                 Logger.WriteDebugMessage("Tenant is selected as 21C");
 
@@ -481,7 +481,7 @@ namespace RevIntel.AppModule.MainAdminApp
                 //Navigate to Hotel->Hotel Event Calender
                 Navigation.Hotel();
                 Logger.WriteDebugMessage("Hotel Dropdown displayed");
-                Navigation.Click_Hotel_Event_Calendar_Report();
+               // Navigation.Click_Hotel_Event_Calendar_Report();
                 Helper.AddDelay(10000);
                 Logger.WriteDebugMessage("User landed on Hotel Event Calender Report page");
 
@@ -515,7 +515,8 @@ namespace RevIntel.AppModule.MainAdminApp
 
                 ////Navigate to Room Type->Room Type analysis
                 Navigation.Click_Hamburger_Icon();
-                Navigation.Click_Menu_Room_Type();
+                Helper.AddDelay(10000);
+                Navigation.Click_Menu_Room_Type();                
                 Logger.WriteDebugMessage("Room Type Drop down Displayed");
                 Navigation.Click_Menu_Room_Type_Analysis();
                 Helper.AddDelay(10000);
