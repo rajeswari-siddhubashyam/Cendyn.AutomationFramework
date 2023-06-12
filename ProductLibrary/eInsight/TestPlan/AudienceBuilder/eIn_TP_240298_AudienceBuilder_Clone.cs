@@ -10,6 +10,7 @@ using LegacyTestData = eInsight.Utility.LegacyTestData;
 using eInsightSetup = eInsight.Utility.Setup;
 using OpenQA.Selenium;
 using System.Threading;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace eInsightAudienceBuilderClone
 {

@@ -148,6 +148,9 @@ namespace eInsight.Utility
         public static string TC_251924 = "TC_251924";
         #endregion[TP_97045]
         #region[TP_197270}
+        public static string TC_508833 = "TC_508833";
+        public static string TC_508834 = "TC_508834";
+        public static string TC_508836 = "TC_508836";
         public static string TC_128427 = "TC_128427";
         public static string TC_197271 = "TC_197271";
         public static string TC_197272 = "TC_197272";

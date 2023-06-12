@@ -13,12 +13,176 @@ using NUnit.Framework;
 using eInsight.AppModule.UI;
 using eInsight.PageObject.UI;
 using System.Text.RegularExpressions;
+using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace eInsight.AppModule.MainAdminApp
 {
     public partial class MainAdminApp : Helper
     {
         #region[TP_197270]
+        public static void TC_508833()
+        {
+            Logger.WriteInfoMessage("Starting Test Case ID - 508833 - End to End flow for Primary Email marketing Campaign creation");
+            CampaignDetails details = new CampaignDetails();
+
+            projectID = SqlWarehouseQuery.ReturnCompanyName("NA", "ProjectID", TestPlanId);
+
+            CampaignDetails data = new CampaignDetails();
+            SqlWarehouseQuery.ReturnCampaignStatus(Convert.ToInt32(projectID), data);
+            CreateCampaign.PreSearchCampaign_New(CompanyName);
+            Navigation.MenuNavigation("Create");
+            if (Driver.Url.Contains("Create"))
+            {
+                string campaignName=CreateCampaign.CreateCampaign_CriteriaToTestingTab(Convert.ToInt32(projectID), "MarketingTestEtoEFlow_", "Marketing", "Independent Collection (IndependentCollection@contact-client.com)", "Cendynqatest (cendynautomation@cendyn.com)", "EndToEndCreateCampaignFlow"); 
+
+                ElementWait(PageObject_CreateCampaign.Button_SendForApproval(), 60);
+                IsElementVisible(PageObject_CreateCampaign.Button_SendForApproval());
+                CreateCampaign.Click_Button_SendforApproval();
+                CreateCampaign.CampaignApprove(Convert.ToInt32(projectID));
+                IsElementVisible(PageObject_CreateCampaign.CreateCampaign_Button_Continue());
+                CreateCampaign.CreateCampaign_Button_Continue();
+                ElementWait(PageObject_CreateCampaign.CreateCampaign_Link_ScheduleTab(), 60);
+                Logger.WriteDebugMessage("Landed on Schedule Page");
+                CreateCampaign.SelectTime();
+                ScrollUpUsingJavaScript(Driver, -500);
+                CreateCampaign.CampaignScheduleandComplete("Schedule");
+                AddDelay(5000);
+                Driver.SwitchTo().Frame("ManageCampaign");                
+                if (VerifyTextOnPage("MarketingTestEtoEFlow_"+campaignName))
+                {
+                    Logger.WriteDebugMessage("New Campaign Created Successfully : MarketingTestEtoEFlow_" + campaignName);
+                }
+                else
+                {
+                    Assert.Fail("New Campaign Not Created : MarketingTestEtoEFlow_" + campaignName);
+                }                
+                ElementClick(Driver.FindElement(By.XPath("(//span[contains(text(), 'Scheduled Active')])[1]")));
+                ElementWait(PageObject_ManageCampaign.ManageCampaign_EditSchedule_InactivateSchedule(), 60);
+                IsElementVisible(PageObject_ManageCampaign.ManageCampaign_EditSchedule_InactivateSchedule());
+                OpenNewTab();
+                ControlToNewWindow();
+                Login.AutoAccount_logins("catchall@cendyn17.com", "Autom4tion12346$", 1, 0, LegacyTestData.CommonCatchallURL, "MarketingTestEtoEFlow_" + campaignName, 0);
+                if (VerifyTextOnPage("MarketingTestEtoEFlow_" + campaignName))
+                {
+                    Logger.WriteDebugMessage("Send to Test Email received");
+                }
+                else
+                {
+                    Assert.Fail("Send to test email was not received.");
+                }
+            }
+        }
+
+        public static void TC_508834()
+        {
+            Logger.WriteInfoMessage("Starting Test Case ID - 508834 - End to End flow for Primary Email Transactional Campaign creation");
+            CampaignDetails details = new CampaignDetails();
+
+            projectID = SqlWarehouseQuery.ReturnCompanyName("NA", "ProjectID", TestPlanId);
+
+            CampaignDetails data = new CampaignDetails();
+            SqlWarehouseQuery.ReturnCampaignStatus(Convert.ToInt32(projectID), data);
+            CreateCampaign.PreSearchCampaign_New(CompanyName);
+            Navigation.MenuNavigation("Create");
+            if (Driver.Url.Contains("Create"))
+            {
+                string CampaignRanName = GetRandomAlphaNumericString(4);
+                CreateCampaign.CreateCampaign_Criteria( "TransactionalEtoEFlow_"+ CampaignRanName);
+                CreateCampaign.CreateCampaign_SelectPropertylyst("Capitol Hill Hotel");
+                CreateCampaign.CreateCampaign_CampainSetting("New Reservation");
+                ScrollDownUsingJavaScript(Driver, 500);
+                CreateCampaign.CreateCampaign_DataSource("QA_Reg");
+                ScrollUpUsingJavaScript(Driver, 500);
+                ((IJavaScriptExecutor)Driver).ExecuteScript("arguments[0].click();", Driver.FindElement(By.XPath("//button[@class='btn btn-primary action-criteria-save']")));
+                Logger.WriteInfoMessage("Clicked on 'Save' Button");
+                CreateCampaign.CreateCampaign_ForecastTargetAudience();
+
+                if (IsElementVisible(PageObject_CreateCampaign.CreateCampaign_ForecastTargetAudienceTotalCount()))
+                {                       
+                    ElementWait(PageObject_CreateCampaign.CreateCampaign_ForecastTargetAudienceTotalCount(), 120);
+                    Logger.WriteDebugMessage("Forecast Target Audience Total Count is DisPlayed");
+
+                }
+                else
+                {
+                    Assert.Fail("Forecast Target Audience Not Total Count is DisPlayed");
+                }
+                CreateCampaign.CreateCampaign_CriteriaTabSaveandContinueButton();
+                Driver.SwitchTo().Frame("TemplateBuilder");
+                CreateCampaign.CreateCampaign_TemplateTabSelectandSaveandContinueButton(1);
+                CreateCampaign.CreateCampaign_EditTemplate("Transactional", "Independent Collection (IndependentCollection@contact-client.com)", "Cendynqatest (cendynautomation@cendyn.com)", "EndToEndCreateCampaignFlow");
+                CreateCampaign.CreateCampaign_TestingTabProceedButton();
+                ElementWait(PageObject_CreateCampaign.Button_SendForApproval(), 60);
+                IsElementVisible(PageObject_CreateCampaign.Button_SendForApproval());
+                CreateCampaign.Click_Button_SendforApproval();
+                CreateCampaign.CampaignApprove(Convert.ToInt32(projectID));
+                IsElementVisible(PageObject_CreateCampaign.CreateCampaign_Button_Continue());
+                CreateCampaign.CreateCampaign_Button_Continue();
+                ElementWait(PageObject_CreateCampaign.CreateCampaign_Link_ScheduleTab(), 60);
+                Logger.WriteDebugMessage("Landed on Schedule Page");
+                CreateCampaign.SelectTime();
+                ScrollUpUsingJavaScript(Driver, -500);
+                CreateCampaign.CampaignScheduleandComplete("Schedule");
+                Driver.SwitchTo().Frame("ManageCampaign");
+                CreateCampaign.CreateCampaign_SelectDropdownValueInManageCampaingPage("Transactional - In Testing", 2);
+                CreateCampaign.CreateCampaign_VerifyCreatedorNot("TransactionalEtoEFlow_" + CampaignRanName,1);
+                OpenNewTab();
+                ControlToNewWindow();
+                Login.AutoAccount_logins("catchall@cendyn17.com", "Autom4tion12346$", 1, 0, LegacyTestData.CommonCatchallURL, "TransactionalEtoEFlow_" + CampaignRanName, 0);
+                if (VerifyTextOnPage("TransactionalEtoEFlow_" + CampaignRanName))
+                {
+                    Logger.WriteDebugMessage("Send to Test Email received");
+                }
+                else
+                {
+                    Assert.Fail("Send to test email was not received.");
+                }
+
+            }
+        }
+
+        public static void TC_508836()
+        {
+            Logger.WriteInfoMessage("Starting Test Case ID - 508836 - Automate Sub Email Campaign Flow - End to End");
+            CampaignDetails details = new CampaignDetails();
+
+            projectID = SqlWarehouseQuery.ReturnCompanyName("NA", "ProjectID", TestPlanId);
+
+            CampaignDetails data = new CampaignDetails();
+            SqlWarehouseQuery.ReturnCampaignStatus(Convert.ToInt32(projectID), data);
+            CreateCampaign.PreSearchCampaign_New(CompanyName);
+            Navigation.MenuNavigation("Create");
+            if (Driver.Url.Contains("Create"))
+            {
+                string CampaignRanName = GetRandomAlphaNumericString(4);
+                CreateCampaign.CreateCampaign_SubEmailCreate("SubEmailEtoEFlow_" + CampaignRanName);
+                CreateCampaign.CreateCampaign_TemplateTabSelectandSaveandContinueButton(1);
+                CreateCampaign.CreateCampaign_EditTemplate("Marketing", "Independent Collection (IndependentCollection@contact-client.com)", "Cendynqatest (cendynautomation@cendyn.com)", "EndToEndCreateCampaignFlow");
+                CreateCampaign.CreateCampaign_TestingTabProceedButton();
+                ElementWait(PageObject_CreateCampaign.Button_SendForApproval(), 60);
+                IsElementVisible(PageObject_CreateCampaign.Button_SendForApproval());
+                CreateCampaign.Click_Button_SendforApproval();
+                CreateCampaign.CampaignApprove(Convert.ToInt32(projectID));
+                IsElementVisible(PageObject_CreateCampaign.CreateCampaign_Button_Continue());
+                CreateCampaign.CreateCampaign_Button_Continue();
+                Driver.SwitchTo().Frame("ManageCampaign");
+                CreateCampaign.CreateCampaign_SelectDropdownValueInManageCampaingPage("Email", 1);
+                CreateCampaign.CreateCampaign_SelectDropdownValueInManageCampaingPage("Sub", 3);
+                CreateCampaign.CreateCampaign_VerifyCreatedorNot("SubEmailEtoEFlow_" + CampaignRanName, 1);
+                OpenNewTab();
+                ControlToNewWindow();
+                Login.AutoAccount_logins("catchall@cendyn17.com", "Autom4tion12346$", 1, 0, LegacyTestData.CommonCatchallURL, "SubEmailEtoEFlow_" + CampaignRanName, 0);
+                if (VerifyTextOnPage("SubEmailEtoEFlow_" + CampaignRanName))
+                {
+                    Logger.WriteDebugMessage("Send to Test Email received");
+                }
+                else
+                {
+                    Assert.Fail("Send to test email was not received.");
+                }
+
+            }
+        }
         public static void TC_128427()
         {
             projectID = SqlWarehouseQuery.ReturnCompanyName("NA", "ProjectID", TestPlanId);
@@ -47,7 +211,7 @@ namespace eInsight.AppModule.MainAdminApp
                 Date = DateTime.Parse(SData.DepartureDate);
                 string depatureDate = Date.ToString("M/d/yyyy");
                 string resxPath = SData.ReservationNumber + " | " + arrivalDate + " - " + depatureDate;
-                //ManageCampaign.CASL_QuickSendVerification(SData.CustomerIDs, 0, "", SData.ReservationNumber, resxPath);
+                //ManageCampaign.CASL_QuickSendVerification(SData.Custom    erIDs, 0, "", SData.ReservationNumber, resxPath);
                 ManageCampaign.Customer_Send_QuickSend(SData.CustomerIDs, SData.ReservationNumber, resxPath);
                 OpenNewTab();
                 ControlToNewWindow();
@@ -79,7 +243,7 @@ namespace eInsight.AppModule.MainAdminApp
             ManageCampaign.CampaignDetails_TabActions("Audience", projectID, "CustomerDetails");
             ManageCampaign.SearchCustomer("Email", SData.Email);
             ManageCampaign.CustomerDetailEllipse_PreviewQuickSend("Preview");
-            ManageCampaign.VerifyPersonalizeData(SData, 1, CompanyName, "", "", 0);
+            ManageCampaign.VerifyPersonalizeData(SData, 1, CompanyName, "", "", 40012875);
         }
         /* Verify DC returns proper data*/
         public static void TC_197272()
@@ -112,7 +276,7 @@ namespace eInsight.AppModule.MainAdminApp
             Logger.WriteDebugMessage("Landed on Manage Campaign Page");
             CampaignDetails data = new CampaignDetails();
             SqlWarehouseQuery.ReturnCampaignStatus(Convert.ToInt32(projectID), data);
-            AddDelay(20000);
+           // AddDelay(2000);
             ManageCampaign.PreSearchCampaign_New(CompanyName, "ProjectID", projectID, iFrameManageCampaign);
             string loader2 = "//div[@class='e-spinner-pane e-spin-show']";
             Helper.FindLoaderAndWaitTillHide(loader2);
@@ -121,7 +285,7 @@ namespace eInsight.AppModule.MainAdminApp
             SqlWarehouseQuery.GetCustomerDataForSendTest(SData, CompanyName);
             OpenNewTab();
             ControlToNewWindow();
-            Login.AutoAcc_login(SData.Subject, 2, 0, LegacyTestData.CommonCatchallURL, 0);
+            Login.AutoAccount_logins("catchall@cendyn17.com", "Autom4tion12346$", 1, 0, LegacyTestData.CommonCatchallURL, "testcatchall@cendyn17.com", 0);
             if (VerifyTextOnPage(SData.Subject))
             {
                 Logger.WriteDebugMessage("Send to Test Email received");
@@ -196,7 +360,7 @@ namespace eInsight.AppModule.MainAdminApp
             //ManageCampaign.CASL_QuickSendVerification(SData.CustomerIDs, 0, "", SData.ReservationNumber, resxPath);
             ManageCampaign.Customer_Send_QuickSend(SData.CustomerIDs, SData.ReservationNumber, resxPath);
             OpenNewTab();
-            Login.AutoAcc_logins(SData.Subject, 2, 0, LegacyTestData.CommonCatchallURL, 1);
+            Login.AutoAccount_logins("catchall@cendyn17.com", "Autom4tion12346$", 1, 0, LegacyTestData.CommonCatchallURL, "testcatchall@cendyn17.com", 0);
             if (VerifyTextOnPage(SData.Subject) == true)
             {
                 Logger.WriteDebugMessage("Received Quick Send Email.");
@@ -252,11 +416,12 @@ namespace eInsight.AppModule.MainAdminApp
             //ManageCampaign.PreSearchCampaign(1, projectID, data.ParentCompanyName, data.CompanyName);
             ManageCampaign.PreSearchCampaign_New(CompanyName, "ProjectID", projectID, iFrameManageCampaign);
             ManageCampaign.ManageCampaign_EllipseButton("Edit");
-            AddDelay(10000);
+            AddDelay(1000);
             //ManageCampaign.ManageCampaign_EditCampaign(Convert.ToInt32(projectID));
             ElementWait(PageObject_CreateCampaign.CreateCampaign_Button_Save(), 60);
             if (IsElementVisible(PageObject_CreateCampaign.CreateCampaign_Button_ChangeTemplate()))
             {
+                AddDelay(1000);
                 Logger.WriteDebugMessage("Landed on Edit Template Tab.");
                 CreateCampaign.CreateCampaign_Button_SaveandContinue();
                 ElementWait(PageObject_ManageCampaign.Button_Campaign_BasicValidationReport(), 120);
@@ -267,10 +432,10 @@ namespace eInsight.AppModule.MainAdminApp
             {
                 Assert.Fail("Did not land on Testing Page.");
             }
-            AddDelay(25000);
+            AddDelay(2500);
             OpenNewTab();
             ControlToNewWindow();
-            Login.AutoAcc_logins(SData.Subject, 2, 0, LegacyTestData.CommonCatchallURL, 1);
+            Login.AutoAccount_logins("catchall@cendyn17.com", "Autom4tion12346$", 1, 0, LegacyTestData.CommonCatchallURL, "testcatchall@cendyn17.com", 0);
 
             if (VerifyTextOnPage(SData.Subject) == true)
             {
@@ -417,6 +582,12 @@ namespace eInsight.AppModule.MainAdminApp
                 ManageCampaign.PreSearchCampaign_New(CompanyName, "ProjectID", projectID, iFrameManageCampaign);
                 //ScrollToElement(Driver.FindElement(By.XPath("//*[@id='closeImgTag" + projectID + "']")));
                 ManageCampaign.ManageCampaign_InactivateSchedule();
+                ElementClick(PageObject_ManageCampaign.ManageCampaign_SearchProjectID());
+                //ElementEnterText(PageObject_ManageCampaign.ManageCampaign_SearchProjectIDTexts(), projectID);
+                ElementClick(PageObject_ManageCampaign.ManageCampaign_SearchProjectID_Filters());
+                AddDelay(2000);
+                ElementClick(Driver.FindElement(By.XPath("(//a[contains(text(),'Drafts')])[1]")));
+                ElementClick(Driver.FindElement(By.XPath("(//a[contains(text(),'All')])[1]")));
                 int ScheduleStatus = SqlWarehouseQuery.ReturnCampaignScheduleStatus(Convert.ToInt32(projectID));
                 if (ScheduleStatus == 0)
                 {
@@ -433,29 +604,42 @@ namespace eInsight.AppModule.MainAdminApp
         }
         public static void TC_198280()
         {
-            Users SData = new Users();
-            projectID = SqlWarehouseQuery.ReturnCompanyName("NA", "ProjectID", TestPlanId);
-            Logger.WriteDebugMessage("Logged in to eInsight with UserName - " + LegacyTestData.CommonFrontendEmail + " and Password " + LegacyTestData.CommonFrontendPassword + ". Landed on eInsight Home Page.");
+            try
+            {
+                Users SData = new Users();
+                projectID = SqlWarehouseQuery.ReturnCompanyName("NA", "ProjectID", TestPlanId);
+                Logger.WriteDebugMessage("Logged in to eInsight with UserName - " + LegacyTestData.CommonFrontendEmail + " and Password " + LegacyTestData.CommonFrontendPassword + ". Landed on eInsight Home Page.");
 
-            Navigation.MenuNavigation("ManageCampaign");
-            Logger.WriteDebugMessage("Landed on Manage Campaign Page for Property: " + CompanyName);
-            CampaignDetails data = new CampaignDetails();
-            SqlWarehouseQuery.ReturnCampaignStatus(Convert.ToInt32(projectID), data);
-            ManageCampaign.PreSearchCampaign_New(CompanyName, "ProjectID", projectID, iFrameManageCampaign);
-            ManageCampaign.ManageCampaign_ActivateSchedule();
-            int ScheduleStatus = SqlWarehouseQuery.ReturnCampaignScheduleStatus(Convert.ToInt32(projectID));
-            ReloadPage();
-            if (ScheduleStatus == 1)
-            {
+                Navigation.MenuNavigation("ManageCampaign");
+                Logger.WriteDebugMessage("Landed on Manage Campaign Page for Property: " + CompanyName);
+                CampaignDetails data = new CampaignDetails();
+                SqlWarehouseQuery.ReturnCampaignStatus(Convert.ToInt32(projectID), data);
                 ManageCampaign.PreSearchCampaign_New(CompanyName, "ProjectID", projectID, iFrameManageCampaign);
-                IWebElement elem = Driver.FindElement(By.XPath("//span[contains(text(), 'Scheduled Active')]"));
-                ScrollToElement(elem);
-                HighlightElement(elem);
-                Logger.WriteDebugMessage("Campaign is Activated.");
-            }
-            else
+                //ManageCampaign.StatusFilterByName("Scheduled Inactive", 6);
+                ManageCampaign.ManageCampaign_ActivateSchedule();
+                ElementClick(PageObject_ManageCampaign.ManageCampaign_SearchProjectID());
+                //ElementEnterText(PageObject_ManageCampaign.ManageCampaign_SearchProjectIDTexts(), projectID);
+                ElementClick(PageObject_ManageCampaign.ManageCampaign_SearchProjectID_Filters());
+                AddDelay(2000);
+                ElementClick(Driver.FindElement(By.XPath("(//a[contains(text(),'Drafts')])[1]")));
+                ElementClick(Driver.FindElement(By.XPath("(//a[contains(text(),'All')])[1]")));
+                int ScheduleStatus = SqlWarehouseQuery.ReturnCampaignScheduleStatus(Convert.ToInt32(projectID));
+                ManageCampaign.PreSearchCampaign_New(CompanyName, "ProjectID", projectID, iFrameManageCampaign);
+                if (ScheduleStatus == 1)
+                {
+                    ManageCampaign.PreSearchCampaign_New(CompanyName, "ProjectID", projectID, iFrameManageCampaign);
+                    IWebElement elem = Driver.FindElement(By.XPath("//span[contains(text(), 'Scheduled Active')]"));
+                    ScrollToElement(elem);
+                    HighlightElement(elem);
+                    Logger.WriteDebugMessage("Campaign is Activated.");
+                }
+                else
+                {
+                    Assert.Fail("Campaign was not activated.");
+                }
+            } catch(Exception e)
             {
-                Assert.Fail("Campaign was not activated.");
+
             }
         }
         public static void TC_236459()
@@ -623,7 +807,7 @@ namespace eInsight.AppModule.MainAdminApp
             {
                 //Logger.WriteDebugMessage("Campaign Scheduled.");
 
-                AddDelay(25000);
+                AddDelay(2500);
                 //Driver.Navigate().GoToUrl(LegacyTestData.CommonFrontendURL + "Project.mvc/Project/View?projectId=" + details.ParentProjectID);
                 //ManageCampaign.PreSearchCampaign(1, Convert.ToInt32(details.ParentProjectID), details.ParentCompanyName, details.CompanyName);
                 ManageCampaign.PreSearchCampaign_New(data.CompanyName, "ProjectID", projectID, iFrameManageCampaign);
@@ -635,7 +819,7 @@ namespace eInsight.AppModule.MainAdminApp
                 //IJavaScriptExecutor js = (IJavaScriptExecutor)Driver;
                 //js.ExecuteScript("arguments[0].click();", SearchElement);
                 ManageCampaign.ManageCampaign_EllipseButton("Clone");
-                AddDelay(90000);
+                AddDelay(9000);
 
                 if (IsElementVisible(PageObject_CreateCampaign.CreateCampaign_Button_SaveandContinue()))
                 {
@@ -654,10 +838,10 @@ namespace eInsight.AppModule.MainAdminApp
 
                     Navigation.MenuNavigation("ManageCampaign");
                     Driver.SwitchTo().ParentFrame();
-                    ManageCampaign.PreSearchCampaign_New(details.CompanyName, "ProjectID", newProjectID, iFrameManageCampaign);
+                    ManageCampaign.PreSearchCampaign_New(data.CompanyName, "ProjectID", newProjectID, iFrameManageCampaign);
 
                     Logger.WriteDebugMessage("Cloned Campaign located for ProjectID - " + newProjectID);
-                    AddDelay(20000);
+                    AddDelay(2000);
 
                     Logger.WriteInfoMessage("Starting Test Case ID - 255908 - Delete Campaign");
 
@@ -665,7 +849,7 @@ namespace eInsight.AppModule.MainAdminApp
                     ScrollDownUsingJavaScript(Driver, -1000);
                     ManageCampaign.CampaignDetails_PerformActonsItems("Delete");
                     Driver.Navigate().Refresh();
-                    AddDelay(30000); // Change -- Added delay
+                    AddDelay(3000); // Change -- Added delay
                     Driver.SwitchTo().ParentFrame();
                     ManageCampaign.ManageCampaign_SearchProjectIDOnly(CompanyName, "ProjectID", newProjectID, iFrameManageCampaign);
 

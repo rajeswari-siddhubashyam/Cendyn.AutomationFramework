@@ -1039,7 +1039,7 @@ namespace eLoyaltyV3.AppModule.UI
                 catch(Exception)
                 {
                     Logger.WriteInfoMessage("New Outlook ");
-                    ElementClick(Driver.FindElement(By.Id(NewOutLookIcon)));
+                    ElementClick(Driver.FindElement(By.Id("Mail")));
                 }
                 CheckActiveWindow();                
                 //Driver.Navigate().GoToUrl("https://outlook.office365.com/owa/?realm=cendyn17.com&exsvurl=1&ll-cc=1033&modurl=0&path=/mail/search");
@@ -1102,7 +1102,7 @@ namespace eLoyaltyV3.AppModule.UI
                 //((IJavaScriptExecutor)Driver).ExecuteScript("arguments[0].removeAttribute('style')", element);
                 //AddDelay(2500);
                 //ElementClick(Driver.FindElement(By.XPath("//div[@role='heading'][@tabindex='-1']/following-sibling::div[@data-convid][1]")));                
-                DoubleClickElement(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
+                DoubleClickElement(Driver.FindElement(By.XPath("//div[@role='option'][@tabindex='-1']/../div[text()='All results']//following-sibling::div[1]")));
             }
             catch (Exception ex)
             {
@@ -1154,6 +1154,7 @@ namespace eLoyaltyV3.AppModule.UI
             OpenLatestEmail();
             Helper.PageDown();
             AddDelay(5000);
+            CheckActiveWindow();
             ControlToNewWindow();
             Helper.Driver.Manage().Window.Maximize();
             Logger.WriteDebugMessage("Opened Latest Email.");

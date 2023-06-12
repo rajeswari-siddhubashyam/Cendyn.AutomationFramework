@@ -11,6 +11,21 @@ using SqlWarehouse;
 using Common;
 using NUnit.Framework;
 using OpenQA.Selenium.Support.UI;
+using DocumentFormat.OpenXml.Bibliography;
+using SeleniumExtras.WaitHelpers;
+using System.Xml.Linq;
+using OpenQA.Selenium.Interactions;
+using System.Threading;
+using System.Drawing;
+using OpenQA.Selenium.Interactions.Internal;
+using Microsoft.Office.Interop.Excel;
+using Newtonsoft.Json.Linq;
+using eInsight.Utility;
+using System.Web;
+using DocumentFormat.OpenXml.Wordprocessing;
+using Microsoft.Office.Interop.Word;
+using DocumentFormat.OpenXml.Drawing.Charts;
+using RazorEngine.Compilation.ImpromptuInterface.InvokeExt;
 
 namespace eInsight.AppModule.UI
 {
@@ -22,10 +37,16 @@ namespace eInsight.AppModule.UI
         }
         public static void CreateCampaign_Button_SaveandContinue()
         {
-            AddDelay(35000);
+            AddDelay(3500);
             ElementClick(PageObject_CreateCampaign.CreateCampaign_Button_SaveandContinue());
             //ElementClick(PageObject_CreateCampaign.CreateCampaign_TemplateAndTestingPage_SaveandContinue());
         }
+        public static void CreateCampaign_StatyOnPage()
+        {
+            AddDelay(2000);
+            ElementClick(PageObject_CreateCampaign.CreateCampaign_StatyOnPage());
+        }
+        
         public static void CreateCampaign_Button_Continue()
         {
             ElementClick(PageObject_CreateCampaign.CreateCampaign_Button_Continue());
@@ -169,6 +190,8 @@ namespace eInsight.AppModule.UI
             if (VerifyTextOnPage("This email address is in compliance with global spam laws"))
             {
                 ManageCampaign.Click_CASLCheckBox();
+                ScrollToElement(PageObject_ManageCampaign.Testcatchall_checkboxL());
+                ManageCampaign.Testcatchall_checkbox();
                 Logger.WriteDebugMessage("CASL is selected and sending send to test email.");
                 ManageCampaign.Button_SendToTest();
             }
@@ -189,6 +212,7 @@ namespace eInsight.AppModule.UI
         }
         public static void Click_Button_Approve()
         {
+            ElementWait(PageObject_CreateCampaign.Button_Approve(), 60);
             ElementClick(PageObject_CreateCampaign.Button_Approve());
             AddDelay(5000);
             ElementWait(PageObject_CreateCampaign.Button_Approve_Confirm(), 60);
@@ -231,9 +255,9 @@ namespace eInsight.AppModule.UI
 
         public static void CampaignApprove(int ProjectID)
         {
-            AddDelay(25000);
+            AddDelay(10000);
             Click_Button_Approve();
-            AddDelay(25000);
+            AddDelay(10000);
             CampaignDetails data = new CampaignDetails();
             SqlWarehouseQuery.ReturnCampaignStatus(ProjectID, data);
             if (data.OldStatus == "Approved")
@@ -251,7 +275,7 @@ namespace eInsight.AppModule.UI
             {
                 Logger.WriteDebugMessage("Checked in database and confirmed that campaign is disapproved.");
             }
-        }
+        }        
         public static void CampaignScheduleandComplete(string emailType = null)
         {
             ((IJavaScriptExecutor)Driver).ExecuteScript("window.scrollBy(0,-1000)", "");
@@ -395,5 +419,332 @@ namespace eInsight.AppModule.UI
             ElementClick(PageObject_CreateCampaign.CreateCampaign_Templates_SaveAndContinue());
             AddDelay(15000);
         }
+
+        /*Added below Methods - 01June2023 -Sridhar
+        Create Campaign Flow */
+        /*Create Campaign flow Elements Methods
+         Created 6Feb2023 Sridhar */
+
+        #region
+
+        public static void CreateCampaign_AudienceSearch()
+        {
+            ElementWait(PageObject_CreateCampaign.CreateCampaign_AudienceSearch(), 60);
+            ElementClick(PageObject_CreateCampaign.CreateCampaign_AudienceSearch());
+        }
+        public static void CreateCampaign_AudienceSearch_Add()
+        {
+            ElementWait(PageObject_CreateCampaign.CreateCampaign_AudienceSearch_Add(), 60);
+            ElementClick(PageObject_CreateCampaign.CreateCampaign_AudienceSearch_Add());
+        }
+        public static void PreSearchCampaign_New(string companyName)
+        {   
+            ScrollDownUsingJavaScript(Driver, -1000);
+            Profile.SelectSubClient(companyName);
+        }
+        public static void CreateCampaign_PropertyList()
+        {
+            ElementClick(PageObject_CreateCampaign.CreateCampaign_PropertyList());
+            AddDelay(1000);
+        }
+        public static void CreateCampaign_CampaignName()
+        {
+            ElementClick(PageObject_CreateCampaign.CreateCampaign_CampaignName());
+            AddDelay(1000);
+        }
+        public static void CreateCampaign_Create()
+        {
+            ElementWait(PageObject_CreateCampaign.CreateCampaign_Create(), 60);
+            ElementClick(PageObject_CreateCampaign.CreateCampaign_Create());
+            AddDelay(1000);
+        }
+        public static void CreateCampaign_Templates_EmailType()
+        {
+            ElementWait(PageObject_CreateCampaign.CreateCampaign_Templates_EmailType(), 60);
+            ElementClick(PageObject_CreateCampaign.CreateCampaign_Templates_EmailType());
+        }
+        public static void CreateCampaign_Templates_FromName()
+        {
+            ElementWait(PageObject_CreateCampaign.CreateCampaign_Templates_FromName(), 60);
+            ElementClick(PageObject_CreateCampaign.CreateCampaign_Templates_FromName());
+        }
+        public static void CreateCampaign_Templates_ReplyEmail()
+        {
+            ElementWait(PageObject_CreateCampaign.CreateCampaign_Templates_ReplyEmail(), 60);
+            ElementClick(PageObject_CreateCampaign.CreateCampaign_Templates_ReplyEmail());
+        }
+        public static void CreateCampaign_Templates_subject()
+        {
+            ElementWait(PageObject_CreateCampaign.CreateCampaign_Templates_subject(), 60);
+            ElementClick(PageObject_CreateCampaign.CreateCampaign_Templates_subject());
+        }
+        public static void CreateCampaign_Create_SubMail()
+        {
+            ElementWait(PageObject_CreateCampaign.CreateCampaign_Create_SubMail(), 60);
+            ElementClick(PageObject_CreateCampaign.CreateCampaign_Create_SubMail());
+        }
+        //li[@class='active-result'][text()='NU Hotel']
+        public static string CreateCampaign_CriteriaToTestingTab(int ProjectID,string EToEFlowName, string EmailType, string FromName, string ReplyEmail, string subject)
+        {
+            string CampaignName = GetRandomAlphaNumericString(4);
+            try
+            {
+                CreateCampaign_Create();                
+                ElementWait(PageObject_CreateCampaign.CreateCampaign_PropertyList(), 60);
+                ElementEnterText(PageObject_CreateCampaign.CreateCampaign_CampaignName(), EToEFlowName + CampaignName);
+                Logger.WriteInfoMessage("Entered Campaign Name as :"+ EToEFlowName + CampaignName);
+                CreateCampaign_SelectPropertylyst("NU Hotel");
+                CreateCampaign_AudienceSearchandAdd("test sms");
+
+                Driver.SwitchTo().Frame("TemplateBuilder");
+                ((IJavaScriptExecutor)Driver).ExecuteScript("arguments[0].click();", Driver.FindElement(By.XPath("(//div[@class='card__container']/div)[1]")));
+                Logger.WriteDebugMessage("Template Selected in Template Tab");
+                ElementClick(Driver.FindElement(By.XPath("//button[contains(text(), 'Save & Continue')]")));
+                Logger.WriteDebugMessage("Clicked on 'Save and Continue' button");
+                //Logger.WriteDebugMessage("Landed on Edit Template Tab");
+                CreateCampaign_EditTemplate(EmailType, FromName, ReplyEmail, subject);
+                AddDelay(5000);
+                Logger.WriteDebugMessage("Landed on Testing Tab");
+                Driver.SwitchTo().DefaultContent();
+                ((IJavaScriptExecutor)Driver).ExecuteScript("arguments[0].click();", Driver.FindElement(By.XPath("//a[@id='save']")));
+                Logger.WriteDebugMessage("Clicked on 'Proceed' Button");
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return CampaignName;
+        }
+
+        public static void CreateCampaign_Criteria(string EToEFlowName)
+        {
+            
+            try
+            {
+                CreateCampaign_Create();
+                ElementWait(PageObject_CreateCampaign.CreateCampaign_PropertyList(), 60);
+                ElementEnterText(PageObject_CreateCampaign.CreateCampaign_CampaignName(), EToEFlowName);
+                Logger.WriteInfoMessage("Entered Campaign Name as :" + EToEFlowName);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            
+        }
+        public static void CreateCampaign_SubEmailCreate(string EToEFlowName)
+        {
+
+            try
+            {
+                CreateCampaign_Create_SubMail();
+                Driver.SwitchTo().Frame("TemplateBuilder");
+                ElementWait(PageObject_CreateCampaign.CreateCampaign_SubMailCampaignName(), 60);
+                ElementEnterText(PageObject_CreateCampaign.CreateCampaign_SubMailCampaignName(), EToEFlowName);
+                Logger.WriteInfoMessage("Entered Sub Email Campaign Name as :" + EToEFlowName);
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+        }
+
+        public static void CreateCampaign_SelectPropertylyst(string propertyListName)
+        {
+            try
+            {               
+                ElementWait(PageObject_CreateCampaign.CreateCampaign_PropertyList(), 60);
+                ElementClick(PageObject_CreateCampaign.CreateCampaign_PropertyList());
+                //ElementEnterText(PageObject_CreateCampaign.CreateCampaign_PropertyList(),"NU Hotel");
+                Keyboard_KeyDown();
+                Keyboard_KeyDown();                
+                HoverOver(Driver.FindElement(By.XPath("//li[@class='active-result'][contains(text(),'"+ propertyListName + "')]")));
+                Keyboard_Enter();                
+                Logger.WriteInfoMessage("Selected Proerty List Name : "+ propertyListName);
+                //Keyboard_SendKeys(Keys.Tab);
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        public static void CreateCampaign_AudienceSearchandAdd(string AudienceSearchSelectName)
+        {
+            try
+            {
+                CreateCampaign_AudienceSearch();
+                Driver.SwitchTo().Frame("Audience");
+                ScrollDownUsingJavaScript(Driver, 500);
+                ElementClick(Driver.FindElement(By.XPath("//span[text()='"+ AudienceSearchSelectName + "']//preceding-sibling::label")));
+                AddDelay(10000);
+                Driver.SwitchTo().DefaultContent();
+                ScrollUpUsingJavaScript(Driver, -105);
+                ((IJavaScriptExecutor)Driver).ExecuteScript("arguments[0].click();", Driver.FindElement(By.XPath("//button[@class='btn btn-primary action-criteria-save-continue']")));
+                Logger.WriteInfoMessage("Selected Audince Search as : " + AudienceSearchSelectName);
+                Logger.WriteInfoMessage("Clicked on 'Save and Continue' Button");
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        public static void CreateCampaign_EditTemplate(string EmailType, string FromName, string ReplyEmail, string subject)
+        {
+            try
+            {
+                ElementWait(Driver.FindElement(By.XPath("//a[contains(text(), 'Save & Continue')]")), 120);
+                AddDelay(2000);
+                ElementSelectFromDropDown(PageObject_CreateCampaign.CreateCampaign_Templates_EmailType(), EmailType);
+                ElementSelectFromDropDown(PageObject_CreateCampaign.CreateCampaign_Templates_FromName(), FromName);
+                ElementSelectFromDropDown(PageObject_CreateCampaign.CreateCampaign_Templates_ReplyEmail(), ReplyEmail);
+                ElementEnterText(PageObject_CreateCampaign.CreateCampaign_Templates_subject(), subject);
+                ScrollUpUsingJavaScript(Driver, -105);
+                ElementClick(Driver.FindElement(By.XPath("//a[contains(text(), 'Save & Continue')]")));
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        public static void CreateCampaign_CampainSetting(string ResrvationTyp)
+        {
+            try
+            {
+                Driver.SwitchTo().DefaultContent();
+                ScrollDownUsingJavaScript(Driver, 250);
+                ElementWait(PageObject_CreateCampaign.CreateCampaign_CampainSetting(), 60);
+                ElementClick(PageObject_CreateCampaign.CreateCampaign_CampainSetting());
+                ElementSelectFromDropDown(PageObject_CreateCampaign.CreateCampaign_ReservationEvent(), ResrvationTyp);
+                ElementSelected(PageObject_CreateCampaign.CreateCampaign_ReservationEvent_EmailReservation());
+                ElementSelected(PageObject_CreateCampaign.CreateCampaign_ReservationEvent_include_unsubscribed());
+                ElementSelected(PageObject_CreateCampaign.CreateCampaign_ReservationEvent_include_bounced());
+                ElementSelected(PageObject_CreateCampaign.CreateCampaign_ReservationEvent_include_nonconsent());
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        public static void CreateCampaign_DataSource(string dataSource)
+        {
+            try
+            {                
+                ElementWait(PageObject_CreateCampaign.CreateCampaign_DataSource(), 60);
+                ElementClick(PageObject_CreateCampaign.CreateCampaign_DataSource());
+                ScrollDownUsingJavaScript(Driver, 500);
+                ElementClick(Driver.FindElement(By.XPath("//li[contains(text(),'"+ dataSource + "')]")));
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        public static void CreateCampaign_ForecastTargetAudience()
+        {
+            try
+            {
+                ElementClick(Driver.FindElement(By.XPath("//button[@class='btn btn-success action-show-statistics']")));
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        public static void CreateCampaign_CriteriaTabSaveandContinueButton()
+        {
+            try
+            {
+                ((IJavaScriptExecutor)Driver).ExecuteScript("arguments[0].click();", Driver.FindElement(By.XPath("//button[@class='btn btn-primary action-criteria-save-continue']")));
+                Logger.WriteInfoMessage("Clicked on 'Save and Continue' Button");
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        /*Temple Select and Click Save and Continue*/
+        public static void CreateCampaign_TemplateTabSelectandSaveandContinueButton(int templateindex)
+        {
+            try
+            {
+                ((IJavaScriptExecutor)Driver).ExecuteScript("arguments[0].click();", Driver.FindElement(By.XPath("(//div[@class='card__container']/div)['"+ templateindex + "']")));
+                Logger.WriteDebugMessage("Template Selected in Template Tab");
+                ElementClick(Driver.FindElement(By.XPath("//button[contains(text(), 'Save & Continue')]")));
+                Logger.WriteDebugMessage("Clicked on 'Save and Continue' button");
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        /*Temple Select and Click Save and Continue*/
+        public static void CreateCampaign_TestingTabProceedButton()
+        {
+            try
+            {
+                
+                Logger.WriteDebugMessage("Landed on Testing Tab");
+                AddDelay(5000);
+                Driver.SwitchTo().ParentFrame();
+                ElementWait(Driver.FindElement(By.XPath("//a[@id='save']")), 60);
+                ((IJavaScriptExecutor)Driver).ExecuteScript("arguments[0].click();", Driver.FindElement(By.XPath("//a[@id='save']")));
+                Logger.WriteDebugMessage("Clicked on 'Proceed' Button");
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        /*Verifying After Completing All Campaign Creation Process done*/
+        public static void CreateCampaign_VerifyCreatedorNot(string CampaignRanName,int index )
+        {
+            try
+            {
+                ElementWait(Driver.FindElement(By.XPath("(//span[contains(text(), 'Scheduled Active')])['" + index + "']")), 60);
+                
+                if (VerifyTextOnPage(CampaignRanName))
+                {
+                    Logger.WriteDebugMessage("New Campaign Created Successfully : " + CampaignRanName);
+                }
+                else
+                {
+                    Assert.Fail("New Campaign Not Created : " + CampaignRanName);
+                }
+                ElementClick(Driver.FindElement(By.XPath("(//span[contains(text(), 'Scheduled Active')])['"+ index + "']")));
+                ElementWait(PageObject_ManageCampaign.ManageCampaign_EditSchedule_InactivateSchedule(), 60);
+                IsElementVisible(PageObject_ManageCampaign.ManageCampaign_EditSchedule_InactivateSchedule());
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        /*Select Transactional/Marketing In Campaign Page by Passing Index and value*/
+        public static void CreateCampaign_SelectDropdownValueInManageCampaingPage(string Value, int xpathindex)
+        {
+            try
+            {
+                
+                var cList = Driver.FindElement(By.XPath("(//select[contains(@id,'campaign-type') and @class='form-control'])[" + xpathindex +"]"));
+                //(//select[@id='campaign-type-dropdown' and @class='form-control'])
+                var selectElement = new SelectElement(cList);
+                selectElement.SelectByText(Value);
+                Logger.WriteDebugMessage("Selected drop down value  on CampaingPage is : " + Value);//Transactional - In Testing
+            }
+            catch (Exception ex)
+            {
+
+
+            }
+        }
+
+
+        #endregion
     }
 }

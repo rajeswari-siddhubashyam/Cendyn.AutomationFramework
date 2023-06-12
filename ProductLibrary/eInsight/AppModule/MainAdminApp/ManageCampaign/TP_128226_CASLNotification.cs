@@ -63,73 +63,74 @@ namespace eInsight.AppModule.MainAdminApp
             }
         }
         public static void TC_128430()
-        {
-            string projectID = SqlWarehouseQuery.ReturnCompanyName(TestCaseId, "ProjectID");
-            ProfileCustData profDetails = new ProfileCustData();
-            CampaignDetails campDetails = new CampaignDetails();
-            Navigation.MenuNavigation("Profile");
-            AddDelay(8000);
+        {           
+                string projectID = SqlWarehouseQuery.ReturnCompanyName("TC_128429", "ProjectID");
+                ProfileCustData profDetails = new ProfileCustData();
+                CampaignDetails campDetails = new CampaignDetails();
+                Navigation.MenuNavigation("Profile");
+                AddDelay(8000);
 
-            //SqlWarehouseQuery.GetCASLReservationDetails(campaignDetails, CompanyName);
-            SqlWarehouseQuery.GetCampaignDetails(campDetails, companyNameByTestCase, projectID);
-            SqlWarehouseQuery.GetDataForCASL(profDetails, companyNameByTestCase, Convert.ToInt32(projectID));
-            Profile.SelectSubClient(companyNameByTestCase);
+                //SqlWarehouseQuery.GetCASLReservationDetails(campaignDetails, CompanyName);
+                SqlWarehouseQuery.GetCampaignDetails(campDetails, companyNameByTestCase, projectID);
+                SqlWarehouseQuery.GetDataForCASL(profDetails, companyNameByTestCase, Convert.ToInt32(projectID));
+                Profile.SelectSubClient(companyNameByTestCase);
 
-            Logger.WriteInfoMessage("Fetched data" + campDetails.CampaignName + ",\n " + profDetails.CustomerIDs + ",\n " + profDetails.Email + ",\n " + profDetails.ReservationNumber);
-            PageLoadWait(120, "Profile.mvc/Profile");
-            ElementWait(PageObject_Profile.Profile_SearchGuestsSearchExpression(), 120);
-            ElementWait(PageObject_Profile.Profile_SearchGuestsSearch(), 120);
-            Profile.SelectSearchGuestsSearchBy("Reservation #");
-            Profile.InsertTextSearchGuestsSearchFor(profDetails.ReservationNumber);
-            AddDelay(60000);
-            Logger.WriteDebugMessage("Searching for an customer for a reservation number : " + profDetails.ReservationNumber + " on profile search page.");
-            ElementWait(Driver.FindElement(By.XPath("//a[contains(text(), '" + profDetails.ReservationNumber + "')]")), 120);
+                Logger.WriteInfoMessage("Fetched data" + campDetails.CampaignName + ",\n " + profDetails.CustomerIDs + ",\n " + profDetails.Email + ",\n " + profDetails.ReservationNumber);
+                PageLoadWait(120, "Profile.mvc/Profile");
+                ElementWait(PageObject_Profile.Profile_SearchGuestsSearchExpression(), 120);
+                ElementWait(PageObject_Profile.Profile_SearchGuestsSearch(), 120);
+                Profile.SelectSearchGuestsSearchBy("Reservation #");
+                Profile.InsertTextSearchGuestsSearchFor(profDetails.ReservationNumber);
+                AddDelay(60000);
+                Logger.WriteDebugMessage("Searching for an customer for a reservation number : " + profDetails.ReservationNumber + " on profile search page.");
+                ElementWait(Driver.FindElement(By.XPath("//a[contains(text(), '" + profDetails.ReservationNumber + "')]")), 120);
 
-            Profile.OpenandSendResend(profDetails.ReservationNumber, campDetails.CampaignName, "", "Profile", projectID);
-            AddDelay(15000);
-            OpenNewTab();
-            ControlToNewWindow();
-            Login.AutoAcc_logins(campDetails.CampaignSubject, 2, 0, LegacyTestData.CommonCatchallURL, 1);
+                Profile.OpenandSendResend(profDetails.ReservationNumber, campDetails.CampaignName, "", "Profile", projectID);
+                AddDelay(15000);
+                OpenNewTab();
+                ControlToNewWindow();
+                Login.AutoAcc_logins(campDetails.CampaignSubject, 2, 0, LegacyTestData.CommonCatchallURL, 1);
             
         }
         public static void TC_128432()
         {
-            string projectID = SqlWarehouseQuery.ReturnCompanyName("TC_128429", "ProjectID");
-            ProfileCustData profDetails = new ProfileCustData();
-            CampaignDetails campDetails = new CampaignDetails();
-            Navigation.MenuNavigation("Profile");
-            AddDelay(8000);
+                string projectID = SqlWarehouseQuery.ReturnCompanyName("TC_128429", "ProjectID");
+                ProfileCustData profDetails = new ProfileCustData();
+                CampaignDetails campDetails = new CampaignDetails();
+                Navigation.MenuNavigation("Profile");
+                AddDelay(8000);
 
-            //SqlWarehouseQuery.GetCASLReservationDetails(campaignDetails, CompanyName);
-            SqlWarehouseQuery.GetCampaignDetails(campDetails, companyNameByTestCase, projectID);
-            SqlWarehouseQuery.GetDataForCASL(profDetails, companyNameByTestCase, Convert.ToInt32(projectID));
-            Profile.SelectSubClient(companyNameByTestCase);
+                //SqlWarehouseQuery.GetCASLReservationDetails(campaignDetails, CompanyName);
+                SqlWarehouseQuery.GetCampaignDetails(campDetails, companyNameByTestCase, projectID);
+                SqlWarehouseQuery.GetDataForCASL(profDetails, companyNameByTestCase, Convert.ToInt32(projectID));
+                Profile.SelectSubClient(companyNameByTestCase);
 
-            Logger.WriteInfoMessage("Fetched data " + campDetails.CampaignName + ",\n " + profDetails.CustomerID + ",\n " + profDetails.Email+ ",\n " + profDetails.ReservationNumber);
-            PageLoadWait(120, "Profile.mvc/Profile");
-            ElementWait(PageObject_Profile.Profile_SearchGuestsSearchExpression(), 120);
-            ElementWait(PageObject_Profile.Profile_SearchGuestsSearch(), 120);
-            Profile.SelectSearchGuestsSearchBy("Reservation #");
-            Profile.InsertTextSearchGuestsSearchFor(profDetails.ReservationNumber);
-            Logger.WriteDebugMessage("Searching for an customer for a reservation number : " + profDetails.ReservationNumber + " on profile search page.");
-            AddDelay(180000);
-            Profile.ClickOpenProfile(profDetails.CustomerIDs);
-            AddDelay(60000);
-            //ScrollToElement(Driver.FindElement(By.XPath("//div[contains(@class, 'user-picture')]")));
-            ScrollToElement(PageObject_Profile.Profile_CustomerProfileImage());
-            ((IJavaScriptExecutor)Driver).ExecuteScript("window.scrollBy(0,800)", "");
-            if (VerifyTextOnPage("CA"))
-            {
-                Logger.WriteDebugMessage("Found CountryCode: CA for CustomerID -  " + profDetails.CustomerIDs);
-                ((IJavaScriptExecutor)Driver).ExecuteScript("window.scrollBy(0,-1000)", "");
-                ElementClick(Driver.FindElement(By.XPath("//a[contains(@href, '#stays-div" + profDetails.PrimaryCustomer + "')]")));
-                AddDelay(60000);
-                ScrollToElement(Driver.FindElement(By.XPath("//a[contains(@href, '#stays-div" + profDetails.PrimaryCustomer + "')]")));
+                Logger.WriteInfoMessage("Fetched data " + campDetails.CampaignName + ",\n " + profDetails.CustomerID + ",\n " + profDetails.Email + ",\n " + profDetails.ReservationNumber);
+                PageLoadWait(120, "Profile.mvc/Profile");
+                ElementWait(PageObject_Profile.Profile_SearchGuestsSearchExpression(), 120);
+                ElementWait(PageObject_Profile.Profile_SearchGuestsSearch(), 120);
+                Profile.SelectSearchGuestsSearchBy("Reservation #");
+                Profile.InsertTextSearchGuestsSearchFor(profDetails.ReservationNumber);
+                Logger.WriteDebugMessage("Searching for an customer for a reservation number : " + profDetails.ReservationNumber + " on profile search page.");
+                AddDelay(10000);
+                Profile.ClickOpenProfile(profDetails.CustomerIDs);
+                AddDelay(10000);
+                //ScrollToElement(Driver.FindElement(By.XPath("//div[contains(@class, 'user-picture')]")));
+                ScrollToElement(PageObject_Profile.Profile_CustomerProfileImage());
+                ((IJavaScriptExecutor)Driver).ExecuteScript("window.scrollBy(0,800)", "");
+                if (VerifyTextOnPage("CA"))
+                {
+                    Logger.WriteDebugMessage("Found CountryCode: CA for CustomerID -  " + profDetails.CustomerIDs);
+                    ((IJavaScriptExecutor)Driver).ExecuteScript("window.scrollBy(0,-1000)", "");
+                    ElementClick(Driver.FindElement(By.XPath("//a[contains(@href, '#stays-div" + profDetails.PrimaryCustomer + "')]")));
+                    AddDelay(10000);
+                    ScrollToElement(Driver.FindElement(By.XPath("//a[contains(@href, '#stays-div" + profDetails.PrimaryCustomer + "')]")));
 
-                Profile.OpenandSendResend(profDetails.ReservationNumber, campDetails.CampaignName, "", "Stay", projectID);
-                AddDelay(15000);
-                Login.AutoAcc_login(campDetails.CampaignSubject, 2, 1, LegacyTestData.CommonCatchallURL, 0);
-            }
+                    Profile.OpenandSendResend(profDetails.ReservationNumber, campDetails.CampaignName, "", "Stay", projectID);
+                    AddDelay(10000);
+                    Login.AutoAcc_login(campDetails.CampaignSubject, 2, 1, LegacyTestData.CommonCatchallURL, 0);
+                }
+           
         }
         public static void TC_257224()
         {

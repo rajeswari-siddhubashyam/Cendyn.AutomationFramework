@@ -10,6 +10,9 @@ using LegacyTestData = eInsight.Utility.LegacyTestData;
 using eInsightSetup = eInsight.Utility.Setup;
 using OpenQA.Selenium;
 using System.Threading;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+[assembly: Parallelize(Workers = 2, Scope = ExecutionScope.MethodLevel)]
 
 namespace eInsightCreateCampaign
 {
@@ -34,13 +37,101 @@ namespace eInsightCreateCampaign
             //Assign the test data test plan file location
             //TestDataFile = TestDataLocation.TP_197270;
 
-            AddDelay(8000);
+            AddDelay(2000);
 
             //Can use this to update the URL Manually
             //LegacyTestData.CommonFrontendURL = "https://poceinsight.cendyn.com/";
         }
-
         [Test, Category("Smoke"), Order(1)]
+        public static void TC_508833()
+        {
+            try
+            {
+                /**Test execution - Start**/
+                Legacy_SetupTestCase(Constants.TC_508833);
+
+                Logger.DeleteOldFolder();
+
+                string[] eachFrontEndURL = Regex.Split(LegacyTestData.CommonFrontendURL, ",");
+                foreach (string frontendURL in eachFrontEndURL)
+                {
+                    Login.CommonLogin(frontendURL);
+
+                    //Start
+                    MainAdminApp.TP_197270();
+
+                    RenewDriver();
+                }
+                /**Test execution - End**/
+                TestHandling.TestEnd();
+            }
+            catch (Exception e)
+            {
+                TestHandling.TestFailed(e);
+                throw;
+            }
+        }
+        [Test, Category("Smoke"), Order(2)]
+        public static void TC_508834()
+        {
+            try
+            {
+                /**Test execution - Start**/
+                Legacy_SetupTestCase(Constants.TC_508834);
+
+                Logger.DeleteOldFolder();
+
+                string[] eachFrontEndURL = Regex.Split(LegacyTestData.CommonFrontendURL, ",");
+                foreach (string frontendURL in eachFrontEndURL)
+                {
+                    Login.CommonLogin(frontendURL);
+
+                    //Start
+                    MainAdminApp.TP_197270();
+
+                    RenewDriver();
+                }
+                /**Test execution - End**/
+                TestHandling.TestEnd();
+            }
+            catch (Exception e)
+            {
+                TestHandling.TestFailed(e);
+                throw;
+            }
+        }
+
+        [Test, Category("Smoke"), Order(3)]
+        public static void TC_508836()
+        {
+            try
+            {
+                /**Test execution - Start**/
+                Legacy_SetupTestCase(Constants.TC_508836);
+
+                Logger.DeleteOldFolder();
+
+                string[] eachFrontEndURL = Regex.Split(LegacyTestData.CommonFrontendURL, ",");
+                foreach (string frontendURL in eachFrontEndURL)
+                {
+                    Login.CommonLogin(frontendURL);
+
+                    //Start
+                    MainAdminApp.TP_197270();
+
+                    RenewDriver();
+                }
+                /**Test execution - End**/
+                TestHandling.TestEnd();
+            }
+            catch (Exception e)
+            {
+                TestHandling.TestFailed(e);
+                throw;
+            }
+        }
+
+        [Test, Category("Smoke"), Order(3)]
         public static void TC_128427()
         {
             try
@@ -70,7 +161,7 @@ namespace eInsightCreateCampaign
             }
         }
         
-        [Test, Category("Smoke"), Order(2)]
+        [Test, Category("Smoke"), Order(4)]
         public static void TC_197271()
         {
             try
@@ -101,7 +192,7 @@ namespace eInsightCreateCampaign
             }
         }
 
-        [Test, Category("Smoke"), Order(3)]
+        [Test, Category("Smoke"), Order(5)]
         public static void TC_197272()
         {
             try
@@ -132,7 +223,7 @@ namespace eInsightCreateCampaign
             }
         }
 
-        [Test, Category("Smoke"), Order(4)]
+        [Test, Category("Smoke"), Order(6)]
         public static void TC_197274()
         {
             try
@@ -163,7 +254,7 @@ namespace eInsightCreateCampaign
             }
         }
 
-        [Test, Category("Smoke"), Order(5)]
+        [Test, Category("Smoke"), Order(7)]
         public static void TC_197275()
         {
             try
@@ -194,7 +285,7 @@ namespace eInsightCreateCampaign
             }
         }
 
-        [Test, Category("Smoke"), Order(6)]
+        [Test, Category("Smoke"), Order(8)]
         public static void TC_197276()
         {
             try
@@ -226,7 +317,7 @@ namespace eInsightCreateCampaign
             }
         }
 
-        [Test, Category("Smoke"), Order(7)]
+        [Test, Category("Smoke"), Order(9)]
         public static void TC_198274()
         {
             try
@@ -257,7 +348,7 @@ namespace eInsightCreateCampaign
             }
         }
 
-        [Test, Category("Smoke"), Order(8)]
+        [Test, Category("Smoke"), Order(10)]
         public static void TC_198275()
         {
             try
@@ -288,7 +379,7 @@ namespace eInsightCreateCampaign
             }
         }
 
-        [Test, Category("Smoke"), Order(9)]
+        [Test, Category("Smoke"), Order(11)]
         public static void TC_198276()
         {
             try
@@ -319,7 +410,7 @@ namespace eInsightCreateCampaign
             }
         }
 
-        [Test, Category("Smoke"), Order(10)]
+        [Test, Category("Smoke"), Order(12)]
         public static void TC_198277()
         {
             try
@@ -350,7 +441,7 @@ namespace eInsightCreateCampaign
             }
         }
 
-        [Test, Category("Smoke"), Order(11)]
+        [Test, Category("Smoke"), Order(13)]
         public static void TC_198278()
         {
             try
@@ -381,7 +472,7 @@ namespace eInsightCreateCampaign
             }
         }
 
-        [Test, Category("Smoke"), Order(12)]
+        [Test, Category("Smoke"), Order(14)]
         public static void TC_198279()
         {
             try
@@ -412,7 +503,7 @@ namespace eInsightCreateCampaign
             }
         }
 
-        [Test, Category("Smoke"), Order(13)]
+        [Test, Category("Smoke"), Order(16)]
         public static void TC_198280()
         {
             try

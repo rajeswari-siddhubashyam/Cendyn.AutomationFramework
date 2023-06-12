@@ -272,7 +272,8 @@
       <Parameter key ="ManageCampaign_DDM_SearchValue">pattern</Parameter>
       <Parameter key="ManageCampaign_CustomerDetailsVRD_ClickSearch">customer-details-search</Parameter>
       <Parameter key="CASL_checkbox">CASL_checkbox</Parameter>
-      <Parameter key="SubmitSendToTestEmail">//*[@id='submitRequestSeedList']</Parameter>
+	  <Parameter key="Testcatchall_checkbox">//a[contains(text(),'test catchall, testcatchall@cendyn17.com')]</Parameter>		
+	  <Parameter key="SubmitSendToTestEmail">//*[@id='submitRequestSeedList']</Parameter>
       <Parameter key="QuickSend_EmailtoSelf">//*[@id='SeedListTree']/ul/li[1]/ul/li/span/span[2]</Parameter>
       <Parameter key="ManageCampaign_ContinueDraft">//*[@id='DRAFT']</Parameter>
       <Parameter key="ManageCampaign_EditSchedule">//*[@id='editSchedule']</Parameter>
@@ -286,7 +287,7 @@
       <Parameter key="ManageCampaign_Button_Campaign_InactivateScheduleConfirm">//div[@class="e-control e-dialog e-lib e-dlg-modal e-popup e-popup-open"]//button[contains(text(),'Deactivate')]</Parameter>
       <!--//*[@id='fullwrap_new']/div[11]/div[11]/button[1]-->
       <Parameter key="ManageCampaign_Button_Campaign_ActivateSchedule">activateSchedule</Parameter>
-      <Parameter key="ManageCampaign_Button_Campaign_ActivateScheduleConfirm">//div[@class='dialogContent']//following::a[contains(text(), 'Activate')]</Parameter>
+      <Parameter key="ManageCampaign_Button_Campaign_ActivateScheduleConfirm">//div[@tabindex='-1']/div[@id='dialog_dialog-content']/div/div/a</Parameter>
       <!--//*[@id='fullwrap_new']/div[13]/div[11]/button[1]-->
       <Parameter key="ManageCampaign_SendToTest_GroupSeedList">//a[@title = 'GroupName']</Parameter>
       <Parameter key="ManageCampaign_QuickSend_ReservationSelect">reslist</Parameter>
@@ -317,8 +318,10 @@
       <Parameter key="ManageCampaign_Button_FirstCampaign_Clone">AAAAAAAAAAAAAAAA</Parameter>
       <Parameter key="ManageCampaign_Link_FirstCampaign_Status">AAAAAAAAAAAAAAAA</Parameter>
       <!--New Manage Campaign Redesign-->
-      <Parameter key="ProjectID_Search">//span[contains(@class, "e-headertext") and text()="ID"]/parent::*/parent::th/div[@class="e-filtermenudiv e-icons e-icon-filter"]</Parameter><!--//span[contains(text(), 'ID')]//following::div-->
-      <Parameter key="ProjectID_SearchExpression">grid-column0-floptr</Parameter>
+      <Parameter key="ProjectID_Search">//span[contains(@class, "e-headertext") and text()="ID"]/parent::*/parent::th/div[contains(@class,"e-filtermenudiv e-icons e-icon-filter")]</Parameter><!--//span[contains(text(), 'ID')]//following::div-->
+	  <Parameter key="ProjectStatus_Search">//span[contains(@class, "e-headertext") and text()="Status"]//parent::div//following-sibling::div[1]</Parameter>
+	  <Parameter key="ProjectStatus_TextSearch">//input[@placeholder='Select a value']//parent::span/..</Parameter>
+	  <Parameter key="ProjectID_SearchExpression">grid-column0-floptr</Parameter>
       <Parameter key="ProjectID_TextSearch">//div[@id='grid-column0-flmenu']/div[2]/span/input</Parameter><!--textbox_193-->
       <Parameter key="ProjectID_TextSearchs">//input[@placeholder='Enter the value']</Parameter>
       <Parameter key="ProjectID_TextSearch_Filter">//div[@id='grid-column0-flmdlg']/div[2]/button</Parameter><!--(//button[@type='button'])[2]-->
@@ -350,9 +353,25 @@
       <Parameter key="CreateCampaign_CriteriaPage_Clear">//button[contains(text(), 'Clear')]</Parameter>
       <Parameter key="CreateCampaign_TemplatePage_Save">//a[@id='saveOnly']</Parameter>
       <Parameter key="CreateCampaign_TemplateAndTestingPage_SaveandContinue">//a[@id='save']</Parameter>
-      <!--Also for TestingPage-->
+	  <Parameter key="CreateCampaign_StatyOnPage">btnStay</Parameter>
+	  <Parameter key="CreateCampaign_Create">//div[@class='no-form-submit btn btn-primary  saveSchedule warn styled']</Parameter>
+	  <Parameter key="CreateCampaign_Create_SubMail">//span[contains(text(),'Add follow-up email')]//following-sibling::div</Parameter>
+	  <Parameter key="CreateCampaign_CampaignName">project_name</Parameter>
+	  <Parameter key="CreateCampaign_SubMailCampaignName">//input[@required='required']</Parameter>
+	  <Parameter key="CreateCampaign_PropertyList">//span[text()='Independent Collection']/../following-sibling::li</Parameter>
+	  <Parameter key="CreateCampaign_AudienceSearch">searchAudienceSwitch</Parameter>
+	  <Parameter key="CreateCampaign_AudienceSearch_Add">btnNewAudience</Parameter>
+	  <Parameter key="CreateCampaign_CampainSetting">//button[contains(@class,'btn btn-link action-toggle-transactional')]</Parameter>
+	  <Parameter key="CreateCampaign_ReservationEvent">//select[@name='reservation_event']</Parameter>
+	  <Parameter key="CreateCampaign_ReservationEvent_EmailReservation">//input[@value='UDFC30']</Parameter>
+	  <Parameter key="CreateCampaign_ReservationEvent_include_unsubscribed">//input[@name='include_unsubscribed']</Parameter>
+	  <Parameter key="CreateCampaign_ReservationEvent_include_bounced">//input[@name='include_bounced']</Parameter>
+	  <Parameter key="CreateCampaign_ReservationEvent_include_nonconsent">//input[contains(@name,'include_nonconsent')]</Parameter>
+	  <Parameter key="CreateCampaign_DataSource">//div[@class='filter-input']</Parameter>
+	  <Parameter key="CreateCampaign_ForecastTargetAudience">//button[@class='btn btn-success action-show-statistics']</Parameter>
+	  <Parameter key="CreateCampaign_ForecastTargetAudienceTotalCount">//span[text()='Total Count' and @class='key']</Parameter>
+		<!--Also for TestingPage-->
       <Parameter key="CreateCampaign_ApprovalPage_SaveandContinue"></Parameter>
-
       <Parameter key="CreateCampaign_Button_Save">saveOnly</Parameter>
       <!--This is for Draft and Testing Tab-->
       <Parameter key="CreateCampaign_Button_SaveAndContinue">save</Parameter>
@@ -431,8 +450,12 @@
       <Parameter key="CreateCampaign_Templates_ListView_Filter_Btn">btnFilter</Parameter>
       <Parameter key="CreateCampaign_Templates_ListView_Input_Filter_Txt">inputFilter</Parameter>
       <Parameter key="CreateCampaign_Templates_SaveAndContinue_Btn">saveAndContinue</Parameter>
-      
-    </CreateCampaign>
+	  <Parameter key="CreateCampaign_Templates_EmailType">ddlEmailType</Parameter>
+	  <Parameter key="CreateCampaign_Templates_FromName">from</Parameter>
+	  <Parameter key="CreateCampaign_Templates_ReplyEmail">reply</Parameter>
+	  <Parameter key="CreateCampaign_Templates_subject">subject</Parameter>
+		
+	</CreateCampaign>
     
     <AudienceBuilder>
       <Parameter key="AB_Button_Add">btnNewAudience</Parameter>

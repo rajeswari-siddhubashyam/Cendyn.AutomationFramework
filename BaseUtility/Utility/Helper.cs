@@ -47,7 +47,7 @@ namespace BaseUtility.Utility
                 AddDelay(1000);
                 sel.SelectByText(value);
                 AddDelay(3000);
-                Logger.WriteInfoMessage("Selected the " + value + " value from the " + CurrentElementName + " drop down.");
+                Logger.WriteInfoMessage("Selected the '" + value + "' value from the " + CurrentElementName + " drop down.");
             }
             catch (Exception e)
             {
@@ -561,7 +561,7 @@ namespace BaseUtility.Utility
         public static void ControlToNewWindow()
         {
             Driver.SwitchTo().Window(Driver.WindowHandles.Last());
-            AddDelay(5000);
+            AddDelay(1000);
         }
 
         /// <summary>
@@ -1009,7 +1009,17 @@ namespace BaseUtility.Utility
 
             action.SendKeys(Keys.Enter).Build().Perform();
         }
+        public static void Keyboard_SendKeys(string keyType)
+        {
+            Actions action = new Actions(Driver);
 
+            action.SendKeys(keyType).Build().Perform();
+        }
+        public static void Keyboard_KeyDown()
+        {
+            Actions actions = new Actions(Driver);
+            actions.KeyDown(Keys.Down);
+        }
         public static void Keyboard_Esc()
         {
             Actions action = new Actions(Driver);
@@ -1359,6 +1369,22 @@ namespace BaseUtility.Utility
             {
                 SelectElement sel = new SelectElement(element);
                 sel.SelectByValue(value);
+                AddDelay(3000);
+                Logger.WriteInfoMessage("Selected the '" + value + "' value from the " + CurrentElementName + " drop down.");
+            }
+            catch (Exception e)
+            {
+                Logger.WriteFatalMessage(e);
+                Logger.WriteFatalMessage("Unable to select the " + value + " value from the " + CurrentElementName + " drop down.");
+                throw;
+            }
+        }
+        public static void ElementSelectFromDropDownByIndex(IWebElement element, int value)
+        {
+            try
+            {
+                SelectElement sel = new SelectElement(element);
+                sel.SelectByIndex(value);
                 AddDelay(3000);
                 Logger.WriteInfoMessage("Selected the " + value + " value from the " + CurrentElementName + " drop down.");
             }

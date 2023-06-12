@@ -92,15 +92,15 @@ namespace eInsight.Utility
                     }
                     else if (pair.Key == "LambdaUserName")
                     {
-                        LambdaUserName = pair.Value;
+                        LambdaUserName = "msridhar";//pair.Value;
                     }
                     else if (pair.Key == "LambdaAccessKey")
                     {
-                        LambdaAccessKey = pair.Value;
+                        LambdaAccessKey = "vYvjGSXb6gmVhlTwqxHRVs4TaKE4roDJfUfkwqiIVfonRlO59x";//pair.Value;
                     }
                     else if (pair.Key == "LambdaHub")
                     {
-                        LambdaHub = pair.Value;
+                        LambdaHub = "https://msridhar:vYvjGSXb6gmVhlTwqxHRVs4TaKE4roDJfUfkwqiIVfonRlO59x@hub.lambdatest.com/wd/hub"; //pair.Value;
                     }
                     else if (pair.Key == "LambdaBuild")
                     {

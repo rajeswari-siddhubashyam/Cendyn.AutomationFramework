@@ -52,9 +52,7 @@ namespace Common
         public static string ProjectPath { get; set; }
         public static string TestDataFile { get; set; }
         public static string Project_Path { get; set; }
-
         public static string testCategory { get; set; }
-
         public static string frontEndURL { get; set; }
         #endregion
 

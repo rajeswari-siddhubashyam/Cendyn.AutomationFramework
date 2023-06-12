@@ -113,7 +113,7 @@ namespace eInsight.AppModule.UI
         public static void CommonLogin(string CommonFrontendURL)
         {
             Driver.Navigate().GoToUrl(CommonFrontendURL);
-            AddDelay(5000);
+            AddDelay(1000);
             if (CommonFrontendURL != "https://qa2einsight.cendyn.com/")
             {
                 string IFrame = "//iframe[@title='TrustArc Cookie Consent Manager']";
@@ -130,7 +130,7 @@ namespace eInsight.AppModule.UI
                    
                 }
             }
-            ElementWait(PageObject_Login.Email(), 60);
+            ElementWait(PageObject_Login.Email(), 10);
             EnterUserName(LegacyTestData.CommonFrontendEmail);
             Profile.ClickAddGuestsNext();
             EnterPassword(LegacyTestData.CommonFrontendPassword);
@@ -317,6 +317,43 @@ namespace eInsight.AppModule.UI
             Hotmail.VerifyEmailReceivedSpan(15);
         }
 
+        public static void AutoAccount_logins(string Email,string Password, int typeofLogin, int typeofNavigation, string webURL, string searchEmail, int searchEmailtype)
+        {
+            Hotmail.NavigateToWebmail(webURL);
+            ControlToNewWindow();
+            if (IsElementPresent(By.Id("otherTileText")))
+            {
+                ElementClick(Driver.FindElement(By.Id("otherTileText")));
+            }
+            switch (typeofLogin)
+            {
+                case 1:
+                    Hotmail.AutomationCatchAll_SignIn(Email, Password);
+                    break;
+                case 2:
+                    Hotmail.AutomationAcc_SignIn(LegacyTestData.CommonFrontendEmail, LegacyTestData.CommonAutomationPassword);
+                    break;
+            }
+            //ControlToPreviousWindow();
+            //CloseCurrentTab();
+            ControlToNewWindow();
+            switch (typeofNavigation)
+            {
+                case 0:
+                    Hotmail.SearchEmailAndOpenLatestEmails(searchEmail, searchEmailtype);
+                    break;
+                case 1:
+                    Hotmail.OpenLatestEmailReceived();
+                    break;
+                default:
+                    break;
+            }
+            //Verify an email exists
+            if (Helper.VerifyTextOnPage("We didn't find anything.") && Helper.VerifyTextOnPage("Try a different keyword."))
+                Assert.Fail("No email matches search.");
+            //Verify Email Recency
+            Hotmail.VerifyEmailReceivedSpan(15);
+        }
 
         public static void AutoAcc_loginForLockTest(string Email, int typeofLogin, int typeofNavigation, string webURL, int searchEmailtype)
         {

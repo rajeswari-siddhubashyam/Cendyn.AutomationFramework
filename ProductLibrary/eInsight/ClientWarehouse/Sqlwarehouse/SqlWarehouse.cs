@@ -1334,7 +1334,7 @@ namespace SqlWarehouse
 
                         using (SqlCommand command = new SqlCommand(query, connection))
                         {
-                            command.CommandTimeout = 120;
+                            command.CommandTimeout = 50;
                             using (SqlDataReader reader = command.ExecuteReader())
                             {
                                 while (reader.Read())

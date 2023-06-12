@@ -47,7 +47,7 @@ namespace eInsight.Utility
             BrowserType = LegacyTestData.CommonBrowserType;
 
             //Initialize the test case set up.
-            //Setup.LocalMachineExecution = Convert.ToInt32(LegacyTestData.LambdaExecution);
+            Setup.LocalMachineExecution = Convert.ToInt32(LegacyTestData.LambdaExecution);
             Setup.LT_USERNAME = LegacyTestData.LambdaUserName;
             Setup.LT_ACCESS_KEY = LegacyTestData.LambdaAccessKey;
             Setup.build = Environment.GetEnvironmentVariable("LT_BUILD") == null ? "eInsight_LambdaTestExecution_" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("dd") + DateTime.Now.ToString("yyyy") : Environment.GetEnvironmentVariable("LT_BUILD");
@@ -59,6 +59,7 @@ namespace eInsight.Utility
             //TestHandling.BrowserSetup();
 
             //Navigate to the URL
+
             //Driver.Navigate().GoToUrl(url);
 
             //Can use this to update the URL Manually

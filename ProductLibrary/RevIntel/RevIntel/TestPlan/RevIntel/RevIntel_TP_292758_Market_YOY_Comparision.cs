@@ -33,7 +33,7 @@ namespace RevIntel
             TestDataFile = TestDataLocation.POCExcel;// TestDataLocation.TP_121734;
 
             //Navigate to the URL
-            Driver.Navigate().GoToUrl("https://devrhbi.revintel.co/");
+            Driver.Navigate().GoToUrl("http://revintelrhbi.goqacendyn.com/");
             AddDelay(1500);
         }
 

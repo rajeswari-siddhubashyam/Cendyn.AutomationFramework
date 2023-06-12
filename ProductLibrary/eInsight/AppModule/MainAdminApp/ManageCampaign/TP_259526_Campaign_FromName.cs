@@ -13,6 +13,7 @@ using NUnit.Framework;
 using eInsight.AppModule.UI;
 using eInsight.PageObject.UI;
 using System.Text.RegularExpressions;
+using BaseUtility.PageObject;
 
 namespace eInsight.AppModule.MainAdminApp
 {
@@ -141,8 +142,13 @@ namespace eInsight.AppModule.MainAdminApp
 
             ManageCampaign.PreSearchCampaign_New(CompanyName, "ProjectID", projectID, iFrameManageCampaign, "Transactional");
             ManageCampaign.ManageCampaign_EllipseButton("Edit");
+            if (IsElementVisible(Driver.FindElement(By.XPath("(//div[@class='dialogContent']//button[@class='btn btn-lg btn-danger'])[1]"))));
+            { 
+                ElementClick(Driver.FindElement(By.XPath("(//div[@class='dialogContent']//button[@class='btn btn-lg btn-danger'])[1]")));
+                Logger.WriteDebugMessage("Clicked on 'OK' button of Confirm Popup button");
+            }
             ElementWait(Driver.FindElement(By.Id("FromNameChecked")), 60);
-            AddDelay(8000);
+            AddDelay(4000);
             var quotes = '"';
             var script = "return $('input[id=" + quotes + "FromNameChecked" + quotes + "]:checked').length > 0;";
             IJavaScriptExecutor js = (IJavaScriptExecutor)Helper.Driver;
@@ -187,7 +193,7 @@ namespace eInsight.AppModule.MainAdminApp
             CreateCampaign.SelectTime();
             ScrollUpUsingJavaScript(Driver, -500);
             CreateCampaign.CampaignScheduleandComplete("Schedule");
-            AddDelay(300000);
+            AddDelay(3000);
             OpenNewTab();
             ControlToNewWindow();
             if (testCategory == "QA")
