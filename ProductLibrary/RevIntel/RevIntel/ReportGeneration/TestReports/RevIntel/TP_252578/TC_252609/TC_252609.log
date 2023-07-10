@@ -1,16 +1,37 @@
-2023-04-29 02:04:36,584 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
-2023-04-29 02:04:36,584 ::INFO ::[Logger]:: Chrome is currently being used for testing.
-2023-04-29 02:04:36,599 ::INFO ::[Logger]::  is used for Testing
-2023-04-29 02:04:36,599 ::INFO ::[Logger]:: This is the login page.https://devrhbi.revintel.co/
-2023-04-29 02:04:36,599 ::INFO ::[Logger]:: Execution started at:-Apr-29-2023 02-04-36-AM
-2023-04-29 02:04:36,615 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-04-29 02:04:36,615 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
-2023-04-29 02:04:36,615 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_252609         XXXXXXXXXXXXXXXX
-2023-04-29 02:04:36,615 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-04-29 02:04:36,615 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
-2023-04-29 02:04:36,631 ::INFO ::[Logger]:: Test Case :Validate Sold Out Night Analysis
-2023-04-29 02:05:36,771 ::ERROR::[Logger]:: The //*[@id="emailAddress"] element was not found on the page.
-OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:50841/session/2c4fbe93f0a5155645f331ff9101286d/element timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+2023-05-16 21:33:23,225 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-16 21:33:23,225 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-16 21:33:23,225 ::INFO ::[Logger]::  is used for Testing
+2023-05-16 21:33:23,241 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.goqacendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goQAcendyn.com/SSOLanding.aspx
+2023-05-16 21:33:23,241 ::INFO ::[Logger]:: Execution started at:-May-16-2023 21-33-23-PM
+2023-05-16 21:33:23,241 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 21:33:23,241 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-16 21:33:23,241 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_252609         XXXXXXXXXXXXXXXX
+2023-05-16 21:33:23,241 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 21:33:23,398 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-16 21:33:23,398 ::INFO ::[Logger]:: Test Case :Validate Sold Out Night Analysis
+2023-05-16 21:33:25,196 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-05-16 21:33:25,196 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-05-16 21:33:34,118 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-05-16 21:33:35,728 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2023-05-16 21:33:36,011 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
+2023-05-16 21:33:46,937 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2023-05-16 21:33:46,939 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
+2023-05-16 21:33:50,112 ::DEBUG::[Logger]:: 4) Client displayed
+2023-05-16 21:34:05,658 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
+2023-05-16 21:34:05,658 ::DEBUG::[Logger]:: 5) D Rock selected
+2023-05-16 21:34:17,850 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
+2023-05-16 21:34:21,451 ::DEBUG::[Logger]:: 7) Booking Trends Dropdown displayed
+2023-05-16 21:34:33,701 ::INFO ::[Logger]:: Clicked the Sold_Out_Night_Analysis element on the Navigation page.
+2023-05-16 21:34:44,672 ::DEBUG::[Logger]:: 8) User landed on Sold Out Night Analysis page
+2023-05-16 21:34:52,143 ::INFO ::[Logger]:: Switching into the iFrame.
+2023-05-16 21:34:58,363 ::INFO ::[Logger]:: Clicked the Click_View_Analysis element on the ReportParameter page.
+2023-05-16 21:34:58,363 ::DEBUG::[Logger]:: 9) Validation message dislayed for required fields
+2023-05-16 21:35:05,674 ::INFO ::[Logger]:: Clicked the Click_Business_Unit_Dropdown element on the ReportParameter page.
+2023-05-16 21:35:10,873 ::INFO ::[Logger]:: Clicked the Select_Business_Unit_Value element on the ReportParameter page.
+2023-05-16 21:35:10,873 ::DEBUG::[Logger]:: 10) AUDis selected as Business Unit
+2023-05-16 21:35:18,176 ::INFO ::[Logger]:: Clicked the Click_Currency_Dropdown element on the ReportParameter page.
+2023-05-16 21:36:18,176 ::ERROR::[Logger]:: The //li[contains(text(),'AUD')] element was not found on the page.
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:57459/session/7647ae78df4815af85122ee9cb760cdf/element timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
    at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
@@ -29,33 +50,14 @@ OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver ser
    at OpenQA.Selenium.By.FindElement(ISearchContext context)
    at OpenQA.Selenium.WebDriver.FindElement(By by)
    at BaseUtility.PageObject.PageAction.Find_ElementXPath(String repoName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\PageObject\PageAction.cs:line 33
-2023-04-29 02:06:13,967 ::FATAL::[Logger]:: System.ArgumentNullException: by cannot be null
-Parameter name: by
-   at OpenQA.Selenium.WebDriver.FindElement(By by)
-   at CTOS.CendynElement.<get_CenElement>b__6_0()
-   at CTOS.CendynElement.TryAndWait(Action action, CancellationToken cancellationToken, Int32 timeoutMs, Int32 retryTimeout)
-   at CTOS.CendynElement.get_CenElement()
-   at CTOS.CendynElement.<>c__DisplayClass32_0.<SendKeys>b__0()
-   at CTOS.CendynElement.TryAndWait(Action action, CancellationToken cancellationToken, Int32 timeoutMs, Int32 retryTimeout)
-   at CTOS.CendynElement.SendKeys(String text)
-   at CTOS.Input.EnterInput(String inputText)
-   at BaseUtility.Utility.Helper.ElementEnterText(IWebElement element, String text) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 387
-2023-04-29 02:06:13,967 ::FATAL::[Logger]:: Unable to select text in the Enter_EmailAddress element on the Login page.
-2023-04-29 02:06:13,967 ::ERROR::[Logger]:: RevIntel_Flow :: Script::Failed
-System.ArgumentNullException: by cannot be null
-Parameter name: by
-   at OpenQA.Selenium.WebDriver.FindElement(By by)
-   at CTOS.CendynElement.<get_CenElement>b__6_0()
-   at CTOS.CendynElement.TryAndWait(Action action, CancellationToken cancellationToken, Int32 timeoutMs, Int32 retryTimeout)
-   at CTOS.CendynElement.get_CenElement()
-   at CTOS.CendynElement.<>c__DisplayClass32_0.<SendKeys>b__0()
-   at CTOS.CendynElement.TryAndWait(Action action, CancellationToken cancellationToken, Int32 timeoutMs, Int32 retryTimeout)
-   at CTOS.CendynElement.SendKeys(String text)
-   at CTOS.Input.EnterInput(String inputText)
-   at BaseUtility.Utility.Helper.ElementEnterText(IWebElement element, String text) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 396
-   at RevIntel.AppModule.UI.Login.Enter_EmailAddress(String str) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\Login.cs:line 13
-   at RevIntel.AppModule.UI.Login.Frontend_SignIn(String username, String password) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\Login.cs:line 41
-   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TC_252609() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp\TP_252578_Booking Trends.cs:line 2681
+2023-05-16 21:36:20,188 ::FATAL::[Logger]:: Unable to click the Select_Currency_Value element on the ReportParameter page.System.NullReferenceException: Object reference not set to an instance of an object.
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 81
+2023-05-16 21:36:20,188 ::ERROR::[Logger]:: RevIntel_Flow :: Script::Failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 88
+   at RevIntel.AppModule.UI.ReportParameter.Select_Currency_Value() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\ReportParameter.cs:line 672
+   at RevIntel.AppModule.UI.ReportParameter.Select_Currency_Business_value(String Business_Unit, String Currency) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\ReportParameter.cs:line 728
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TC_252609() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp\TP_252578_Booking Trends.cs:line 2703
    at RevIntel.AppModule.MainAdminApp.MainAdminApp.TP_252578() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp.cs:line 75
    at RevIntel.RevIntel_TP_252578_Booking_Trends.TC_252609() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\TestPlan\RevIntel\RevIntel_TP_252578_Booking_Trends.cs:line 457
-2023-04-29 02:06:56,833 ::INFO ::[Logger]:: E.N.D
+2023-05-16 21:38:02,070 ::INFO ::[Logger]:: E.N.D

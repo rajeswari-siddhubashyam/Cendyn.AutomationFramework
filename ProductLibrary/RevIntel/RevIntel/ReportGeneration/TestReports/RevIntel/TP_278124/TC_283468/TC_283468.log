@@ -1,0 +1,108 @@
+2023-05-17 15:31:29,463 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-17 15:31:29,463 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-17 15:31:29,463 ::INFO ::[Logger]::  is used for Testing
+2023-05-17 15:31:30,061 ::INFO ::[Logger]:: This is the login page.https://signin.letitrain.com/Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://salesdemo.revintel.co/SSOLanding.aspx
+2023-05-17 15:31:30,061 ::INFO ::[Logger]:: Execution started at:-May-17-2023 15-31-30-PM
+2023-05-17 15:31:30,061 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-17 15:31:30,061 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-17 15:31:30,061 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_283468         XXXXXXXXXXXXXXXX
+2023-05-17 15:31:30,076 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-17 15:31:30,076 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-17 15:31:30,076 ::INFO ::[Logger]:: Test Case : Validate Upon selecting Cancel user landed on Monthly Pickup page
+2023-05-17 15:31:35,299 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-05-17 15:31:35,299 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-05-17 15:32:00,626 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-05-17 15:32:02,216 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2023-05-17 15:32:02,216 ::DEBUG::[Logger]:: 2) Login in with Username =rshende@cendyn.com and Password =Cendyn123$
+2023-05-17 15:32:33,268 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2023-05-17 15:32:34,287 ::DEBUG::[Logger]:: 3) Client displayed
+2023-05-17 15:33:56,599 ::ERROR::[Logger]:: The D Rock element was not found on the page.
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:60451/session/7f6e9b307557e3690a1d96d0179b6196/element timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at BaseUtility.PageObject.PageAction.Find_ElementLinkText(String repoName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\PageObject\PageAction.cs:line 49
+2023-05-17 15:34:58,674 ::FATAL::[Logger]:: Unable to click the Link_ClientName element on the Navigation page.OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:60451/session/7f6e9b307557e3690a1d96d0179b6196/element/ec582ed9-087a-43f2-9f51-5caafba50c46/click timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Click()
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 81
+2023-05-17 15:34:58,677 ::ERROR::[Logger]:: RevIntel_Flow :: Script::Failed
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:60451/session/7f6e9b307557e3690a1d96d0179b6196/element/ec582ed9-087a-43f2-9f51-5caafba50c46/click timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Click()
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 88
+   at RevIntel.AppModule.UI.Navigation.Click_ClientName(String clientName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\Navigation.cs:line 26
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TC_283468() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp\TP_278124_Post Deployment Plan.cs:line 758
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TP_278124() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp.cs:line 237
+   at RevIntel.RevIntel_TP_278124_Post_Deployment.TC_283468() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\TestPlan\RevIntel\RevIntel_TP_278124_Post_Deployment.cs:line 244
+2023-05-17 15:36:00,704 ::ERROR::[Logger]:: Error in Takescreenshot code
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+2023-05-17 15:37:01,930 ::ERROR::[Logger]:: Exception while taking screenshot
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:60451/session/7f6e9b307557e3690a1d96d0179b6196/screenshot timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.GetScreenshot()
+   at InfoMessageLogger.ReportGeneration.CaptureScreenshot.CapturescreenShot(String filename) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\InfoMessageLogger\ReportGeneration\CaptureScreenshot.cs:line 29
+2023-05-17 15:38:29,529 ::INFO ::[Logger]:: E.N.D

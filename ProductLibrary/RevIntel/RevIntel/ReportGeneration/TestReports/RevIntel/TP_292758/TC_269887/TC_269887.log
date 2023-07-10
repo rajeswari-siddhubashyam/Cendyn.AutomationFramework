@@ -1,0 +1,28 @@
+2023-05-23 11:35:47,149 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-23 11:35:47,518 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-23 11:35:47,558 ::INFO ::[Logger]::  is used for Testing
+2023-05-23 11:35:47,601 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.goqacendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goQAcendyn.com/SSOLanding.aspx
+2023-05-23 11:35:47,604 ::INFO ::[Logger]:: Execution started at:-May-23-2023 11-35-47-AM
+2023-05-23 11:35:47,608 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-23 11:35:47,611 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-23 11:35:47,615 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_269887         XXXXXXXXXXXXXXXX
+2023-05-23 11:35:47,618 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-23 11:35:47,774 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-23 11:37:02,464 ::INFO ::[Logger]:: Test Case : Validate the Market->Market Report when comparison year is 1 at hotel Level
+2023-05-23 11:37:10,239 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-05-23 11:37:10,243 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-05-23 11:37:19,432 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-05-23 11:37:21,057 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2023-05-23 11:37:21,059 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
+2023-05-23 11:37:31,709 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2023-05-23 11:37:35,330 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
+2023-05-23 11:37:38,605 ::DEBUG::[Logger]:: 4) Client displayed
+2023-05-23 11:37:55,350 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
+2023-05-23 11:37:55,353 ::DEBUG::[Logger]:: 5) D Rock selected
+2023-05-23 11:38:08,227 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
+2023-05-23 11:38:34,395 ::DEBUG::[Logger]:: 7) Market menu drop down displayed
+2023-05-23 11:39:12,719 ::INFO ::[Logger]:: Clicked the Market_Report element on the Navigation page.
+2023-05-23 11:39:22,728 ::DEBUG::[Logger]:: 8) User Landed on Market Report Page
+2023-05-23 11:39:30,088 ::INFO ::[Logger]:: Switching into the iFrame.
+2023-05-23 11:39:46,326 ::INFO ::[Logger]:: Clicked the Click_Business_Unit_Dropdown element on the ReportParameter page.
+2023-05-23 11:41:04,339 ::INFO ::[Logger]:: Clicked the Select_Business_Unit_Value element on the ReportParameter page.

@@ -161,7 +161,7 @@
     <Parameter key="Click_Day_of_Week_Statistics_Report">//span[contains(text(),'Day of Week Statistics')]</Parameter>
     <Parameter key="Click_Monthly_Summary_Report">//span[contains(text(),'Monthly Summary')]</Parameter>
     <Parameter key="Click_Day_of_Week_Analysis_Report">//span[contains(text(),'Day of Week Analysis')]</Parameter>
-    <Parameter key="Click_Daily_Analysis_PerPerson_Report">//span[contains(text(),'Daily Analysis PerPerson')]</Parameter>
+    <Parameter key="Click_Daily_Analysis_PerPerson_Report">//span[contains(text(),'Daily Analysis')]</Parameter>
     <Parameter key="Click_Custom_Menu">//span[contains(text(),'Custom')]</Parameter>
     <Parameter key="Click_OTB_Comparison_by_Segment_Reports">//span[contains(text(),'OTB Comparison by Segment')]</Parameter>
     <Parameter key="Click_Daily_Pick_Up_Report">//span[contains(text(),'Daily Pick Up Report')]</Parameter>
@@ -209,7 +209,7 @@
 
   <ReportParameter>
     <Parameter key="Click_Currency_Dropdown">//a[@id='wcCurrency_Arrow']</Parameter>
-    <Parameter key="Select_Currency_Value">//li[contains(text(),'AUD')]</Parameter>
+    <Parameter key="Select_Currency_Value">//*[@id="wcCurrency_DropDown"]//li</Parameter>
     <Parameter key="Click_Business_Unit_Dropdown">//*[@id='rcBusinessUnit_Arrow']</Parameter>
     <Parameter key="Select_Business_Unit_Value">//*[@id="rcBusinessUnit_DropDown"]//li[contains(text(),'Hotel')]</Parameter>
     <Parameter key="Select_Hotel">//*[@id="rblHotelPortfolio_ctl00"]</Parameter>
@@ -334,7 +334,7 @@
     <Parameter key="iframe_Monthly_Summary_Report">//iframe[@name='Monthly Summary']</Parameter>
     <Parameter key="iframe_Day_of_Week_Statistics_Report">//iframe[@name='Day of Week Statistics']</Parameter>
     <Parameter key="iframe_Day_of_Week_Analysis_Report">//iframe[@name='Day of Week Analysis']</Parameter>
-    <Parameter key="iframe_Daily_Analysis_PerPerson_Report">//iframe[@name='Daily Analysis PerPerson']</Parameter>
+    <Parameter key="iframe_Daily_Analysis_PerPerson_Report">//iframe[@name='Daily Analysis']</Parameter>
     <Parameter key="iframe_OTB_Comparison_by_Segment_Report">//iframe[@name='OTB Comparison by Segment']</Parameter>
     <Parameter key="iframe_Daily_Pick_Up_Report">//iframe[@name='Daily Pick Up Report']</Parameter>
     <Parameter key="iframe_Revenue_By_Room_Product_Report">//iframe[@name='Revenue By Room Product']</Parameter>

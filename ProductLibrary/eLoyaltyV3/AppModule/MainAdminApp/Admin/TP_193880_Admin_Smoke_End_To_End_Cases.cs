@@ -13,7 +13,7 @@ using Constants = eLoyaltyV3.Utility.Constants;
 using BaseUtility.PageObject;
 using eLoyaltyV3.Utility;
 using OpenQA.Selenium;
-
+using System.Linq.Expressions;
 
 namespace eLoyaltyV3.AppModule.MainAdminApp
 {
@@ -170,152 +170,154 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
         public static void TC_194195()
         {
             if (TestCaseId == Constants.TC_194195)
-            {
-                Users data = new Users();
-                string emailName;
-                //Pre-requisites:
-                //1.Log into Admin.
-                //2.Navigate to Loyalty Awards
-
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
-
-                Admin.Click_LoyaltyAwards();
-                Logger.WriteDebugMessage("Users Landed on Loyalty Awards Page");
-
-                //1.Click on Add Rule 
-                Admin.Click_LoyaltyAwards_Button_Add();
-                Logger.WriteDebugMessage("Loyalty Awards popup should get display");
-
-                //2.Enter valid data on Rule Tab Fields and click on cancel button
-                string startDate = DateTime.Now.ToString("MM/dd/yyyy");
-                string endDate = DateTime.Now.AddDays(1).ToString("MM/dd/yyyy");
-                string awardName1 = TestData.ExcelData.TestDataReader.ReadData(1, "AwardName");
-                string daysActive = TestData.ExcelData.TestDataReader.ReadData(1, "DaysActive");
-                string advanceDeliveryDays = TestData.ExcelData.TestDataReader.ReadData(1, "AdvanceDeliveryDays");
-                if (ProjectName.Equals("HotelOrigami"))
-                    emailName = TestData.ExcelData.TestDataReader.ReadData(1, "OrigamiEmailName");
-                else
-                    emailName = TestData.ExcelData.TestDataReader.ReadData(1, "EmailName");
-                string awardName = MakeUnique(awardName1);
-                Queries.GetMemberLevel(data, 1);
-                string level = data.MembershipLevel;
-                if (ProjectName.Equals("Bartell"))
                 {
-                    string award = Admin.AssignAwardType(ProjectName, "Night Based");
-                }
+                    Users data = new Users();
+                    string emailName;
+                    //Pre-requisites:
+                    //1.Log into Admin.
+                    //2.Navigate to Loyalty Awards
 
-                string awardType = Admin.AssignAwardType(ProjectName, "Birthday");
-                string code = string.Concat(DateTime.Now.Millisecond, DateTime.Now.Hour);
-                Admin.AddAward(awardName, code, startDate, endDate, awardType);
-                Admin.AddbirthdayAward(daysActive, advanceDeliveryDays, level, emailName);
-                Admin.Click_LoyaltyAwards_Button_Cancel();
-                Logger.WriteDebugMessage("Popup should close and data is not save");
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
 
-                //3.Click on Add button
-                Admin.Click_LoyaltyAwards_Button_Add();
-                Logger.WriteDebugMessage("Loyalty Awards popup should get display ");
+                    Admin.Click_LoyaltyAwards();
+                    Logger.WriteDebugMessage("Users Landed on Loyalty Awards Page");
 
-                //4.Enter valid data on Loyalty Awards popup fields with Award Type Birthday based 
-                string awardType1 = TestData.ExcelData.TestDataReader.ReadData(1, "AwardType");
-                Admin.Dropdown_AwardType(awardType1);
-                VerifyTextOnPage("Days Active:");
-                VerifyTextOnPage("Advance Delivery Days:");
-                VerifyTextOnPage("Min. Qualified Stay:");
-                VerifyTextOnPage("Member Level:");
-                VerifyTextOnPage("Email Name:");
-                Logger.WriteDebugMessage("Below fields should be populated after selecting award type:-Days active,advanced delivery days,Min.Qualified Stays,Select member level,Email name");
+                    //1.Click on Add Rule 
+                    Admin.Click_LoyaltyAwards_Button_Add();
+                    Logger.WriteDebugMessage("Loyalty Awards popup should get display");
 
-                //5.Enter details and click on save
-                Admin.AddAward(awardName, code, startDate, endDate, awardType);
-                Admin.AddbirthdayAward(daysActive, advanceDeliveryDays, level, emailName);
-                Logger.WriteDebugMessage("All Details are added Correctly");
-                Admin.Click_LoyaltyAwards_Button_Save();
-                VerifyTextOnPage("Save Succesful.");
-                AddDelay(5000);
-                Logger.WriteDebugMessage("Popup should be closed and award should be created");
+                    //2.Enter valid data on Rule Tab Fields and click on cancel button
+                    string startDate = DateTime.Now.ToString("MM/dd/yyyy");
+                    string endDate = DateTime.Now.AddDays(1).ToString("MM/dd/yyyy");
+                    string awardName1 = TestData.ExcelData.TestDataReader.ReadData(1, "AwardName");
+                    string daysActive = TestData.ExcelData.TestDataReader.ReadData(1, "DaysActive");
+                    string advanceDeliveryDays = TestData.ExcelData.TestDataReader.ReadData(1, "AdvanceDeliveryDays");
+                    if (ProjectName.Equals("HotelOrigami"))
+                        emailName = TestData.ExcelData.TestDataReader.ReadData(1, "OrigamiEmailName");
+                    else
+                        emailName = TestData.ExcelData.TestDataReader.ReadData(1, "EmailName");
+                    string awardName = MakeUnique(awardName1);
+                    Queries.GetMemberLevel(data, 1);
+                    string level = data.MembershipLevel;
+                    if (ProjectName.Equals("Bartell"))
+                    {
+                        string award = Admin.AssignAwardType(ProjectName, "Night Based");
+                    }
 
-                //6.Search for award created
-                Admin.LoyaltyAwards_Text_Filter(awardName);
-                AddDelay(1500);
-                Logger.WriteDebugMessage("Award should be found");
+                    string awardType = Admin.AssignAwardType(ProjectName, "Birthday");
+                    //string code = string.Concat(DateTime.Now.Millisecond, DateTime.Now.Hour);                    
+                    Random rnd = new Random();
+                    string code = rnd.Next(1000, 10000).ToString();
+                    Admin.AddAward(awardName, code, startDate, endDate, awardType);
+                    Admin.AddbirthdayAward(daysActive, advanceDeliveryDays, level, emailName);
+                    Admin.Click_LoyaltyAwards_Button_Cancel();
+                    Logger.WriteDebugMessage("Popup should close and data is not save");
 
-                //7.Click on edit icon
-                Admin.Click_LoyaltyAwards_Icon_Edit();
-                Logger.WriteDebugMessage("Loyalty award popup should get display");
+                    //3.Click on Add button
+                    Admin.Click_LoyaltyAwards_Button_Add();
+                    Logger.WriteDebugMessage("Loyalty Awards popup should get display ");
 
-                //8.Try and update award code value
-                string value = PageObject_Admin.Admin_LoyaltyAwards_Text_AwardCode().GetAttribute("disabled");
-                if (value.Equals("true"))
-                    Logger.WriteDebugMessage("User should not be able to update award code");
-                else
-                    Assert.Fail("Value is Editable");
+                    //4.Enter valid data on Loyalty Awards popup fields with Award Type Birthday based 
+                    string awardType1 = TestData.ExcelData.TestDataReader.ReadData(1, "AwardType");
+                    Admin.Dropdown_AwardType(awardType1);
+                    VerifyTextOnPage("Days Active:");
+                    VerifyTextOnPage("Advance Delivery Days:");
+                    VerifyTextOnPage("Min. Qualified Stay:");
+                    VerifyTextOnPage("Member Level:");
+                    VerifyTextOnPage("Email Name:");
+                    Logger.WriteDebugMessage("Below fields should be populated after selecting award type:-Days active,advanced delivery days,Min.Qualified Stays,Select member level,Email name");
+
+                    //5.Enter details and click on save
+                    Admin.AddAward(awardName, code, startDate, endDate, awardType);
+                    Admin.AddbirthdayAward(daysActive, advanceDeliveryDays, level, emailName);
+                    Logger.WriteDebugMessage("All Details are added Correctly");
+                    Admin.Click_LoyaltyAwards_Button_Save();
+                    VerifyTextOnPage("Save Succesful.");
+                    AddDelay(5000);
+                    Logger.WriteDebugMessage("Popup should be closed and award should be created");
+
+                    //6.Search for award created
+                    Admin.LoyaltyAwards_Text_Filter(awardName);
+                    AddDelay(1500);
+                    Logger.WriteDebugMessage("Award should be found");
+
+                    //7.Click on edit icon
+                    Admin.Click_LoyaltyAwards_Icon_Edit();
+                    Logger.WriteDebugMessage("Loyalty award popup should get display");
+
+                    //8.Try and update award code value
+                    string value = PageObject_Admin.Admin_LoyaltyAwards_Text_AwardCode().GetAttribute("disabled");
+                    if (value.Equals("true"))
+                        Logger.WriteDebugMessage("User should not be able to update award code");
+                    else
+                        Assert.Fail("Value is Editable");
 
 
-                //9.Edited the existing data for all fields and click on save 
-                string awardNameUpdated = MakeUnique(awardName1);
-                Admin.EditAward(awardNameUpdated, startDate, endDate, awardType);
-                Logger.WriteDebugMessage("Award Name Updated Correctly");
-                Admin.Click_LoyaltyAwards_Button_Save();
-                Logger.WriteDebugMessage("Data should be saved successfully");
-                VerifyTextOnPage("Save Succesful.");
+                    //9.Edited the existing data for all fields and click on save 
+                    string awardNameUpdated = MakeUnique(awardName1);
+                    Admin.EditAward(awardNameUpdated, startDate, endDate, awardType);
+                    Logger.WriteDebugMessage("Award Name Updated Correctly");
+                    Admin.Click_LoyaltyAwards_Button_Save();
+                    Logger.WriteDebugMessage("Data should be saved successfully");
+                    VerifyTextOnPage("Save Succesful.");
 
-                //10.Search for the award updated data
-                Admin.LoyaltyAwards_Text_Filter(awardNameUpdated);
-                AddDelay(1500);
-                Logger.WriteDebugMessage("Award should be found");
+                    //10.Search for the award updated data
+                    Admin.LoyaltyAwards_Text_Filter(awardNameUpdated);
+                    AddDelay(1500);
+                    Logger.WriteDebugMessage("Award should be found");
 
-                //11.Click on edit icon
-                Admin.Click_LoyaltyAwards_Icon_Edit();
-                Logger.WriteDebugMessage("Loyalty award popup should get display");
+                    //11.Click on edit icon
+                    Admin.Click_LoyaltyAwards_Icon_Edit();
+                    Logger.WriteDebugMessage("Loyalty award popup should get display");
 
-                //12.Edit the end date of Award as past date and click on Save
-                string startdateUpdated = DateTime.Now.AddDays(-2).ToString("MM/dd/yyyy");
-                string enddateUpdated = DateTime.Now.AddDays(-1).ToString("MM/dd/yyyy");
+                    //12.Edit the end date of Award as past date and click on Save
+                    string startdateUpdated = DateTime.Now.AddDays(-2).ToString("MM/dd/yyyy");
+                    string enddateUpdated = DateTime.Now.AddDays(-1).ToString("MM/dd/yyyy");
 
-                Admin.EditAward(awardNameUpdated, startdateUpdated, enddateUpdated, awardType);
-                VerifyTextOnPage("Past Dates are selected.");
-                Admin.Click_LoyaltyAwards_Button_Save();
-                VerifyTextOnPage("The end date must be greater than today's date.");
-                Logger.WriteDebugMessage("Unable to save the Award with past date");
+                    Admin.EditAward(awardNameUpdated, startdateUpdated, enddateUpdated, awardType);
+                    VerifyTextOnPage("Past Dates are selected.");
+                    Admin.Click_LoyaltyAwards_Button_Save();
+                    VerifyTextOnPage("The end date must be greater than today's date.");
+                    Logger.WriteDebugMessage("Unable to save the Award with past date");
 
-                //[Ashish]: Commented the code as Admin is unable to Enter the past date for the award
-                ////13.Search for the award updated data
-                //Admin.LoyaltyAwards_Text_Filter(awardNameUpdated);
-                //AddDelay(1500);
-                //Logger.WriteDebugMessage("Award should be found");
+                    //[Ashish]: Commented the code as Admin is unable to Enter the past date for the award
+                    ////13.Search for the award updated data
+                    //Admin.LoyaltyAwards_Text_Filter(awardNameUpdated);
+                    //AddDelay(1500);
+                    //Logger.WriteDebugMessage("Award should be found");
 
-                ////14.Click on Edit icon
-                //Admin.Click_LoyaltyAwards_Icon_Edit();
-                //Logger.WriteDebugMessage("Loyalty award popup should get display");
+                    ////14.Click on Edit icon
+                    //Admin.Click_LoyaltyAwards_Icon_Edit();
+                    //Logger.WriteDebugMessage("Loyalty award popup should get display");
 
-                //15.Try and update data for award added
-                string value1 = PageObject_Admin.Admin_LoyaltyAwards_Text_AwardCode().GetAttribute("disabled");
-                if (value1.Equals("true"))
-                    Logger.WriteInfoMessage("Value is NOT Editable");
-                else
-                    Assert.Fail("Value is Editable");
-                Logger.WriteDebugMessage("User should be able to update all the field Except for Award Code");
-                Admin.Click_LoyaltyAwards_Button_Cancel();
+                    //15.Try and update data for award added
+                    string value1 = PageObject_Admin.Admin_LoyaltyAwards_Text_AwardCode().GetAttribute("disabled");
+                    if (value1.Equals("true"))
+                        Logger.WriteInfoMessage("Value is NOT Editable");
+                    else
+                        Assert.Fail("Value is Editable");
+                    Logger.WriteDebugMessage("User should be able to update all the field Except for Award Code");
+                    Admin.Click_LoyaltyAwards_Button_Cancel();
 
-                // Switch the award status off
-                Admin.LoyaltyAwards_Text_Filter(awardNameUpdated);
-                AddDelay(5000);
-                Logger.WriteDebugMessage("Award should be found");
-                Admin.Click_LoyaltyAwards_Icon_Edit();
-                AddDelay(5000);
-                Logger.WriteDebugMessage("Loyalty award popup should get display");
-                Admin.Click_Admin_AwardStatusSwitch();
-                AddDelay(5000);
-                Logger.WriteDebugMessage("Award Status button got switch off");
-                Admin.Click_LoyaltyAwards_Button_Save();
-                AddDelay(5000);
-                Logger.WriteDebugMessage("Award Status get switch off");
-                Admin.LoyaltyAwards_Text_Filter(awardNameUpdated);
-                AddDelay(5000);
-                Logger.WriteDebugMessage("Award should be found");
+                    // Switch the award status off
+                    Admin.LoyaltyAwards_Text_Filter(awardNameUpdated);
+                    AddDelay(5000);
+                    Logger.WriteDebugMessage("Award should be found");
+                    Admin.Click_LoyaltyAwards_Icon_Edit();
+                    AddDelay(5000);
+                    Logger.WriteDebugMessage("Loyalty award popup should get display");
+                    Admin.Click_Admin_AwardStatusSwitch();
+                    AddDelay(5000);
+                    Logger.WriteDebugMessage("Award Status button got switch off");
+                    Admin.Click_LoyaltyAwards_Button_Save();
+                    AddDelay(5000);
+                    Logger.WriteDebugMessage("Award Status get switch off");
+                    Admin.LoyaltyAwards_Text_Filter(awardNameUpdated);
+                    AddDelay(5000);
+                    Logger.WriteDebugMessage("Award should be found");
 
-            }
+            }         
         }
 
         public static void TC_194218()
@@ -626,61 +628,61 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
         public static void TC_194231()
         {
             if (TestCaseId == Constants.TC_194231)
-            {
-                string Filter, EmailName, Subject;
-                //Pre-requisites:
-                //1.Log into Admin.
-                //2.Navigate to Email Setup
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
+                {
+                    string Filter, EmailName, Subject;
+                    //Pre-requisites:
+                    //1.Log into Admin.
+                    //2.Navigate to Email Setup
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
 
-                Admin.Click_Menu_EmailSetuUp();
-                AddDelay(10000);
-                Logger.WriteDebugMessage("Landed on the Email Setup page");
+                    Admin.Click_Menu_EmailSetuUp();
+                    AddDelay(10000);
+                    Logger.WriteDebugMessage("Landed on the Email Setup page");
 
-                //1.Click on edit icon
-                Filter = TestData.ExcelData.TestDataReader.ReadData(1, "Filter");
-                Admin.EmailSetUp_Text_Filter(Filter);
-                AddDelay(2500);
+                    //1.Click on edit icon
+                    Filter = TestData.ExcelData.TestDataReader.ReadData(1, "Filter");
+                    Admin.EmailSetUp_Text_Filter(Filter);
+                    AddDelay(2500);
 
-                Admin.Click_EmailSetUp_Icon_Edit();
-                Logger.WriteDebugMessage("Email setup page should be displayed");
+                    Admin.Click_EmailSetUp_Icon_Edit();
+                    Logger.WriteDebugMessage("Email setup page should be displayed");
 
-                //2.Edited existing data on the fields and click on cancel
-                string emailName = Helper.Getdata(PageObject_Admin.Admin_EmailSetUp_Text_EmailName());
-                string emailSubject = Helper.Getdata(PageObject_Admin.Admin_EmailSetUp_Text_EmailSubject());
+                    //2.Edited existing data on the fields and click on cancel
+                    string emailName = Helper.Getdata(PageObject_Admin.Admin_EmailSetUp_Text_EmailName());
+                    string emailSubject = Helper.Getdata(PageObject_Admin.Admin_EmailSetUp_Text_EmailSubject());
 
-                EmailName = TestData.ExcelData.TestDataReader.ReadData(1, "EmailName");
-                Subject = TestData.ExcelData.TestDataReader.ReadData(1, "Subject");
-                Admin.AddEmailSetUp(EmailName, Subject);
-                Admin.Click_EmailSetUp_Button_Cancel();
-                Admin.EmailSetUp_Text_Filter(EmailName);
-                VerifyTextOnPage("No matching records found");
-                AddDelay(2500);
-                Logger.WriteDebugMessage("Emails setup page should close and email should not be updated");
+                    EmailName = TestData.ExcelData.TestDataReader.ReadData(1, "EmailName");
+                    Subject = TestData.ExcelData.TestDataReader.ReadData(1, "Subject");
+                    Admin.AddEmailSetUp(EmailName, Subject);
+                    Admin.Click_EmailSetUp_Button_Cancel();
+                    Admin.EmailSetUp_Text_Filter(EmailName);
+                    VerifyTextOnPage("No matching records found");
+                    AddDelay(2500);
+                    Logger.WriteDebugMessage("Emails setup page should close and email should not be updated");
 
-                //3.Click on edit icon
-                Admin.EmailSetUp_Text_Filter(Filter);
-                AddDelay(2500);
-                Admin.Click_EmailSetUp_Icon_Edit();
-                Logger.WriteDebugMessage("Email setup page should be displayed");
+                    //3.Click on edit icon
+                    Admin.EmailSetUp_Text_Filter(Filter);
+                    AddDelay(2500);
+                    Admin.Click_EmailSetUp_Icon_Edit();
+                    Logger.WriteDebugMessage("Email setup page should be displayed");
 
-                //4.Edited existing data on the fields and click on save
-                Admin.AddEmailSetUp(EmailName, Subject);
-                if (ProjectName.Equals("MyPlace"))
-                    Admin.EmailSetUp_Text_EmailContent("Test email welcome content");
-                Admin.Click_EmailSetUp_Button_Save();
-                VerifyTextOnPage("Save Successfull");
-                Logger.WriteDebugMessage("Emails setup popup should close and email should be updated");
+                    //4.Edited existing data on the fields and click on save
+                    Admin.AddEmailSetUp(EmailName, Subject);
+                    if (ProjectName.Equals("MyPlace"))
+                        Admin.EmailSetUp_Text_EmailContent("Test email welcome content");
+                    Admin.Click_EmailSetUp_Button_Save();
+                    VerifyTextOnPage("Save Successfull");
+                    Logger.WriteDebugMessage("Emails setup popup should close and email should be updated");
 
-                //5.Revert back all changes made at step 4
-                Admin.EmailSetUp_Text_Filter(Filter);
-                AddDelay(2500);
-                Admin.Click_EmailSetUp_Icon_Edit();
-                Admin.AddEmailSetUp(emailName, emailSubject);
-                Admin.Click_EmailSetUp_Button_Save();
-                Logger.WriteDebugMessage("Email data should be reverted successfully");
-            }
+                    //5.Revert back all changes made at step 4
+                    Admin.EmailSetUp_Text_Filter(Filter);
+                    AddDelay(2500);
+                    Admin.Click_EmailSetUp_Icon_Edit();
+                    Admin.AddEmailSetUp(emailName, emailSubject);
+                    Admin.Click_EmailSetUp_Button_Save();
+                    Logger.WriteDebugMessage("Email data should be reverted successfully");
+            }            
         }
 
         public static void TC_194235()
@@ -903,218 +905,231 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
 
         public static void TC_194242()
         {
-            if (TestCaseId == Constants.TC_194242)
-            {
-                //Pre-requisites:
-                Users data = new Users();
-                //1.Log into Admin.
-                //2.Navigate to Email Setup
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
 
-                Admin.Click_Menu_Users();
-                AddDelay(2500);
-                Logger.WriteDebugMessage("Landed on the Users page");
+             if (TestCaseId == Constants.TC_194242)
+                {
+                    //Pre-requisites:
+                    Users data = new Users();
+                    //1.Log into Admin.
+                    //2.Navigate to Email Setup
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
 
-                //1.Click on Add users button
-                Admin.Click_Users_Button_AddUsers();
-                Logger.WriteDebugMessage("User setup popup should be displayed");
+                    Admin.Click_Menu_Users();
+                    AddDelay(2500);
+                    Logger.WriteDebugMessage("Landed on the Users page");
 
-                //2.Enter valid data on all the fields and click on save
-                string userLogin = TestData.ExcelData.TestDataReader.ReadData(1, "UserLogin");
-                string UserFirstname = TestData.ExcelData.TestDataReader.ReadData(1, "UserFirstname");
-                string UserLastname = TestData.ExcelData.TestDataReader.ReadData(1, "UserLastname");
-                string UserTitle = TestData.ExcelData.TestDataReader.ReadData(1, "UserTitle");
-                string UserPermission = TestData.ExcelData.TestDataReader.ReadData(1, "UserPermission");
-                string email = MakeCatchAllUnique(userLogin);
-                Queries.IdentifyHotel(data);
-                string Propertyname = data.PropertyName;
-                Admin.AddUsers(UserFirstname, UserLastname, UserTitle, UserPermission, email, Propertyname);
-                Logger.WriteDebugMessage("User should be able to entre valid data on all the fields");
-                Logger.LogTestData(TestPlanId, TestCaseId, "User Login", userLogin);
-                Logger.LogTestData(TestPlanId, TestCaseId, "User First Name", UserFirstname);
-                Logger.LogTestData(TestPlanId, TestCaseId, "User Last Name", UserLastname);
-                Logger.LogTestData(TestPlanId, TestCaseId, "User Title", UserTitle);
-                Logger.LogTestData(TestPlanId, TestCaseId, "User Permission", UserPermission);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Email", email, true);
-                Admin.Click_Users_Button_Save();
-                Admin.Users_Text_Search(email);
-                Logger.WriteDebugMessage("User should be created successfully");
+                    //1.Click on Add users button
+                    Admin.Click_Users_Button_AddUsers();
+                    Logger.WriteDebugMessage("User setup popup should be displayed");
 
-                //3.Go to catchall and login with valid credentials                
-                Email.LogIntoCatchAll();
-                Email.CatchAll_SearchEmailAndOpenLatestMessage(email);
-                Logger.WriteDebugMessage("Catchall mailbox should be opened");
+                    //2.Enter valid data on all the fields and click on save
+                    string userLogin = TestData.ExcelData.TestDataReader.ReadData(1, "UserLogin");
+                    string UserFirstname = TestData.ExcelData.TestDataReader.ReadData(1, "UserFirstname");
+                    string UserLastname = TestData.ExcelData.TestDataReader.ReadData(1, "UserLastname");
+                    string UserTitle = TestData.ExcelData.TestDataReader.ReadData(1, "UserTitle");
+                    string UserPermission = TestData.ExcelData.TestDataReader.ReadData(1, "UserPermission");
+                    string email = MakeCatchAllUnique(userLogin);
+                    Queries.IdentifyHotel(data);
+                    string Propertyname = data.PropertyName;
+                    Admin.AddUsers(UserFirstname, UserLastname, UserTitle, UserPermission, email, Propertyname);
+                    Logger.WriteDebugMessage("User should be able to entre valid data on all the fields");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "User Login", userLogin);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "User First Name", UserFirstname);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "User Last Name", UserLastname);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "User Title", UserTitle);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "User Permission", UserPermission);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Email", email, true);
+                    Admin.Click_Users_Button_Save();
+                    Admin.Users_Text_Search(email);
+                    Logger.WriteDebugMessage("User should be created successfully");
 
-                //4.Check the user invite email
-                VerifyTextOnPageAndHighLight(email);
-                Logger.WriteDebugMessage("Email should be received");
+                    //3.Go to catchall and login with valid credentials                
+                    Helper.OpenNewTab();
+                    Hotmail.NavigateToOutLookLogin();                
+                    Hotmail.SearchEmailAndOpenLatestEmail(email + " Password", "Topresults");
+                    Logger.WriteDebugMessage("Catchall mailbox should be opened");
 
-            }
+                    //4.Check the user invite email
+                    VerifyTextOnPageAndHighLight(email);
+                    Logger.WriteDebugMessage("Email should be received");
+             }            
 
         }
 
         public static void TC_141476()
         {
             if (TestCaseId == Constants.TC_141476)
-            {
-                Users data = new Users();
-                string PastExpMonth = TestData.ExcelData.TestDataReader.ReadData(1, "PastExpMonth");
-                string PastExpDay = TestData.ExcelData.TestDataReader.ReadData(1, "PastExpDay");
-                string PastExpYear = TestData.ExcelData.TestDataReader.ReadData(1, "PastExpYear");
-                string FutureExpMonth = TestData.ExcelData.TestDataReader.ReadData(1, "FutureExpMonth");
-                string FutureExpday = TestData.ExcelData.TestDataReader.ReadData(1, "FutureExpDay");
-                string FutureExpYear = TestData.ExcelData.TestDataReader.ReadData(1, "FutureExpYear");
-                string PresentExpYear = TestData.ExcelData.TestDataReader.ReadData(1, "PresentExpYear");
-                string AwardSts = TestData.ExcelData.TestDataReader.ReadData(1, "AwardSts");
-
-                Helper.ElementWait(PageObject_Admin.Admin_Text_UserName(), 60);
-                Logger.WriteDebugMessage("Landed on Admin Login Page");
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
-                Queries.GetMemberwithNonEgiftAward(data, AwardSts);
-                Admin.EnterMemberNumber(data.MemberShipId);
-                Logger.WriteDebugMessage("Email address is entered");
-                Admin.Click_Button_MemberSearch();
-                AddDelay(10000);
-                Logger.WriteDebugMessage("Member Result found on the page");
-                Admin.Click_Icon_View(ProjectName);
-                AddDelay(15000);
-                Logger.WriteDebugMessage("Landed on member Information page");
-                //Click on Member Award
-                Admin.Click_Tab_MemberAwards();
-                Logger.WriteDebugMessage("Admin Award Page Should be Displayed");
-                // Filter the award
-                Admin.MemberAwards_Text_Filter(data.VoucherNumber);
-                Logger.WriteDebugMessage(" Award got filtered");
-                //2. Click on Exp date for any Perk
-                Admin.Click_ExpirationDate();
-                Logger.WriteDebugMessage("Expiration Date' option should be displayed ");
-
-                // Commenting below code as User is not able to update the Previous expiration date
-                //3. Try to select Exp. date after Issue date in Far Future from 'Select Expiration Date' option and click on right symbol icon
-                //Admin.Dropdown_ExpMonth(PastExpMonth);
-                //Admin.Dropdown_ExpDay(PastExpMonth);
-                //Admin.Dropdown_ExpYear(PastExpYear);
-                //Logger.WriteDebugMessage("Try to select Exp. date after Issue date in Far Future from 'Select Expiration Date' option and click on right symbol icon");
-                //Admin.Click_ExpirationDateSubmit();
-                //Helper.ValitionMessage(Constants.PastDateExpirationValidationMessage);
-                //Logger.WriteDebugMessage("Past expiration date should not be selected");
-
-                //4. Select valid Exp. date in future and click on right symbol icon.
-                Admin.Dropdown_ExpMonth(FutureExpMonth);
-                Admin.Dropdown_ExpDay(FutureExpday);
-                Admin.Dropdown_ExpYear(FutureExpYear);
-                Logger.WriteDebugMessage("User should  be allowed to select Exp date in far future ");
-                Admin.Click_ExpirationDateSubmit();
-                Logger.WriteDebugMessage("Exp. date should get saved successfully");
-                Helper.AddDelay(2000);
-                //////5. Verify that user is able to select Issued status for an Perk whose Expiry date is in Future
-                for (int i = 1; i <= 3; i++)
                 {
+                    Users data = new Users();
+                    string PastExpMonth = TestData.ExcelData.TestDataReader.ReadData(1, "PastExpMonth");
+                    string PastExpDay = TestData.ExcelData.TestDataReader.ReadData(1, "PastExpDay");
+                    string PastExpYear = TestData.ExcelData.TestDataReader.ReadData(1, "PastExpYear");
+                    string FutureExpMonth = TestData.ExcelData.TestDataReader.ReadData(1, "FutureExpMonth");
+                    string FutureExpday = TestData.ExcelData.TestDataReader.ReadData(1, "FutureExpDay");
+                    string FutureExpYear = TestData.ExcelData.TestDataReader.ReadData(1, "FutureExpYear");
+                    string PresentExpYear = TestData.ExcelData.TestDataReader.ReadData(1, "PresentExpYear");
+                    string AwardSts = TestData.ExcelData.TestDataReader.ReadData(1, "AwardSts");
 
-                    string AwardStatus = TestData.ExcelData.TestDataReader.ReadData(i, "AwardStatus");
-                    if (AwardStatus.Equals("Expired"))
-                    {
-                        Admin.Click_MemberAwardStatus();
-                        Admin.Dropdown_AdminMemberStatus("Issued");
-                        Admin.Click_ExpirationDateSubmit();
-                    }
-                    Admin.Click_MemberAwardStatus();
-                    Admin.Dropdown_AdminMemberStatus(AwardStatus);
-                    Logger.WriteDebugMessage("User should be able to select Status" + AwardStatus);
+                    Helper.ElementWait(PageObject_Admin.Admin_Text_UserName(), 60);
+                    Logger.WriteDebugMessage("Landed on Admin Login Page");
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
+                    Queries.GetMemberwithNonEgiftAward(data, AwardSts);
+                    Admin.EnterMemberNumber(data.MemberShipId);
+                    Logger.WriteDebugMessage("Member Ship Id is entered");
+                    Admin.Click_Button_MemberSearch();
+                    AddDelay(10000);
+                    Logger.WriteDebugMessage("Member Result found on the page");
+                    Admin.Click_Icon_View(ProjectName);
+                    AddDelay(15000);
+                    Logger.WriteDebugMessage("Landed on member Information page");
+                    //Click on Member Award
+                    Admin.Click_Tab_MemberAwards();
+                    Logger.WriteDebugMessage("Admin Award Page Should be Displayed");
+                    // Filter the award
+                    Admin.MemberAwards_Text_Filter(data.VoucherNumber);
+                    Logger.WriteDebugMessage(" Award got filtered");
+                    //2. Click on Exp date for any Perk
+                    Admin.Click_ExpirationDate();
+                    Logger.WriteDebugMessage("Expiration Date' option should be displayed ");
+
+                    // Commenting below code as User is not able to update the Previous expiration date
+                    //3. Try to select Exp. date after Issue date in Far Future from 'Select Expiration Date' option and click on right symbol icon
+                    //Admin.Dropdown_ExpMonth(PastExpMonth);
+                    //Admin.Dropdown_ExpDay(PastExpMonth);
+                    //Admin.Dropdown_ExpYear(PastExpYear);
+                    //Logger.WriteDebugMessage("Try to select Exp. date after Issue date in Far Future from 'Select Expiration Date' option and click on right symbol icon");
+                    //Admin.Click_ExpirationDateSubmit();
+                    //Helper.ValitionMessage(Constants.PastDateExpirationValidationMessage);
+                    //Logger.WriteDebugMessage("Past expiration date should not be selected");
+
+                    //4. Select valid Exp. date in future and click on right symbol icon.
+                    Admin.Dropdown_ExpMonth(FutureExpMonth);
+                    Admin.Dropdown_ExpDay(FutureExpday);
+                    Admin.Dropdown_ExpYear(FutureExpYear);
+                    Logger.WriteDebugMessage("User should  be allowed to select Exp date in far future ");
                     Admin.Click_ExpirationDateSubmit();
-                    if (AwardStatus.Equals("Issued"))
+                    Logger.WriteDebugMessage("Exp. date should get saved successfully");
+                    Helper.AddDelay(2000);
+                    //////5. Verify that user is able to select Issued status for an Perk whose Expiry date is in Future
+                    for (int i = 1; i <= 3; i++)
                     {
-                        Admin.Click_AdminSendResend();
-                        Logger.WriteDebugMessage("User should be able to select Sent Via Email Status");
-                        Admin.click_ResendAwardEmail_Close();
-                    }
-                }
-                Logger.WriteDebugMessage("Updated Status for Award");
+
+                        string AwardStatus = TestData.ExcelData.TestDataReader.ReadData(i, "AwardStatus");
+                        if (AwardStatus.Equals("Expired"))
+                        {
+                            Admin.Click_MemberAwardStatus();
+                            Helper.AddDelay(2000);
+                            Admin.Dropdown_AdminMemberStatus("Issued");
+                            Admin.Click_ExpirationDateSubmit();
+                        }
+                        Admin.Click_MemberAwardStatus();
+                        if (!(IsElementPresent(By.XPath("//table[@id='perksMember001']/tbody/tr[@class='odd']/td[6]/a"))))
+                        {
+                            Admin.Click_MemberAwardStatus();
+                        }
+                        Admin.Dropdown_AdminMemberStatus(AwardStatus);
+                        Logger.WriteDebugMessage("User should be able to select Status" + AwardStatus);
+                        //ElementClick(Driver.FindElement(By.XPath("(//button[@type='submit' and @class='btn btn-primary btn-sm editable-submit'])[2]")));
+                        Admin.Click_ExpirationDateSubmit();
+                        if (AwardStatus.Equals("Issued"))
+                        {
+                            Admin.Click_AdminSendResend();
+                            Logger.WriteDebugMessage("User should be able to select Sent Via Email Status");
+                            Admin.click_ResendAwardEmail_Close();
+                        }
+            }
+                    Logger.WriteDebugMessage("Updated Status for Award");
             }
         }
         public static void TC_222075()
         {
-            if (TestCaseId == Constants.TC_222075)
+            try
             {
-                //Pre-requisites:
-                Users data = new Users();
-                //Log into Admin.
-                Logger.WriteDebugMessage("Loanded on Admin Login Page.");
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
+                if (TestCaseId == Constants.TC_222075)
+                {
+                    //Pre-requisites:
+                    Users data = new Users();
+                    //Log into Admin.
+                    Logger.WriteDebugMessage("Loanded on Admin Login Page.");
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
 
-                Admin.Click_Menu_Users();
-                Logger.WriteDebugMessage("Landed on the Users page");
+                    Admin.Click_Menu_Users();
+                    Logger.WriteDebugMessage("Landed on the Users page");
 
-                //1.Click on Add users button
-                Admin.Click_Users_Button_AddUsers();
-                Logger.WriteDebugMessage("User setup popup should be displayed");
+                    //1.Click on Add users button
+                    Admin.Click_Users_Button_AddUsers();
+                    Logger.WriteDebugMessage("User setup popup should be displayed");
 
-                //2.Enter valid data on all the fields and click on save
-                string userLogin = TestData.ExcelData.TestDataReader.ReadData(1, "UserUserLogin");
-                string UserFirstname = TestData.ExcelData.TestDataReader.ReadData(1, "UserFirstname");
-                string UserLastname = TestData.ExcelData.TestDataReader.ReadData(1, "UserLastname");
-                string UserTitle = TestData.ExcelData.TestDataReader.ReadData(1, "UserTitle");
-                string UserPermission = TestData.ExcelData.TestDataReader.ReadData(1, "UserPermission");
-                string email = MakeCatchAllUnique(userLogin);
-                Queries.IdentifyHotel(data);
-                string Propertyname = data.PropertyName;
-                Admin.AddUsers(UserFirstname, UserLastname, UserTitle, UserPermission, email, Propertyname);
-                Logger.WriteDebugMessage("All the Details are Entered Succesfully");
-                Admin.Click_Icon_Button_Close();
-                Logger.WriteDebugMessage("User landed on User table display page");
-                Admin.Click_Users_Button_AddUsers();
-                Logger.WriteDebugMessage("Add User Popup is displayed");
-                Admin.AddUsers(UserFirstname, UserLastname, UserTitle, UserPermission, email, Propertyname);
-                Logger.LogTestData(TestPlanId, TestCaseId, "User Login", userLogin);
-                Logger.LogTestData(TestPlanId, TestCaseId, "User First Name", UserFirstname);
-                Logger.LogTestData(TestPlanId, TestCaseId, "User Last Name", UserLastname);
-                Logger.LogTestData(TestPlanId, TestCaseId, "User Title", UserTitle);
-                Logger.LogTestData(TestPlanId, TestCaseId, "User Permission", UserPermission);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Email", email, true);
-                Logger.WriteDebugMessage("All the Details are Entered Succesfully");
+                    //2.Enter valid data on all the fields and click on save
+                    string userLogin = TestData.ExcelData.TestDataReader.ReadData(1, "UserUserLogin");
+                    string UserFirstname = TestData.ExcelData.TestDataReader.ReadData(1, "UserFirstname");
+                    string UserLastname = TestData.ExcelData.TestDataReader.ReadData(1, "UserLastname");
+                    string UserTitle = TestData.ExcelData.TestDataReader.ReadData(1, "UserTitle");
+                    string UserPermission = TestData.ExcelData.TestDataReader.ReadData(1, "UserPermission");
+                    string email = MakeCatchAllUnique(userLogin);
+                    Queries.IdentifyHotel(data);
+                    string Propertyname = data.PropertyName;
+                    Admin.AddUsers(UserFirstname, UserLastname, UserTitle, UserPermission, email, Propertyname);
+                    Logger.WriteDebugMessage("All the Details are Entered Succesfully");
+                    Admin.Click_Icon_Button_Close();
+                    Logger.WriteDebugMessage("User landed on User table display page");
+                    Admin.Click_Users_Button_AddUsers();
+                    Logger.WriteDebugMessage("Add User Popup is displayed");
+                    Admin.AddUsers(UserFirstname, UserLastname, UserTitle, UserPermission, email, Propertyname);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "User Login", userLogin);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "User First Name", UserFirstname);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "User Last Name", UserLastname);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "User Title", UserTitle);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "User Permission", UserPermission);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Email", email, true);
+                    Logger.WriteDebugMessage("All the Details are Entered Succesfully");
 
-                //6 to verify password is auto generated
-                string value = PageObject_Admin.Admin_Users_Text_Password().GetAttribute("disabled");
-                if (value.Equals("true"))
-                    Logger.WriteDebugMessage("Password should be auto generated in the  creation process");
-                else
-                    Assert.Fail("Value is Editable");
+                    //6 to verify password is auto generated
+                    string value = PageObject_Admin.Admin_Users_Text_Password().GetAttribute("disabled");
+                    if (value.Equals("true"))
+                        Logger.WriteDebugMessage("Password should be auto generated in the  creation process");
+                    else
+                        Assert.Fail("Value is Editable");
 
-                //7 click save
-                Admin.Click_Users_Button_Save();
-                Logger.WriteDebugMessage("User added succefully ");
-                Admin.Users_Text_Search(email);
-                VerifyTextOnPageAndHighLight(email);
-                Logger.WriteDebugMessage("User should be created successfully");
+                    //7 click save
+                    Admin.Click_Users_Button_Save();
+                    Logger.WriteDebugMessage("User added succefully ");
+                    Admin.Users_Text_Search(email);
+                    VerifyTextOnPageAndHighLight(email);
+                    Logger.WriteDebugMessage("User should be created successfully");
 
-                //Verify the email in catchall and Update Password.
+                    //Verify the email in catchall and Update Password.
+                    Helper.OpenNewTab();
+                    Hotmail.NavigateToOutLookLogin();
+                    //Email.CatchAll_SearchEmailAndOpenLatestMessage(email); // Searched for the email
+                    Hotmail.SearchEmailAndOpenLatestEmail(email, "Topresults");
+                    Email.ForgotPasswordEmail_Check();
+                    Logger.WriteDebugMessage("Password recovery email should have appeared.");
 
-                Email.LogIntoCatchAll();
-                Email.CatchAll_SearchEmailAndOpenLatestMessage(email); // Searched for the email
-                Email.ForgotPasswordEmail_Check();
-                Logger.WriteDebugMessage("Password recovery email should have appeared.");
+                    //5. Click on the link to change the password
+                    Email.ActivationForgotPassword_CLick(ProjectName);
+                    //Helper.ControlToNewWindow();
+                    //ControlToNewWindow();
+                    //CloseWindow();
+                    ControlToNewWindow();
 
-                //5. Click on the link to change the password
-                Email.ActivationForgotPassword_CLick(ProjectName);
-                //Helper.ControlToNewWindow();
-                //ControlToNewWindow();
-                //CloseWindow();
-                ControlToNewWindow();
+                    Logger.WriteDebugMessage("User should be landed on password reset page");
 
-                Logger.WriteDebugMessage("User should be landed on password reset page");
+                    //6.Enter new password in "New Password" and "Confirm new password" field.
+                    //7.Click "Reset Password.
+                    ForgotPassword.AdminForgotPassword(ProjectDetails.CommonAdminPassword, Constants.ForgotPassword_PassRecoverySuccess);
+                    Logger.WriteDebugMessage("Password Updated succesfully");
 
-                //6.Enter new password in "New Password" and "Confirm new password" field.
-                //7.Click "Reset Password.
-                ForgotPassword.AdminForgotPassword(ProjectDetails.CommonAdminPassword, Constants.ForgotPassword_PassRecoverySuccess);
-                Logger.WriteDebugMessage("Password Updated succesfully");
+                    //Login With Newly Created data
+                    AdminLoginCredentials(email, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Login succesfully");
 
-                //Login With Newly Created data
-                AdminLoginCredentials(email, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Login succesfully");
-
+                }
+            } catch (Exception e)
+            { 
             }
 
         }
@@ -1122,85 +1137,165 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
         public static void TC_222092()
         {
             if (TestCaseId == Constants.TC_222092)
-            {
-                Logger.WriteDebugMessage("User landed on login page");
-
-                //Click on Forgot password link
-                Admin.ForgotPassword_LinkText();
-                if (Driver.Url.Contains("PasswordRecovery"))
                 {
-                    Logger.WriteDebugMessage("Landed on the Password Recovery page.");
-                }
-                else
+                    Logger.WriteDebugMessage("User landed on login page");
+
+                    //Click on Forgot password link
+                    Admin.ForgotPassword_LinkText();
+                    if (Driver.Url.Contains("PasswordRecovery"))
+                    {
+                        Logger.WriteDebugMessage("Landed on the Password Recovery page.");
+                    }
+                    else
+                    {
+                        Assert.Fail("Does not landed on Admin Forgot password page");
+                    }
+
+                    //Enter the wrong Email
+                    string invalidEmail = TestData.ExcelData.TestDataReader.ReadData(1, "InvalidEmail").Trim();
+                    string invalidPassword = TestData.ExcelData.TestDataReader.ReadData(1, "InvalidPassword").Trim();
+                    Admin.UpdateEmail1(invalidEmail);
+                    Logger.WriteDebugMessage("Invalid Email address error message is displayed");
+
+                    //Enter a registered email as click on submit
+                    string adminEmail = TestData.ExcelData.TestDataReader.ReadData(1, "AdminEmail").Trim();
+                    Logger.LogTestData(TestPlanId, TestCaseId, "InValid Email", invalidEmail);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Invalid Pasword", invalidPassword);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Admin Email", adminEmail, true);
+
+                    Admin.UpdateEmail1(adminEmail);
+                    Logger.WriteDebugMessage("Confirmation msg regarding  password reset is sent  to  entered email address ");
+
+                    //Verify the application triggered forget password email and email is available in catchall
+                    //Logged into Hotmail Account
+                    Email.LogIntoCatchAll();
+                    //Searched for the email
+                    //Email.CatchAll_SearchEmailAndOpenLatestMessage(adminEmail);
+                    Time.AddDelay(10000);
+                    Helper.ReloadPage();
+                    Hotmail.CheckOutLook();
+                    //Email.CatchAll_SearchEmailAndOpenLatestMessage(adminEmail);
+                    Hotmail.SearchEmail(adminEmail);                
+                    try
+                    {
+                    if (IsElementPresent(By.XPath("//div[@id='groupHeaderAll results']/parent::div/div[2]")))
+                    {
+                        ElementWait(Driver.FindElement(By.XPath("//div[@id='groupHeaderAll results']/parent::div/div[2]")), 240);
+                        ElementClick(Driver.FindElement(By.XPath("//div[@id='groupHeaderAll results']/parent::div/div[2]")));
+                    }
+                    else
+                    {
+                        ElementClick(Driver.FindElement(By.XPath("//div[@class='S2NDX']")));
+                    }
+                    }
+                    catch (NoSuchElementException)
+                    {
+                        ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][3]")));
+
+                    }
+                    catch (Exception)
+                    {
+                        ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
+
+                    }
+
+                    Email.ForgotPasswordEmail_Check();
+
+                    //click on the link to change the password
+                    Email.ActivationForgotPassword_CLick(ProjectName);
+                    Helper.ControlToNewWindow();
+                    Logger.WriteDebugMessage("user landed on password reset page");
+
+                    //Enter Password and Confirm password 
+                    Random randomNumber = new Random();
+                    string ranumber = String.Concat("Cendyn", randomNumber.Next().ToString(), "$");
+                    if (Driver.Url.Contains("PasswordRecoveryConfirm"))
+                    {
+                        Logger.WriteDebugMessage("Landed on Reset Password Page.");
+                        Admin.ResetPassword(ranumber);
+                        Logger.WriteDebugMessage("Message confirming that password fields are not matching should display");
+                    }
+
+                    //Enter wrong Username and password
+                    string invalidMessage = TestData.ExcelData.TestDataReader.ReadData(1, "InvalidMessage").Trim();
+                    AdminLoginCredentials(invalidEmail, invalidPassword);
+                    VerifyTextOnPageAndHighLight(invalidMessage);
+                    Logger.WriteDebugMessage("Login with invalid credentials");
+
+                    //Enter  correct user name and password
+                    AdminLoginCredentials(adminEmail, ranumber);
+                    Logger.WriteDebugMessage("Login with valid credentials");
+                    string title = Driver.Title;
+                    if (title.Contains("Dashboard"))
+                    {
+                        Logger.WriteDebugMessage("Login Successfully");
+                    }
+                    else
+                    {
+                        Logger.WriteDebugMessage("Invalid login");
+                    }
+            }            
+        }
+        public static void TC_209620()
+        {
+            Logger.WriteDebugMessage("Landed on Admin Login page");
+
+                //Pre-requisites
+                Users data = new Users();
+                string username, invalidpassword, IncorrectPasswordError;
+                // Login to Admin
+                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                Logger.WriteDebugMessage("Login successful with valid data");
+
+                //Navigate to Users tab ans identify the Admin lockout Attempt
+
+                Admin.Click_Menu_Users();
+                Logger.WriteDebugMessage("Landed on Users tab");
+                Admin.Click_Menu_UsersSetting();
+                Logger.WriteDebugMessage("Landed on Users setting tab");
+                string admin_lockout_attempt_errormessage = TestData.ExcelData.TestDataReader.ReadData(1, "AdminLockoutAttempt").Trim();
+                VerifyTextOnPageAndHighLight(admin_lockout_attempt_errormessage);
+                //verify the Admin Lock counter in database
+                Driver.Navigate().GoToUrl(ProjectDetails.CommonAdminURL);
+                Queries.GetAdminLockOutAttempt(data);
+                int lockcounter = Int16.Parse(data.Configurationvalue);
+                Logger.LogTestData(TestPlanId, TestCaseId, "Lock Counter", lockcounter.ToString(), true);
+                //Login to admin with Invalid Password
+                //username = TestData.ExcelData.TestDataReader.ReadData(1, "Username").Trim();
+                Queries.GetActiveAdminMemberEmail(data);
+                invalidpassword = TestData.ExcelData.TestDataReader.ReadData(1, "InvalidPassword").Trim();
+                IncorrectPasswordError = TestData.ExcelData.TestDataReader.ReadData(1, "IncorrectPasswordError").Trim();
+                for (int i = 1; i <= lockcounter; i++)
                 {
-                    Assert.Fail("Does not landed on Admin Forgot password page");
+                    AdminLoginCredentials(data.MemberEmail, invalidpassword);
+                    Logger.WriteDebugMessage("Entered invalid username and password :" + i + "time");
+                    Driver.Navigate().GoToUrl(ProjectDetails.CommonAdminURL);
                 }
 
-                //Enter the wrong Email
-                string invalidEmail = TestData.ExcelData.TestDataReader.ReadData(1, "InvalidEmail").Trim();
-                string invalidPassword = TestData.ExcelData.TestDataReader.ReadData(1, "InvalidPassword").Trim();
-                Admin.UpdateEmail1(invalidEmail);
-                Logger.WriteDebugMessage("Invalid Email address error message is displayed");
-
-                //Enter a registered email as click on submit
-                string adminEmail = TestData.ExcelData.TestDataReader.ReadData(1, "AdminEmail").Trim();
-                Logger.LogTestData(TestPlanId, TestCaseId, "InValid Email", invalidEmail);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Invalid Pasword", invalidPassword);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Admin Email", adminEmail, true);
-
-                Admin.UpdateEmail1(adminEmail);
-                Logger.WriteDebugMessage("Confirmation msg regarding  password reset is sent  to  entered email address ");
-
-                //Verify the application triggered forget password email and email is available in catchall
-                //Logged into Hotmail Account
+                //Navigate to catchAll for Reset your password email
                 Email.LogIntoCatchAll();
-                //Searched for the email
-                //Email.CatchAll_SearchEmailAndOpenLatestMessage(adminEmail);
-                Time.AddDelay(10000);
-                Helper.ReloadPage();
-                Hotmail.CheckOutLook();
-                Hotmail.SearchEmail(adminEmail);
-                try
-                {
-                    ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
-                }
-                catch (NoSuchElementException)
-                {
-                    ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][3]")));
-
-                }
-                catch (Exception)
-                {
-                    ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
-
-                }
-
+                //Email.CatchAll_SearchEmailAndOpenLatestMessage(data.MemberEmail + " password"); // Searched for the email
+                Hotmail.SearchEmailAndOpenLatestEmail(data.MemberEmail + " Password", "Topresults");
+                ControlToNewWindow();
                 Email.ForgotPasswordEmail_Check();
+                Logger.WriteDebugMessage("Password recovery email should have appeared.");
 
-                //click on the link to change the password
+                //Click on the link to change the password
                 Email.ActivationForgotPassword_CLick(ProjectName);
-                Helper.ControlToNewWindow();
-                Logger.WriteDebugMessage("user landed on password reset page");
+                SwitchToSpecificWindow("Reset Password - eLoyalty Admin");
 
-                //Enter Password and Confirm password 
-                Random randomNumber = new Random();
-                string ranumber = String.Concat("Cendyn", randomNumber.Next().ToString(), "$");
-                if (Driver.Url.Contains("PasswordRecoveryConfirm"))
-                {
-                    Logger.WriteDebugMessage("Landed on Reset Password Page.");
-                    Admin.ResetPassword(ranumber);
-                    Logger.WriteDebugMessage("Message confirming that password fields are not matching should display");
-                }
+                Logger.WriteDebugMessage("User should be landed on password reset page");
 
-                //Enter wrong Username and password
-                string invalidMessage = TestData.ExcelData.TestDataReader.ReadData(1, "InvalidMessage").Trim();
-                AdminLoginCredentials(invalidEmail, invalidPassword);
-                VerifyTextOnPageAndHighLight(invalidMessage);
-                Logger.WriteDebugMessage("Login with invalid credentials");
+                //Enter new password in "New Password" and "Confirm new password" field.
+                //Click "Reset Password.
 
-                //Enter  correct user name and password
-                AdminLoginCredentials(adminEmail, ranumber);
-                Logger.WriteDebugMessage("Login with valid credentials");
+                Random ranNum = new Random();
+                string newpassword = String.Concat("Cendyn", ranNum.Next().ToString());
+                ForgotPassword.AdminForgotPassword(newpassword, Constants.ForgotPassword_PassRecoverySuccess);
+                Logger.WriteDebugMessage("Password Updated successfully");
+
+                //Login to admin with correctid and Password
+                AdminLoginCredentials(data.MemberEmail, newpassword);
                 string title = Driver.Title;
                 if (title.Contains("Dashboard"))
                 {
@@ -1208,78 +1303,9 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 }
                 else
                 {
-                    Logger.WriteDebugMessage("Invalid login");
+                    Logger.WriteDebugMessage("Invliad login");
                 }
-            }
-        }
-        public static void TC_209620()
-        {
-            Logger.WriteDebugMessage("Landed on Admin Login page");
-
-            //Pre-requisites
-            Users data = new Users();
-            string username, invalidpassword, IncorrectPasswordError;
-            // Login to Admin
-            AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-            Logger.WriteDebugMessage("Login successful with valid data");
-
-            //Navigate to Users tab ans identify the Admin lockout Attempt
-
-            Admin.Click_Menu_Users();
-            Logger.WriteDebugMessage("Landed on Users tab");
-            Admin.Click_Menu_UsersSetting();
-            Logger.WriteDebugMessage("Landed on Users setting tab");
-            string admin_lockout_attempt_errormessage = TestData.ExcelData.TestDataReader.ReadData(1, "AdminLockoutAttempt").Trim();
-            VerifyTextOnPageAndHighLight(admin_lockout_attempt_errormessage);
-            //verify the Admin Lock counter in database
-            Driver.Navigate().GoToUrl(ProjectDetails.CommonAdminURL);
-            Queries.GetAdminLockOutAttempt(data);
-            int lockcounter = Int16.Parse(data.Configurationvalue);
-            Logger.LogTestData(TestPlanId, TestCaseId, "Lock Counter", lockcounter.ToString(), true);
-            //Login to admin with Invalid Password
-            //username = TestData.ExcelData.TestDataReader.ReadData(1, "Username").Trim();
-            Queries.GetActiveAdminMemberEmail(data);
-            invalidpassword = TestData.ExcelData.TestDataReader.ReadData(1, "InvalidPassword").Trim();
-            IncorrectPasswordError = TestData.ExcelData.TestDataReader.ReadData(1, "IncorrectPasswordError").Trim();
-            for (int i = 1; i <= lockcounter; i++)
-            {
-                AdminLoginCredentials(data.MemberEmail, invalidpassword);
-                Logger.WriteDebugMessage("Entered invalid username and password :" + i + "time");
-                Driver.Navigate().GoToUrl(ProjectDetails.CommonAdminURL);
-            }
-
-            //Navigate to catchAll for Reset your password email
-            Email.LogIntoCatchAll();
-            Email.CatchAll_SearchEmailAndOpenLatestMessage(data.MemberEmail + " password"); // Searched for the email
-            ControlToNewWindow();
-            Email.ForgotPasswordEmail_Check();
-            Logger.WriteDebugMessage("Password recovery email should have appeared.");
-
-            //Click on the link to change the password
-            Email.ActivationForgotPassword_CLick(ProjectName);
-            SwitchToSpecificWindow("Reset Password - eLoyalty Admin");
             
-            Logger.WriteDebugMessage("User should be landed on password reset page");
-
-            //Enter new password in "New Password" and "Confirm new password" field.
-            //Click "Reset Password.
-            
-            Random ranNum = new Random();
-            string newpassword = String.Concat("Cendyn", ranNum.Next().ToString());
-            ForgotPassword.AdminForgotPassword(newpassword, Constants.ForgotPassword_PassRecoverySuccess);
-            Logger.WriteDebugMessage("Password Updated successfully");
-
-            //Login to admin with correctid and Password
-            AdminLoginCredentials(data.MemberEmail, newpassword);
-            string title = Driver.Title;
-            if (title.Contains("Dashboard"))
-            {
-                Logger.WriteDebugMessage("Login Successfully");
-            }
-            else
-            {
-                Logger.WriteDebugMessage("Invliad login");
-            }
         }
 
         public static void TC_218599()
@@ -1435,63 +1461,74 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
 
         public static void TC_189006()
         {
-            if (TestCaseId == Constants.TC_189006)
+            try
             {
-                Users data = new Users();
-                //User has logged in to Guest Loyalty Admin  with valid credentials                                            
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
-                Queries.GetActiveMemberEmail(data);
-                Admin.EnterEmail(data.MemberEmail);
+                if (TestCaseId == Constants.TC_189006)
+                {
+                    Users data = new Users();
+                    //User has logged in to Guest Loyalty Admin  with valid credentials                                            
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
+                    Queries.GetActiveMemberEmail(data);
+                    Admin.EnterEmail(data.MemberEmail);
 
-                //On Member Search page, search for member
-                Admin.Click_Button_MemberSearch();
-                Logger.WriteDebugMessage("Member should get displayed under Member result table");
+                    //On Member Search page, search for member
+                    Admin.Click_Button_MemberSearch();
+                    Logger.WriteDebugMessage("Member should get displayed under Member result table");
 
-                //Click on view icon to see member information page
-                Admin.Click_Icon_View(ProjectName);
-                Logger.WriteDebugMessage("User should get landed on Member Information page");
-                Logger.LogTestData(TestPlanId, TestCaseId, "Active Email", data.MemberEmail, true);
-                //Click on Activation email
-                Admin.SendActivationEmail();
-                Logger.WriteDebugMessage("Activation email sent succesfully");
+                    //Click on view icon to see member information page
+                    Admin.Click_Icon_View(ProjectName);
+                    Logger.WriteDebugMessage("User should get landed on Member Information page");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Active Email", data.MemberEmail, true);
+                    //Click on Activation email
+                    Admin.SendActivationEmail();
+                    Logger.WriteDebugMessage("Activation email sent succesfully");
 
-                //Go to catchall.Check for the Activation email
-                Helper.OpenNewTab();
-                Email.LogIntoCatchAll();
-                Email.CatchAll_SearchEmailAndOpenLatestMessage(data.MemberEmail);
-                Driver.Manage().Window.Maximize();
-                Email.ActivationEmail_Check(ProjectName);
-                ControlToNewWindow();
-                CloseWindow();
+                    //Go to catchall.Check for the Activation email
+                    Helper.OpenNewTab();
+                    Email.LogIntoCatchAll();
+                    Email.CatchAll_SearchEmailAndOpenLatestMessage(data.MemberEmail);
+                    Driver.Manage().Window.Maximize();
+                    Email.ActivationEmail_Check(ProjectName);
+                    ControlToNewWindow();
+                    CloseWindow();
 
-                //Click on Welcome email
-                ControlToPreviousWindow();
-                Admin.SendWelcomeEmail();
-                Logger.WriteDebugMessage("Welcome email sent succesfully");
+                    //Click on Welcome email
+                    ControlToPreviousWindow();
+                    Admin.SendWelcomeEmail();
+                    Logger.WriteDebugMessage("Welcome email sent succesfully");
 
-                //Go to catchall and Check for the Welcome email
-                ControlToNewWindow();
-                Email.CatchAll_SearchEmailAndOpenLatestMessage(data.MemberEmail);
-                Driver.Manage().Window.Maximize();
-                Email.WelcomeEmail_Check(ProjectName);
-                ControlToNewWindow();
-                CloseWindow();
+                    //Go to catchall and Check for the Welcome email
+                    
+                    Helper.OpenNewTab();
+                    Hotmail.NavigateToOutLook();
+                    Hotmail.CheckActiveWindow();
+                    Email.CatchAll_SearchEmailAndOpenLatestMessage(data.MemberEmail);
+                    Driver.Manage().Window.Maximize();
+                    Email.WelcomeEmail_Check(ProjectName);
+                    ControlToNewWindow();
+                    CloseWindow();
 
-                //Create unique Email id
-                Random ranNum = new Random();
-                string uniqueemail = String.Concat("QA", ranNum.Next().ToString(), "@cendyn17.com");
-                //Click on Member login
-                ControlToPreviousWindow();
-                Admin.SendResetLogin(uniqueemail);
-                Logger.WriteDebugMessage("Reset email sent succesfully");
+                    //Create unique Email id
+                    Random ranNum = new Random();
+                    string uniqueemail = String.Concat("QA", ranNum.Next().ToString(), "@cendyn17.com");
+                    //Click on Member login
+                    ControlToPreviousWindow();
+                    Admin.SendResetLogin(uniqueemail);
+                    Logger.WriteDebugMessage("Reset email sent succesfully");
 
-                //Go to catchall.Check for the Password Recovery email
-                ControlToNewWindow();
-                Email.CatchAll_SearchEmailAndOpenLatestMessage(uniqueemail + " Password");
-                Driver.Manage().Window.Maximize();
-                Email.ForgotPasswordEmail_Check();
-                Logger.WriteDebugMessage("The reset email was received.");
+                    //Go to catchall.Check for the Password Recovery email
+                    Helper.OpenNewTab();
+                    Hotmail.NavigateToOutLook();
+                    Hotmail.CheckActiveWindow();
+                    Hotmail.SearchEmailAndOpenLatestEmail(uniqueemail + " Password", "Topresults");                   
+                    Driver.Manage().Window.Maximize();
+                    Email.ForgotPasswordEmail_Check();
+                    Logger.WriteDebugMessage("The reset email was received.");
+
+                }
+            }catch(Exception e)
+            {
 
             }
         }
@@ -1663,258 +1700,258 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
         public static void TC_194749()
         {
             if (TestCaseId == Constants.TC_194749)
-            {
-                //Pre-requisites:
-                Users activeUser = new Users();
-                Users inactiveUser = new Users();
-                string Home_Tab, Home_MemberSearch_SubTab, Home_MemberInformation_SubTab, MemberBatchUpload_Tab, BatchRegistration_SubTab, BatchUpdate_SubTab,
-                    LoyaltyRule_Tab, LoyaltyAward_Tab, LoyaltyeGifts_Tabs, LoyaltyeSetup_Tab, LoyaltyEmailSetup_Tab, ManualMerge_Tab, SearchMember_SubTab, MemberMerge_SubTab,
-                    Users_Tab, Redeem_Tab, ContentManagment_Tab, LoyaltyMapping_Tab, LoyaltyRules_SubTabs, MemberInformation_SubTabs, LoyaltyeGifts_SubTabs, LoyaltyeSetup_SubTabs,
-                    Users_SubTabs, LoyaltyMapping_SubTab, Roles_SubTab, UserLog_SubTabs;
-                int delay = 7000;
-
-                //Retrieved data
-                Home_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "Home_Tab");
-                Home_MemberSearch_SubTab = TestData.ExcelData.TestDataReader.ReadData(1, "Home_MemberSearch_SubTab");
-                Home_MemberInformation_SubTab = TestData.ExcelData.TestDataReader.ReadData(1, "Home_MemberInformation_SubTab");
-                MemberBatchUpload_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "MemberBatchUpload_Tab");
-                BatchRegistration_SubTab = TestData.ExcelData.TestDataReader.ReadData(1, "BatchRegistration_SubTab");
-                BatchUpdate_SubTab = TestData.ExcelData.TestDataReader.ReadData(1, "BatchUpdate_SubTab");
-                LoyaltyRule_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "LoyaltyRule_Tab");
-                LoyaltyAward_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "LoyaltyAward_Tab");
-                LoyaltyeGifts_Tabs = TestData.ExcelData.TestDataReader.ReadData(1, "LoyaltyeGifts_Tabs");
-                LoyaltyeSetup_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "LoyaltyeSetup_Tab");
-                LoyaltyEmailSetup_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "LoyaltyEmailSetup_Tab");
-                ManualMerge_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "ManualMerge_Tab");
-                SearchMember_SubTab = TestData.ExcelData.TestDataReader.ReadData(1, "SearchMember_SubTab");
-                MemberMerge_SubTab = TestData.ExcelData.TestDataReader.ReadData(1, "MemberMerge_SubTab");
-                Users_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "Users_Tab");
-                Redeem_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "Redeem_Tab");
-                ContentManagment_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "ContentManagment_Tab");
-                LoyaltyMapping_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "LoyaltyMapping_Tab");
-                Roles_SubTab = TestData.ExcelData.TestDataReader.ReadData(1, "Roles_SubTab");
-                UserLog_SubTabs = TestData.ExcelData.TestDataReader.ReadData(1, "UserLog_SubTab");
-
-                //Login with Valid Admin Credentials
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully");
-
-                //Verify Home click and validate
-                Admin.Click_Menu_Home();
-                VerifyTextOnPageAndHighLight(Home_Tab);
-                Logger.WriteDebugMessage(Home_Tab + " Element Found on Page");
-                RemoveHighLight(Home_Tab);
-
-                // Verify Member search click and validate
-                Admin.Click_MemberSearchTab();
-                VerifyTextOnPageAndHighLight(Home_MemberSearch_SubTab);
-                Logger.WriteDebugMessage(Home_MemberSearch_SubTab + " Element Found on Page");
-                RemoveHighLight(Home_MemberSearch_SubTab);
-
-                // Verify Member Information tab click and validate
-                Queries.GetActiveMemberEmail(activeUser);
-                Admin.EnterEmail(activeUser.MemberEmail);
-                Logger.WriteDebugMessage("Email address is entered");
-                Admin.Click_Button_MemberSearch();
-                AddDelay(delay);
-                Logger.WriteDebugMessage("Member Result found on the page");
-                Admin.Click_Icon_View(ProjectName);
-                AddDelay(delay);
-                Admin.Admin_MemberInformation_Tab();
-                VerifyTextOnPageAndHighLight(Home_MemberInformation_SubTab);
-                Logger.WriteDebugMessage(Home_MemberInformation_SubTab + " Element Found on Page");
-                RemoveHighLight(Home_MemberInformation_SubTab);
-
-                // Verify Sub-tabs on member Information page
-                for (int i = 1; i <= 6; i++)
                 {
-                    MemberInformation_SubTabs = TestData.ExcelData.TestDataReader.ReadData(i, "MemberInformation_SubTabs");
-                    Admin.Admin_Subtab_CommonMethod(MemberInformation_SubTabs);
+                    //Pre-requisites:
+                    Users activeUser = new Users();
+                    Users inactiveUser = new Users();
+                    string Home_Tab, Home_MemberSearch_SubTab, Home_MemberInformation_SubTab, MemberBatchUpload_Tab, BatchRegistration_SubTab, BatchUpdate_SubTab,
+                        LoyaltyRule_Tab, LoyaltyAward_Tab, LoyaltyeGifts_Tabs, LoyaltyeSetup_Tab, LoyaltyEmailSetup_Tab, ManualMerge_Tab, SearchMember_SubTab, MemberMerge_SubTab,
+                        Users_Tab, Redeem_Tab, ContentManagment_Tab, LoyaltyMapping_Tab, LoyaltyRules_SubTabs, MemberInformation_SubTabs, LoyaltyeGifts_SubTabs, LoyaltyeSetup_SubTabs,
+                        Users_SubTabs, LoyaltyMapping_SubTab, Roles_SubTab, UserLog_SubTabs;
+                    int delay = 15000;
+
+                    //Retrieved data
+                    Home_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "Home_Tab");
+                    Home_MemberSearch_SubTab = TestData.ExcelData.TestDataReader.ReadData(1, "Home_MemberSearch_SubTab");
+                    Home_MemberInformation_SubTab = TestData.ExcelData.TestDataReader.ReadData(1, "Home_MemberInformation_SubTab");
+                    MemberBatchUpload_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "MemberBatchUpload_Tab");
+                    BatchRegistration_SubTab = TestData.ExcelData.TestDataReader.ReadData(1, "BatchRegistration_SubTab");
+                    BatchUpdate_SubTab = TestData.ExcelData.TestDataReader.ReadData(1, "BatchUpdate_SubTab");
+                    LoyaltyRule_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "LoyaltyRule_Tab");
+                    LoyaltyAward_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "LoyaltyAward_Tab");
+                    LoyaltyeGifts_Tabs = TestData.ExcelData.TestDataReader.ReadData(1, "LoyaltyeGifts_Tabs");
+                    LoyaltyeSetup_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "LoyaltyeSetup_Tab");
+                    LoyaltyEmailSetup_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "LoyaltyEmailSetup_Tab");
+                    ManualMerge_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "ManualMerge_Tab");
+                    SearchMember_SubTab = TestData.ExcelData.TestDataReader.ReadData(1, "SearchMember_SubTab");
+                    MemberMerge_SubTab = TestData.ExcelData.TestDataReader.ReadData(1, "MemberMerge_SubTab");
+                    Users_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "Users_Tab");
+                    Redeem_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "Redeem_Tab");
+                    ContentManagment_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "ContentManagment_Tab");
+                    LoyaltyMapping_Tab = TestData.ExcelData.TestDataReader.ReadData(1, "LoyaltyMapping_Tab");
+                    Roles_SubTab = TestData.ExcelData.TestDataReader.ReadData(1, "Roles_SubTab");
+                    UserLog_SubTabs = TestData.ExcelData.TestDataReader.ReadData(1, "UserLog_SubTab");
+
+                    //Login with Valid Admin Credentials
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully");
+
+                    //Verify Home click and validate
+                    Admin.Click_Menu_Home();
+                    VerifyTextOnPageAndHighLight(Home_Tab);
+                    Logger.WriteDebugMessage(Home_Tab + " Element Found on Page");
+                    RemoveHighLight(Home_Tab);
+
+                    // Verify Member search click and validate
+                    Admin.Click_MemberSearchTab();
+                    VerifyTextOnPageAndHighLight(Home_MemberSearch_SubTab);
+                    Logger.WriteDebugMessage(Home_MemberSearch_SubTab + " Element Found on Page");
+                    RemoveHighLight(Home_MemberSearch_SubTab);
+
+                    // Verify Member Information tab click and validate
+                    Queries.GetActiveMemberEmail(activeUser);
+                    Admin.EnterEmail(activeUser.MemberEmail);
+                    Logger.WriteDebugMessage("Email address is entered");
+                    Admin.Click_Button_MemberSearch();
                     AddDelay(delay);
-                    ScrollDown();
-                    VerifyTextOnPageAndHighLight(MemberInformation_SubTabs);
-                    Logger.WriteDebugMessage(MemberInformation_SubTabs + " Element Found on Page");
-                    RemoveHighLight(MemberInformation_SubTabs);
-
-                }
-
-                //Verify Member Batch Update click and validate
-                Admin.MemberBatchUpload_Tab();
-                VerifyTextOnPageAndHighLight(MemberBatchUpload_Tab);
-                Logger.WriteDebugMessage(MemberBatchUpload_Tab + " Element Found on Page");
-                RemoveHighLight(MemberBatchUpload_Tab);
-
-                // Verify Member Batch Registration click and validate
-                Admin.Admin_MemberBatchUpload_BtachRegistration_SubTab();
-                VerifyTextOnPageAndHighLight(BatchRegistration_SubTab);
-                Logger.WriteDebugMessage(BatchRegistration_SubTab + " Element Found on Page");
-                RemoveHighLight(BatchRegistration_SubTab);
-
-                // Verify Member Batch Update click and validate
-                Admin.Click_MemberBatchUpdate();
-                VerifyTextOnPageAndHighLight(BatchUpdate_SubTab);
-                Logger.WriteDebugMessage(BatchUpdate_SubTab + " Element Found on Page");
-                RemoveHighLight(BatchUpdate_SubTab);
-
-                //Verify Loyalty Rules clicked and validate
-                Admin.Click_Menu_LoyaltyRules();
-                AddDelay(delay);
-                VerifyTextOnPageAndHighLight(LoyaltyRule_Tab);
-                Logger.WriteDebugMessage(LoyaltyRule_Tab + " Element Found on Page");
-                RemoveHighLight(LoyaltyRule_Tab);
-
-                //Verify sub-tabs on Loyalty Rule Page
-                for (int i = 1; i < 4; i++)
-                {
-                    LoyaltyRules_SubTabs = TestData.ExcelData.TestDataReader.ReadData(i, "LoyaltyRules_SubTabs");
-                    Admin.Admin_Subtab_CommonMethod(LoyaltyRules_SubTabs);
+                    Logger.WriteDebugMessage("Member Result found on the page");
+                    Admin.Click_Icon_View(ProjectName);
                     AddDelay(delay);
-                    VerifyTextOnPageAndHighLight(LoyaltyRules_SubTabs);
-                    Logger.WriteDebugMessage(LoyaltyRules_SubTabs + " Element Found on Page");
-                    RemoveHighLight(LoyaltyRules_SubTabs);
-                }
+                    Admin.Admin_MemberInformation_Tab();
+                    VerifyTextOnPageAndHighLight(Home_MemberInformation_SubTab);
+                    Logger.WriteDebugMessage(Home_MemberInformation_SubTab + " Element Found on Page");
+                    RemoveHighLight(Home_MemberInformation_SubTab);
 
-                //Verify Loyalty award click and validate
-                Admin.Click_Menu_LoyaltyAwards();
-                AddDelay(delay);
-                VerifyTextOnPageAndHighLight(LoyaltyAward_Tab);
-                Logger.WriteDebugMessage(LoyaltyAward_Tab + " Element Found on Page");
-                RemoveHighLight(LoyaltyAward_Tab);
-
-                //Verify Loyalty eGifts click and validate
-                Admin.Click_LoyaltyeGift();
-                AddDelay(delay);
-                VerifyTextOnPageAndHighLight(LoyaltyeGifts_Tabs);
-                Logger.WriteDebugMessage(LoyaltyeGifts_Tabs + " Element Found on Page");
-                RemoveHighLight(LoyaltyeGifts_Tabs);
-
-                //Verify sub-tabs on Loyalty EGift Page
-                for (int i = 1; i <= 3; i++)
-                {
-                    LoyaltyeGifts_SubTabs = TestData.ExcelData.TestDataReader.ReadData(i, "LoyaltyeGifts_SubTabs");
-                    Admin.Admin_Subtab_CommonMethod(LoyaltyeGifts_SubTabs);
-                    AddDelay(delay);
-                    VerifyTextOnPageAndHighLight(LoyaltyeGifts_SubTabs);
-                    Logger.WriteDebugMessage(LoyaltyeGifts_SubTabs + " Element Found on Page");
-                    RemoveHighLight(LoyaltyeGifts_SubTabs);
-                }
-
-                //Verify Loyalty Setup click and validate
-                Admin.Click_Menu_LoyaltySetup();
-                AddDelay(delay);
-                VerifyTextOnPageAndHighLight(LoyaltyeSetup_Tab);
-                Logger.WriteDebugMessage(LoyaltyeSetup_Tab + " Element Found on Page");
-                RemoveHighLight(LoyaltyeSetup_Tab);
-
-                //Verify sub-tabs on Loyalty Setup Page
-                for (int i = 1; i <= 10; i++)
-                {
-                    LoyaltyeSetup_SubTabs = TestData.ExcelData.TestDataReader.ReadData(i, "LoyaltyeSetup_SubTabs");
-                    Admin.Admin_Subtab_CommonMethod(LoyaltyeSetup_SubTabs);
-                    AddDelay(delay);
-                    VerifyTextOnPageAndHighLight(LoyaltyeSetup_SubTabs);
-                    Logger.WriteDebugMessage(LoyaltyeSetup_SubTabs + " Element Found on Page");
-                    RemoveHighLight(LoyaltyeSetup_SubTabs);
-                }
-
-                //Verify Email Setup click and validate
-                Admin.Click_Menu_EmailSetuUp();
-                AddDelay(delay);
-                VerifyTextOnPageAndHighLight(LoyaltyEmailSetup_Tab);
-                Logger.WriteDebugMessage(LoyaltyEmailSetup_Tab + " Element Found on Page");
-                RemoveHighLight(LoyaltyEmailSetup_Tab);
-
-                //Verify Manual Merge click and validate
-                Admin.Click_Menu_ManualMerge();
-                AddDelay(delay);
-                VerifyTextOnPageAndHighLight(ManualMerge_Tab);
-                Logger.WriteDebugMessage(ManualMerge_Tab + " Element Found on Page");
-                RemoveHighLight(ManualMerge_Tab);
-
-                Queries.GetDataPerStatus_DCustomer("Active", 1, activeUser);
-                Queries.GetDataPerStatus_DCustomer("Inactive", 1, inactiveUser, activeUser.eMail);
-                Admin.Click_ManualMerge_Button_SearchMember();
-                VerifyTextOnPageAndHighLight(SearchMember_SubTab);
-                Admin.ManualMerge_Text_Email(activeUser.eMail);
-                Admin.Click_ManualMerge_Button_SearchMember();
-                Admin.Click_ManualMerge_Icon_Select1();
-                Logger.WriteDebugMessage("First member got Selected");
-                Admin.Click_ManualMerge_Button_ClearSearch();
-                Admin.ManualMerge_Text_Email(inactiveUser.eMail);
-                Admin.Click_ManualMerge_Button_SearchMember();
-                Admin.Click_ManualMerge_Icon_Select1();
-                Logger.WriteDebugMessage("Second member got Selected");
-                Admin.Admin_ManualMerge_MemberMerge_SubTab();
-                VerifyTextOnPageAndHighLight(MemberMerge_SubTab);
-                Logger.WriteDebugMessage(MemberMerge_SubTab + " Element Found on Page");
-                RemoveHighLight(MemberMerge_SubTab);
-
-                //Verify Users click and validate
-                Admin.Click_Menu_Users();
-                AddDelay(delay);
-                VerifyTextOnPageAndHighLight(Users_Tab);
-                Logger.WriteDebugMessage(Users_Tab + " Element Found on Page");
-                RemoveHighLight(Users_Tab);
-
-                //Verify sub-tabs on Users Page
-                for (int i = 1; i <= 4; i++)
-                {
-                    Users_SubTabs = TestData.ExcelData.TestDataReader.ReadData(i, "Users_SubTabs");
-                    Admin.Admin_Subtab_CommonMethod(Users_SubTabs);
-                    AddDelay(delay);
-                    if (Users_SubTabs.Equals("Roles"))
+                    // Verify Sub-tabs on member Information page
+                    for (int i = 1; i <= 6; i++)
                     {
-                        VerifyTextOnPageAndHighLight(Roles_SubTab);
-                        Logger.WriteDebugMessage(Roles_SubTab + " Element Found on Page");
-                        RemoveHighLight(Roles_SubTab);
+                        MemberInformation_SubTabs = TestData.ExcelData.TestDataReader.ReadData(i, "MemberInformation_SubTabs");
+                        Admin.Admin_Subtab_CommonMethod(MemberInformation_SubTabs);
+                        AddDelay(delay);
+                        ScrollDown();
+                        VerifyTextOnPageAndHighLight(MemberInformation_SubTabs);
+                        Logger.WriteDebugMessage(MemberInformation_SubTabs + " Element Found on Page");
+                        RemoveHighLight(MemberInformation_SubTabs);
+
                     }
-                    else if (Users_SubTabs.Equals("User Log"))
-                    {
-                        VerifyTextOnPageAndHighLight(UserLog_SubTabs);
-                        Logger.WriteDebugMessage(UserLog_SubTabs + " Element Found on Page");
-                        RemoveHighLight(UserLog_SubTabs);
-                    }
-                    else
-                    {
-                        VerifyTextOnPageAndHighLight(Users_SubTabs);
-                        Logger.WriteDebugMessage(Users_SubTabs + " Element Found on Page");
-                        RemoveHighLight(Users_SubTabs);
-                    }
-                }
 
-                //Verify Redeem click and validate
-                Admin.Click_Menu_Redeem();
-                AddDelay(delay);
-                VerifyTextOnPageAndHighLight(Redeem_Tab);
-                Logger.WriteDebugMessage(Redeem_Tab + " Element Found on Page");
-                RemoveHighLight(Redeem_Tab);
+                    //Verify Member Batch Update click and validate
+                    Admin.MemberBatchUpload_Tab();
+                    VerifyTextOnPageAndHighLight(MemberBatchUpload_Tab);
+                    Logger.WriteDebugMessage(MemberBatchUpload_Tab + " Element Found on Page");
+                    RemoveHighLight(MemberBatchUpload_Tab);
 
-                //Verify Content Management click and validate
-                Admin.Admin_Menu_ContentManagment_Tab();
-                AddDelay(delay);
-                VerifyTextOnPageAndHighLight(ContentManagment_Tab);
-                Logger.WriteDebugMessage(ContentManagment_Tab + " Element Found on Page");
-                RemoveHighLight(ContentManagment_Tab);
+                    // Verify Member Batch Registration click and validate
+                    Admin.Admin_MemberBatchUpload_BtachRegistration_SubTab();
+                    VerifyTextOnPageAndHighLight(BatchRegistration_SubTab);
+                    Logger.WriteDebugMessage(BatchRegistration_SubTab + " Element Found on Page");
+                    RemoveHighLight(BatchRegistration_SubTab);
 
-                //Verify loyalty Mapping click and validate
-                Admin.Admin_Menu_LoyaltyMapping_Tab();
-                AddDelay(18000);
-                Helper.WaitTillPageLoadbyXpath("//*[contains(text(),'" + LoyaltyMapping_Tab + "')]", 7);
-                VerifyTextOnPageAndHighLight(LoyaltyMapping_Tab);
-                Logger.WriteDebugMessage(LoyaltyMapping_Tab + " Element Found on Page");
-                RemoveHighLight(LoyaltyMapping_Tab);
+                    // Verify Member Batch Update click and validate
+                    Admin.Click_MemberBatchUpdate();
+                    VerifyTextOnPageAndHighLight(BatchUpdate_SubTab);
+                    Logger.WriteDebugMessage(BatchUpdate_SubTab + " Element Found on Page");
+                    RemoveHighLight(BatchUpdate_SubTab);
 
-                // Verify Sub-tabs on Loyalty Mapping Page
-                for (int i = 1; i <= 4; i++)
-                {
-                    LoyaltyMapping_SubTab = TestData.ExcelData.TestDataReader.ReadData(i, "LoyaltyMapping_SubTab");
-                    Admin.Admin_Subtab_CommonMethod(LoyaltyMapping_SubTab);
+                    //Verify Loyalty Rules clicked and validate
+                    Admin.Click_Menu_LoyaltyRules();
                     AddDelay(delay);
-                    VerifyTextOnPageAndHighLight(LoyaltyMapping_SubTab);
-                    Logger.WriteDebugMessage(LoyaltyMapping_SubTab + " Element Found on Page");
-                    RemoveHighLight(LoyaltyMapping_SubTab);
+                    VerifyTextOnPageAndHighLight(LoyaltyRule_Tab);
+                    Logger.WriteDebugMessage(LoyaltyRule_Tab + " Element Found on Page");
+                    RemoveHighLight(LoyaltyRule_Tab);
+
+                    //Verify sub-tabs on Loyalty Rule Page
+                    for (int i = 1; i < 4; i++)
+                    {
+                        LoyaltyRules_SubTabs = TestData.ExcelData.TestDataReader.ReadData(i, "LoyaltyRules_SubTabs");
+                        Admin.Admin_Subtab_CommonMethod(LoyaltyRules_SubTabs);
+                        AddDelay(delay);
+                        VerifyTextOnPageAndHighLight(LoyaltyRules_SubTabs);
+                        Logger.WriteDebugMessage(LoyaltyRules_SubTabs + " Element Found on Page");
+                        RemoveHighLight(LoyaltyRules_SubTabs);
+                    }
+
+                    //Verify Loyalty award click and validate
+                    Admin.Click_Menu_LoyaltyAwards();
+                    AddDelay(delay);
+                    VerifyTextOnPageAndHighLight(LoyaltyAward_Tab);
+                    Logger.WriteDebugMessage(LoyaltyAward_Tab + " Element Found on Page");
+                    RemoveHighLight(LoyaltyAward_Tab);
+
+                    //Verify Loyalty eGifts click and validate
+                    Admin.Click_LoyaltyeGift();
+                    AddDelay(delay);
+                    VerifyTextOnPageAndHighLight(LoyaltyeGifts_Tabs);
+                    Logger.WriteDebugMessage(LoyaltyeGifts_Tabs + " Element Found on Page");
+                    RemoveHighLight(LoyaltyeGifts_Tabs);
+
+                    //Verify sub-tabs on Loyalty EGift Page
+                    for (int i = 1; i <= 3; i++)
+                    {
+                        LoyaltyeGifts_SubTabs = TestData.ExcelData.TestDataReader.ReadData(i, "LoyaltyeGifts_SubTabs");
+                        Admin.Admin_Subtab_CommonMethod(LoyaltyeGifts_SubTabs);
+                        AddDelay(delay);
+                        VerifyTextOnPageAndHighLight(LoyaltyeGifts_SubTabs);
+                        Logger.WriteDebugMessage(LoyaltyeGifts_SubTabs + " Element Found on Page");
+                        RemoveHighLight(LoyaltyeGifts_SubTabs);
+                    }
+
+                    //Verify Loyalty Setup click and validate
+                    Admin.Click_Menu_LoyaltySetup();
+                    AddDelay(delay);
+                    VerifyTextOnPageAndHighLight(LoyaltyeSetup_Tab);
+                    Logger.WriteDebugMessage(LoyaltyeSetup_Tab + " Element Found on Page");
+                    RemoveHighLight(LoyaltyeSetup_Tab);
+
+                    //Verify sub-tabs on Loyalty Setup Page
+                    for (int i = 1; i <= 10; i++)
+                    {
+                        LoyaltyeSetup_SubTabs = TestData.ExcelData.TestDataReader.ReadData(i, "LoyaltyeSetup_SubTabs");
+                        Admin.Admin_Subtab_CommonMethod(LoyaltyeSetup_SubTabs);
+                        AddDelay(delay);
+                        VerifyTextOnPageAndHighLight(LoyaltyeSetup_SubTabs);
+                        Logger.WriteDebugMessage(LoyaltyeSetup_SubTabs + " Element Found on Page");
+                        RemoveHighLight(LoyaltyeSetup_SubTabs);
+                    }
+
+                    //Verify Email Setup click and validate
+                    Admin.Click_Menu_EmailSetuUp();
+                    AddDelay(delay);
+                    VerifyTextOnPageAndHighLight(LoyaltyEmailSetup_Tab);
+                    Logger.WriteDebugMessage(LoyaltyEmailSetup_Tab + " Element Found on Page");
+                    RemoveHighLight(LoyaltyEmailSetup_Tab);
+
+                    //Verify Manual Merge click and validate
+                    Admin.Click_Menu_ManualMerge();
+                    AddDelay(delay);
+                    VerifyTextOnPageAndHighLight(ManualMerge_Tab);
+                    Logger.WriteDebugMessage(ManualMerge_Tab + " Element Found on Page");
+                    RemoveHighLight(ManualMerge_Tab);
+
+                    Queries.GetDataPerStatus_DCustomer("Active", 1, activeUser);
+                    Queries.GetDataPerStatus_DCustomer("Inactive", 1, inactiveUser, activeUser.eMail);
+                    Admin.Click_ManualMerge_Button_SearchMember();
+                    VerifyTextOnPageAndHighLight(SearchMember_SubTab);
+                    Admin.ManualMerge_Text_Email(activeUser.eMail);
+                    Admin.Click_ManualMerge_Button_SearchMember();
+                    Admin.Click_ManualMerge_Icon_Select1();
+                    Logger.WriteDebugMessage("First member got Selected");
+                    Admin.Click_ManualMerge_Button_ClearSearch();
+                    Admin.ManualMerge_Text_Email(inactiveUser.eMail);
+                    Admin.Click_ManualMerge_Button_SearchMember();
+                    Admin.Click_ManualMerge_Icon_Select1();
+                    Logger.WriteDebugMessage("Second member got Selected");
+                    Admin.Admin_ManualMerge_MemberMerge_SubTab();
+                    VerifyTextOnPageAndHighLight(MemberMerge_SubTab);
+                    Logger.WriteDebugMessage(MemberMerge_SubTab + " Element Found on Page");
+                    RemoveHighLight(MemberMerge_SubTab);
+
+                    //Verify Users click and validate
+                    Admin.Click_Menu_Users();
+                    AddDelay(delay);
+                    VerifyTextOnPageAndHighLight(Users_Tab);
+                    Logger.WriteDebugMessage(Users_Tab + " Element Found on Page");
+                    RemoveHighLight(Users_Tab);
+
+                    //Verify sub-tabs on Users Page
+                    for (int i = 1; i <= 4; i++)
+                    {
+                        Users_SubTabs = TestData.ExcelData.TestDataReader.ReadData(i, "Users_SubTabs");
+                        Admin.Admin_Subtab_CommonMethod(Users_SubTabs);
+                        AddDelay(delay);
+                        if (Users_SubTabs.Equals("Roles"))
+                        {
+                            VerifyTextOnPageAndHighLight(Roles_SubTab);
+                            Logger.WriteDebugMessage(Roles_SubTab + " Element Found on Page");
+                            RemoveHighLight(Roles_SubTab);
+                        }
+                        else if (Users_SubTabs.Equals("User Log"))
+                        {
+                            VerifyTextOnPageAndHighLight(UserLog_SubTabs);
+                            Logger.WriteDebugMessage(UserLog_SubTabs + " Element Found on Page");
+                            RemoveHighLight(UserLog_SubTabs);
+                        }
+                        else
+                        {
+                            VerifyTextOnPageAndHighLight(Users_SubTabs);
+                            Logger.WriteDebugMessage(Users_SubTabs + " Element Found on Page");
+                            RemoveHighLight(Users_SubTabs);
+                        }
+                    }
+
+                    //Verify Redeem click and validate
+                    Admin.Click_Menu_Redeem();
+                    AddDelay(delay);
+                    VerifyTextOnPageAndHighLight(Redeem_Tab);
+                    Logger.WriteDebugMessage(Redeem_Tab + " Element Found on Page");
+                    RemoveHighLight(Redeem_Tab);
+
+                    //Verify Content Management click and validate
+                    Admin.Admin_Menu_ContentManagment_Tab();
+                    AddDelay(delay);
+                    VerifyTextOnPageAndHighLight(ContentManagment_Tab);
+                    Logger.WriteDebugMessage(ContentManagment_Tab + " Element Found on Page");
+                    RemoveHighLight(ContentManagment_Tab);
+
+                    //Verify loyalty Mapping click and validate
+                    Admin.Admin_Menu_LoyaltyMapping_Tab();
+                    AddDelay(18000);
+                    Helper.WaitTillPageLoadbyXpath("//*[contains(text(),'" + LoyaltyMapping_Tab + "')]", 7);
+                    VerifyTextOnPageAndHighLight(LoyaltyMapping_Tab);
+                    Logger.WriteDebugMessage(LoyaltyMapping_Tab + " Element Found on Page");
+                    RemoveHighLight(LoyaltyMapping_Tab);
+
+                    // Verify Sub-tabs on Loyalty Mapping Page
+                    for (int i = 1; i <= 4; i++)
+                    {
+                        LoyaltyMapping_SubTab = TestData.ExcelData.TestDataReader.ReadData(i, "LoyaltyMapping_SubTab");
+                        Admin.Admin_Subtab_CommonMethod(LoyaltyMapping_SubTab);
+                        AddDelay(delay);
+                        VerifyTextOnPageAndHighLight(LoyaltyMapping_SubTab);
+                        Logger.WriteDebugMessage(LoyaltyMapping_SubTab + " Element Found on Page");
+                        RemoveHighLight(LoyaltyMapping_SubTab);
+                    }
                 }
-            }
         }
         public static void TC_242619()
         {
@@ -2085,7 +2122,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 startDate = DateTime.Now.ToString("MM/dd/yyyy");
                 endDate = DateTime.Now.AddDays(1).ToString("MM/dd/yyyy");
                 awardName = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "AwardName"), randomNumber.ToString());
-                code = Helper.GetRandomAlphaNumericString(3);
+                code = Helper.GetRandomAlphaNumericString(3,0);
                 awardType = TestData.ExcelData.TestDataReader.ReadData(1, "AwardType");
                 pointValue = TestData.ExcelData.TestDataReader.ReadData(1, "PointValue");
                 memberLevelText = TestData.ExcelData.TestDataReader.ReadData(1, "MemberLevelText");
@@ -2432,7 +2469,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 memberLevel2 = data.MembershipLevel;
                 Logger.LogTestData(TestPlanId, TestCaseId, "Second Member Level", memberLevel2);
                 Admin.SelectLevel(memberLevel2);
-                ElementWait(PageObject_Admin.Click_Member_Level_Email_No_Button(), 60);
+                ElementWait(PageObject_Admin.Click_Member_Level_Email_No_Button(), 120);
                 VerifyTextOnPageAndHighLight(textMessage);
                 VerifyTextOnPageAndHighLight(yesText);
                 VerifyTextOnPageAndHighLight(noText);
@@ -2469,7 +2506,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 //ElementWait(PageObject_Admin.Admin_Button_ViewMember(ProjectName), 36);
                 Logger.WriteDebugMessage("Member Result found on the page");
                 Admin.Click_Icon_View(ProjectName);
-                ElementWait(PageObject_Admin.Value_Information_MemberLevel(), 60);
+                ElementWait(PageObject_Admin.Value_Information_MemberLevel(), 80);
                 Logger.WriteDebugMessage("Landed on member information Page");
 
 
@@ -2501,7 +2538,9 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
 
                 //Login to catchall, Search for Member level upgrade email 
                 Helper.ControlToNewWindow();
-                Email.CatchAll_SearchEmailAndOpenLatestMessage(data.MemberEmail + " " + "Upgrade");
+                Hotmail.OutLookSearchEmail(data.MemberEmail + " " + "Upgrade");
+                Hotmail.OpenLatestEmail();
+                //Email.CatchAll_SearchEmailAndOpenLatestMessage(data.MemberEmail + " " + "Upgrade");
                 Logger.WriteDebugMessage("Catchall mailbox should be opened");
 
                 //Search for Client admin notification
@@ -2518,6 +2557,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Logger.WriteDebugMessage("Membership level get updated successfully");
                 Logger.LogTestData(TestPlanId, TestCaseId, "Third Member Level", memberLevel3, true);
             }
+        
         }
 
         public static void TC_237408()
@@ -2587,212 +2627,222 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
         public static void TC_226431()
         {
             if (TestCaseId == Constants.TC_226431)
-            {
-                //Pre-requisite
-                string memberLevel3, memberLevel2, memberLevel1, validationMessage;
-                Users data = new Users();
-
-                //Assign Values to variables
-
-                validationMessage = TestData.ExcelData.TestDataReader.ReadData(1, "ValidationMessage");
-
-                // Navigate to Admin and Search for User
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Queries.GetMemberLevel(data, 3);
-                memberLevel3 = data.MembershipLevel;
-                Logger.LogTestData(TestPlanId, TestCaseId, "Third Member Level", memberLevel3);
-                if (memberLevel3.Equals("Elite Club Member"))
                 {
-                    memberLevel3 = "ELITE";
-                }
-                Queries.GetDataAsPerMemberLevel(memberLevel3, data);
-                Admin.EnterEmail(data.MemberEmail);
-                Logger.WriteDebugMessage("User entered in email text box");
-                Admin.Click_Button_MemberSearch();
-                //ElementWait(PageObject_Admin.Admin_Button_ViewMember(ProjectName), 180);
-                Logger.WriteDebugMessage("Member Result found on the page");
-                Admin.Click_Icon_View(ProjectName);
-                ElementWait(PageObject_Admin.Value_Information_MemberLevel(), 60);
-                Logger.WriteDebugMessage("Landed on member information Page");
+                    //Pre-requisite
+                    string memberLevel3, memberLevel2, memberLevel1, validationMessage;
+                    Users data = new Users();
 
-                // Click on Member Level, downgrade member level
-                Queries.GetMemberLevel(data, 2);
-                memberLevel2 = data.MembershipLevel;
-                Admin.SelectLevel(memberLevel2);
-                AddDelay(15000);
+                    //Assign Values to variables
+
+                    validationMessage = TestData.ExcelData.TestDataReader.ReadData(1, "ValidationMessage");
+
+                    // Navigate to Admin and Search for User
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Queries.GetMemberLevel(data, 3);
+                    memberLevel3 = data.MembershipLevel;
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Third Member Level", memberLevel3);
+                    if (memberLevel3.Equals("Elite Club Member"))
+                    {
+                        memberLevel3 = "ELITE";
+                    }
+                    Queries.GetDataAsPerMemberLevel(memberLevel3, data);
+                    Admin.EnterEmail(data.MemberEmail);
+                    Logger.WriteDebugMessage("User entered in email text box");
+                    Admin.Click_Button_MemberSearch();
+                    //ElementWait(PageObject_Admin.Admin_Button_ViewMember(ProjectName), 180);
+                    Logger.WriteDebugMessage("Member Result found on the page");
+                    Admin.Click_Icon_View(ProjectName);
+                    ElementWait(PageObject_Admin.Value_Information_MemberLevel(), 60);
+                    Logger.WriteDebugMessage("Landed on member information Page");
+
+                    // Click on Member Level, downgrade member level
+                    Queries.GetMemberLevel(data, 2);
+                    memberLevel2 = data.MembershipLevel;
+                    Admin.SelectLevel(memberLevel2);
+                    AddDelay(15000);
 
 
-                //Verify the Send Member Level Downgrade Overlay is getting Displayed or not
-                Admin.VerifyMemberLevelEmailOverlay();
+                    //Verify the Send Member Level Downgrade Overlay is getting Displayed or not
+                    Admin.VerifyMemberLevelEmailOverlay();
 
-                //Login to catchall, Search for Member level Notification and downgraded email 
-                Helper.OpenNewTab();
-                Email.LogIntoCatchAll();
-                Email.CatchAll_SearchEmailAndOpenLatestMessage(data.MemberEmail + " " + "Notification");
-                VerifyTextOnPageAndHighLight(data.MemberEmail);
-                Logger.WriteDebugMessage("Catchall mailbox should be opened");
-                Helper.CloseCurrentTab();
-                Helper.ControlToNewWindow();
-                Hotmail.OutLookSearchEmail(data.MemberEmail + " " + "Downgrade");
-                VerifyTextOnPage(validationMessage);
-                Logger.WriteDebugMessage("Email should not be triggered");
+                    //Login to catchall, Search for Member level Notification and downgraded email 
+                    Helper.OpenNewTab();
+                    Email.LogIntoCatchAll();
+                    //Email.CatchAll_SearchEmailAndOpenLatestMessage(data.MemberEmail + " " + "Notification");
+                    //Helper.ControlToNewWindow();
+                    Hotmail.OutLookSearchEmail(data.MemberEmail + " " + "Notification");
+                    Hotmail.OpenLatestEmailSingleClick();
+                    VerifyTextOnPageAndHighLight(data.MemberEmail);
+                    Logger.WriteDebugMessage("Catchall mailbox should be opened");
+                    //Helper.ControlToNewWindow();
+                    Hotmail.OutLookSearchEmail(data.MemberEmail + " " + "Downgrade");
+                    VerifyTextOnPage(validationMessage);
+                    Logger.WriteDebugMessage("Email should not be triggered");
+                    
+                    // Click on Member Level, downgrade member level
+                    Helper.ControlToPreviousWindow();
+                    Queries.GetMemberLevel(data, 1);
+                    memberLevel1 = data.MembershipLevel;
+                    Admin.SelectLevel(memberLevel1);
+                    AddDelay(15000);
 
-                // Click on Member Level, downgrade member level
-                Helper.ControlToPreviousWindow();
-                Queries.GetMemberLevel(data, 1);
-                memberLevel1 = data.MembershipLevel;
-                Admin.SelectLevel(memberLevel1);
-                AddDelay(15000);
+                    //Verify the Send Member Level Downgrade Overlay is getting Displayed or not
+                    Admin.VerifyMemberLevelEmailOverlay();
 
-                //Verify the Send Member Level Downgrade Overlay is getting Displayed or not
-                Admin.VerifyMemberLevelEmailOverlay();
-
-                //Navigate to catchall, Search for Member level Notification and downgraded email 
-                Helper.ControlToNewWindow();
-                Email.CatchAll_SearchEmailAndOpenLatestMessage(data.MemberEmail + " " + "Notification");
-                VerifyTextOnPageAndHighLight(data.MemberEmail);
-                Logger.WriteDebugMessage("Catchall mailbox should be opened");
-                Helper.CloseCurrentTab();
-                Helper.ControlToNewWindow();
-                Hotmail.OutLookSearchEmail(data.MemberEmail + " " + "Downgrade");
-                VerifyTextOnPage(validationMessage);
-                Logger.WriteDebugMessage("Email should not be triggered");
-                Logger.LogTestData(TestPlanId, TestCaseId, "Second Member Level", memberLevel2);
-                Logger.LogTestData(TestPlanId, TestCaseId, "First Member Level1", memberLevel1);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Member Email", data.MemberEmail, true);
+                    //Navigate to catchall, Search for Member level Notification and downgraded email 
+                    Helper.ControlToNewWindow();
+                    //Email.CatchAll_SearchEmailAndOpenLatestMessage(data.MemberEmail + " " + "Notification");
+                    Hotmail.OutLookSearchEmail(data.MemberEmail + " " + "Notification");
+                    Hotmail.OpenLatestEmailSingleClick();
+                    VerifyTextOnPageAndHighLight(data.MemberEmail);
+                    Logger.WriteDebugMessage("Catchall mailbox should be opened");
+                    //Helper.CloseCurrentTab();
+                    //Helper.ControlToNewWindow();
+                    Hotmail.OutLookSearchEmail(data.MemberEmail + " " + "Downgrade");
+                    VerifyTextOnPage(validationMessage);
+                    Logger.WriteDebugMessage("Email should not be triggered");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Second Member Level", memberLevel2);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "First Member Level1", memberLevel1);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Member Email", data.MemberEmail, true);
 
             }
         }
         public static void TC_272803()
         {
-            if (TestCaseId == Constants.TC_272803)
+            try
             {
-                //Pre-requisite
-                string lableValue,bookEndDate ,joinEnddate, minRevVal, minRoomRevVal, minFnBRevVal, minOtherRevVal, minNightVal, minStayVal, maxStaysVal, marCodesVal, rateCodeVal, hotelsVal, roomtypesVal, sobVal, channelCodesVal, bookdateVal, joinDateVal, marcomboVal,ratecomboVal, bookdateValidation, joindateValidation;
-                Users data = new Users();
-
-                //Assign Values to variables
-                minRevVal = TestData.ExcelData.TestDataReader.ReadData(1, "MinRevenueVal");
-                minRoomRevVal = TestData.ExcelData.TestDataReader.ReadData(1, "MinRoomRevenueVal");
-                minFnBRevVal = TestData.ExcelData.TestDataReader.ReadData(1, "MinFnBRevenueVal");
-                minOtherRevVal = TestData.ExcelData.TestDataReader.ReadData(1, "MinOtherRevenueVal");
-                minNightVal = TestData.ExcelData.TestDataReader.ReadData(1, "MinNightVal");
-                minStayVal = TestData.ExcelData.TestDataReader.ReadData(1, "MinStayVal");
-                maxStaysVal = TestData.ExcelData.TestDataReader.ReadData(1, "MaxStayVal");
-                marCodesVal = TestData.ExcelData.TestDataReader.ReadData(1, "MarketCodeVal");
-                rateCodeVal = TestData.ExcelData.TestDataReader.ReadData(1, "RateCodeVal");
-                hotelsVal = TestData.ExcelData.TestDataReader.ReadData(1, "HotelsVal");
-                roomtypesVal = TestData.ExcelData.TestDataReader.ReadData(1, "RoomTypesVal");
-                sobVal = TestData.ExcelData.TestDataReader.ReadData(1, "SourceOfBusinessVal");
-                channelCodesVal = TestData.ExcelData.TestDataReader.ReadData(1, "ChannelCodesVal");
-                bookdateVal = DateTime.Now.ToString("MM/dd/yyyy");
-                bookEndDate = DateTime.Now.AddDays(2).ToString("MM/dd/yyyy");
-                joinDateVal = DateTime.Now.ToString("MM/dd/yyyy");
-                joinEnddate = DateTime.Now.AddDays(2).ToString("MM/dd/yyyy");
-                marcomboVal = TestData.ExcelData.TestDataReader.ReadData(1, "MarketComboVal");
-                ratecomboVal = TestData.ExcelData.TestDataReader.ReadData(1, "RateComboVal");
-                bookdateValidation = TestData.ExcelData.TestDataReader.ReadData(1, "BookingDateValidation");
-                joindateValidation = TestData.ExcelData.TestDataReader.ReadData(1, "JoinDateValidation");
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
-
-
-                //Navigate to Loyalty Rule ->Award Earning Rule - >Rule Restriction tab
-                Admin.Click_Menu_LoyaltyRules();
-                Logger.WriteDebugMessage("Landed on the Loyalty Rules page");
-                Admin.Click_LoyaltyRules_AwardEarningRules();
-                Logger.WriteDebugMessage("Navigated to Award Earning Rule Tab");
-                Admin.Click_AwardEarningRules_AddRuleButton();
-                Logger.WriteDebugMessage("Landed on Add Rule Overlay of Award Earning Rule");
-                Admin.Click_LoyaltyRules_PointsEarningRule_RuleRestriction();
-                Logger.WriteDebugMessage("Landed on Rule Restriction Tab");
-
-                //Verify the End date < start date functinality.
-                Admin.Select_Rule_Restrict_BookingDate(bookEndDate);
-                Admin.Select_Rule_Restrict_BookingEndDate(bookdateVal);
-                Admin.Select_Rule_Restrict_JoinDate(joinEnddate);
-                Admin.Select_Rule_Restrict_JoinEndDate(joinDateVal);
-                Logger.WriteDebugMessage("Booking date and Join date entered");
-                Admin.Click_Rule_Restrict_SaveButton();
-                VerifyTextOnPageAndHighLight(bookdateValidation);
-                VerifyTextOnPageAndHighLight(joindateValidation);
-                Logger.WriteDebugMessage("Validation message for End date less than join date is displayed");
-
-                //Verify the Labels present on the Rule Restriction tab
-                for (int i = 1; i <= 15; i++)
+                if (TestCaseId == Constants.TC_272803)
                 {
-                    lableValue = TestData.ExcelData.TestDataReader.ReadData(i, "LabelValue");
-                    VerifyTextOnPageAndHighLight(lableValue);
+                    //Pre-requisite
+                    string lableValue, bookEndDate, joinEnddate, minRevVal, minRoomRevVal, minFnBRevVal, minOtherRevVal, minNightVal, minStayVal, maxStaysVal, marCodesVal, rateCodeVal, hotelsVal, roomtypesVal, sobVal, channelCodesVal, bookdateVal, joinDateVal, marcomboVal, ratecomboVal, bookdateValidation, joindateValidation;
+                    Users data = new Users();
+
+                    //Assign Values to variables
+                    minRevVal = TestData.ExcelData.TestDataReader.ReadData(1, "MinRevenueVal");
+                    minRoomRevVal = TestData.ExcelData.TestDataReader.ReadData(1, "MinRoomRevenueVal");
+                    minFnBRevVal = TestData.ExcelData.TestDataReader.ReadData(1, "MinFnBRevenueVal");
+                    minOtherRevVal = TestData.ExcelData.TestDataReader.ReadData(1, "MinOtherRevenueVal");
+                    minNightVal = TestData.ExcelData.TestDataReader.ReadData(1, "MinNightVal");
+                    minStayVal = TestData.ExcelData.TestDataReader.ReadData(1, "MinStayVal");
+                    maxStaysVal = TestData.ExcelData.TestDataReader.ReadData(1, "MaxStayVal");
+                    marCodesVal = TestData.ExcelData.TestDataReader.ReadData(1, "MarketCodeVal");
+                    rateCodeVal = TestData.ExcelData.TestDataReader.ReadData(1, "RateCodeVal");
+                    hotelsVal = TestData.ExcelData.TestDataReader.ReadData(1, "HotelsVal");
+                    roomtypesVal = TestData.ExcelData.TestDataReader.ReadData(1, "RoomTypesVal");
+                    sobVal = TestData.ExcelData.TestDataReader.ReadData(1, "SourceOfBusinessVal");
+                    channelCodesVal = TestData.ExcelData.TestDataReader.ReadData(1, "ChannelCodesVal");
+                    bookdateVal = DateTime.Now.ToString("MM/dd/yyyy");
+                    bookEndDate = DateTime.Now.AddDays(2).ToString("MM/dd/yyyy");
+                    joinDateVal = DateTime.Now.ToString("MM/dd/yyyy");
+                    joinEnddate = DateTime.Now.AddDays(2).ToString("MM/dd/yyyy");
+                    marcomboVal = TestData.ExcelData.TestDataReader.ReadData(1, "MarketComboVal");
+                    ratecomboVal = TestData.ExcelData.TestDataReader.ReadData(1, "RateComboVal");
+                    bookdateValidation = TestData.ExcelData.TestDataReader.ReadData(1, "BookingDateValidation");
+                    joindateValidation = TestData.ExcelData.TestDataReader.ReadData(1, "JoinDateValidation");
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
+
+
+                    //Navigate to Loyalty Rule ->Award Earning Rule - >Rule Restriction tab
+                    Admin.Click_Menu_LoyaltyRules();
+                    Logger.WriteDebugMessage("Landed on the Loyalty Rules page");
+                    Admin.Click_LoyaltyRules_AwardEarningRules();
+                    Logger.WriteDebugMessage("Navigated to Award Earning Rule Tab");
+                    Admin.Click_AwardEarningRules_AddRuleButton();
+                    Logger.WriteDebugMessage("Landed on Add Rule Overlay of Award Earning Rule");
+                    Admin.Click_LoyaltyRules_PointsEarningRule_RuleRestriction();
+                    Logger.WriteDebugMessage("Landed on Rule Restriction Tab");
+
+                    //Verify the End date < start date functinality.
+                    Admin.Select_Rule_Restrict_BookingDate(bookEndDate);
+                    Admin.Select_Rule_Restrict_BookingEndDate(bookdateVal);
+                    Admin.Select_Rule_Restrict_JoinDate(joinEnddate);
+                    Admin.Select_Rule_Restrict_JoinEndDate(joinDateVal);
+                    Logger.WriteDebugMessage("Booking date and Join date entered");
+                    Admin.Click_Rule_Restrict_SaveButton();
+                    VerifyTextOnPageAndHighLight(bookdateValidation);
+                    VerifyTextOnPageAndHighLight(joindateValidation);
+                    Logger.WriteDebugMessage("Validation message for End date less than join date is displayed");
+
+                    //Verify the Labels present on the Rule Restriction tab
+                    for (int i = 1; i <= 15; i++)
+                    {
+                        lableValue = TestData.ExcelData.TestDataReader.ReadData(i, "LabelValue");
+                        VerifyTextOnPageAndHighLight(lableValue);
+                    }
+                    Logger.WriteDebugMessage("All the Fields lables are present on Rule Restriction Page");
+
+                    //Select Values on the fields
+                    Admin.AddRuleRestriction(minRevVal, minRoomRevVal, minFnBRevVal, minOtherRevVal, minNightVal, minStayVal, maxStaysVal, marCodesVal, rateCodeVal, hotelsVal, roomtypesVal, sobVal, channelCodesVal, bookdateVal, bookEndDate, joinDateVal, joinEnddate, marcomboVal, ratecomboVal);
+                    Logger.WriteDebugMessage("Entered all details succesfully on Rule Restriction tab");
+
+                    if (PageObject_Admin.Enter_Rule_Restrict_MinRevenue().Text != "0" && PageObject_Admin.Enter_Rule_Restrict_MinRoomRevenue().Text != "0.00" && PageObject_Admin.Enter_Rule_Restrict_MinFandBRevenue().Text != "0.00" && PageObject_Admin.Enter_Rule_Restrict_MinotherRevenue().Text != "0.00" && PageObject_Admin.Enter_Rule_Restrict_MinNight().Text != "0" && PageObject_Admin.Enter_Rule_Restrict_MinStay().Text != "0" && PageObject_Admin.Enter_Rule_Restrict_MaxStay().Text != "0" && PageObject_Admin.Click_Rule_Restrict_MarketCode().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_RateCode().GetAttribute("title") != "Nothing Selected" &&
+                      PageObject_Admin.Click_Rule_Restrict_Hotel().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_RoomType().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_SourceOfBusiness().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_ChannelCode().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_MarketCombo().GetAttribute("title") != "Nothing Selected" &&
+                      PageObject_Admin.Click_Rule_Restrict_RateCombo().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_SaveButton().Displayed && PageObject_Admin.Click_Rule_Restrict_CancelButton().Displayed)
+                    {
+                        Logger.WriteDebugMessage("All the Fileds are having Values and Save and Cancel Button is present on the Rule Restriction Tab");
+                        Admin.Click_Rule_Restrict_CancelButton();
+                        Logger.WriteDebugMessage("Clicked on cancel button on Rule Restriction tab");
+                    }
+                    else
+                        Assert.Fail("All the Fileds are not having Values");
+
+                    //Navigate to Loyalty Rule ->Point Earning Rule - >Rule Restriction tab
+                    Admin.Click_Menu_LoyaltyRules();
+                    Logger.WriteDebugMessage("Landed on the Loyalty Rules page");
+                    Admin.Click_SubTab_PointsEarningRules();
+                    Logger.WriteDebugMessage("Navigated to Points Earning Rule Tab");
+                    Admin.Click_PointsEarningRules_Button_AddRule();
+                    Logger.WriteDebugMessage("Landed on Add Rule Overlay of Points Earning Rule");
+                    Admin.Click_LoyaltyRules_PointsEarningRule_RuleRestriction();
+                    Logger.WriteDebugMessage("Landed on Rule Restriction Tab");
+
+
+                    //Verify the Labels present on the Rule Restriction tab
+                    for (int i = 1; i <= 15; i++)
+                    {
+                        lableValue = TestData.ExcelData.TestDataReader.ReadData(i, "LabelValue");
+                        VerifyTextOnPageAndHighLight(lableValue);
+                    }
+                    Logger.WriteDebugMessage("All the Fields lables are present on Rule Restriction Page");
+
+                    //Select Values on the fields
+                    Admin.AddRuleRestriction(minRevVal, minRoomRevVal, minFnBRevVal, minOtherRevVal, minNightVal, minStayVal, maxStaysVal, marCodesVal, rateCodeVal, hotelsVal, roomtypesVal, sobVal, channelCodesVal, bookdateVal, bookEndDate, joinDateVal, joinEnddate, marcomboVal, ratecomboVal);
+                    Logger.WriteDebugMessage("Entered all details succesfully on Rule Restriction tab");
+
+                    if (PageObject_Admin.Enter_Rule_Restrict_MinRevenue().Text != "0" && PageObject_Admin.Enter_Rule_Restrict_MinRoomRevenue().Text != "0.00" && PageObject_Admin.Enter_Rule_Restrict_MinFandBRevenue().Text != "0.00" && PageObject_Admin.Enter_Rule_Restrict_MinotherRevenue().Text != "0.00" && PageObject_Admin.Enter_Rule_Restrict_MinNight().Text != "0" && PageObject_Admin.Enter_Rule_Restrict_MinStay().Text != "0" && PageObject_Admin.Enter_Rule_Restrict_MaxStay().Text != "0" && PageObject_Admin.Click_Rule_Restrict_MarketCode().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_RateCode().GetAttribute("title") != "Nothing Selected" &&
+                      PageObject_Admin.Click_Rule_Restrict_Hotel().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_RoomType().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_SourceOfBusiness().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_ChannelCode().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_MarketCombo().GetAttribute("title") != "Nothing Selected" &&
+                      PageObject_Admin.Click_Rule_Restrict_RateCombo().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_SaveButton().Displayed && PageObject_Admin.Click_Rule_Restrict_CancelButton().Displayed)
+                    {
+                        Logger.WriteDebugMessage("All the Fileds are having Values and Save and Cancel Button is present on the Rule Restriction Tab");
+                    }
+                    else
+                        Assert.Fail("All the Fileds are not having Values");
+
+                    // Log test data into log file
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Minimum Revenue", minRevVal);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Minimum Room Revenue", minRoomRevVal);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Minimum F&B Revenue", minFnBRevVal);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Minimum Other Revenue", minOtherRevVal);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Minimum Night", minNightVal);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Minimum Stay", minStayVal);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Maximum Stay", maxStaysVal);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Market Codes", marCodesVal);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Rate Codes", rateCodeVal);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Hotel", hotelsVal);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Room Type", roomtypesVal);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Source of Business", sobVal);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Channel Codes", channelCodesVal);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Booking date", bookdateVal);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Booking End date", bookEndDate);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Join Date", joinDateVal);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Join End Date", joinEnddate);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Market Combo", marcomboVal);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Rate Combo", ratecomboVal, true);
+
                 }
-                Logger.WriteDebugMessage("All the Fields lables are present on Rule Restriction Page");
-
-                //Select Values on the fields
-                Admin.AddRuleRestriction(minRevVal, minRoomRevVal, minFnBRevVal, minOtherRevVal, minNightVal, minStayVal, maxStaysVal, marCodesVal, rateCodeVal, hotelsVal, roomtypesVal, sobVal, channelCodesVal, bookdateVal, bookEndDate, joinDateVal, joinEnddate, marcomboVal, ratecomboVal);
-                Logger.WriteDebugMessage("Entered all details succesfully on Rule Restriction tab");
-
-                if (PageObject_Admin.Enter_Rule_Restrict_MinRevenue().Text != "0" && PageObject_Admin.Enter_Rule_Restrict_MinRoomRevenue().Text != "0.00" && PageObject_Admin.Enter_Rule_Restrict_MinFandBRevenue().Text != "0.00" && PageObject_Admin.Enter_Rule_Restrict_MinotherRevenue().Text != "0.00" && PageObject_Admin.Enter_Rule_Restrict_MinNight().Text != "0" && PageObject_Admin.Enter_Rule_Restrict_MinStay().Text != "0" && PageObject_Admin.Enter_Rule_Restrict_MaxStay().Text != "0" && PageObject_Admin.Click_Rule_Restrict_MarketCode().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_RateCode().GetAttribute("title") != "Nothing Selected" &&
-                  PageObject_Admin.Click_Rule_Restrict_Hotel().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_RoomType().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_SourceOfBusiness().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_ChannelCode().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_MarketCombo().GetAttribute("title") != "Nothing Selected" &&
-                  PageObject_Admin.Click_Rule_Restrict_RateCombo().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_SaveButton().Displayed && PageObject_Admin.Click_Rule_Restrict_CancelButton().Displayed)
-                {
-                    Logger.WriteDebugMessage("All the Fileds are having Values and Save and Cancel Button is present on the Rule Restriction Tab");
-                    Admin.Click_Rule_Restrict_CancelButton();
-                    Logger.WriteDebugMessage("Clicked on cancel button on Rule Restriction tab");
-                }
-                else
-                    Assert.Fail("All the Fileds are not having Values");
-
-                //Navigate to Loyalty Rule ->Point Earning Rule - >Rule Restriction tab
-                Admin.Click_Menu_LoyaltyRules();
-                Logger.WriteDebugMessage("Landed on the Loyalty Rules page");
-                Admin.Click_SubTab_PointsEarningRules();
-                Logger.WriteDebugMessage("Navigated to Points Earning Rule Tab");
-                Admin.Click_PointsEarningRules_Button_AddRule();
-                Logger.WriteDebugMessage("Landed on Add Rule Overlay of Points Earning Rule");
-                Admin.Click_LoyaltyRules_PointsEarningRule_RuleRestriction();
-                Logger.WriteDebugMessage("Landed on Rule Restriction Tab");
-
-                
-                //Verify the Labels present on the Rule Restriction tab
-                for (int i = 1; i <= 15; i++)
-                {
-                    lableValue = TestData.ExcelData.TestDataReader.ReadData(i, "LabelValue");
-                    VerifyTextOnPageAndHighLight(lableValue);
-                }
-                Logger.WriteDebugMessage("All the Fields lables are present on Rule Restriction Page");
-
-                //Select Values on the fields
-                Admin.AddRuleRestriction(minRevVal, minRoomRevVal, minFnBRevVal, minOtherRevVal, minNightVal, minStayVal, maxStaysVal, marCodesVal, rateCodeVal, hotelsVal, roomtypesVal, sobVal, channelCodesVal, bookdateVal, bookEndDate, joinDateVal, joinEnddate, marcomboVal, ratecomboVal);
-                Logger.WriteDebugMessage("Entered all details succesfully on Rule Restriction tab");
-
-                if (PageObject_Admin.Enter_Rule_Restrict_MinRevenue().Text != "0" && PageObject_Admin.Enter_Rule_Restrict_MinRoomRevenue().Text != "0.00" && PageObject_Admin.Enter_Rule_Restrict_MinFandBRevenue().Text != "0.00" && PageObject_Admin.Enter_Rule_Restrict_MinotherRevenue().Text != "0.00" && PageObject_Admin.Enter_Rule_Restrict_MinNight().Text != "0" && PageObject_Admin.Enter_Rule_Restrict_MinStay().Text != "0" && PageObject_Admin.Enter_Rule_Restrict_MaxStay().Text != "0" && PageObject_Admin.Click_Rule_Restrict_MarketCode().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_RateCode().GetAttribute("title") != "Nothing Selected" &&
-                  PageObject_Admin.Click_Rule_Restrict_Hotel().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_RoomType().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_SourceOfBusiness().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_ChannelCode().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_MarketCombo().GetAttribute("title") != "Nothing Selected" &&
-                  PageObject_Admin.Click_Rule_Restrict_RateCombo().GetAttribute("title") != "Nothing Selected" && PageObject_Admin.Click_Rule_Restrict_SaveButton().Displayed && PageObject_Admin.Click_Rule_Restrict_CancelButton().Displayed)
-                {
-                    Logger.WriteDebugMessage("All the Fileds are having Values and Save and Cancel Button is present on the Rule Restriction Tab");
-                }
-                else
-                    Assert.Fail("All the Fileds are not having Values");
-
-                // Log test data into log file
-                Logger.LogTestData(TestPlanId, TestCaseId, "Minimum Revenue", minRevVal);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Minimum Room Revenue", minRoomRevVal);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Minimum F&B Revenue", minFnBRevVal);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Minimum Other Revenue", minOtherRevVal);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Minimum Night", minNightVal);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Minimum Stay", minStayVal);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Maximum Stay", maxStaysVal);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Market Codes", marCodesVal);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Rate Codes", rateCodeVal);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Hotel", hotelsVal);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Room Type", roomtypesVal);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Source of Business", sobVal);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Channel Codes", channelCodesVal);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Booking date", bookdateVal);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Booking End date", bookEndDate);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Join Date", joinDateVal);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Join End Date", joinEnddate);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Market Combo", marcomboVal);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Rate Combo", ratecomboVal, true);
+            }catch(Exception e)
+            {
 
             }
         }

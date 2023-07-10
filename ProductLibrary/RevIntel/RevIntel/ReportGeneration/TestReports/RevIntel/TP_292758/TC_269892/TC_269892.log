@@ -1,0 +1,134 @@
+2023-05-23 09:58:14,131 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-23 09:58:14,298 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-23 09:58:14,320 ::INFO ::[Logger]::  is used for Testing
+2023-05-23 09:58:14,336 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.goqacendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goQAcendyn.com/SSOLanding.aspx
+2023-05-23 09:58:14,336 ::INFO ::[Logger]:: Execution started at:-May-23-2023 09-58-14-AM
+2023-05-23 09:58:14,336 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-23 09:58:14,336 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-23 09:58:14,351 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_269892         XXXXXXXXXXXXXXXX
+2023-05-23 09:58:14,351 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-23 09:58:14,351 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-23 10:00:18,344 ::INFO ::[Logger]:: Test Case : Validate Room Type analysis Current year data
+2023-05-23 10:00:20,155 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-05-23 10:00:20,158 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-05-23 10:00:28,343 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-05-23 10:00:29,949 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2023-05-23 10:00:29,949 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
+2023-05-23 10:00:40,862 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2023-05-23 10:00:40,862 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
+2023-05-23 10:00:44,047 ::DEBUG::[Logger]:: 4) Client displayed
+2023-05-23 10:01:02,062 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
+2023-05-23 10:01:02,065 ::DEBUG::[Logger]:: 5) D Rock selected
+2023-05-23 10:01:14,301 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
+2023-05-23 10:01:17,301 ::DEBUG::[Logger]:: 7) Market menu drop down displayed
+2023-05-23 10:01:24,570 ::INFO ::[Logger]:: Clicked the Market_Report element on the Navigation page.
+2023-05-23 10:01:34,578 ::DEBUG::[Logger]:: 8) User Landed on Market Report Page
+2023-05-23 10:01:41,801 ::INFO ::[Logger]:: Switching into the iFrame.
+2023-05-23 10:01:48,010 ::INFO ::[Logger]:: Clicked the Click_Business_Unit_Dropdown element on the ReportParameter page.
+2023-05-23 10:01:53,134 ::INFO ::[Logger]:: Clicked the Select_Business_Unit_Value element on the ReportParameter page.
+2023-05-23 10:01:53,136 ::DEBUG::[Logger]:: 9) Hotelis selected as Business Unit
+2023-05-23 10:02:00,400 ::INFO ::[Logger]:: Clicked the Click_Currency_Dropdown element on the ReportParameter page.
+2023-05-23 10:02:05,498 ::INFO ::[Logger]:: Clicked the Select_Currency_Value element on the ReportParameter page.
+2023-05-23 10:02:05,498 ::DEBUG::[Logger]:: 10) USDis selected as Currency
+2023-05-23 10:02:09,454 ::INFO ::[Logger]:: Inserted text in the Text_StartDate element on the ReportParameter page.
+2023-05-23 10:02:11,076 ::INFO ::[Logger]:: Inserted text in the Text_EndDate element on the ReportParameter page.
+2023-05-23 10:02:11,076 ::DEBUG::[Logger]:: 11) Enter start date as = 6/1/2020
+2023-05-23 10:02:13,224 ::DEBUG::[Logger]:: 12) Enter enddate as = 6/30/2020
+2023-05-23 10:02:20,487 ::INFO ::[Logger]:: Clicked the Click_RoomTypeAnalysis_ComparisonYear_DDM element on the ReportParameter page.
+2023-05-23 10:02:20,490 ::DEBUG::[Logger]:: 13) Comparison Year DDM clicked
+2023-05-23 10:02:27,774 ::INFO ::[Logger]:: Clicked the Select_RoomTypeAnalysis_ComparisonYear1 element on the ReportParameter page.
+2023-05-23 10:02:27,775 ::DEBUG::[Logger]:: 14) Comparison year selected as 1
+2023-05-23 10:02:43,908 ::INFO ::[Logger]:: Clicked the Click_View_Analysis element on the ReportParameter page.
+2023-05-23 10:03:33,926 ::DEBUG::[Logger]:: 15) Report generated
+2023-05-23 10:03:40,280 ::INFO ::[Logger]:: Clicked the Export_Menu element on the ReportParameter page.
+2023-05-23 10:03:40,282 ::DEBUG::[Logger]:: 16) Export drop down menu displayed
+2023-05-23 10:03:46,542 ::INFO ::[Logger]:: Clicked the Excel element on the ReportParameter page.
+2023-05-23 10:04:16,548 ::DEBUG::[Logger]:: 17) Report exported in excel format
+2023-05-23 10:04:18,712 ::INFO ::[Logger]:: Switching out of the iFrame.
+2023-05-23 10:04:19,735 ::DEBUG::[Logger]:: 18) The template downloaded in the csv file format.
+2023-05-23 10:04:21,882 ::INFO ::[Logger]:: File Size in Bytes: 22
+2023-05-23 10:04:38,160 ::DEBUG::[Logger]:: 19) Market menu drop down displayed
+2023-05-23 10:04:45,561 ::INFO ::[Logger]:: Clicked the Market_Report element on the Navigation page.
+2023-05-23 10:04:55,571 ::DEBUG::[Logger]:: 20) User Landed on Market Report Page
+2023-05-23 10:05:02,796 ::INFO ::[Logger]:: Switching into the iFrame.
+2023-05-23 10:05:09,017 ::INFO ::[Logger]:: Clicked the Click_Business_Unit_Dropdown element on the ReportParameter page.
+2023-05-23 10:05:14,168 ::INFO ::[Logger]:: Clicked the Select_Business_Unit_Value element on the ReportParameter page.
+2023-05-23 10:05:14,168 ::DEBUG::[Logger]:: 21) Hotelis selected as Business Unit
+2023-05-23 10:05:21,467 ::INFO ::[Logger]:: Clicked the Click_Currency_Dropdown element on the ReportParameter page.
+2023-05-23 10:05:26,587 ::INFO ::[Logger]:: Clicked the Select_Currency_Value element on the ReportParameter page.
+2023-05-23 10:05:26,587 ::DEBUG::[Logger]:: 22) USDis selected as Currency
+2023-05-23 10:05:30,483 ::INFO ::[Logger]:: Inserted text in the Text_StartDate element on the ReportParameter page.
+2023-05-23 10:05:32,105 ::INFO ::[Logger]:: Inserted text in the Text_EndDate element on the ReportParameter page.
+2023-05-23 10:05:32,105 ::DEBUG::[Logger]:: 23) Enter start date as = 6/1/2020
+2023-05-23 10:05:34,254 ::DEBUG::[Logger]:: 24) Enter enddate as = 6/30/2020
+2023-05-23 10:05:41,565 ::INFO ::[Logger]:: Clicked the Click_RoomTypeAnalysis_ComparisonYear_DDM element on the ReportParameter page.
+2023-05-23 10:05:46,701 ::INFO ::[Logger]:: Clicked the Select_RoomTypeAnalysis_ComparisonYear2 element on the ReportParameter page.
+2023-05-23 10:05:46,701 ::DEBUG::[Logger]:: 25) Comparison year selected as 2
+2023-05-23 10:06:00,837 ::INFO ::[Logger]:: Clicked the Click_View_Analysis element on the ReportParameter page.
+2023-05-23 10:06:50,848 ::DEBUG::[Logger]:: 26) Report generated
+2023-05-23 10:06:57,140 ::INFO ::[Logger]:: Clicked the Export_Menu element on the ReportParameter page.
+2023-05-23 10:06:57,140 ::DEBUG::[Logger]:: 27) Export drop down menu displayed
+2023-05-23 10:07:03,395 ::INFO ::[Logger]:: Clicked the Excel element on the ReportParameter page.
+2023-05-23 10:07:33,407 ::DEBUG::[Logger]:: 28) Report exported in excel format
+2023-05-23 10:07:35,618 ::INFO ::[Logger]:: Switching out of the iFrame.
+2023-05-23 10:07:36,638 ::DEBUG::[Logger]:: 29) The template downloaded in the csv file format.
+2023-05-23 10:07:38,850 ::INFO ::[Logger]:: File Size in Bytes: 22
+2023-05-23 10:07:47,916 ::DEBUG::[Logger]:: 30) Market menu drop down displayed
+2023-05-23 10:07:55,189 ::INFO ::[Logger]:: Clicked the Market_Report element on the Navigation page.
+2023-05-23 10:08:05,194 ::DEBUG::[Logger]:: 31) User Landed on Market Report Page
+2023-05-23 10:08:12,381 ::INFO ::[Logger]:: Switching into the iFrame.
+2023-05-23 10:08:18,577 ::INFO ::[Logger]:: Clicked the Click_Business_Unit_Dropdown element on the ReportParameter page.
+2023-05-23 10:08:23,697 ::INFO ::[Logger]:: Clicked the Select_Business_Unit_Value element on the ReportParameter page.
+2023-05-23 10:08:23,697 ::DEBUG::[Logger]:: 32) Hotelis selected as Business Unit
+2023-05-23 10:08:30,949 ::INFO ::[Logger]:: Clicked the Click_Currency_Dropdown element on the ReportParameter page.
+2023-05-23 10:08:36,068 ::INFO ::[Logger]:: Clicked the Select_Currency_Value element on the ReportParameter page.
+2023-05-23 10:08:36,069 ::DEBUG::[Logger]:: 33) USDis selected as Currency
+2023-05-23 10:08:39,859 ::INFO ::[Logger]:: Inserted text in the Text_StartDate element on the ReportParameter page.
+2023-05-23 10:08:41,483 ::INFO ::[Logger]:: Inserted text in the Text_EndDate element on the ReportParameter page.
+2023-05-23 10:08:41,483 ::DEBUG::[Logger]:: 34) Enter start date as = 6/1/2020
+2023-05-23 10:08:43,630 ::DEBUG::[Logger]:: 35) Enter enddate as = 6/30/2020
+2023-05-23 10:08:50,884 ::INFO ::[Logger]:: Clicked the Click_RoomTypeAnalysis_ComparisonYear_DDM element on the ReportParameter page.
+2023-05-23 10:08:56,001 ::INFO ::[Logger]:: Clicked the Select_RoomTypeAnalysis_ComparisonYear3 element on the ReportParameter page.
+2023-05-23 10:08:56,001 ::DEBUG::[Logger]:: 36) Comparison year selected as 3
+2023-05-23 10:09:09,286 ::INFO ::[Logger]:: Clicked the Click_View_Analysis element on the ReportParameter page.
+2023-05-23 10:09:59,290 ::DEBUG::[Logger]:: 37) Report generated
+2023-05-23 10:10:05,571 ::INFO ::[Logger]:: Clicked the Export_Menu element on the ReportParameter page.
+2023-05-23 10:10:05,571 ::DEBUG::[Logger]:: 38) Export drop down menu displayed
+2023-05-23 10:10:11,843 ::INFO ::[Logger]:: Clicked the Excel element on the ReportParameter page.
+2023-05-23 10:10:41,855 ::DEBUG::[Logger]:: 39) Report exported in excel format
+2023-05-23 10:10:44,022 ::INFO ::[Logger]:: Switching out of the iFrame.
+2023-05-23 10:10:45,043 ::DEBUG::[Logger]:: 40) The template downloaded in the csv file format.
+2023-05-23 10:10:47,205 ::INFO ::[Logger]:: File Size in Bytes: 22
+2023-05-23 10:11:10,110 ::DEBUG::[Logger]:: 41) Total Room Sold value under current year section matched with Comparision year 1 and comparision year 2
+2023-05-23 10:11:14,314 ::DEBUG::[Logger]:: 42) Total Mix% value under current year section matched with Comparision year 1 and comparision year 2
+2023-05-23 10:11:18,323 ::DEBUG::[Logger]:: 43) Total ADR value under current year section matched with Comparision year 1 and comparision year 2
+2023-05-23 10:11:22,272 ::DEBUG::[Logger]:: 44) Total Revenue value under current year section matched with Comparision year 1 and comparision year 2
+2023-05-23 10:11:31,051 ::DEBUG::[Logger]:: 45) Total Room Sold value under current year section matched with Comparision year 1 and comparision year 3
+2023-05-23 10:11:35,360 ::DEBUG::[Logger]:: 46) Total Mix% value under current year section matched with Comparision year 1 and comparision year 3
+2023-05-23 10:11:39,305 ::DEBUG::[Logger]:: 47) Total ADR value under current year section matched with Comparision year 1 and comparision year 3
+2023-05-23 10:11:53,195 ::DEBUG::[Logger]:: 48) Total Revenue value under current year section matched with Comparision year 1 and comparision year 3
+2023-05-23 10:12:54,698 ::DEBUG::[Logger]:: TestPlan :- TP_292758 Testcase :- TC_269892
+2023-05-23 10:12:54,701 ::DEBUG::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~Test Data Used~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-23 10:12:54,704 ::DEBUG::[Logger]::  Value for : TC_269892_username is : Testautomation@cendyn17.com
+2023-05-23 10:12:54,707 ::DEBUG::[Logger]::  Value for : TC_269892_Password is : Cendyn123$
+2023-05-23 10:12:54,709 ::DEBUG::[Logger]::  Value for : TC_269892_environment is : Automation
+2023-05-23 10:12:54,712 ::DEBUG::[Logger]::  Value for : TC_269892_client is : D Rock
+2023-05-23 10:12:54,714 ::DEBUG::[Logger]::  Value for : TC_269892_Business_Unit is : Hotel
+2023-05-23 10:12:54,729 ::DEBUG::[Logger]::  Value for : TC_269892_Currency is : USD
+2023-05-23 10:12:54,732 ::DEBUG::[Logger]::  Value for : TC_269892_hotel is : Atlantis, The Palm
+2023-05-23 10:12:54,735 ::DEBUG::[Logger]::  Value for : TC_269892_Start Date is : 6/1/2020
+2023-05-23 10:12:54,737 ::DEBUG::[Logger]::  Value for : TC_269892_End Date is : 6/30/2020
+2023-05-23 10:12:54,740 ::DEBUG::[Logger]::  Value for : TC_269892_Room sold value under current year section for Comparision year 1 is : 
+2023-05-23 10:12:54,744 ::DEBUG::[Logger]::  Value for : TC_269892_Mix% value under current year section for Comparision year 1 is : 
+2023-05-23 10:12:54,747 ::DEBUG::[Logger]::  Value for : TC_269892_ADR value under current year section for Comparision year 1 is : 
+2023-05-23 10:12:54,750 ::DEBUG::[Logger]::  Value for : TC_269892_Revenue value under current year section for Comparision year 1 is : 
+2023-05-23 10:12:54,756 ::DEBUG::[Logger]::  Value for : TC_269892_Room sold value under current year section for Comparision year 2 is : 
+2023-05-23 10:12:54,760 ::DEBUG::[Logger]::  Value for : TC_269892_Mix% value under current year section for Comparision year 2 is : 
+2023-05-23 10:12:54,762 ::DEBUG::[Logger]::  Value for : TC_269892_ADR value under current year section for Comparision year 2 is : 
+2023-05-23 10:12:54,764 ::DEBUG::[Logger]::  Value for : TC_269892_Revenue value under current year section for Comparision year 2 is : 
+2023-05-23 10:12:54,766 ::DEBUG::[Logger]::  Value for : TC_269892_Room sold value under current year section for Comparision year 3 is : 
+2023-05-23 10:12:54,769 ::DEBUG::[Logger]::  Value for : TC_269892_Mix% value under current year section for Comparision year 3 is : 
+2023-05-23 10:12:54,771 ::DEBUG::[Logger]::  Value for : TC_269892_ADR value under current year section for Comparision year 3 is : 
+2023-05-23 10:12:54,773 ::DEBUG::[Logger]::  Value for : TC_269892_Revenue sold value under current year section for Comparision year 3 is : 
+2023-05-23 10:12:55,792 ::INFO ::[Logger]:: RevIntel:: Script ::Passed
+2023-05-23 10:12:58,807 ::INFO ::[Logger]:: E.N.D

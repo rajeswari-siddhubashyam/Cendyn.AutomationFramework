@@ -1,0 +1,66 @@
+2023-05-16 20:52:31,789 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-16 20:52:31,789 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-16 20:52:31,789 ::INFO ::[Logger]::  is used for Testing
+2023-05-16 20:52:31,804 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.goqacendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goQAcendyn.com/SSOLanding.aspx
+2023-05-16 20:52:31,804 ::INFO ::[Logger]:: Execution started at:-May-16-2023 20-52-31-PM
+2023-05-16 20:52:31,804 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 20:52:31,804 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-16 20:52:31,804 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_252602         XXXXXXXXXXXXXXXX
+2023-05-16 20:52:31,804 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 20:52:31,867 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-16 20:52:31,883 ::INFO ::[Logger]:: Test Case : Validate Channel by Room Type Pace
+2023-05-16 20:52:33,654 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-05-16 20:52:33,654 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-05-16 20:52:41,725 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-05-16 20:52:43,505 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2023-05-16 20:52:43,505 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
+2023-05-16 20:53:00,149 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2023-05-16 20:53:00,149 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
+2023-05-16 20:53:03,509 ::DEBUG::[Logger]:: 4) Client displayed
+2023-05-16 20:53:29,663 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
+2023-05-16 20:53:29,665 ::DEBUG::[Logger]:: 5) D Rock selected
+2023-05-16 20:53:43,495 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
+2023-05-16 20:53:48,155 ::DEBUG::[Logger]:: 7) Booking Trends Dropdown displayed
+2023-05-16 20:53:55,645 ::INFO ::[Logger]:: Clicked the Channel_By_Room_Type_Pace element on the Navigation page.
+2023-05-16 20:54:06,544 ::DEBUG::[Logger]:: 8) User landed on Channel By Room Type Pace page
+2023-05-16 20:54:13,858 ::INFO ::[Logger]:: Switching into the iFrame.
+2023-05-16 20:54:20,114 ::INFO ::[Logger]:: Clicked the Click_View_Analysis element on the ReportParameter page.
+2023-05-16 20:54:20,114 ::DEBUG::[Logger]:: 9) validation message displayed for required field
+2023-05-16 20:54:24,650 ::INFO ::[Logger]:: Market: Found on the page
+2023-05-16 20:54:24,650 ::DEBUG::[Logger]:: 10) Market Parameter displayed
+2023-05-16 20:54:29,019 ::INFO ::[Logger]:: Channel: Found on the page
+2023-05-16 20:54:29,019 ::DEBUG::[Logger]:: 11) Channel Parameter displayed
+2023-05-16 20:54:33,523 ::INFO ::[Logger]:: Room Product: Found on the page
+2023-05-16 20:54:33,523 ::DEBUG::[Logger]:: 12) Room Product Parameter displayed
+2023-05-16 20:54:38,653 ::INFO ::[Logger]:: Rate Code: Found on the page
+2023-05-16 20:54:38,653 ::DEBUG::[Logger]:: 13) Rate Code: Parameter displayed
+2023-05-16 20:54:42,978 ::INFO ::[Logger]:: Inserted text in the Text_StartDate element on the ReportParameter page.
+2023-05-16 20:54:44,710 ::INFO ::[Logger]:: Inserted text in the Text_EndDate element on the ReportParameter page.
+2023-05-16 20:54:46,394 ::INFO ::[Logger]:: Inserted text in the Enter_As_Of_Date element on the ReportParameter page.
+2023-05-16 20:54:46,394 ::DEBUG::[Logger]:: 14) 9/1/2020Selected as start date
+2023-05-16 20:54:48,564 ::DEBUG::[Logger]:: 15) 9/30/2020Selected as end date
+2023-05-16 20:54:51,883 ::DEBUG::[Logger]:: 16) 8/31/2020Selected as As_Of_Date
+2023-05-16 20:55:11,723 ::INFO ::[Logger]:: Clicked the Click_View_Analysis element on the ReportParameter page.
+2023-05-16 20:55:41,741 ::DEBUG::[Logger]:: 17) Report Generated
+2023-05-16 20:56:43,938 ::ERROR::[Logger]:: RevIntel_Flow :: Script::Failed
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:56970/session/4c6f505419411609ccc82b3917b2f13a/execute/sync timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.ExecuteScriptCommand(String script, String commandName, Object[] args)
+   at OpenQA.Selenium.WebDriver.ExecuteScript(String script, Object[] args)
+   at BaseUtility.Utility.Helper.ReloadPage() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 649
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TC_252602() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp\TP_252578_Booking Trends.cs:line 1153
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TP_252578() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp.cs:line 65
+   at RevIntel.RevIntel_TP_252578_Booking_Trends.TC_252602() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\TestPlan\RevIntel\RevIntel_TP_252578_Booking_Trends.cs:line 187
+2023-05-16 20:58:02,810 ::INFO ::[Logger]:: E.N.D

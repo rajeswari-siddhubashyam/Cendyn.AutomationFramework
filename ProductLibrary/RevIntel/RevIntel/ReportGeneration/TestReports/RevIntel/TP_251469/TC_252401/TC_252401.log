@@ -1,80 +1,70 @@
-2023-04-29 17:28:28,097 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
-2023-04-29 17:28:28,393 ::INFO ::[Logger]:: Chrome is currently being used for testing.
-2023-04-29 17:28:28,506 ::INFO ::[Logger]::  is used for Testing
-2023-04-29 17:28:28,600 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.godevcendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goDEVcendyn.com/SSOLanding.aspx
-2023-04-29 17:28:28,601 ::INFO ::[Logger]:: Execution started at:-Apr-29-2023 17-28-28-PM
-2023-04-29 17:28:28,604 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-04-29 17:28:28,607 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
-2023-04-29 17:28:28,609 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_252401         XXXXXXXXXXXXXXXX
-2023-04-29 17:28:28,610 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-04-29 17:28:28,693 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
-2023-04-29 17:28:28,720 ::INFO ::[Logger]:: Test Case : Verify user should be able to export the Pace report data in all format
-2023-04-29 17:28:31,588 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
-2023-04-29 17:28:31,592 ::DEBUG::[Logger]:: 1) Email Address displayed
-2023-04-29 17:28:40,801 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
-2023-04-29 17:28:42,801 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
-2023-04-29 17:28:42,805 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
-2023-04-29 17:28:53,377 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
-2023-04-29 17:28:53,380 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
-2023-04-29 17:29:04,586 ::DEBUG::[Logger]:: 4) Client displayed
-2023-04-29 17:29:16,460 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
-2023-04-29 17:29:16,463 ::DEBUG::[Logger]:: 5) D Rock selected
-2023-04-29 17:29:29,584 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
-2023-04-29 17:29:34,402 ::DEBUG::[Logger]:: 7) Actual url = https://revintelbi.godevcendyn.com/revintel.aspx match with Expected url = https://revintelbi.godevcendyn.com/revintel.aspx
-2023-04-29 17:29:38,869 ::DEBUG::[Logger]:: 8) Forecast_and_Budget Dropdown displayed
-2023-04-29 17:29:49,926 ::INFO ::[Logger]:: Clicked the Pace_Forecast_Report element on the Navigation page.
-2023-04-29 17:29:49,929 ::DEBUG::[Logger]:: 9) Clicked on Forecast and Pace Report.
-2023-04-29 17:30:05,676 ::DEBUG::[Logger]:: 10) User landed on Pace and Forcast report page
-2023-04-29 17:30:14,537 ::INFO ::[Logger]:: Switching into the iFrame.
-2023-04-29 17:30:25,164 ::INFO ::[Logger]:: Clicked the Click_View_Analysis element on the ReportParameter page.
-2023-04-29 17:31:37,493 ::DEBUG::[Logger]:: 11) Report generated
-2023-04-29 17:31:54,003 ::INFO ::[Logger]:: Clicked the Export_Menu element on the ReportParameter page.
-2023-04-29 17:31:54,005 ::DEBUG::[Logger]:: 12) Dropdown displayed
-2023-04-29 17:32:01,473 ::INFO ::[Logger]:: Clicked the Excel element on the ReportParameter page.
-2023-04-29 17:32:11,779 ::DEBUG::[Logger]:: 13) Report exported in excel format
-2023-04-29 17:32:14,005 ::DEBUG::[Logger]:: 14) The template downloaded in the csv file format.
-2023-04-29 17:32:16,353 ::INFO ::[Logger]:: File Size in Bytes: 29
-2023-04-29 17:32:21,090 ::INFO ::[Logger]:: Clicked the Export_Menu element on the ReportParameter page.
-2023-04-29 17:32:21,092 ::DEBUG::[Logger]:: 15) Dropdown displayed
-2023-04-29 17:32:28,991 ::INFO ::[Logger]:: Clicked the Word element on the ReportParameter page.
-2023-04-29 17:32:49,202 ::DEBUG::[Logger]:: 16) Report exported in Word format
-2023-04-29 17:32:51,783 ::DEBUG::[Logger]:: 17) The template should be downloaded in the .docx file format.
-2023-04-29 17:33:01,380 ::INFO ::[Logger]:: File Size in Bytes:29
-2023-04-29 17:33:07,456 ::INFO ::[Logger]:: Clicked the Export_Menu element on the ReportParameter page.
-2023-04-29 17:33:07,459 ::DEBUG::[Logger]:: 18) Dropdown displayed
-2023-04-29 17:33:16,183 ::INFO ::[Logger]:: Clicked the PDF element on the ReportParameter page.
-2023-04-29 17:33:38,999 ::DEBUG::[Logger]:: 19) Report exported in PDF format
-2023-04-29 17:33:41,700 ::DEBUG::[Logger]:: 20) The template should be downloaded in the Pdf file format.
-2023-04-29 17:33:44,231 ::INFO ::[Logger]:: File Size in Bytes:28
-2023-04-29 17:33:49,185 ::INFO ::[Logger]:: Clicked the Export_Menu element on the ReportParameter page.
-2023-04-29 17:33:49,187 ::DEBUG::[Logger]:: 21) Dropdown displayed
-2023-04-29 17:33:57,069 ::INFO ::[Logger]:: Clicked the TIFF element on the ReportParameter page.
-2023-04-29 17:34:17,313 ::DEBUG::[Logger]:: 22) Report exported in TIFF format
-2023-04-29 17:34:20,492 ::DEBUG::[Logger]:: 23) The template should be downloaded in the .TIF file format.
-2023-04-29 17:34:28,719 ::INFO ::[Logger]:: Clicked the Export_Menu element on the ReportParameter page.
-2023-04-29 17:34:28,720 ::DEBUG::[Logger]:: 24) Dropdown displayed
-2023-04-29 17:34:38,227 ::INFO ::[Logger]:: Clicked the PowerPoint element on the ReportParameter page.
-2023-04-29 17:35:08,650 ::DEBUG::[Logger]:: 25) Report exported in PowerPoint format
-2023-04-29 17:35:13,911 ::DEBUG::[Logger]:: 26) The template downloaded in the .pptx file format.
-2023-04-29 17:35:17,459 ::INFO ::[Logger]:: File Size in Bytes:29
-2023-04-29 17:35:22,512 ::INFO ::[Logger]:: Clicked the Export_Menu element on the ReportParameter page.
-2023-04-29 17:35:22,512 ::DEBUG::[Logger]:: 27) Dropdown displayed
-2023-04-29 17:35:31,470 ::INFO ::[Logger]:: Clicked the CSV element on the ReportParameter page.
-2023-04-29 17:35:51,639 ::DEBUG::[Logger]:: 28) Report exported in CSV format
-2023-04-29 17:35:54,677 ::DEBUG::[Logger]:: 29) The template downloaded in the .csv file format.
-2023-04-29 17:36:01,376 ::INFO ::[Logger]:: File Size in Bytes:28
-2023-04-29 17:36:06,413 ::INFO ::[Logger]:: Clicked the Export_Menu element on the ReportParameter page.
-2023-04-29 17:36:06,413 ::DEBUG::[Logger]:: 30) Dropdown displayed
-2023-04-29 17:36:14,856 ::INFO ::[Logger]:: Clicked the Data_Feed element on the ReportParameter page.
-2023-04-29 17:36:34,891 ::DEBUG::[Logger]:: 31) Report exported in Data_Feed format
-2023-04-29 17:36:38,102 ::DEBUG::[Logger]:: 32) The template downloaded in the .atomsvc file format.
-2023-04-29 17:36:40,734 ::INFO ::[Logger]:: File Size in Bytes:32
-2023-04-29 17:36:40,734 ::INFO ::[Logger]:: Switching out of the iFrame.
-2023-04-29 17:36:43,038 ::DEBUG::[Logger]:: TestPlan :- TP_251469 Testcase :- TC_252401
-2023-04-29 17:36:43,050 ::DEBUG::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~Test Data Used~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-04-29 17:36:43,050 ::DEBUG::[Logger]::  Value for : TC_252401_Valid User Email is : Testautomation@cendyn17.com
-2023-04-29 17:36:43,054 ::DEBUG::[Logger]::  Value for : TC_252401_Password is : Cendyn123$
-2023-04-29 17:36:43,054 ::DEBUG::[Logger]::  Value for : TC_252401_environment is : Automation
-2023-04-29 17:36:43,054 ::DEBUG::[Logger]::  Value for : TC_252401_client is : D Rock
-2023-04-29 17:36:44,076 ::INFO ::[Logger]:: RevIntel:: Script ::Passed
-2023-04-29 17:37:17,136 ::INFO ::[Logger]:: E.N.D
+2023-05-16 14:46:10,829 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-16 14:46:10,846 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-16 14:46:10,927 ::INFO ::[Logger]::  is used for Testing
+2023-05-16 14:46:11,129 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.godevcendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goDEVcendyn.com/SSOLanding.aspx
+2023-05-16 14:46:11,192 ::INFO ::[Logger]:: Execution started at:-May-16-2023 14-46-11-PM
+2023-05-16 14:46:11,194 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 14:46:11,267 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-16 14:46:11,268 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_252401         XXXXXXXXXXXXXXXX
+2023-05-16 14:46:11,270 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 14:46:11,368 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-16 14:46:12,279 ::INFO ::[Logger]:: Test Case : Verify user should be able to export the Pace report data in all format
+2023-05-16 14:46:15,836 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-05-16 14:46:15,854 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-05-16 14:46:27,984 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-05-16 14:46:29,953 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2023-05-16 14:46:30,004 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
+2023-05-16 14:46:45,720 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2023-05-16 14:46:45,763 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
+2023-05-16 14:46:53,456 ::DEBUG::[Logger]:: 4) Client displayed
+2023-05-16 14:47:16,220 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
+2023-05-16 14:47:16,276 ::DEBUG::[Logger]:: 5) D Rock selected
+2023-05-16 14:47:29,148 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
+2023-05-16 14:47:32,936 ::DEBUG::[Logger]:: 7) Actual url = https://revintelbi.godevcendyn.com/revintel.aspx match with Expected url = https://revintelbi.godevcendyn.com/revintel.aspx
+2023-05-16 14:47:38,690 ::DEBUG::[Logger]:: 8) Forecast_and_Budget Dropdown displayed
+2023-05-16 14:47:48,985 ::INFO ::[Logger]:: Clicked the Pace_Forecast_Report element on the Navigation page.
+2023-05-16 14:47:48,990 ::DEBUG::[Logger]:: 9) Clicked on Forecast and Pace Report.
+2023-05-16 14:48:03,418 ::DEBUG::[Logger]:: 10) User landed on Pace and Forcast report page
+2023-05-16 14:48:13,945 ::INFO ::[Logger]:: Switching into the iFrame.
+2023-05-16 14:49:17,712 ::FATAL::[Logger]:: Unable to click the Click_View_Analysis element on the ReportParameter page.OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:60458/session/00fe3eb0e577bc62e35a3e89076dfed5/element/6202204a-67e5-4a6b-b8b2-5b209a855a05/click timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Click()
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 81
+2023-05-16 14:49:17,823 ::ERROR::[Logger]:: RevIntel_Flow :: Script::Failed
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:60458/session/00fe3eb0e577bc62e35a3e89076dfed5/element/6202204a-67e5-4a6b-b8b2-5b209a855a05/click timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Click()
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 88
+   at RevIntel.AppModule.UI.ReportParameter.Click_View_Analysis() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\ReportParameter.cs:line 74
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TC_252401() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp\TP_251469_SmokeTest.cs:line 588
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TP_251469() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp.cs:line 39
+   at RevIntel.RevIntel_TP_251469_SmokePlan.TC_252401() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\TestPlan\RevIntel\RevIntel_TP_251469_SmokePlan.cs:line 136
+2023-05-16 14:51:48,161 ::INFO ::[Logger]:: E.N.D

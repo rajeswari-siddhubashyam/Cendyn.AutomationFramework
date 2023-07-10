@@ -450,7 +450,25 @@ namespace BaseUtility.Utility
             }
             return false;
         }
-
+        public static void ElementSelect(IWebElement element)
+        {
+            try
+            {
+                if (!(element.Selected))
+                {
+                    AddDelay(1000);
+                    element.Click();
+                    Logger.WriteInfoMessage("Element  " + CurrentElementName + " Selected.");                    
+                }else
+                {
+                    Logger.WriteInfoMessage("Element " + CurrentElementName + " Alraeady Selected");                    
+                }                
+            }
+            catch (Exception)
+            {
+                Logger.WriteFatalMessage("Unable to uncheck the " + CurrentElementName + " checkbox.");
+            }
+        }
         public static void ElementNOTSelected(IWebElement element)
         {
             try
@@ -673,6 +691,33 @@ namespace BaseUtility.Utility
             {
                 Assert.Fail(text + "Text not found");
             }
+        }
+        public static void VerifyTextOnPageAndHighLightNew(string text)
+        {
+            try
+            {
+                ElementWait(Helper.Driver.FindElement(By.XPath("//*[contains(text(),'" + text + "')]")), 240);
+                IList<IWebElement> list = Helper.Driver.FindElements(By.XPath("//*[contains(text(),'" + text + "')]"));
+                int count = 0;
+                foreach (IWebElement value in list)
+                {
+                    if (count == 2)
+                        break;
+                    if (value.Text.Contains(text.Trim()))
+                    {
+                        HighlightElement(value);
+                        count++;
+                        Logger.WriteInfoMessage(text + " Found on the page");
+                    }
+                }
+                if (count == 0)
+                {
+                    Assert.Fail(text + "Text not found");
+                }
+            } catch (Exception e)
+            {
+            }
+     
         }
 
         public static void ClickTextOnPage(string text)
@@ -1539,17 +1584,33 @@ namespace BaseUtility.Utility
             return value;
         }
 
-        public static string GetRandomAlphaNumericString(int charlimit)
+        public static string GetRandomAlphaNumericString(int charLimit,int casetypeDateORName)
         {
-            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-            var stringChars = new char[charlimit];
-            var random = new Random();
-
-            for (int i = 0; i < stringChars.Length; i++)
+            var finalString = string.Empty;
+            switch (casetypeDateORName)
             {
-                stringChars[i] = chars[random.Next(chars.Length)];
+                case 0:
+                    {
+                        var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+                        var stringChars = new char[charLimit];
+                        var random = new Random();
+
+                        for (int i = 0; i < stringChars.Length; i++)
+                        {
+                            stringChars[i] = chars[random.Next(chars.Length)];
+                        }
+                         finalString = new String(stringChars);                        
+                        break;
+                    }
+                case 1:
+                    {
+                        DateTime time = DateTime.Now;
+                        string hour = time.ToString("HHmm");
+                        string ampm = time.ToString("tt");
+                        finalString = time.ToString("ddMMyyyy")+"_"+ hour;
+                        break;
+                    }                    
             }
-            var finalString = new String(stringChars);
             return finalString;
         }
 

@@ -1,0 +1,61 @@
+2023-05-17 18:30:27,515 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-17 18:30:27,515 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-17 18:30:27,515 ::INFO ::[Logger]::  is used for Testing
+2023-05-17 18:30:27,530 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.goqacendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goQAcendyn.com/SSOLanding.aspx
+2023-05-17 18:30:27,530 ::INFO ::[Logger]:: Execution started at:-May-17-2023 18-30-27-PM
+2023-05-17 18:30:27,530 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-17 18:30:27,530 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-17 18:30:27,530 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_252833         XXXXXXXXXXXXXXXX
+2023-05-17 18:30:27,530 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-17 18:30:27,592 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-17 18:30:27,592 ::INFO ::[Logger]:: Test Case : Validate the Channel Report
+2023-05-17 18:30:29,741 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-05-17 18:30:29,741 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-05-17 18:30:40,888 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-05-17 18:30:43,142 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2023-05-17 18:30:43,142 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
+2023-05-17 18:30:53,357 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2023-05-17 18:30:53,609 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
+2023-05-17 18:30:57,493 ::DEBUG::[Logger]:: 4) Client displayed
+2023-05-17 18:31:11,292 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
+2023-05-17 18:31:11,292 ::DEBUG::[Logger]:: 5) D Rock selected
+2023-05-17 18:31:23,487 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
+2023-05-17 18:31:27,696 ::DEBUG::[Logger]:: 7) Channel drop down displayed
+2023-05-17 18:31:38,754 ::INFO ::[Logger]:: Clicked the Click_Daily_Channel_by_Room_Type element on the Navigation page.
+2023-05-17 18:31:48,769 ::DEBUG::[Logger]:: 8) User Landed on Channel Report Page
+2023-05-17 18:31:58,361 ::INFO ::[Logger]:: Switching into the iFrame.
+2023-05-17 18:32:12,337 ::INFO ::[Logger]:: Clicked the Click_Business_Unit_Dropdown element on the ReportParameter page.
+2023-05-17 18:32:18,460 ::INFO ::[Logger]:: Clicked the Select_Business_Unit_Value element on the ReportParameter page.
+2023-05-17 18:32:18,460 ::DEBUG::[Logger]:: 9) AUDis selected as Business Unit
+2023-05-17 18:32:26,373 ::INFO ::[Logger]:: Clicked the Click_Currency_Dropdown element on the ReportParameter page.
+2023-05-17 18:33:26,989 ::ERROR::[Logger]:: The //li[contains(text(),'AUD')] element was not found on the page.
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:58198/session/1ad2b5b9bf399c9378720b42007cb42b/element timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at BaseUtility.PageObject.PageAction.Find_ElementXPath(String repoName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\PageObject\PageAction.cs:line 33
+2023-05-17 18:33:29,016 ::FATAL::[Logger]:: Unable to click the Select_Currency_Value element on the ReportParameter page.System.NullReferenceException: Object reference not set to an instance of an object.
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 81
+2023-05-17 18:33:29,016 ::ERROR::[Logger]:: RevIntel_Flow :: Script::Failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 88
+   at RevIntel.AppModule.UI.ReportParameter.Select_Currency_Value() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\ReportParameter.cs:line 672
+   at RevIntel.AppModule.UI.ReportParameter.Select_Currency_Business_value(String Business_Unit, String Currency) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\ReportParameter.cs:line 728
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TC_252833() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp\TP_252820_Channel.cs:line 473
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TP_252820() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp.cs:line 225
+   at RevIntel.RevIntel_TP_252820_Channel.TC_252833() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\TestPlan\RevIntel\RevIntel_TP_252820_Channel.cs:line 105
+2023-05-17 18:35:18,585 ::INFO ::[Logger]:: E.N.D

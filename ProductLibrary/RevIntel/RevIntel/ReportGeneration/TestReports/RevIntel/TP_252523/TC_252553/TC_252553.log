@@ -1,55 +1,25 @@
-2023-05-11 16:58:40,534 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
-2023-05-11 16:58:40,628 ::INFO ::[Logger]:: Chrome is currently being used for testing.
-2023-05-11 16:58:40,660 ::INFO ::[Logger]::  is used for Testing
-2023-05-11 16:58:40,660 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.godevcendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goDEVcendyn.com/SSOLanding.aspx
-2023-05-11 16:58:40,660 ::INFO ::[Logger]:: Execution started at:-May-11-2023 16-58-40-PM
-2023-05-11 16:58:40,660 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-05-11 16:58:40,675 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
-2023-05-11 16:58:40,675 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_252553         XXXXXXXXXXXXXXXX
-2023-05-11 16:58:40,675 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-05-11 16:58:40,675 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
-2023-05-11 16:58:40,686 ::INFO ::[Logger]:: Test Case : Verify logged in user have access only to those reports that are accessible for the Role you logged in as
-2023-05-11 16:58:42,404 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
-2023-05-11 16:58:42,404 ::DEBUG::[Logger]:: 1) Email Address displayed
-2023-05-11 16:58:50,322 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
-2023-05-11 16:58:51,879 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
-2023-05-11 16:58:51,879 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
-2023-05-11 16:59:07,853 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
-2023-05-11 16:59:07,853 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
-2023-05-11 16:59:11,032 ::DEBUG::[Logger]:: 4) Client displayed
-2023-05-11 16:59:23,600 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
-2023-05-11 16:59:23,602 ::DEBUG::[Logger]:: 5) D Rock selected
-2023-05-11 16:59:35,750 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
-2023-05-11 16:59:42,962 ::INFO ::[Logger]:: Clicked the Click_Hamburger_Icon element on the Navigation page.
-2023-05-11 16:59:48,047 ::INFO ::[Logger]:: Clicked the Administration element on the Navigation page.
-2023-05-11 16:59:48,047 ::DEBUG::[Logger]:: 7) Administration menu drop down displayed
-2023-05-11 17:00:50,200 ::ERROR::[Logger]:: The //span[contains(text(),'User Maintenance')] element was not found on the page.
-OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:58655/session/c2d37f62af34b16c621bf8868a86c750/element timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
-   --- End of inner exception stack trace ---
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
-   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
-   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
-   at OpenQA.Selenium.By.FindElement(ISearchContext context)
-   at OpenQA.Selenium.WebDriver.FindElement(By by)
-   at BaseUtility.PageObject.PageAction.Find_ElementXPath(String repoName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\PageObject\PageAction.cs:line 33
-2023-05-11 17:00:52,215 ::FATAL::[Logger]:: Unable to click the User_Maintenance element on the Navigation page.System.NullReferenceException: Object reference not set to an instance of an object.
-   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 81
-2023-05-11 17:00:52,218 ::ERROR::[Logger]:: RevIntel_Flow :: Script::Failed
-System.NullReferenceException: Object reference not set to an instance of an object.
-   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 88
-   at RevIntel.AppModule.UI.Navigation.User_Maintenance() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\Navigation.cs:line 231
-   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TC_252553() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp\TP_252523_RainMaker Menu.cs:line 80
-   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TP_252523() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp.cs:line 247
-   at RevIntel.RevIntel_TP_252523_Rainmaker_Menu.TC_252553() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\TestPlan\RevIntel\RevIntel_TP_252523_Rainmaker_Menu.cs:line 81
-2023-05-11 17:01:55,696 ::INFO ::[Logger]:: E.N.D
+2023-05-26 12:00:32,615 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-26 12:00:32,725 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-26 12:00:32,741 ::INFO ::[Logger]::  is used for Testing
+2023-05-26 12:00:32,756 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.godevcendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goDEVcendyn.com/SSOLanding.aspx
+2023-05-26 12:00:32,756 ::INFO ::[Logger]:: Execution started at:-May-26-2023 12-00-32-PM
+2023-05-26 12:00:32,756 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-26 12:00:32,756 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-26 12:00:32,756 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_252553         XXXXXXXXXXXXXXXX
+2023-05-26 12:00:32,756 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-26 12:00:32,772 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-26 12:01:19,411 ::INFO ::[Logger]:: Test Case : Verify logged in user have access only to those reports that are accessible for the Role you logged in as
+2023-05-26 12:01:21,369 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-05-26 12:01:21,380 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-05-26 12:01:29,695 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-05-26 12:01:31,384 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2023-05-26 12:01:31,384 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
+2023-05-26 12:01:40,605 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2023-05-26 12:01:40,608 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
+2023-05-26 12:01:43,723 ::DEBUG::[Logger]:: 4) Client displayed
+2023-05-26 12:01:55,912 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
+2023-05-26 12:01:55,913 ::DEBUG::[Logger]:: 5) D Rock selected
+2023-05-26 12:02:08,055 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
+2023-05-26 12:02:15,253 ::INFO ::[Logger]:: Clicked the Click_Hamburger_Icon element on the Navigation page.
+2023-05-26 12:02:20,320 ::INFO ::[Logger]:: Clicked the Administration element on the Navigation page.
+2023-05-26 12:02:20,320 ::DEBUG::[Logger]:: 7) Administration menu drop down displayed

@@ -1,17 +1,19 @@
-2023-05-01 20:32:18,748 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
-2023-05-01 20:32:18,748 ::INFO ::[Logger]:: Chrome is currently being used for testing.
-2023-05-01 20:32:18,748 ::INFO ::[Logger]::  is used for Testing
-2023-05-01 20:32:18,748 ::INFO ::[Logger]:: This is the login page.data:,
-2023-05-01 20:32:18,748 ::INFO ::[Logger]:: Execution started at:-May-01-2023 20-32-18-PM
-2023-05-01 20:32:18,748 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-05-01 20:32:18,748 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
-2023-05-01 20:32:18,748 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_294932         XXXXXXXXXXXXXXXX
-2023-05-01 20:32:18,759 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-05-01 20:32:18,759 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
-2023-05-01 20:42:40,396 ::ERROR::[Logger]:: eLoyaltyV3_Flow :: Script::Failed
+2023-05-16 11:43:11,230 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-16 11:43:11,240 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-16 11:43:11,242 ::INFO ::[Logger]::  is used for Testing
+2023-05-16 11:43:11,253 ::INFO ::[Logger]:: This is the login page.data:,
+2023-05-16 11:43:11,255 ::INFO ::[Logger]:: Execution started at:-May-16-2023 11-43-11-AM
+2023-05-16 11:43:11,257 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 11:43:11,259 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-16 11:43:11,262 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_294932         XXXXXXXXXXXXXXXX
+2023-05-16 11:43:11,263 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 11:43:11,274 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-16 11:52:35,963 ::ERROR::[Logger]:: eLoyaltyV3_Flow :: Script::Failed
 NUnit.Framework.AssertionException: Scenario: Difference is leSB when compared to points in last night  - Failed
    at NUnit.Framework.Assert.ReportFailure(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 394
+   at NUnit.Framework.Assert.Fail(String message, Object[] args) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 145
+   at NUnit.Framework.Assert.Fail(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 155
    at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TC_294932() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp\WindowsService\Scenario Validation\Scenario_Validation.cs:line 4531
    at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TP_294919() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp.cs:line 1041
    at eLoyaltyV3.TestPlan.HotelOrigami.WindowsServices.Scenario_Validation.HotelOrigami_TP_294919_Service_Scenario_Validation.TC_294932() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\TestPlan\HotelOrigami\WindowsServices\Scenario Validation\HotelOrigami_TP_294919_Service_Scenario_Validation.cs:line 348
-2023-05-01 20:42:47,899 ::INFO ::[Logger]:: E.N.D
+2023-05-16 11:53:23,248 ::INFO ::[Logger]:: E.N.D

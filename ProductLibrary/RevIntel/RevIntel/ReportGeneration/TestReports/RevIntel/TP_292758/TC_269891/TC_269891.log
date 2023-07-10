@@ -1,0 +1,84 @@
+2023-05-22 21:53:52,335 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-22 21:53:52,460 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-22 21:53:52,476 ::INFO ::[Logger]::  is used for Testing
+2023-05-22 21:53:52,492 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.goqacendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goQAcendyn.com/SSOLanding.aspx
+2023-05-22 21:53:52,492 ::INFO ::[Logger]:: Execution started at:-May-22-2023 21-53-52-PM
+2023-05-22 21:53:52,492 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-22 21:53:52,492 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-22 21:53:52,492 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_269891         XXXXXXXXXXXXXXXX
+2023-05-22 21:53:52,492 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-22 21:53:52,507 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-22 21:53:52,507 ::INFO ::[Logger]:: Test Case : Validate the Market->Market Report when comparison year is 1 at portfolio level and a filter
+2023-05-22 21:53:54,230 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-05-22 21:53:54,230 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-05-22 21:54:02,031 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-05-22 21:54:03,636 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2023-05-22 21:54:03,636 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
+2023-05-22 21:54:14,459 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2023-05-22 21:54:14,459 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
+2023-05-22 21:54:17,631 ::DEBUG::[Logger]:: 4) Client displayed
+2023-05-22 21:54:30,204 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
+2023-05-22 21:54:30,204 ::DEBUG::[Logger]:: 5) D Rock selected
+2023-05-22 21:54:42,447 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
+2023-05-22 21:54:45,430 ::DEBUG::[Logger]:: 7) Market menu drop down displayed
+2023-05-22 21:54:52,647 ::INFO ::[Logger]:: Clicked the Market_Report element on the Navigation page.
+2023-05-22 21:55:02,690 ::DEBUG::[Logger]:: 8) User Landed on Market Report Page
+2023-05-22 21:55:09,934 ::INFO ::[Logger]:: Switching into the iFrame.
+2023-05-22 21:56:10,991 ::ERROR::[Logger]:: The //*[@id='rblHotelPortfolio_ctl01']/span[1] element was not found on the page.
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:58342/session/afcb80136ed64fe29e7e9fe2104e800c/element timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at BaseUtility.PageObject.PageAction.Find_ElementXPath(String repoName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\PageObject\PageAction.cs:line 33
+2023-05-22 22:00:11,470 ::ERROR::[Logger]:: Element not found
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 240 seconds
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at BaseUtility.Utility.Helper.ElementWait(IWebElement element, Int32 time) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 168
+2023-05-22 22:01:11,532 ::ERROR::[Logger]:: The //*[@id='rblHotelPortfolio_ctl01']/span[1] element was not found on the page.
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:58342/session/afcb80136ed64fe29e7e9fe2104e800c/element timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at BaseUtility.PageObject.PageAction.Find_ElementXPath(String repoName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\PageObject\PageAction.cs:line 33
+2023-05-22 22:01:13,572 ::FATAL::[Logger]:: Unable to click the Portfolio_RadioButton element on the ReportParameter page.System.NullReferenceException: Object reference not set to an instance of an object.
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 81
+2023-05-22 22:01:13,572 ::ERROR::[Logger]:: RevIntel_Flow :: Script::Failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 88
+   at RevIntel.AppModule.UI.ReportParameter.Portfolio_RadioButton() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\ReportParameter.cs:line 29
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TC_269891() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp\TP_292758_Market_YOY Comparision.cs:line 694
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TP_292758() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp.cs:line 309
+   at RevIntel.RevIntel_TP_292758_Market_YOY_Comparision.TC_269891() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\TestPlan\RevIntel\RevIntel_TP_292758_Market_YOY_Comparision.cs:line 162
+2023-05-22 22:02:17,137 ::INFO ::[Logger]:: E.N.D

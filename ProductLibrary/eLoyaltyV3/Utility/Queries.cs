@@ -917,8 +917,8 @@ namespace eLoyaltyV3.Utility
                 }
                 connection.Close();
             }
-            data.first_name = data.first_name + Helper.GetRandomAlphaNumericString(2);
-            data.last_name = data.last_name + Helper.GetRandomAlphaNumericString(2);
+            data.first_name = data.first_name + Helper.GetRandomAlphaNumericString(2,0);
+            data.last_name = data.last_name + Helper.GetRandomAlphaNumericString(2, 0);
             return data;
         }
 

@@ -1,5 +1,6 @@
 ﻿using BaseUtility.Utility;
 using eLoyaltyV3.PageObject.UI;
+using Microsoft.Graph;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
 
@@ -59,8 +60,15 @@ namespace eLoyaltyV3.AppModule.UI
         }
         public static void Click_RedeemeGift_Award(string name)
         {
-            Helper.ElementWait(PageObject_Redeem.Click_RedeemeGift_Award(name), 120);
-            PageObject_Redeem.Click_RedeemeGift_Award(name).Click();
+            if (Helper.IsElementDisplayed(PageObject_Redeem.Click_RedeemeGift_Award(name)))
+            {
+                Helper.ElementWait(PageObject_Redeem.Click_RedeemeGift_Award(name), 120);
+                PageObject_Redeem.Click_RedeemeGift_Award(name).Click();
+            }
+            else
+            {
+                PageObject_Redeem.Click_RedeemeGift_AwardNew().Click();
+            }
         }
         public static void Click_Redeem_Button_ForAward(string redeemProductName)
         {

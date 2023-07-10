@@ -1,0 +1,94 @@
+2023-05-17 11:58:13,598 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-17 11:58:15,806 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-17 11:58:15,822 ::INFO ::[Logger]::  is used for Testing
+2023-05-17 11:58:16,702 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.goqacendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goQAcendyn.com/SSOLanding.aspx
+2023-05-17 11:58:16,702 ::INFO ::[Logger]:: Execution started at:-May-17-2023 11-58-16-AM
+2023-05-17 11:58:16,702 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-17 11:58:16,718 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-17 11:58:16,718 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_265430         XXXXXXXXXXXXXXXX
+2023-05-17 11:58:16,718 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-17 11:58:17,143 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-17 11:58:17,146 ::INFO ::[Logger]:: Test Case : Verify when Quick dates are selected for absolute date , relative date and offset gets disabled
+2023-05-17 11:58:20,875 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-05-17 11:58:20,875 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-05-17 11:58:41,741 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-05-17 12:15:02,236 ::FATAL::[Logger]:: OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:60453/session/38de9f1b259379609661d083748ab664/element/4d886d90-f5b7-453a-bfec-b376f30ab749/value timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.SendKeys(String text)
+   at CTOS.CendynElement.<>c__DisplayClass32_0.<SendKeys>b__0()
+   at CTOS.CendynElement.TryAndWait(Action action, CancellationToken cancellationToken, Int32 timeoutMs, Int32 retryTimeout)
+   at CTOS.CendynElement.SendKeys(String text)
+   at CTOS.Input.EnterInput(String inputText)
+   at BaseUtility.Utility.Helper.ElementEnterText(IWebElement element, String text) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 387
+2023-05-17 12:15:02,256 ::FATAL::[Logger]:: Unable to select text in the Enter_Password element on the Login page.
+2023-05-17 12:15:02,259 ::ERROR::[Logger]:: RevIntel_Flow :: Script::Failed
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:60453/session/38de9f1b259379609661d083748ab664/element/4d886d90-f5b7-453a-bfec-b376f30ab749/value timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.SendKeys(String text)
+   at CTOS.CendynElement.<>c__DisplayClass32_0.<SendKeys>b__0()
+   at CTOS.CendynElement.TryAndWait(Action action, CancellationToken cancellationToken, Int32 timeoutMs, Int32 retryTimeout)
+   at CTOS.CendynElement.SendKeys(String text)
+   at CTOS.Input.EnterInput(String inputText)
+   at BaseUtility.Utility.Helper.ElementEnterText(IWebElement element, String text) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 396
+   at RevIntel.AppModule.UI.Login.Enter_Password(String str) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\Login.cs:line 18
+   at RevIntel.AppModule.UI.Login.Frontend_SignIn(String username, String password) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\Login.cs:line 44
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TC_265430() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp\TP_252734_ReportScheduler.cs:line 1826
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TP_252734() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp.cs:line 159
+   at RevIntel.RevIntel_TP_252734_ReportScheduler.TC_265430() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\TestPlan\RevIntel\RevIntel_TP_252734_ReportScheduler.cs:line 483
+2023-05-17 12:16:04,793 ::ERROR::[Logger]:: Error in Takescreenshot code
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+2023-05-17 12:17:06,306 ::ERROR::[Logger]:: Exception while taking screenshot
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:60453/session/38de9f1b259379609661d083748ab664/screenshot timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.GetScreenshot()
+   at InfoMessageLogger.ReportGeneration.CaptureScreenshot.CapturescreenShot(String filename) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\InfoMessageLogger\ReportGeneration\CaptureScreenshot.cs:line 29
+2023-05-17 12:18:35,468 ::INFO ::[Logger]:: E.N.D

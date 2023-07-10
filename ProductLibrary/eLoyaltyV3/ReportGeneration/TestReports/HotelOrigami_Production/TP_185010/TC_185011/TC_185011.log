@@ -1,16 +1,17 @@
-2023-05-08 12:25:37,693 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
-2023-05-08 12:25:37,693 ::INFO ::[Logger]:: Chrome is currently being used for testing.
-2023-05-08 12:25:37,693 ::INFO ::[Logger]::  is used for Testing
-2023-05-08 12:25:37,701 ::INFO ::[Logger]:: This is the login page.https://origamiloyalty.cendyn.com/en-US/Login?ReturnUrl=%2Fen-US%2FOverview
-2023-05-08 12:25:37,701 ::INFO ::[Logger]:: Execution started at:-May-08-2023 12-25-37-PM
-2023-05-08 12:25:37,701 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-05-08 12:25:37,701 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
-2023-05-08 12:25:37,701 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_185011         XXXXXXXXXXXXXXXX
-2023-05-08 12:25:37,709 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-05-08 12:25:37,709 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
-2023-05-08 12:25:37,709 ::DEBUG::[Logger]:: 1) user landed on login page
-2023-05-08 12:25:54,477 ::ERROR::[Logger]:: eLoyaltyV3_Flow :: Script::Failed
-System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+2023-05-15 16:37:29,164 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-15 16:37:29,168 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-15 16:37:29,170 ::INFO ::[Logger]::  is used for Testing
+2023-05-15 16:37:29,181 ::INFO ::[Logger]:: This is the login page.https://origamiloyalty.cendyn.com/en-US/Login?ReturnUrl=%2Fen-US%2FOverview
+2023-05-15 16:37:29,183 ::INFO ::[Logger]:: Execution started at:-May-15-2023 16-37-29-PM
+2023-05-15 16:37:29,185 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-15 16:37:29,187 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-15 16:37:29,189 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_185011         XXXXXXXXXXXXXXXX
+2023-05-15 16:37:29,192 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-15 16:37:29,198 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-15 16:37:29,203 ::DEBUG::[Logger]:: 1) user landed on login page
+2023-05-15 16:37:45,632 ::ERROR::[Logger]:: eLoyaltyV3_Flow :: Script::Failed
+System.Data.SqlClient.SqlException (0x80131904): Cannot open database "eInsightCRM_HotelOrigami" requested by the login. The login failed.
+Login failed for user 'eContactSupportReadOnly'.
    at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
    at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
    at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
@@ -28,6 +29,6 @@ System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-s
    at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TC_185011() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp\Frontend\TP_218533_FrontEnd_Smoke_End_To_End_Cases.cs:line 293
    at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TP_185010(String ProjectName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp.cs:line 842
    at HotelOrigami.Portal_PostDeployment_TP_185010.TC_185011() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\TestPlan\HotelOrigami\Portal_PostDeployment_TP_185010 .cs:line 145
-ClientConnectionId:00000000-0000-0000-0000-000000000000
-Error Number:53,State:0,Class:20
-2023-05-08 12:26:01,765 ::INFO ::[Logger]:: E.N.D
+ClientConnectionId:91c05eff-b82f-46b4-8eb2-230b5b8acbc6
+Error Number:4060,State:1,Class:11
+2023-05-15 16:38:15,258 ::INFO ::[Logger]:: E.N.D

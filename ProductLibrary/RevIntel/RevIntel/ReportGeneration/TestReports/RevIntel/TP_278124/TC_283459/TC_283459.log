@@ -1,0 +1,61 @@
+2023-05-17 15:10:57,039 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-17 15:10:57,039 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-17 15:10:57,054 ::INFO ::[Logger]::  is used for Testing
+2023-05-17 15:10:59,509 ::INFO ::[Logger]:: This is the login page.https://signin.letitrain.com/Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://salesdemo.revintel.co/SSOLanding.aspx
+2023-05-17 15:10:59,509 ::INFO ::[Logger]:: Execution started at:-May-17-2023 15-10-59-PM
+2023-05-17 15:10:59,509 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-17 15:10:59,509 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-17 15:10:59,509 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_283459         XXXXXXXXXXXXXXXX
+2023-05-17 15:10:59,509 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-17 15:11:00,673 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-17 15:11:00,673 ::INFO ::[Logger]:: This test cases will Verify Login and Log out is successful and URL is pointing to right database
+2023-05-17 15:11:10,474 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-05-17 15:11:10,474 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-05-17 15:11:41,083 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-05-17 15:12:00,760 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2023-05-17 15:12:00,760 ::DEBUG::[Logger]:: 2) Login in with Username =rshende@cendyn.com and Password =Cendyn321$
+2023-05-17 15:12:29,975 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2023-05-17 15:12:29,977 ::DEBUG::[Logger]:: 3) user landed on the RevIntel client selection page
+2023-05-17 15:13:34,242 ::ERROR::[Logger]:: The D Rock element was not found on the page.
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:60258/session/f2047c0581a5473e757990162a1e6fce/element timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at BaseUtility.PageObject.PageAction.Find_ElementLinkText(String repoName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\PageObject\PageAction.cs:line 49
+2023-05-17 15:14:34,250 ::ERROR::[Logger]:: RevIntel_Flow :: Script::Failed
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:60258/session/f2047c0581a5473e757990162a1e6fce/element/b9406dc9-6c01-485b-bac0-f9c3de9f3d38/rect timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.get_Location()
+   at BaseUtility.Utility.Helper.DynamicScroll(IWebDriver driver, IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 281
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TC_283459() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp\TP_278124_Post Deployment Plan.cs:line 40
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TP_278124() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp.cs:line 230
+   at RevIntel.RevIntel_TP_278124_Post_Deployment.TC_283459() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\TestPlan\RevIntel\RevIntel_TP_278124_Post_Deployment.cs:line 56
+2023-05-17 15:16:24,202 ::INFO ::[Logger]:: E.N.D

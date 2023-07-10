@@ -830,213 +830,215 @@ namespace RevIntel.AppModule.MainAdminApp
 
         //Validate the Market->Market Report Current year data
         public static void TC_269892()
-        {
+        {        
+           
             if (TestCaseId == Utility.Constants.TC_269892)
-            {
                 {
-                    string password, username, environment, currency, Business_Unit, client,
-                        startDate, enddate, hotel,
-                        FilePath, FullPath, Filename, Worksheetname = "Totals";
-                    bool scenario1 = true, scenario2 = true;
+                    {
+                        string password, username, environment, currency, Business_Unit, client,
+                            startDate, enddate, hotel,
+                            FilePath, FullPath, Filename, Worksheetname = "Totals";
+                        bool scenario1 = true, scenario2 = true;
 
-                    //Retrieve data from Database or testdata file
-                    username = TestData.ExcelData.TestDataReader.ReadData(1, "username");
-                    password = TestData.ExcelData.TestDataReader.ReadData(1, "password");
-                    client = TestData.ExcelData.TestDataReader.ReadData(1, "client");
-                    environment = TestData.ExcelData.TestDataReader.ReadData(1, "environment");
-                    hotel = TestData.ExcelData.TestDataReader.ReadData(1, "hotel");
-                    currency = TestData.ExcelData.TestDataReader.ReadData(1, "Currency");
-                    Business_Unit = TestData.ExcelData.TestDataReader.ReadData(1, "Business_Unit");
-                    startDate = TestData.ExcelData.TestDataReader.ReadData(1, "startDate");
-                    enddate = TestData.ExcelData.TestDataReader.ReadData(1, "enddate");
+                        //Retrieve data from Database or testdata file
+                        username = TestData.ExcelData.TestDataReader.ReadData(1, "username");
+                        password = TestData.ExcelData.TestDataReader.ReadData(1, "password");
+                        client = TestData.ExcelData.TestDataReader.ReadData(1, "client");
+                        environment = TestData.ExcelData.TestDataReader.ReadData(1, "environment");
+                        hotel = TestData.ExcelData.TestDataReader.ReadData(1, "hotel");
+                        currency = TestData.ExcelData.TestDataReader.ReadData(1, "Currency");
+                        Business_Unit = TestData.ExcelData.TestDataReader.ReadData(1, "Business_Unit");
+                        startDate = TestData.ExcelData.TestDataReader.ReadData(1, "startDate");
+                        enddate = TestData.ExcelData.TestDataReader.ReadData(1, "enddate");
 
-                    Logger.WriteInfoMessage("Test Case : Validate Room Type analysis Current year data");
+                        Logger.WriteInfoMessage("Test Case : Validate Room Type analysis Current year data");
 
-                    //Enter Email address and password
-                    Login.Frontend_SignIn(username, password);
-
-
-                    //Select Client 
-                    Navigation.Select_Client(client);
-
-                    Navigation.Market();
-                    Logger.WriteDebugMessage("Market menu drop down displayed");
-                    Navigation.Market_Report();
-                    AddDelay(10000);
-                    Logger.WriteDebugMessage("User Landed on Market Report Page");
-
-                    EnterFrameByxPath(PageObject_ReportParameter.iframe_Market_Report());
-
-                    //Generate the report  with Comparison Year as 1 at Hotel Level 
-                    ReportParameter.Select_Currency_Business_value(Business_Unit, currency);
-                    ReportParameter.Enter_StartDate(startDate);
-                    ReportParameter.Enter_EndDate(enddate);
-                    Logger.WriteDebugMessage("Enter start date as = " + startDate);
-                    Logger.WriteDebugMessage("Enter enddate as = " + enddate);
-                    ReportParameter.Click_RoomTypeAnalysis_ComparisonYear_DDM();
-                    Logger.WriteDebugMessage("Comparison Year DDM clicked");
-                    ReportParameter.Select_RoomTypeAnalysis_ComparisonYear1();
-                    Logger.WriteDebugMessage("Comparison year selected as 1");
-                    Helper.ScrollToText("View Analysis");
-                    ReportParameter.Click_View_Analysis();
-                    Helper.AddDelay(50000);
-                    Logger.WriteDebugMessage("Report generated");
-
-                    //Verify Data in export document and in front end 
-                    ReportParameter.Report_Excel_Format();
-
-                    FilePath = Environment.GetEnvironmentVariable("USERPROFILE") + @"\" + "Downloads";
-                    Filename = ReportParameter.VerifyFileFormate(FilePath);
-                    FullPath = TestData.ExcelData.ExcelDataReader.GetNewestFile((FilePath));
-
-                    TestData.ExcelData.ExcelDataReader tt1 = new TestData.ExcelData.ExcelDataReader(FullPath);
-                    string RoomSold_CompaYear1 = tt1.GetCellData(Worksheetname, 4,1514);
-                    string Mix_CompaYear1 = tt1.GetCellData(Worksheetname, 5, 1514);
-                    string ADR_CompaYear1 = tt1.GetCellData(Worksheetname, 6, 1514);
-                    string Revenue_CompaYear1 = tt1.GetCellData(Worksheetname, 7, 1514);
-
-                    //Report with Comparison Year as 2 at Hotel Level
-                    Helper.ReloadPage();
-                    Navigation.Market();
-                    Logger.WriteDebugMessage("Market menu drop down displayed");
-                    Navigation.Market_Report();
-                    AddDelay(10000);
-                    Logger.WriteDebugMessage("User Landed on Market Report Page");
-
-                    EnterFrameByxPath(PageObject_ReportParameter.iframe_Market_Report());
-
-                    //Generate the report  with Comparison Year as 2 at Hotel Level 
-                    ReportParameter.Select_Currency_Business_value(Business_Unit, currency);
-                    ReportParameter.Enter_StartDate(startDate);
-                    ReportParameter.Enter_EndDate(enddate);
-                    Logger.WriteDebugMessage("Enter start date as = " + startDate);
-                    Logger.WriteDebugMessage("Enter enddate as = " + enddate);
-                    ReportParameter.Click_RoomTypeAnalysis_ComparisonYear_DDM();
-                    ReportParameter.Select_RoomTypeAnalysis_ComparisonYear2();
-                    Logger.WriteDebugMessage("Comparison year selected as 2");
-                    ReportParameter.Click_View_Analysis();
-                    Helper.AddDelay(50000);
-                    Logger.WriteDebugMessage("Report generated");
-
-                    //Verify Data in export document and in front end 
-                    ReportParameter.Report_Excel_Format();
-
-                    FilePath = Environment.GetEnvironmentVariable("USERPROFILE") + @"\" + "Downloads";
-                    Filename = ReportParameter.VerifyFileFormate(FilePath);
-                    FullPath = TestData.ExcelData.ExcelDataReader.GetNewestFile((FilePath));
-
-                    TestData.ExcelData.ExcelDataReader rr = new TestData.ExcelData.ExcelDataReader(FullPath);
-                    string RoomSold_CompaYear2 = rr.GetCellData(Worksheetname, 4, 1217);
-                    string Mix_CompaYear2 = rr.GetCellData(Worksheetname, 5, 1217);
-                    string ADR_CompaYear2 = rr.GetCellData(Worksheetname, 6, 1217);
-                    string Revenue_CompaYear2 = rr.GetCellData(Worksheetname, 7, 1217);
-
-                    //Report with Comparison Year as 3 at Hotel Level
-                    Helper.ReloadPage();
-                    Navigation.Market();
-                    Logger.WriteDebugMessage("Market menu drop down displayed");
-                    Navigation.Market_Report();
-                    AddDelay(10000);
-                    Logger.WriteDebugMessage("User Landed on Market Report Page");
-
-                    EnterFrameByxPath(PageObject_ReportParameter.iframe_Market_Report());
-
-                    //Generate the report  with Comparison Year as 3 at Hotel Level 
-                    ReportParameter.Select_Currency_Business_value(Business_Unit, currency);
-                    ReportParameter.Enter_StartDate(startDate);
-                    ReportParameter.Enter_EndDate(enddate);
-                    Logger.WriteDebugMessage("Enter start date as = " + startDate);
-                    Logger.WriteDebugMessage("Enter enddate as = " + enddate);
-                    ReportParameter.Click_RoomTypeAnalysis_ComparisonYear_DDM();
-                    ReportParameter.Select_RoomTypeAnalysis_ComparisonYear3();
-                    Logger.WriteDebugMessage("Comparison year selected as 3");
-                    ReportParameter.Click_View_Analysis();
-                    Helper.AddDelay(50000);
-                    Logger.WriteDebugMessage("Report generated");
-
-                    //Verify Data in export document and in front end 
-                    ReportParameter.Report_Excel_Format();
-
-                    FilePath = Environment.GetEnvironmentVariable("USERPROFILE") + @"\" + "Downloads";
-                    Filename = ReportParameter.VerifyFileFormate(FilePath);
-                    FullPath = TestData.ExcelData.ExcelDataReader.GetNewestFile((FilePath));
-
-                    TestData.ExcelData.ExcelDataReader uu = new TestData.ExcelData.ExcelDataReader(FullPath);
-                    string RoomSold_CompaYear3 = uu.GetCellData(Worksheetname, 4, 1265);
-                    string Mix_CompaYear3 = uu.GetCellData(Worksheetname, 5, 1265);
-                    string ADR_CompaYear3 = uu.GetCellData(Worksheetname, 6, 1265);
-                    string Revenue_CompaYear3 = uu.GetCellData(Worksheetname, 7, 1265);
-
-                    //Validation by comparing reports
-                    //Compare report Current year value for Comparision year 1 and comparision year 2.
-                    if (RoomSold_CompaYear1.Equals(RoomSold_CompaYear2))
-                        Logger.WriteDebugMessage("Total Room Sold value under current year section matched with Comparision year 1 and comparision year 2");
-                    else
-                        Assert.Fail("Total Room Sold value under current year section not matched with Comparision year 1 and comparision year 2");
-
-                    if (Mix_CompaYear1.Equals(Mix_CompaYear2))
-                        Logger.WriteDebugMessage("Total Mix% value under current year section matched with Comparision year 1 and comparision year 2");
-                    else
-                        Assert.Fail("Total Mix% value under current year section not matched with Comparision year 1 and comparision year 2");
-
-                    if (ADR_CompaYear1.Equals(ADR_CompaYear2))
-                        Logger.WriteDebugMessage("Total ADR value under current year section matched with Comparision year 1 and comparision year 2");
-                    else
-                        Assert.Fail("Total ADR value under current year section not matched with Comparision year 1 and comparision year 2");
-
-                    if (Revenue_CompaYear1.Equals(Revenue_CompaYear2))
-                        Logger.WriteDebugMessage("Total Revenue value under current year section matched with Comparision year 1 and comparision year 2");
-                    else
-                        scenario1 = false;
+                        //Enter Email address and password
+                        Login.Frontend_SignIn(username, password);
 
 
-                    //Compare report Current year value for Comparision year 1 and comparision year 3.
-                    if (RoomSold_CompaYear1.Equals(RoomSold_CompaYear3))
-                        Logger.WriteDebugMessage("Total Room Sold value under current year section matched with Comparision year 1 and comparision year 3");
-                    else
-                        Assert.Fail("Total Room Sold value under current year section not matched with Comparision year 1 and comparision year 3");
+                        //Select Client 
+                        Navigation.Select_Client(client);
 
-                    if (Mix_CompaYear1.Equals(Mix_CompaYear3))
-                        Logger.WriteDebugMessage("Total Mix% value under current year section matched with Comparision year 1 and comparision year 3");
-                    else
-                        Assert.Fail("Total Mix% value under current year section not matched with Comparision year 1 and comparision year 3");
+                        Navigation.Market();
+                        Logger.WriteDebugMessage("Market menu drop down displayed");
+                        Navigation.Market_Report();
+                        AddDelay(10000);
+                        Logger.WriteDebugMessage("User Landed on Market Report Page");
 
-                    if (ADR_CompaYear1.Equals(ADR_CompaYear3))
-                        Logger.WriteDebugMessage("Total ADR value under current year section matched with Comparision year 1 and comparision year 3");
-                    else
-                        Assert.Fail("Total ADR value under current year section not matched with Comparision year 1 and comparision year 3");
+                        EnterFrameByxPath(PageObject_ReportParameter.iframe_Market_Report());
 
-                    if (Revenue_CompaYear1.Equals(Revenue_CompaYear3))
-                        Logger.WriteDebugMessage("Total Revenue value under current year section matched with Comparision year 1 and comparision year 3");
-                    else
-                        scenario2 = false;
+                        //Generate the report  with Comparison Year as 1 at Hotel Level 
+                        ReportParameter.Select_Currency_Business_value(Business_Unit, currency);
+                        ReportParameter.Enter_StartDate(startDate);
+                        ReportParameter.Enter_EndDate(enddate);
+                        Logger.WriteDebugMessage("Enter start date as = " + startDate);
+                        Logger.WriteDebugMessage("Enter enddate as = " + enddate);
+                        ReportParameter.Click_RoomTypeAnalysis_ComparisonYear_DDM();
+                        Logger.WriteDebugMessage("Comparison Year DDM clicked");
+                        ReportParameter.Select_RoomTypeAnalysis_ComparisonYear1();
+                        Logger.WriteDebugMessage("Comparison year selected as 1");
+                        Helper.ScrollToText("View Analysis");
+                        ReportParameter.Click_View_Analysis();
+                        Helper.AddDelay(50000);
+                        Logger.WriteDebugMessage("Report generated");
 
-                    //Delete downloaded file
-                    TestData.ExcelData.ExcelDataReader.deleteFile(FilePath);
+                        //Verify Data in export document and in front end 
+                        ReportParameter.Report_Excel_Format();
 
-                    //Log test data into log file as well as extent report
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_username", username);
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Password", password);
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_environment", environment);
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_client", client);
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Business_Unit", Business_Unit);
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Currency", currency);
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_hotel", hotel);
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Start Date", startDate);
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_End Date", enddate);
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Room sold value under current year section for Comparision year 1", RoomSold_CompaYear1);
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Mix% value under current year section for Comparision year 1", Mix_CompaYear1);
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_ADR value under current year section for Comparision year 1", ADR_CompaYear1);
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Revenue value under current year section for Comparision year 1", Revenue_CompaYear1);
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Room sold value under current year section for Comparision year 2", RoomSold_CompaYear2);
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Mix% value under current year section for Comparision year 2", Mix_CompaYear2);
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_ADR value under current year section for Comparision year 2", ADR_CompaYear2);
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Revenue value under current year section for Comparision year 2", Revenue_CompaYear2);
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Room sold value under current year section for Comparision year 3", RoomSold_CompaYear3);
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Mix% value under current year section for Comparision year 3", Mix_CompaYear3);
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_ADR value under current year section for Comparision year 3", ADR_CompaYear3);
-                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Revenue sold value under current year section for Comparision year 3", RoomSold_CompaYear3, true);
-                }
+                        FilePath = Environment.GetEnvironmentVariable("USERPROFILE") + @"\" + "Downloads";
+                        Filename = ReportParameter.VerifyFileFormate(FilePath);
+                        FullPath = TestData.ExcelData.ExcelDataReader.GetNewestFile((FilePath));
+
+                        TestData.ExcelData.ExcelDataReader tt1 = new TestData.ExcelData.ExcelDataReader(FullPath);
+                        string RoomSold_CompaYear1 = tt1.GetCellData(Worksheetname, 4, 1514);
+                        string Mix_CompaYear1 = tt1.GetCellData(Worksheetname, 5, 1514);
+                        string ADR_CompaYear1 = tt1.GetCellData(Worksheetname, 6, 1514);
+                        string Revenue_CompaYear1 = tt1.GetCellData(Worksheetname, 7, 1514);
+
+                        //Report with Comparison Year as 2 at Hotel Level
+                        Helper.ReloadPage();
+                        Navigation.Market();
+                        Logger.WriteDebugMessage("Market menu drop down displayed");
+                        Navigation.Market_Report();
+                        AddDelay(10000);
+                        Logger.WriteDebugMessage("User Landed on Market Report Page");
+
+                        EnterFrameByxPath(PageObject_ReportParameter.iframe_Market_Report());
+
+                        //Generate the report  with Comparison Year as 2 at Hotel Level 
+                        ReportParameter.Select_Currency_Business_value(Business_Unit, currency);
+                        ReportParameter.Enter_StartDate(startDate);
+                        ReportParameter.Enter_EndDate(enddate);
+                        Logger.WriteDebugMessage("Enter start date as = " + startDate);
+                        Logger.WriteDebugMessage("Enter enddate as = " + enddate);
+                        ReportParameter.Click_RoomTypeAnalysis_ComparisonYear_DDM();
+                        ReportParameter.Select_RoomTypeAnalysis_ComparisonYear2();
+                        Logger.WriteDebugMessage("Comparison year selected as 2");
+                        ReportParameter.Click_View_Analysis();
+                        Helper.AddDelay(50000);
+                        Logger.WriteDebugMessage("Report generated");
+
+                        //Verify Data in export document and in front end 
+                        ReportParameter.Report_Excel_Format();
+
+                        FilePath = Environment.GetEnvironmentVariable("USERPROFILE") + @"\" + "Downloads";
+                        Filename = ReportParameter.VerifyFileFormate(FilePath);
+                        FullPath = TestData.ExcelData.ExcelDataReader.GetNewestFile((FilePath));
+
+                        TestData.ExcelData.ExcelDataReader rr = new TestData.ExcelData.ExcelDataReader(FullPath);
+                        string RoomSold_CompaYear2 = rr.GetCellData(Worksheetname, 4, 1217);
+                        string Mix_CompaYear2 = rr.GetCellData(Worksheetname, 5, 1217);
+                        string ADR_CompaYear2 = rr.GetCellData(Worksheetname, 6, 1217);
+                        string Revenue_CompaYear2 = rr.GetCellData(Worksheetname, 7, 1217);
+
+                        //Report with Comparison Year as 3 at Hotel Level
+                        Helper.ReloadPage();
+                        Navigation.Market();
+                        Logger.WriteDebugMessage("Market menu drop down displayed");
+                        Navigation.Market_Report();
+                        AddDelay(10000);
+                        Logger.WriteDebugMessage("User Landed on Market Report Page");
+
+                        EnterFrameByxPath(PageObject_ReportParameter.iframe_Market_Report());
+
+                        //Generate the report  with Comparison Year as 3 at Hotel Level 
+                        ReportParameter.Select_Currency_Business_value(Business_Unit, currency);
+                        ReportParameter.Enter_StartDate(startDate);
+                        ReportParameter.Enter_EndDate(enddate);
+                        Logger.WriteDebugMessage("Enter start date as = " + startDate);
+                        Logger.WriteDebugMessage("Enter enddate as = " + enddate);
+                        ReportParameter.Click_RoomTypeAnalysis_ComparisonYear_DDM();
+                        ReportParameter.Select_RoomTypeAnalysis_ComparisonYear3();
+                        Logger.WriteDebugMessage("Comparison year selected as 3");
+                        ReportParameter.Click_View_Analysis();
+                        Helper.AddDelay(50000);
+                        Logger.WriteDebugMessage("Report generated");
+
+                        //Verify Data in export document and in front end 
+                        ReportParameter.Report_Excel_Format();
+
+                        FilePath = Environment.GetEnvironmentVariable("USERPROFILE") + @"\" + "Downloads";
+                        Filename = ReportParameter.VerifyFileFormate(FilePath);
+                        FullPath = TestData.ExcelData.ExcelDataReader.GetNewestFile((FilePath));
+
+                        TestData.ExcelData.ExcelDataReader uu = new TestData.ExcelData.ExcelDataReader(FullPath);
+                        string RoomSold_CompaYear3 = uu.GetCellData(Worksheetname, 4, 1265);
+                        string Mix_CompaYear3 = uu.GetCellData(Worksheetname, 5, 1265);
+                        string ADR_CompaYear3 = uu.GetCellData(Worksheetname, 6, 1265);
+                        string Revenue_CompaYear3 = uu.GetCellData(Worksheetname, 7, 1265);
+
+                        //Validation by comparing reports
+                        //Compare report Current year value for Comparision year 1 and comparision year 2.
+                        if (RoomSold_CompaYear1.Equals(RoomSold_CompaYear2))
+                            Logger.WriteDebugMessage("Total Room Sold value under current year section matched with Comparision year 1 and comparision year 2");
+                        else
+                            Assert.Fail("Total Room Sold value under current year section not matched with Comparision year 1 and comparision year 2");
+
+                        if (Mix_CompaYear1.Equals(Mix_CompaYear2))
+                            Logger.WriteDebugMessage("Total Mix% value under current year section matched with Comparision year 1 and comparision year 2");
+                        else
+                            Assert.Fail("Total Mix% value under current year section not matched with Comparision year 1 and comparision year 2");
+
+                        if (ADR_CompaYear1.Equals(ADR_CompaYear2))
+                            Logger.WriteDebugMessage("Total ADR value under current year section matched with Comparision year 1 and comparision year 2");
+                        else
+                            Assert.Fail("Total ADR value under current year section not matched with Comparision year 1 and comparision year 2");
+
+                        if (Revenue_CompaYear1.Equals(Revenue_CompaYear2))
+                            Logger.WriteDebugMessage("Total Revenue value under current year section matched with Comparision year 1 and comparision year 2");
+                        else
+                            scenario1 = false;
+
+
+                        //Compare report Current year value for Comparision year 1 and comparision year 3.
+                        if (RoomSold_CompaYear1.Equals(RoomSold_CompaYear3))
+                            Logger.WriteDebugMessage("Total Room Sold value under current year section matched with Comparision year 1 and comparision year 3");
+                        else
+                            Assert.Fail("Total Room Sold value under current year section not matched with Comparision year 1 and comparision year 3");
+
+                        if (Mix_CompaYear1.Equals(Mix_CompaYear3))
+                            Logger.WriteDebugMessage("Total Mix% value under current year section matched with Comparision year 1 and comparision year 3");
+                        else
+                            Assert.Fail("Total Mix% value under current year section not matched with Comparision year 1 and comparision year 3");
+
+                        if (ADR_CompaYear1.Equals(ADR_CompaYear3))
+                            Logger.WriteDebugMessage("Total ADR value under current year section matched with Comparision year 1 and comparision year 3");
+                        else
+                            Assert.Fail("Total ADR value under current year section not matched with Comparision year 1 and comparision year 3");
+
+                        if (Revenue_CompaYear1.Equals(Revenue_CompaYear3))
+                            Logger.WriteDebugMessage("Total Revenue value under current year section matched with Comparision year 1 and comparision year 3");
+                        else
+                            scenario2 = false;
+
+                        //Delete downloaded file
+                        TestData.ExcelData.ExcelDataReader.deleteFile(FilePath);
+
+                        //Log test data into log file as well as extent report
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_username", username);
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Password", password);
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_environment", environment);
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_client", client);
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Business_Unit", Business_Unit);
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Currency", currency);
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_hotel", hotel);
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Start Date", startDate);
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_End Date", enddate);
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Room sold value under current year section for Comparision year 1", RoomSold_CompaYear1);
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Mix% value under current year section for Comparision year 1", Mix_CompaYear1);
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_ADR value under current year section for Comparision year 1", ADR_CompaYear1);
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Revenue value under current year section for Comparision year 1", Revenue_CompaYear1);
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Room sold value under current year section for Comparision year 2", RoomSold_CompaYear2);
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Mix% value under current year section for Comparision year 2", Mix_CompaYear2);
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_ADR value under current year section for Comparision year 2", ADR_CompaYear2);
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Revenue value under current year section for Comparision year 2", Revenue_CompaYear2);
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Room sold value under current year section for Comparision year 3", RoomSold_CompaYear3);
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Mix% value under current year section for Comparision year 3", Mix_CompaYear3);
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_ADR value under current year section for Comparision year 3", ADR_CompaYear3);
+                        Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Revenue sold value under current year section for Comparision year 3", RoomSold_CompaYear3, true);
+                    }
+                
             }
         }
     }

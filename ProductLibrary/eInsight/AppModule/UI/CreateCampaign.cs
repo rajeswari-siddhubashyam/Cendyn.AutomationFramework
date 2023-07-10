@@ -486,7 +486,7 @@ namespace eInsight.AppModule.UI
         //li[@class='active-result'][text()='NU Hotel']
         public static string CreateCampaign_CriteriaToTestingTab(int ProjectID,string EToEFlowName, string EmailType, string FromName, string ReplyEmail, string subject)
         {
-            string CampaignName = GetRandomAlphaNumericString(4);
+            string CampaignName = GetRandomAlphaNumericString(0,1);
             try
             {
                 CreateCampaign_Create();                
@@ -504,10 +504,11 @@ namespace eInsight.AppModule.UI
                 //Logger.WriteDebugMessage("Landed on Edit Template Tab");
                 CreateCampaign_EditTemplate(EmailType, FromName, ReplyEmail, subject);
                 AddDelay(5000);
-                Logger.WriteDebugMessage("Landed on Testing Tab");
-                Driver.SwitchTo().DefaultContent();
-                ((IJavaScriptExecutor)Driver).ExecuteScript("arguments[0].click();", Driver.FindElement(By.XPath("//a[@id='save']")));
-                Logger.WriteDebugMessage("Clicked on 'Proceed' Button");
+                CreateCampaign.CreateCampaign_TestingTabProceedButton();
+               // Logger.WriteDebugMessage("Landed on Testing Tab");
+                //Driver.SwitchTo().DefaultContent();
+                //((IJavaScriptExecutor)Driver).ExecuteScript("arguments[0].click();", Driver.FindElement(By.XPath("//a[@id='save']")));
+                //Logger.WriteDebugMessage("Clicked on 'Proceed' Button");
             }
             catch (Exception ex)
             {

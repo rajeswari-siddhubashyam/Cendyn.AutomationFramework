@@ -143,6 +143,13 @@ namespace eLoyaltyV3.PageObject.UI
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath("//*[contains(text(),'" + name + "')]//following::button[1]");
         }
+        public static IWebElement Click_RedeemeGift_AwardNew()
+        {
+            ScanPage(Constants.Reedem);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath("(//button[@class='btn btn-alternate btn-md redeemGiftBtn'])[1]");
+        }
 
         public static IWebElement Get_RedeemProductName(string productName)
         {

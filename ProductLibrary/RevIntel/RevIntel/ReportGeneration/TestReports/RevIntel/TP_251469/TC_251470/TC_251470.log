@@ -1,13 +1,13 @@
-2023-04-29 13:40:26,842 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
-2023-04-29 13:40:28,924 ::INFO ::[Logger]:: Chrome is currently being used for testing.
-2023-04-29 13:40:29,065 ::INFO ::[Logger]::  is used for Testing
-2023-04-29 13:40:29,081 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.godevcendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goDEVcendyn.com/SSOLanding.aspx
-2023-04-29 13:40:29,081 ::INFO ::[Logger]:: Execution started at:-Apr-29-2023 13-40-29-PM
-2023-04-29 13:40:29,128 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-04-29 13:40:29,128 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
-2023-04-29 13:40:29,128 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_251470         XXXXXXXXXXXXXXXX
-2023-04-29 13:40:29,206 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-04-29 13:40:29,206 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
-2023-04-29 13:40:29,222 ::INFO ::[Logger]:: This test cases will Verify Login and Log out is successful and URL is pointing to right database
-2023-04-29 13:40:29,269 ::INFO ::[Logger]:: RevIntel:: Script ::Passed
-2023-04-29 13:40:57,444 ::INFO ::[Logger]:: E.N.D
+2023-05-16 14:29:22,458 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-16 14:29:23,484 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-16 14:29:23,511 ::INFO ::[Logger]::  is used for Testing
+2023-05-16 14:29:23,545 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.godevcendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goDEVcendyn.com/SSOLanding.aspx
+2023-05-16 14:29:23,558 ::INFO ::[Logger]:: Execution started at:-May-16-2023 14-29-23-PM
+2023-05-16 14:29:23,561 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 14:29:23,566 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-16 14:29:23,568 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_251470         XXXXXXXXXXXXXXXX
+2023-05-16 14:29:23,569 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 14:29:23,827 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-16 14:29:23,845 ::INFO ::[Logger]:: This test cases will Verify Login and Log out is successful and URL is pointing to right database
+2023-05-16 14:29:23,959 ::INFO ::[Logger]:: RevIntel:: Script ::Passed
+2023-05-16 14:30:06,387 ::INFO ::[Logger]:: E.N.D

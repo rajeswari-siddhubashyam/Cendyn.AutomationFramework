@@ -1,56 +1,56 @@
-2023-04-29 13:42:23,884 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
-2023-04-29 13:42:24,041 ::INFO ::[Logger]:: Chrome is currently being used for testing.
-2023-04-29 13:42:24,041 ::INFO ::[Logger]::  is used for Testing
-2023-04-29 13:42:24,057 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.godevcendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goDEVcendyn.com/SSOLanding.aspx
-2023-04-29 13:42:24,057 ::INFO ::[Logger]:: Execution started at:-Apr-29-2023 13-42-24-PM
-2023-04-29 13:42:24,150 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-04-29 13:42:24,150 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
-2023-04-29 13:42:24,150 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_252390         XXXXXXXXXXXXXXXX
-2023-04-29 13:42:24,150 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-04-29 13:42:24,166 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
-2023-04-29 13:42:24,182 ::INFO ::[Logger]:: Test Case : Verify the default filter value and eyeball on calculated field in report
-2023-04-29 13:42:26,209 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
-2023-04-29 13:42:26,225 ::DEBUG::[Logger]:: 1) Email Address displayed
-2023-04-29 13:42:35,782 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
-2023-04-29 13:42:42,105 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
-2023-04-29 13:42:42,246 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
-2023-04-29 13:43:01,843 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
-2023-04-29 13:43:01,859 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
-2023-04-29 13:43:05,469 ::DEBUG::[Logger]:: 4) Client displayed
-2023-04-29 13:43:32,318 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
-2023-04-29 13:43:32,322 ::DEBUG::[Logger]:: 5) D Rock selected
-2023-04-29 13:43:45,327 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
-2023-04-29 13:43:47,923 ::DEBUG::[Logger]:: 7) Actual url = https://revintelbi.godevcendyn.com/revintel.aspx match with Expected url = 
-2023-04-29 13:43:55,671 ::INFO ::[Logger]:: Clicked the Select_DropDown element on the Login page.
-2023-04-29 13:43:55,812 ::DEBUG::[Logger]:: 8) Drop down displayed
-2023-04-29 13:44:03,664 ::INFO ::[Logger]:: Clicked the user_preferences element on the Navigation page.
-2023-04-29 13:44:08,885 ::INFO ::[Logger]:: Clicked the Select_DropDown element on the Login page.
-2023-04-29 13:44:08,901 ::DEBUG::[Logger]:: 9) User landed on User preference page
-2023-04-29 13:44:16,642 ::INFO ::[Logger]:: Switching into the iFrame.
-2023-04-29 13:44:18,179 ::INFO ::[Logger]:: Switching out of the iFrame.
-2023-04-29 13:44:35,378 ::INFO ::[Logger]:: Switching into the iFrame.
-2023-04-29 13:44:37,998 ::DEBUG::[Logger]:: 10) Monthly Pickup page Hotel Value matched with user preference hotel value
-2023-04-29 13:44:40,349 ::DEBUG::[Logger]:: 11) Monthly Pickup page Curremcy Value matched with user preference Currency value
-2023-04-29 13:44:42,708 ::DEBUG::[Logger]:: 12) Monthly Pickup page Business_Unit Value matched with user preference Business_Unit value
-2023-04-29 13:44:45,075 ::DEBUG::[Logger]:: 13) Monthly Pickup page start matched 
-2023-04-29 13:44:47,393 ::DEBUG::[Logger]:: 14) Monthly Pickup page Pickup_End matched
-2023-04-29 13:44:49,585 ::DEBUG::[Logger]:: 15) Start matched
-2023-04-29 13:44:51,887 ::DEBUG::[Logger]:: 16) End matched
-2023-04-29 13:44:58,091 ::DEBUG::[Logger]:: TestPlan :- TP_251469 Testcase :- TC_252390
-2023-04-29 13:44:58,101 ::DEBUG::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~Test Data Used~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-04-29 13:44:58,107 ::DEBUG::[Logger]::  Value for : TC_252390_username is : Testautomation@cendyn17.com
-2023-04-29 13:44:58,107 ::DEBUG::[Logger]::  Value for : TC_252390_Password is : Cendyn123$
-2023-04-29 13:44:58,139 ::DEBUG::[Logger]::  Value for : TC_252390_environment is : Automation
-2023-04-29 13:44:58,139 ::DEBUG::[Logger]::  Value for : TC_252390_client is : D Rock
-2023-04-29 13:44:58,139 ::DEBUG::[Logger]::  Value for : TC_252390_userPref_Hotel is : The D
-2023-04-29 13:44:58,201 ::DEBUG::[Logger]::  Value for : TC_252390_userPref_Currency is : USD
-2023-04-29 13:44:58,201 ::DEBUG::[Logger]::  Value for : TC_252390_userPref_Business_Unit is : Hotel
-2023-04-29 13:44:58,264 ::DEBUG::[Logger]::  Value for : TC_252390_MonthlyPickup_Hotel is : The D
-2023-04-29 13:44:58,264 ::DEBUG::[Logger]::  Value for : TC_252390_MonthlyPickup_Currency is : USD
-2023-04-29 13:44:58,279 ::DEBUG::[Logger]::  Value for : TC_252390_MonthlyPickup_Business_Unit is : Hotel
-2023-04-29 13:44:58,279 ::DEBUG::[Logger]::  Value for : TC_252390_MonthlyPickup_Pickupstart is : 4/28/2023
-2023-04-29 13:44:58,279 ::DEBUG::[Logger]::  Value for : TC_252390_MonthlyPickup_PickupEnd is : 4/29/2023
-2023-04-29 13:44:58,279 ::DEBUG::[Logger]::  Value for : TC_252390_MonthlyPickup_Start is : Jan 2023
-2023-04-29 13:44:58,311 ::DEBUG::[Logger]::  Value for : TC_252390_MonthlyPickup_End is : Dec 2023
-2023-04-29 13:44:59,362 ::INFO ::[Logger]:: RevIntel:: Script ::Passed
-2023-04-29 13:45:24,001 ::INFO ::[Logger]:: E.N.D
+2023-05-16 14:33:52,483 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-16 14:33:52,835 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-16 14:33:52,847 ::INFO ::[Logger]::  is used for Testing
+2023-05-16 14:33:53,103 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.godevcendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goDEVcendyn.com/SSOLanding.aspx
+2023-05-16 14:33:53,106 ::INFO ::[Logger]:: Execution started at:-May-16-2023 14-33-53-PM
+2023-05-16 14:33:53,112 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 14:33:58,377 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-16 14:33:58,378 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_252390         XXXXXXXXXXXXXXXX
+2023-05-16 14:33:58,602 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 14:33:58,611 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-16 14:33:58,630 ::INFO ::[Logger]:: Test Case : Verify the default filter value and eyeball on calculated field in report
+2023-05-16 14:34:01,325 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-05-16 14:34:01,338 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-05-16 14:34:14,135 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-05-16 14:34:16,397 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2023-05-16 14:34:16,419 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
+2023-05-16 14:34:31,782 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2023-05-16 14:34:31,801 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
+2023-05-16 14:34:35,719 ::DEBUG::[Logger]:: 4) Client displayed
+2023-05-16 14:35:07,049 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
+2023-05-16 14:35:07,089 ::DEBUG::[Logger]:: 5) D Rock selected
+2023-05-16 14:35:20,485 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
+2023-05-16 14:35:23,043 ::DEBUG::[Logger]:: 7) Actual url = https://revintelbi.godevcendyn.com/revintel.aspx match with Expected url = 
+2023-05-16 14:35:33,681 ::INFO ::[Logger]:: Clicked the Select_DropDown element on the Login page.
+2023-05-16 14:35:33,685 ::DEBUG::[Logger]:: 8) Drop down displayed
+2023-05-16 14:35:41,865 ::INFO ::[Logger]:: Clicked the user_preferences element on the Navigation page.
+2023-05-16 14:35:47,263 ::INFO ::[Logger]:: Clicked the Select_DropDown element on the Login page.
+2023-05-16 14:35:47,298 ::DEBUG::[Logger]:: 9) User landed on User preference page
+2023-05-16 14:35:54,844 ::INFO ::[Logger]:: Switching into the iFrame.
+2023-05-16 14:36:01,408 ::INFO ::[Logger]:: Switching out of the iFrame.
+2023-05-16 14:36:19,932 ::INFO ::[Logger]:: Switching into the iFrame.
+2023-05-16 14:36:23,773 ::DEBUG::[Logger]:: 10) Monthly Pickup page Hotel Value matched with user preference hotel value
+2023-05-16 14:36:26,715 ::DEBUG::[Logger]:: 11) Monthly Pickup page Curremcy Value matched with user preference Currency value
+2023-05-16 14:36:29,341 ::DEBUG::[Logger]:: 12) Monthly Pickup page Business_Unit Value matched with user preference Business_Unit value
+2023-05-16 14:36:32,041 ::DEBUG::[Logger]:: 13) Monthly Pickup page start matched 
+2023-05-16 14:36:34,826 ::DEBUG::[Logger]:: 14) Monthly Pickup page Pickup_End matched
+2023-05-16 14:36:37,615 ::DEBUG::[Logger]:: 15) Start matched
+2023-05-16 14:36:40,907 ::DEBUG::[Logger]:: 16) End matched
+2023-05-16 14:36:44,643 ::DEBUG::[Logger]:: TestPlan :- TP_251469 Testcase :- TC_252390
+2023-05-16 14:36:44,664 ::DEBUG::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~Test Data Used~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 14:36:44,668 ::DEBUG::[Logger]::  Value for : TC_252390_username is : Testautomation@cendyn17.com
+2023-05-16 14:36:44,684 ::DEBUG::[Logger]::  Value for : TC_252390_Password is : Cendyn123$
+2023-05-16 14:36:44,687 ::DEBUG::[Logger]::  Value for : TC_252390_environment is : Automation
+2023-05-16 14:36:44,693 ::DEBUG::[Logger]::  Value for : TC_252390_client is : D Rock
+2023-05-16 14:36:44,748 ::DEBUG::[Logger]::  Value for : TC_252390_userPref_Hotel is : The D
+2023-05-16 14:36:44,750 ::DEBUG::[Logger]::  Value for : TC_252390_userPref_Currency is : USD
+2023-05-16 14:36:44,752 ::DEBUG::[Logger]::  Value for : TC_252390_userPref_Business_Unit is : Hotel
+2023-05-16 14:36:44,754 ::DEBUG::[Logger]::  Value for : TC_252390_MonthlyPickup_Hotel is : The D
+2023-05-16 14:36:44,756 ::DEBUG::[Logger]::  Value for : TC_252390_MonthlyPickup_Currency is : USD
+2023-05-16 14:36:44,758 ::DEBUG::[Logger]::  Value for : TC_252390_MonthlyPickup_Business_Unit is : Hotel
+2023-05-16 14:36:44,904 ::DEBUG::[Logger]::  Value for : TC_252390_MonthlyPickup_Pickupstart is : 5/15/2023
+2023-05-16 14:36:44,913 ::DEBUG::[Logger]::  Value for : TC_252390_MonthlyPickup_PickupEnd is : 5/16/2023
+2023-05-16 14:36:44,915 ::DEBUG::[Logger]::  Value for : TC_252390_MonthlyPickup_Start is : Jan 2023
+2023-05-16 14:36:44,917 ::DEBUG::[Logger]::  Value for : TC_252390_MonthlyPickup_End is : Dec 2023
+2023-05-16 14:36:46,037 ::INFO ::[Logger]:: RevIntel:: Script ::Passed
+2023-05-16 14:37:36,794 ::INFO ::[Logger]:: E.N.D

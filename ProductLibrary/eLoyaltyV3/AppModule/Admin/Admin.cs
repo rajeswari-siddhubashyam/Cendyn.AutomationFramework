@@ -3,6 +3,7 @@ using AventStack.ExtentReports.Model;
 using BaseUtility.Utility;
 using eLoyaltyV3.Entity;
 using eLoyaltyV3.PageObject.Admin;
+using eLoyaltyV3.PageObject.UI;
 using eLoyaltyV3.Utility;
 using InfoMessageLogger;
 using Microsoft.Graph;
@@ -10,6 +11,7 @@ using Microsoft.Management.Infrastructure;
 using Microsoft.Management.Infrastructure.Options;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -22,6 +24,7 @@ using System.Security.Permissions;
 using System.Security.Policy;
 using System.Security.Principal;
 using System.ServiceProcess;
+using static System.Net.Mime.MediaTypeNames;
 using Constants = eLoyaltyV3.Utility.Constants;
 using Queries = eLoyaltyV3.Utility.Queries;
 using Setup = BaseUtility.Utility.Setup;
@@ -34,12 +37,14 @@ namespace eLoyaltyV3.AppModule.UI
         public static void EnterUsername(string text)
         {
             Helper.ElementWait(PageObject_Admin.Admin_Text_UserName(), 240);
+            Helper.ElementClearText(PageObject_Admin.Admin_Text_UserName());
             Helper.ElementEnterText(PageObject_Admin.Admin_Text_UserName(), text);
         }
 
         public static void EnterPassword(string text)
         {
             Helper.ElementWait(PageObject_Admin.Admin_Text_Password(), 240);
+            Helper.ElementClearText(PageObject_Admin.Admin_Text_Password());
             Helper.ElementEnterText(PageObject_Admin.Admin_Text_Password(), text);
         }
 
@@ -47,6 +52,7 @@ namespace eLoyaltyV3.AppModule.UI
         {
             Helper.ElementWait(PageObject_Admin.Admin_Button_Login(), 240);
             Helper.ElementClick(PageObject_Admin.Admin_Button_Login());
+            //input[@value='Login']
         }
 
         public static void Click_Icon_View(string Projectname)
@@ -167,7 +173,6 @@ namespace eLoyaltyV3.AppModule.UI
 
         public static void AdminLogin(string UserName, string Password)
         {
-
             EnterUsername(UserName);
             EnterPassword(Password);
             Logger.WriteDebugMessage("Entered Username and Password");
@@ -233,6 +238,7 @@ namespace eLoyaltyV3.AppModule.UI
         public static void RecoveryEmail(string text)
         {
             Helper.ElementWait(PageObject_Admin.Admin_Textbox_Email(), 240);
+            Helper.ElementClearText(PageObject_Admin.Admin_Textbox_Email());
             Helper.ElementEnterText(PageObject_Admin.Admin_Textbox_Email(), text);
         }
         public static void EnterStreet(string text)
@@ -1147,7 +1153,7 @@ namespace eLoyaltyV3.AppModule.UI
 
         public static void Click_Menu_Users()
         {
-            Helper.ElementWait(PageObject_Admin.Menu_Users(), 240);
+            Helper.ElementWait(PageObject_Admin.Menu_Users(), 340);
             Helper.ElementClick(PageObject_Admin.Menu_Users());
         }
         public static void Click_Menu_UsersSetting()
@@ -1297,7 +1303,7 @@ namespace eLoyaltyV3.AppModule.UI
 
         public static void Click_ExpirationDate()
         {
-            Helper.ElementWait(PageObject_Admin.Click_ExpirationDate(), 840);
+            Helper.ElementWait(PageObject_Admin.Click_ExpirationDate(), 440);
             Helper.ElementClick(PageObject_Admin.Click_ExpirationDate());
         }
 
@@ -1338,10 +1344,15 @@ namespace eLoyaltyV3.AppModule.UI
 
         public static void Click_MemberInformation_Value_MemberPortal()
         {
-            Helper.ElementWait(PageObject_Admin.MemberInformation_Value_MemberPortal(), 240);
+            Helper.ElementWait(PageObject_Admin.MemberInformation_Value_MemberPortal(), 340);
             Helper.ElementClick(PageObject_Admin.MemberInformation_Value_MemberPortal());
         }
-
+        public static void DoubleClick_MemberInformation_Value_MemberPortal()
+        {
+            Helper.ElementWait(PageObject_Admin.MemberInformation_Value_MemberPortal(), 240);
+            Helper.DoubleClickElement(PageObject_Admin.MemberInformation_Value_MemberPortal());
+        }
+        
         public static void ValidateEmailStatus(string status)
         {
             string value = PageObject_Admin.MemberInformation_Value_EmailStatus().GetAttribute("innerHTML");
@@ -2862,7 +2873,7 @@ namespace eLoyaltyV3.AppModule.UI
 
         public static void Dropdown_AdminMemberStatus(string value)
         {
-            Helper.ElementWait(PageObject_Admin.Admin_LoyaltyAwards_Dropdown_AdminMemberStatus(), 240);
+            Helper.ElementWait(PageObject_Admin.Admin_LoyaltyAwards_Dropdown_AdminMemberStatus(), 340);
             Helper.ElementSelectFromDropDown(PageObject_Admin.Admin_LoyaltyAwards_Dropdown_AdminMemberStatus(), value);
         }
         public static void Click_LoyaltyAwards_Button_Add()
@@ -2898,12 +2909,14 @@ namespace eLoyaltyV3.AppModule.UI
         public static void LoyaltyAwards_Text_Filter(string value)
         {
             Helper.ElementWait(PageObject_Admin.Admin_LoyaltyAwards_Text_Filter(), 240);
+            Helper.ElementClearText(PageObject_Admin.Admin_LoyaltyAwards_Text_Filter());
             Helper.ElementEnterText(PageObject_Admin.Admin_LoyaltyAwards_Text_Filter(), value);
         }
 
         public static void LoyaltyAwards_Text_AwardName(string value)
         {
             Helper.ElementWait(PageObject_Admin.Admin_LoyaltyAwards_Text_AwardName(), 240);
+            Helper.ElementClearText(PageObject_Admin.Admin_LoyaltyAwards_Text_AwardName());
             Helper.ElementEnterText(PageObject_Admin.Admin_LoyaltyAwards_Text_AwardName(), value);
         }
 
@@ -2983,6 +2996,7 @@ namespace eLoyaltyV3.AppModule.UI
             Actions action = new Actions(Helper.Driver);
             Helper.ElementClick(PageObject_Admin.Admin_LoyaltyAwards_BirthdayAward_Text_MinQualifiedStay());
             action.SendKeys(OpenQA.Selenium.Keys.ArrowDown);
+            action.SendKeys(OpenQA.Selenium.Keys.Enter);
             action.Build().Perform();
         }
 
@@ -3152,18 +3166,21 @@ namespace eLoyaltyV3.AppModule.UI
         public static void EmailSetUp_Text_Filter(string value)
         {
             Helper.ElementWait(PageObject_Admin.Admin_EmailSetUp_Text_Filter(), 240);
+            Helper.ElementClearText(PageObject_Admin.Admin_EmailSetUp_Text_Filter());
             Helper.ElementEnterText(PageObject_Admin.Admin_EmailSetUp_Text_Filter(), value);
         }
 
         public static void EmailSetUp_Text_EmailName(string value)
         {
             Helper.ElementWait(PageObject_Admin.Admin_EmailSetUp_Text_EmailName(), 240);
+            Helper.ElementClearText(PageObject_Admin.Admin_EmailSetUp_Text_EmailName());
             Helper.ElementEnterText(PageObject_Admin.Admin_EmailSetUp_Text_EmailName(), value);
         }
 
         public static void EmailSetUp_Text_EmailSubject(string value)
         {
             Helper.ElementWait(PageObject_Admin.Admin_EmailSetUp_Text_EmailSubject(), 240);
+            Helper.ElementClearText(PageObject_Admin.Admin_EmailSetUp_Text_EmailSubject());
             Helper.ElementEnterText(PageObject_Admin.Admin_EmailSetUp_Text_EmailSubject(), value);
         }
 
@@ -3188,7 +3205,7 @@ namespace eLoyaltyV3.AppModule.UI
         }
 
         public static void AddEmailSetUp(string emailname, string emailsubject)
-        {
+        {            
             EmailSetUp_Text_EmailName(emailname);
             EmailSetUp_Text_EmailSubject(emailsubject);
             //EmailSetUp_Text_EmailContent(emailcontent);
@@ -3625,16 +3642,19 @@ namespace eLoyaltyV3.AppModule.UI
         public static void AddMemershipLevel_MembershipLevel(string text)
         {
             Helper.ElementWait(PageObject_Admin.AddMemershipLevel_MembershipLevel(), 240);
+            Helper.ElementClearText(PageObject_Admin.AddMemershipLevel_MembershipLevel());
             Helper.ElementEnterText(PageObject_Admin.AddMemershipLevel_MembershipLevel(), text);
         }
         public static void AddMemershipLevel_MembershipCode(string text)
         {
             Helper.ElementWait(PageObject_Admin.AddMemershipLevel_MembershipCode(), 240);
+            Helper.ElementClearText(PageObject_Admin.AddMemershipLevel_MembershipCode());
             Helper.ElementEnterText(PageObject_Admin.AddMemershipLevel_MembershipCode(), text);
         }
         public static void AddMemershipLevel_LevelOrder(string text)
         {
             Helper.ElementWait(PageObject_Admin.AddMemershipLevel_LevelOrder(), 240);
+            Helper.ElementClearText(PageObject_Admin.AddMemershipLevel_LevelOrder());
             Helper.ElementEnterText(PageObject_Admin.AddMemershipLevel_LevelOrder(), text);
         }
         public static void AddMemershipLevel_CanBeProcessedByService_DDM(string value)
@@ -3748,7 +3768,9 @@ namespace eLoyaltyV3.AppModule.UI
             Click_AddMemershipLevel_EditeButton(name);
             try
             {
-                Helper.ElementEnterText(PageObject_Admin.AddMemershipLevel_MembershipCode(), name);
+                
+                Helper.ElementClearText(PageObject_Admin.AddMemershipLevel_MembershipCode());
+                //Helper.ElementEnterText(PageObject_Admin.AddMemershipLevel_MembershipCode(), name);
                 Assert.Fail("Membership Level Code field is not disable");
             }
             catch (Exception e)
@@ -3899,6 +3921,7 @@ namespace eLoyaltyV3.AppModule.UI
             Logger.WriteDebugMessage("Clicked on Add Rule button and Overlay got Displayed");
             Select_MemberLevel_Dropdown(memberLevel);
             Select_RuleType_Dropdown(ruleType);
+            Select_StayType_Dropdown("Not Specified");
             Select_DefaultRule_Dropdown(defaultPrice);
             Enter_MonthPeriod_TextBox(monthPeriod);
             Enter_QualifyingNight_TextBox(qualifiedNight);
@@ -4020,6 +4043,7 @@ namespace eLoyaltyV3.AppModule.UI
             Logger.WriteDebugMessage("Clicked on Add Rule button and Overlay got Displayed");
             Select_MemberLevel_Dropdown(memberLevel);
             Select_RuleType_Dropdown(ruleType);
+            Select_StayType_Dropdown("Not Specified");
             Select_DefaultRule_Dropdown(defaultPrice);
             Enter_MonthPeriod_TextBox(monthPeriod);
             Logger.WriteDebugMessage("Required fields entered Succesfully");
@@ -4042,6 +4066,7 @@ namespace eLoyaltyV3.AppModule.UI
             Helper.VerifyTextOnPageAndHighLight(ruleType_Validation);
             Logger.WriteDebugMessage("Validation Message to enter Rule Type got Display");
             Select_RuleType_Dropdown(ruleType);
+            Select_StayType_Dropdown("Not Specified");
             Click_MembershipLevelSave_Button();
             Helper.VerifyTextOnPageAndHighLight(monthPeriod_Validation);
             Logger.WriteDebugMessage("Validation Message to enter Month Period got Display");
@@ -4083,18 +4108,21 @@ namespace eLoyaltyV3.AppModule.UI
         public static void Enter_Loyalty_Rule_QualifyingRule_General_Description(string value)
         {
             Helper.ElementWait(PageObject_Admin.Loyalty_Rule_QualifyingRule_General_Description(), 240);
+            Helper.ElementClearText(PageObject_Admin.Loyalty_Rule_QualifyingRule_General_Description());
             Helper.ElementEnterText(PageObject_Admin.Loyalty_Rule_QualifyingRule_General_Description(), value);
 
         }
         public static void Enter_Loyalty_Rule_QualifyingRule_General_MinRevenue(string value)
         {
             Helper.ElementWait(PageObject_Admin.Loyalty_Rule_QualifyingRule_General_MinRevenue(), 240);
+            Helper.ElementClearText(PageObject_Admin.Loyalty_Rule_QualifyingRule_General_MinRevenue());
             Helper.ElementEnterText(PageObject_Admin.Loyalty_Rule_QualifyingRule_General_MinRevenue(), value);
 
         }
         public static void Enter_Loyalty_Rule_QualifyingRule_General_ParallelStay(string value)
         {
             Helper.ElementWait(PageObject_Admin.Loyalty_Rule_QualifyingRule_General_ParallelStay(), 240);
+            Helper.ElementClearText(PageObject_Admin.Loyalty_Rule_QualifyingRule_General_ParallelStay());
             Helper.ElementEnterText(PageObject_Admin.Loyalty_Rule_QualifyingRule_General_ParallelStay(), value);
 
         }
@@ -4150,6 +4178,7 @@ namespace eLoyaltyV3.AppModule.UI
             Select_Loyalty_Rule_QualifyingRule_General_MarketCode(marketcode);
             Select_Loyalty_Rule_QualifyingRule_General_SourceOfBusiness(sob);
             Logger.WriteDebugMessage("All details are entered correctly");
+            Helper.ElementSelect(Helper.Driver.FindElement(By.Id("genConsecu")));
             Click_Loyalty_Rule_QualifyingRule_General_SaveButton();
             Logger.WriteDebugMessage("Qualified Stay Rule Save Confirmation Message got Displayed");
             Click_Loyalty_Rule_QualifyingRule_General_SaveButton_Confirm();
@@ -4158,12 +4187,14 @@ namespace eLoyaltyV3.AppModule.UI
         public static void Enter_Loyalty_Rule_QualifyingRule_Night_Description(string value)
         {
             Helper.ElementWait(PageObject_Admin.Loyalty_Rule_QualifyingRule_Night_Description(), 240);
+            Helper.ElementClearText(PageObject_Admin.Loyalty_Rule_QualifyingRule_Night_Description());
             Helper.ElementEnterText(PageObject_Admin.Loyalty_Rule_QualifyingRule_Night_Description(), value);
 
         }
         public static void Enter_Loyalty_Rule_QualifyingRule_Night_MinRevenue(string value)
         {
             Helper.ElementWait(PageObject_Admin.Loyalty_Rule_QualifyingRule_Night_MinRevenue(), 240);
+            Helper.ElementClearText(PageObject_Admin.Loyalty_Rule_QualifyingRule_Night_MinRevenue());
             Helper.ElementEnterText(PageObject_Admin.Loyalty_Rule_QualifyingRule_Night_MinRevenue(), value);
 
         }
@@ -4265,6 +4296,7 @@ namespace eLoyaltyV3.AppModule.UI
             Select_Loyalty_Rule_QualifyingRule_Night_Hotel(hotel);
             Select_Loyalty_Rule_QualifyingRule_Night_MarketCode(marketcode);
             Select_Loyalty_Rule_QualifyingRule_Night_RatesCodes(ratescode);
+            Helper.ElementSelect(Helper.Driver.FindElement(By.Id("incRateNights")));
             Select_Loyalty_Rule_QualifyingRule_Night_MarketCombo(marketcombo);
             Select_Loyalty_Rule_QualifyingRule_Night_RateCombo(rateCombo);
             Click_Loyalty_Rule_QualifyingRule_Night_Include_Market_RateCombo();

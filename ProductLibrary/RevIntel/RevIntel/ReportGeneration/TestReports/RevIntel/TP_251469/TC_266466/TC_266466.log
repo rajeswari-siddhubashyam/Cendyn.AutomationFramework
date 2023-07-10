@@ -1,22 +1,30 @@
-2023-04-29 01:40:25,738 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
-2023-04-29 01:40:25,738 ::INFO ::[Logger]:: Chrome is currently being used for testing.
-2023-04-29 01:40:25,738 ::INFO ::[Logger]::  is used for Testing
-2023-04-29 01:40:25,738 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.godevcendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goDEVcendyn.com/SSOLanding.aspx
-2023-04-29 01:40:25,738 ::INFO ::[Logger]:: Execution started at:-Apr-29-2023 01-40-25-AM
-2023-04-29 01:40:25,754 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-04-29 01:40:25,754 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
-2023-04-29 01:40:25,754 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_266466         XXXXXXXXXXXXXXXX
-2023-04-29 01:40:25,754 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-04-29 01:40:25,769 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
-2023-04-29 01:40:25,769 ::INFO ::[Logger]:: Test Case : Verify Change Password functionality will not be successful when New and Confirm password are not matching
-2023-04-29 01:40:27,370 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
-2023-04-29 01:40:27,370 ::DEBUG::[Logger]:: 1) Email Address displayed
-2023-04-29 01:40:35,012 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
-2023-04-29 01:40:36,597 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
-2023-04-29 01:40:36,597 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
-2023-04-29 01:40:51,362 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
-2023-04-29 01:41:51,374 ::ERROR::[Logger]:: The //*[@id='AutomationTab'] element was not found on the page.
-OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:65534/session/bce80de667d9bb10d82fec905d6a1d65/element timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+2023-05-16 15:28:20,742 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-16 15:28:21,102 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-16 15:28:21,103 ::INFO ::[Logger]::  is used for Testing
+2023-05-16 15:28:21,311 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.godevcendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goDEVcendyn.com/SSOLanding.aspx
+2023-05-16 15:28:21,315 ::INFO ::[Logger]:: Execution started at:-May-16-2023 15-28-21-PM
+2023-05-16 15:28:21,354 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 15:28:21,357 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-16 15:28:21,368 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_266466         XXXXXXXXXXXXXXXX
+2023-05-16 15:28:21,369 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 15:28:21,524 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-16 15:28:21,764 ::INFO ::[Logger]:: Test Case : Verify Change Password functionality will not be successful when New and Confirm password are not matching
+2023-05-16 15:28:23,846 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-05-16 15:28:23,847 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-05-16 15:28:33,255 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-05-16 15:28:35,396 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2023-05-16 15:28:35,432 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
+2023-05-16 15:28:51,128 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2023-05-16 15:28:51,297 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
+2023-05-16 15:28:55,637 ::DEBUG::[Logger]:: 4) Client displayed
+2023-05-16 15:29:11,777 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
+2023-05-16 15:29:11,790 ::DEBUG::[Logger]:: 5) D Rock selected
+2023-05-16 15:29:25,322 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
+2023-05-16 15:29:29,117 ::DEBUG::[Logger]:: 7) Actual url = https://revintelbi.godevcendyn.com/revintel.aspx match with Expected url = https://revintelbi.godevcendyn.com/revintel.aspx
+2023-05-16 15:29:38,459 ::INFO ::[Logger]:: Clicked the Click_TA element on the Navigation page.
+2023-05-16 15:29:38,467 ::DEBUG::[Logger]:: 8) change password displayed
+2023-05-16 15:30:42,335 ::ERROR::[Logger]:: The //span[contains(text(),'change password')] element was not found on the page.
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:60950/session/1f223e8befb348cb85486a908fe42052/element timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
    at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
@@ -35,14 +43,13 @@ OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver ser
    at OpenQA.Selenium.By.FindElement(ISearchContext context)
    at OpenQA.Selenium.WebDriver.FindElement(By by)
    at BaseUtility.PageObject.PageAction.Find_ElementXPath(String repoName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\PageObject\PageAction.cs:line 33
-2023-04-29 01:41:53,385 ::FATAL::[Logger]:: Unable to click the Click_Automation element on the Navigation page.System.NullReferenceException: Object reference not set to an instance of an object.
+2023-05-16 15:30:45,051 ::FATAL::[Logger]:: Unable to click the Click_change_password element on the Navigation page.System.NullReferenceException: Object reference not set to an instance of an object.
    at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 81
-2023-04-29 01:41:53,385 ::ERROR::[Logger]:: RevIntel_Flow :: Script::Failed
+2023-05-16 15:30:45,074 ::ERROR::[Logger]:: RevIntel_Flow :: Script::Failed
 System.NullReferenceException: Object reference not set to an instance of an object.
    at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 88
-   at RevIntel.AppModule.UI.Navigation.Click_Automation() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\Navigation.cs:line 430
-   at RevIntel.AppModule.UI.Navigation.Select_Client(String client) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\Navigation.cs:line 99
-   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TC_266466() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp\TP_266462_ChangePassword.cs:line 160
+   at RevIntel.AppModule.UI.Navigation.Click_change_password() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\Navigation.cs:line 439
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TC_266466() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp\TP_266462_ChangePassword.cs:line 174
    at RevIntel.AppModule.MainAdminApp.MainAdminApp.TP_251469() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp.cs:line 42
    at RevIntel.RevIntel_TP_251469_SmokePlan.TC_266466() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\TestPlan\RevIntel\RevIntel_TP_251469_SmokePlan.cs:line 298
-2023-04-29 01:42:56,594 ::INFO ::[Logger]:: E.N.D
+2023-05-16 15:32:26,979 ::INFO ::[Logger]:: E.N.D

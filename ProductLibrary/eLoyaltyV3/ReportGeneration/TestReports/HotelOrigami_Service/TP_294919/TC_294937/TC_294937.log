@@ -1,16 +1,17 @@
-2023-05-01 20:48:51,182 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
-2023-05-01 20:48:51,182 ::INFO ::[Logger]:: Chrome is currently being used for testing.
-2023-05-01 20:48:51,182 ::INFO ::[Logger]::  is used for Testing
-2023-05-01 20:48:51,197 ::INFO ::[Logger]:: This is the login page.data:,
-2023-05-01 20:48:51,197 ::INFO ::[Logger]:: Execution started at:-May-01-2023 20-48-51-PM
-2023-05-01 20:48:51,197 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-05-01 20:48:51,197 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
-2023-05-01 20:48:51,197 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_294937         XXXXXXXXXXXXXXXX
-2023-05-01 20:48:51,197 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-05-01 20:48:51,197 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
-2023-05-01 20:48:53,294 ::ERROR::[Logger]:: eLoyaltyV3_Flow :: Script::Failed
+2023-05-16 12:48:00,449 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-16 12:48:00,465 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-16 12:48:00,467 ::INFO ::[Logger]::  is used for Testing
+2023-05-16 12:48:00,478 ::INFO ::[Logger]:: This is the login page.data:,
+2023-05-16 12:48:00,480 ::INFO ::[Logger]:: Execution started at:-May-16-2023 12-48-00-PM
+2023-05-16 12:48:00,482 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 12:48:00,484 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-16 12:48:00,555 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_294937         XXXXXXXXXXXXXXXX
+2023-05-16 12:48:00,557 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 12:48:00,599 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-16 12:48:17,091 ::ERROR::[Logger]:: eLoyaltyV3_Flow :: Script::Failed
 System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'dbo._tmp_updatepropertysetting'.
    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
    at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
    at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
    at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
@@ -21,10 +22,10 @@ System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure
    at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
    at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
    at System.Data.SqlClient.SqlCommand.ExecuteReader()
-   at eLoyaltyV3.Utility.Queries.SetupTransactionCloseDelayHours(String settingKey, String settingValue) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\Utility\Queries.cs:line 4872
+   at eLoyaltyV3.Utility.Queries.SetupTransactionCloseDelayHours(String settingKey, String settingValue) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\Utility\Queries.cs:line 4897
    at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TC_294937() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp\WindowsService\Scenario Validation\Scenario_Validation.cs:line 5560
    at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TP_294919() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp.cs:line 1056
    at eLoyaltyV3.TestPlan.HotelOrigami.WindowsServices.Scenario_Validation.HotelOrigami_TP_294919_Service_Scenario_Validation.TC_294937() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\TestPlan\HotelOrigami\WindowsServices\Scenario Validation\HotelOrigami_TP_294919_Service_Scenario_Validation.cs:line 461
-ClientConnectionId:bc166a91-6aa8-4876-a9b2-bdb211384778
+ClientConnectionId:26491a1d-24e3-4a48-994f-13d0547dcfed
 Error Number:2812,State:62,Class:16
-2023-05-01 20:49:00,375 ::INFO ::[Logger]:: E.N.D
+2023-05-16 12:48:53,235 ::INFO ::[Logger]:: E.N.D

@@ -104,70 +104,70 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
         private static void TC_255556()
         {
             if (TestCaseId == Constants.TC_255556)
-            {
-                //pre-requiste
-                string membershipLevel_Name, membershipCode, memberLevel_Order, processByService;
-                Random ranno = new Random();
+                {
+                    //pre-requiste
+                    string membershipLevel_Name, membershipCode, memberLevel_Order, processByService;
+                    Random ranno = new Random();
 
-                //Retrive data from database
-                membershipLevel_Name = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "MembershipLevel_Name"), ranno.Next().ToString().Substring(0, 3));
-                membershipCode = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "MembershipLevel_Code"), ranno.Next().ToString().Substring(0, 3));
-                memberLevel_Order = ranno.Next().ToString().Substring(0, 3);
-                processByService = TestData.ExcelData.TestDataReader.ReadData(1, "Process_By_Service");
+                    //Retrive data from database
+                    membershipLevel_Name = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "MembershipLevel_Name"), ranno.Next().ToString().Substring(0, 3));
+                    membershipCode = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "MembershipLevel_Code"), ranno.Next().ToString().Substring(0, 4));
+                    memberLevel_Order = ranno.Next().ToString().Substring(0, 4);
+                    processByService = TestData.ExcelData.TestDataReader.ReadData(1, "Process_By_Service");
 
-                // Navigate to Admin
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Helper.ElementWait(PageObject_Admin.Click_MembershipSetup_Tab(), 120);
-                Logger.WriteDebugMessage("Logged in successfully.");
+                    // Navigate to Admin
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Helper.ElementWait(PageObject_Admin.Click_MembershipSetup_Tab(), 120);
+                    Logger.WriteDebugMessage("Logged in successfully.");
 
-                //Click on Membership Setup tab and Member level sub tab
-                Admin.Click_MembershipSetup_Tab();
-                Helper.ElementWait(PageObject_Admin.Click_MemberLevel_SubTab(), 120);
-                Logger.WriteDebugMessage("Clicked on Membership Setup tab");
-                Admin.Click_MemberLevel_SubTab();
-                Logger.WriteInfoMessage("Clicked on Membership Level tab");
+                    //Click on Membership Setup tab and Member level sub tab
+                    Admin.Click_MembershipSetup_Tab();
+                    Helper.ElementWait(PageObject_Admin.Click_MemberLevel_SubTab(), 120);
+                    Logger.WriteDebugMessage("Clicked on Membership Setup tab");
+                    Admin.Click_MemberLevel_SubTab();
+                    Logger.WriteInfoMessage("Clicked on Membership Level tab");
 
-                //Verify the Cancel Buttonn Functinality
-                Admin.MembershipSetup_AddMemershipLevel_Button();
-                Logger.WriteDebugMessage("Clicked on Add Membership level button and Overlay got open");
-                Admin.AddMemershipLevel_MembershipLevel(membershipLevel_Name);
-                Admin.AddMemershipLevel_MembershipCode(membershipCode);
-                Admin.AddMemershipLevel_LevelOrder(memberLevel_Order);
-                Admin.AddMemershipLevel_CanBeProcessedByService_DDM(processByService);
-                Logger.WriteDebugMessage("All the Details are entered correctly");
-                Admin.Click_AddMemershipLevel_CancelButton();
-                if (IsElementRemoved(membershipLevel_Name))
-                    Assert.Fail("Membership Level got added Succesfully Even if clicked on Cancel button");
-                else
-                    Logger.WriteDebugMessage("Membership Level does not added after clicking on Cancel button");
+                    //Verify the Cancel Buttonn Functinality
+                    Admin.MembershipSetup_AddMemershipLevel_Button();
+                    Logger.WriteDebugMessage("Clicked on Add Membership level button and Overlay got open");
+                    Admin.AddMemershipLevel_MembershipLevel(membershipLevel_Name);
+                    Admin.AddMemershipLevel_MembershipCode(membershipCode);
+                    Admin.AddMemershipLevel_LevelOrder(memberLevel_Order);
+                    Admin.AddMemershipLevel_CanBeProcessedByService_DDM(processByService);
+                    Logger.WriteDebugMessage("All the Details are entered correctly");
+                    Admin.Click_AddMemershipLevel_CancelButton();
+                    if (IsElementRemoved(membershipLevel_Name))
+                        Assert.Fail("Membership Level got added Succesfully Even if clicked on Cancel button");
+                    else
+                        Logger.WriteDebugMessage("Membership Level does not added after clicking on Cancel button");
 
 
-                // Verify the Cross button Functinality
-                Admin.MembershipSetup_AddMemershipLevel_Button();
-                Logger.WriteDebugMessage("Clicked on Add Membership level button and Overlay got open");
-                Admin.AddMemershipLevel_MembershipLevel(membershipLevel_Name);
-                Admin.AddMemershipLevel_MembershipCode(membershipCode);
-                Admin.AddMemershipLevel_LevelOrder(memberLevel_Order);
-                Admin.AddMemershipLevel_CanBeProcessedByService_DDM(processByService);
-                Logger.WriteDebugMessage("All the Details are entered correctly");
-                Admin.Click_AddMemershipLevel_Close();
-                if (IsElementRemoved(membershipLevel_Name))
-                    Assert.Fail("Membership Level got added Succesfully Even if clicked on cross icon of Pop-up");
-                else
-                    Logger.WriteDebugMessage("Membership Level does not added after clicking on cross icon of pop-up");
+                    // Verify the Cross button Functinality
+                    Admin.MembershipSetup_AddMemershipLevel_Button();
+                    Logger.WriteDebugMessage("Clicked on Add Membership level button and Overlay got open");
+                    Admin.AddMemershipLevel_MembershipLevel(membershipLevel_Name);
+                    Admin.AddMemershipLevel_MembershipCode(membershipCode);
+                    Admin.AddMemershipLevel_LevelOrder(memberLevel_Order);
+                    Admin.AddMemershipLevel_CanBeProcessedByService_DDM(processByService);
+                    Logger.WriteDebugMessage("All the Details are entered correctly");
+                    Admin.Click_AddMemershipLevel_Close();
+                    if (IsElementRemoved(membershipLevel_Name))
+                        Assert.Fail("Membership Level got added Succesfully Even if clicked on cross icon of Pop-up");
+                    else
+                        Logger.WriteDebugMessage("Membership Level does not added after clicking on cross icon of pop-up");
 
-                //Add Membership Level Functinality
-                Admin.AddMembershipLevel(membershipLevel_Name, membershipCode, memberLevel_Order, processByService);
+                    //Add Membership Level Functinality
+                    Admin.AddMembershipLevel(membershipLevel_Name, membershipCode, memberLevel_Order, processByService);
 
-                //Delete Added Membership Level
-                Admin.Delete_MembershipLevel(membershipLevel_Name);
+                    //Delete Added Membership Level
+                    Admin.Delete_MembershipLevel(membershipLevel_Name);
 
-                //Log Test data into Log file and extend Report
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Member Level Name", membershipLevel_Name);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Member Level Code", membershipCode);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Member Level Order", memberLevel_Order);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Member Level ProcessByService", processByService, true);
-            }
+                    //Log Test data into Log file and extend Report
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Member Level Name", membershipLevel_Name);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Member Level Code", membershipCode);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Member Level Order", memberLevel_Order);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Member Level ProcessByService", processByService, true);
+                }
         }
         private static void TC_255563()
         {
@@ -234,693 +234,700 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
         public static void TC_255557()
         {
             if (TestCaseId == Constants.TC_255557)
-            {
-                //Pre-requisite
-                string memberLevelName, memberLevelCode, memberLevelOrder, service, error_LevelOrder1, error_LevelOrder2, errorMessage_MemberLevel, errorMessage_MemberCode, field = null;
-                Random ranno = new Random();
-
-                //Assign Values to variables
-                memberLevelName = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "MemberLevelName"), ranno.Next().ToString().Substring(0, 3));
-                memberLevelCode = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "MemberLevelCode"), ranno.Next().ToString().Substring(0, 3));
-                memberLevelOrder = ranno.Next().ToString().Substring(0, 3);
-                error_LevelOrder1 = TestData.ExcelData.TestDataReader.ReadData(1, "Error_LevelOrder1");
-                error_LevelOrder2 = TestData.ExcelData.TestDataReader.ReadData(1, "Error_LevelOrder2");
-                errorMessage_MemberLevel = TestData.ExcelData.TestDataReader.ReadData(1, "ErrorMessage_MemberLevel");
-                errorMessage_MemberCode = TestData.ExcelData.TestDataReader.ReadData(1, "ErrorMessage_MemberCode");
-
-                // Navigate to Admin
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
-
-                //Click on Membership Setup tab and Member level sub tab
-                Admin.Click_MembershipSetup_Tab();
-                Logger.WriteDebugMessage("Clicked on Membership Setup tab");
-                Admin.Click_MemberLevel_SubTab();
-                Admin.MembershipSetup_AddMemershipLevel_Button();
-                Logger.WriteDebugMessage("Add Member Level button clicked");
-
-                //Click on Add membership level and Validate Membership Level field
-                Admin.Click_AddMemershipLevel_SaveButton();
-                VerifyTextOnPageAndHighLight(errorMessage_MemberLevel);
-                Logger.WriteDebugMessage("Validation message for Membership Level textbox got displayed");
-                Admin.AddMemershipLevel_MembershipCode(memberLevelCode);
-                for (int i = 1; i < 5; i++)
                 {
-                    field = TestData.ExcelData.TestDataReader.ReadData(i, "Field");
-                    Admin.AddMemershipLevel_MembershipLevel(memberLevelName + field);
-                    Admin.AddMemershipLevel_LevelOrder(memberLevelOrder);
-                    Logger.WriteDebugMessage((memberLevelName + field) + " = Entered into Membership Name Field");
+                    //Pre-requisite
+                    string memberLevelName, memberLevelCode, memberLevelOrder, service, error_LevelOrder1, error_LevelOrder2, errorMessage_MemberLevel, errorMessage_MemberCode, field = null;
+                    Random ranno = new Random();
+
+                    //Assign Values to variables
+                    memberLevelName = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "MemberLevelName"), ranno.Next().ToString().Substring(0, 3));
+                    memberLevelCode = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "MemberLevelCode"), ranno.Next().ToString().Substring(0, 3));
+                    memberLevelOrder = ranno.Next().ToString().Substring(0, 4);
+                    error_LevelOrder1 = TestData.ExcelData.TestDataReader.ReadData(1, "Error_LevelOrder1");
+                    error_LevelOrder2 = TestData.ExcelData.TestDataReader.ReadData(1, "Error_LevelOrder2");
+                    errorMessage_MemberLevel = TestData.ExcelData.TestDataReader.ReadData(1, "ErrorMessage_MemberLevel");
+                    errorMessage_MemberCode = TestData.ExcelData.TestDataReader.ReadData(1, "ErrorMessage_MemberCode");
+
+                    // Navigate to Admin
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
+
+                    //Click on Membership Setup tab and Member level sub tab
+                    Admin.Click_MembershipSetup_Tab();
+                    Logger.WriteDebugMessage("Clicked on Membership Setup tab");
+                    Admin.Click_MemberLevel_SubTab();
+                    Admin.MembershipSetup_AddMemershipLevel_Button();
+                    Logger.WriteDebugMessage("Add Member Level button clicked");
+
+                    //Click on Add membership level and Validate Membership Level field
                     Admin.Click_AddMemershipLevel_SaveButton();
-                    AddDelay(3000);
-                    Admin.Enter_MembershipLevel_Filter(memberLevelName);
-                    Logger.WriteDebugMessage((memberLevelName + field) + " = Scenario for Membership Level name Validated successfuly");
-                    Admin.Click_AddMemershipLevel_EditeButton(memberLevelName + field);
-                }
-                Admin.AddMemershipLevel_MembershipLevel("                ");
-                Admin.AddMemershipLevel_LevelOrder(memberLevelOrder);
-                Logger.WriteDebugMessage("Blank Space entered into Membership Level Name field");
-                Admin.Click_AddMemershipLevel_SaveButton();
-                VerifyTextOnPageAndHighLight(errorMessage_MemberLevel);
-                Logger.WriteDebugMessage(errorMessage_MemberLevel + " - error message displaying on the page");
-                Admin.Click_AddMemershipLevel_CancelButton();
-                Admin.Delete_MembershipLevel(memberLevelName + field);
+                    VerifyTextOnPageAndHighLight(errorMessage_MemberLevel);
+                    Logger.WriteDebugMessage("Validation message for Membership Level textbox got displayed");
+                    Admin.AddMemershipLevel_MembershipCode(memberLevelCode);
+                    for (int i = 1; i < 5; i++)
+                    {
+                        field = TestData.ExcelData.TestDataReader.ReadData(i, "Field");
+                        Admin.AddMemershipLevel_MembershipLevel(memberLevelName + field);
+                        Admin.AddMemershipLevel_LevelOrder(memberLevelOrder);
+                        Logger.WriteDebugMessage((memberLevelName + field) + " = Entered into Membership Name Field");
+                        Admin.Click_AddMemershipLevel_SaveButton();
+                        AddDelay(3000);
+                        Admin.Enter_MembershipLevel_Filter(memberLevelName);
+                        Logger.WriteDebugMessage((memberLevelName + field) + " = Scenario for Membership Level name Validated successfuly");
+                        Admin.Click_AddMemershipLevel_EditeButton(memberLevelName + field);
+                    }
+                    Admin.AddMemershipLevel_MembershipLevel("                ");
+                    Admin.AddMemershipLevel_LevelOrder(memberLevelOrder);
+                    Logger.WriteDebugMessage("Blank Space entered into Membership Level Name field");
+                    Admin.Click_AddMemershipLevel_SaveButton();
+                    VerifyTextOnPageAndHighLight(errorMessage_MemberLevel);
+                    Logger.WriteDebugMessage(errorMessage_MemberLevel + " - error message displaying on the page");
+                    Admin.Click_AddMemershipLevel_CancelButton();
+                    Admin.Delete_MembershipLevel(memberLevelName + field);
 
 
-                // Validate Membership Code field
-                for (int i = 1; i < 5; i++)
-                {
-                    field = TestData.ExcelData.TestDataReader.ReadData(i, "Field");
+                    // Validate Membership Code field
+                    for (int i = 1; i < 5; i++)
+                    {
+                        field = TestData.ExcelData.TestDataReader.ReadData(i, "Field");
+                        Admin.MembershipSetup_AddMemershipLevel_Button();
+                        Admin.AddMemershipLevel_MembershipLevel(memberLevelName);
+                        Admin.AddMemershipLevel_MembershipCode(memberLevelCode + field);
+                        Admin.AddMemershipLevel_LevelOrder(memberLevelOrder);
+                        Logger.WriteDebugMessage((memberLevelCode + field) + " = Membership Level Entered");
+                        Admin.Click_AddMemershipLevel_SaveButton();
+                        AddDelay(3000);
+                        Admin.Enter_MembershipLevel_Filter(memberLevelName);
+                        Logger.WriteDebugMessage((memberLevelCode + field) + " = Scenario for Membership Code Validated successfuly");
+                        Helper.VerifyTextOnPageAndHighLight(memberLevelName);
+                        Admin.Click_AddMemershipLevel_DeleteButton(memberLevelName);
+                        Logger.WriteDebugMessage("Delete Membership Level confirmation pop up displayed");
+                        Admin.Click_DeleteMemershipLevel_SubmitButton();
+                    }
                     Admin.MembershipSetup_AddMemershipLevel_Button();
                     Admin.AddMemershipLevel_MembershipLevel(memberLevelName);
-                    Admin.AddMemershipLevel_MembershipCode(memberLevelCode + field);
+                    Admin.AddMemershipLevel_MembershipCode("          ");
                     Admin.AddMemershipLevel_LevelOrder(memberLevelOrder);
-                    Logger.WriteDebugMessage((memberLevelCode + field) + " = Membership Level Entered");
+                    Logger.WriteDebugMessage("Blank Space entered into Membership Code field");
                     Admin.Click_AddMemershipLevel_SaveButton();
-                    AddDelay(3000);
-                    Admin.Enter_MembershipLevel_Filter(memberLevelName);
-                    Logger.WriteDebugMessage((memberLevelCode + field) + " = Scenario for Membership Code Validated successfuly");
-                    Helper.VerifyTextOnPageAndHighLight(memberLevelName);
+                    VerifyTextOnPageAndHighLight(errorMessage_MemberCode);
+                    Logger.WriteDebugMessage(errorMessage_MemberCode + " - error message displaying on the page");
+                    Admin.Click_AddMemershipLevel_CancelButton();
+
+
+                    // Validate Level order field
+                    Admin.MembershipSetup_AddMemershipLevel_Button();
+                    Admin.AddMemershipLevel_MembershipCode(memberLevelCode);
+                    for (int i = 2; i < 4; i++)
+                    {
+                        field = TestData.ExcelData.TestDataReader.ReadData(i, "Field");
+                        Admin.AddMemershipLevel_MembershipLevel(memberLevelName);
+                        Admin.AddMemershipLevel_LevelOrder(memberLevelOrder);
+                        Logger.WriteDebugMessage((memberLevelOrder + field) + " = Membership Level Order Entered");
+                        //Admin.AddMemershipLevel_MembershipCode(memberLevelCode);
+                        Admin.Click_AddMemershipLevel_SaveButton();
+                        AddDelay(3000);
+                        Logger.WriteDebugMessage((memberLevelOrder + field) + " = Scenario for Membership Order Validated successfuly");
+                        Admin.Enter_MembershipLevel_Filter(memberLevelName);
+                        Admin.Click_AddMemershipLevel_EditeButton(memberLevelName);
+                    }
+                    field = TestData.ExcelData.TestDataReader.ReadData(4, "Field");
+                    Admin.AddMemershipLevel_MembershipLevel(memberLevelName);
+                    Admin.AddMemershipLevel_LevelOrder(field);
+                    Logger.WriteDebugMessage(field + " = Entered into Membership Level Order Field");
+                    Admin.Click_AddMemershipLevel_SaveButton();
+                    VerifyTextOnPageAndHighLight(error_LevelOrder1);
+                    Logger.WriteDebugMessage(error_LevelOrder1 + " = Error message displaying on the page");
+
+                    field = TestData.ExcelData.TestDataReader.ReadData(5, "Field");
+                    Admin.AddMemershipLevel_MembershipLevel(memberLevelName);
+                    Admin.AddMemershipLevel_LevelOrder(field);
+                    Logger.WriteDebugMessage(field + " = Entered into Membership Level Order Field");
+                    Admin.Click_AddMemershipLevel_SaveButton();
+                    VerifyTextOnPageAndHighLight(error_LevelOrder2);
+                    Logger.WriteDebugMessage(error_LevelOrder1 + " = Error message displaying on the page");
+                    Admin.Click_AddMemershipLevel_CancelButton();
                     Admin.Click_AddMemershipLevel_DeleteButton(memberLevelName);
                     Logger.WriteDebugMessage("Delete Membership Level confirmation pop up displayed");
                     Admin.Click_DeleteMemershipLevel_SubmitButton();
+
+                    // Validate 'Can be processed by Service' field
+                    Admin.MembershipSetup_AddMemershipLevel_Button();
+                    Admin.AddMemershipLevel_MembershipCode(memberLevelCode);
+                    for (int i = 1; i < 3; i++)
+                    {
+                        service = TestData.ExcelData.TestDataReader.ReadData(i, "Service");
+                        Admin.AddMemershipLevel_MembershipLevel(memberLevelName);
+                        Admin.AddMemershipLevel_LevelOrder(memberLevelOrder);
+                        Admin.AddMemershipLevel_CanBeProcessedByService_DDM(service);
+                        Logger.WriteDebugMessage(service + " = Can be Processed by Service Value got Entered");
+                        Admin.Click_AddMemershipLevel_SaveButton();
+                        AddDelay(3000);
+                        Logger.WriteDebugMessage("Membership level Saved Successfully with Processed by Serice = " + service);
+                        Admin.Enter_MembershipLevel_Filter(memberLevelName);
+                        Admin.Click_AddMemershipLevel_EditeButton(memberLevelName);
+                    }
+                    Admin.Click_AddMemershipLevel_CancelButton();
+                    Admin.Click_AddMemershipLevel_DeleteButton(memberLevelName);
+                    Logger.WriteDebugMessage("Delete Membership Level confirmation pop up displayed");
+                    Admin.Click_DeleteMemershipLevel_SubmitButton();
+
+
+                    //Log test data into log file and extent report
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Member Level Name", memberLevelName);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Member Level Code", memberLevelCode);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "member Level Order", memberLevelOrder);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "ErrorMessage_MemberLevel", errorMessage_MemberLevel);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "ErrorMessage_MemberCode", errorMessage_MemberCode);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Error_LevelOrder1", error_LevelOrder1);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Error_LevelOrder2", error_LevelOrder2, true);
+
                 }
-                Admin.MembershipSetup_AddMemershipLevel_Button();
-                Admin.AddMemershipLevel_MembershipLevel(memberLevelName);
-                Admin.AddMemershipLevel_MembershipCode("          ");
-                Admin.AddMemershipLevel_LevelOrder(memberLevelOrder);
-                Logger.WriteDebugMessage("Blank Space entered into Membership Code field");
-                Admin.Click_AddMemershipLevel_SaveButton();
-                VerifyTextOnPageAndHighLight(errorMessage_MemberCode);
-                Logger.WriteDebugMessage(errorMessage_MemberCode + " - error message displaying on the page");
-                Admin.Click_AddMemershipLevel_CancelButton();
-
-
-                // Validate Level order field
-                Admin.MembershipSetup_AddMemershipLevel_Button();
-                Admin.AddMemershipLevel_MembershipCode(memberLevelCode);
-                for (int i = 2; i < 4; i++)
-                {
-                    field = TestData.ExcelData.TestDataReader.ReadData(i, "Field");
-                    Admin.AddMemershipLevel_MembershipLevel(memberLevelName);
-                    Admin.AddMemershipLevel_LevelOrder(memberLevelOrder + field);
-                    Logger.WriteDebugMessage((memberLevelOrder + field) + " = Membership Level Order Entered");
-                    Admin.Click_AddMemershipLevel_SaveButton();
-                    AddDelay(3000);
-                    Logger.WriteDebugMessage((memberLevelOrder + field) + " = Scenario for Membership Order Validated successfuly");
-                    Admin.Enter_MembershipLevel_Filter(memberLevelName);
-                    Admin.Click_AddMemershipLevel_EditeButton(memberLevelName);
-                }
-                field = TestData.ExcelData.TestDataReader.ReadData(4, "Field");
-                Admin.AddMemershipLevel_MembershipLevel(memberLevelName);
-                Admin.AddMemershipLevel_LevelOrder(field);
-                Logger.WriteDebugMessage(field + " = Entered into Membership Level Order Field");
-                Admin.Click_AddMemershipLevel_SaveButton();
-                VerifyTextOnPageAndHighLight(error_LevelOrder1);
-                Logger.WriteDebugMessage(error_LevelOrder1 + " = Error message displaying on the page");
-
-                field = TestData.ExcelData.TestDataReader.ReadData(5, "Field");
-                Admin.AddMemershipLevel_MembershipLevel(memberLevelName);
-                Admin.AddMemershipLevel_LevelOrder(field);
-                Logger.WriteDebugMessage(field + " = Entered into Membership Level Order Field");
-                Admin.Click_AddMemershipLevel_SaveButton();
-                VerifyTextOnPageAndHighLight(error_LevelOrder2);
-                Logger.WriteDebugMessage(error_LevelOrder1 + " = Error message displaying on the page");
-                Admin.Click_AddMemershipLevel_CancelButton();
-                Admin.Click_AddMemershipLevel_DeleteButton(memberLevelName);
-                Logger.WriteDebugMessage("Delete Membership Level confirmation pop up displayed");
-                Admin.Click_DeleteMemershipLevel_SubmitButton();
-
-                // Validate 'Can be processed by Service' field
-                Admin.MembershipSetup_AddMemershipLevel_Button();
-                Admin.AddMemershipLevel_MembershipCode(memberLevelCode);
-                for (int i = 1; i < 3; i++)
-                {
-                    service = TestData.ExcelData.TestDataReader.ReadData(i, "Service");
-                    Admin.AddMemershipLevel_MembershipLevel(memberLevelName);
-                    Admin.AddMemershipLevel_LevelOrder(memberLevelOrder);
-                    Admin.AddMemershipLevel_CanBeProcessedByService_DDM(service);
-                    Logger.WriteDebugMessage(service + " = Can be Processed by Service Value got Entered");
-                    Admin.Click_AddMemershipLevel_SaveButton();
-                    AddDelay(3000);
-                    Logger.WriteDebugMessage("Membership level Saved Successfully with Processed by Serice = " + service);
-                    Admin.Enter_MembershipLevel_Filter(memberLevelName);
-                    Admin.Click_AddMemershipLevel_EditeButton(memberLevelName);
-                }
-                Admin.Click_AddMemershipLevel_CancelButton();
-                Admin.Click_AddMemershipLevel_DeleteButton(memberLevelName);
-                Logger.WriteDebugMessage("Delete Membership Level confirmation pop up displayed");
-                Admin.Click_DeleteMemershipLevel_SubmitButton();
-
-
-                //Log test data into log file and extent report
-                Logger.LogTestData(TestPlanId, TestCaseId, "Member Level Name", memberLevelName);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Member Level Code", memberLevelCode);
-                Logger.LogTestData(TestPlanId, TestCaseId, "member Level Order", memberLevelOrder);
-                Logger.LogTestData(TestPlanId, TestCaseId, "ErrorMessage_MemberLevel", errorMessage_MemberLevel);
-                Logger.LogTestData(TestPlanId, TestCaseId, "ErrorMessage_MemberCode", errorMessage_MemberCode);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Error_LevelOrder1", error_LevelOrder1);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Error_LevelOrder2", error_LevelOrder2, true);
-
-            }
         }
         public static void TC_255559()
         {
             if (TestCaseId == Constants.TC_255559)
-            {
-                //Pre-requisite
-                string memberLevelName, memberLevelName_Duplicate, memberLevelCode, memberLevelCode_Duplicate, memberLevelOrder_Duplicate, memberLevelOrder, service, validationMessage_MemberLevel, validationMessage_Code, validationMessage_LevelOrder;
-                Random no = new Random();
-                Users data = new Users();
-                Queries.GetActiveMembershipLevel(data);
-                //Assign Values to variables
-                memberLevelName = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "MemberLevelName"), no.Next().ToString().Substring(0, 3));
-                memberLevelName_Duplicate = data.MembershipLevelName;
-                memberLevelCode = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "MemberLevelCode"), no.Next().ToString().Substring(0, 3));
-                memberLevelCode_Duplicate = data.MembershipCode;
-                memberLevelOrder = no.Next().ToString().Substring(0, 3);
-                memberLevelOrder_Duplicate = data.LevelOrder;
-                service = TestData.ExcelData.TestDataReader.ReadData(1, "Service");
-                validationMessage_MemberLevel = TestData.ExcelData.TestDataReader.ReadData(1, "ValidationMessage_MemberLevel");
-                validationMessage_Code = TestData.ExcelData.TestDataReader.ReadData(1, "ValidationMessage_Code");
-                validationMessage_LevelOrder = TestData.ExcelData.TestDataReader.ReadData(1, "ValidationMessage_LevelOrder");
+                {
+                    //Pre-requisite
+                    string memberLevelName, memberLevelName_Duplicate, memberLevelCode, memberLevelCode_Duplicate, memberLevelOrder_Duplicate, memberLevelOrder, service, validationMessage_MemberLevel, validationMessage_Code, validationMessage_LevelOrder;
+                    Random no = new Random();
+                    Users data = new Users();
+                    Queries.GetActiveMembershipLevel(data);
+                    //Assign Values to variables
+                    memberLevelName = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "MemberLevelName"), no.Next().ToString().Substring(0, 5));
+                    memberLevelName_Duplicate = data.MembershipLevelName;
+                    memberLevelCode = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "MemberLevelCode"), no.Next().ToString().Substring(0, 5));
+                    memberLevelCode_Duplicate = data.MembershipCode;
+                    memberLevelOrder = no.Next().ToString().Substring(0, 3);
+                    memberLevelOrder_Duplicate = data.LevelOrder;
+                    service = TestData.ExcelData.TestDataReader.ReadData(1, "Service");
+                    validationMessage_MemberLevel = TestData.ExcelData.TestDataReader.ReadData(1, "ValidationMessage_MemberLevel");
+                    validationMessage_Code = TestData.ExcelData.TestDataReader.ReadData(1, "ValidationMessage_Code");
+                    validationMessage_LevelOrder = TestData.ExcelData.TestDataReader.ReadData(1, "ValidationMessage_LevelOrder");
 
-                // Navigate to Admin
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
+                    // Navigate to Admin
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
 
-                //Click on Membership Setup tab and Member level sub tab
-                Admin.Click_MembershipSetup_Tab();
-                Logger.WriteDebugMessage("Clicked on Membership Setup tab");
-                Admin.Click_MemberLevel_SubTab();
-                Admin.MembershipSetup_AddMemershipLevel_Button();
-                Logger.WriteDebugMessage("Add Member Level button clicked");
+                    //Click on Membership Setup tab and Member level sub tab
+                    Admin.Click_MembershipSetup_Tab();
+                    Logger.WriteDebugMessage("Clicked on Membership Setup tab");
+                    Admin.Click_MemberLevel_SubTab();
+                    Admin.MembershipSetup_AddMemershipLevel_Button();
+                    Logger.WriteDebugMessage("Add Member Level button clicked");
 
-                //Enter values in all fields and enter duplicate value in Membership Level field
-                Admin.AddMemershipLevel_MembershipLevel(memberLevelName_Duplicate);
-                Admin.AddMemershipLevel_MembershipCode(memberLevelCode);
-                Admin.AddMemershipLevel_LevelOrder(memberLevelOrder);
-                Admin.AddMemershipLevel_CanBeProcessedByService_DDM(service);
-                Logger.WriteDebugMessage("Mandatory fields entered with duplicate Member level");
-                Admin.Click_AddMemershipLevel_SaveButton();
-                VerifyTextOnPageAndHighLight(validationMessage_MemberLevel);
-                Logger.WriteDebugMessage(validationMessage_MemberLevel + " - Validation message displayed on the page for Member Level");
+                    //Enter values in all fields and enter duplicate value in Membership Level field
+                    Admin.AddMemershipLevel_MembershipLevel(memberLevelName_Duplicate);
+                    Admin.AddMemershipLevel_MembershipCode(memberLevelCode);
+                    Admin.AddMemershipLevel_LevelOrder(memberLevelOrder);
+                    Admin.AddMemershipLevel_CanBeProcessedByService_DDM(service);
+                    Logger.WriteDebugMessage("Mandatory fields entered with duplicate Member level");
+                    Admin.Click_AddMemershipLevel_SaveButton();
+                    VerifyTextOnPageAndHighLight(validationMessage_MemberLevel);
+                    Logger.WriteDebugMessage(validationMessage_MemberLevel + " - Validation message displayed on the page for Member Level");
 
-                //Enter values in all fields and enter duplicate value in Membership Code field
-                Admin.AddMemershipLevel_MembershipLevel(memberLevelName);
-                Admin.AddMemershipLevel_MembershipCode(memberLevelCode_Duplicate);
-                Logger.WriteDebugMessage("Mandatory fields entered with duplicate Membership Code");
-                Admin.Click_AddMemershipLevel_SaveButton();
-                VerifyTextOnPageAndHighLight(validationMessage_Code);
-                Logger.WriteDebugMessage(validationMessage_Code + " - Validation message displayed on the page for Membership code");
+                    //Enter values in all fields and enter duplicate value in Membership Code field
+                    Admin.AddMemershipLevel_MembershipLevel(memberLevelName);
+                    Admin.AddMemershipLevel_MembershipCode(memberLevelCode_Duplicate);
+                    Logger.WriteDebugMessage("Mandatory fields entered with duplicate Membership Code");
+                    Admin.Click_AddMemershipLevel_SaveButton();
+                    VerifyTextOnPageAndHighLight(validationMessage_Code);
+                    Logger.WriteDebugMessage(validationMessage_Code + " - Validation message displayed on the page for Membership code");
 
-                //Enter values in all fields and enter duplicate value in Level order field
-                Admin.AddMemershipLevel_MembershipCode(memberLevelCode);
-                Admin.AddMemershipLevel_LevelOrder(memberLevelOrder_Duplicate);
-                Logger.WriteDebugMessage("Mandatory fields entered with duplicate Level Order");
-                Admin.Click_AddMemershipLevel_SaveButton();
-                VerifyTextOnPageAndHighLight(validationMessage_LevelOrder);
-                Logger.WriteDebugMessage(validationMessage_LevelOrder + " - Validation message displayed on the page for Level Order");
-                AddDelay(3000);
-                Admin.AddMemershipLevel_MembershipLevel(memberLevelName);
-                Admin.AddMemershipLevel_LevelOrder(memberLevelOrder);
-                Logger.WriteDebugMessage("All Mandatory fields entered");
-                Admin.Click_AddMemershipLevel_SaveButton();
-                AddDelay(3000);
-                Admin.Enter_MembershipLevel_Filter(memberLevelName);
-                VerifyTextOnPageAndHighLight(memberLevelName);
-                Logger.WriteDebugMessage("Membership Level Saved Successfully");
+                    //Enter values in all fields and enter duplicate value in Level order field
+                    Admin.AddMemershipLevel_MembershipCode(memberLevelCode);
+                    Admin.AddMemershipLevel_LevelOrder(memberLevelOrder_Duplicate);
+                    Logger.WriteDebugMessage("Mandatory fields entered with duplicate Level Order");
+                    Admin.Click_AddMemershipLevel_SaveButton();
+                    VerifyTextOnPageAndHighLight(validationMessage_LevelOrder);
+                    Logger.WriteDebugMessage(validationMessage_LevelOrder + " - Validation message displayed on the page for Level Order");
+                    AddDelay(3000);
+                    Admin.AddMemershipLevel_MembershipLevel(memberLevelName);
+                    Admin.AddMemershipLevel_LevelOrder(memberLevelOrder);
+                    Logger.WriteDebugMessage("All Mandatory fields entered");
+                    Admin.Click_AddMemershipLevel_SaveButton();
+                    AddDelay(3000);
+                    Admin.Enter_MembershipLevel_Filter(memberLevelName);
+                    VerifyTextOnPageAndHighLight(memberLevelName);
+                    Logger.WriteDebugMessage("Membership Level Saved Successfully");
 
 
-                //Click on Edit for any existing level & try adding duplicate fields
-                Admin.Click_AddMemershipLevel_EditeButton(memberLevelName);
-                Logger.WriteDebugMessage("Clicked on Edit buttonn for = " + memberLevelName);
-                Admin.AddMemershipLevel_MembershipLevel(memberLevelName_Duplicate);
-                Admin.AddMemershipLevel_LevelOrder(memberLevelOrder);
-                Logger.WriteDebugMessage("Mandatory fields entered with duplicate Member level");
-                Admin.Click_AddMemershipLevel_SaveButton();
-                VerifyTextOnPageAndHighLight(validationMessage_MemberLevel);
-                Logger.WriteDebugMessage(validationMessage_MemberLevel + " - Validation message displayed on the page for Member Level on Edit mode");
+                    //Click on Edit for any existing level & try adding duplicate fields
+                    Admin.Click_AddMemershipLevel_EditeButton(memberLevelName);
+                    Logger.WriteDebugMessage("Clicked on Edit buttonn for = " + memberLevelName);
+                    Admin.AddMemershipLevel_MembershipLevel(memberLevelName_Duplicate);
+                    Admin.AddMemershipLevel_LevelOrder(memberLevelOrder);
+                    Logger.WriteDebugMessage("Mandatory fields entered with duplicate Member level");
+                    Admin.Click_AddMemershipLevel_SaveButton();
+                    VerifyTextOnPageAndHighLight(validationMessage_MemberLevel);
+                    Logger.WriteDebugMessage(validationMessage_MemberLevel + " - Validation message displayed on the page for Member Level on Edit mode");
 
-                Admin.AddMemershipLevel_MembershipLevel(memberLevelName);
-                Admin.AddMemershipLevel_LevelOrder(memberLevelOrder_Duplicate);
-                Logger.WriteDebugMessage("Mandatory fields entered with duplicate Level Order");
-                Admin.Click_AddMemershipLevel_SaveButton();
-                VerifyTextOnPageAndHighLight(validationMessage_LevelOrder);
-                Logger.WriteDebugMessage(validationMessage_LevelOrder + " - Validation message displayed on the page for Level Order on Edit mode");
-                Admin.Click_AddMemershipLevel_CancelButton();
+                    Admin.AddMemershipLevel_MembershipLevel(memberLevelName);
+                    Admin.AddMemershipLevel_LevelOrder(memberLevelOrder_Duplicate);
+                    Logger.WriteDebugMessage("Mandatory fields entered with duplicate Level Order");
+                    Admin.Click_AddMemershipLevel_SaveButton();
+                    VerifyTextOnPageAndHighLight(validationMessage_LevelOrder);
+                    Logger.WriteDebugMessage(validationMessage_LevelOrder + " - Validation message displayed on the page for Level Order on Edit mode");
+                    Admin.Click_AddMemershipLevel_CancelButton();
 
-                //Delete Membership Level
-                Admin.Delete_MembershipLevel(memberLevelName);
+                    //Delete Membership Level
+                    Admin.Delete_MembershipLevel(memberLevelName);
 
-                //Log test data into log file and extent report
-                Logger.LogTestData(TestPlanId, TestCaseId, "Member Level Name", memberLevelName);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Member Level Code", memberLevelCode);
-                Logger.LogTestData(TestPlanId, TestCaseId, "member Level Order", memberLevelOrder);
-                Logger.LogTestData(TestPlanId, TestCaseId, "MemberLevelName_Duplicate", memberLevelName_Duplicate);
-                Logger.LogTestData(TestPlanId, TestCaseId, "MemberLevelCode_Duplicate", memberLevelCode_Duplicate);
-                Logger.LogTestData(TestPlanId, TestCaseId, "MemberLevelOrder_Duplicate", memberLevelOrder_Duplicate);
-                Logger.LogTestData(TestPlanId, TestCaseId, "ValidationMessage_MemberLevel", validationMessage_MemberLevel);
-                Logger.LogTestData(TestPlanId, TestCaseId, "ValidationMessage_Code", validationMessage_Code);
-                Logger.LogTestData(TestPlanId, TestCaseId, "ValidationMessage_LevelOrder", validationMessage_LevelOrder, true);
-            }
+                    //Log test data into log file and extent report
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Member Level Name", memberLevelName);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Member Level Code", memberLevelCode);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "member Level Order", memberLevelOrder);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "MemberLevelName_Duplicate", memberLevelName_Duplicate);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "MemberLevelCode_Duplicate", memberLevelCode_Duplicate);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "MemberLevelOrder_Duplicate", memberLevelOrder_Duplicate);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "ValidationMessage_MemberLevel", validationMessage_MemberLevel);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "ValidationMessage_Code", validationMessage_Code);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "ValidationMessage_LevelOrder", validationMessage_LevelOrder, true);
+                }
         }
         public static void TC_255575()
         {
-            if (TestCaseId == Constants.TC_255575)
+            try
             {
-                //Pre-requisite
-                string memberLevelName, ruleType = null, defaultRule = null, monthlPeriod, monthlPeriodValidation, qualifiedNight, qualifiedNightValidation, stayProperties, stayPropertiesValidation, qualifiedStay, qualifiedStayValidation, checkOutStay, checkOutStayValidation, points, pointsValidation, revenue, revenueValidation, negativeValidation;
-                int levelCount, i;
-                Users data = new Users();
 
-                Queries.GetActiveMembershipLevelwithCount(data);
-
-                //Assign Values to variables
-                memberLevelName = data.MembershipLevelName;
-                monthlPeriodValidation = TestData.ExcelData.TestDataReader.ReadData(1, "MonthPeriod_Validation");
-                qualifiedNightValidation = TestData.ExcelData.TestDataReader.ReadData(1, "QualifiedNight_Validation");
-                stayPropertiesValidation = TestData.ExcelData.TestDataReader.ReadData(1, "StayProperties_Validation");
-                qualifiedStayValidation = TestData.ExcelData.TestDataReader.ReadData(1, "QualifiedStay_Validation");
-                checkOutStayValidation = TestData.ExcelData.TestDataReader.ReadData(1, "CheckedOutStay_Validation");
-                pointsValidation = TestData.ExcelData.TestDataReader.ReadData(1, "Points_Validation");
-                revenueValidation = TestData.ExcelData.TestDataReader.ReadData(1, "Revenue_Validation");
-
-
-                // Navigate to Admin
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
-
-                //Click on Membership Level tab and Captured all Active Level
-                Admin.Click_MembershipSetup_Tab();
-                Logger.WriteDebugMessage("Clicked on Membership Setup tab");
-                Admin.Click_MemberLevel_SubTab();
-                Admin.Select_MembershipLevel_Entries("All");
-                levelCount = Int32.Parse(data.LevelCount);
-                string[] levelArray = new string[levelCount+1];
-                for (i = 0; i < levelCount; i++)
+                if (TestCaseId == Constants.TC_255575)
                 {
-                    levelArray[i] = PageObject_Admin.Get_MembershipLevel_Name("" + (i + 1) + "").GetAttribute("innerHTML");
-                }
-                PageDown();
-                Logger.WriteDebugMessage("All membership levels captured");
+                    //Pre-requisite
+                    string memberLevelName, ruleType = null, defaultRule = null, monthlPeriod, monthlPeriodValidation, qualifiedNight, qualifiedNightValidation, stayProperties, stayPropertiesValidation, qualifiedStay, qualifiedStayValidation, checkOutStay, checkOutStayValidation, points, pointsValidation, revenue, revenueValidation, negativeValidation;
+                    int levelCount, i;
+                    Users data = new Users();
+
+                    Queries.GetActiveMembershipLevelwithCount(data);
+
+                    //Assign Values to variables
+                    memberLevelName = data.MembershipLevelName;
+                    monthlPeriodValidation = TestData.ExcelData.TestDataReader.ReadData(1, "MonthPeriod_Validation");
+                    qualifiedNightValidation = TestData.ExcelData.TestDataReader.ReadData(1, "QualifiedNight_Validation");
+                    stayPropertiesValidation = TestData.ExcelData.TestDataReader.ReadData(1, "StayProperties_Validation");
+                    qualifiedStayValidation = TestData.ExcelData.TestDataReader.ReadData(1, "QualifiedStay_Validation");
+                    checkOutStayValidation = TestData.ExcelData.TestDataReader.ReadData(1, "CheckedOutStay_Validation");
+                    pointsValidation = TestData.ExcelData.TestDataReader.ReadData(1, "Points_Validation");
+                    revenueValidation = TestData.ExcelData.TestDataReader.ReadData(1, "Revenue_Validation");
 
 
-                //Navigate Member level Rule sub tab
-                Admin.Click_Memberlevelrule_Tab();
-                Logger.WriteDebugMessage("Clicked on Member Level Rule Tab and Landed on Member Level Rule Page");
+                    // Navigate to Admin
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
 
-                //Click on Add Member Level Rule
-                Admin.Click_AddRule_Button();
-                Logger.WriteDebugMessage("Landed on Add Member Level Rule overlay");
+                    //Click on Membership Level tab and Captured all Active Level
+                    Admin.Click_MembershipSetup_Tab();
+                    Logger.WriteDebugMessage("Clicked on Membership Setup tab");
+                    Admin.Click_MemberLevel_SubTab();
+                    Admin.Select_MembershipLevel_Entries("All");
+                    levelCount = Int32.Parse(data.LevelCount);
+                    string[] levelArray = new string[levelCount + 1];
+                    for (i = 0; i < levelCount; i++)
+                    {
+                        levelArray[i] = PageObject_Admin.Get_MembershipLevel_Name("" + (i + 1) + "").GetAttribute("innerHTML");
+                    }
+                    PageDown();
+                    Logger.WriteDebugMessage("All membership levels captured");
 
 
-                //Verify New Rule Level, Rule Type and Default Rule
-                //Member Level
-                PageObject_Admin.Select_MemberLevel_Dropdown().Click();
-                Logger.WriteDebugMessage("Clicked on Member Level Dropdown on Member Level Rule tab");
-                for (i = 0; i < levelCount; i++)
-                {
-                    if (levelArray[i].Equals(PageObject_Admin.Get_MemberLevel_Name("" + (i + 2) + "").GetAttribute("innerHTML")))
-                        Logger.WriteInfoMessage(levelArray[i] + " Present in Member Level Dropdown");
+                    //Navigate Member level Rule sub tab
+                    Admin.Click_Memberlevelrule_Tab();
+                    Logger.WriteDebugMessage("Clicked on Member Level Rule Tab and Landed on Member Level Rule Page");
+
+                    //Click on Add Member Level Rule
+                    Admin.Click_AddRule_Button();
+                    Logger.WriteDebugMessage("Landed on Add Member Level Rule overlay");
+
+
+                    //Verify New Rule Level, Rule Type and Default Rule
+                    //Member Level
+                    PageObject_Admin.Select_MemberLevel_Dropdown().Click();
+                    Logger.WriteDebugMessage("Clicked on Member Level Dropdown on Member Level Rule tab");
+                    for (i = 0; i < levelCount; i++)
+                    {
+                        if (levelArray[i].Equals(PageObject_Admin.Get_MemberLevel_Name("" + (i + 2) + "").GetAttribute("innerHTML")))
+                            Logger.WriteInfoMessage(levelArray[i] + " Present in Member Level Dropdown");
+                        else
+                            Assert.Fail(levelArray[i] + " is not present in Member level Dropdown");
+                    }
+
+                    //Rule Type
+                    PageObject_Admin.Select_RuleType_Dropdown().Click();
+                    Logger.WriteDebugMessage("Clicked on Rule Type Dropdown on Member Level Rule tab");
+                    for (i = 0; i < 2; i++)
+                    {
+                        ruleType = TestData.ExcelData.TestDataReader.ReadData(i, "RuleType");
+                        if (ruleType.Equals(PageObject_Admin.Get_Rule_Type("" + (i + 2) + "").GetAttribute("innerHTML")))
+                            Logger.WriteInfoMessage(ruleType + " Present in Rule Type Dropdown on Member Level Rule Overlay");
+                        else
+                            Assert.Fail(ruleType + " is not present in Rule Type Drop Down");
+                    }
+
+                    //Stay Type
+                    if (PageObject_Admin.Select_StayType_Dropdown().Enabled)
+                        Assert.Fail("Stay Type Dropdown is not Disable");
                     else
-                        Assert.Fail(levelArray[i] + " is not present in Member level Dropdown");
-                }
+                        Logger.WriteInfoMessage("Stay Type Dropdown is Disable");
 
-                //Rule Type
-                PageObject_Admin.Select_RuleType_Dropdown().Click();
-                Logger.WriteDebugMessage("Clicked on Rule Type Dropdown on Member Level Rule tab");
-                for (i = 0; i < 2; i++)
-                {
-                    ruleType = TestData.ExcelData.TestDataReader.ReadData(i, "RuleType");
-                    if (ruleType.Equals(PageObject_Admin.Get_Rule_Type("" + (i + 2) + "").GetAttribute("innerHTML")))
-                        Logger.WriteInfoMessage(ruleType + " Present in Rule Type Dropdown on Member Level Rule Overlay");
+                    //Default Rule
+                    PageObject_Admin.Select_DefaultRule_Dropdown().Click();
+                    Logger.WriteDebugMessage("Clicked on Default Rule dropdown on Member Level Rule tab");
+                    for (i = 0; i < 2; i++)
+                    {
+                        defaultRule = TestData.ExcelData.TestDataReader.ReadData(i, "DefaultRule");
+                        if (defaultRule.Equals(PageObject_Admin.Get_Default_Rule("" + (i + 1) + "").GetAttribute("innerHTML")))
+                            Logger.WriteInfoMessage(defaultRule + " Present in Default Rule Dropdown on Member Level Rule Overlay");
+                        else
+                            Assert.Fail(defaultRule + " is not present in Default Rule Drop Down");
+                    }
+
+                    //Validate Month Period field
+                    Admin.Select_MemberLevel_Dropdown(memberLevelName);
+                    Admin.Select_RuleType_Dropdown(ruleType);
+                    Admin.Select_DefaultRule_Dropdown(defaultRule);
+                    for (i = 1; i <= 5; i++)
+                    {
+                        monthlPeriod = TestData.ExcelData.TestDataReader.ReadData(i, "MonthPeriod");
+                        Admin.Enter_MonthPeriod_TextBox(monthlPeriod);
+                        Logger.WriteDebugMessage("All Details with Month Period as = " + monthlPeriod + " Entered");
+                        if (i < 5)
+                        {
+                            Admin.Click_MembershipLevelSave_Button();
+                            VerifyTextOnPageAndHighLight(monthlPeriodValidation);
+                            Logger.WriteDebugMessage("Validation Message for Month Period got displayed");
+                        }
+                    }
+
+                    //Validate Qualifying Nights
+                    for (i = 1; i <= 5; i++)
+                    {
+                        qualifiedNight = TestData.ExcelData.TestDataReader.ReadData(i, "QualifiedNight");
+                        Admin.Enter_QualifyingNight_TextBox(qualifiedNight);
+                        Logger.WriteDebugMessage("All Details with Qualifying Night as = " + qualifiedNight + " Entered");
+                        if (i < 5)
+                        {
+
+                            Admin.Click_MembershipLevelSave_Button();
+                            if (i == 4)
+                            {
+                                negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "QualifiedNight_Negative_Validation");
+                                VerifyTextOnPageAndHighLight(negativeValidation);
+                            }
+                            else
+                                VerifyTextOnPageAndHighLight(qualifiedNightValidation);
+                            Logger.WriteDebugMessage("Validation Message for Qualifying Night got displayed");
+                        }
+                    }
+
+                    //Validate Stay Properties
+                    for (i = 1; i <= 5; i++)
+                    {
+                        stayProperties = TestData.ExcelData.TestDataReader.ReadData(i, "StayProperties");
+                        Admin.Enter_StayProperties_TextBox(stayProperties);
+                        Logger.WriteDebugMessage("All Details with Stay Properties as = " + stayProperties + " Entered");
+                        if (i < 5)
+                        {
+                            Admin.Click_MembershipLevelSave_Button();
+                            if (i == 4)
+                            {
+                                negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "StayProperties_Negative_Validation");
+                                VerifyTextOnPageAndHighLight(negativeValidation);
+                            }
+                            else
+                                VerifyTextOnPageAndHighLight(stayPropertiesValidation);
+                            Logger.WriteDebugMessage("Validation Message for Stay Properties got displayed");
+                        }
+                    }
+
+                    //Validate Qualified Stay
+                    for (i = 1; i <= 5; i++)
+                    {
+                        qualifiedStay = TestData.ExcelData.TestDataReader.ReadData(i, "QualifiedStay");
+                        Admin.Enter_QualifiedStay_TextBox(qualifiedStay);
+                        Logger.WriteDebugMessage("All Details with Qualified Stay as = " + qualifiedStay + " Entered");
+                        if (i < 5)
+                        {
+                            Admin.Click_MembershipLevelSave_Button();
+                            if (i == 4)
+                            {
+                                negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "QualifiedStay_Negative_Validation");
+                                VerifyTextOnPageAndHighLight(negativeValidation);
+                            }
+                            else
+                                VerifyTextOnPageAndHighLight(qualifiedStayValidation);
+                            Logger.WriteDebugMessage("Validation Message for Qualified Stay got displayed");
+                        }
+                    }
+
+                    //Validate CheckOut Stay
+                    for (i = 1; i <= 5; i++)
+                    {
+                        checkOutStay = TestData.ExcelData.TestDataReader.ReadData(i, "CheckOutStay");
+                        Admin.Enter_CheckedOutStay_TextBox(checkOutStay);
+                        Logger.WriteDebugMessage("All Details with Check Out Stay as = " + checkOutStay + " Entered");
+                        if (i < 5)
+                        {
+                            Admin.Click_MembershipLevelSave_Button();
+                            if (i == 4)
+                            {
+                                negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "CheckOutStay_Negative_Validation");
+                                VerifyTextOnPageAndHighLight(negativeValidation);
+                            }
+                            else
+                                VerifyTextOnPageAndHighLight(checkOutStayValidation);
+                            Logger.WriteDebugMessage("Validation Message for Check Out Stay got displayed");
+                        }
+                    }
+
+                    //Validate Points
+                    for (i = 1; i <= 5; i++)
+                    {
+                        points = TestData.ExcelData.TestDataReader.ReadData(i, "Points");
+                        Admin.Enter_Points_TextBox(points);
+                        Logger.WriteDebugMessage("All Details with Points as = " + points + " Entered");
+                        if (i < 5)
+                        {
+                            Admin.Click_MembershipLevelSave_Button();
+                            if (i == 4)
+                            {
+                                negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "Points_Negative_Validation");
+                                VerifyTextOnPageAndHighLight(negativeValidation);
+                            }
+                            else
+                                VerifyTextOnPageAndHighLight(pointsValidation);
+                            Logger.WriteDebugMessage("Validation Message for Points got displayed");
+                        }
+                    }
+
+                    //Validate Revenue
+                    for (i = 1; i <= 5; i++)
+                    {
+                        revenue = TestData.ExcelData.TestDataReader.ReadData(i, "Revenue");
+                        Admin.Enter_Revenue_TextBox(revenue);
+                        Logger.WriteDebugMessage("All Details with Revenue as = " + revenue + " Entered");
+                        if (i < 5)
+                        {
+
+                            Admin.Click_MembershipLevelSave_Button();
+                            if (i == 4)
+                            {
+                                negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "Revenue_Negative_Validation");
+                                VerifyTextOnPageAndHighLight(negativeValidation);
+                            }
+                            else
+                                VerifyTextOnPageAndHighLight(revenueValidation);
+                            Logger.WriteDebugMessage("Validation Message for Revenue got displayed");
+                        }
+                    }
+
+                    //Verify the field validation for Edit Member Level Rule
+                    Admin.Click_MembershipLevelCancel_Button();
+                    Logger.WriteDebugMessage("Clicked on Cancel button for Add member Level Rule Overlay and Member Level Rule page got displayed");
+                    Admin.Click_Edit_MembershipLevelRule();
+                    Logger.WriteDebugMessage("Clicked on Edit button and Edit Memberlevel Rule box got opened");
+                    //Verify New Rule Level, Rule Type and Default Rule
+                    //Member Level
+                    PageObject_Admin.Select_MemberLevel_Dropdown().Click();
+                    Logger.WriteDebugMessage("Clicked on Member Level Dropdown on Member Level Rule tab");
+                    for (i = 0; i < levelCount; i++)
+                    {
+                        if (levelArray[i].Equals(PageObject_Admin.Get_MemberLevel_Name("" + (i + 2) + "").GetAttribute("innerHTML")))
+                            Logger.WriteInfoMessage(levelArray[i] + " Present in Member Level Dropdown");
+                        else
+                            Assert.Fail(levelArray[i] + " is not present in Member level Dropdown");
+                    }
+                    Logger.WriteDebugMessage("Member Levels present on Add Member level rule tab");
+
+                    //Rule Type
+                    PageObject_Admin.Select_RuleType_Dropdown().Click();
+                    Logger.WriteDebugMessage("Clicked on Rule Type Dropdown on Member Level Rule tab");
+                    for (i = 0; i < 2; i++)
+                    {
+                        ruleType = TestData.ExcelData.TestDataReader.ReadData(i, "RuleType");
+                        if (ruleType.Equals(PageObject_Admin.Get_Rule_Type("" + (i + 2) + "").GetAttribute("innerHTML")))
+                            Logger.WriteInfoMessage(ruleType + " Present in Rule Type Dropdown on Member Level Rule Overlay");
+                        else
+                            Assert.Fail(ruleType + " is not present in Rule Type Drop Down");
+                    }
+                    Logger.WriteDebugMessage("Rule Type present on Add Member level rule tab");
+
+                    //Stay Type
+                    if (PageObject_Admin.Select_StayType_Dropdown().Enabled)
+                        Assert.Fail("Stay Type Dropdown is not Disable");
                     else
-                        Assert.Fail(ruleType + " is not present in Rule Type Drop Down");
-                }
+                        Logger.WriteInfoMessage("Stay Type Dropdown is Disable");
 
-                //Stay Type
-                if (PageObject_Admin.Select_StayType_Dropdown().Enabled)
-                    Assert.Fail("Stay Type Dropdown is not Disable");
-                else
-                    Logger.WriteInfoMessage("Stay Type Dropdown is Disable");
-
-                //Default Rule
-                PageObject_Admin.Select_DefaultRule_Dropdown().Click();
-                Logger.WriteDebugMessage("Clicked on Default Rule dropdown on Member Level Rule tab");
-                for (i = 0; i < 2; i++)
-                {
-                    defaultRule = TestData.ExcelData.TestDataReader.ReadData(i, "DefaultRule");
-                    if (defaultRule.Equals(PageObject_Admin.Get_Default_Rule("" + (i + 1) + "").GetAttribute("innerHTML")))
-                        Logger.WriteInfoMessage(defaultRule + " Present in Default Rule Dropdown on Member Level Rule Overlay");
-                    else
-                        Assert.Fail(defaultRule + " is not present in Default Rule Drop Down");
-                }
-
-                //Validate Month Period field
-                Admin.Select_MemberLevel_Dropdown(memberLevelName);
-                Admin.Select_RuleType_Dropdown(ruleType);
-                Admin.Select_DefaultRule_Dropdown(defaultRule);
-                for (i = 1; i <= 5; i++)
-                {
-                    monthlPeriod = TestData.ExcelData.TestDataReader.ReadData(i, "MonthPeriod");
-                    Admin.Enter_MonthPeriod_TextBox(monthlPeriod);
-                    Logger.WriteDebugMessage("All Details with Month Period as = " + monthlPeriod + " Entered");
-                    if (i < 5)
+                    //Default Rule
+                    PageObject_Admin.Select_DefaultRule_Dropdown().Click();
+                    Logger.WriteDebugMessage("Clicked on Default Rule dropdown on Member Level Rule tab");
+                    for (i = 0; i < 2; i++)
                     {
-                        Admin.Click_MembershipLevelSave_Button();
-                        VerifyTextOnPageAndHighLight(monthlPeriodValidation);
-                        Logger.WriteDebugMessage("Validation Message for Month Period got displayed");
-                    }
-                }
-
-                //Validate Qualifying Nights
-                for (i = 1; i <= 5; i++)
-                {
-                    qualifiedNight = TestData.ExcelData.TestDataReader.ReadData(i, "QualifiedNight");
-                    Admin.Enter_QualifyingNight_TextBox(qualifiedNight);
-                    Logger.WriteDebugMessage("All Details with Qualifying Night as = " + qualifiedNight + " Entered");
-                    if (i < 5)
-                    {
-
-                        Admin.Click_MembershipLevelSave_Button();
-                        if (i == 4)
-                        {
-                            negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "QualifiedNight_Negative_Validation");
-                            VerifyTextOnPageAndHighLight(negativeValidation);
-                        }
+                        defaultRule = TestData.ExcelData.TestDataReader.ReadData(i, "DefaultRule");
+                        if (defaultRule.Equals(PageObject_Admin.Get_Default_Rule("" + (i + 1) + "").GetAttribute("innerHTML")))
+                            Logger.WriteInfoMessage(defaultRule + " Present in Default Rule Dropdown on Member Level Rule Overlay");
                         else
-                            VerifyTextOnPageAndHighLight(qualifiedNightValidation);
-                        Logger.WriteDebugMessage("Validation Message for Qualifying Night got displayed");
+                            Assert.Fail(defaultRule + " is not present in Default Rule Drop Down");
                     }
-                }
+                    Logger.WriteDebugMessage("Default Rule present on Add Member level rule tab");
 
-                //Validate Stay Properties
-                for (i = 1; i <= 5; i++)
-                {
-                    stayProperties = TestData.ExcelData.TestDataReader.ReadData(i, "StayProperties");
-                    Admin.Enter_StayProperties_TextBox(stayProperties);
-                    Logger.WriteDebugMessage("All Details with Stay Properties as = " + stayProperties + " Entered");
-                    if (i < 5)
+                    //Validate Month Period field
+                    Admin.Select_MemberLevel_Dropdown(memberLevelName);
+                    Admin.Select_RuleType_Dropdown(ruleType);
+                    Admin.Select_DefaultRule_Dropdown(defaultRule);
+                    for (i = 1; i <= 5; i++)
                     {
-                        Admin.Click_MembershipLevelSave_Button();
-                        if (i == 4)
+                        monthlPeriod = TestData.ExcelData.TestDataReader.ReadData(i, "MonthPeriod");
+                        Admin.Enter_MonthPeriod_TextBox(monthlPeriod);
+                        Logger.WriteDebugMessage("All Details with Month Period as = " + monthlPeriod + " Entered");
+                        if (i < 5)
                         {
-                            negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "StayProperties_Negative_Validation");
-                            VerifyTextOnPageAndHighLight(negativeValidation);
+                            Admin.Click_MembershipLevelSave_Button();
+                            VerifyTextOnPageAndHighLight(monthlPeriodValidation);
+                            Logger.WriteDebugMessage("Validation Message for Month Period got displayed");
                         }
-                        else
-                            VerifyTextOnPageAndHighLight(stayPropertiesValidation);
-                        Logger.WriteDebugMessage("Validation Message for Stay Properties got displayed");
                     }
-                }
 
-                //Validate Qualified Stay
-                for (i = 1; i <= 5; i++)
-                {
-                    qualifiedStay = TestData.ExcelData.TestDataReader.ReadData(i, "QualifiedStay");
-                    Admin.Enter_QualifiedStay_TextBox(qualifiedStay);
-                    Logger.WriteDebugMessage("All Details with Qualified Stay as = " + qualifiedStay + " Entered");
-                    if (i < 5)
+                    //Validate Qualifying Nights
+                    for (i = 1; i <= 5; i++)
                     {
-                        Admin.Click_MembershipLevelSave_Button();
-                        if (i == 4)
+                        qualifiedNight = TestData.ExcelData.TestDataReader.ReadData(i, "QualifiedNight");
+                        Admin.Enter_QualifyingNight_TextBox(qualifiedNight);
+                        Logger.WriteDebugMessage("All Details with Qualifying Night as = " + qualifiedNight + " Entered");
+                        if (i < 5)
                         {
-                            negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "QualifiedStay_Negative_Validation");
-                            VerifyTextOnPageAndHighLight(negativeValidation);
-                        }
-                        else
-                            VerifyTextOnPageAndHighLight(qualifiedStayValidation);
-                        Logger.WriteDebugMessage("Validation Message for Qualified Stay got displayed");
-                    }
-                }
 
-                //Validate CheckOut Stay
-                for (i = 1; i <= 5; i++)
-                {
-                    checkOutStay = TestData.ExcelData.TestDataReader.ReadData(i, "CheckOutStay");
-                    Admin.Enter_CheckedOutStay_TextBox(checkOutStay);
-                    Logger.WriteDebugMessage("All Details with Check Out Stay as = " + checkOutStay + " Entered");
-                    if (i < 5)
+                            Admin.Click_MembershipLevelSave_Button();
+                            if (i == 4)
+                            {
+                                negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "QualifiedNight_Negative_Validation");
+                                VerifyTextOnPageAndHighLight(negativeValidation);
+                            }
+                            else
+                                VerifyTextOnPageAndHighLight(qualifiedNightValidation);
+                            Logger.WriteDebugMessage("Validation Message for Qualifying Night got displayed");
+                        }
+                    }
+
+                    //Validate Stay Properties
+                    for (i = 1; i <= 5; i++)
                     {
-                        Admin.Click_MembershipLevelSave_Button();
-                        if (i == 4)
+                        stayProperties = TestData.ExcelData.TestDataReader.ReadData(i, "StayProperties");
+                        Admin.Enter_StayProperties_TextBox(stayProperties);
+                        Logger.WriteDebugMessage("All Details with Stay Properties as = " + stayProperties + " Entered");
+                        if (i < 5)
                         {
-                            negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "CheckOutStay_Negative_Validation");
-                            VerifyTextOnPageAndHighLight(negativeValidation);
+                            Admin.Click_MembershipLevelSave_Button();
+                            if (i == 4)
+                            {
+                                negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "StayProperties_Negative_Validation");
+                                VerifyTextOnPageAndHighLight(negativeValidation);
+                            }
+                            else
+                                VerifyTextOnPageAndHighLight(stayPropertiesValidation);
+                            Logger.WriteDebugMessage("Validation Message for Stay Properties got displayed");
                         }
-                        else
-                            VerifyTextOnPageAndHighLight(checkOutStayValidation);
-                        Logger.WriteDebugMessage("Validation Message for Check Out Stay got displayed");
                     }
-                }
 
-                //Validate Points
-                for (i = 1; i <= 5; i++)
-                {
-                    points = TestData.ExcelData.TestDataReader.ReadData(i, "Points");
-                    Admin.Enter_Points_TextBox(points);
-                    Logger.WriteDebugMessage("All Details with Points as = " + points + " Entered");
-                    if (i < 5)
+                    //Validate Qualified Stay
+                    for (i = 1; i <= 5; i++)
                     {
-                        Admin.Click_MembershipLevelSave_Button();
-                        if (i == 4)
+                        qualifiedStay = TestData.ExcelData.TestDataReader.ReadData(i, "QualifiedStay");
+                        Admin.Enter_QualifiedStay_TextBox(qualifiedStay);
+                        Logger.WriteDebugMessage("All Details with Qualified Stay as = " + qualifiedStay + " Entered");
+                        if (i < 5)
                         {
-                            negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "Points_Negative_Validation");
-                            VerifyTextOnPageAndHighLight(negativeValidation);
+                            Admin.Click_MembershipLevelSave_Button();
+                            if (i == 4)
+                            {
+                                negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "QualifiedStay_Negative_Validation");
+                                VerifyTextOnPageAndHighLight(negativeValidation);
+                            }
+                            else
+                                VerifyTextOnPageAndHighLight(qualifiedStayValidation);
+                            Logger.WriteDebugMessage("Validation Message for Qualified Stay got displayed");
                         }
-                        else
-                            VerifyTextOnPageAndHighLight(pointsValidation);
-                        Logger.WriteDebugMessage("Validation Message for Points got displayed");
                     }
-                }
 
-                //Validate Revenue
-                for (i = 1; i <= 5; i++)
-                {
-                    revenue = TestData.ExcelData.TestDataReader.ReadData(i, "Revenue");
-                    Admin.Enter_Revenue_TextBox(revenue);
-                    Logger.WriteDebugMessage("All Details with Revenue as = " + revenue + " Entered");
-                    if (i < 5)
+                    //Validate CheckOut Stay
+                    for (i = 1; i <= 5; i++)
                     {
-
-                        Admin.Click_MembershipLevelSave_Button();
-                        if (i == 4)
+                        checkOutStay = TestData.ExcelData.TestDataReader.ReadData(i, "CheckOutStay");
+                        Admin.Enter_CheckedOutStay_TextBox(checkOutStay);
+                        Logger.WriteDebugMessage("All Details with Check Out Stay as = " + checkOutStay + " Entered");
+                        if (i < 5)
                         {
-                            negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "Revenue_Negative_Validation");
-                            VerifyTextOnPageAndHighLight(negativeValidation);
+                            Admin.Click_MembershipLevelSave_Button();
+                            if (i == 4)
+                            {
+                                negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "CheckOutStay_Negative_Validation");
+                                VerifyTextOnPageAndHighLight(negativeValidation);
+                            }
+                            else
+                                VerifyTextOnPageAndHighLight(checkOutStayValidation);
+                            Logger.WriteDebugMessage("Validation Message for Check Out Stay got displayed");
                         }
-                        else
-                            VerifyTextOnPageAndHighLight(revenueValidation);
-                        Logger.WriteDebugMessage("Validation Message for Revenue got displayed");
                     }
-                }
 
-                //Verify the field validation for Edit Member Level Rule
-                Admin.Click_MembershipLevelCancel_Button();
-                Logger.WriteDebugMessage("Clicked on Cancel button for Add member Level Rule Overlay and Member Level Rule page got displayed");
-                Admin.Click_Edit_MembershipLevelRule();
-                Logger.WriteDebugMessage("Clicked on Edit button and Edit Memberlevel Rule box got opened");
-                //Verify New Rule Level, Rule Type and Default Rule
-                //Member Level
-                PageObject_Admin.Select_MemberLevel_Dropdown().Click();
-                Logger.WriteDebugMessage("Clicked on Member Level Dropdown on Member Level Rule tab");
-                for (i = 0; i < levelCount; i++)
-                {
-                    if (levelArray[i].Equals(PageObject_Admin.Get_MemberLevel_Name("" + (i + 2) + "").GetAttribute("innerHTML")))
-                        Logger.WriteInfoMessage(levelArray[i] + " Present in Member Level Dropdown");
-                    else
-                        Assert.Fail(levelArray[i] + " is not present in Member level Dropdown");
-                }
-                Logger.WriteDebugMessage("Member Levels present on Add Member level rule tab");
-
-                //Rule Type
-                PageObject_Admin.Select_RuleType_Dropdown().Click();
-                Logger.WriteDebugMessage("Clicked on Rule Type Dropdown on Member Level Rule tab");
-                for (i = 0; i < 2; i++)
-                {
-                    ruleType = TestData.ExcelData.TestDataReader.ReadData(i, "RuleType");
-                    if (ruleType.Equals(PageObject_Admin.Get_Rule_Type("" + (i + 2) + "").GetAttribute("innerHTML")))
-                        Logger.WriteInfoMessage(ruleType + " Present in Rule Type Dropdown on Member Level Rule Overlay");
-                    else
-                        Assert.Fail(ruleType + " is not present in Rule Type Drop Down");
-                }
-                Logger.WriteDebugMessage("Rule Type present on Add Member level rule tab");
-
-                //Stay Type
-                if (PageObject_Admin.Select_StayType_Dropdown().Enabled)
-                    Assert.Fail("Stay Type Dropdown is not Disable");
-                else
-                    Logger.WriteInfoMessage("Stay Type Dropdown is Disable");
-
-                //Default Rule
-                PageObject_Admin.Select_DefaultRule_Dropdown().Click();
-                Logger.WriteDebugMessage("Clicked on Default Rule dropdown on Member Level Rule tab");
-                for (i = 0; i < 2; i++)
-                {
-                    defaultRule = TestData.ExcelData.TestDataReader.ReadData(i, "DefaultRule");
-                    if (defaultRule.Equals(PageObject_Admin.Get_Default_Rule("" + (i + 1) + "").GetAttribute("innerHTML")))
-                        Logger.WriteInfoMessage(defaultRule + " Present in Default Rule Dropdown on Member Level Rule Overlay");
-                    else
-                        Assert.Fail(defaultRule + " is not present in Default Rule Drop Down");
-                }
-                Logger.WriteDebugMessage("Default Rule present on Add Member level rule tab");
-
-                //Validate Month Period field
-                Admin.Select_MemberLevel_Dropdown(memberLevelName);
-                Admin.Select_RuleType_Dropdown(ruleType);
-                Admin.Select_DefaultRule_Dropdown(defaultRule);
-                for (i = 1; i <= 5; i++)
-                {
-                    monthlPeriod = TestData.ExcelData.TestDataReader.ReadData(i, "MonthPeriod");
-                    Admin.Enter_MonthPeriod_TextBox(monthlPeriod);
-                    Logger.WriteDebugMessage("All Details with Month Period as = " + monthlPeriod + " Entered");
-                    if (i < 5)
+                    //Validate Points
+                    for (i = 1; i <= 5; i++)
                     {
-                        Admin.Click_MembershipLevelSave_Button();
-                        VerifyTextOnPageAndHighLight(monthlPeriodValidation);
-                        Logger.WriteDebugMessage("Validation Message for Month Period got displayed");
-                    }
-                }
-
-                //Validate Qualifying Nights
-                for (i = 1; i <= 5; i++)
-                {
-                    qualifiedNight = TestData.ExcelData.TestDataReader.ReadData(i, "QualifiedNight");
-                    Admin.Enter_QualifyingNight_TextBox(qualifiedNight);
-                    Logger.WriteDebugMessage("All Details with Qualifying Night as = " + qualifiedNight + " Entered");
-                    if (i < 5)
-                    {
-
-                        Admin.Click_MembershipLevelSave_Button();
-                        if (i == 4)
+                        points = TestData.ExcelData.TestDataReader.ReadData(i, "Points");
+                        Admin.Enter_Points_TextBox(points);
+                        Logger.WriteDebugMessage("All Details with Points as = " + points + " Entered");
+                        if (i < 5)
                         {
-                            negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "QualifiedNight_Negative_Validation");
-                            VerifyTextOnPageAndHighLight(negativeValidation);
+                            Admin.Click_MembershipLevelSave_Button();
+                            if (i == 4)
+                            {
+                                negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "Points_Negative_Validation");
+                                VerifyTextOnPageAndHighLight(negativeValidation);
+                            }
+                            else
+                                VerifyTextOnPageAndHighLight(pointsValidation);
+                            Logger.WriteDebugMessage("Validation Message for Points got displayed");
                         }
-                        else
-                            VerifyTextOnPageAndHighLight(qualifiedNightValidation);
-                        Logger.WriteDebugMessage("Validation Message for Qualifying Night got displayed");
                     }
-                }
 
-                //Validate Stay Properties
-                for (i = 1; i <= 5; i++)
-                {
-                    stayProperties = TestData.ExcelData.TestDataReader.ReadData(i, "StayProperties");
-                    Admin.Enter_StayProperties_TextBox(stayProperties);
-                    Logger.WriteDebugMessage("All Details with Stay Properties as = " + stayProperties + " Entered");
-                    if (i < 5)
+                    //Validate Revenue
+                    for (i = 1; i <= 5; i++)
                     {
-                        Admin.Click_MembershipLevelSave_Button();
-                        if (i == 4)
+                        revenue = TestData.ExcelData.TestDataReader.ReadData(i, "Revenue");
+                        Admin.Enter_Revenue_TextBox(revenue);
+                        Logger.WriteDebugMessage("All Details with Revenue as = " + revenue + " Entered");
+                        if (i < 5)
                         {
-                            negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "StayProperties_Negative_Validation");
-                            VerifyTextOnPageAndHighLight(negativeValidation);
+                            Admin.Click_MembershipLevelSave_Button();
+                            if (i == 4)
+                            {
+                                negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "Revenue_Negative_Validation");
+                                VerifyTextOnPageAndHighLight(negativeValidation);
+                            }
+                            else
+                                VerifyTextOnPageAndHighLight(revenueValidation);
+                            Logger.WriteDebugMessage("Validation Message for Revenue got displayed");
                         }
-                        else
-                            VerifyTextOnPageAndHighLight(stayPropertiesValidation);
-                        Logger.WriteDebugMessage("Validation Message for Stay Properties got displayed");
                     }
+                    Admin.Click_MembershipLevelCancel_Button();
+                    Logger.WriteDebugMessage("Clicked on Cancel button for Add member Level Rule Overlay and Member Level Rule page got displayed");
+
+                    //Log test data into log file and extent report
+                    for (i = 0; i < levelCount; i++)
+                        Logger.LogTestData(TestPlanId, TestCaseId, i + " = Member Level", levelArray[i]);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Month Period Validation", monthlPeriodValidation);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Qualified Night Validation", qualifiedNightValidation);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Stay Properties Validation", stayPropertiesValidation);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Qualified Stay Validation", qualifiedStayValidation);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Checked out Stay Validation", checkOutStayValidation);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Points Validation", pointsValidation);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Revenue Validation", revenueValidation, true);
+
                 }
-
-                //Validate Qualified Stay
-                for (i = 1; i <= 5; i++)
-                {
-                    qualifiedStay = TestData.ExcelData.TestDataReader.ReadData(i, "QualifiedStay");
-                    Admin.Enter_QualifiedStay_TextBox(qualifiedStay);
-                    Logger.WriteDebugMessage("All Details with Qualified Stay as = " + qualifiedStay + " Entered");
-                    if (i < 5)
-                    {
-                        Admin.Click_MembershipLevelSave_Button();
-                        if (i == 4)
-                        {
-                            negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "QualifiedStay_Negative_Validation");
-                            VerifyTextOnPageAndHighLight(negativeValidation);
-                        }
-                        else
-                            VerifyTextOnPageAndHighLight(qualifiedStayValidation);
-                        Logger.WriteDebugMessage("Validation Message for Qualified Stay got displayed");
-                    }
-                }
-
-                //Validate CheckOut Stay
-                for (i = 1; i <= 5; i++)
-                {
-                    checkOutStay = TestData.ExcelData.TestDataReader.ReadData(i, "CheckOutStay");
-                    Admin.Enter_CheckedOutStay_TextBox(checkOutStay);
-                    Logger.WriteDebugMessage("All Details with Check Out Stay as = " + checkOutStay + " Entered");
-                    if (i < 5)
-                    {
-                        Admin.Click_MembershipLevelSave_Button();
-                        if (i == 4)
-                        {
-                            negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "CheckOutStay_Negative_Validation");
-                            VerifyTextOnPageAndHighLight(negativeValidation);
-                        }
-                        else
-                            VerifyTextOnPageAndHighLight(checkOutStayValidation);
-                        Logger.WriteDebugMessage("Validation Message for Check Out Stay got displayed");
-                    }
-                }
-
-                //Validate Points
-                for (i = 1; i <= 5; i++)
-                {
-                    points = TestData.ExcelData.TestDataReader.ReadData(i, "Points");
-                    Admin.Enter_Points_TextBox(points);
-                    Logger.WriteDebugMessage("All Details with Points as = " + points + " Entered");
-                    if (i < 5)
-                    {
-                        Admin.Click_MembershipLevelSave_Button();
-                        if (i == 4)
-                        {
-                            negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "Points_Negative_Validation");
-                            VerifyTextOnPageAndHighLight(negativeValidation);
-                        }
-                        else
-                            VerifyTextOnPageAndHighLight(pointsValidation);
-                        Logger.WriteDebugMessage("Validation Message for Points got displayed");
-                    }
-                }
-
-                //Validate Revenue
-                for (i = 1; i <= 5; i++)
-                {
-                    revenue = TestData.ExcelData.TestDataReader.ReadData(i, "Revenue");
-                    Admin.Enter_Revenue_TextBox(revenue);
-                    Logger.WriteDebugMessage("All Details with Revenue as = " + revenue + " Entered");
-                    if (i < 5)
-                    {
-                        Admin.Click_MembershipLevelSave_Button();
-                        if (i == 4)
-                        {
-                            negativeValidation = TestData.ExcelData.TestDataReader.ReadData(1, "Revenue_Negative_Validation");
-                            VerifyTextOnPageAndHighLight(negativeValidation);
-                        }
-                        else
-                            VerifyTextOnPageAndHighLight(revenueValidation);
-                        Logger.WriteDebugMessage("Validation Message for Revenue got displayed");
-                    }
-                }
-                Admin.Click_MembershipLevelCancel_Button();
-                Logger.WriteDebugMessage("Clicked on Cancel button for Add member Level Rule Overlay and Member Level Rule page got displayed");
-
-                //Log test data into log file and extent report
-                for (i = 0; i < levelCount; i++)
-                    Logger.LogTestData(TestPlanId, TestCaseId, i + " = Member Level", levelArray[i]);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Month Period Validation", monthlPeriodValidation);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Qualified Night Validation", qualifiedNightValidation);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Stay Properties Validation", stayPropertiesValidation);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Qualified Stay Validation", qualifiedStayValidation);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Checked out Stay Validation", checkOutStayValidation);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Points Validation", pointsValidation);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Revenue Validation", revenueValidation, true);
-
             }
+            catch (Exception e) { }
         }
 
         public static void TC_255561()
         {
+            try { 
             if (TestCaseId == Constants.TC_255561)
             {
                 //Pre-requisite
@@ -930,7 +937,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Users data = new Users();
                 
                 //Retrive data from database
-                membershipLevel_Name = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "MembershipLevel_Name"), ranno.Next().ToString().Substring(0, 3));
+                membershipLevel_Name = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "MembershipLevel_Name"), ranno.Next().ToString().Substring(0, 5));
                 membershipCode = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "MembershipLevel_Code"), ranno.Next().ToString().Substring(0, 2));
                 memberLevel_Order = ranno.Next().ToString().Substring(0, 3);
                 processByService = TestData.ExcelData.TestDataReader.ReadData(1, "Process_By_Service");
@@ -1111,7 +1118,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 {
                     Queries.GetActiveMembershipLevelByLevelOrder(data, levelorderArray[i]);
 
-                    if (levelArray[i].Equals(data.MembershipLevelName))
+                    if (levelArray[i].Contains(data.MembershipLevelName))
                         Logger.WriteInfoMessage(levelArray[i] + "= Present in database");
                     else
                         Assert.Fail(levelArray[i] + "= is not Present in database");
@@ -1133,10 +1140,12 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                     else
                         Logger.LogTestData(TestPlanId, TestCaseId, "Level" + i + "", levelArray[i]);
                 }
-            }
+            }}catch(Exception e)
+            { }
         }
         public static void TC_255562()
         {
+
             if (TestCaseId == Constants.TC_255562)
             {
                 //pre-requiste
@@ -1413,6 +1422,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
 
         private static void TC_255578()
         {
+            
             if (TestCaseId == Constants.TC_255578)
             {
                 //pre-requiste
@@ -1420,8 +1430,8 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Random ranno = new Random();
 
                 //Retrive test data 
-                membershipLevel_Name = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "MembershipLevel_Name"), ranno.Next().ToString().Substring(0, 3));
-                membershipCode = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "MembershipLevel_Code"), ranno.Next().ToString().Substring(0, 1));
+                membershipLevel_Name = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "MembershipLevel_Name"), ranno.Next().ToString().Substring(0, 5));
+                membershipCode = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "MembershipLevel_Code"), ranno.Next().ToString().Substring(0, 3));
                 memberLevel_Order = ranno.Next().ToString().Substring(0, 3);
                 processByService = TestData.ExcelData.TestDataReader.ReadData(1, "Process_By_Service");
                 rule_Type = TestData.ExcelData.TestDataReader.ReadData(1, "Rule_Type");

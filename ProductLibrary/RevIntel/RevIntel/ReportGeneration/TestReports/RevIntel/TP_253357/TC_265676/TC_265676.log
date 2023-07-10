@@ -1,0 +1,12 @@
+2023-05-17 19:52:47,928 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-17 19:52:47,944 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-17 19:52:48,227 ::INFO ::[Logger]::  is used for Testing
+2023-05-17 19:52:48,510 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.goqacendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goQAcendyn.com/SSOLanding.aspx
+2023-05-17 19:52:48,510 ::INFO ::[Logger]:: Execution started at:-May-17-2023 19-52-48-PM
+2023-05-17 19:52:48,525 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-17 19:52:48,538 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-17 19:52:48,541 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_265676         XXXXXXXXXXXXXXXX
+2023-05-17 19:52:48,541 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-17 19:52:48,791 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-17 19:52:49,200 ::INFO ::[Logger]:: RevIntel:: Script ::Passed
+2023-05-17 19:53:06,809 ::INFO ::[Logger]:: E.N.D

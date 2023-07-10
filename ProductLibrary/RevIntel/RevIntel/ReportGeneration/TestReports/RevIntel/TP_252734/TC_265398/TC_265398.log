@@ -1,0 +1,51 @@
+2023-05-17 00:55:47,640 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-17 00:55:47,640 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-17 00:55:47,640 ::INFO ::[Logger]::  is used for Testing
+2023-05-17 00:55:47,656 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.goqacendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goQAcendyn.com/SSOLanding.aspx
+2023-05-17 00:55:47,656 ::INFO ::[Logger]:: Execution started at:-May-17-2023 00-55-47-AM
+2023-05-17 00:55:47,656 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-17 00:55:47,656 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-17 00:55:47,656 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_265398         XXXXXXXXXXXXXXXX
+2023-05-17 00:55:47,656 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-17 00:55:47,672 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-17 00:55:49,456 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-05-17 00:55:49,456 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-05-17 00:55:58,509 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-05-17 00:56:00,306 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2023-05-17 00:56:00,306 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
+2023-05-17 00:56:13,812 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2023-05-17 00:56:13,812 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
+2023-05-17 00:56:17,008 ::DEBUG::[Logger]:: 4) Client displayed
+2023-05-17 00:56:30,112 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
+2023-05-17 00:56:30,112 ::DEBUG::[Logger]:: 5) Kerzner selected
+2023-05-17 00:56:42,959 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
+2023-05-17 00:57:45,198 ::ERROR::[Logger]:: The (//div[@id='UserMenu']//span)[2] element was not found on the page.
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:53537/session/024e182a7eb09150e0146541f412582d/element timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at BaseUtility.PageObject.PageAction.Find_ElementXPath(String repoName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\PageObject\PageAction.cs:line 33
+2023-05-17 00:57:47,209 ::FATAL::[Logger]:: Unable to click the Click_UserMenu element on the Navigation page.System.NullReferenceException: Object reference not set to an instance of an object.
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 81
+2023-05-17 00:57:47,209 ::ERROR::[Logger]:: RevIntel_Flow :: Script::Failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 88
+   at RevIntel.AppModule.UI.Navigation.Click_UserMenu() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\Navigation.cs:line 744
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TC_265398() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp\TP_252734_ReportScheduler.cs:line 2590
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TP_252734() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp.cs:line 166
+   at RevIntel.RevIntel_TP_252734_ReportScheduler.TC_265398() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\TestPlan\RevIntel\RevIntel_TP_252734_ReportScheduler.cs:line 683
+2023-05-17 00:59:24,285 ::INFO ::[Logger]:: E.N.D

@@ -86,7 +86,7 @@ namespace eInsight.AppModule.MainAdminApp
             Navigation.MenuNavigation("Create");
             if (Driver.Url.Contains("Create"))
             {
-                string CampaignRanName = GetRandomAlphaNumericString(4);
+                string CampaignRanName = GetRandomAlphaNumericString(0,1);
                 CreateCampaign.CreateCampaign_Criteria( "TransactionalEtoEFlow_"+ CampaignRanName);
                 CreateCampaign.CreateCampaign_SelectPropertylyst("Capitol Hill Hotel");
                 CreateCampaign.CreateCampaign_CampainSetting("New Reservation");
@@ -154,7 +154,7 @@ namespace eInsight.AppModule.MainAdminApp
             Navigation.MenuNavigation("Create");
             if (Driver.Url.Contains("Create"))
             {
-                string CampaignRanName = GetRandomAlphaNumericString(4);
+                string CampaignRanName = GetRandomAlphaNumericString(0,1);
                 CreateCampaign.CreateCampaign_SubEmailCreate("SubEmailEtoEFlow_" + CampaignRanName);
                 CreateCampaign.CreateCampaign_TemplateTabSelectandSaveandContinueButton(1);
                 CreateCampaign.CreateCampaign_EditTemplate("Marketing", "Independent Collection (IndependentCollection@contact-client.com)", "Cendynqatest (cendynautomation@cendyn.com)", "EndToEndCreateCampaignFlow");

@@ -105,11 +105,13 @@ namespace eLoyaltyV3.AppModule.UI
         }
         public static void EnterText_Text_Email(string text)
         {
+            Helper.ElementClearText(PageObject_SignIn.Text_Email());
             Helper.ElementEnterText(PageObject_SignIn.Text_Email(), text);
         }
 
         public static void EnterText_Text_Password(string text)
         {
+            Helper.ElementClearText(PageObject_SignIn.Text_Password());
             Helper.ElementEnterText(PageObject_SignIn.Text_Password(), text);
         }
         public static void Click_Link_ForgotYourLogin(string projectName, string emailId = "")
