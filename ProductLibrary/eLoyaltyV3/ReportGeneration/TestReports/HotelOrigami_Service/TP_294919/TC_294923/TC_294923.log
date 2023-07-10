@@ -1,0 +1,18 @@
+2023-05-16 11:01:27,309 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-16 11:01:27,316 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-16 11:01:27,318 ::INFO ::[Logger]::  is used for Testing
+2023-05-16 11:01:27,329 ::INFO ::[Logger]:: This is the login page.data:,
+2023-05-16 11:01:27,331 ::INFO ::[Logger]:: Execution started at:-May-16-2023 11-01-27-AM
+2023-05-16 11:01:27,333 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 11:01:27,335 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-16 11:01:27,378 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_294923         XXXXXXXXXXXXXXXX
+2023-05-16 11:01:27,383 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 11:01:27,397 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-16 11:01:47,433 ::INFO ::[Logger]:: Points are earned by Rule 5 = Point Test Rule 5
+2023-05-16 11:01:47,441 ::INFO ::[Logger]:: Points are assinged by Rule 5
+2023-05-16 11:01:59,801 ::INFO ::[Logger]:: Points are earned by Rule 5 = Point Test Rule 5
+2023-05-16 11:01:59,806 ::INFO ::[Logger]:: Points are assinged by Rule 5
+2023-05-16 11:02:27,859 ::INFO ::[Logger]:: Points are earned by Rule 5 = Point Test Rule 5
+2023-05-16 11:02:27,861 ::INFO ::[Logger]:: Points are assinged by Rule 5
+2023-05-16 11:02:33,283 ::INFO ::[Logger]:: HotelOrigami_Service:: Script ::Passed
+2023-05-16 11:03:09,486 ::INFO ::[Logger]:: E.N.D

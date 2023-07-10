@@ -1,0 +1,26 @@
+2023-05-16 11:55:20,917 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-16 11:55:20,927 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-16 11:55:20,933 ::INFO ::[Logger]::  is used for Testing
+2023-05-16 11:55:20,948 ::INFO ::[Logger]:: This is the login page.data:,
+2023-05-16 11:55:20,951 ::INFO ::[Logger]:: Execution started at:-May-16-2023 11-55-20-AM
+2023-05-16 11:55:20,959 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 11:55:20,969 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-16 11:55:21,000 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_294933         XXXXXXXXXXXXXXXX
+2023-05-16 11:55:21,002 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 11:55:21,029 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-16 11:59:49,496 ::INFO ::[Logger]:: Points are earned by Rule 5 = Point Test Rule 5
+2023-05-16 12:02:37,413 ::INFO ::[Logger]:: Points are earned by Rule 5 = Point Test Rule 5
+2023-05-16 12:02:37,419 ::INFO ::[Logger]:: Points are assinged by Rule 5
+2023-05-16 12:05:52,330 ::INFO ::[Logger]:: Points are earned by Rule 5 = Point Test Rule 5
+2023-05-16 12:05:52,332 ::INFO ::[Logger]:: Points are assinged by Rule 5
+2023-05-16 12:06:22,264 ::INFO ::[Logger]:: Points are earned by Rule 5 = Point Test Rule 5
+2023-05-16 12:06:22,265 ::INFO ::[Logger]:: Points are assinged by Rule 5
+2023-05-16 12:06:49,803 ::ERROR::[Logger]:: eLoyaltyV3_Flow :: Script::Failed
+NUnit.Framework.AssertionException: Scenario: Difference is more when compared to points in last night - Failed
+   at NUnit.Framework.Assert.ReportFailure(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 394
+   at NUnit.Framework.Assert.Fail(String message, Object[] args) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 145
+   at NUnit.Framework.Assert.Fail(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 155
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TC_294933() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp\WindowsService\Scenario Validation\Scenario_Validation.cs:line 4805
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TP_294919() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp.cs:line 1044
+   at eLoyaltyV3.TestPlan.HotelOrigami.WindowsServices.Scenario_Validation.HotelOrigami_TP_294919_Service_Scenario_Validation.TC_294933() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\TestPlan\HotelOrigami\WindowsServices\Scenario Validation\HotelOrigami_TP_294919_Service_Scenario_Validation.cs:line 371
+2023-05-16 12:07:33,350 ::INFO ::[Logger]:: E.N.D

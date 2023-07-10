@@ -1,53 +1,57 @@
-2020-08-04 16:13:43,885 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
-2020-08-04 16:13:43,965 ::INFO ::[Logger]:: Chrome is currently being used for testing.
-2020-08-04 16:13:43,983 ::INFO ::[Logger]::  is used for Testing
-2020-08-04 16:13:43,993 ::INFO ::[Logger]:: This is the login page.https://ssodev.rainmakertest.org/Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://devrhbi.revintel.co/SSOLanding.aspx
-2020-08-04 16:13:43,994 ::INFO ::[Logger]:: Execution started at:-Aug-04-2020 16-13-43-PM
-2020-08-04 16:13:43,995 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2020-08-04 16:13:43,995 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
-2020-08-04 16:13:44,013 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_252494         XXXXXXXXXXXXXXXX
-2020-08-04 16:13:44,014 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2020-08-04 16:13:46,034 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=744}
-2020-08-04 16:13:46,388 ::INFO ::[Logger]:: Test Case : Verify attempting to create a new user with exsiting email id or userid should fail
-2020-08-04 16:13:50,797 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
-2020-08-04 16:13:50,804 ::DEBUG::[Logger]:: 1) Email Address displayed
-2020-08-04 16:14:02,109 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
-2020-08-04 16:14:06,338 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
-2020-08-04 16:14:06,341 ::DEBUG::[Logger]:: 2) Login in with Username =rshende@delaplex.com and Password =Cendyn111$
-2020-08-04 16:14:17,273 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
-2020-08-04 16:14:21,396 ::INFO ::[Logger]:: Clicked the UAT element on the Navigation page.
-2020-08-04 16:14:21,397 ::DEBUG::[Logger]:: 3) user landed on the UAT RevIntel client selection page
-2020-08-04 16:14:24,807 ::DEBUG::[Logger]:: 4) Client displayed
-2020-08-04 16:14:31,840 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
-2020-08-04 16:14:31,852 ::DEBUG::[Logger]:: 5) Kerzner selected
-2020-08-04 16:14:49,083 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
-2020-08-04 16:14:56,798 ::INFO ::[Logger]:: Clicked the Hamburger_Icon element on the Navigation page.
-2020-08-04 16:14:56,799 ::DEBUG::[Logger]:: 7) All reports under Hamburger_Icon dropdown Displayed
-2020-08-04 16:15:03,321 ::INFO ::[Logger]:: Clicked the Administration element on the Navigation page.
-2020-08-04 16:15:03,324 ::DEBUG::[Logger]:: 8) Administration drop down list displayed
-2020-08-04 16:15:09,876 ::INFO ::[Logger]:: Clicked the User_Maintenance element on the Navigation page.
-2020-08-04 16:15:09,879 ::DEBUG::[Logger]:: 9) User landed on user preference page
-2020-08-04 16:15:17,278 ::INFO ::[Logger]:: Switching into the iFrame.
-2020-08-04 16:15:22,634 ::INFO ::[Logger]:: Clicked the Add_New_User element on the Navigation page.
-2020-08-04 16:15:22,635 ::DEBUG::[Logger]:: 10) Add new user pop up displayed
-2020-08-04 16:15:30,058 ::INFO ::[Logger]:: Switching into the iFrame.
-2020-08-04 16:15:35,399 ::INFO ::[Logger]:: Clicked the user_Maintenance_Save element on the Navigation page.
-2020-08-04 16:15:35,402 ::DEBUG::[Logger]:: 11) Vaidation message displayed for User_id and Email fields
-2020-08-04 16:15:39,882 ::INFO ::[Logger]:: User Id is required! Found on the page
-2020-08-04 16:15:41,991 ::INFO ::[Logger]:: Email Id is required! Found on the page
-2020-08-04 16:15:46,222 ::INFO ::[Logger]:: Inserted text in the user_Id element on the Navigation page.
-2020-08-04 16:15:46,223 ::DEBUG::[Logger]:: 12) rshende entered as user ID
-2020-08-04 16:15:52,822 ::INFO ::[Logger]:: Inserted text in the Add_User_FirstName element on the Navigation page.
-2020-08-04 16:15:52,824 ::DEBUG::[Logger]:: 13) ruchi entered as firstname
-2020-08-04 16:15:59,423 ::INFO ::[Logger]:: Inserted text in the Add_User_LastName element on the Navigation page.
-2020-08-04 16:15:59,427 ::DEBUG::[Logger]:: 14) shende entered as lastname
-2020-08-04 16:16:06,106 ::INFO ::[Logger]:: Inserted text in the Add_User_Email element on the Navigation page.
-2020-08-04 16:16:06,110 ::DEBUG::[Logger]:: 15) rshende@delaplex.com as email
-2020-08-04 16:16:12,791 ::INFO ::[Logger]:: Clicked the Select_Available_Hotels element on the Navigation page.
-2020-08-04 16:16:12,794 ::DEBUG::[Logger]:: 16) Hotel moved to selected hotel section
-2020-08-04 16:16:20,242 ::INFO ::[Logger]:: Clicked the user_Maintenance_Save element on the Navigation page.
-2020-08-04 16:16:22,324 ::INFO ::[Logger]:: Email rshende@delaplex.com already exists for this tenant! Found on the page
-2020-08-04 16:16:22,327 ::INFO ::[Logger]:: Switching out of the iFrame.
-2020-08-04 16:16:23,343 ::DEBUG::[Logger]:: 17) Test case passed successfully
-2020-08-04 16:16:25,712 ::INFO ::[Logger]:: RevIntel:: Script ::Passed
-2020-08-04 16:16:27,108 ::INFO ::[Logger]:: E.N.D
+2023-05-16 14:59:59,811 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-16 14:59:59,973 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-16 14:59:59,981 ::INFO ::[Logger]::  is used for Testing
+2023-05-16 15:00:00,195 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.godevcendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goDEVcendyn.com/SSOLanding.aspx
+2023-05-16 15:00:00,209 ::INFO ::[Logger]:: Execution started at:-May-16-2023 15-00-00-PM
+2023-05-16 15:00:00,234 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 15:00:15,323 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-16 15:00:15,407 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_252494         XXXXXXXXXXXXXXXX
+2023-05-16 15:00:15,435 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 15:00:15,540 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-16 15:00:15,550 ::INFO ::[Logger]:: Test Case : Verify attempting to create a new user with exsiting email id or userid should fail
+2023-05-16 15:00:17,981 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-05-16 15:00:18,022 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-05-16 15:00:31,605 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-05-16 15:00:33,240 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2023-05-16 15:00:33,329 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
+2023-05-16 15:00:50,628 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2023-05-16 15:00:50,864 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
+2023-05-16 15:00:54,750 ::DEBUG::[Logger]:: 4) Client displayed
+2023-05-16 15:01:13,330 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
+2023-05-16 15:01:13,802 ::DEBUG::[Logger]:: 5) D Rock selected
+2023-05-16 15:01:30,127 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
+2023-05-16 15:01:37,935 ::DEBUG::[Logger]:: 7) Actual url = https://revintelbi.godevcendyn.com/revintel.aspx match with Expected url = https://revintelbi.godevcendyn.com/revintel.aspx
+2023-05-16 15:01:45,924 ::INFO ::[Logger]:: Clicked the Click_Hamburger_Icon element on the Navigation page.
+2023-05-16 15:01:45,951 ::DEBUG::[Logger]:: 8) All reports under Hamburger_Icon dropdown Displayed
+2023-05-16 15:02:02,772 ::INFO ::[Logger]:: Clicked the Administration element on the Navigation page.
+2023-05-16 15:02:02,817 ::DEBUG::[Logger]:: 9) Administration drop down list displayed
+2023-05-16 15:03:05,318 ::ERROR::[Logger]:: The //span[contains(text(),'User Maintenance')] element was not found on the page.
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:60652/session/3eb5a83d0c99a699be2e162ea123d2ba/element timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at BaseUtility.PageObject.PageAction.Find_ElementXPath(String repoName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\PageObject\PageAction.cs:line 33
+2023-05-16 15:03:07,477 ::FATAL::[Logger]:: Unable to click the User_Maintenance element on the Navigation page.System.NullReferenceException: Object reference not set to an instance of an object.
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 81
+2023-05-16 15:03:07,505 ::ERROR::[Logger]:: RevIntel_Flow :: Script::Failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 88
+   at RevIntel.AppModule.UI.Navigation.User_Maintenance() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\Navigation.cs:line 231
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TC_252494() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp\TP_251469_SmokeTest.cs:line 343
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TP_251469() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp.cs:line 36
+   at RevIntel.RevIntel_TP_251469_SmokePlan.TC_252494() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\TestPlan\RevIntel\RevIntel_TP_251469_SmokePlan.cs:line 190
+2023-05-16 15:04:55,491 ::INFO ::[Logger]:: E.N.D

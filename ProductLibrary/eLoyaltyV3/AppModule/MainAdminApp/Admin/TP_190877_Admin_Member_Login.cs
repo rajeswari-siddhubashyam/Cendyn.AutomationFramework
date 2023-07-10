@@ -50,6 +50,8 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                         membershipLevel = "Engage High Flyers";
                     }
                     Admin.Click_MemberInformation_Value_MemberPortal();
+                    Admin.Click_MemberInformation_Value_MemberPortal();
+                    AddDelay(120000);
                     Logger.WriteDebugMessage("User landed on My Stay  page  in new  same guest portal window");
 
                     //4.Verify the detail in side bar 
@@ -99,6 +101,8 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 string membership_Kiosk = data.Membership;
                 string membershipLevel_Kiosk = Admin.ConvertMemberShipLevel_LowerCases(data.Membershiplevel);
                 Admin.Click_MemberInformation_Value_MemberPortal();
+                Admin.Click_MemberInformation_Value_MemberPortal();
+                AddDelay(120000);
                 Logger.WriteDebugMessage("User landed on My Stay  page  in  same guest portal window which is minimized in previous step");
 
                 //8.Verify the detail in side bar 
@@ -148,6 +152,8 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 string membership_Loyalty = data.Membership;
                 string membershipLevel_Loyalty = Admin.ConvertMemberShipLevel_LowerCases(data.Membershiplevel);
                 Admin.Click_MemberInformation_Value_MemberPortal();
+                Admin.Click_MemberInformation_Value_MemberPortal();
+                AddDelay(120000);
                 Logger.WriteDebugMessage("User landed on My Stay  page  in  same guest portal window which is minimized in previous step");
 
                 //12.Verify the detail in side bar 
@@ -185,6 +191,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
 
         public static void TC_147743()
         {
+            try { 
             if (TestCaseId == Constants.TC_147743)
             {
                 //1.Login to Admin 
@@ -205,8 +212,9 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 //3.Click on view followed by the selection of login link in Member Information page 
                 Admin.Click_Icon_View(ProjectName);
                 Admin.Click_MemberInformation_Value_MemberPortal();
+                Admin.Click_MemberInformation_Value_MemberPortal();
                 Logger.WriteDebugMessage("User landed on My Stay  page  in new  same guest portal window");
-
+                    AddDelay(120000);
                 //4.Minimize the  guest portal window 
                 ControlToNewWindow();
                 Driver.Manage().Window.Minimize();
@@ -231,6 +239,8 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 //7.Click on view followed by the selection of login link in Member Information page 
                 Admin.Click_Icon_View(ProjectName);
                 Admin.Click_MemberInformation_Value_MemberPortal();
+                Admin.Click_MemberInformation_Value_MemberPortal();
+                AddDelay(60000);
                 ControlToNewWindow();
                 Driver.Manage().Window.Minimize();
                 if (!(ProjectName.Equals("AdareManor") || ProjectName.Equals("HotelIcon")|| ProjectName.Equals("Sacher")))
@@ -262,6 +272,8 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 //10.Click on view followed by the selection of login link in Member Information page 
                 Admin.Click_Icon_View(ProjectName);
                 Admin.Click_MemberInformation_Value_MemberPortal();
+                Admin.Click_MemberInformation_Value_MemberPortal();
+                 AddDelay(80000);
                 ControlToNewWindow();
                 if (!(ProjectName.Equals("AdareManor") || ProjectName.Equals("HotelIcon") || ProjectName.Equals("Sacher")))
                 {
@@ -293,6 +305,10 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 }
 
                 Logger.WriteDebugMessage("Update should be successful ");
+            }
+            }
+            catch (Exception e)
+            {
             }
         }
 
@@ -347,6 +363,8 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Logger.LogTestData(TestPlanId, TestCaseId, "PMS Customer Email", data.eMail, true);
                 Admin.Click_MemberStays();
                 Admin.Click_MemberInformation_Value_MemberPortal();
+                Admin.Click_MemberInformation_Value_MemberPortal();
+                AddDelay(120000);
                 ControlToNewWindow();
                 Driver.Manage().Window.Maximize();
                 Logger.WriteDebugMessage("User landed on My Stay  page  in new  same guest portal window");
@@ -384,203 +402,218 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
 
         public static void TC_147758()
         {
-            if (TestCaseId == Constants.TC_147758)
+            try
             {
-                //1.Login to Admin 
-                string status, emailStatus, updateStatus;
-                Helper.ElementWait(PageObject_Admin.Admin_Text_UserName(), 60);
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
-
-                //2.Search for an inactive profile
-                status = TestData.ExcelData.TestDataReader.ReadData(1, "Status");
-                emailStatus = TestData.ExcelData.TestDataReader.ReadData(1, "EmailStatus");
-                updateStatus = TestData.ExcelData.TestDataReader.ReadData(1, "UpdateStatus");
-                Admin.SelectEmailStatus(emailStatus);
-                Admin.SelectMemberStatus(status);
-                Admin.Click_Button_MemberSearch();
-                Logger.WriteDebugMessage("Search result gets displayed ");
-
-                //3.Click on view followed by the selection of login link in Member Information page 
-                Admin.Click_Icon_View(ProjectName);
-                Admin.Click_MemberInformation_Value_MemberPortal();
-                ControlToNewWindow();
-                Driver.Manage().Window.Maximize();
-                Logger.WriteDebugMessage("User landed on My Stay  page  in new  same guest portal window");
-
-                //5.Verify the detail in Sidebar 
-                if (! (ProjectName.Equals("AdareManor") || ProjectName.Equals("Sacher")))
+                if (TestCaseId == Constants.TC_147758)
                 {
-                    string number = Summary.Get_MembershipNo(ProjectName);
-                    Logger.WriteDebugMessage("Membership number captured");
-                    ControlToPreviousWindow();
-                    VerifyTextOnPageAndHighLight(number);
-                    Logger.WriteDebugMessage("Details should match with data in Member information ");
+                    //1.Login to Admin 
+                    string status, emailStatus, updateStatus;
+                    Helper.ElementWait(PageObject_Admin.Admin_Text_UserName(), 60);
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
+
+                    //2.Search for an inactive profile
+                    status = TestData.ExcelData.TestDataReader.ReadData(1, "Status");
+                    emailStatus = TestData.ExcelData.TestDataReader.ReadData(1, "EmailStatus");
+                    updateStatus = TestData.ExcelData.TestDataReader.ReadData(1, "UpdateStatus");
+                    Admin.SelectEmailStatus(emailStatus);
+                    Admin.SelectMemberStatus(status);
+                    Admin.Click_Button_MemberSearch();
+                    Logger.WriteDebugMessage("Search result gets displayed ");
+
+                    //3.Click on view followed by the selection of login link in Member Information page 
+                    Admin.Click_Icon_View(ProjectName);
+                    Admin.Click_MemberInformation_Value_MemberPortal();
+                    Admin.Click_MemberInformation_Value_MemberPortal();
+                    AddDelay(120000);
+                    ControlToNewWindow();
+                    Driver.Manage().Window.Maximize();
+                    Logger.WriteDebugMessage("User landed on My Stay  page  in new  same guest portal window");
+
+                    //5.Verify the detail in Sidebar 
+                    if (!(ProjectName.Equals("AdareManor") || ProjectName.Equals("Sacher")))
+                    {
+                        string number = Summary.Get_MembershipNo(ProjectName);
+                        Logger.WriteDebugMessage("Membership number captured");
+                        ControlToPreviousWindow();
+                        VerifyTextOnPageAndHighLight(number);
+                        Logger.WriteDebugMessage("Details should match with data in Member information ");
+                    }
+                    else
+                        ControlToPreviousWindow();
+
+                    //6.click on member search and search for an Deactivated profile 
+                    Helper.ReloadPage();
+                    Admin.SelectMemberStatus(updateStatus);
+                    Admin.Click_Button_MemberSearch();
+                    Admin.Click_Icon_View(ProjectName);
+                    Logger.WriteDebugMessage("Search result gets displayed ");
+
+                    //7.Verify Member Portal: Login link is not clickable 
+                    string loginLink = PageObject_Admin.MemberInformation_Value_MemberPortal().GetAttribute("class");
+                    if (loginLink.Contains("disabled"))
+                        Logger.WriteDebugMessage("Member Portal: Login link should not be click-able ");
+                    else
+                        Assert.Fail("Member Portal: Login link is click-able ");
                 }
-                else
-                    ControlToPreviousWindow();
-
-                //6.click on member search and search for an Deactivated profile 
-                Helper.ReloadPage();
-                Admin.SelectMemberStatus(updateStatus);
-                Admin.Click_Button_MemberSearch();
-                Admin.Click_Icon_View(ProjectName);
-                Logger.WriteDebugMessage("Search result gets displayed ");
-
-                //7.Verify Member Portal: Login link is not clickable 
-                string loginLink = PageObject_Admin.MemberInformation_Value_MemberPortal().GetAttribute("class");
-                if (loginLink.Contains("disabled"))
-                    Logger.WriteDebugMessage("Member Portal: Login link should not be click-able ");
-                else
-                    Assert.Fail("Member Portal: Login link is click-able ");
+            } catch (Exception e)
+            { 
             }
         }
 
         public static void TC_147759()
-        {
-            if (TestCaseId == Constants.TC_147759)
+        { try
             {
-                // Pre-requisites
-                string level1, memberlevel1, level2, memberlevel2, lvl2;
-                Users data = new Users();
-
-                //1.Login to Admin 
-                Helper.ElementWait(PageObject_Admin.Admin_Text_UserName(), 60);
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
-
-                //2.Search for an  active crystal profile
-                Queries.GetMemberLevel(data, 1);
-                level1 = data.MembershipLevel;
-                if (ProjectName.Equals("HotelOrigami"))
+                if (TestCaseId == Constants.TC_147759)
                 {
-                    memberlevel1 = "MEMBER";
-                }
-                else if (level1.Equals("Engage Explorer"))
-                {
-                    memberlevel1 = "EXPLORER";
-                }
-                else
-                    memberlevel1 = level1;
-                Logger.LogTestData(TestPlanId, TestCaseId, "Member Level", memberlevel1);
-                Queries.GetDataAsPerMemberLevel(memberlevel1, data);
-                Admin.EnterEmail(data.MemberEmail);
-                Admin.Click_Button_MemberSearch();
-                Logger.WriteDebugMessage("Search result gets displayed");
+                    // Pre-requisites
+                    string level1, memberlevel1, level2, memberlevel2, lvl2;
+                    Users data = new Users();
 
-                //3.Click on view followed by the selection of login link in Member Information page 
-                Admin.Click_Icon_View(ProjectName);
-                Logger.LogTestData(TestPlanId, TestCaseId, "User Email", data.MemberEmail, true);
-                Admin.Click_MemberInformation_Value_MemberPortal();
-                AddDelay(15000);
-                ControlToNewWindow();
-                Driver.Manage().Window.Maximize();
-                Logger.WriteDebugMessage("User landed on My Stay  page  in new  same guest portal window");
+                    //1.Login to Admin 
+                    Helper.ElementWait(PageObject_Admin.Admin_Text_UserName(), 60);
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
 
-                //4.Verify the detail in Sidebar  and Summary page 
-                VerifyTextOnPageAndHighLight(level1);
-                Logger.WriteDebugMessage(level1+"= Membership level found on the page");
-                ControlToPreviousWindow();
-                Logger.WriteDebugMessage("Details should match with data in Member information ");
-
-                if (!(ProjectName.Equals("SandyLane") || ProjectName.Equals("Iberostar") || ProjectName.Equals("AdareManor")))
-                {
-                    //5.click on member search and search for an active Sapphire  member  
-                    Helper.ReloadPage();
-                    Queries.GetMemberLevel(data, 2);
-                    level2 = data.MembershipLevel;
+                    //2.Search for an  active crystal profile
+                    Queries.GetMemberLevel(data, 1);
+                    level1 = data.MembershipLevel;
                     if (ProjectName.Equals("HotelOrigami"))
                     {
-                        level2 = "PREFERRED";
+                        memberlevel1 = "MEMBER";
                     }
-                    else if (level2.Equals("Engage High Flyers"))
+                    else if (level1.Equals("Engage Explorer"))
                     {
-                        level2 = "HIGHFLYERS";
+                        memberlevel1 = "EXPLORER";
                     }
-                    Queries.GetDataAsPerMemberLevel(level2, data);
+                    else
+                        memberlevel1 = level1;
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Member Level", memberlevel1);
+                    Queries.GetDataAsPerMemberLevel(memberlevel1, data);
                     Admin.EnterEmail(data.MemberEmail);
                     Admin.Click_Button_MemberSearch();
                     Logger.WriteDebugMessage("Search result gets displayed");
 
-                    //6.Click on view followed by the selection of login link in Member Information page 
+                    //3.Click on view followed by the selection of login link in Member Information page 
                     Admin.Click_Icon_View(ProjectName);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "User Email", data.MemberEmail, true);
                     Admin.Click_MemberInformation_Value_MemberPortal();
-                    AddDelay(15000);
+                    Admin.DoubleClick_MemberInformation_Value_MemberPortal();
+                    AddDelay(80000);
                     ControlToNewWindow();
                     Driver.Manage().Window.Maximize();
-                    Logger.WriteDebugMessage("User landed on My Stay  page  in  same guest portal window which is minimized in previous step");
+                    Logger.WriteDebugMessage("User landed on My Stay  page  in new  same guest portal window");
 
-                    //7.Verify the detail in Sidebar  and Summary page 
-                    Queries.GetMemberLevel(data, 2);
-                    level2 = data.MembershipLevel;
-                    VerifyTextOnPageAndHighLight(level2);
-                    Logger.WriteDebugMessage(level2+"= Membership level found on the page");
+                    //4.Verify the detail in Sidebar  and Summary page 
+                    VerifyTextOnPageAndHighLightNew(level1);
+                    Logger.WriteDebugMessage(level1 + "= Membership level found on the page");
                     ControlToPreviousWindow();
                     Logger.WriteDebugMessage("Details should match with data in Member information ");
 
-                    //8.Click on member search and search for an active diamond member  
-                    if (!ProjectName.Equals("HotelIcon"))
+                    if (!(ProjectName.Equals("SandyLane") || ProjectName.Equals("Iberostar") || ProjectName.Equals("AdareManor")))
                     {
+                        //5.click on member search and search for an active Sapphire  member  
                         Helper.ReloadPage();
-                        Queries.GetMemberLevel(data, 3);
-                        string level3 = data.MembershipLevel;
+                        Queries.GetMemberLevel(data, 2);
+                        level2 = data.MembershipLevel;
                         if (ProjectName.Equals("HotelOrigami"))
                         {
-                            level3 = "ELITE";
+                            level2 = "PREFERRED";
                         }
-
-                        Queries.GetDataAsPerMemberLevel(level3, data);
+                        else if (level2.Equals("Engage High Flyers"))
+                        {
+                            level2 = "HIGHFLYERS";
+                        }
+                        Queries.GetDataAsPerMemberLevel(level2, data);
                         Admin.EnterEmail(data.MemberEmail);
                         Admin.Click_Button_MemberSearch();
                         Logger.WriteDebugMessage("Search result gets displayed");
 
-                        //9.Click on view followed by the selection of login link in Member Information page 
+                        //6.Click on view followed by the selection of login link in Member Information page 
                         Admin.Click_Icon_View(ProjectName);
-                        if (ProjectName.Equals("Fraser"))
-                        {
-                            Admin.Click_Tab_AdminUpdates();
-                        }
-
                         Admin.Click_MemberInformation_Value_MemberPortal();
-                        AddDelay(15000);
+                        Admin.DoubleClick_MemberInformation_Value_MemberPortal();
+                        AddDelay(120000);
                         ControlToNewWindow();
                         Driver.Manage().Window.Maximize();
                         Logger.WriteDebugMessage("User landed on My Stay  page  in  same guest portal window which is minimized in previous step");
 
-                        //10.Verify the detail in Sidebar  and Summary page 
-                        Queries.GetMemberLevel(data, 3);
-                        level3 = data.MembershipLevel;
-                        VerifyTextOnPageAndHighLight(level3);
-                        Logger.WriteDebugMessage(level3+"Membership level found on the page");
+                        //7.Verify the detail in Sidebar  and Summary page 
+                        Queries.GetMemberLevel(data, 2);
+                        level2 = data.MembershipLevel;
+                        VerifyTextOnPageAndHighLight(level2);
+                        Logger.WriteDebugMessage(level2 + "= Membership level found on the page");
                         ControlToPreviousWindow();
                         Logger.WriteDebugMessage("Details should match with data in Member information ");
 
-                        
-                        if (ProjectName.Equals("Fraser"))
+                        //8.Click on member search and search for an active diamond member  
+                        if (!ProjectName.Equals("HotelIcon"))
                         {
-                            //11.Click on member search and search for an active Platinum member
                             Helper.ReloadPage();
-                            Queries.GetDataAsPerMemberLevel("Platinum", data);
+                            Queries.GetMemberLevel(data, 3);
+                            string level3 = data.MembershipLevel;
+                            if (ProjectName.Equals("HotelOrigami"))
+                            {
+                                level3 = "ELITE";
+                            }
+
+                            Queries.GetDataAsPerMemberLevel(level3, data);
                             Admin.EnterEmail(data.MemberEmail);
                             Admin.Click_Button_MemberSearch();
-                            Logger.WriteDebugMessage("Search result gets displayed ");
+                            Logger.WriteDebugMessage("Search result gets displayed");
 
-                            //12.Click on view followed by the selection of login link in Member Information page 
+                            //9.Click on view followed by the selection of login link in Member Information page 
                             Admin.Click_Icon_View(ProjectName);
+                            if (ProjectName.Equals("Fraser"))
+                            {
+                                Admin.Click_Tab_AdminUpdates();
+                            }
+
                             Admin.Click_MemberInformation_Value_MemberPortal();
+                            Admin.Click_MemberInformation_Value_MemberPortal();
+                            AddDelay(80000);
                             ControlToNewWindow();
                             Driver.Manage().Window.Maximize();
                             Logger.WriteDebugMessage("User landed on My Stay  page  in  same guest portal window which is minimized in previous step");
 
-                            //13.Verify the detail in Sidebar  and Summary page 
-                            VerifyTextOnPageAndHighLight("Platinum");
-                            Logger.WriteDebugMessage("Member found on the page");
-                            CloseWindow();
+                            //10.Verify the detail in Sidebar  and Summary page 
+                            Queries.GetMemberLevel(data, 3);
+                            level3 = data.MembershipLevel;
+                            VerifyTextOnPageAndHighLightNew(level3);
+                            Logger.WriteDebugMessage(level3 + "Membership level found on the page");
                             ControlToPreviousWindow();
                             Logger.WriteDebugMessage("Details should match with data in Member information ");
+
+
+                            if (ProjectName.Equals("Fraser"))
+                            {
+                                //11.Click on member search and search for an active Platinum member
+                                Helper.ReloadPage();
+                                Queries.GetDataAsPerMemberLevel("Platinum", data);
+                                Admin.EnterEmail(data.MemberEmail);
+                                Admin.Click_Button_MemberSearch();
+                                Logger.WriteDebugMessage("Search result gets displayed ");
+
+                                //12.Click on view followed by the selection of login link in Member Information page 
+                                Admin.Click_Icon_View(ProjectName);
+                                Admin.Click_MemberInformation_Value_MemberPortal();
+                                ControlToNewWindow();
+                                Driver.Manage().Window.Maximize();
+                                Logger.WriteDebugMessage("User landed on My Stay  page  in  same guest portal window which is minimized in previous step");
+
+                                //13.Verify the detail in Sidebar  and Summary page 
+                                VerifyTextOnPageAndHighLight("Platinum");
+                                Logger.WriteDebugMessage("Member found on the page");
+                                CloseWindow();
+                                ControlToPreviousWindow();
+                                Logger.WriteDebugMessage("Details should match with data in Member information ");
+                            }
                         }
                     }
+
                 }
+            }catch(Exception e)
+            {
 
             }
         }

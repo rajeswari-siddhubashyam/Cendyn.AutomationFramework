@@ -561,6 +561,13 @@ namespace eInsight.PageObject.UI
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementId(ObjectRepository.CASL_checkbox);
         }
+        public static IWebElement Testcatchall_checkboxL()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.Testcatchall_checkbox);
+        }
         public static IWebElement Button_SendToTest()
         {
             ScanPage(PageName);
@@ -655,7 +662,21 @@ namespace eInsight.PageObject.UI
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementXPath(ObjectRepository.ProjectID_Search);
         }
-
+        public static IWebElement ProjectStatus_Search()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.ProjectStatus_Search);
+        }
+        public static IWebElement ProjectStatus_TextSearch()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.ProjectStatus_TextSearch);
+        }
+        
         public static IWebElement ManageCampaign_SearchProjectIDExpression()
         {
             ScanPage(PageName);

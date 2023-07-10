@@ -137,10 +137,10 @@ namespace BaseUtility.Utility.Hotmail
 
         public static void AutomationAcc_SignIn(string Email, string Password)
         {
-            AddDelay(10000);
+            AddDelay(1000);
             ElementEnterText(Driver.FindElement(By.XPath(SignIn_Email)), Email);
             ElementClick(Driver.FindElement(By.XPath(SignIn_Button)));
-            AddDelay(25000);
+            AddDelay(2500);
             ElementEnterText(Driver.FindElement(By.XPath(SignIn_Password)), "DevAuto.123429$");
             Logger.WriteDebugMessage("Entered Catchall UserName and Password");
             ElementClick(Driver.FindElement(By.XPath(SignIn_Button)));
@@ -180,6 +180,74 @@ namespace BaseUtility.Utility.Hotmail
             }
             catch (Exception) { }
             
+            ElementWait(Driver.FindElement(By.XPath(OutLookIconXPath)), 180);
+            //ElementClick(Driver.FindElement(By.XPath(OutlookAllAppsIcon)));
+            //AddDelay(5000);
+            ElementClick(Driver.FindElement(By.XPath(OutLookIconXPath)));
+            ControlToNewWindow();
+            try
+            {
+                AddDelay(10000);
+                Helper.Driver.FindElement(By.Id("idSubmit_ProofUp_Redirect")).Submit();
+                Helper.Driver.FindElement(By.Id("CancelLinkButton")).Click();
+                AddDelay(10000);
+                if (IsElementVisible(Driver.FindElement(By.XPath(SignIn_DontShowAgainCheckBox))))
+                {
+                    MakeSureIsChecked(Driver.FindElement(By.XPath(SignIn_DontShowAgainCheckBox)));
+                }
+                if (IsElementVisible(Driver.FindElement(By.XPath(SignIn_YesButton))))
+                {
+                    ElementClick(Driver.FindElement(By.XPath(SignIn_YesButton)));
+                }
+            }
+            catch (Exception) { }
+        }
+
+        public static void AutomationCatchAll_SignIn(string Email, string Password)
+        {
+            AddDelay(1000);
+            ElementEnterText(Driver.FindElement(By.XPath(SignIn_Email)), Email);
+            ElementClick(Driver.FindElement(By.XPath(SignIn_Button)));
+            AddDelay(2500);
+            ElementEnterText(Driver.FindElement(By.XPath(SignIn_Password)), Password);
+            Logger.WriteDebugMessage("Entered Catchall UserName and Password");
+            ElementClick(Driver.FindElement(By.XPath(SignIn_Button)));
+
+            try
+            {
+                if (IsElementVisible(Driver.FindElement(By.XPath(SignIn_DontShowAgainCheckBox))))
+                {
+                    MakeSureIsChecked(Driver.FindElement(By.XPath(SignIn_DontShowAgainCheckBox)));
+                }
+                if (IsElementVisible(Driver.FindElement(By.XPath(SignIn_YesButton))))
+                {
+                    ElementClick(Driver.FindElement(By.XPath(SignIn_YesButton)));
+                }
+            }
+            catch (Exception)
+            {
+            }
+
+            //Navigate to the mailbox
+            //Had to use the URL since the landing page randomly changes.
+            //PageLoadWait(60, "https://www.office.com/?auth=2");
+            try
+            {
+                AddDelay(10000);
+                Helper.Driver.FindElement(By.Id("idSubmit_ProofUp_Redirect")).Submit();
+                Helper.Driver.FindElement(By.Id("CancelLinkButton")).Click();
+                AddDelay(10000);
+                if (IsElementVisible(Driver.FindElement(By.XPath(SignIn_DontShowAgainCheckBox))))
+                {
+                    MakeSureIsChecked(Driver.FindElement(By.XPath(SignIn_DontShowAgainCheckBox)));
+                }
+                if (IsElementVisible(Driver.FindElement(By.XPath(SignIn_YesButton))))
+                {
+                    ElementClick(Driver.FindElement(By.XPath(SignIn_YesButton)));
+                }
+            }
+            catch (Exception) { }
+
             ElementWait(Driver.FindElement(By.XPath(OutLookIconXPath)), 180);
             //ElementClick(Driver.FindElement(By.XPath(OutlookAllAppsIcon)));
             //AddDelay(5000);

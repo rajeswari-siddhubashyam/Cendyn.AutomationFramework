@@ -1,0 +1,37 @@
+2023-05-17 11:13:57,204 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-17 11:13:57,392 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-17 11:13:57,431 ::INFO ::[Logger]::  is used for Testing
+2023-05-17 11:13:57,440 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.goqacendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goQAcendyn.com/SSOLanding.aspx
+2023-05-17 11:13:57,440 ::INFO ::[Logger]:: Execution started at:-May-17-2023 11-13-57-AM
+2023-05-17 11:13:57,440 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-17 11:13:57,440 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-17 11:13:57,440 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_265427         XXXXXXXXXXXXXXXX
+2023-05-17 11:13:57,455 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-17 11:13:57,455 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-17 11:13:59,739 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-05-17 11:13:59,739 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-05-17 11:14:11,627 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-05-17 11:14:19,038 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2023-05-17 11:14:19,038 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
+2023-05-17 11:14:28,829 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2023-05-17 11:14:28,829 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
+2023-05-17 11:14:34,322 ::DEBUG::[Logger]:: 4) Client displayed
+2023-05-17 11:14:55,688 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
+2023-05-17 11:14:55,691 ::DEBUG::[Logger]:: 5) D Rock selected
+2023-05-17 11:15:12,310 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
+2023-05-17 11:15:20,324 ::INFO ::[Logger]:: Clicked the Click_UserMenu element on the Navigation page.
+2023-05-17 11:15:20,324 ::DEBUG::[Logger]:: 7) User menu clicked
+2023-05-17 11:15:28,100 ::INFO ::[Logger]:: Clicked the Click_UserMenu_ReportScheduler element on the Navigation page.
+2023-05-17 11:15:28,134 ::DEBUG::[Logger]:: 8) Report scheduler link clicked
+2023-05-17 11:15:35,385 ::INFO ::[Logger]:: Switching into the iFrame.
+2023-05-17 11:15:43,607 ::INFO ::[Logger]:: Clicked the Click_Portfolio element on the ReportScheduler page.
+2023-05-17 11:15:43,607 ::DEBUG::[Logger]:: 9) Booking trends link got clicked
+2023-05-17 11:15:52,041 ::INFO ::[Logger]:: Clicked the Click_BookingTrends_AgentByHotel element on the ReportScheduler page.
+2023-05-17 11:16:22,053 ::DEBUG::[Logger]:: 10) Agent by hotel page should get displayed
+2023-05-17 11:16:29,501 ::INFO ::[Logger]:: Switching into the iFrame.
+2023-05-17 11:16:33,009 ::ERROR::[Logger]:: RevIntel_Flow :: Script::Failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TC_265427() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp\TP_252734_ReportScheduler.cs:line 2000
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TP_252734() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp.cs:line 161
+   at RevIntel.RevIntel_TP_252734_ReportScheduler.TC_265427() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\TestPlan\RevIntel\RevIntel_TP_252734_ReportScheduler.cs:line 533
+2023-05-17 11:17:01,946 ::INFO ::[Logger]:: E.N.D

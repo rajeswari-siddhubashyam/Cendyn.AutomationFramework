@@ -318,6 +318,7 @@ namespace eInsight.Utility
         public static string ManageCampaign_DDM_SearchValue { get; set; }
         public static string ManageCampaign_CustomerDetailsVRD_ClickSearch { get; set; }
         public static string CASL_checkbox { get; set; }
+        public static string Testcatchall_checkbox { get; set; }
         public static string SubmitSendToTestEmail { get; set; }
         public static string QuickSend_EmailtoSelf { get; set; }
         public static string ManageCampaign_EditSchedule { get; set; }
@@ -331,6 +332,8 @@ namespace eInsight.Utility
         public static string ManageCampaign_SendToTest_GroupSeedList { get; set; }
         public static string ManageCampaign_QuickSend_ReservationSelect { get; set; }
         public static string ProjectID_Search { get; set; }
+        public static string ProjectStatus_Search { get; set; }
+        public static string ProjectStatus_TextSearch { get; set; }
         public static string ProjectID_SearchExpression { get; set; }
         public static string ProjectID_TextSearch { get; set; }
         public static string ProjectID_TextSearchs { get; set; }
@@ -346,6 +349,12 @@ namespace eInsight.Utility
         public static string CampaignDetails_Actions_Delete { get; set; }
         public static string CampaignDetails_Actions_SaveAsResend { get; set; }
         public static string CampaignDetails_Actions_SaveAsTemplate { get; set; }
+        public static string CreateCampaign_CampainSetting{ get; set; }
+        public static string CreateCampaign_ReservationEvent { get; set; }
+        public static string CreateCampaign_ReservationEvent_EmailReservation { get; set; }
+        public static string CreateCampaign_ReservationEvent_include_unsubscribed { get; set; }
+        public static string CreateCampaign_ReservationEvent_include_bounced { get; set; }
+        public static string CreateCampaign_ReservationEvent_include_nonconsent { get; set; }
         #endregion[ManageCampaign]
 
         #region[Settings]
@@ -357,6 +366,7 @@ namespace eInsight.Utility
 
         #region[CreateCampaign]
         public static string CreateCampaign_Button_Save { get; set; }
+        public static string CreateCampaign_StatyOnPage { get; set; }
         public static string CreateCampaign_Button_SaveAndContinue { get; set; }
         public static string CreateCampaign_Button_Continue { get; set; }
         public static string CreateCampaign_Button_SaveAndContinue_Submit { get; set; }
@@ -364,7 +374,7 @@ namespace eInsight.Utility
         public static string CreateCampaign_Link_CriteriaTab_TotalArrow { get; set; }
         public static string CreateCampaign_Link_CriteriaTab_Loader { get; set; }
         public static string CreateCampaign_Link_CriteriaTab_Generate { get; set; }
-
+        public static string CreateCampaign_SubMailCampaignName { get; set; }        
         public static string CreateCampaign_CriteriaTab_ForecastTargetAudience { get; set; }
         public static string CreateCampaign_Link_TemplateTab { get; set; }
         public static string CreateCampaign_Button_ChangeTemplate { get; set; }
@@ -408,7 +418,22 @@ namespace eInsight.Utility
         public static string CreateCampaign_Templates_ListView_Filter_Btn { get; set; }
         public static string CreateCampaign_Templates_ListView_Input_Filter_Txt { get; set; }
         public static string CreateCampaign_Templates_SaveAndContinue_Btn { get; set; }
-        
+
+        public static string CreateCampaign_Create_SubMail { get; set; }
+        public static string CreateCampaign_CampaignName{ get; set; }
+        public static string CreateCampaign_PropertyList{ get; set; }
+        public static string CreateCampaign_Create { get; set; }
+
+        public static string CreateCampaign_AudienceSearch { get; set; }
+        public static string CreateCampaign_AudienceSearch_Add { get; set; }
+        public static string CreateCampaign_Templates_EmailType { get; set; }
+        public static string CreateCampaign_Templates_FromName { get; set; }
+        public static string CreateCampaign_Templates_ReplyEmail { get; set; }
+        public static string CreateCampaign_Templates_subject { get; set; }
+        public static string CreateCampaign_DataSource { get; set; }
+        public static string CreateCampaign_ForecastTargetAudience { get; set; }
+        public static string CreateCampaign_ForecastTargetAudienceTotalCount { get; set; }
+
         #endregion[CreateCampaign]
 
         #region[CreateCampaign_Criteria]
@@ -1354,6 +1379,8 @@ namespace eInsight.Utility
                         ManageCampaign_CustomerDetailsVRD_ClickSearch = pair.Value;
                     else if (pair.Key == "CASL_checkbox")
                         CASL_checkbox = pair.Value;
+                    else if (pair.Key == "Testcatchall_checkbox")
+                        Testcatchall_checkbox = pair.Value;
                     else if (pair.Key == "SubmitSendToTestEmail")
                         SubmitSendToTestEmail = pair.Value;
                     else if (pair.Key == "QuickSend_EmailtoSelf")
@@ -1380,11 +1407,17 @@ namespace eInsight.Utility
                         ManageCampaign_QuickSend_ReservationSelect = pair.Value;
                     else if (pair.Key == "ProjectID_Search")
                         ProjectID_Search = pair.Value;
+                    else if (pair.Key == "ProjectStatus_Search")
+                        ProjectStatus_Search = pair.Value;
                     else if (pair.Key == "ProjectID_SearchExpression")
                         ProjectID_SearchExpression = pair.Value;
                     else if (pair.Key == "ProjectID_TextSearch")
                         ProjectID_TextSearch = pair.Value;
-                    else if (pair.Key == "ProjectID_TextSearchs")
+                    else if (pair.Key == "ProjectStatus_Search")
+                        ProjectStatus_Search = pair.Value;
+                    else if (pair.Key == "ProjectStatus_TextSearch")
+                        ProjectStatus_TextSearch = pair.Value;
+                    else if (pair.Key == "ProjectID_TextSearch")
                         ProjectID_TextSearchs = pair.Value;
                     else if (pair.Key == "ProjectID_TextSearch_Filter")
                         ProjectID_TextSearch_Filter = pair.Value;
@@ -1436,6 +1469,20 @@ namespace eInsight.Utility
                         CreateCampaign_Button_Save = pair.Value;
                     if (pair.Key == "CreateCampaign_Button_SaveAndContinue")
                         CreateCampaign_Button_SaveAndContinue = pair.Value;
+                    if (pair.Key == "CreateCampaign_StatyOnPage")
+                        CreateCampaign_StatyOnPage= pair.Value;
+                    if (pair.Key == "CreateCampaign_Create")
+                        CreateCampaign_Create = pair.Value;                    
+                    if (pair.Key == "CreateCampaign_CampaignName")
+                        CreateCampaign_CampaignName = pair.Value;
+                    if (pair.Key == "CreateCampaign_Create_SubMail")
+                        CreateCampaign_Create_SubMail = pair.Value;
+                    if (pair.Key == "CreateCampaign_PropertyList")
+                        CreateCampaign_PropertyList = pair.Value;
+                    if (pair.Key == "CreateCampaign_AudienceSearch")
+                        CreateCampaign_AudienceSearch = pair.Value;
+                    if (pair.Key == "CreateCampaign_AudienceSearch_Add")
+                        CreateCampaign_AudienceSearch_Add = pair.Value;
                     if (pair.Key == "CreateCampaign_Button_Continue")
                         CreateCampaign_Button_Continue = pair.Value;
                     if (pair.Key == "CreateCampaign_Button_SaveAndContinue_Submit")
@@ -1444,8 +1491,33 @@ namespace eInsight.Utility
                         CreateCampaign_Link_CriteriaTab = pair.Value;
                     else if (pair.Key == "CreateCampaign_CriteriaTab_ForecastTargetAudience")
                         CreateCampaign_CriteriaTab_ForecastTargetAudience = pair.Value;
+
+                    else if (pair.Key == "CreateCampaign_CampainSetting")
+                        CreateCampaign_CampainSetting = pair.Value;
+                    else if (pair.Key == "CreateCampaign_ReservationEvent")
+                        CreateCampaign_ReservationEvent = pair.Value;
+                    else if (pair.Key == "CreateCampaign_ReservationEvent_EmailReservation")
+                        CreateCampaign_ReservationEvent_EmailReservation = pair.Value;
+                    else if (pair.Key == "CreateCampaign_ReservationEvent_include_unsubscribed")
+                        CreateCampaign_ReservationEvent_include_unsubscribed = pair.Value;
+                    else if (pair.Key == "CreateCampaign_ReservationEvent_include_bounced")
+                        CreateCampaign_ReservationEvent_include_bounced = pair.Value;
+                    else if (pair.Key == "CreateCampaign_ReservationEvent_include_nonconsent")
+                        CreateCampaign_ReservationEvent_include_nonconsent = pair.Value;
+                    /* Create Campaign Template */
+                    
+                    else if (pair.Key == "CreateCampaign_DataSource")
+                        CreateCampaign_DataSource = pair.Value;
                     else if (pair.Key == "CreateCampaign_Link_TemplateTab")
                         CreateCampaign_Link_TemplateTab = pair.Value;
+                    else if (pair.Key == "CreateCampaign_Templates_EmailType")
+                        CreateCampaign_Templates_EmailType = pair.Value;
+                    else if (pair.Key == "CreateCampaign_Templates_FromName")
+                        CreateCampaign_Templates_FromName = pair.Value;
+                    else if (pair.Key == "CreateCampaign_Templates_ReplyEmail")
+                        CreateCampaign_Templates_ReplyEmail = pair.Value;
+                    else if (pair.Key == "CreateCampaign_Templates_subject")
+                        CreateCampaign_Templates_subject = pair.Value;
                     else if (pair.Key == "CreateCampaign_Button_ChangeTemplate")
                         CreateCampaign_Button_ChangeTemplate = pair.Value;
                     else if (pair.Key == "CreateCampaign_Link_TestingTab")
@@ -1528,6 +1600,12 @@ namespace eInsight.Utility
                         CreateCampaign_Templates_ListView_Input_Filter_Txt = pair.Value;
                     else if (pair.Key == "CreateCampaign_Templates_SaveAndContinue_Btn")
                         CreateCampaign_Templates_SaveAndContinue_Btn = pair.Value;
+                    else if (pair.Key == "CreateCampaign_ForecastTargetAudience")
+                        CreateCampaign_ForecastTargetAudience = pair.Value;
+                    else if (pair.Key == "CreateCampaign_ForecastTargetAudienceTotalCount")
+                        CreateCampaign_ForecastTargetAudienceTotalCount = pair.Value;
+                    else if (pair.Key == "CreateCampaign_SubMailCampaignName")
+                        CreateCampaign_SubMailCampaignName = pair.Value;
                 }
                 #endregion[CreateCampaign]
 

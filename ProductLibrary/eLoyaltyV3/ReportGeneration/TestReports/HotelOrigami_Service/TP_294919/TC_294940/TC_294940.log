@@ -1,0 +1,35 @@
+2023-05-16 13:35:48,658 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-16 13:35:48,667 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-16 13:35:48,669 ::INFO ::[Logger]::  is used for Testing
+2023-05-16 13:35:48,732 ::INFO ::[Logger]:: This is the login page.data:,
+2023-05-16 13:35:48,734 ::INFO ::[Logger]:: Execution started at:-May-16-2023 13-35-48-PM
+2023-05-16 13:35:48,736 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 13:35:48,738 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-16 13:35:48,741 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_294940         XXXXXXXXXXXXXXXX
+2023-05-16 13:35:48,742 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 13:35:48,771 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-16 13:37:55,096 ::INFO ::[Logger]:: Points are earned by Rule 5 = Point Test Rule 5
+2023-05-16 13:37:55,099 ::INFO ::[Logger]:: Points are assinged by Rule 5
+2023-05-16 13:38:13,694 ::INFO ::[Logger]:: Points are earned by Rule 5 = Point Test Rule 5
+2023-05-16 13:38:13,696 ::INFO ::[Logger]:: Points are assinged by Rule 5
+2023-05-16 13:38:52,259 ::INFO ::[Logger]:: Points are earned by Rule 5 = Point Test Rule 5
+2023-05-16 13:38:52,261 ::INFO ::[Logger]:: Points are assinged by Rule 5
+2023-05-16 13:39:33,015 ::INFO ::[Logger]:: Points are earned by Rule 5 = Point Test Rule 5
+2023-05-16 13:39:33,016 ::INFO ::[Logger]:: Points are assinged by Rule 5
+2023-05-16 13:43:36,116 ::INFO ::[Logger]:: Points are earned by Rule 5 = Point Test Rule 5
+2023-05-16 13:43:36,118 ::INFO ::[Logger]:: Points are assinged by Rule 5
+2023-05-16 13:43:56,626 ::INFO ::[Logger]:: Points are earned by Rule 5 = Point Test Rule 5
+2023-05-16 13:43:56,628 ::INFO ::[Logger]:: Points are assinged by Rule 5
+2023-05-16 13:44:12,586 ::INFO ::[Logger]:: Points are earned by Rule 5 = Point Test Rule 5
+2023-05-16 13:44:12,590 ::INFO ::[Logger]:: Points are assinged by Rule 5
+2023-05-16 13:44:43,360 ::INFO ::[Logger]:: Points are earned by Rule 5 = Point Test Rule 5
+2023-05-16 13:44:43,362 ::INFO ::[Logger]:: Points are assinged by Rule 5
+2023-05-16 13:44:50,855 ::ERROR::[Logger]:: eLoyaltyV3_Flow :: Script::Failed
+NUnit.Framework.AssertionException: Scenario: Validate Points when one or more rates in AccountTransactionRates are null [Departure date as Today in Checked in status]Scenarion - Failed
+   at NUnit.Framework.Assert.ReportFailure(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 394
+   at NUnit.Framework.Assert.Fail(String message, Object[] args) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 145
+   at NUnit.Framework.Assert.Fail(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 155
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TC_294940() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp\WindowsService\Scenario Validation\Scenario_Validation.cs:line 8081
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TP_294919() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp.cs:line 1065
+   at eLoyaltyV3.TestPlan.HotelOrigami.WindowsServices.Scenario_Validation.HotelOrigami_TP_294919_Service_Scenario_Validation.TC_294940() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\TestPlan\HotelOrigami\WindowsServices\Scenario Validation\HotelOrigami_TP_294919_Service_Scenario_Validation.cs:line 532
+2023-05-16 13:45:31,583 ::INFO ::[Logger]:: E.N.D

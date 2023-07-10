@@ -1,0 +1,19 @@
+2023-05-16 13:56:55,138 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-16 13:56:55,152 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-16 13:56:55,154 ::INFO ::[Logger]::  is used for Testing
+2023-05-16 13:56:55,188 ::INFO ::[Logger]:: This is the login page.data:,
+2023-05-16 13:56:55,190 ::INFO ::[Logger]:: Execution started at:-May-16-2023 13-56-55-PM
+2023-05-16 13:56:55,195 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 13:56:55,197 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-16 13:56:55,276 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_294942         XXXXXXXXXXXXXXXX
+2023-05-16 13:56:55,278 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 13:56:55,305 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-16 14:00:20,797 ::ERROR::[Logger]:: eLoyaltyV3_Flow :: Script::Failed
+NUnit.Framework.AssertionException: Scenario: Checked Out Stay with duplicate Reservation# - Failed
+   at NUnit.Framework.Assert.ReportFailure(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 394
+   at NUnit.Framework.Assert.Fail(String message, Object[] args) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 145
+   at NUnit.Framework.Assert.Fail(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 155
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TC_294942() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp\WindowsService\Scenario Validation\Scenario_Validation.cs:line 8427
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TP_294919() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp.cs:line 1071
+   at eLoyaltyV3.TestPlan.HotelOrigami.WindowsServices.Scenario_Validation.HotelOrigami_TP_294919_Service_Scenario_Validation.TC_294942() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\TestPlan\HotelOrigami\WindowsServices\Scenario Validation\HotelOrigami_TP_294919_Service_Scenario_Validation.cs:line 578
+2023-05-16 14:01:15,888 ::INFO ::[Logger]:: E.N.D

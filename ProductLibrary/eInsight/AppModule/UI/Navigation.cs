@@ -205,8 +205,9 @@ namespace eInsight.AppModule.UI
                     break;
                 case "ManageCampaign":
                     ElementClick(Driver.FindElement(By.XPath("//a[@id='campaignsNav']")));
+                    ElementWait(Driver.FindElement(By.XPath("//a[@id='campaignsNav']//following::a[contains(@href, '/Project.mvc/Project/ManageCampaigns')]")), 60);
                     ElementClick(Driver.FindElement(By.XPath("//a[@id='campaignsNav']//following::a[contains(@href, '/Project.mvc/Project/ManageCampaigns')]")));
-                    AddDelay(20000);
+                    AddDelay(2000);
                     if (Driver.Url.Contains("Project.mvc/Project/ManageCampaigns"))
                     {
                         Logger.WriteDebugMessage("Landed on Manage Campaign Page successfully.");
@@ -215,6 +216,20 @@ namespace eInsight.AppModule.UI
                     {
                         Assert.Fail("Did not land on Manage Campaign Page.");
                     }
+                    break;
+                case "Create":
+                    ElementClick(Driver.FindElement(By.XPath("//a[@id='campaignsNav']")));
+                    ElementWait(Driver.FindElement(By.XPath("//a[@id='campaignsNav']//following::a[contains(@href, '/Project.mvc/Project/Create')]")), 60);
+                    ElementClick(Driver.FindElement(By.XPath("//a[@id='campaignsNav']//following::a[contains(@href, '/Project.mvc/Project/Create')]")));
+                    AddDelay(20000);
+                    if (Driver.Url.Contains("Project.mvc/Project/Create"))
+                    {
+                        Logger.WriteDebugMessage("Landed on Create Campaign Page successfully.");
+                    }
+                    else
+                    {
+                        Assert.Fail("Did not land on Create Campaign Page.");
+                    }                    
                     break;
                 case "TemplateBuilder":
                     ElementClick(Driver.FindElement(By.XPath("//a[@id='campaignsNav']")));

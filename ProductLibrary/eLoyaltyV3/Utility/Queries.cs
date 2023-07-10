@@ -917,8 +917,8 @@ namespace eLoyaltyV3.Utility
                 }
                 connection.Close();
             }
-            data.first_name = data.first_name + Helper.GetRandomAlphaNumericString(2);
-            data.last_name = data.last_name + Helper.GetRandomAlphaNumericString(2);
+            data.first_name = data.first_name + Helper.GetRandomAlphaNumericString(2,0);
+            data.last_name = data.last_name + Helper.GetRandomAlphaNumericString(2, 0);
             return data;
         }
 
@@ -3369,6 +3369,31 @@ namespace eLoyaltyV3.Utility
                             data.RuleName = reader["RuleName"].ToString();
                             data.Priority = reader["Priority"].ToString();
                             
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            return data;
+        }
+
+        public static Users GetLoyaltyRulesRandom(Users data, string status, string ruleType)
+        {
+            query = "SELECT TOP 1 RuleName, Priority FROM LoyaltyRule with(noLock) WHERE active = '" + status + "' And RuleType = '" + ruleType + "' ORDER BY NEWID ()";
+
+            using (SqlConnection connection = DBHelper.SqlConn())
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            data.RuleName = reader["RuleName"].ToString();
+                            data.Priority = reader["Priority"].ToString();
+
                         }
                     }
                 }

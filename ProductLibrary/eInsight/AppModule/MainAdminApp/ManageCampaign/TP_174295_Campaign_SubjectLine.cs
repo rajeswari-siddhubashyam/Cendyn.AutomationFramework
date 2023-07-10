@@ -46,7 +46,11 @@ namespace eInsight.AppModule.MainAdminApp
             Logger.WriteInfoMessage("Executing for ProjectID: " + projectID + ". And updating Campaign status to Draft.");
 
             ManageCampaign.ManageCampaign_EllipseButton("Edit");
-
+            if (IsElementVisible(Driver.FindElement(By.XPath("(//div[@class='dialogContent']//button[@class='btn btn-lg btn-danger'])[1]")))) ;
+            {
+                ElementClick(Driver.FindElement(By.XPath("(//div[@class='dialogContent']//button[@class='btn btn-lg btn-danger'])[1]")));
+                Logger.WriteDebugMessage("Clicked on 'OK' button of Confirm Popup button");
+            }
             ManageCampaign.EnterCampaignSubject(subjectName);
 
             CreateCampaign.MapSubjectLine();
@@ -71,7 +75,7 @@ namespace eInsight.AppModule.MainAdminApp
 
             Logger.WriteInfoMessage("Executing for ProjectID: " + projectID + ". And updating Campaign status to Draft.");
             ManageCampaign.ManageCampaign_EllipseButton("Edit");
-            AddDelay(10000);
+            AddDelay(5000);
 
             ManageCampaign.EnterCampaignSubject(subjectName);
             ScrollUpUsingJavaScript(Driver, -500);
@@ -89,7 +93,7 @@ namespace eInsight.AppModule.MainAdminApp
             CreateCampaign.SelectTime();
             ScrollUpUsingJavaScript(Driver, -500);
             CreateCampaign.CampaignScheduleandComplete("Schedule");
-            AddDelay(300000);
+            AddDelay(10000);
             OpenNewTab();
             ControlToNewWindow();
             if (testCategory == "QA")
@@ -109,7 +113,7 @@ namespace eInsight.AppModule.MainAdminApp
             Navigation.MenuNavigation("ManageCampaign");
             ManageCampaign.PreSearchCampaign_New(CompanyName, "ProjectID", projectID, iFrameManageCampaign);
             ManageCampaign.ManageCampaign_EllipseButton("Clone");
-            AddDelay(90000);
+            AddDelay(10000);
             ElementWait(PageObject_CreateCampaign.CreateCampaign_Button_SaveandContinue(), 120);
             if (VerifyTextOnPage("Clone") && VerifyTextOnPage(subjectName))
             {
@@ -121,7 +125,7 @@ namespace eInsight.AppModule.MainAdminApp
 
                 CreateCampaign.Click_Button_TestingSendtoTest();
 
-                AddDelay(120000);
+                AddDelay(10000);
                 OpenNewTab();
                 ControlToNewWindow();
 

@@ -49,6 +49,14 @@ namespace eInsight.PageObject.UI
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementId(ObjectRepository.CreateCampaign_Button_SaveAndContinue);
         }
+        public static IWebElement CreateCampaign_StatyOnPage()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementId(ObjectRepository.CreateCampaign_StatyOnPage);
+        }
+        
         public static IWebElement CreateCampaign_Button_Continue()
         {
             ScanPage(PageName);
@@ -360,5 +368,151 @@ namespace eInsight.PageObject.UI
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             return PageAction.Find_ElementId(ObjectRepository.CreateCampaign_Templates_SaveAndContinue_Btn);
         }
+        /*Create Campaign Flow Elements*/
+        /*Created 6Feb2023 - Sridhar*/
+        #region 
+        public static IWebElement CreateCampaign_Create()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.CreateCampaign_Create);
+        }
+        public static IWebElement CreateCampaign_CampaignName()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementId(ObjectRepository.CreateCampaign_CampaignName);
+        }
+        public static IWebElement CreateCampaign_PropertyList()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.CreateCampaign_PropertyList);
+        }
+        public static IWebElement CreateCampaign_AudienceSearch()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementId(ObjectRepository.CreateCampaign_AudienceSearch);
+        }
+        public static IWebElement CreateCampaign_AudienceSearch_Add()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementId(ObjectRepository.CreateCampaign_AudienceSearch_Add);
+        }
+        public static IWebElement CreateCampaign_Templates_EmailType()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementId(ObjectRepository.CreateCampaign_Templates_EmailType);
+        }
+        public static IWebElement CreateCampaign_Templates_FromName()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementId(ObjectRepository.CreateCampaign_Templates_FromName);
+        }
+        public static IWebElement CreateCampaign_Templates_ReplyEmail()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementId(ObjectRepository.CreateCampaign_Templates_ReplyEmail);
+        }
+        public static IWebElement CreateCampaign_Templates_subject()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementId(ObjectRepository.CreateCampaign_Templates_subject);
+        }
+        
+        public static IWebElement CreateCampaign_CampainSetting()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.CreateCampaign_CampainSetting);
+        }
+        public static IWebElement CreateCampaign_ReservationEvent()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.CreateCampaign_ReservationEvent);
+        }
+        public static IWebElement CreateCampaign_ReservationEvent_EmailReservation()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.CreateCampaign_ReservationEvent_EmailReservation);
+        }
+        public static IWebElement CreateCampaign_ReservationEvent_include_unsubscribed()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.CreateCampaign_ReservationEvent_include_unsubscribed);
+        }
+        public static IWebElement CreateCampaign_ReservationEvent_include_bounced()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.CreateCampaign_ReservationEvent_include_bounced);
+        }
+        public static IWebElement CreateCampaign_ReservationEvent_include_nonconsent()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.CreateCampaign_ReservationEvent_include_nonconsent);
+        }
+        public static IWebElement CreateCampaign_DataSource()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.CreateCampaign_DataSource);
+        }
+        public static IWebElement CreateCampaign_ForecastTargetAudience()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.CreateCampaign_ForecastTargetAudience);
+        }
+
+        public static IWebElement CreateCampaign_ForecastTargetAudienceTotalCount()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.CreateCampaign_ForecastTargetAudienceTotalCount);
+        }
+        public static IWebElement CreateCampaign_Create_SubMail()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.CreateCampaign_Create_SubMail);
+        }
+        public static IWebElement CreateCampaign_SubMailCampaignName()
+        {
+            ScanPage(PageName);
+            CurrentPageName = PageName;
+            CurrentElementName = MethodBase.GetCurrentMethod().Name;
+            return PageAction.Find_ElementXPath(ObjectRepository.CreateCampaign_SubMailCampaignName);
+        }
+        #endregion
     }
 }

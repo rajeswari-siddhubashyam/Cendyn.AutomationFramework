@@ -20,6 +20,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
         #region TP_218533 - FrontEnd - SmokeEndToEndCases
         public static void TC_218534()
         {
+
             if (TestCaseId == Constants.TC_218534)
             {
                 Users data = new Users();
@@ -338,7 +339,35 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 //6. login to catchall and look for Forget password email
                 // Logged into Hotmail Account
                 Email.LogIntoCatchAll();
-                Email.CatchAll_SearchEmailAndOpenLatestMessage(data.MemberEmail); // Searched for the email
+                //Email.CatchAll_SearchEmailAndOpenLatestMessage(data.MemberEmail); // Searched for the email
+                Time.AddDelay(10000);
+                Helper.ReloadPage();
+                Hotmail.CheckOutLook();
+                Hotmail.SearchEmail(data.MemberEmail);
+                try
+                {
+                    if (IsElementPresent(By.XPath("//div[@id='groupHeaderAll results']/parent::div/div[2]")))
+                    {
+                        ElementWait(Driver.FindElement(By.XPath("//div[@id='groupHeaderAll results']/parent::div/div[2]")), 240);
+                        ElementClick(Driver.FindElement(By.XPath("//div[@id='groupHeaderAll results']/parent::div/div[2]")));
+                    }
+                    else
+                    {
+                        ElementClick(Driver.FindElement(By.XPath("//div[@class='S2NDX']")));
+                    }
+                }
+                catch (NoSuchElementException)
+                {
+                    ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][3]")));
+
+                }
+                catch (Exception)
+                {
+                    ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
+
+                }
+
+                Email.ForgotPasswordEmail_Check();
                 Email.ForgotPasswordEmail_Check();
                 Logger.WriteDebugMessage("Password reset email should sent automatically to the email address for the user");
 
@@ -409,7 +438,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
         }
 
         public static void TC_217847()
-        {
+        { 
             if (TestCaseId == Constants.TC_217847)
             {
                 //1.Navigate to login page
@@ -508,7 +537,10 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 //14.verify user is receiving email from Tango for detail about Redemption.
                 Email.LogIntoCatchAll();
                 Logger.WriteDebugMessage("User should be Logged in Catchall Account");
-                Email.CatchAll_SearchEmailAndOpenLatestMessage(data.MemberEmail);
+                //Email.CatchAll_SearchEmailAndOpenLatestMessage(data.MemberEmail);
+                Hotmail.OutLookSearchEmail(data.MemberEmail);
+                Hotmail.OpenLatestEmailSingleClick();
+                Logger.WriteDebugMessage("Catchall mailbox should be opened");
                 Driver.Manage().Window.Maximize();
                 Helper.ScrollDown();
                 Logger.WriteDebugMessage("User should receive email once done with successful redemption");
@@ -997,168 +1029,202 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
         }
         public static void TC_223767()
         {
-            if (TestCaseId == Constants.TC_223767)
+            try
             {
-                string memberEmail, memberType, emailStatus, memberStatus;
+                if (TestCaseId == Constants.TC_223767)
+                {
+                    string memberEmail, memberType, emailStatus, memberStatus;
 
-                memberType = TestData.ExcelData.TestDataReader.ReadData(1, "MemberType");
-                emailStatus = TestData.ExcelData.TestDataReader.ReadData(1, "EmailStatus");
-                memberStatus = TestData.ExcelData.TestDataReader.ReadData(1, "MemberStatus");
-                Driver.Url = ProjectDetails.CommonAdminURL;
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
+                    memberType = TestData.ExcelData.TestDataReader.ReadData(1, "MemberType");
+                    emailStatus = TestData.ExcelData.TestDataReader.ReadData(1, "EmailStatus");
+                    memberStatus = TestData.ExcelData.TestDataReader.ReadData(1, "MemberStatus");
+                    Driver.Url = ProjectDetails.CommonAdminURL;
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
 
-                Admin.SelectMemberType(memberType);
-                Admin.SelectMemberStatus(memberStatus);
-                Admin.SelectEmailStatus(emailStatus);
-                Admin.Click_Button_MemberSearch();
-                Logger.WriteDebugMessage("Members got Searched on the page");
-                memberEmail = PageObject_Admin.Admin_Value_EmailId().GetAttribute("innerHTML");
-                Admin.Click_Icon_View(ProjectName);
-                ElementWait(PageObject_Admin.Admin_MemberInfo_MemberStays(), 180);
-                VerifyTextOnPageAndHighLight(emailStatus);
-                Logger.WriteDebugMessage("Active Member  with Pending Member Status is Displayed on the Page ");
-                
-                
-                //Navigate to Frontend and verify the validation message
-                Admin.Click_MemberInformation_Value_MemberPortal();
-                AddDelay(10000);
-                ControlToNewWindow();
-                Driver.Manage().Window.Maximize();
-                VerifyTextOnPageAndHighLight("Is not possible to impersonate the user "+memberEmail);
-                Logger.WriteDebugMessage("Validation message for Active Member with Pending Status got diaplyed on the page");
+                    Admin.SelectMemberType(memberType);
+                    Admin.SelectMemberStatus(memberStatus);
+                    Admin.SelectEmailStatus(emailStatus);
+                    Admin.Click_Button_MemberSearch();
+                    Logger.WriteDebugMessage("Members got Searched on the page");
+                    memberEmail = PageObject_Admin.Admin_Value_EmailId().GetAttribute("innerHTML");
+                    Admin.Click_Icon_View(ProjectName);
+                    ElementWait(PageObject_Admin.Admin_MemberInfo_MemberStays(), 240);
+                    VerifyTextOnPageAndHighLight(emailStatus);
+                    Logger.WriteDebugMessage("Active Member  with Pending Member Status is Displayed on the Page ");
 
-                //Log test data
-                Logger.LogTestData(TestPlanId, TestCaseId, "Member Type", memberType);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Email Status", emailStatus);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Member Status", memberStatus);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Active User Email with Pending Email", memberEmail, true);
+
+                    //Navigate to Frontend and verify the validation message
+                    Admin.Click_MemberInformation_Value_MemberPortal();
+                    AddDelay(10000);
+                    ControlToNewWindow();
+                    Driver.Manage().Window.Maximize();
+                    VerifyTextOnPageAndHighLight("Is not possible to impersonate the user " + memberEmail);
+                    Logger.WriteDebugMessage("Validation message for Active Member with Pending Status got diaplyed on the page");
+
+                    //Log test data
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Member Type", memberType);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Email Status", emailStatus);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Member Status", memberStatus);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Active User Email with Pending Email", memberEmail, true);
+
+                }
+            }catch(Exception e)
+            {
 
             }
         }
         public static void TC_223760()
         {
             if (TestCaseId == Constants.TC_223760)
-            {
-                Users data = new Users();
-                string invalidPasword, validationMessage, setPassword ;
-                invalidPasword = TestData.ExcelData.TestDataReader.ReadData(1, "WrongPasswordPassword");
-                validationMessage = TestData.ExcelData.TestDataReader.ReadData(1, "ValidationMessage");
-                setPassword= TestData.ExcelData.TestDataReader.ReadData(1, "SetPassword");
-                Queries.GetActiveMemberEmail(data);
-                Queries.GetMaxLockOutCounter(data);
-                int lockcounter = Int16.Parse(data.Configurationvalue);
-
-                //Verify the login with Invalid password
-                for (int i = 1; i <= lockcounter; i++)
                 {
-                    LoginCredentials(data.MemberEmail, invalidPasword, ProjectName);
-                    if (i < lockcounter)
+                    Users data = new Users();
+                    string invalidPasword, validationMessage, setPassword;
+                    invalidPasword = TestData.ExcelData.TestDataReader.ReadData(1, "WrongPasswordPassword");
+                    validationMessage = TestData.ExcelData.TestDataReader.ReadData(1, "ValidationMessage");
+                    setPassword = TestData.ExcelData.TestDataReader.ReadData(1, "SetPassword");
+                    Queries.GetActiveMemberEmail(data);
+                    Queries.GetMaxLockOutCounter(data);
+                    int lockcounter = Int16.Parse(data.Configurationvalue);
+
+                    //Verify the login with Invalid password
+                    for (int i = 1; i <= lockcounter; i++)
                     {
-                        VerifyTextOnPageAndHighLight(validationMessage);
-                        Queries.GetLockedCount(data.MemberEmail, data);
-                        Logger.WriteDebugMessage("Validation message got displayed and lock counter = " + data.LockCount + " is less than maximum attempt = " + lockcounter);
+                        LoginCredentials(data.MemberEmail, invalidPasword, ProjectName);
+                        if (i < lockcounter)
+                        {
+                            VerifyTextOnPageAndHighLight(validationMessage);
+                            Queries.GetLockedCount(data.MemberEmail, data);
+                            Logger.WriteDebugMessage("Validation message got displayed and lock counter = " + data.LockCount + " is less than maximum attempt = " + lockcounter);
+                        }
+                        else
+                        {
+                            VerifyTextOnPageAndHighLight(Constants.AccountLockedMessage);
+                            Queries.GetLockedCount(data.MemberEmail, data);
+                            Logger.WriteDebugMessage("Validation message got displayed and lock counter = " + data.LockCount + " is equal to maximum attempt = " + lockcounter);
+                        }
+                    }
+                    //Navigate to CatchAll and Verify the email
+                    OpenNewTab();
+                    Logger.WriteDebugMessage("Navigated to new Tab");
+                    Email.LogIntoCatchAll();
+                    Time.AddDelay(10000);
+                    Helper.ReloadPage();
+                    Hotmail.CheckOutLook();
+                    Hotmail.SearchEmail(data.MemberEmail);
+                    try
+                    {
+                        if (IsElementPresent(By.XPath("//div[@id='groupHeaderAll results']/parent::div/div[2]")))
+                        {
+                            //ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
+                            ElementWait(Driver.FindElement(By.XPath("//div[@id='groupHeaderAll results']/parent::div/div[2]")), 240);
+                            ElementClick(Driver.FindElement(By.XPath("//div[@id='groupHeaderAll results']/parent::div/div[2]")));
+                        }
+                        else
+                        {
+                            ElementClick(Driver.FindElement(By.XPath("//div[@class='S2NDX']")));
+                        }
+                    } 
+                    catch
+                    {
+                        ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
+                    }
+                    Helper.PageDown();
+                    Email.ForgotPasswordEmail_Check();
+                    Logger.WriteDebugMessage("Email available in catchall Automatically");
+
+                    //Navigate to Admin and try to send the Forgot Password email Succesfully
+                    ControlToPreviousWindow();
+                    Driver.Navigate().GoToUrl(ProjectDetails.CommonAdminURL);
+                    Logger.WriteDebugMessage("Landed on Admin Login Page");
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
+
+                    //Search for the User and Navigate to Member Search Page
+                    Admin.EnterEmail(data.MemberEmail);
+                    Logger.WriteDebugMessage("Emaill Entered into text box");
+                    Admin.Click_Button_MemberSearch();
+                    Logger.WriteDebugMessage("Member should get displayed under Member result table");
+                    Admin.Click_Icon_View(ProjectName);
+                    Logger.WriteDebugMessage("User should get landed on Member Information page");
+
+                    //Send the forgot password email from Admin
+                    Admin.SendResetLogin(data.MemberEmail);
+                    VerifyTextOnPage("Reset successful.");
+                    AddDelay(1500);
+                    Logger.WriteDebugMessage("'Reset successful' message is displayed.");
+
+                    //Search for the Forgot password Email which is send from Admin
+                    ControlToNextWindow();
+                    ReloadPage();
+                    Logger.WriteDebugMessage("Navigate to CatchAll and page Refreshed");
+                    Hotmail.SearchEmail(data.MemberEmail);
+                    try
+                    {
+                        if (IsElementPresent(By.XPath("//div[@id='groupHeaderAll results']/parent::div/div[2]")))
+                        {
+                            //ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
+                            ElementWait(Driver.FindElement(By.XPath("//div[@id='groupHeaderAll results']/parent::div/div[2]")), 240);
+                            ElementClick(Driver.FindElement(By.XPath("//div[@id='groupHeaderAll results']/parent::div/div[2]")));
+                        }
+                        else
+                        {
+                            ElementClick(Driver.FindElement(By.XPath("//div[@class='S2NDX']")));
+                        }
+                    }
+                    catch
+                    {
+                        ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
+                    }
+                    Helper.PageDown();
+                    Email.ForgotPasswordEmail_Check();
+                    Logger.WriteDebugMessage("Email available in catchall sent from Admin");                    
+                    //ReloadPage();
+                    AddDelay(30000);
+                    //Verify the Password email Link from 1st triggred email
+                    ElementClick(Driver.FindElement(By.XPath("//div[@id='groupHeaderAll results']/parent::div/parent::div/following-sibling::div[1]")));
+                    Email.ForgotPasswordEmail_Check();
+                    Logger.WriteDebugMessage("Password recovery email should have appeared.");
+                    Email.ActivationForgotPassword_CLick(ProjectName);
+                    Helper.ControlToNewWindow();
+                    VerifyTextOnPageAndHighLight(Constants.ForgotPassword_RecoveryLinkExpired2);
+                    Logger.WriteDebugMessage("User should be landed on password reset page and Invalid Token Validation message got displayed");
+
+                    //Verify the Password email Link from 2nd triggred email
+                    CloseCurrentTab();
+                    ControlToNextWindow();
+                    if (IsElementPresent(By.XPath("//div[@id='groupHeaderAll results']/parent::div/div[2]")))
+                    {
+                        //ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
+                        ElementWait(Driver.FindElement(By.XPath("//div[@id='groupHeaderAll results']/parent::div/div[2]")), 240);
+                        ElementClick(Driver.FindElement(By.XPath("//div[@id='groupHeaderAll results']/parent::div/div[2]")));
                     }
                     else
                     {
-                        VerifyTextOnPageAndHighLight(Constants.AccountLockedMessage);
-                        Queries.GetLockedCount(data.MemberEmail, data);
-                        Logger.WriteDebugMessage("Validation message got displayed and lock counter = " + data.LockCount + " is equal to maximum attempt = " + lockcounter);
+                        ElementClick(Driver.FindElement(By.XPath("//div[@class='S2NDX']")));
                     }
-                }
-                //Navigate to CatchAll and Verify the email
-                OpenNewTab();
-                Logger.WriteDebugMessage("Navigated to new Tab");
-                Email.LogIntoCatchAll();
-                Time.AddDelay(10000);
-                Helper.ReloadPage();
-                Hotmail.CheckOutLook();
-                Hotmail.SearchEmail(data.MemberEmail);
-                try
-                {
-                    ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
-                }
-                catch
-                {
-                    ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
-                }
-                Helper.PageDown();
-                Email.ForgotPasswordEmail_Check();
-                Logger.WriteDebugMessage("Email available in catchall Automatically");
+                    //ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
+                    Email.ForgotPasswordEmail_Check();
+                    Logger.WriteDebugMessage("Password recovery email should have appeared.");
+                    Email.ActivationForgotPassword_CLick(ProjectName);
+                    Helper.ControlToNewWindow();
+                    Logger.WriteDebugMessage("User should be landed on password reset page");
+                    ForgotPassword.ForgotPasswordNew(setPassword, Constants.ForgotPassword_PassRecoverySuccess, 0);
+                    Logger.WriteDebugMessage("User should be able to reset password sucesfully");
 
-                //Navigate to Admin and try to send the Forgot Password email Succesfully
-                ControlToPreviousWindow();
-                Driver.Navigate().GoToUrl(ProjectDetails.CommonAdminURL);
-                Logger.WriteDebugMessage("Landed on Admin Login Page");
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
+                    ///Try to Login with Valid Crentials
+                    LoginCredentials(data.MemberEmail, setPassword, ProjectName);
+                    if (PageObject_Navigation.Link_SignOut(ProjectName).Displayed)
+                        Logger.WriteDebugMessage("Logged in Succesful to frontend");
+                    else
+                        Assert.Fail("Unable to log in to frontend");
 
-                //Search for the User and Navigate to Member Search Page
-                Admin.EnterEmail(data.MemberEmail);
-                Logger.WriteDebugMessage("Emaill Entered into text box");
-                Admin.Click_Button_MemberSearch();
-                Logger.WriteDebugMessage("Member should get displayed under Member result table");
-                Admin.Click_Icon_View(ProjectName);
-                Logger.WriteDebugMessage("User should get landed on Member Information page");
-
-                //Send the forgot password email from Admin
-                Admin.SendResetLogin(data.MemberEmail);
-                VerifyTextOnPage("Reset successful.");
-                AddDelay(1500);
-                Logger.WriteDebugMessage("'Reset successful' message is displayed.");
-
-                //Search for the Forgot password Email which is send from Admin
-                ControlToNextWindow();
-                ReloadPage();
-                Logger.WriteDebugMessage("Navigate to CatchAll and page Refreshed");
-                Hotmail.SearchEmail(data.MemberEmail);
-                try
-                {
-                    ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
-                }
-                catch
-                {
-                    ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
-                }
-                Helper.PageDown();
-                Email.ForgotPasswordEmail_Check();
-                Logger.WriteDebugMessage("Email available in catchall sent from Admin");
-
-                //Verify the Password email Link from 1st triggred email
-                ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][2]")));
-                Email.ForgotPasswordEmail_Check();
-                Logger.WriteDebugMessage("Password recovery email should have appeared.");
-                Email.ActivationForgotPassword_CLick(ProjectName);
-                Helper.ControlToNewWindow();
-                VerifyTextOnPageAndHighLight(Constants.ForgotPassword_RecoveryLinkExpired2);
-                Logger.WriteDebugMessage("User should be landed on password reset page and Invalid Token Validation message got displayed");
-
-                //Verify the Password email Link from 2nd triggred email
-                CloseCurrentTab();
-                ControlToNextWindow();
-                ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
-                Email.ForgotPasswordEmail_Check();
-                Logger.WriteDebugMessage("Password recovery email should have appeared.");
-                Email.ActivationForgotPassword_CLick(ProjectName);
-                Helper.ControlToNewWindow();
-                Logger.WriteDebugMessage("User should be landed on password reset page");
-                ForgotPassword.ForgotPasswordNew(setPassword, Constants.ForgotPassword_PassRecoverySuccess, 0);
-                Logger.WriteDebugMessage("User should be able to reset password sucesfully");
-
-                ///Try to Login with Valid Crentials
-                LoginCredentials(data.MemberEmail, setPassword, ProjectName);
-                if (PageObject_Navigation.Link_SignOut(ProjectName).Displayed)
-                    Logger.WriteDebugMessage("Logged in Succesful to frontend");
-                else
-                    Assert.Fail("Unable to log in to frontend");
-
-                //Log test data
-                Logger.LogTestData(TestPlanId, TestCaseId, "Member Email", data.MemberEmail);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Maximum Lock Counter", lockcounter.ToString());
-                Logger.LogTestData(TestPlanId, TestCaseId, "Wrong Credential Validation Message", validationMessage);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Account Lock Validation Message", Constants.AccountLockedMessage, true);
-
-
+                    //Log test data
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Member Email", data.MemberEmail);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Maximum Lock Counter", lockcounter.ToString());
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Wrong Credential Validation Message", validationMessage);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Account Lock Validation Message", Constants.AccountLockedMessage, true);
+                
             }
         }
         public static void TC_223762()

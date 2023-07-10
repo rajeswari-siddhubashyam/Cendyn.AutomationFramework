@@ -16,6 +16,7 @@ using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium.Interactions;
 using DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming;
 using SeleniumExtras.WaitHelpers;
+using DocumentFormat.OpenXml.Bibliography;
 
 namespace eInsight.AppModule.UI
 {
@@ -341,6 +342,10 @@ namespace eInsight.AppModule.UI
         {
             ElementClick(PageObject_ManageCampaign.CheckBox_CASL());
         }
+        public static void Testcatchall_checkbox()
+        {
+            ElementClick(PageObject_ManageCampaign.Testcatchall_checkboxL());
+        }
         public static void Button_SendToTest()
         {
             ElementClick(PageObject_ManageCampaign.Button_SendToTest());
@@ -467,6 +472,7 @@ namespace eInsight.AppModule.UI
         public static void ManageCampaign_InactivateSchedule()
         {
             ElementClick(Driver.FindElement(By.XPath("//span[contains(text(), 'Scheduled Active')]")));
+            ElementWait(PageObject_ManageCampaign.ManageCampaign_EditSchedule_InactivateSchedule(), 60);
             ElementClick(PageObject_ManageCampaign.ManageCampaign_EditSchedule_InactivateSchedule());
             if (VerifyTextOnPage("Deactivating this schedule will pause sending."))
             {
@@ -483,20 +489,35 @@ namespace eInsight.AppModule.UI
 
         public static void ManageCampaign_ActivateSchedule()
         {
-            ElementClick(Driver.FindElement(By.XPath("//span[contains(text(), 'Scheduled Inactive')]")));
-            ElementClick(PageObject_ManageCampaign.ManageCampaign_EditSchedule_ActivateSchedule());
-            if (VerifyTextOnPage("Activating this schedule will resume sending."))
+            try
             {
-                Logger.WriteDebugMessage("Activating specific campaign. \n" + "Received Confirmation Message - Activating this schedule will resume sending.");
-                ElementClick(PageObject_ManageCampaign.ManageCampaign_EditSchedule_ActivateScheduleConfirm());
-                AddDelay(8000);
-                if (VerifyElementIsClickable(PageObject_CreateCampaign.CreateCampaign_Link_ScheduleTab()))
+                Helper.ElementWait(Driver.FindElement(By.XPath("//span[contains(text(), 'Scheduled Inactive')]")), 30);
+                ElementClick(Driver.FindElement(By.XPath("//span[contains(text(), 'Scheduled Inactive')]")));
+                Helper.ElementWait(PageObject_ManageCampaign.ManageCampaign_EditSchedule_ActivateSchedule(), 30);
+                ElementClick(PageObject_ManageCampaign.ManageCampaign_EditSchedule_ActivateSchedule());
+                if (VerifyTextOnPage("Activating this schedule will resume sending."))
                 {
-                    ScrollToElement(Driver.FindElement(By.Id("occuranceType")));
-                    ElementClick(Driver.FindElement(By.XPath("//input[@id='activeStatus' and @value='Active']")));
-                    CreateCampaign.SelectTime();
-                    CreateCampaign.CampaignUpdateSchedule();
+                    AddDelay(2000);
+                    Logger.WriteDebugMessage("Activating specific campaign. \n" + "Received Confirmation Message - Activating this schedule will resume sending.");
+                    ElementClick(PageObject_ManageCampaign.ManageCampaign_EditSchedule_ActivateScheduleConfirm());
+                    AddDelay(2000);
+                    if (VerifyElementIsClickable(PageObject_CreateCampaign.CreateCampaign_Link_ScheduleTab()))
+                    {
+                        ScrollToElement(Driver.FindElement(By.Id("occuranceType")));
+                        ElementClick(Driver.FindElement(By.XPath("//input[@id='activeStatus' and @value='Active']")));
+                        CreateCampaign.SelectTime();
+                        AddDelay(2000);                        
+                        ElementClick(Driver.FindElement(By.XPath("//input[@id='startdate']/following-sibling::button")));
+                        ElementClick(Driver.FindElement(By.XPath("//td[@class='  ui-datepicker-today']")));
+                        //a[@class='ui-state-default ui-state-highlight ui-state-active']
+                        //string SendDate=DateTime.Now.ToString("M/d/yyyy");
+                        //PriorityQ.SelectEndDate(SendDate);
+                        CreateCampaign.CampaignUpdateSchedule();
+                    }
                 }
+            }catch (Exception ex)
+            {
+
             }
         }
 
@@ -1070,8 +1091,10 @@ namespace eInsight.AppModule.UI
                     {
                         Click_CASLCheckBox();
                         Logger.WriteDebugMessage("CASL is selected and sending send to test email.");
+                        ScrollToElement(PageObject_ManageCampaign.Testcatchall_checkboxL());
+                        ManageCampaign.Testcatchall_checkbox();
                         Button_SendToTest();
-                        AddDelay(15000);
+                        AddDelay(1500);
                         Logger.WriteDebugMessage("Sent to Test Email is sent.");
                     }
                     break;
@@ -1080,6 +1103,8 @@ namespace eInsight.AppModule.UI
                     if (VerifyTextOnPage("This email address is in compliance with global spam laws"))
                     {
                         Click_CASLCheckBox();
+                        ScrollToElement(PageObject_ManageCampaign.Testcatchall_checkboxL());
+                        ManageCampaign.Testcatchall_checkbox();
                         Logger.WriteDebugMessage("CASL is selected and sending send to test email.");
                         if (String.IsNullOrEmpty(groupName))
                         {
@@ -1233,32 +1258,35 @@ namespace eInsight.AppModule.UI
         public static void PreSearchCampaign_New(string companyName, string searchType, string searchText, string iframeSwitch, string tabSelect = null)
         {
             /*Add Sub Client*/
-            AddDelay(30000);
+            //AddDelay(3000);
               ScrollDownUsingJavaScript(Driver, -1000);
             //Profile.SelectClient(parentCompany);
             Profile.SelectSubClient(companyName);
-            AddDelay(20000);
+            //AddDelay(2000);
             Driver.SwitchTo().Frame(Driver.FindElement(By.XPath(iframeSwitch)));
             if (!String.IsNullOrEmpty(tabSelect) && tabSelect == "Transactional")
             {
-                ElementClick(Driver.FindElement(By.XPath("//button[contains(text(), 'Transactional - In Testing')]")));
+                var cList = Driver.FindElement(By.XPath("(//select[@id='campaign-type-dropdown'])[2]"));
+                var selectElement = new SelectElement(cList);
+                selectElement.SelectByText("Transactional - In Testing");
+                //ElementClick(Driver.FindElement(By.XPath("//button[contains(text(), 'Transactional - In Testing')]")));
                 Logger.WriteDebugMessage("Navigated to Tansactional Campaign Tab.");
             }
             switch (searchType)
             {
                 case "ProjectID":
                     By loader1 = By.XPath("//*[contains(.,'Loading...')]");
-                    Helper.WaitTillInvisibilityOfLoader(loader1, 55);
+                    Helper.WaitTillInvisibilityOfLoader(loader1, 20);
                     ElementClick(PageObject_ManageCampaign.ManageCampaign_SearchProjectID());
                     ElementEnterText(PageObject_ManageCampaign.ManageCampaign_SearchProjectIDText(), searchText);
                     ElementClick(PageObject_ManageCampaign.ManageCampaign_SearchProjectID_Filter());
-                    Helper.WaitTillInvisibilityOfLoader(loader1, 180);
+                    Helper.WaitTillInvisibilityOfLoader(loader1, 20);
                     ElementWait(Driver.FindElement(By.XPath("//span[contains(text(), 'ID')]//following::*[contains(text(), '"+ searchText.Trim() +"')]")), 30);
                     if (IsElementPresent(By.XPath("//span[contains(text(), 'ID')]//following::*[contains(text(), '" + searchText + "')]")))
                     {
                         Logger.WriteDebugMessage("Search and Filtered ProjectID - " + searchText);
                     }
-                    break;
+                    break;                
             }
         }
 
@@ -1269,17 +1297,31 @@ namespace eInsight.AppModule.UI
             ScrollDownUsingJavaScript(Driver, -1000);
             //Profile.SelectClient(parentCompany);
             Profile.SelectSubClient(companyName);
-            AddDelay(20000);
+            AddDelay(5000);
             Driver.SwitchTo().Frame(Driver.FindElement(By.XPath(iframeSwitch)));
             switch (searchType)
             {
                 case "ProjectID":
                     ElementClick(PageObject_ManageCampaign.ManageCampaign_SearchProjectID());
-                    ElementEnterText(PageObject_ManageCampaign.ManageCampaign_SearchProjectIDTexts(), searchText);
+                    ElementEnterText(Driver.FindElement(By.XPath("//div[@id='grid-column0-flmenu']/div[2]/span/input")), searchText);
                     ElementClick(PageObject_ManageCampaign.ManageCampaign_SearchProjectID_Filters());
-                    AddDelay(20000);
+                    AddDelay(2000);
                     break;
             }
+        }
+
+        public static void StatusFilterByName(string StatusFliterText,int index)
+        {
+            ElementClick(Driver.FindElement(By.XPath("//span[contains(@class,'e-headertext') and text()='Status']//parent::div//following-sibling::div[2]")));
+            ElementClick(PageObject_ManageCampaign.ProjectStatus_TextSearch());
+            AddDelay(2000);
+            Actions actions = new Actions(Driver);
+            actions.KeyDown(Keys.ArrowDown);
+            actions.KeyDown(Keys.ArrowDown);
+            ElementClick(Driver.FindElement(By.XPath("//li[@data-value='Scheduled Inactive']")));
+            Logger.WriteDebugMessage("Filtered and Selected " + StatusFliterText);
+            ElementClick(Driver.FindElement(By.XPath("//span[contains(@class,'e-headertext') and text()='Status']//parent::div//following-sibling::div[2]")));
+            ElementClick(PageObject_ManageCampaign.ManageCampaign_SearchProjectID_Filters());
         }
 
         public static void CampaignDetails_TabActions(string tabActions, string projectID, string subTabActions = null)
@@ -1612,6 +1654,8 @@ namespace eInsight.AppModule.UI
             {
                 Helper.HighlightElement(PageObject_ManageCampaign.Button_SendToTest());
                 Click_CASLCheckBox();
+                ScrollToElement(PageObject_ManageCampaign.Testcatchall_checkboxL());
+                ManageCampaign.Testcatchall_checkbox();
                 isDisabled = Driver.FindElement(By.Id("submitRequestSeedList")).GetAttribute("disabled");
                 if (isDisabled == null)
                 {
@@ -1622,10 +1666,10 @@ namespace eInsight.AppModule.UI
                     }
                     Button_SendToTest();
                     Logger.WriteDebugMessage("Quick Send - Email to self is sent.");
-                    AddDelay(10000);
+                    AddDelay(1000);
                 }
             }
-            AddDelay(10000);
+            AddDelay(1000);
         }
 
         public static void ClickOnListViewOfTemplates()

@@ -2766,7 +2766,7 @@ namespace TestData
 
         private static void AddTestData_Admin_TC_116980()
         {
-            TestDataHelper.AddRecord("ALL", "Admin", "TestCase", "TP_240322", "TC_116980", "1", "TRUE", "AwardStatus", "RNT");
+            TestDataHelper.AddRecord("ALL", "Admin", "TestCase", "TP_240322", "TC_116980", "1", "TRUE", "AwardStatus", "ISS");
             TestDataHelper.AddRecord("ALL", "Admin", "TestCase", "TP_240322", "TC_116980", "1", "TRUE", "FrontEndStatus", "Issued");
         }
         private static void AddTestData_Admin_TC_116978()
@@ -2781,7 +2781,7 @@ namespace TestData
         }
         private static void AddTestData_Admin_TC_116402()
         {
-            TestDataHelper.AddRecord("ALL", "Admin", "TestCase", "TP_240322", "TC_116402", "1", "TRUE", "AwardStatus", "ISS");
+            TestDataHelper.AddRecord("ALL", "Admin", "TestCase", "TP_240322", "TC_116402", "1", "TRUE", "AwardStatus", "CXL");
             TestDataHelper.AddRecord("ALL", "Admin", "TestCase", "TP_240322", "TC_116402", "1", "TRUE", "DisplayStatus", "Issued");
         }
         private static void AddTestData_Admin_TC_116404()

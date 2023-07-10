@@ -1,0 +1,67 @@
+2023-05-16 23:05:32,646 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-16 23:05:32,646 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-16 23:05:32,646 ::INFO ::[Logger]::  is used for Testing
+2023-05-16 23:05:32,662 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.goqacendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goQAcendyn.com/SSOLanding.aspx
+2023-05-16 23:05:32,662 ::INFO ::[Logger]:: Execution started at:-May-16-2023 23-05-32-PM
+2023-05-16 23:05:32,662 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 23:05:32,677 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-16 23:05:33,197 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_252725         XXXXXXXXXXXXXXXX
+2023-05-16 23:05:33,236 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 23:05:33,245 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-16 23:05:33,471 ::INFO ::[Logger]:: Test Case : Validate the Parent Company Analysis report
+2023-05-16 23:05:35,338 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-05-16 23:05:35,352 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-05-16 23:05:45,972 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-05-16 23:05:47,868 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2023-05-16 23:05:47,998 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
+2023-05-16 23:06:04,989 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2023-05-16 23:06:05,127 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
+2023-05-16 23:06:11,015 ::DEBUG::[Logger]:: 4) Client displayed
+2023-05-16 23:06:29,145 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
+2023-05-16 23:06:29,164 ::DEBUG::[Logger]:: 5) D Rock selected
+2023-05-16 23:06:42,074 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
+2023-05-16 23:06:47,282 ::DEBUG::[Logger]:: 7) Business source Dropdown displayed
+2023-05-16 23:06:55,335 ::INFO ::[Logger]:: Clicked the Parent_Company_Analysis element on the Navigation page.
+2023-05-16 23:07:27,089 ::DEBUG::[Logger]:: 8) User landed on Parent Company Analysis report page
+2023-05-16 23:07:35,330 ::INFO ::[Logger]:: Switching into the iFrame.
+2023-05-16 23:07:42,874 ::INFO ::[Logger]:: Clicked the Click_View_Analysis element on the ReportParameter page.
+2023-05-16 23:07:43,331 ::DEBUG::[Logger]:: 9) validation message displayed for required field
+2023-05-16 23:07:51,942 ::INFO ::[Logger]:: Clicked the Select_Hotel_DDL element on the ReportParameter page.
+2023-05-16 23:07:52,099 ::DEBUG::[Logger]:: 10) List for hotel displayed
+2023-05-16 23:07:59,849 ::INFO ::[Logger]:: Clicked the Select_Hotel_value element on the ReportParameter page.
+2023-05-16 23:08:00,320 ::DEBUG::[Logger]:: 11) Atlantis, The Palmselected as hotel
+2023-05-16 23:08:05,858 ::INFO ::[Logger]:: Inserted text in the Text_StartDate element on the ReportParameter page.
+2023-05-16 23:08:05,906 ::DEBUG::[Logger]:: 12) Enter start date as = 4/1/2020
+2023-05-16 23:08:12,126 ::INFO ::[Logger]:: Inserted text in the Text_EndDate element on the ReportParameter page.
+2023-05-16 23:08:12,390 ::DEBUG::[Logger]:: 13) Enter enddate as = 4/30/2020
+2023-05-16 23:08:29,249 ::INFO ::[Logger]:: Clicked the Click_View_Analysis element on the ReportParameter page.
+2023-05-16 23:09:09,532 ::DEBUG::[Logger]:: 14) Report generated
+2023-05-16 23:10:12,364 ::ERROR::[Logger]:: The //span[contains(text(),'Business Source')] element was not found on the page.
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:53261/session/aa495bafae4c67b30fc97460847e6801/element timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at BaseUtility.PageObject.PageAction.Find_ElementXPath(String repoName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\PageObject\PageAction.cs:line 33
+2023-05-16 23:10:13,401 ::ERROR::[Logger]:: RevIntel_Flow :: Script::Failed
+System.ArgumentException: MoveToElement cannot move to a null element with no offset.
+Parameter name: toElement
+   at OpenQA.Selenium.Interactions.Actions.MoveToElement(IWebElement toElement)
+   at BaseUtility.Utility.Helper.ElementHover(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 948
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TC_252725() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp\TP_252700_Business_source.cs:line 1602
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TP_252700() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp.cs:line 22
+   at RevIntel.RevIntel_TP_252700_Business_source.TC_252725() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\TestPlan\RevIntel\RevIntel_TP_252700_Business_source.cs:line 294
+2023-05-16 23:11:44,636 ::INFO ::[Logger]:: E.N.D

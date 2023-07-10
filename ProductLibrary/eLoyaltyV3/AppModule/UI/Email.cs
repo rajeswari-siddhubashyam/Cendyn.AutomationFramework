@@ -978,7 +978,8 @@ namespace eLoyaltyV3.AppModule.UI
             Driver.Navigate().GoToUrl("https://login.microsoftonline.com/");
             try
             {
-                if(Driver.FindElement(By.XPath(catchalladvancebutton)).Displayed)
+
+                if(Driver.FindElement(By.XPath(SignIn_Email)).Displayed)
                 {
                     ElementClick(Driver.FindElement(By.XPath(catchalladvancebutton)));
                     ElementClick(Driver.FindElement(By.XPath(catchallproceedbutton)));
@@ -989,6 +990,50 @@ namespace eLoyaltyV3.AppModule.UI
                 Logger.WriteDebugMessage("Landed on CatchAll SignIn Page");
             }
             
+        }
+        public static void NavigateToOutLook()
+        {
+            Driver.Navigate().GoToUrl("https://login.microsoftonline.com/");
+            try
+            {
+                ElementWait(Driver.FindElement(By.XPath("//img[@alt='Outlook']")),120);
+                ElementClick(Driver.FindElement(By.XPath("//img[@alt='Outlook']")));                
+                if (Helper.IsElementDisplayed(Driver.FindElement(By.XPath(SignIn_Email))))
+                {
+                    SignIn();
+                }
+            }
+            catch (Exception)
+            {
+                Logger.WriteDebugMessage("Landed on CatchAll SignIn Page");
+            }
+
+        }
+        public static void NavigateToOutLookLogin()
+        {
+            Driver.Navigate().GoToUrl("https://login.microsoftonline.com/");
+            try
+            {
+                if (IsElementPresent(By.XPath("//img[@alt='Outlook']")))
+                {
+                    ElementWait(Driver.FindElement(By.XPath("//img[@alt='Outlook']")), 120);
+                    ElementClick(Driver.FindElement(By.XPath("//img[@alt='Outlook']")));
+                }
+                else if (Helper.IsElementDisplayed(Driver.FindElement(By.XPath(SignIn_Email))))
+                {
+                    SignIn();
+                }
+                else if (IsElementPresent(By.XPath("//img[@alt='Outlook']")))
+                {
+                    ElementWait(Driver.FindElement(By.XPath("//img[@alt='Outlook']")), 120);
+                    ElementClick(Driver.FindElement(By.XPath("//img[@alt='Outlook']")));
+                }
+            }
+            catch (Exception)
+            {
+                Logger.WriteDebugMessage("Landed on CatchAll SignIn Page");
+            }
+
         }
 
         public static void ClickOutLook()
@@ -1039,7 +1084,7 @@ namespace eLoyaltyV3.AppModule.UI
                 catch(Exception)
                 {
                     Logger.WriteInfoMessage("New Outlook ");
-                    ElementClick(Driver.FindElement(By.Id(NewOutLookIcon)));
+                    ElementClick(Driver.FindElement(By.Id("Mail")));
                 }
                 CheckActiveWindow();                
                 //Driver.Navigate().GoToUrl("https://outlook.office365.com/owa/?realm=cendyn17.com&exsvurl=1&ll-cc=1033&modurl=0&path=/mail/search");
@@ -1075,7 +1120,7 @@ namespace eLoyaltyV3.AppModule.UI
         {
             try
             {
-                IWebElement SearchElement = Driver.FindElement(By.XPath(SearchIcon));
+                IWebElement SearchElement = Driver.FindElement(By.Id("topSearchInput"));
                 IJavaScriptExecutor js = (IJavaScriptExecutor)Driver;
                 js.ExecuteScript("arguments[0].click();", SearchElement);
                 //ElementClick(Driver.FindElement(By.XPath(SearchIcon)));
@@ -1091,18 +1136,78 @@ namespace eLoyaltyV3.AppModule.UI
         }
 
         /// <summary>
-        /// This will open the first email message.
+        /// This will open the Top Results first email message if you pass aram as vTopresults else Select All results  .
         /// Email must have the filters turned off
         /// </summary>
-        private static void OpenLatestEmail()
+        private static void OpenLatestEmailbyTopResults(string Topresults)
         {
             try
             {
-                //IWebElement element = Driver.FindElement(By.CssSelector("._lvv_11"));
-                //((IJavaScriptExecutor)Driver).ExecuteScript("arguments[0].removeAttribute('style')", element);
-                //AddDelay(2500);
-                //ElementClick(Driver.FindElement(By.XPath("//div[@role='heading'][@tabindex='-1']/following-sibling::div[@data-convid][1]")));                
-                DoubleClickElement(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
+                if (Topresults == "Topresults")
+                {
+                    DoubleClickElement(Driver.FindElement(By.XPath("//div[@class='S2NDX']")));
+                }
+                else
+                {
+                    DoubleClickElement(Driver.FindElement(By.XPath("//div[@role='option'][@tabindex='-1']/../div[text()='All results']//following-sibling::div[1]")));
+                }
+            }
+            catch (Exception ex)
+            {
+                DoubleClickElement(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
+                Logger.WriteDebugMessage("Failed due to below error" + ex.Message);
+            }
+        }
+        /// <summary>
+        /// This will open the first email message.
+        /// Email must have the filters turned off
+        /// </summary>
+        public static void OpenLatestEmail()
+        {
+            try
+            {
+                if (IsElementPresent(By.XPath("//div[@role='option'][@tabindex='-1']/../div[text()='All results']//following-sibling::div[1]")))
+                {
+                    ElementWait(Driver.FindElement(By.XPath("//div[@role='option'][@tabindex='-1']/../div[text()='All results']//following-sibling::div[1]")), 240);
+                    //IWebElement element = Driver.FindElement(By.CssSelector("._lvv_11"));
+                    //((IJavaScriptExecutor)Driver).ExecuteScript("arguments[0].removeAttribute('style')", element);
+                    //AddDelay(2500);
+                    //ElementClick(Driver.FindElement(By.XPath("//div[@role='heading'][@tabindex='-1']/following-sibling::div[@data-convid][1]")));                
+                    DoubleClickElement(Driver.FindElement(By.XPath("//div[@role='option'][@tabindex='-1']/../div[text()='All results']//following-sibling::div[1]")));
+
+                }
+                else
+                {
+                    ElementClick(Driver.FindElement(By.XPath("//div[@class='S2NDX']")));
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                DoubleClickElement(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
+                Logger.WriteDebugMessage("Failed due to below error" + ex.Message);
+            }
+        }
+
+        public static void OpenLatestEmailSingleClick()
+        {
+            try
+            {
+                if (IsElementPresent(By.XPath("//div[@role='option'][@tabindex='-1']/../div[text()='All results']//following-sibling::div[1]")))
+                {
+                    ElementWait(Driver.FindElement(By.XPath("//div[@role='option'][@tabindex='-1']/../div[text()='All results']//following-sibling::div[1]")), 240);
+                    //IWebElement element = Driver.FindElement(By.CssSelector("._lvv_11"));
+                    //((IJavaScriptExecutor)Driver).ExecuteScript("arguments[0].removeAttribute('style')", element);
+                    //AddDelay(2500);
+                    //ElementClick(Driver.FindElement(By.XPath("//div[@role='heading'][@tabindex='-1']/following-sibling::div[@data-convid][1]")));                
+                    ElementClick(Driver.FindElement(By.XPath("//div[@role='option'][@tabindex='-1']/../div[text()='All results']//following-sibling::div[1]")));
+
+                }
+                else
+                {
+                    ElementClick(Driver.FindElement(By.XPath("//div[@class='S2NDX']")));
+                }
+
             }
             catch (Exception ex)
             {
@@ -1154,7 +1259,23 @@ namespace eLoyaltyV3.AppModule.UI
             OpenLatestEmail();
             Helper.PageDown();
             AddDelay(5000);
+            CheckActiveWindow();
             ControlToNewWindow();
+            Helper.Driver.Manage().Window.Maximize();
+            Logger.WriteDebugMessage("Opened Latest Email.");
+        }
+        public static void SearchEmailAndOpenLatestEmail(string email, string EmailSearchTypeToOrAll)
+        {
+            AddDelay(2500);
+            Helper.ReloadPage();
+            CheckOutLook();
+            AddDelay(5000);
+            SearchEmail(email);
+            OpenLatestEmailbyTopResults(EmailSearchTypeToOrAll);
+            Helper.PageDown();
+            AddDelay(5000);
+            CheckActiveWindow();
+            //ControlToNewWindow();
             Helper.Driver.Manage().Window.Maximize();
             Logger.WriteDebugMessage("Opened Latest Email.");
         }
@@ -1165,10 +1286,10 @@ namespace eLoyaltyV3.AppModule.UI
             ElementClearText(Driver.FindElement(By.XPath(SearchIcon)));
             action.SendKeys(Keys.Tab).Build().Perform();
         }
-
         public static void OutLookSearchEmail(string email)
         {
             AddDelay(2500);
+            ReloadPage();
             CheckOutLook();
             SearchEmail(email);
         }

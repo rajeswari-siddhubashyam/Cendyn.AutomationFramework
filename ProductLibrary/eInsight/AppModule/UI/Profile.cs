@@ -1028,7 +1028,7 @@ namespace eInsight.AppModule.UI
         }
         public static void EnterResendEmailAddress()
         {
-            ElementEnterText(Driver.FindElement(By.Id("alt_email")), "cendynautomation@cendyn.com");
+            ElementEnterText(Driver.FindElement(By.Id("alt_email")), ",cendynautomation@cendyn.com");
         }
 
         public static void SelectCampaignName(string campaignName)

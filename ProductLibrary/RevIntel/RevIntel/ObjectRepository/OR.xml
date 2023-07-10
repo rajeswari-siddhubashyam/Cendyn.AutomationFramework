@@ -22,7 +22,7 @@
     <Parameter key="Enter_Confirm_Password">//*[@id='RenterPassword']</Parameter>
     <Parameter key="Click_Change_Password_button">//*[@id='login-resetPassword']</Parameter>
     <Parameter key="incorrect_current_password_validation">//*[@id="resetPassword"]//span[@data-valmsg-for='RenterPassword']</Parameter>
-    <Parameter key="Tenant_21C">(//a[contains(text(),'21C')])[3]</Parameter>
+    <Parameter key="Tenant_21C">//a[contains(text(),'21C')]</Parameter>
    <Parameter key="Hard_Rock">Hard Rock</Parameter>
     <Parameter key="Kerzner">Kerzner</Parameter>
     <Parameter key="D_Rock">D Rock</Parameter>
@@ -31,7 +31,7 @@
     <Parameter key="Ocean_House">Ocean House</Parameter>
     <Parameter key="BusinessSource">//span[contains(text(),'Business Source')]</Parameter>
     <Parameter key="AgentAnalysis">(//form[@id='form1']//span[contains(text(),'Agent Analysis')])[1]</Parameter>
-    <Parameter key="Market">(//span[contains(text(),'Market')])[16]</Parameter>
+    <Parameter key="Market">(//span[contains(text(),'Market')])[13]</Parameter>
     <Parameter key="Market_Report">//span[contains(text(),'Market Report')]</Parameter>
     <Parameter key="Click_Menu_Market">//*[@id="RadMenu1"]/div[1]/ul/li[6]/span/span[1]</Parameter>
     <Parameter key="Booking_Trends">//span[contains(text(),'Booking Trends')]</Parameter>
@@ -39,7 +39,7 @@
     <Parameter key="Forecast_and_Budget">//span[contains(text(),'Forecast and Budget')]</Parameter>
     <Parameter key="Adhoc">//span[contains(text(),'Adhoc')]</Parameter>
     <Parameter key="Geo_Source">//span[contains(text(),'Geo Source')]</Parameter>
-    <Parameter key="Room_Type">(//span[contains(text(),'Room Type')])[5]</Parameter>
+    <Parameter key="Room_Type">(//span[@class='rnvRootLink rnvLink'])[2]</Parameter>
     <Parameter key="Time_Period">//span[contains(text(),'Time Period')]</Parameter>
     <Parameter key="Room_Rate">//span[contains(text(),'Room Rate')]</Parameter>
     <Parameter key="Click_RainMaker">//span[contains(text(),'Rainmaker')]</Parameter>
@@ -136,7 +136,7 @@
     <Parameter key="Click_Contact_Support_Dropdown">(//div[@data-garden-id = 'dropdowns.faux_input'])[1]</Parameter>
     <Parameter key="Click_Contact_Support_Services">//*[contains(text(),'Revenue Services')]</Parameter>
     <Parameter key="Click_Contact_Support_Sub_Services">//*[contains(text(),'Revintel')]</Parameter>
-    <Parameter key="Hotel">(//span[contains(text(),'Hotel')])[10]</Parameter>
+    <Parameter key="Hotel">(//span[contains(text(),'Hotel')])[2]</Parameter>
     <Parameter key="Market_Performance">//span[contains(text(),'Market Performance')]</Parameter>
     <Parameter key="Market_Trend_Report">//span[contains(text(),'Market Trend Report')]</Parameter>
     <Parameter key="Market_Segment_by_Day">//span[contains(text(),'Market Segment by Day')]</Parameter>
@@ -161,7 +161,7 @@
     <Parameter key="Click_Day_of_Week_Statistics_Report">//span[contains(text(),'Day of Week Statistics')]</Parameter>
     <Parameter key="Click_Monthly_Summary_Report">//span[contains(text(),'Monthly Summary')]</Parameter>
     <Parameter key="Click_Day_of_Week_Analysis_Report">//span[contains(text(),'Day of Week Analysis')]</Parameter>
-    <Parameter key="Click_Daily_Analysis_PerPerson_Report">//span[contains(text(),'Daily Analysis PerPerson')]</Parameter>
+    <Parameter key="Click_Daily_Analysis_PerPerson_Report">//span[contains(text(),'Daily Analysis')]</Parameter>
     <Parameter key="Click_Custom_Menu">//span[contains(text(),'Custom')]</Parameter>
     <Parameter key="Click_OTB_Comparison_by_Segment_Reports">//span[contains(text(),'OTB Comparison by Segment')]</Parameter>
     <Parameter key="Click_Daily_Pick_Up_Report">//span[contains(text(),'Daily Pick Up Report')]</Parameter>
@@ -209,7 +209,7 @@
 
   <ReportParameter>
     <Parameter key="Click_Currency_Dropdown">//a[@id='wcCurrency_Arrow']</Parameter>
-    <Parameter key="Select_Currency_Value">//li[contains(text(),'AUD')]</Parameter>
+    <Parameter key="Select_Currency_Value">//*[@id="wcCurrency_DropDown"]//li</Parameter>
     <Parameter key="Click_Business_Unit_Dropdown">//*[@id='rcBusinessUnit_Arrow']</Parameter>
     <Parameter key="Select_Business_Unit_Value">//*[@id="rcBusinessUnit_DropDown"]//li[contains(text(),'Hotel')]</Parameter>
     <Parameter key="Select_Hotel">//*[@id="rblHotelPortfolio_ctl00"]</Parameter>
@@ -334,7 +334,7 @@
     <Parameter key="iframe_Monthly_Summary_Report">//iframe[@name='Monthly Summary']</Parameter>
     <Parameter key="iframe_Day_of_Week_Statistics_Report">//iframe[@name='Day of Week Statistics']</Parameter>
     <Parameter key="iframe_Day_of_Week_Analysis_Report">//iframe[@name='Day of Week Analysis']</Parameter>
-    <Parameter key="iframe_Daily_Analysis_PerPerson_Report">//iframe[@name='Daily Analysis PerPerson']</Parameter>
+    <Parameter key="iframe_Daily_Analysis_PerPerson_Report">//iframe[@name='Daily Analysis']</Parameter>
     <Parameter key="iframe_OTB_Comparison_by_Segment_Report">//iframe[@name='OTB Comparison by Segment']</Parameter>
     <Parameter key="iframe_Daily_Pick_Up_Report">//iframe[@name='Daily Pick Up Report']</Parameter>
     <Parameter key="iframe_Revenue_By_Room_Product_Report">//iframe[@name='Revenue By Room Product']</Parameter>

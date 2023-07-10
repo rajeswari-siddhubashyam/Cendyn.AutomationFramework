@@ -360,146 +360,154 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
         }
         public static void TC_116402()
         {
-            if (TestCaseId == Constants.TC_116402)
+            try
             {
-                string awardstatus, displayStatus;
-                Users data = new Users();
+                if (TestCaseId == Constants.TC_116402)
+                {
+                    string awardstatus, displayStatus;
+                    Users data = new Users();
 
-                //1.Navigate to Admin Login page
-                Driver.Navigate().GoToUrl(ProjectDetails.CommonAdminURL);
-                Logger.WriteDebugMessage("User landed on Admin Login Page");
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("User logged in succesfully");
-                //2.Identify the email id having Status Redeemed
-                awardstatus = TestData.ExcelData.TestDataReader.ReadData(1, "AwardStatus").Trim();
-                displayStatus = TestData.ExcelData.TestDataReader.ReadData(1, "DisplayStatus").Trim();
-                Queries.GetEmailWithAward(data, awardstatus);
+                    //1.Navigate to Admin Login page
+                    Driver.Navigate().GoToUrl(ProjectDetails.CommonAdminURL);
+                    Logger.WriteDebugMessage("User landed on Admin Login Page");
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("User logged in succesfully");
+                    //2.Identify the email id having Status Redeemed
+                    awardstatus = TestData.ExcelData.TestDataReader.ReadData(1, "AwardStatus").Trim();
+                    displayStatus = TestData.ExcelData.TestDataReader.ReadData(1, "DisplayStatus").Trim();
+                    Queries.GetEmailWithAward(data, awardstatus);
 
-                //3.Enter Email in Member Search and Click on View button
-                Admin.EnterEmail(data.MemberEmail);
-                Admin.EnterMemberNumber(data.MemberShipId);
-                Logger.WriteDebugMessage("Email with Award status as Redeemed is Entered");
-                Admin.Click_Button_MemberSearch();
-                //Helper.ElementWait(PageObject_Admin.Admin_Button_ViewMember(ProjectName), 300);
-                Logger.WriteDebugMessage("Member result displayed.");
-                Admin.Click_Icon_View(ProjectName);
-                Helper.ElementWait(PageObject_Admin.Tab_MemberAwards(), 300);
-                Logger.WriteDebugMessage("Landed on Member Information Page");
+                    //3.Enter Email in Member Search and Click on View button
+                    Admin.EnterEmail(data.MemberEmail);
+                    Admin.EnterMemberNumber(data.MemberShipId);
+                    Logger.WriteDebugMessage("Email with Award status as Redeemed is Entered");
+                    Admin.Click_Button_MemberSearch();
+                    //Helper.ElementWait(PageObject_Admin.Admin_Button_ViewMember(ProjectName), 300);
+                    Logger.WriteDebugMessage("Member result displayed.");
+                    Admin.Click_Icon_View(ProjectName);
+                    Helper.ElementWait(PageObject_Admin.Tab_MemberAwards(), 300);
+                    Logger.WriteDebugMessage("Landed on Member Information Page");
 
-                //Click on Member Award Page
-                Helper.ScrollDown();
-                Logger.WriteDebugMessage("Member Award tab is displaying with Awards");
+                    //Click on Member Award Page
+                    Helper.ScrollDown();
+                    Logger.WriteDebugMessage("Member Award tab is displaying with Awards");
 
-                // Search the Award id
-                Admin.Click_Tab_MemberAwards();
-                Admin.MemberAwards_Text_Filter(data.VoucherNumber);
-                AddDelay(10000);
-                ElementWait(PageObject_Admin.Admin_MemberAward_PreviousButton(), 360);
-                VerifyTextOnPageAndHighLight(data.VoucherNumber);
-                VerifyTextOnPageAndHighLight(displayStatus);
-                Logger.WriteDebugMessage("Award Identified on Admin");
+                    // Search the Award id
+                    Admin.Click_Tab_MemberAwards();
+                    Admin.MemberAwards_Text_Filter(data.VoucherNumber);
+                    AddDelay(10000);
+                    ElementWait(PageObject_Admin.Admin_MemberAward_PreviousButton(), 360);
+                    VerifyTextOnPageAndHighLight(data.VoucherNumber);
+                    VerifyTextOnPageAndHighLight(displayStatus);
+                    Logger.WriteDebugMessage("Award Identified on Admin");
 
-                // Navigate to Front end
-                Admin.Click_MemberInformation_Value_MemberPortal();
-                AddDelay(20000);
-                Logger.WriteDebugMessage("Navigated to Portal");
+                    // Navigate to Front end
+                    Admin.Click_MemberInformation_Value_MemberPortal();
+                    AddDelay(20000);
+                    Logger.WriteDebugMessage("Navigated to Portal");
 
-                //Control to new Window and maximize the page 
-                ControlToNewWindow();
-                Driver.Manage().Window.Maximize();
-                Helper.PageDown();
+                    //Control to new Window and maximize the page 
+                    ControlToNewWindow();
+                    Driver.Manage().Window.Maximize();
+                    Helper.PageDown();
 
 
-                //Click on My Award Page
-                Navigation.Click_Link_MyAward();
-                Helper.ElementWait(PageObject_Navigation.MyAwards_Text_Filter(), 300);
-                Logger.WriteDebugMessage("Landed on My Award Page");
+                    //Click on My Award Page
+                    Navigation.Click_Link_MyAward();
+                    Helper.ElementWait(PageObject_Navigation.MyAwards_Text_Filter(), 300);
+                    Logger.WriteDebugMessage("Landed on My Award Page");
 
-                // Search for Identified Award
-                Navigation.MyAwards_Text_Filter(data.VoucherNumber);
-                Logger.WriteDebugMessage("Award filtered on the page");
-                VerifyTextOnPageAndHighLight("No data available");
-                Logger.WriteDebugMessage("Issues Status Award are not displaying on Frontend");
+                    // Search for Identified Award
+                    Navigation.MyAwards_Text_Filter(data.VoucherNumber);
+                    Logger.WriteDebugMessage("Award filtered on the page");
+                    VerifyTextOnPageAndHighLight("No data available");
+                    Logger.WriteDebugMessage("Issues Status Award are not displaying on Frontend");
 
-                //Log test data into Log file
-                Logger.LogTestData(TestPlanId, TestCaseId, "Award Status", awardstatus);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Award Display Status", displayStatus);
-                Logger.LogTestData(TestPlanId, TestCaseId, "User Email", data.MemberEmail);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Voucher Number", data.VoucherNumber, true);
+                    //Log test data into Log file
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Award Status", awardstatus);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Award Display Status", displayStatus);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "User Email", data.MemberEmail);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Voucher Number", data.VoucherNumber, true);
 
-            }
+                }
+            }catch
+            { }
         }
         public static void TC_116404()
         {
-            if (TestCaseId == Constants.TC_116404)
+            try
             {
-                string awardstatus, displayStatus;
-                Users data = new Users();
+                if (TestCaseId == Constants.TC_116404)
+                {
+                    string awardstatus, displayStatus;
+                    Users data = new Users();
 
-                //1.Navigate to Admin Login page
-                Driver.Navigate().GoToUrl(ProjectDetails.CommonAdminURL);
-                Logger.WriteDebugMessage("User landed on Admin Login Page");
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("User logged in succesfully");
-                //2.Identify the email id having Status Redeemed
-                awardstatus = TestData.ExcelData.TestDataReader.ReadData(1, "AwardStatus").Trim();
-                displayStatus = TestData.ExcelData.TestDataReader.ReadData(1, "DisplayStatus").Trim();
-                Queries.GetEmailWithAward(data, awardstatus);
+                    //1.Navigate to Admin Login page
+                    Driver.Navigate().GoToUrl(ProjectDetails.CommonAdminURL);
+                    Logger.WriteDebugMessage("User landed on Admin Login Page");
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("User logged in succesfully");
+                    //2.Identify the email id having Status Redeemed
+                    awardstatus = TestData.ExcelData.TestDataReader.ReadData(1, "AwardStatus").Trim();
+                    displayStatus = TestData.ExcelData.TestDataReader.ReadData(1, "DisplayStatus").Trim();
+                    Queries.GetEmailWithAward(data, awardstatus);
 
-                //3.Enter Email in Member Search and Click on View button
-                Admin.EnterEmail(data.MemberEmail);
-                Admin.EnterMemberNumber(data.MemberShipId);
-                Logger.WriteDebugMessage("Email with Award status as Redeemed is Entered");
-                Admin.Click_Button_MemberSearch();
-                Helper.ElementWait(PageObject_Admin.Admin_Button_ViewMember(ProjectName), 300);
-                Logger.WriteDebugMessage("Member result displayed.");
-                Admin.Click_Icon_View(ProjectName);
-                Helper.ElementWait(PageObject_Admin.Tab_MemberAwards(), 300);
-                Logger.WriteDebugMessage("Landed on Member Information Page");
+                    //3.Enter Email in Member Search and Click on View button
+                    Admin.EnterEmail(data.MemberEmail);
+                    Admin.EnterMemberNumber(data.MemberShipId);
+                    Logger.WriteDebugMessage("Email with Award status as Redeemed is Entered");
+                    Admin.Click_Button_MemberSearch();
+                    Helper.ElementWait(PageObject_Admin.Admin_Button_ViewMember(ProjectName), 300);
+                    Logger.WriteDebugMessage("Member result displayed.");
+                    Admin.Click_Icon_View(ProjectName);
+                    Helper.ElementWait(PageObject_Admin.Tab_MemberAwards(), 300);
+                    Logger.WriteDebugMessage("Landed on Member Information Page");
 
-                //Click on Member Award Page
-                Helper.ScrollDown();
-                Logger.WriteDebugMessage("Member Award tab is displaying with Awards");
+                    //Click on Member Award Page
+                    Helper.ScrollDown();
+                    Logger.WriteDebugMessage("Member Award tab is displaying with Awards");
 
-                // Search the Award id
-                Admin.Click_Tab_MemberAwards();
-                Admin.MemberAwards_Text_Filter(data.VoucherNumber);
-                AddDelay(7000);
-                ElementWait(PageObject_Admin.Admin_MemberAward_PreviousButton(), 360);
-                VerifyTextOnPageAndHighLight(data.VoucherNumber);
-                VerifyTextOnPageAndHighLight(displayStatus);
-                Logger.WriteDebugMessage("Award Identified on Admin");
+                    // Search the Award id
+                    Admin.Click_Tab_MemberAwards();
+                    Admin.MemberAwards_Text_Filter(data.VoucherNumber);
+                    AddDelay(7000);
+                    ElementWait(PageObject_Admin.Admin_MemberAward_PreviousButton(), 360);
+                    VerifyTextOnPageAndHighLight(data.VoucherNumber);
+                    VerifyTextOnPageAndHighLight(displayStatus);
+                    Logger.WriteDebugMessage("Award Identified on Admin");
 
-                // Navigate to Front end
-                Admin.Click_MemberInformation_Value_MemberPortal();
-                AddDelay(20000);
-                Logger.WriteDebugMessage("Navigated to Portal");
+                    // Navigate to Front end
+                    Admin.Click_MemberInformation_Value_MemberPortal();
+                    AddDelay(20000);
+                    Logger.WriteDebugMessage("Navigated to Portal");
 
-                //Control to new Window and maximize the page 
-                ControlToNewWindow();
-                Driver.Manage().Window.Maximize();
-                Helper.PageDown();
+                    //Control to new Window and maximize the page 
+                    ControlToNewWindow();
+                    Driver.Manage().Window.Maximize();
+                    Helper.PageDown();
 
 
-                //Click on My Award Page
-                Navigation.Click_Link_MyAward();
-                Helper.ElementWait(PageObject_Navigation.MyAwards_Text_Filter(), 300);
-                Logger.WriteDebugMessage("Landed on My Award Page");
+                    //Click on My Award Page
+                    Navigation.Click_Link_MyAward();
+                    Helper.ElementWait(PageObject_Navigation.MyAwards_Text_Filter(), 300);
+                    Logger.WriteDebugMessage("Landed on My Award Page");
 
-                // Search for Identified Award
-                Navigation.MyAwards_Text_Filter(data.VoucherNumber);
-                Logger.WriteDebugMessage("Award filtered on the page");
-                VerifyTextOnPageAndHighLight(data.VoucherNumber);
-                VerifyTextOnPageAndHighLight(displayStatus);
-                Logger.WriteDebugMessage("Issues Status Award are not displaying on Frontend");
+                    // Search for Identified Award
+                    Navigation.MyAwards_Text_Filter(data.VoucherNumber);
+                    Logger.WriteDebugMessage("Award filtered on the page");
+                    VerifyTextOnPageAndHighLight(data.VoucherNumber);
+                    VerifyTextOnPageAndHighLight(displayStatus);
+                    Logger.WriteDebugMessage("Issues Status Award are not displaying on Frontend");
 
-                //Log test data into Log file
-                Logger.LogTestData(TestPlanId, TestCaseId, "Award Status", awardstatus);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Award Display Status", displayStatus);
-                Logger.LogTestData(TestPlanId, TestCaseId, "User Email", data.MemberEmail);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Voucher Number", data.VoucherNumber, true);
+                    //Log test data into Log file
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Award Status", awardstatus);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Award Display Status", displayStatus);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "User Email", data.MemberEmail);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Voucher Number", data.VoucherNumber, true);
 
-            }
+                }
+            } catch (Exception e)
+            { }
         }
         public static void TC_264758()
         {

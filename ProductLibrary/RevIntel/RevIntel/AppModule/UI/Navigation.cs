@@ -96,7 +96,7 @@ namespace RevIntel.AppModule.UI
         }
         public static void Select_Client(string client)
         {
-            Click_Automation();
+           // Click_Automation();
             Logger.WriteDebugMessage("user landed on the Automation RevIntel client selection page");
             Helper.PageDown();
             Logger.WriteDebugMessage("Client displayed");

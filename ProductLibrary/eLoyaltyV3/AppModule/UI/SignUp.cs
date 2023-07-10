@@ -76,11 +76,13 @@ namespace eLoyaltyV3.AppModule.UI
 
         private static void EnterText_Text_Password(string text)
         {
+            Helper.ElementClearText(PageObject_SignUp.Text_Password());
             Helper.ElementEnterText(PageObject_SignUp.Text_Password(), text);
         }
 
         private static void EnterText_Text_ConfirmPassword(string text)
         {
+            Helper.ElementClearText(PageObject_SignUp.Text_ConfirmPassword());
             Helper.ElementEnterText(PageObject_SignUp.Text_ConfirmPassword(), text);
         }
 

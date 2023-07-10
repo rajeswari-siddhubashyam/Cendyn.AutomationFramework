@@ -10,7 +10,7 @@ namespace TestData
         }
         private static void AddTestData_ClientConfig(string clientName)
         {
-            TestDataHelper.AddTestData_ClientConfig("RevIntel", "", "Testautomation@cendyn17.com", "https://devrhbi.revintel.co/", "Testautomation@cendyn17.com", "", "");
+            TestDataHelper.AddTestData_ClientConfig("RevIntel", "", "Testautomation@cendyn17.com", "http://revintelrhbi.goqacendyn.com/", "Testautomation@cendyn17.com", "", "");
 
         }
         #region Add Test Data
@@ -298,11 +298,11 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_251470", "1", "TRUE", "Currency", "AUD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_252700", "TC_251470", "1", "TRUE", "environment", "QA");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "1", "TRUE", "client", "Kerzner");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "2", "TRUE", "client", "D Rock");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "2", "TRUE", "client", "Kerzner");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "3", "TRUE", "client", "Benchmark Hospitality");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "1", "TRUE", "url", "https://devrhbi.revintel.co");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "2", "TRUE", "url", "https://devbi.revintel.co");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "3", "TRUE", "url", "https://devcloud.revintel.co");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "2", "TRUE", "url", "https://revintelrhbi.godevcendyn.com");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "3", "TRUE", "url", "https://revintelrhbi.godevcendyn.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "1", "TRUE", "revIntel_RHBI", "https://devrhbi.revintel.co/revintel.aspx");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "1", "TRUE", "revIntel_BI", "https://devbi.revintel.co/SSOLanding.aspx");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251459", "TC_251470", "1", "TRUE", "revIntel_Cloud", "https://devcloud.revintel.co/SSOLanding.aspx");
@@ -415,7 +415,7 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252482", "1", "TRUE", "password", "Cendyn123$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252482", "1", "TRUE", "client", "Kerzner");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252482", "1", "TRUE", "environment", "Automation");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252482", "1", "TRUE", "url", "https://devauto.revintel.co/revintel.aspx");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252482", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252482", "1", "TRUE", "url1", "https://help.cendyn.com/hc/en-us/categories/360004357731-revintel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252482", "1", "TRUE", "url2", "https://help.cendyn.com/hc/en-us/sections/360010838372-General-Use");
         }
@@ -430,7 +430,7 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252494", "1", "TRUE", "email", "rshende@delaplex.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252494", "1", "TRUE", "firstName", "ruchi");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252494", "1", "TRUE", "lastName", "shende");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252494", "1", "TRUE", "url", "https://devauto.revintel.co/revintel.aspx");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252494", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");
         }
 
         private static void AddTestData_SmokeTest_TC_252496()
@@ -441,7 +441,7 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252496", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252496", "1", "TRUE", "Portfolio_Name", "One & Only RM & TP");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252496", "1", "TRUE", "validation", "Portfolio One & Only RM & TP already exists!");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252496", "1", "TRUE", "url", "https://devauto.revintel.co/revintel.aspx");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252496", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");
         }
         private static void AddTestData_SmokeTest_TC_252394()
         {
@@ -453,7 +453,7 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252394", "1", "TRUE", "enddate", "4/30/2020");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252394", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252394", "1", "TRUE", "Portfolio_value", "One&Only All -CT,SG,RR,RM,TP,PL,WV,NG");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252394", "1", "TRUE", "url", "https://devauto.revintel.co/revintel.aspx");           
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252394", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");           
         }
 
         private static void AddTestData_SmokeTest_TC_252401()
@@ -462,7 +462,7 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252401", "1", "TRUE", "password", "Cendyn123$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252401", "1", "TRUE", "client", "Kerzner");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252401", "1", "TRUE", "environment", "Automation");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252401", "1", "TRUE", "url", "https://devauto.revintel.co/revintel.aspx");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_251469", "TC_252401", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");
         }
 
         private static void AddTestData_TestPlan_TC_252719()
@@ -1355,7 +1355,7 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266463", "1", "TRUE", "password", "Cendyn123$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266463", "1", "TRUE", "client", "Kerzner");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266463", "1", "TRUE", "environment", "Automation");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266463", "1", "TRUE", "url", "https://devauto.revintel.co/revintel.aspx");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266463", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");
         }
 
         private static void AddTestData_TestPlan_TC_266464()
@@ -1367,7 +1367,7 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266464", "1", "TRUE", "Current_Password", "Cendyn111$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266464", "1", "TRUE", "New_Password", "Cendyn333$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266464", "1", "TRUE", "Confirm_Password", "Cendyn333$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266464", "1", "TRUE", "url", "https://devauto.revintel.co/revintel.aspx");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266464", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");
         }
 
         private static void AddTestData_TestPlan_TC_266466()
@@ -1379,7 +1379,7 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266466", "1", "TRUE", "Current_Password", "Cendyn222$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266466", "1", "TRUE", "New_Password", "Cendyn333$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266466", "1", "TRUE", "Confirm_Password", "Cendyn321$");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266466", "1", "TRUE", "url", "https://devauto.revintel.co/revintel.aspx");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266466", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");
         }
 
         private static void AddTestData_TestPlan_TC_266467()
@@ -1409,7 +1409,7 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266467", "5", "TRUE", "New_Password", "rshende@delaplex.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266467", "5", "TRUE", "Confirm_Password", "rshende@delaplex.com");
 
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266467", "1", "TRUE", "url", "https://devauto.revintel.co/revintel.aspx");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266467", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");
         }
 
         private static void AddTestData_TestPlan_TC_266468()
@@ -1417,7 +1417,7 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266468", "1", "TRUE", "username", "rshende@delaplex.com");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266468", "1", "TRUE", "password", "Cendyn123$");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266468", "1", "TRUE", "client", "Kerzner");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266468", "1", "TRUE", "url", "https://devauto.revintel.co/revintel.aspx");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266468", "1", "TRUE", "url", "https://revintelbi.godevcendyn.com/revintel.aspx");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266468", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_266462", "TC_266468", "1", "TRUE", "New_Set_Password", "Cendyn111$");
 
@@ -3126,7 +3126,7 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269887", "1", "TRUE", "client", "Kerzner");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269887", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269887", "1", "TRUE", "Business_Unit", "Hotel");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269887", "1", "TRUE", "Currency", "AUD");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269887", "1", "TRUE", "Currency", "USD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269887", "1", "TRUE", "Hotel", "Atlantis, The Palm");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269887", "1", "TRUE", "startDate", "4/1/2020");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269887", "1", "TRUE", "enddate", "4/30/2020");
@@ -3141,7 +3141,7 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269888", "1", "TRUE", "client", "Kerzner");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269888", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269888", "1", "TRUE", "Business_Unit", "Hotel");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269888", "1", "TRUE", "Currency", "AUD");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269888", "1", "TRUE", "Currency", "USD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269888", "1", "TRUE", "Hotel", "Atlantis, The Palm");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269888", "1", "TRUE", "startDate", "4/1/2020");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269888", "1", "TRUE", "enddate", "4/30/2020");
@@ -3213,7 +3213,7 @@ namespace TestData
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269892", "1", "TRUE", "client", "Kerzner");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269892", "1", "TRUE", "environment", "Automation");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269892", "1", "TRUE", "Business_Unit", "Hotel");
-            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269892", "1", "TRUE", "Currency", "AUD");
+            TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269892", "1", "TRUE", "Currency", "USD");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269892", "1", "TRUE", "hotel", "Atlantis, The Palm");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269892", "1", "TRUE", "Business_Unit", "Hotel");
             TestDataHelper.AddRecord("ALL", "FrontEnd", "TestCase", "TP_292758", "TC_269892", "1", "TRUE", "Currency", "AUD");

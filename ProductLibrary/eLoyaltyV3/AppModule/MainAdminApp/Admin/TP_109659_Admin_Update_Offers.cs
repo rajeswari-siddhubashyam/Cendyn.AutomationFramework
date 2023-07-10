@@ -10,6 +10,7 @@ using eLoyaltyV3.PageObject.Admin;
 using eLoyaltyV3.Utility;
 using InfoMessageLogger;
 using NUnit.Framework;
+using OpenQA.Selenium;
 using TestData;
 using Queries = eLoyaltyV3.Utility.Queries;
 
@@ -104,6 +105,8 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Admin.LoyaltySetUp_Offers_Text_ShortDescription("");
                 Logger.WriteDebugMessage("Short Description filed is Empty");
                 Admin.Click_LoyaltySetUp_Offers_Button_Save();
+                AddDelay(10000);
+                Admin.Click_LoyaltySetUp_Offers_Button_Save();
                 VerifyTextOnPageAndHighLight(shortDescriptionValidation);
                 Logger.WriteDebugMessage("Validation Message for short description got displayed");
 
@@ -146,10 +149,14 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Logger.WriteDebugMessage("Member Ship Level got selected");
 
                 //Enter all mandatory field except for Hotel code and click on save
+                Admin.Click_LoyaltySetUp_Offers_Button_Cancel();
+                Admin.Click_LoyaltySetUp_Offers_Icon_Edit();
+                Logger.WriteDebugMessage("Offer Edit Page got displayed");
                 Admin.Click_LoyaltySetUp_Offers_Button_AddAnotherPromotion();
+                //Admin.Enter_LoyaltySetUp_Promotion_Filter(promotionCode);
                 Admin.LoyaltySetUp_Offers_Text_PromotionCode(promotionCode);
                 Admin.LoyaltySetUp_Offers_Text_ButtonText(buttonName);
-                Admin.LoyaltySetUp_Offers_Text_PromotionDescription(promotionDescription);
+                //Admin.LoyaltySetUp_Offers_Text_PromotionDescription(promotionDescription);
                 Logger.WriteDebugMessage("Entered All Details for Promotion except Hotel");
                 Admin.Click_LoyaltySetUp_Offers_Button_SavePromotion();
                 VerifyTextOnPageAndHighLight(hotelValidation);
@@ -172,6 +179,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Logger.WriteDebugMessage("Validation Message for description got displayed");
 
                 //Enter all mandatory field except for Offer Code and click on save
+                Helper.ElementClearText(Driver.FindElement(By.XPath("(//input[@id='promotionCode'])")));
                 Admin.LoyaltySetUp_Offers_Text_PromotionDescription(promotionDescription);
                 Admin.LoyaltySetUp_Offers_Text_PromotionCode("");
                 Admin.Click_LoyaltySetUp_Offers_Button_SavePromotion();
@@ -180,6 +188,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
 
                 //Enter all mandatory field except for  Button text  and click on save
                 Admin.LoyaltySetUp_Offers_Text_PromotionCode(promotionCode);
+                Helper.ElementClearText(PageObject_Admin.LoyaltySetUp_Offers_Text_ButtonText());
                 Admin.LoyaltySetUp_Offers_Text_ButtonText("");
                 Logger.WriteDebugMessage("Button Text value is empty");
                 Admin.Click_LoyaltySetUp_Offers_Button_SavePromotion();
@@ -270,7 +279,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 OpenNewTab();
                 ControlToNewWindow();
                 Driver.Url = frontend_URL;
-                LoginCredentials(data.MemberEmail, ProjectDetails.CommonFrontendPassword, ProjectName);
+                LoginCredentials(data.MemberEmail, "Cendyn123$", ProjectName);
                 Navigation.Click_Link_SpecialOffer();
                 Logger.WriteDebugMessage("Navigated to Offers tab");
                 PageDown();
@@ -566,6 +575,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Admin.LoyaltySetUp_Offers_Text_Title(title);
                 PageDown();
                 Admin.Click_LoyaltySetUp_Offers_Button_AddAnotherPromotion();
+                Helper.ElementClick(Driver.FindElement(By.XPath("(//*[@id='offersTable']//following::button[contains(text(),'Edit')])[36]")));
                 Admin.LoyaltySetUp_Offers_Text_PromotionCode(promoCode_CharLimit);
                 Admin.LoyaltySetUp_Offers_Text_ButtonText(buttonName);
                 Admin.LoyaltySetUp_Offers_Dropdown_HotelSelection(data.PropertyName, ProjectName);
@@ -759,7 +769,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Admin.Click_Admin_LoyaltySetUp_Offers_Pagination_Dropdown(-1);
                 Helper.DynamicScroll(Driver, PageObject_Admin.Admin_LoyaltySetUp_Offers_Pagination_Dropdown());
                 Logger.WriteDebugMessage("All Value got selected");
-                if (Helper.IsWebElementRemoved(PageObject_Admin.Admin_LoyaltySetUp_Offers_Pagination_Next_Button()))
+                if (Helper.IsElementEditable(PageObject_Admin.Admin_LoyaltySetUp_Offers_Pagination_Next_Button()))
                     Assert.Fail("All Offers are not displayed");
                 else
                 {

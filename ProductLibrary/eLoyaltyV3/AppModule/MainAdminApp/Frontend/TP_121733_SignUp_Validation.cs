@@ -14,44 +14,44 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
         public static void TC_119763()
         {
             if (TestCaseId == Constants.TC_119763)
-            {
-                // Pre-Requisites
-                string Password_Error, Fieldvalidation, FirstName, LastName, Email, Card, Password, Confirm;
-
-                Fieldvalidation = TestData.ExcelData.TestDataReader.ReadData(1, "Validationmessage");
-                FirstName = TestData.ExcelData.TestDataReader.ReadData(1, "FirstName");
-                LastName = TestData.ExcelData.TestDataReader.ReadData(1, "LastName");
-                Email = TestData.ExcelData.TestDataReader.ReadData(1, "Email");
-                Card = TestData.ExcelData.TestDataReader.ReadData(1, "Card");
-                                
-                Logger.WriteDebugMessage("Landed on the Sign In Page.");
-
-                //2 Navigate to the Sign Up page
-                Navigation.Navigation_SignUpbtn();
-
-
-                // Verify the Validation message with different type of Invalid Password (ccendyn1, CCENDYN1, cCCENDYN, Cendyn1, Cendyn@@, ccendyn1@@)
-                for (int i = 1; i < 7; i++)
                 {
-                    Logger.WriteDebugMessage("Landed on Sign Up Page");
+                    // Pre-Requisites
+                    string Password_Error, Fieldvalidation, FirstName, LastName, Email, Card, Password, Confirm;
 
-                    Password = TestData.ExcelData.TestDataReader.ReadData(i, "Scenario");
-                    Confirm = TestData.ExcelData.TestDataReader.ReadData(i, "Confirm");
-                    // Enter All mandatory Fields
-                    if (i == 1)
-                        SignUp.EnterAllMandatoryFields(FirstName, LastName, Email, Card, Password, Confirm, ProjectName);
-                    else
-                        SignUp.EnterPasswordOnSignUp(Password, Confirm);
-                    SignUp.ClickOnSignUpEyeBall();
-                    Logger.WriteDebugMessage("Entered All Mandatory Fields");
-                    // Click on Join Now
-                    Navigation.SignUp_Button_Join();
-                    // Validate the Validation message for password field
-                    Password_Error = Navigation.Password_Error();
-                    SignUp.VerifyInvalidPasswordMessage(Fieldvalidation, Password_Error);
-                    ///Helper.ReloadPage();
+                    Fieldvalidation = TestData.ExcelData.TestDataReader.ReadData(1, "Validationmessage");
+                    FirstName = TestData.ExcelData.TestDataReader.ReadData(1, "FirstName");
+                    LastName = TestData.ExcelData.TestDataReader.ReadData(1, "LastName");
+                    Email = TestData.ExcelData.TestDataReader.ReadData(1, "Email");
+                    Card = TestData.ExcelData.TestDataReader.ReadData(1, "Card");
+
+                    Logger.WriteDebugMessage("Landed on the Sign In Page.");
+
+                    //2 Navigate to the Sign Up page
+                    Navigation.Navigation_SignUpbtn();
+
+
+                    // Verify the Validation message with different type of Invalid Password (ccendyn1, CCENDYN1, cCCENDYN, Cendyn1, Cendyn@@, ccendyn1@@)
+                    for (int i = 1; i < 7; i++)
+                    {
+                        Logger.WriteDebugMessage("Landed on Sign Up Page");
+
+                        Password = TestData.ExcelData.TestDataReader.ReadData(i, "Scenario");
+                        Confirm = TestData.ExcelData.TestDataReader.ReadData(i, "Confirm");
+                        // Enter All mandatory Fields
+                        if (i == 1)
+                            SignUp.EnterAllMandatoryFields(FirstName, LastName, Email, Card, Password, Confirm, ProjectName);
+                        else
+                            SignUp.EnterPasswordOnSignUp(Password, Confirm);
+                        SignUp.ClickOnSignUpEyeBall();
+                        Logger.WriteDebugMessage("Entered All Mandatory Fields");
+                        // Click on Join Now
+                        Navigation.SignUp_Button_Join();
+                        // Validate the Validation message for password field
+                        Password_Error = Navigation.Password_Error();
+                        SignUp.VerifyInvalidPasswordMessage(Fieldvalidation, Password_Error);
+                        ///Helper.ReloadPage();
                 }
-            }
+            }            
         }
 
         public static void TC_119764()

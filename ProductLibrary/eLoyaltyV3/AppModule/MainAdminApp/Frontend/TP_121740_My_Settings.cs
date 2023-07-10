@@ -319,6 +319,8 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Logger.WriteInfoMessage("Email Address should get Updated");
 
                 //13.Login with the updated Username and password
+                Helper.ElementClearText(PageObject_SignIn.Text_Email());
+                Helper.ElementClearText(PageObject_SignIn.Text_Password());
                 LoginCredentials(newUsername, newPassword, ProjectName);
                 Logger.WriteDebugMessage("User should be able to Login Successfully");
 

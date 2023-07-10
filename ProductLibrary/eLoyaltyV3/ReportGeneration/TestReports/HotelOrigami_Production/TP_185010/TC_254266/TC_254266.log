@@ -1,0 +1,30 @@
+2023-05-15 16:47:26,200 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-15 16:47:26,204 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-15 16:47:26,208 ::INFO ::[Logger]::  is used for Testing
+2023-05-15 16:47:26,223 ::INFO ::[Logger]:: This is the login page.https://origamiloyalty.cendyn.com/en-US/Login?ReturnUrl=%2Fen-US%2FOverview
+2023-05-15 16:47:26,225 ::INFO ::[Logger]:: Execution started at:-May-15-2023 16-47-26-PM
+2023-05-15 16:47:26,227 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-15 16:47:26,229 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-15 16:47:26,229 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_254266         XXXXXXXXXXXXXXXX
+2023-05-15 16:47:26,231 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-15 16:47:26,433 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-15 16:47:31,630 ::INFO ::[Logger]:: Clicked the Button_LogIn2 element on the SignIn page.
+2023-05-15 16:47:33,818 ::INFO ::[Logger]::  Found on the page
+2023-05-15 16:47:36,062 ::INFO ::[Logger]::  Found on the page
+2023-05-15 16:47:38,135 ::INFO ::[Logger]::  Found on the page
+2023-05-15 16:47:40,299 ::INFO ::[Logger]::  Found on the page
+2023-05-15 16:47:40,301 ::DEBUG::[Logger]:: 1) Validation message is displayed.
+2023-05-15 16:47:44,840 ::INFO ::[Logger]:: Inserted text in the Text_Email element on the SignIn page.
+2023-05-15 16:47:49,916 ::INFO ::[Logger]:: Clicked the Button_LogIn2 element on the SignIn page.
+2023-05-15 16:47:56,896 ::INFO ::[Logger]::  Found on the page
+2023-05-15 16:47:58,929 ::INFO ::[Logger]::  Found on the page
+2023-05-15 16:47:58,931 ::DEBUG::[Logger]:: 2) Validation message is displayed for password.
+2023-05-15 16:48:03,181 ::INFO ::[Logger]:: Cleared text in the Text_Email element on the SignIn page.
+2023-05-15 16:48:04,784 ::INFO ::[Logger]:: Inserted text in the Text_Password element on the SignIn page.
+2023-05-15 16:48:09,853 ::INFO ::[Logger]:: Clicked the Button_LogIn2 element on the SignIn page.
+2023-05-15 16:48:12,045 ::INFO ::[Logger]::  Found on the page
+2023-05-15 16:48:14,168 ::INFO ::[Logger]::  Found on the page
+2023-05-15 16:48:14,168 ::DEBUG::[Logger]:: 3) Validation message is displayed for Email.
+2023-05-15 16:48:17,538 ::DEBUG::[Logger]:: 4) Test case passed successfully
+2023-05-15 16:48:20,283 ::INFO ::[Logger]:: HotelOrigami_Production:: Script ::Passed
+2023-05-15 16:48:43,719 ::INFO ::[Logger]:: E.N.D

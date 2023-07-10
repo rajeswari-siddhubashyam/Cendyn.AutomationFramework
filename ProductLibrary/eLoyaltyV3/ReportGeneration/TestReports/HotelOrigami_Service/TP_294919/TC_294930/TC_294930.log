@@ -1,0 +1,19 @@
+2023-05-16 11:25:05,617 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-16 11:25:05,624 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-16 11:25:05,627 ::INFO ::[Logger]::  is used for Testing
+2023-05-16 11:25:05,637 ::INFO ::[Logger]:: This is the login page.data:,
+2023-05-16 11:25:05,640 ::INFO ::[Logger]:: Execution started at:-May-16-2023 11-25-05-AM
+2023-05-16 11:25:05,642 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 11:25:05,644 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-16 11:25:05,646 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_294930         XXXXXXXXXXXXXXXX
+2023-05-16 11:25:05,648 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 11:25:05,658 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-16 11:31:40,395 ::ERROR::[Logger]:: eLoyaltyV3_Flow :: Script::Failed
+NUnit.Framework.AssertionException: Scenario: Fill in Gap Points when Nightly rate got increased - Failed
+   at NUnit.Framework.Assert.ReportFailure(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 394
+   at NUnit.Framework.Assert.Fail(String message, Object[] args) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 145
+   at NUnit.Framework.Assert.Fail(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 155
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TC_294930() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp\WindowsService\Scenario Validation\Scenario_Validation.cs:line 3997
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TP_294919() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp.cs:line 1035
+   at eLoyaltyV3.TestPlan.HotelOrigami.WindowsServices.Scenario_Validation.HotelOrigami_TP_294919_Service_Scenario_Validation.TC_294930() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\TestPlan\HotelOrigami\WindowsServices\Scenario Validation\HotelOrigami_TP_294919_Service_Scenario_Validation.cs:line 302
+2023-05-16 11:32:08,140 ::INFO ::[Logger]:: E.N.D

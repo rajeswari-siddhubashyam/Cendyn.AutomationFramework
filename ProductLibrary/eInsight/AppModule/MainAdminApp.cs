@@ -619,6 +619,15 @@ namespace eInsight.AppModule.MainAdminApp
             AssignCompany();
             switch (TestCaseId)
             {
+                case "TC_508833":
+                    TC_508833();
+                    break;
+                case "TC_508834":
+                    TC_508834();
+                    break;
+                case "TC_508836":
+                    TC_508836();
+                    break;
                 case "TC_128427":
                     TC_128427();
                     break;

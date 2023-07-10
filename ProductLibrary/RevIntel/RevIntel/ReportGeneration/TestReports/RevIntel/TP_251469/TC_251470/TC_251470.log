@@ -1,119 +1,13 @@
-2020-08-04 16:27:23,930 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
-2020-08-04 16:27:23,996 ::INFO ::[Logger]:: Chrome is currently being used for testing.
-2020-08-04 16:27:24,012 ::INFO ::[Logger]::  is used for Testing
-2020-08-04 16:27:24,023 ::INFO ::[Logger]:: This is the login page.https://ssodev.rainmakertest.org/Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://devrhbi.revintel.co/SSOLanding.aspx
-2020-08-04 16:27:24,024 ::INFO ::[Logger]:: Execution started at:-Aug-04-2020 16-27-24-PM
-2020-08-04 16:27:24,025 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2020-08-04 16:27:24,025 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
-2020-08-04 16:27:24,027 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_251470         XXXXXXXXXXXXXXXX
-2020-08-04 16:27:24,028 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2020-08-04 16:27:26,042 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=744}
-2020-08-04 16:27:26,051 ::INFO ::[Logger]:: This test cases will Verify Login and Log out is successful and URL is pointing to right database
-2020-08-04 16:27:38,284 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
-2020-08-04 16:27:38,298 ::DEBUG::[Logger]:: 1) Email Address displayed
-2020-08-04 16:27:52,260 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
-2020-08-04 16:27:56,486 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
-2020-08-04 16:27:56,490 ::DEBUG::[Logger]:: 2) Login in with Username =rshende@delaplex.com and Password =Cendyn111$
-2020-08-04 16:28:06,822 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
-2020-08-04 16:28:06,848 ::DEBUG::[Logger]:: 3) Actual url = https://ssodev.rainmakertest.org/Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://devrhbi.revintel.co/SSOLanding.aspx# match with Expected url = https://devrhbi.revintel.co
-2020-08-04 16:28:09,265 ::DEBUG::[Logger]:: 4) user landed on the RevIntel client selection page
-2020-08-04 16:28:11,882 ::DEBUG::[Logger]:: 5) Client displayed
-2020-08-04 16:28:29,089 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
-2020-08-04 16:28:29,092 ::DEBUG::[Logger]:: 6) Kerzner selected
-2020-08-04 16:28:32,792 ::DEBUG::[Logger]:: 7) Hotel Dropdown displayed
-2020-08-04 16:28:39,585 ::INFO ::[Logger]:: Clicked the Hotel element on the Navigation page.
-2020-08-04 16:28:39,588 ::INFO ::[Logger]:: User landed on monthly pickup report page
-2020-08-04 16:28:40,919 ::DEBUG::[Logger]:: 8) BusinessSource DropDown displayed
-2020-08-04 16:28:47,407 ::INFO ::[Logger]:: Clicked the BusinessSource element on the Navigation page.
-2020-08-04 16:28:48,760 ::DEBUG::[Logger]:: 9) Market DropDown displayed
-2020-08-04 16:28:55,290 ::INFO ::[Logger]:: Clicked the Market element on the Navigation page.
-2020-08-04 16:28:56,613 ::DEBUG::[Logger]:: 10) Booking_Trends Dropdown displayed
-2020-08-04 16:29:03,109 ::INFO ::[Logger]:: Clicked the Booking_Trends element on the Navigation page.
-2020-08-04 16:29:04,454 ::DEBUG::[Logger]:: 11) Channel Dropdown displayed
-2020-08-04 16:29:10,948 ::INFO ::[Logger]:: Clicked the Channel element on the Navigation page.
-2020-08-04 16:29:12,261 ::DEBUG::[Logger]:: 12) Forecast_and_Budget Dropdown displayed
-2020-08-04 16:29:18,742 ::INFO ::[Logger]:: Clicked the Forecast_and_Budget element on the Navigation page.
-2020-08-04 16:29:20,084 ::DEBUG::[Logger]:: 13) Adhoc Dropdown displayed
-2020-08-04 16:29:26,573 ::INFO ::[Logger]:: Clicked the Adhoc element on the Navigation page.
-2020-08-04 16:29:27,901 ::DEBUG::[Logger]:: 14) Geo_Source Dropdown displayed
-2020-08-04 16:29:34,363 ::INFO ::[Logger]:: Clicked the Geo_Source element on the Navigation page.
-2020-08-04 16:29:38,521 ::INFO ::[Logger]:: Clicked the Hamburger_Icon element on the Navigation page.
-2020-08-04 16:29:38,524 ::DEBUG::[Logger]:: 15) All reports under Hamburger_Icon dropdown Displayed
-2020-08-04 16:30:15,134 ::INFO ::[Logger]:: Clicked the Hamburger_Icon element on the Navigation page.
-2020-08-04 16:30:19,276 ::INFO ::[Logger]:: Clicked the Select_DropDown element on the Login page.
-2020-08-04 16:30:19,279 ::DEBUG::[Logger]:: 16) Drop down Displayed
-2020-08-04 16:30:31,028 ::INFO ::[Logger]:: Clicked the LogOut_Button element on the Login page.
-2020-08-04 16:30:31,029 ::DEBUG::[Logger]:: 17) Log out successful
-2020-08-04 16:30:43,031 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
-2020-08-04 16:30:43,035 ::DEBUG::[Logger]:: 18) Email Address displayed
-2020-08-04 16:30:52,394 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
-2020-08-04 16:30:56,583 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
-2020-08-04 16:30:56,584 ::DEBUG::[Logger]:: 19) Login in with Username =rshende@delaplex.com and Password =Cendyn111$
-2020-08-04 16:31:05,361 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
-2020-08-04 16:31:05,369 ::DEBUG::[Logger]:: 20) Actual url = https://ssodev.rainmakertest.org/Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://devbi.revintel.co/SSOLanding.aspx# match with Expected url = https://devbi.revintel.co
-2020-08-04 16:31:07,768 ::DEBUG::[Logger]:: 21) user landed on the RevIntel client selection page
-2020-08-04 16:31:10,546 ::DEBUG::[Logger]:: 22) Client displayed
-2020-08-04 16:31:22,869 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
-2020-08-04 16:31:22,871 ::DEBUG::[Logger]:: 23) D Rock selected
-2020-08-04 16:31:26,795 ::DEBUG::[Logger]:: 24) Hotel Dropdown displayed
-2020-08-04 16:31:33,534 ::INFO ::[Logger]:: Clicked the Hotel element on the Navigation page.
-2020-08-04 16:31:33,537 ::INFO ::[Logger]:: User landed on monthly pickup report page
-2020-08-04 16:31:34,984 ::DEBUG::[Logger]:: 25) BusinessSource DropDown displayed
-2020-08-04 16:31:42,211 ::INFO ::[Logger]:: Clicked the BusinessSource element on the Navigation page.
-2020-08-04 16:31:43,644 ::DEBUG::[Logger]:: 26) Market DropDown displayed
-2020-08-04 16:31:50,944 ::INFO ::[Logger]:: Clicked the Market element on the Navigation page.
-2020-08-04 16:31:52,260 ::DEBUG::[Logger]:: 27) Booking_Trends Dropdown displayed
-2020-08-04 16:31:58,909 ::INFO ::[Logger]:: Clicked the Booking_Trends element on the Navigation page.
-2020-08-04 16:32:00,271 ::DEBUG::[Logger]:: 28) Channel Dropdown displayed
-2020-08-04 16:32:06,750 ::INFO ::[Logger]:: Clicked the Channel element on the Navigation page.
-2020-08-04 16:32:08,043 ::DEBUG::[Logger]:: 29) Forecast_and_Budget Dropdown displayed
-2020-08-04 16:32:15,014 ::INFO ::[Logger]:: Clicked the Forecast_and_Budget element on the Navigation page.
-2020-08-04 16:32:16,351 ::DEBUG::[Logger]:: 30) Adhoc Dropdown displayed
-2020-08-04 16:32:22,923 ::INFO ::[Logger]:: Clicked the Adhoc element on the Navigation page.
-2020-08-04 16:32:24,259 ::DEBUG::[Logger]:: 31) Geo_Source Dropdown displayed
-2020-08-04 16:32:31,656 ::INFO ::[Logger]:: Clicked the Geo_Source element on the Navigation page.
-2020-08-04 16:32:35,804 ::INFO ::[Logger]:: Clicked the Hamburger_Icon element on the Navigation page.
-2020-08-04 16:32:35,805 ::DEBUG::[Logger]:: 32) All reports under Hamburger_Icon dropdown Displayed
-2020-08-04 16:33:12,442 ::INFO ::[Logger]:: Clicked the Hamburger_Icon element on the Navigation page.
-2020-08-04 16:33:16,597 ::INFO ::[Logger]:: Clicked the Select_DropDown element on the Login page.
-2020-08-04 16:33:16,600 ::DEBUG::[Logger]:: 33) Drop down Displayed
-2020-08-04 16:34:05,998 ::INFO ::[Logger]:: Clicked the LogOut_Button element on the Login page.
-2020-08-04 16:34:06,000 ::DEBUG::[Logger]:: 34) Log out successful
-2020-08-04 16:34:26,593 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
-2020-08-04 16:34:26,595 ::DEBUG::[Logger]:: 35) Email Address displayed
-2020-08-04 16:34:36,169 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
-2020-08-04 16:34:40,372 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
-2020-08-04 16:34:40,373 ::DEBUG::[Logger]:: 36) Login in with Username =rshende@delaplex.com and Password =Cendyn111$
-2020-08-04 16:34:51,087 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
-2020-08-04 16:34:51,094 ::DEBUG::[Logger]:: 37) Actual url = https://ssodev.rainmakertest.org/Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://devcloud.revintel.co/SSOLanding.aspx# match with Expected url = https://devcloud.revintel.co
-2020-08-04 16:34:53,457 ::DEBUG::[Logger]:: 38) user landed on the RevIntel client selection page
-2020-08-04 16:34:55,904 ::DEBUG::[Logger]:: 39) Client displayed
-2020-08-04 16:35:22,041 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
-2020-08-04 16:35:22,042 ::DEBUG::[Logger]:: 40) Benchmark Hospitality selected
-2020-08-04 16:35:25,980 ::DEBUG::[Logger]:: 41) Hotel Dropdown displayed
-2020-08-04 16:35:33,003 ::INFO ::[Logger]:: Clicked the Hotel element on the Navigation page.
-2020-08-04 16:35:33,010 ::INFO ::[Logger]:: User landed on monthly pickup report page
-2020-08-04 16:35:34,334 ::DEBUG::[Logger]:: 42) BusinessSource DropDown displayed
-2020-08-04 16:35:40,805 ::INFO ::[Logger]:: Clicked the BusinessSource element on the Navigation page.
-2020-08-04 16:35:42,106 ::DEBUG::[Logger]:: 43) Market DropDown displayed
-2020-08-04 16:35:48,768 ::INFO ::[Logger]:: Clicked the Market element on the Navigation page.
-2020-08-04 16:35:50,066 ::DEBUG::[Logger]:: 44) Booking_Trends Dropdown displayed
-2020-08-04 16:35:56,517 ::INFO ::[Logger]:: Clicked the Booking_Trends element on the Navigation page.
-2020-08-04 16:35:57,813 ::DEBUG::[Logger]:: 45) Channel Dropdown displayed
-2020-08-04 16:36:04,264 ::INFO ::[Logger]:: Clicked the Channel element on the Navigation page.
-2020-08-04 16:36:05,578 ::DEBUG::[Logger]:: 46) Forecast_and_Budget Dropdown displayed
-2020-08-04 16:36:12,049 ::INFO ::[Logger]:: Clicked the Forecast_and_Budget element on the Navigation page.
-2020-08-04 16:36:13,347 ::DEBUG::[Logger]:: 47) Adhoc Dropdown displayed
-2020-08-04 16:36:20,266 ::INFO ::[Logger]:: Clicked the Adhoc element on the Navigation page.
-2020-08-04 16:36:21,565 ::DEBUG::[Logger]:: 48) Geo_Source Dropdown displayed
-2020-08-04 16:36:28,052 ::INFO ::[Logger]:: Clicked the Geo_Source element on the Navigation page.
-2020-08-04 16:36:32,218 ::INFO ::[Logger]:: Clicked the Hamburger_Icon element on the Navigation page.
-2020-08-04 16:36:32,219 ::DEBUG::[Logger]:: 49) All reports under Hamburger_Icon dropdown Displayed
-2020-08-04 16:37:09,517 ::INFO ::[Logger]:: Clicked the Hamburger_Icon element on the Navigation page.
-2020-08-04 16:37:13,631 ::INFO ::[Logger]:: Clicked the Select_DropDown element on the Login page.
-2020-08-04 16:37:13,632 ::DEBUG::[Logger]:: 50) Drop down Displayed
-2020-08-04 16:37:25,926 ::INFO ::[Logger]:: Clicked the LogOut_Button element on the Login page.
-2020-08-04 16:37:25,928 ::DEBUG::[Logger]:: 51) Log out successful
-2020-08-04 16:37:29,378 ::DEBUG::[Logger]:: 52) Test case passed successfully
-2020-08-04 16:37:32,667 ::INFO ::[Logger]:: RevIntel:: Script ::Passed
-2020-08-04 16:37:33,119 ::INFO ::[Logger]:: E.N.D
+2023-05-16 14:29:22,458 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-16 14:29:23,484 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-16 14:29:23,511 ::INFO ::[Logger]::  is used for Testing
+2023-05-16 14:29:23,545 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.godevcendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goDEVcendyn.com/SSOLanding.aspx
+2023-05-16 14:29:23,558 ::INFO ::[Logger]:: Execution started at:-May-16-2023 14-29-23-PM
+2023-05-16 14:29:23,561 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 14:29:23,566 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-16 14:29:23,568 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_251470         XXXXXXXXXXXXXXXX
+2023-05-16 14:29:23,569 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 14:29:23,827 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-16 14:29:23,845 ::INFO ::[Logger]:: This test cases will Verify Login and Log out is successful and URL is pointing to right database
+2023-05-16 14:29:23,959 ::INFO ::[Logger]:: RevIntel:: Script ::Passed
+2023-05-16 14:30:06,387 ::INFO ::[Logger]:: E.N.D

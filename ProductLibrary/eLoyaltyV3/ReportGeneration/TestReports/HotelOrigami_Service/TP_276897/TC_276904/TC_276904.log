@@ -1,0 +1,32 @@
+2023-05-16 08:56:00,131 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-16 08:56:00,131 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-16 08:56:00,131 ::INFO ::[Logger]::  is used for Testing
+2023-05-16 08:56:00,131 ::INFO ::[Logger]:: This is the login page.data:,
+2023-05-16 08:56:00,131 ::INFO ::[Logger]:: Execution started at:-May-16-2023 08-56-00-AM
+2023-05-16 08:56:00,131 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 08:56:00,139 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-16 08:56:00,139 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_276904         XXXXXXXXXXXXXXXX
+2023-05-16 08:56:00,139 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 08:56:00,139 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-16 08:56:11,321 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_1 = 0
+2023-05-16 08:56:12,905 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_2 = 0
+2023-05-16 08:56:14,504 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_3 = 0
+2023-05-16 08:56:16,350 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_4 = 0
+2023-05-16 08:56:36,433 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_2 = 0
+2023-05-16 08:56:38,006 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_3 = 0
+2023-05-16 08:56:39,548 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_4 = 0
+2023-05-16 08:56:55,691 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_1 = 0
+2023-05-16 08:56:57,195 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_2 = 0
+2023-05-16 08:56:59,050 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_3 = 0
+2023-05-16 08:57:01,491 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_4 = 0
+2023-05-16 08:57:03,426 ::INFO ::[Logger]:: Points are earned by Rule P_Rule_5 = 0
+2023-05-16 08:57:03,426 ::INFO ::[Logger]:: Points are earned as Expected
+2023-05-16 08:57:05,143 ::ERROR::[Logger]:: eLoyaltyV3_Flow :: Script::Failed
+NUnit.Framework.AssertionException: Scenarion : Parallel Stay Fail
+   at NUnit.Framework.Assert.ReportFailure(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 394
+   at NUnit.Framework.Assert.Fail(String message, Object[] args) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 145
+   at NUnit.Framework.Assert.Fail(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 155
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TC_276904() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp\WindowsService\Scenario Validation\Scenario_Validation.cs:line 793
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TP_276897() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp.cs:line 921
+   at eLoyaltyV3.TestPlan.HotelOrigami.WindowsServices.Scenario_Validation.HotelOrigami_TP_276897_Service_Scenario_Validation.TC_276904() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\TestPlan\HotelOrigami\WindowsServices\Scenario Validation\HotelOrigami_TP_276897_Service_Scenario_Validation.cs:line 281
+2023-05-16 08:57:12,011 ::INFO ::[Logger]:: E.N.D

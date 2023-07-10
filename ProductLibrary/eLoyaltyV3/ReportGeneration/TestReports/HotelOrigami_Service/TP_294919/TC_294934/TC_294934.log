@@ -1,0 +1,18 @@
+2023-05-16 12:23:40,864 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-16 12:23:40,877 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-16 12:23:40,885 ::INFO ::[Logger]::  is used for Testing
+2023-05-16 12:23:40,898 ::INFO ::[Logger]:: This is the login page.data:,
+2023-05-16 12:23:40,901 ::INFO ::[Logger]:: Execution started at:-May-16-2023 12-23-40-PM
+2023-05-16 12:23:40,904 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 12:23:40,906 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-16 12:23:41,063 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_294934         XXXXXXXXXXXXXXXX
+2023-05-16 12:23:41,066 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-16 12:23:41,099 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-16 12:30:48,854 ::ERROR::[Logger]:: eLoyaltyV3_Flow :: Script::Failed
+System.Runtime.InteropServices.COMException (0x80080005): Retrieving the COM class factory for component with CLSID {00024500-0000-0000-C000-000000000046} failed due to the following error: 80080005 Server execution failed (Exception from HRESULT: 0x80080005 (CO_E_SERVER_EXEC_FAILURE)).
+   at TestData.ExcelData.ExcelDataReader.OpenExcel() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\TestData\ExcelData\ExcelDataReader.cs:line 34
+   at TestData.ExcelData.ExcelDataReader.GetCellData(String sheetName, Int32 colNumber, Int32 rowNumber) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\TestData\ExcelData\ExcelDataReader.cs:line 161
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TC_294934() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp\WindowsService\Scenario Validation\Scenario_Validation.cs:line 5187
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TP_294919() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp.cs:line 1050
+   at eLoyaltyV3.TestPlan.HotelOrigami.WindowsServices.Scenario_Validation.HotelOrigami_TP_294919_Service_Scenario_Validation.TC_294934() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\TestPlan\HotelOrigami\WindowsServices\Scenario Validation\HotelOrigami_TP_294919_Service_Scenario_Validation.cs:line 416
+2023-05-16 12:31:16,853 ::INFO ::[Logger]:: E.N.D

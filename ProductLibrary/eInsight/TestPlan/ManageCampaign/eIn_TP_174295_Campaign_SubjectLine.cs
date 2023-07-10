@@ -36,7 +36,7 @@ namespace eInsightCampaignSubjectLine
 
             //TestDataFile = TestDataLocation.TP_174295;
 
-            AddDelay(8000);
+            AddDelay(4000);
 
             //Can use this to update the URL Manually
             //LegacyTestData.CommonFrontendURL = "https://poceinsight.cendyn.com/";

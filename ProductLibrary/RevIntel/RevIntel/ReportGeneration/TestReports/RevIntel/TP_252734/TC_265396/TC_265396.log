@@ -1,0 +1,65 @@
+2023-05-17 10:59:48,368 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-17 10:59:48,368 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-17 10:59:48,368 ::INFO ::[Logger]::  is used for Testing
+2023-05-17 10:59:48,386 ::INFO ::[Logger]:: This is the login page.https://revcloudsignin.goqacendyn.com//Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://revintelrhbi.goQAcendyn.com/SSOLanding.aspx
+2023-05-17 10:59:48,386 ::INFO ::[Logger]:: Execution started at:-May-17-2023 10-59-48-AM
+2023-05-17 10:59:48,386 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-17 10:59:48,386 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-17 10:59:48,386 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_265396         XXXXXXXXXXXXXXXX
+2023-05-17 10:59:48,386 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-17 10:59:48,400 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-17 10:59:48,400 ::INFO ::[Logger]:: Test Case : Verify when Quick dates are selected for absolute date , relative date and offset gets disabled
+2023-05-17 10:59:50,801 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-05-17 10:59:50,801 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-05-17 11:00:00,141 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-05-17 11:00:01,819 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2023-05-17 11:00:01,819 ::DEBUG::[Logger]:: 2) Login in with Username =Testautomation@cendyn17.com and Password =Cendyn123$
+2023-05-17 11:00:12,890 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2023-05-17 11:00:12,890 ::DEBUG::[Logger]:: 3) user landed on the Automation RevIntel client selection page
+2023-05-17 11:00:18,786 ::DEBUG::[Logger]:: 4) Client displayed
+2023-05-17 11:00:37,233 ::INFO ::[Logger]:: Clicked the Link_ClientName element on the Navigation page.
+2023-05-17 11:00:37,233 ::DEBUG::[Logger]:: 5) Rosen selected
+2023-05-17 11:00:53,355 ::DEBUG::[Logger]:: 6) User landed on Montly pickup Dashboard page
+2023-05-17 11:01:02,281 ::INFO ::[Logger]:: Clicked the Click_UserMenu element on the Navigation page.
+2023-05-17 11:01:02,284 ::DEBUG::[Logger]:: 7) User menu clicked
+2023-05-17 11:01:09,798 ::INFO ::[Logger]:: Clicked the Click_UserMenu_ReportScheduler element on the Navigation page.
+2023-05-17 11:01:09,803 ::DEBUG::[Logger]:: 8) Report scheduler link clicked
+2023-05-17 11:01:17,416 ::INFO ::[Logger]:: Switching into the iFrame.
+2023-05-17 11:01:24,796 ::INFO ::[Logger]:: Clicked the Click_BookingTrends element on the ReportScheduler page.
+2023-05-17 11:01:24,796 ::DEBUG::[Logger]:: 9) Booking trends link got clicked
+2023-05-17 11:01:34,814 ::INFO ::[Logger]:: Clicked the Click_BookingTrends_PickUpByDayDetailed element on the ReportScheduler page.
+2023-05-17 11:02:04,820 ::DEBUG::[Logger]:: 10) Pick up by day detailed page should get displayed
+2023-05-17 11:02:12,554 ::INFO ::[Logger]:: Switching into the iFrame.
+2023-05-17 11:02:21,418 ::INFO ::[Logger]:: Clicked the Click_Quick_AbsoluteDate element on the ReportScheduler page.
+2023-05-17 11:02:21,418 ::DEBUG::[Logger]:: 11) Quick Absolute date is clicked
+2023-05-17 11:02:29,270 ::INFO ::[Logger]:: Clicked the Click_Quick_AbsoluteDateToday element on the ReportScheduler page.
+2023-05-17 11:03:29,280 ::ERROR::[Logger]:: The //*[@id="DeliveryConfigPanelBar_i4_rbQuickPickupStartDt_input"] element was not found on the page.
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:57922/session/0b5be756fb1dc40e1649c4eb99379f5d/element timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at BaseUtility.PageObject.PageAction.Find_ElementXPath(String repoName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\PageObject\PageAction.cs:line 33
+2023-05-17 11:03:31,293 ::FATAL::[Logger]:: Unable to click the Click_Quick_AbsolutePickupDate element on the ReportScheduler page.System.NullReferenceException: Object reference not set to an instance of an object.
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 81
+2023-05-17 11:03:31,293 ::ERROR::[Logger]:: RevIntel_Flow :: Script::Failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 88
+   at RevIntel.AppModule.UI.ReportScheduler.Click_Quick_AbsolutePickupDate() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\ReportScheduler.cs:line 471
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TC_265396() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp\TP_252734_ReportScheduler.cs:line 1582
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TP_252734() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp.cs:line 156
+   at RevIntel.RevIntel_TP_252734_ReportScheduler.TC_265396() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\TestPlan\RevIntel\RevIntel_TP_252734_ReportScheduler.cs:line 383
+2023-05-17 11:05:14,268 ::INFO ::[Logger]:: E.N.D

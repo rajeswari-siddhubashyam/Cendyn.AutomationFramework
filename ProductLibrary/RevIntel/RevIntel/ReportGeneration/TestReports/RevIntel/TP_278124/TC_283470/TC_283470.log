@@ -1,0 +1,60 @@
+2023-05-17 15:45:35,062 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-05-17 15:45:35,062 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-05-17 15:45:35,062 ::INFO ::[Logger]::  is used for Testing
+2023-05-17 15:45:35,078 ::INFO ::[Logger]:: This is the login page.https://signin.letitrain.com/Login?App=9B2092C1-6AF2-4317-B343-B524B07976A8&RelayState=https://salesdemo.revintel.co/SSOLanding.aspx
+2023-05-17 15:45:35,078 ::INFO ::[Logger]:: Execution started at:-May-17-2023 15-45-35-PM
+2023-05-17 15:45:35,078 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-17 15:45:35,078 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-05-17 15:45:35,078 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_283470         XXXXXXXXXXXXXXXX
+2023-05-17 15:45:35,078 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-05-17 15:45:35,689 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
+2023-05-17 15:45:35,689 ::INFO ::[Logger]:: Test Case : Verify Change Password functionality will not be successful when Current password is incorrect
+2023-05-17 15:45:38,815 ::INFO ::[Logger]:: Inserted text in the Enter_EmailAddress element on the Login page.
+2023-05-17 15:45:38,815 ::DEBUG::[Logger]:: 1) Email Address displayed
+2023-05-17 15:45:47,209 ::INFO ::[Logger]:: Clicked the Click_Next_Button element on the Login page.
+2023-05-17 15:45:48,842 ::INFO ::[Logger]:: Inserted text in the Enter_Password element on the Login page.
+2023-05-17 15:45:48,842 ::DEBUG::[Logger]:: 2) Login in with Username =rshende@cendyn.com and Password =Cendyn321$
+2023-05-17 15:45:59,426 ::INFO ::[Logger]:: Clicked the Click_SignIn_Button element on the Login page.
+2023-05-17 15:46:00,446 ::DEBUG::[Logger]:: 3) Client displayed
+2023-05-17 15:47:04,739 ::ERROR::[Logger]:: The D Rock element was not found on the page.
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:60581/session/6edffc3c857324c3e5d51f81849f151c/element timed out after 60 seconds. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.<MakeHttpRequest>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at BaseUtility.PageObject.PageAction.Find_ElementLinkText(String repoName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\PageObject\PageAction.cs:line 49
+2023-05-17 15:48:06,148 ::FATAL::[Logger]:: Unable to click the Link_ClientName element on the Navigation page.OpenQA.Selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=113.0.5672.93)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Click()
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 81
+2023-05-17 15:48:06,148 ::ERROR::[Logger]:: RevIntel_Flow :: Script::Failed
+OpenQA.Selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=113.0.5672.93)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Click()
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 88
+   at RevIntel.AppModule.UI.Navigation.Click_ClientName(String clientName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\UI\Navigation.cs:line 26
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TC_283470() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp\TP_278124_Post Deployment Plan.cs:line 814
+   at RevIntel.AppModule.MainAdminApp.MainAdminApp.TP_278124() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\AppModule\MainAdminApp.cs:line 238
+   at RevIntel.RevIntel_TP_278124_Post_Deployment.TC_283470() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\RevIntel\RevIntel\TestPlan\RevIntel\RevIntel_TP_278124_Post_Deployment.cs:line 271
+2023-05-17 15:48:39,244 ::INFO ::[Logger]:: E.N.D
