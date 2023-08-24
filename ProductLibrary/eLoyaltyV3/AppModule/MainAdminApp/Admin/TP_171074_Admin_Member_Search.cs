@@ -85,414 +85,414 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
         public static void TC_221090()
         {
             if (TestCaseId == Constants.TC_221090)
-            {
-                //1 URL is available in master test plan run description:Login as Admin in backend
-                //2.Navigate to member search.  
-                //3.Check member search buttons are in default one.
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
+                {
+                    //1 URL is available in master test plan run description:Login as Admin in backend
+                    //2.Navigate to member search.  
+                    //3.Check member search buttons are in default one.
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
 
-                //3.Verify all fields are displayed.
-                VerifyTextOnPage("Member Type:");
-                VerifyTextOnPage("Member Number:");
-                VerifyTextOnPage("Last Name:");
-                VerifyTextOnPage("First Name:");
-                VerifyTextOnPage("Email:");
-                VerifyTextOnPage("Street:");
-                VerifyTextOnPage("City:");
-                VerifyTextOnPage("Zip:");
-                VerifyTextOnPage("Country");
-                VerifyTextOnPage("State");
-                VerifyTextOnPage("Award Name:");
-                VerifyTextOnPage("Award Number:");
-                VerifyTextOnPage("Card Name:");
-                VerifyTextOnPage("Company:");
-                VerifyTextOnPage("Phone:");
-                VerifyTextOnPage("Member Status:");
-                Logger.WriteDebugMessage("All fields found in member search page.");
+                    //3.Verify all fields are displayed.
+                    VerifyTextOnPage("Member Type:");
+                    VerifyTextOnPage("Member Number:");
+                    VerifyTextOnPage("Last Name:");
+                    VerifyTextOnPage("First Name:");
+                    VerifyTextOnPage("Email:");
+                    VerifyTextOnPage("Street:");
+                    VerifyTextOnPage("City:");
+                    VerifyTextOnPage("Zip:");
+                    VerifyTextOnPage("Country");
+                    VerifyTextOnPage("State");
+                    VerifyTextOnPage("Award Name:");
+                    VerifyTextOnPage("Award Number:");
+                    VerifyTextOnPage("Card Name:");
+                    VerifyTextOnPage("Company:");
+                    VerifyTextOnPage("Phone:");
+                    VerifyTextOnPage("Member Status:");
+                    Logger.WriteDebugMessage("All fields found in member search page.");
 
-                //4.Select member type as loyalty .
-                Admin.SelectMemberType("Loyalty");
-                Logger.WriteDebugMessage("User is able to select loyalty from member type .");
+                    //4.Select member type as loyalty .
+                    Admin.SelectMemberType("Loyalty");
+                    Logger.WriteDebugMessage("User is able to select loyalty from member type .");
 
-                //5.Click on search
-                Admin.Click_Button_MemberSearch();
-                Logger.WriteDebugMessage("Member result displayed.");
+                    //5.Click on search
+                    Admin.Click_Button_MemberSearch();
+                    Logger.WriteDebugMessage("Member result displayed.");
 
-                //6.Capture an email address from search result.
-                string email = PageObject_Admin.Value_Email().GetAttribute("innerHTML");
-                Logger.WriteDebugMessage("Email address captured from member result.");
-                Logger.LogTestData(TestPlanId, TestCaseId, "Active Member", email);
+                    //6.Capture an email address from search result.
+                    string email = PageObject_Admin.Value_Email().GetAttribute("innerHTML");
+                    Logger.WriteDebugMessage("Email address captured from member result.");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Active Member", email);
 
-                //7.Clear the search criteria.
-                Admin.Click_Button_ClearSearch();
-                Logger.WriteDebugMessage("Search cleared.");
+                    //7.Clear the search criteria.
+                    Admin.Click_Button_ClearSearch();
+                    Logger.WriteDebugMessage("Search cleared.");
 
-                //8.Enter the captured email exactly on the email search .
-                Admin.EnterEmail(email);
-                Logger.WriteDebugMessage("User able to enter email address.");
+                    //8.Enter the captured email exactly on the email search .
+                    Admin.EnterEmail(email);
+                    Logger.WriteDebugMessage("User able to enter email address.");
 
-                //9.Click on search
-                Admin.Click_Button_MemberSearch();
-                VerifyTextOnPage(email);
-                Logger.WriteDebugMessage("Member found.");
+                    //9.Click on search
+                    Admin.Click_Button_MemberSearch();
+                    VerifyTextOnPage(email);
+                    Logger.WriteDebugMessage("Member found.");
 
-                //10.Enter partial character from captured email
-                string[] partialemail = email.Split('@');
-                Admin.EnterEmail(partialemail[0]);
-                Logger.WriteDebugMessage("User able to enter email address.");
-                Logger.LogTestData(TestPlanId, TestCaseId, "Partial Email", partialemail[0]);
+                    //10.Enter partial character from captured email
+                    string[] partialemail = email.Split('@');
+                    Admin.EnterEmail(partialemail[0]);
+                    Logger.WriteDebugMessage("User able to enter email address.");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Partial Email", partialemail[0]);
 
-                //11.Click on search
-                Admin.Click_Button_MemberSearch();
-                VerifyTextOnPage(email);
-                Logger.WriteDebugMessage("Member found and It should match with database.Query is available in Description");
+                    //11.Click on search
+                    Admin.Click_Button_MemberSearch();
+                    VerifyTextOnPage(email);
+                    Logger.WriteDebugMessage("Member found and It should match with database.Query is available in Description");
 
-                //12.Clear the search criteria.
-                Admin.Click_Button_ClearSearch();
-                Logger.WriteDebugMessage("Search cleared.");
+                    //12.Clear the search criteria.
+                    Admin.Click_Button_ClearSearch();
+                    Logger.WriteDebugMessage("Search cleared.");
 
-                //13.Select member type as loyalty.Click on search
-                Admin.SelectMemberType("Loyalty");
-                Logger.WriteDebugMessage("User is able to select loyalty from member type .");
-                Admin.Click_Button_MemberSearch();
-                Logger.WriteDebugMessage("Member result displayed.");
+                    //13.Select member type as loyalty.Click on search
+                    Admin.SelectMemberType("Loyalty");
+                    Logger.WriteDebugMessage("User is able to select loyalty from member type .");
+                    Admin.Click_Button_MemberSearch();
+                    Logger.WriteDebugMessage("Member result displayed.");
 
-                //14.Capture the firstname address from search result.
-                string firstname = PageObject_Admin.Value_FullName().GetAttribute("innerHTML");
-                string[] partialFirstname = firstname.Split(' ');
-                Logger.WriteDebugMessage("Firstname Captured.");
+                    //14.Capture the firstname address from search result.
+                    string firstname = PageObject_Admin.Value_FullName().GetAttribute("innerHTML");
+                    string[] partialFirstname = firstname.Split(' ');
+                    Logger.WriteDebugMessage("Firstname Captured.");
 
-                //15.Clear the search criteria.
-                Admin.Click_Button_ClearSearch();
-                Logger.WriteDebugMessage("Search cleared.");
+                    //15.Clear the search criteria.
+                    Admin.Click_Button_ClearSearch();
+                    Logger.WriteDebugMessage("Search cleared.");
 
-                //16.Enter the captured firstname exactly on the search.Click on Search.
-                Admin.EnterFirstname(firstname);
-                Logger.WriteDebugMessage("User is able to Entre First Name");
-                Admin.Click_Button_MemberSearch();
-                VerifyTextOnPage(firstname);
-                Logger.WriteDebugMessage("Member found.");
+                    //16.Enter the captured firstname exactly on the search.Click on Search.
+                    Admin.EnterFirstname(partialFirstname[0]);
+                    Logger.WriteDebugMessage("User is able to Entre First Name");
+                    Admin.Click_Button_MemberSearch();
+                    VerifyTextOnPage(partialFirstname[0]);
+                    Logger.WriteDebugMessage("Member found.");
 
-                //17.Enter partial character from captured Firstname.Click on search               
-                Admin.EnterFirstname(partialFirstname[0]);
-                Logger.WriteDebugMessage("User is able to Entre Partial First Name");
-                Logger.LogTestData(TestPlanId, TestCaseId, "First Name", partialFirstname[0]);
-                Admin.Click_Button_MemberSearch();
-                VerifyTextOnPage(partialFirstname[0]);
-                Logger.WriteDebugMessage("Member found and It should match with database.Query is available in Description");
+                    //17.Enter partial character from captured Firstname.Click on search               
+                    Admin.EnterFirstname(partialFirstname[0]);
+                    Logger.WriteDebugMessage("User is able to Entre Partial First Name");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "First Name", partialFirstname[0]);
+                    Admin.Click_Button_MemberSearch();
+                    VerifyTextOnPage(partialFirstname[0]);
+                    Logger.WriteDebugMessage("Member found and It should match with database.Query is available in Description");
 
-                //18.Clear the search criteria.
-                Admin.Click_Button_ClearSearch();
-                Logger.WriteDebugMessage("Search cleared.");
+                    //18.Clear the search criteria.
+                    Admin.Click_Button_ClearSearch();
+                    Logger.WriteDebugMessage("Search cleared.");
 
-                //19.Select member type as loyalty.Click on search
-                Admin.EnterEmail(email);
-                Logger.WriteDebugMessage("User is able to select loyalty from member type .");
-                Admin.Click_Button_MemberSearch();
-                Logger.WriteDebugMessage("Member result displayed.");
+                    //19.Select member type as loyalty.Click on search
+                    Admin.EnterEmail(email);
+                    Logger.WriteDebugMessage("User is able to select loyalty from member type .");
+                    Admin.Click_Button_MemberSearch();
+                    Logger.WriteDebugMessage("Member result displayed.");
 
-                //20.Capture the Lastname address from search result.
-                string Lastname = PageObject_Admin.Value_FullName().GetAttribute("innerHTML");
-                string[] partialLastname = Lastname.Split(' ');
-                Logger.WriteDebugMessage("Lastname Captured.");
+                    //20.Capture the Lastname address from search result.
+                    string Lastname = PageObject_Admin.Value_FullName().GetAttribute("innerHTML");
+                    string[] partialLastname = Lastname.Split(' ');
+                    Logger.WriteDebugMessage("Lastname Captured.");
 
-                //21.Clear the search criteria.
-                Admin.Click_Button_ClearSearch();
-                Logger.WriteDebugMessage("Search cleared.");
+                    //21.Clear the search criteria.
+                    Admin.Click_Button_ClearSearch();
+                    Logger.WriteDebugMessage("Search cleared.");
 
-                //22.Enter the captured Lastname exactly on the search.Click on Search.
-                Admin.EnterLastname(Lastname);
-                Logger.WriteDebugMessage("User is able to Entre Last Name");
-                Admin.Click_Button_MemberSearch();
-                VerifyTextOnPage(Lastname);
-                Logger.WriteDebugMessage("Member found.");
+                    //22.Enter the captured Lastname exactly on the search.Click on Search.
+                    Admin.EnterLastname(partialLastname[1]);
+                    Logger.WriteDebugMessage("User is able to Entre Last Name");
+                    Admin.Click_Button_MemberSearch();
+                    VerifyTextOnPage(partialLastname[1]);
+                    Logger.WriteDebugMessage("Member found.");
 
-                //23.Enter partial character from captured Lastname.Click on search               
-                Admin.EnterLastname(partialLastname[1]);
-                Logger.WriteDebugMessage("User is able to Entre Partial Last Name");
-                Logger.LogTestData(TestPlanId, TestCaseId, "Last Name", partialLastname[1]);
-                Admin.Click_Button_MemberSearch();
-                VerifyTextOnPage(partialLastname[1]);
-                Logger.WriteDebugMessage("Member found and It should match with database.Query is available in Description");
+                    //23.Enter partial character from captured Lastname.Click on search               
+                    Admin.EnterLastname(partialLastname[1]);
+                    Logger.WriteDebugMessage("User is able to Entre Partial Last Name");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Last Name", partialLastname[1]);
+                    Admin.Click_Button_MemberSearch();
+                    VerifyTextOnPage(partialLastname[1]);
+                    Logger.WriteDebugMessage("Member found and It should match with database.Query is available in Description");
 
-                //24.Clear the search criteria.
-                Admin.Click_Button_ClearSearch();
-                Logger.WriteDebugMessage("Search cleared.");
+                    //24.Clear the search criteria.
+                    Admin.Click_Button_ClearSearch();
+                    Logger.WriteDebugMessage("Search cleared.");
 
-                //25.Select member type as loyalty.Click on search
-                Admin.SelectMemberType("Loyalty");
-                Logger.WriteDebugMessage("User is able to select loyalty from member type .");
-                Admin.Click_Button_MemberSearch();
-                Logger.WriteDebugMessage("Member result displayed.");
+                    //25.Select member type as loyalty.Click on search
+                    Admin.SelectMemberType("Loyalty");
+                    Logger.WriteDebugMessage("User is able to select loyalty from member type .");
+                    Admin.Click_Button_MemberSearch();
+                    Logger.WriteDebugMessage("Member result displayed.");
 
-                //26.Capture the member Number from search result..
-                string membernumber = PageObject_Admin.Value_MemberNumber().GetAttribute("innerHTML");
-                char[] partialmembernumber = membernumber.ToCharArray();
-                Logger.WriteDebugMessage("Member found.Member number Captured.");
+                    //26.Capture the member Number from search result..
+                    string membernumber = PageObject_Admin.Value_MemberNumber().GetAttribute("innerHTML");
+                    char[] partialmembernumber = membernumber.ToCharArray();
+                    Logger.WriteDebugMessage("Member found.Member number Captured.");
 
-                //27.Clear the search criteria.
-                Admin.Click_Button_ClearSearch();
-                Logger.WriteDebugMessage("Search cleared.");
+                    //27.Clear the search criteria.
+                    Admin.Click_Button_ClearSearch();
+                    Logger.WriteDebugMessage("Search cleared.");
 
-                //28.Enter the captured firstname exactly on the search.Click on Search.
-                Admin.EnterMemberNumber(membernumber);
-                Logger.WriteDebugMessage("User is able to Entre MemberNumber");
-                Logger.LogTestData(TestPlanId, TestCaseId, "Member Ship Number", membernumber, true);
-                Admin.Click_Button_MemberSearch();
-                VerifyTextOnPage(membernumber);
-                Logger.WriteDebugMessage("Member found.");
+                    //28.Enter the captured firstname exactly on the search.Click on Search.
+                    Admin.EnterMemberNumber(membernumber);
+                    Logger.WriteDebugMessage("User is able to Entre MemberNumber");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Member Ship Number", membernumber, true);
+                    Admin.Click_Button_MemberSearch();
+                    VerifyTextOnPage(membernumber);
+                    Logger.WriteDebugMessage("Member found.");
 
-                //29.Enter partial character from captured member type.Click on search
-                string data1 = String.Concat(partialmembernumber[0].ToString(), partialmembernumber[1].ToString(), partialmembernumber[2].ToString());
-                Admin.EnterMemberNumber(data1);
-                Logger.WriteDebugMessage("User is able to Enter MemberNumber");
-                Admin.Click_Button_MemberSearch();
-                VerifyTextOnPage(data1);
-                Logger.WriteDebugMessage("Member found and It should match with database.Query is available in Description");
+                    //29.Enter partial character from captured member type.Click on search
+                    string data1 = String.Concat(partialmembernumber[0].ToString(), partialmembernumber[1].ToString(), partialmembernumber[2].ToString());
+                    Admin.EnterMemberNumber(data1);
+                    Logger.WriteDebugMessage("User is able to Enter MemberNumber");
+                    Admin.Click_Button_MemberSearch();
+                    VerifyTextOnPage(data1);
+                    Logger.WriteDebugMessage("Member found and It should match with database.Query is available in Description");
 
 
-                //30.Clear the search criteria.
-                Admin.Click_Button_ClearSearch();
-                Logger.WriteDebugMessage("Search cleared.");
+                    //30.Clear the search criteria.
+                    Admin.Click_Button_ClearSearch();
+                    Logger.WriteDebugMessage("Search cleared.");
 
-                //31.Select member type as loyalty.Click on search
-                Admin.SelectMemberType("Loyalty");
-                Logger.WriteDebugMessage("User is able to select loyalty from member type .");
-                Admin.Click_Button_MemberSearch();
-                Logger.WriteDebugMessage("Member result displayed.");
+                    //31.Select member type as loyalty.Click on search
+                    Admin.SelectMemberType("Loyalty");
+                    Logger.WriteDebugMessage("User is able to select loyalty from member type .");
+                    Admin.Click_Button_MemberSearch();
+                    Logger.WriteDebugMessage("Member result displayed.");
 
-                //32.Capture the member Number from search result..
-                membernumber = PageObject_Admin.Value_MemberNumber().GetAttribute("innerHTML");
-                partialmembernumber = membernumber.ToCharArray();
-                Logger.WriteDebugMessage("Member found.Member number Captured.");
+                    //32.Capture the member Number from search result..
+                    membernumber = PageObject_Admin.Value_MemberNumber().GetAttribute("innerHTML");
+                    partialmembernumber = membernumber.ToCharArray();
+                    Logger.WriteDebugMessage("Member found.Member number Captured.");
 
-                //33.Clear the search criteria.
-                Admin.Click_Button_ClearSearch();
-                Logger.WriteDebugMessage("Search cleared.");
+                    //33.Clear the search criteria.
+                    Admin.Click_Button_ClearSearch();
+                    Logger.WriteDebugMessage("Search cleared.");
 
-                //34.Enter the captured firstname exactly on the search.Click on Search.
-                Admin.EnterMemberNumber(membernumber);
-                Logger.WriteDebugMessage("user should be able to entre MemberNumber");
-                Admin.Click_Button_MemberSearch();
-                VerifyTextOnPage(membernumber);
-                Logger.WriteDebugMessage("Member found.");
+                    //34.Enter the captured firstname exactly on the search.Click on Search.
+                    Admin.EnterMemberNumber(membernumber);
+                    Logger.WriteDebugMessage("user should be able to entre MemberNumber");
+                    Admin.Click_Button_MemberSearch();
+                    VerifyTextOnPage(membernumber);
+                    Logger.WriteDebugMessage("Member found.");
 
-                //35.Enter partial character from captured member type.Click on search
-                data1 = String.Concat(partialmembernumber[0].ToString(), partialmembernumber[1].ToString(), partialmembernumber[2].ToString());
-                Admin.EnterMemberNumber(data1);
-                Logger.WriteDebugMessage("user should be able to entre MemberNumber");
-                Admin.Click_Button_MemberSearch();
-                VerifyTextOnPage(data1);
-                Logger.WriteDebugMessage("Member found and It should match with database.Query is available in Description");
+                    //35.Enter partial character from captured member type.Click on search
+                    data1 = String.Concat(partialmembernumber[0].ToString(), partialmembernumber[1].ToString(), partialmembernumber[2].ToString());
+                    Admin.EnterMemberNumber(data1);
+                    Logger.WriteDebugMessage("user should be able to entre MemberNumber");
+                    Admin.Click_Button_MemberSearch();
+                    VerifyTextOnPage(data1);
+                    Logger.WriteDebugMessage("Member found and It should match with database.Query is available in Description");
             }
         }
 
         public static void TC_221277()
         {
             if (TestCaseId == Constants.TC_221277)
-            {
-                Users data = new Users();
-                Queries.GetActiveMemberWithAddress(data);
-
-                //1 URL is available in master test plan run description:Login as Admin in backend
-                //2.Navigate to member search.                
-                Helper.ElementWait(PageObject_Admin.Admin_Text_UserName(), 60);
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
-
-                //3.Select member type as loyalty.Click on search
-                if (ProjectName.Equals("OmniHotels") || ProjectName.Equals("Almanac"))
                 {
-                    Admin.EnterEmail(data.MemberEmail);
-                    Logger.LogTestData(TestPlanId, TestCaseId, "Active Member", data.MemberEmail);
-                }
-                else
-                    Admin.SelectMemberType("Loyalty");
-                Logger.WriteDebugMessage("User is able to select loyalty from member type .");
-                Admin.Click_Button_MemberSearch();
-                Logger.WriteDebugMessage("Member result displayed.");
+                    Users data = new Users();
+                    Queries.GetActiveMemberWithAddress(data);
 
-                //4.Capture the street address from search result.                               
-                string Address = PageObject_Admin.Value_Address().GetAttribute("innerHTML");
-                if (Address.Equals(""))
-                {
-                    Address = data.Address1;
-                    if (!string.IsNullOrEmpty(data.Address2))
-                        Address += ", " + data.Address2;
-                    Address += ", " + data.City + ", ";
-                    if (!string.IsNullOrEmpty(data.StateProvinceCode))
-                        Address += data.StateProvinceCode + " ";
-                    Address += data.ZipCode + " " + data.CountryCode;
-                }
+                    //1 URL is available in master test plan run description:Login as Admin in backend
+                    //2.Navigate to member search.                
+                    Helper.ElementWait(PageObject_Admin.Admin_Text_UserName(), 60);
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
 
-                string[] partialAddress = Address.Split(',');
-                Logger.WriteDebugMessage("Member found.Member number Captured.");
+                    //3.Select member type as loyalty.Click on search
+                    if (ProjectName.Equals("OmniHotels") || ProjectName.Equals("Almanac"))
+                    {
+                        Admin.EnterEmail(data.MemberEmail);
+                        Logger.LogTestData(TestPlanId, TestCaseId, "Active Member", data.MemberEmail);
+                    }
+                    else
+                        Admin.SelectMemberType("Loyalty");
+                    Logger.WriteDebugMessage("User is able to select loyalty from member type .");
+                    Admin.Click_Button_MemberSearch();
+                    Logger.WriteDebugMessage("Member result displayed.");
 
-                //5.Clear the search criteria.
-                Admin.Click_Button_ClearSearch();
-                Logger.WriteDebugMessage("Search cleared.");
+                    //4.Capture the street address from search result.                               
+                    string Address = PageObject_Admin.Value_Address().GetAttribute("innerHTML");
+                    if (Address.Equals(""))
+                    {
+                        Address = data.Address1;
+                        if (!string.IsNullOrEmpty(data.Address2))
+                            Address += ", " + data.Address2;
+                        Address += ", " + data.City + ", ";
+                        if (!string.IsNullOrEmpty(data.StateProvinceCode))
+                            Address += data.StateProvinceCode + " ";
+                        Address += data.ZipCode + " " + data.CountryCode;
+                    }
 
-                //6.Enter the captured Address exactly on the search.Click on Search.
-                Admin.EnterStreet(Address);
-                Logger.WriteDebugMessage("User should be able to entre Address");
-                Admin.Click_Button_MemberSearch();
-                Logger.LogTestData(TestPlanId, TestCaseId, "Street Address", Address);
-                if (VerifyTextOnPage(Address))
+                    string[] partialAddress = Address.Split(',');
+                    Logger.WriteDebugMessage("Member found.Member number Captured.");
+
+                    //5.Clear the search criteria.
+                    Admin.Click_Button_ClearSearch();
+                    Logger.WriteDebugMessage("Search cleared.");
+
+                    //6.Enter the captured Address exactly on the search.Click on Search.
+                    Admin.EnterStreet(Address);
+                    Logger.WriteDebugMessage("User should be able to entre Address");
+                    Admin.Click_Button_MemberSearch();
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Street Address", Address);
+                    if (VerifyTextOnPage(Address))
+                        Logger.WriteDebugMessage("Member found.");
+                    else
+                        Logger.WriteDebugMessage("Member not found.");
+
+                    //7.Enter partial character from captured member type.Click on search
+                    Admin.EnterStreet(partialAddress[1]);
+                    Logger.WriteDebugMessage("Enter partial character from captured member type");
+                    Admin.Click_Button_MemberSearch();
+                    VerifyTextOnPage(partialAddress[1]);
+                    Logger.WriteDebugMessage("Member found and It should match with database. Query is available in Description");
+
+                    //8.Clear the search criteria.
+                    Admin.Click_Button_ClearSearch();
+                    Logger.WriteDebugMessage("Search cleared.");
+
+                    //9.Select member type as loyalty.Click on search
+                    if (ProjectName.Equals("OmniHotels"))
+                        Admin.EnterEmail(data.MemberEmail);
+                    else
+                        Admin.SelectMemberType("Loyalty");
+                    Logger.WriteDebugMessage("User is able to select loyalty from member type .");
+                    Admin.Click_Button_MemberSearch();
+                    Logger.WriteDebugMessage("Member result displayed.");
+
+                    //10.Capture the city name from search result.
+                    char[] partialCity = data.City.ToCharArray();// City.ToCharArray();
+                    Logger.WriteDebugMessage("Member found.Member number Captured.");
+
+                    //11.Clear the search criteria.
+                    Admin.Click_Button_ClearSearch();
+                    Logger.WriteDebugMessage("Search cleared.");
+
+                    //12.Enter the captured City exactly on the search.Click on Search.
+                    Admin.EnterCity(data.City);
+                    Logger.WriteDebugMessage("User should be able to Enter City");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "City", data.City);
+                    Admin.Click_Button_MemberSearch();
+                    VerifyTextOnPage(data.City);
                     Logger.WriteDebugMessage("Member found.");
-                else
-                    Logger.WriteDebugMessage("Member not found.");
 
-                //7.Enter partial character from captured member type.Click on search
-                Admin.EnterStreet(partialAddress[1]);
-                Logger.WriteDebugMessage("Enter partial character from captured member type");
-                Admin.Click_Button_MemberSearch();
-                VerifyTextOnPage(partialAddress[1]);
-                Logger.WriteDebugMessage("Member found and It should match with database. Query is available in Description");
+                    //13.Enter partial character from captured member type.Click on search
+                    string data1 = String.Concat(partialCity[0].ToString(), partialCity[1].ToString(), partialCity[2].ToString());
+                    Admin.Click_Button_ClearSearch();
+                    Admin.EnterCity(data1);
+                    Logger.WriteDebugMessage("User should be able to Enter City");
+                    Admin.Click_Button_MemberSearch();
+                    VerifyTextOnPage(data1);
+                    Logger.WriteDebugMessage("Member found and It should match with database.Query is available in Description");
 
-                //8.Clear the search criteria.
-                Admin.Click_Button_ClearSearch();
-                Logger.WriteDebugMessage("Search cleared.");
+                    //14.Clear the search criteria.
+                    Admin.Click_Button_ClearSearch();
+                    Logger.WriteDebugMessage("Search cleared.");
 
-                //9.Select member type as loyalty.Click on search
-                if (ProjectName.Equals("OmniHotels"))
-                    Admin.EnterEmail(data.MemberEmail);
-                else
-                    Admin.SelectMemberType("Loyalty");
-                Logger.WriteDebugMessage("User is able to select loyalty from member type .");
-                Admin.Click_Button_MemberSearch();
-                Logger.WriteDebugMessage("Member result displayed.");
+                    //15.Select member type as loyalty.Click on search
+                    if (ProjectName.Equals("OmniHotels"))
+                        Admin.EnterEmail(data.MemberEmail);
+                    else
+                        Admin.SelectMemberType("Loyalty");
+                    Logger.WriteDebugMessage("User is able to select loyalty from member type .");
+                    Admin.Click_Button_MemberSearch();
+                    Logger.WriteDebugMessage("Member result displayed.");
 
-                //10.Capture the city name from search result.
-                char[] partialCity = data.City.ToCharArray();// City.ToCharArray();
-                Logger.WriteDebugMessage("Member found.Member number Captured.");
+                    //16.Capture the zip code from search result
+                    char[] PartialZip = data.ZipCode.ToCharArray();// Zip.ToCharArray();
+                    Logger.WriteDebugMessage("Member found.Member number Captured.");
 
-                //11.Clear the search criteria.
-                Admin.Click_Button_ClearSearch();
-                Logger.WriteDebugMessage("Search cleared.");
+                    //17.Clear the search criteria.
+                    Admin.Click_Button_ClearSearch();
+                    Logger.WriteDebugMessage("Search cleared.");
 
-                //12.Enter the captured City exactly on the search.Click on Search.
-                Admin.EnterCity(data.City);
-                Logger.WriteDebugMessage("User should be able to Enter City");
-                Logger.LogTestData(TestPlanId, TestCaseId, "City", data.City);
-                Admin.Click_Button_MemberSearch();
-                VerifyTextOnPage(data.City);
-                Logger.WriteDebugMessage("Member found.");
+                    //18.Enter the captured City exactly on the search.Click on Search.
+                    Admin.EnterZip(data.ZipCode);
+                    Logger.WriteDebugMessage("User should be able to Entre ZipCode ");
 
-                //13.Enter partial character from captured member type.Click on search
-                string data1 = String.Concat(partialCity[0].ToString(), partialCity[1].ToString(), partialCity[2].ToString());
-                Admin.Click_Button_ClearSearch();
-                Admin.EnterCity(data1);
-                Logger.WriteDebugMessage("User should be able to Enter City");
-                Admin.Click_Button_MemberSearch();
-                VerifyTextOnPage(data1);
-                Logger.WriteDebugMessage("Member found and It should match with database.Query is available in Description");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Zip Code", data.ZipCode);
+                    Admin.Click_Button_MemberSearch();
+                    VerifyTextOnPage(data.ZipCode);
+                    Logger.WriteDebugMessage("Member found.");
 
-                //14.Clear the search criteria.
-                Admin.Click_Button_ClearSearch();
-                Logger.WriteDebugMessage("Search cleared.");
+                    //19.Enter partial character from captured member type.Click on search
+                    data1 = String.Concat(PartialZip[0].ToString(), PartialZip[1].ToString(), PartialZip[2].ToString());
+                    Admin.EnterZip(data1);
+                    Logger.WriteDebugMessage("User should be able to Entre partial ZipCode ");
+                    Admin.Click_Button_MemberSearch();
+                    VerifyTextOnPage(data1);
+                    Logger.WriteDebugMessage("Member found and It should match with database.Query is available in Description");
 
-                //15.Select member type as loyalty.Click on search
-                if (ProjectName.Equals("OmniHotels"))
-                    Admin.EnterEmail(data.MemberEmail);
-                else
-                    Admin.SelectMemberType("Loyalty");
-                Logger.WriteDebugMessage("User is able to select loyalty from member type .");
-                Admin.Click_Button_MemberSearch();
-                Logger.WriteDebugMessage("Member result displayed.");
+                    //20.Clear the search criteria.
+                    Admin.Click_Button_ClearSearch();
+                    Logger.WriteDebugMessage("Search cleared.");
 
-                //16.Capture the zip code from search result
-                char[] PartialZip = data.ZipCode.ToCharArray();// Zip.ToCharArray();
-                Logger.WriteDebugMessage("Member found.Member number Captured.");
+                    ////21.Select member type as loyalty.Click on search
+                    //Admin.SelectMemberType("Loyalty");
+                    // if (ProjectName.Equals("OmniHotels"))
+                    //Logger.WriteDebugMessage("User is able to select loyalty from member type .");
+                    //Admin.Click_Button_MemberSearch();
+                    //AddDelay(5000);
+                    //Logger.WriteDebugMessage("Member result displayed.");
 
-                //17.Clear the search criteria.
-                Admin.Click_Button_ClearSearch();
-                Logger.WriteDebugMessage("Search cleared.");
+                    ////22.Capture the Cardname from search result.
+                    //string Cardname = PageObject_Admin.Value_CardName().GetAttribute("innerHTML");
+                    //Logger.WriteDebugMessage("Member found.Cardname Captured.");
 
-                //18.Enter the captured City exactly on the search.Click on Search.
-                Admin.EnterZip(data.ZipCode);
-                Logger.WriteDebugMessage("User should be able to Entre ZipCode ");
+                    ////23.Clear the search criteria.
+                    //Admin.Click_Button_ClearSearch();
+                    //AddDelay(5000);
+                    //Logger.WriteDebugMessage("Search cleared.");
 
-                Logger.LogTestData(TestPlanId, TestCaseId, "Zip Code", data.ZipCode);
-                Admin.Click_Button_MemberSearch();
-                VerifyTextOnPage(data.ZipCode);
-                Logger.WriteDebugMessage("Member found.");
+                    ////24.Enter the captured Cardname exactly on the search.Click on Search.
+                    //Admin.EnterCardName(Cardname);
+                    //AddDelay(5000);
+                    //Admin.Click_Button_MemberSearch();
+                    //AddDelay(5000);
+                    //VerifyTextOnPage(Cardname);
+                    //Logger.WriteDebugMessage("Member found.");
 
-                //19.Enter partial character from captured member type.Click on search
-                data1 = String.Concat(PartialZip[0].ToString(), PartialZip[1].ToString(), PartialZip[2].ToString());
-                Admin.EnterZip(data1);
-                Logger.WriteDebugMessage("User should be able to Entre partial ZipCode ");
-                Admin.Click_Button_MemberSearch();
-                VerifyTextOnPage(data1);
-                Logger.WriteDebugMessage("Member found and It should match with database.Query is available in Description");
+                    ////25.Enter partial character from captured Cardname .Click on search               
+                    //Admin.EnterCardName(Cardname);
+                    //AddDelay(5000);
+                    //Admin.Click_Button_MemberSearch();
+                    //AddDelay(5000);
+                    //VerifyTextOnPage(Cardname);
+                    //Logger.WriteDebugMessage("Member found and It should match with database.Query is available in Description");
 
-                //20.Clear the search criteria.
-                Admin.Click_Button_ClearSearch();
-                Logger.WriteDebugMessage("Search cleared.");
+                    ////26.Clear the search criteria.
+                    //Admin.Click_Button_ClearSearch();
+                    //AddDelay(5000);
+                    //Logger.WriteDebugMessage("Search cleared.");
 
-                ////21.Select member type as loyalty.Click on search
-                //Admin.SelectMemberType("Loyalty");
-                // if (ProjectName.Equals("OmniHotels"))
-                //Logger.WriteDebugMessage("User is able to select loyalty from member type .");
-                //Admin.Click_Button_MemberSearch();
-                //AddDelay(5000);
-                //Logger.WriteDebugMessage("Member result displayed.");
+                    //27.Select member type as loyalty.Click on search
+                    if (ProjectName.Equals("OmniHotels"))
+                        Admin.EnterEmail(data.MemberEmail);
+                    else
+                        Admin.SelectMemberType("Loyalty");
+                    Logger.WriteDebugMessage("User is able to select loyalty from member type .");
+                    Admin.Click_Button_MemberSearch();
+                    Logger.WriteDebugMessage("Member result displayed.");
 
-                ////22.Capture the Cardname from search result.
-                //string Cardname = PageObject_Admin.Value_CardName().GetAttribute("innerHTML");
-                //Logger.WriteDebugMessage("Member found.Cardname Captured.");
+                    //28.Capture the mobile phone number from search result.
+                    string cellphonenumber = Queries.ReturnMultipleRecordforSearch("CellPhoneNumber");
+                    Logger.WriteDebugMessage("Member found.Member number Captured.");
 
-                ////23.Clear the search criteria.
-                //Admin.Click_Button_ClearSearch();
-                //AddDelay(5000);
-                //Logger.WriteDebugMessage("Search cleared.");
+                    //29.Clear the search criteria.
+                    Admin.Click_Button_ClearSearch();
+                    Logger.WriteDebugMessage("Search cleared.");
 
-                ////24.Enter the captured Cardname exactly on the search.Click on Search.
-                //Admin.EnterCardName(Cardname);
-                //AddDelay(5000);
-                //Admin.Click_Button_MemberSearch();
-                //AddDelay(5000);
-                //VerifyTextOnPage(Cardname);
-                //Logger.WriteDebugMessage("Member found.");
-
-                ////25.Enter partial character from captured Cardname .Click on search               
-                //Admin.EnterCardName(Cardname);
-                //AddDelay(5000);
-                //Admin.Click_Button_MemberSearch();
-                //AddDelay(5000);
-                //VerifyTextOnPage(Cardname);
-                //Logger.WriteDebugMessage("Member found and It should match with database.Query is available in Description");
-
-                ////26.Clear the search criteria.
-                //Admin.Click_Button_ClearSearch();
-                //AddDelay(5000);
-                //Logger.WriteDebugMessage("Search cleared.");
-
-                //27.Select member type as loyalty.Click on search
-                if (ProjectName.Equals("OmniHotels"))
-                    Admin.EnterEmail(data.MemberEmail);
-                else
-                    Admin.SelectMemberType("Loyalty");
-                Logger.WriteDebugMessage("User is able to select loyalty from member type .");
-                Admin.Click_Button_MemberSearch();
-                Logger.WriteDebugMessage("Member result displayed.");
-
-                //28.Capture the mobile phone number from search result.
-                string cellphonenumber = Queries.ReturnMultipleRecordforSearch("CellPhoneNumber");
-                Logger.WriteDebugMessage("Member found.Member number Captured.");
-
-                //29.Clear the search criteria.
-                Admin.Click_Button_ClearSearch();
-                Logger.WriteDebugMessage("Search cleared.");
-
-                //30.Capture the mobile phone number from search result.
-                Admin.EnterPhone(cellphonenumber);
-                Logger.WriteDebugMessage("User should be able to Entre cellphonenumber ");
-                Logger.LogTestData(TestPlanId, TestCaseId, "Cell Number", cellphonenumber, true);
-                Admin.Click_Button_MemberSearch();
-                VerifyTextOnPage(cellphonenumber);
-                Logger.WriteDebugMessage("Member found.");
-            }
+                    //30.Capture the mobile phone number from search result.
+                    Admin.EnterPhone(cellphonenumber);
+                    Logger.WriteDebugMessage("User should be able to Entre cellphonenumber ");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Cell Number", cellphonenumber, true);
+                    Admin.Click_Button_MemberSearch();
+                    VerifyTextOnPage(cellphonenumber);
+                    Logger.WriteDebugMessage("Member found.");
+             }
         }
         public static void TC_221385()
         {

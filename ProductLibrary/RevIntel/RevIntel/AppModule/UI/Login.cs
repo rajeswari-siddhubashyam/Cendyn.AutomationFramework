@@ -10,11 +10,13 @@ namespace RevIntel.AppModule.UI
     {
         public static void Enter_EmailAddress(string str)
         {
+            Helper.ElementWait(PageObject_Login.Enter_EmailAddress(), 240);
             Helper.ElementEnterText(PageObject_Login.Enter_EmailAddress(), str);
         }
 
         public static void Enter_Password(string str)
         {
+            Helper.ElementWait(PageObject_Login.Enter_Password(), 240);
             Helper.ElementEnterText(PageObject_Login.Enter_Password(), str);
         }
 
@@ -32,6 +34,7 @@ namespace RevIntel.AppModule.UI
         }
         public static void Click_Next_Button()
         {
+            Helper.ElementWait(PageObject_Login.Click_Next_Button(), 240);
             Helper.ElementClick(PageObject_Login.Click_Next_Button());
         }
         
@@ -39,7 +42,7 @@ namespace RevIntel.AppModule.UI
         public static void Frontend_SignIn(string username, string password)
         {
             Enter_EmailAddress(username);
-            Logger.WriteDebugMessage("Email Address displayed");
+            Logger.WriteDebugMessage("Email Address displayed"); 
             Click_Next_Button();
             Enter_Password(password);
             Logger.WriteDebugMessage("Login in with Username =" + username + " and Password =" + password);

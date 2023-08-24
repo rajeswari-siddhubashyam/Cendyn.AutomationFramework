@@ -38,7 +38,7 @@
     <Parameter key="Admin_Value_MemberType">//table[@id='memberSearchResults']//th[contains(@aria-label,'Member Type')]//following::td[1]</Parameter>
     <Parameter key="Admin_Value_MemberNumber">//table[@id='memberSearchResults']//th[contains(@aria-label,'Member #')]//following::td[2]</Parameter>
     <Parameter key="Admin_Value_Email">//table[@id='memberSearchResults']//th[contains(@aria-label,'Email')]/parent::tr/parent::thead/following::tbody/tr/td[contains(.,'@cendyn17.com')]</Parameter>
-    <Parameter key="Admin_Value_FullName">//table[@id='memberSearchResults']//th[contains(@aria-label,'Full Name')]//following::td[3]</Parameter>
+    <Parameter key="Admin_Value_FullName">//table[@id='memberSearchResults']//th[contains(@aria-label,'Full Name')]//following::td[4]</Parameter>
     <Parameter key="Admin_Value_Address">//table[@id='memberSearchResults']//th[contains(@aria-label,'Address')]//following::td[5]</Parameter>
     <Parameter key="Admin_Value_Phone">//table[@id='memberSearchResults']//th[contains(@aria-label,'Phone')]//following::td[6]</Parameter>
     <Parameter key="Admin_Value_CardName">//*[@id='memberSearchResults']/tbody/tr/td[0]</Parameter>
@@ -101,7 +101,7 @@
     <Parameter key="BatchUploadRegistraion_Upload">//label[@class='input-group-addon']/following::span[@class='icon-folder']</Parameter>
     <Parameter key="Admin_MemberBatchUpload_BtachRegistration_SubTab">//a[contains(.,'Member Batch Registration')]</Parameter>
     <Parameter key="BatchUpdate_UploadFiles">//button[@id='uploadMembersUpdateBtn']</Parameter>
-    <Parameter key="Click_CloseButton_OnMemberBatchUpdateDetailsPopup">(//button[contains(text(),'Close')])[2]</Parameter>
+    <Parameter key="Click_CloseButton_OnMemberBatchUpdateDetailsPopup">//div[@id='showMemberBatchUpdateDetailModal']//button[contains(text(),'Close')]</Parameter>
     <Parameter key="Click_MemberBatchUpdate_UploadDateAndTime">//*[@id='tableMemberUploadLogs']/thead/tr/th[1]</Parameter>
     <Parameter key="UpdateRefreshbutton">//button[@id='refreshUpdateMemberLogBtn']</Parameter>
     <Parameter key="Admin_Memberupdate_Text_Filter">//input[@type='search' and @aria-controls='tableMemberUpdateLogs']</Parameter>
@@ -269,7 +269,7 @@
 
     <!--Start [Admin_MemberAwards]-->
     <Parameter key="Admin_MemberAwards_Button_AddAward">//*[contains(text(),' Add Award')]</Parameter>
-    <Parameter key="Admin_MemberAwards_Dropdown_SelectAward">perkSelection</Parameter>
+    <Parameter key="Admin_MemberAwards_Dropdown_SelectAward">//select[@id='perkSelection']</Parameter>
     <Parameter key="Admin_MemberAwards_Text_Comment">comments</Parameter>
     <Parameter key="Admin_MemberAwards_Button_Save">//div[@id='addPerk']//button[@id='btnSave']</Parameter>
     <Parameter key="Admin_MemberAwards_Icon_Close">//button[@id='btnClose']</Parameter>
@@ -278,7 +278,7 @@
     <Parameter key="Admin_Click_ExpirationDateSubmit">//button[@type='submit' and @class='btn btn-primary btn-sm editable-submit']</Parameter>
     <Parameter key="Click_MemberAwardStatus">//table[@id='perksMember001']/tbody/tr[@class='odd']/td[6]/a</Parameter>
     <Parameter key="Admin_LoyaltyAwards_Dropdown_AdminMemberStatus">//div[@class='editable-input']//select[@class='form-control input-sm']</Parameter>
-    <Parameter key="Click_AdminSendResend">//table[@id='perksMember001']/tbody/tr[@class='odd']/td[9]/button</Parameter>
+    <Parameter key="Click_AdminSendResend">//button[@class='btn btn-alternate btnPerkResend']</Parameter>
     <Parameter key="click_ResendAwardEmail_Close">//h4[contains(text(),'Resend Award Email')]/preceding-sibling::button[@id='btnClose']</Parameter>
 
     <!--END [Admin_MemberAwards]-->

@@ -462,7 +462,7 @@ namespace eLoyaltyV3.PageObject.Admin
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
             if (ProjectName.Equals("HotelOrigami"))
-                return PageAction.Find_ElementXPath("//table[@id='memberSearchResults']//th[contains(@aria-label,'Address')]//following::td[4]");
+                return PageAction.Find_ElementXPath("//table[@id='memberSearchResults']//th[contains(@aria-label,'Address')]//following::td[5]");
             else
                 return PageAction.Find_ElementXPath(ObjectRepository.Admin_Value_Address);
         }
@@ -2062,7 +2062,7 @@ namespace eLoyaltyV3.PageObject.Admin
             ScanPage(Constants.Admin);
             CurrentPageName = PageName;
             CurrentElementName = MethodBase.GetCurrentMethod().Name;
-            return PageAction.Find_ElementId(ObjectRepository.Admin_MemberAwards_Dropdown_SelectAward);
+            return PageAction.Find_ElementXPath(ObjectRepository.Admin_MemberAwards_Dropdown_SelectAward);
         }
 
         public static IWebElement MemberAwards_Text_Comment()

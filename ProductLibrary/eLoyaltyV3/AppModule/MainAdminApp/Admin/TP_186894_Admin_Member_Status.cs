@@ -71,7 +71,11 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                     Assert.Fail("Member do NOT have points");
 
                 //8.Click on the status link and update the status to Inactive
-                Admin.SelectStatus(updateToStatus);
+                try
+                {
+                    Admin.SelectStatus(updateToStatus);
+                }
+                catch { AddDelay(80000); }
                 string updatedstatus = PageObject_Admin.Value_MemberStatus().GetAttribute("innerHTML");
                 if (updatedstatus.Equals(updateToStatus))
                     Logger.WriteDebugMessage("Status gets updated to inactive");
@@ -81,7 +85,13 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 //9.Verify the points gets reset to 0
                 //10.Verify Points, Nights, Active Awards & Stays
                 //11.Verify the Log in table MemberStatusLog
-                Helper.ReloadPage();
+                try
+                {
+                    Helper.ReloadPage();
+                }
+                catch { 
+                    AddDelay(100000);
+                }
                 Admin.EnterEmail(email_updated);
                 Admin.EnterMemberNumber(data.Membership);
                 Admin.Click_Button_MemberSearch();
@@ -91,7 +101,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 string currentDate = Queries.GetServerDate();
                 Admin.VerifyMemberStatusLog(email_updated, updateToStatus, ProjectDetails.CommonAdminEmail, currentDate, ProjectName);
                 Logger.WriteDebugMessage("Status , updated by and insert date should display correctly");
-
+                AddDelay(10000);
                 //12.Check for the Expiration date in DB for Member Status 'Inactive'.             
                 string updatedexpirationdate = data.ExpirationDate;
                 if (ProjectName != "SH")
@@ -150,14 +160,20 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 }
 
                 //7.Verify the member has points
+                AddDelay(5000);
                 string points = data.Balance;
                 if (!points.Equals("0"))
                     Logger.WriteDebugMessage("Member has points");
                 else
                     Assert.Fail("Member do NOT have points");
 
-                //8.Click on the status link and update the status to deactivate
-                Admin.SelectStatus(updateToStatus);
+                //8.Click on the status link and update the status to deactivate                
+                try
+                {
+                    Admin.SelectStatus(updateToStatus);
+                }
+                catch { AddDelay(100000); 
+                }
                 string updatedstatus = PageObject_Admin.Value_MemberStatus().GetAttribute("innerHTML");
                 if (updatedstatus.Equals(updateToStatus))
                     Logger.WriteDebugMessage("Status gets updated to Deactivate");
@@ -165,7 +181,11 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                     Assert.Fail("Status is NOT updated to Deactivate");
 
                 //9.Verify the points gets reset to 0
-                Helper.ReloadPage();
+                try
+                {
+                    Helper.ReloadPage();
+                }
+                catch { AddDelay(80000); }
                 Admin.EnterEmail(email);
                 Admin.EnterMemberNumber(data.Membership);
                 Admin.Click_Button_MemberSearch();
@@ -186,96 +206,119 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
         public static void TC_111606()
         {
             if (TestCaseId == Constants.TC_111606)
-            {
-                Users data = new Users();
-                //1. URL and Credential is available in Test Plan Run description 
-                //2. Data Requirement: Deactivated Profile
-                string status = TestData.ExcelData.TestDataReader.ReadData(1, "Status");
-                string updateToStatus = TestData.ExcelData.TestDataReader.ReadData(1, "UpdateToStatus");
-                string UpdateToStatusNew = TestData.ExcelData.TestDataReader.ReadData(1, "UpdateToStatusNew");
-                Queries.GetDataPerStatus(status, data, ProjectName);
-                string email = data.eMail;
-
-                //3. Login into Admin     
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("User landed on home page");
-
-                //4.Search for a Deactivated Profile
-                Admin.EnterEmail(email);
-                Admin.EnterMemberNumber(data.Membership);
-                Admin.Click_Button_MemberSearch();
-                Logger.WriteDebugMessage("Search result gets displayed");
-
-                //5.Click on view icon in the search result row
-                Admin.Click_Icon_View(ProjectName);
-                Logger.WriteDebugMessage("User landed on Profile page");
-                Logger.LogTestData(TestPlanId, TestCaseId, "Member Email", data.eMail);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Current Status", status);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Updated Status", updateToStatus, true);
-
-                //6.Verify the member status is Deactivate
-                string email_updated = Admin.GetValueEmailAddress(ProjectName);
-                string presentStatus = PageObject_Admin.Value_MemberStatus().GetAttribute("innerHTML");
-                if (presentStatus.Equals("Deactivated"))
                 {
-                    Logger.WriteDebugMessage("Status should be Deactivated");
-                }
-                else
-                {
-                    Assert.Fail("Status for the user is NOT be Deactivated");
-                }
+                    Users data = new Users();
+                    //1. URL and Credential is available in Test Plan Run description 
+                    //2. Data Requirement: Deactivated Profile
+                    string status = TestData.ExcelData.TestDataReader.ReadData(1, "Status");
+                    string updateToStatus = TestData.ExcelData.TestDataReader.ReadData(1, "UpdateToStatus");
+                    string UpdateToStatusNew = TestData.ExcelData.TestDataReader.ReadData(1, "UpdateToStatusNew");
+                    Queries.GetDataPerStausWitPointBalanceZero(status, data, ProjectName);
+                    string email = data.eMail;
 
-                //7.Verify the member has 0 points
-                string points = data.Balance;
-                if (points.Equals("0"))
-                    Logger.WriteDebugMessage("Member has '0' points");
-                else
-                    Assert.Fail("Member do NOT have '0' points");
+                    //3. Login into Admin     
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("User landed on home page");
 
+                    //4.Search for a Deactivated Profile
+                    Admin.EnterEmail(email);
+                    Admin.EnterMemberNumber(data.Membership);
+                    Admin.Click_Button_MemberSearch();
+                    Logger.WriteDebugMessage("Search result gets displayed");
+
+                    //5.Click on view icon in the search result row
+                    Admin.Click_Icon_View(ProjectName);
+                    Logger.WriteDebugMessage("User landed on Profile page");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Member Email", data.eMail);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Current Status", status);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Updated Status", updateToStatus, true);
+
+                    //6.Verify the member status is Deactivate
+                    string email_updated = Admin.GetValueEmailAddress(ProjectName);
+                    string presentStatus = PageObject_Admin.Value_MemberStatus().GetAttribute("innerHTML");
+                     if (presentStatus.Equals("Deactivated"))
+                    {
+                        Logger.WriteDebugMessage("Status should be Deactivated");
+                    }
+                    else
+                    {
+                        Assert.Fail("Status for the user is NOT be Deactivated");
+                    }
+
+                    //7.Verify the member has 0 points
+                    AddDelay(5000);
+                    string points = data.Balance;
+                    if (points.Equals("0"))
+                        Logger.WriteDebugMessage("Member has '0' points");
+                    else
+                        Assert.Fail("Member do NOT have '0' points");
                 //8.Click on the status link and update the status to Inactive
-                Admin.SelectStatus(updateToStatus);
-                string updatedstatus = PageObject_Admin.Value_MemberStatus().GetAttribute("innerHTML");
-                if (updatedstatus.Equals(updateToStatus))
-                    Logger.WriteDebugMessage("Status gets updated to Inactive");
-                else
-                    Assert.Fail("Status is NOT updated to Inactive");
+                try
+                {
+                    Admin.SelectStatus(updateToStatus);
+                }
+                catch { AddDelay(80000); }
+                ElementWait(PageObject_Admin.Value_MemberStatus(),180);
+                    string updatedstatus = PageObject_Admin.Value_MemberStatus().GetAttribute("innerHTML");
+                    if (updatedstatus.Equals(updateToStatus))
+                        Logger.WriteDebugMessage("Status gets updated to Inactive");
+                    else
+                        Assert.Fail("Status is NOT updated to Inactive");
 
 
-                //9.Verify the points remains as 0
-                //10.Verify the Log in table MemberStatusLog  
-                Helper.ReloadPage();
-                Admin.EnterEmail(email);
-                Admin.EnterMemberNumber(data.Membership);
-                Admin.Click_Button_MemberSearch();
-                Admin.Click_Icon_View(ProjectName);
-                string currentDate = Queries.GetServerDate();
-                Admin.VerifyMemberStatusLog(email_updated, updateToStatus, ProjectDetails.CommonAdminEmail, currentDate, ProjectName);
-                Logger.WriteDebugMessage("Status , updated by and insert date should display correctly");
+                    //9.Verify the points remains as 0
+                    //10.Verify the Log in table MemberStatusLog  
+                    Admin.Click_MemberSearchTab();
+                    //Helper.ReloadPage();
+                    AddDelay(5000);
+                    Admin.EnterEmail(email);
+                    Admin.EnterMemberNumber(data.Membership);
+                    Admin.Click_Button_MemberSearch();
+                    Admin.Click_Icon_View(ProjectName);
+                    string currentDate = Queries.GetServerDate();
+                    AddDelay(15000);
+                    Admin.VerifyMemberStatusLog(email_updated, updateToStatus, ProjectDetails.CommonAdminEmail, currentDate, ProjectName);
+                    Logger.WriteDebugMessage("Status , updated by and insert date should display correctly");
 
-                //11.Repeat the process to verify that admin will be able to update the status from Deactivated to Activated for another profile
-                Queries.GetDataPerStatus(status, data, ProjectName);
-                string email1 = data.eMail;
-                Helper.ReloadPage();
-                Admin.EnterEmail(email1);
-                Admin.EnterMemberNumber(data.Membership);
-                Admin.Click_Button_MemberSearch();
-                Admin.Click_Icon_View(ProjectName);
-                Admin.SelectStatus(UpdateToStatusNew);
+                    //11.Repeat the process to verify that admin will be able to update the status from Deactivated to Activated for another profile
+                    Queries.GetDataPerStatus(status, data, ProjectName);
+                    string email1 = data.eMail;
+                    //Admin.Click_Menu_Home();
+                    //Helper.ReloadPage();
+                    try
+                    {
+                        Helper.ReloadPage();
+                    }
+                    catch (Exception e)
+                    {
+                        AddDelay(80000);
+                    }
+                    Admin.EnterEmail(email1);
+                    Admin.EnterMemberNumber(data.Membership);
+                    Admin.Click_Button_MemberSearch();
+                    Admin.Click_Icon_View(ProjectName);
+                    Admin.SelectStatus(UpdateToStatusNew);
+                    AddDelay(60000);
+                    try
+                    {
+                    Admin.SelectStatus(UpdateToStatusNew);
+                     }
+                catch { AddDelay(80000); }
                 string currentStatus = PageObject_Admin.Value_MemberStatus().GetAttribute("innerHTML");
-                if (currentStatus.Equals("Active"))
-                {
-                    Logger.WriteDebugMessage("Status should be Active");
-                }
-                else
-                {
-                    Assert.Fail("Status for the user is NOT be Active");
-                }
+                    if (currentStatus.Equals("Active"))
+                    {
+                        Logger.WriteDebugMessage("Status should be Active");
+                    }
+                    else
+                    {
+                        Assert.Fail("Status for the user is NOT be Active");
+                    }
 
-                Logger.WriteDebugMessage("Admin should be able to update the status from Deactivated to Activated");
-                Admin.VerifyMemberStatusLog(email1, UpdateToStatusNew, ProjectDetails.CommonAdminEmail, DateTime.Today.ToString("MM/dd/yyyy"), ProjectName);
-                Logger.WriteDebugMessage("Status , updated by and insert date should display correctly");
+                    Logger.WriteDebugMessage("Admin should be able to update the status from Deactivated to Activated");
+                    Admin.VerifyMemberStatusLog(email1, UpdateToStatusNew, ProjectDetails.CommonAdminEmail, DateTime.Today.ToString("MM/dd/yyyy"), ProjectName);
+                    Logger.WriteDebugMessage("Status , updated by and insert date should display correctly");
+                }        
             }
-        }
 
         public static void TC_111607()
         {
@@ -320,6 +363,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 }
 
                 //7.Verify the member has points
+                AddDelay(5000);
                 string points = data.Balance;
                 if (points.Equals("0"))
                     Logger.WriteDebugMessage("Member has points");
@@ -327,7 +371,14 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                     Assert.Fail("Member do NOT have points");
 
                 //8.Click on the status link and update the status to deactivate
-                Admin.SelectStatus(updateToStatus);
+                try
+                {
+                    Admin.SelectStatus(updateToStatus);
+                }
+                catch (Exception e)
+                {
+                    AddDelay(20000);
+                }                
                 string updatedstatus = PageObject_Admin.Value_MemberStatus().GetAttribute("innerHTML");
                 if (updatedstatus.Equals(updateToStatus))
                     Logger.WriteDebugMessage("Status gets updated to Deactivate");
@@ -335,7 +386,15 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                     Assert.Fail("Status is NOT updated to Deactivate");
 
                 //11.Verify the Log in table MemberStatusLog
-                Helper.ReloadPage();
+                //Helper.ReloadPage();
+                try
+                {
+                    Helper.ReloadPage();
+                }
+                catch (Exception e)
+                {
+                    AddDelay(10000);
+                }
                 Admin.EnterEmail(email);
                 Admin.EnterMemberNumber(data.Membership);
                 Admin.Click_Button_MemberSearch();

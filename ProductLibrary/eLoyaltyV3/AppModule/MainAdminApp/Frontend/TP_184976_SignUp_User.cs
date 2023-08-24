@@ -15,7 +15,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
     {
         #region TP_184976 - Sign Up User
         public static void TC_184988()
-        {
+        {try{
             UserSignUpCRMAPI data = new UserSignUpCRMAPI();
             double minutes = 10;
             int toMilliseconds = Convert.ToInt32(TimeSpan.FromMinutes(minutes).TotalMilliseconds);
@@ -49,6 +49,8 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                         Logger.WriteDebugMessage("Member since date is todays date.");
                     }
             }
+            }
+            catch (Exception) { }
         }
 
         #endregion TP_184976

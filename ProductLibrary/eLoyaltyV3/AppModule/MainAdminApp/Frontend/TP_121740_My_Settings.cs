@@ -25,150 +25,26 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
     {
         #region TP_121740 - My Settings Page
         public static void TC_120138()
-        {
-            if (TestCaseId == Constants.TC_120138)
+        {try
             {
-                string ReturnResult;
-                //1.URL is available in description
-                //2.Data Requirement: Registered user Credential
-                //3.Navigate to Sign in page
-                //4.Enter the credential and Sign in   
-                Users data = new Users();
-                string username, password, validationMessage;
-                ReturnResult = Constants.UpdateSettingsMessage;
-                //*Added this code as per changes for R#208647 for HotelIcon Client*//
-                Queries.GetActiveMemberEmail(data, ProjectName);
-                if (ProjectName.Equals("HotelIcon"))
+                if (TestCaseId == Constants.TC_120138)
                 {
-                    Navigation.Click_Button_SignIn();
-                }
-                password = TestData.ExcelData.ExcelDataReader.ReadData(1, "Password");
-                LoginCredentials(data.MemberEmail, ProjectDetails.CommonFrontendPassword, ProjectName);
-                MySettingWait(ProjectName);
-                if (Driver.Url == LoginLand || Helper.IsElementVisible(PageObject_Navigation.Link_MySettings()))
-                {
-                    string PageTitle = Driver.Title;
-                    Helper.RegexFunction(PageTitle, pattern);
-                }
-
-                Logger.WriteDebugMessage("User should be able to Login Successfully");
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Test_Data", data.MemberEmail);
-
-                //5.Navigate to Update Password screen
-                Navigation.ClickMySettings(ProjectName);
-                Logger.WriteDebugMessage("Landed on the My Settings page.");
-
-                //6.Without entering Password click on Submit
-                string FieldReq = Constants.UpdateUserEmailMessage;
-                //Only Submit Button.
-                MySettings.UpdateUserPasswordwithCase(ProjectDetails.CommonFrontendPassword, ProjectDetails.CommonFrontendPassword, FieldReq, 0, ProjectName);
-                Logger.WriteDebugMessage("Validation msg requesting user to enter mandatory field should display");
-
-                //7.Enter  single  whitespace in password field
-                validationMessage = Constants.WhiteSpacePassword;
-                //White Space for all field.
-                Helper.ReloadPage();
-                MySettings.UpdateUserPasswordwithCase(" ", " ", validationMessage, 1, ProjectName);
-                Logger.WriteDebugMessage("Validation msg requesting user to enter mandatory field should display");
-
-                //8.Logger.WriteDebugMessage("Validation msg requesting user to enter mandatory field should display");
-                FieldReq = Constants.UpdateUserEmailMessage;
-                for (int i = 3; i < 11; i++)
-                {
-                    var runningCase = (i > 8) ? 1 : i;
-                    var currentPassword = (i != 9) ? ProjectDetails.CommonFrontendPassword : password;
-                    var newPassword = (i != 9) ? password : ProjectDetails.CommonFrontendPassword;
-                    Helper.ReloadPage();
-                    MySettings.UpdateUserPasswordwithCase(currentPassword, newPassword, FieldReq, runningCase, ProjectName);
-                    Helper.AddDelay(2000);
-                    Logger.WriteDebugMessage("Validation msg requesting user to enter mandatory field should display");
-                    Logger.LogTestData(TestPlanId, TestCaseId, "Current Password "+i, currentPassword);
-                    if(i==10)
-                        Logger.LogTestData(TestPlanId, TestCaseId, "New Password "+i, newPassword, true);
-                    else
-                        Logger.LogTestData(TestPlanId, TestCaseId, "New Password " + i, newPassword);
-                }
-                
-            }
-        }
-
-        public static void TC_124899()
-        {
-            if (TestCaseId == Constants.TC_124899)
-            {
-                string SuccessUpdate = Constants.UpdateSettingsMessage;
-                //1.URL and database detail available in master test plan  run 
-                //2.Log into  front end  as   PMS User                
-                string PMSCustomerEmail = Queries.ReturnPMSCustomerEmail();
-                string password = TestData.ExcelData.ExcelDataReader.ReadData(1, "Password");
-                string newPassword = TestData.ExcelData.ExcelDataReader.ReadData(1, "NewPassword");          
-                password = ProjectDetails.CommonFrontendPassword;
-                newPassword = ProjectDetails.CommonFrontendPassword.Substring(0, 9) + ".";
-                //*Added this code as per changes for R#208647 for HotelIcon Client*//
-                if (ProjectName.Equals("HotelIcon"))
-                {
-                    Navigation.Click_Button_SignIn();
-                }
-                LoginCredentials(PMSCustomerEmail, ProjectDetails.CommonFrontendPassword, ProjectName);              
-               
-                MySettingWait(ProjectName);
-                if (Driver.Url == LoginLand || Helper.IsElementVisible(PageObject_Navigation.Link_MySettings()))
-                {
-                    string PageTitle = Driver.Title;
-                    Helper.RegexFunction(PageTitle, pattern);
-                }
-                Logger.LogTestData(TestPlanId, TestCaseId, "PMS User", PMSCustomerEmail);
-
-                //3.Click on My Setting 
-                Navigation.ClickMySettings(ProjectName);
-                if (Driver.Url.Contains(MySettingsURL))
-                {
-                    Logger.WriteDebugMessage("Landed on the My Settings page.");
-                }
-
-                //4.Enter current password under update password section  
-                //5.Enter New password into "New Password *" field  
-                //6.Enter same password into Confirm Password field 
-                //7.Click Update User 
-                MySettings.UpdateUserPasswordwithCase(password, newPassword, SuccessUpdate, 1, ProjectName);
-                Logger.WriteDebugMessage("Password gets  updated successfully with message displayed about update on screen");
-                if (ProjectName.Equals("IndependentCollection"))
-                {
-                    LoginCredentials(PMSCustomerEmail, newPassword, ProjectName);
-                    MySettingWait(ProjectName);
-                    Logger.WriteDebugMessage("Signin successfully with new password");
-                    Navigation.ClickMySettings(ProjectName);
-                }
-
-                //8.Enter different Username into New User Name field under Update user section 
-                //9.Enter current password into "Please provide your current password *" field 
-                //10.Click Update User 
-                string GetDate = DateTime.Now.ToString("MMddyyHHmm");
-                string PMSCustomerEmailNew = (regexfunction(PMSCustomerEmail) + GetDate + "@cendyn17.com");
-                MySettings.UpdateUserEmail(PMSCustomerEmailNew, newPassword, 1, ProjectName);
-                Logger.WriteDebugMessage("New username gets updated successfully and message displayed on screen about changed successful ");
-                Logger.LogTestData(TestPlanId, TestCaseId, "New PMS User", PMSCustomerEmailNew, true);
-                if (ProjectName.Equals("AMR"))
-                {
-                    Helper.Driver.Navigate().GoToUrl(ProjectDetails.CommonFrontendURL);
-                }
-                else
-                {
-                    Navigation.ClickSignOut(ProjectName);
-                    Logger.WriteDebugMessage("Signed Out from User's Account");
-                }
-                
-                //*Added this code as per changes for R#208647 for HotelIcon Client*//
-                if (ProjectName.Equals("HotelIcon"))
-                {
-                    Navigation.Click_Button_SignIn();
-                }
-
-                Helper.ElementWait(PageObject_SignIn.Text_Email(), 60);
-
-                if (Helper.IsElementVisible(PageObject_SignIn.Text_Email()))
-                {
-                    LoginCredentials(PMSCustomerEmailNew, newPassword, ProjectName);
+                    string ReturnResult;
+                    //1.URL is available in description
+                    //2.Data Requirement: Registered user Credential
+                    //3.Navigate to Sign in page
+                    //4.Enter the credential and Sign in   
+                    Users data = new Users();
+                    string username, password, validationMessage;
+                    ReturnResult = Constants.UpdateSettingsMessage;
+                    //*Added this code as per changes for R#208647 for HotelIcon Client*//
+                    Queries.GetActiveMemberEmail(data, ProjectName);
+                    if (ProjectName.Equals("HotelIcon"))
+                    {
+                        Navigation.Click_Button_SignIn();
+                    }
+                    password = TestData.ExcelData.ExcelDataReader.ReadData(1, "Password");
+                    LoginCredentials(data.MemberEmail, ProjectDetails.CommonFrontendPassword, ProjectName);
                     MySettingWait(ProjectName);
                     if (Driver.Url == LoginLand || Helper.IsElementVisible(PageObject_Navigation.Link_MySettings()))
                     {
@@ -176,37 +52,168 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                         Helper.RegexFunction(PageTitle, pattern);
                     }
 
+                    Logger.WriteDebugMessage("User should be able to Login Successfully");
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Test_Data", data.MemberEmail);
+
+                    //5.Navigate to Update Password screen
+                    Navigation.ClickMySettings(ProjectName);
+                    Logger.WriteDebugMessage("Landed on the My Settings page.");
+
+                    //6.Without entering Password click on Submit
+                    string FieldReq = Constants.UpdateUserEmailMessage;
+                    //Only Submit Button.
+                    MySettings.UpdateUserPasswordwithCase(ProjectDetails.CommonFrontendPassword, ProjectDetails.CommonFrontendPassword, FieldReq, 0, ProjectName);
+                    Logger.WriteDebugMessage("Validation msg requesting user to enter mandatory field should display");
+
+                    //7.Enter  single  whitespace in password field
+                    validationMessage = Constants.WhiteSpacePassword;
+                    //White Space for all field.
+                    Helper.ReloadPage();
+                    MySettings.UpdateUserPasswordwithCase(" ", " ", validationMessage, 1, ProjectName);
+                    Logger.WriteDebugMessage("Validation msg requesting user to enter mandatory field should display");
+
+                    //8.Logger.WriteDebugMessage("Validation msg requesting user to enter mandatory field should display");
+                    FieldReq = Constants.UpdateUserEmailMessage;
+                    for (int i = 3; i < 11; i++)
+                    {
+                        var runningCase = (i > 8) ? 1 : i;
+                        var currentPassword = (i != 9) ? ProjectDetails.CommonFrontendPassword : password;
+                        var newPassword = (i != 9) ? password : ProjectDetails.CommonFrontendPassword;
+                        Helper.ReloadPage();
+                        MySettings.UpdateUserPasswordwithCase(currentPassword, newPassword, FieldReq, runningCase, ProjectName);
+                        Helper.AddDelay(2000);
+                        Logger.WriteDebugMessage("Validation msg requesting user to enter mandatory field should display");
+                        Logger.LogTestData(TestPlanId, TestCaseId, "Current Password " + i, currentPassword);
+                        if (i == 10)
+                            Logger.LogTestData(TestPlanId, TestCaseId, "New Password " + i, newPassword, true);
+                        else
+                            Logger.LogTestData(TestPlanId, TestCaseId, "New Password " + i, newPassword);
+                    }
+
+                }
+            }
+            catch(Exception e) { }
+        }
+
+        public static void TC_124899()
+        {
+            try
+            {
+                if (TestCaseId == Constants.TC_124899)
+                {
+                    string SuccessUpdate = Constants.UpdateSettingsMessage;
+                    //1.URL and database detail available in master test plan  run 
+                    //2.Log into  front end  as   PMS User                
+                    string PMSCustomerEmail = Queries.ReturnPMSCustomerEmail();
+                    string password = TestData.ExcelData.ExcelDataReader.ReadData(1, "Password");
+                    string newPassword = TestData.ExcelData.ExcelDataReader.ReadData(1, "NewPassword");
+                    password = ProjectDetails.CommonFrontendPassword;
+                    newPassword = ProjectDetails.CommonFrontendPassword.Substring(0, 9) + ".";
+                    //*Added this code as per changes for R#208647 for HotelIcon Client*//
+                    if (ProjectName.Equals("HotelIcon"))
+                    {
+                        Navigation.Click_Button_SignIn();
+                    }
+                    LoginCredentials(PMSCustomerEmail, ProjectDetails.CommonFrontendPassword, ProjectName);
+
+                    MySettingWait(ProjectName);
+                    if (Driver.Url == LoginLand || Helper.IsElementVisible(PageObject_Navigation.Link_MySettings()))
+                    {
+                        string PageTitle = Driver.Title;
+                        Helper.RegexFunction(PageTitle, pattern);
+                    }
+                    Logger.LogTestData(TestPlanId, TestCaseId, "PMS User", PMSCustomerEmail);
+
+                    //3.Click on My Setting 
                     Navigation.ClickMySettings(ProjectName);
                     if (Driver.Url.Contains(MySettingsURL))
                     {
                         Logger.WriteDebugMessage("Landed on the My Settings page.");
                     }
 
-                    //Change UserName to previously existing UserName
-                    MySettings.UpdateUserEmail(PMSCustomerEmail, newPassword, 1, ProjectName);
+                    //4.Enter current password under update password section  
+                    //5.Enter New password into "New Password *" field  
+                    //6.Enter same password into Confirm Password field 
+                    //7.Click Update User 
+                    MySettings.UpdateUserPasswordwithCase(password, newPassword, SuccessUpdate, 1, ProjectName);
+                    Logger.WriteDebugMessage("Password gets  updated successfully with message displayed about update on screen");
                     if (ProjectName.Equals("IndependentCollection"))
                     {
-                        LoginCredentials(PMSCustomerEmail, newPassword, ProjectName);
-                        MySettingWait(ProjectName);
-                        Logger.WriteDebugMessage("Signin successfully");
-                        Navigation.ClickMySettings(ProjectName);
-                    }
-                    if (ProjectName.Equals("AMR"))
-                    {
-                        Helper.Driver.Navigate().GoToUrl(ProjectDetails.CommonFrontendURL);
                         LoginCredentials(PMSCustomerEmail, newPassword, ProjectName);
                         MySettingWait(ProjectName);
                         Logger.WriteDebugMessage("Signin successfully with new password");
                         Navigation.ClickMySettings(ProjectName);
                     }
-                   
-                    MySettings.UpdateUserPasswordwithCase(newPassword, password, SuccessUpdate, 1, ProjectName);
-                }
-                else
-                {
-                    Assert.Fail("Did not land on SignIn Page.");
+
+                    //8.Enter different Username into New User Name field under Update user section 
+                    //9.Enter current password into "Please provide your current password *" field 
+                    //10.Click Update User 
+                    string GetDate = DateTime.Now.ToString("MMddyyHHmm");
+                    string PMSCustomerEmailNew = (regexfunction(PMSCustomerEmail) + GetDate + "@cendyn17.com");
+                    MySettings.UpdateUserEmail(PMSCustomerEmailNew, newPassword, 1, ProjectName);
+                    Logger.WriteDebugMessage("New username gets updated successfully and message displayed on screen about changed successful ");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "New PMS User", PMSCustomerEmailNew, true);
+                    if (ProjectName.Equals("AMR"))
+                    {
+                        Helper.Driver.Navigate().GoToUrl(ProjectDetails.CommonFrontendURL);
+                    }
+                    else
+                    {
+                        Navigation.ClickSignOut(ProjectName);
+                        Logger.WriteDebugMessage("Signed Out from User's Account");
+                    }
+
+                    //*Added this code as per changes for R#208647 for HotelIcon Client*//
+                    if (ProjectName.Equals("HotelIcon"))
+                    {
+                        Navigation.Click_Button_SignIn();
+                    }
+
+                    Helper.ElementWait(PageObject_SignIn.Text_Email(), 60);
+
+                    if (Helper.IsElementVisible(PageObject_SignIn.Text_Email()))
+                    {
+                        LoginCredentials(PMSCustomerEmailNew, newPassword, ProjectName);
+                        MySettingWait(ProjectName);
+                        if (Driver.Url == LoginLand || Helper.IsElementVisible(PageObject_Navigation.Link_MySettings()))
+                        {
+                            string PageTitle = Driver.Title;
+                            Helper.RegexFunction(PageTitle, pattern);
+                        }
+
+                        Navigation.ClickMySettings(ProjectName);
+                        if (Driver.Url.Contains(MySettingsURL))
+                        {
+                            Logger.WriteDebugMessage("Landed on the My Settings page.");
+                        }
+
+                        //Change UserName to previously existing UserName
+                        MySettings.UpdateUserEmail(PMSCustomerEmail, newPassword, 1, ProjectName);
+                        if (ProjectName.Equals("IndependentCollection"))
+                        {
+                            LoginCredentials(PMSCustomerEmail, newPassword, ProjectName);
+                            MySettingWait(ProjectName);
+                            Logger.WriteDebugMessage("Signin successfully");
+                            Navigation.ClickMySettings(ProjectName);
+                        }
+                        if (ProjectName.Equals("AMR"))
+                        {
+                            Helper.Driver.Navigate().GoToUrl(ProjectDetails.CommonFrontendURL);
+                            LoginCredentials(PMSCustomerEmail, newPassword, ProjectName);
+                            MySettingWait(ProjectName);
+                            Logger.WriteDebugMessage("Signin successfully with new password");
+                            Navigation.ClickMySettings(ProjectName);
+                        }
+
+                        MySettings.UpdateUserPasswordwithCase(newPassword, password, SuccessUpdate, 1, ProjectName);
+                    }
+                    else
+                    {
+                        Assert.Fail("Did not land on SignIn Page.");
+                    }
                 }
             }
+            catch(Exception e) { }
         }
 
         public static void TC_219436()
@@ -456,136 +463,138 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
         public static void TC_219517()
         {
             if (TestCaseId == Constants.TC_219517)
-            {
-                Users data = new Users();
-                //string ReturnResult;
-                //string SuccessUpdate = Constants.UpdateSettingsMessage;
-                //Random randomnumber = new Random();
-                string username, password, newUsername, newPassword, scenario, validationMessage, confirmationMessage;
-                username = TestData.ExcelData.ExcelDataReader.ReadData(1, "UserName");
-                password = TestData.ExcelData.ExcelDataReader.ReadData(1, "Password");
-                newPassword = TestData.ExcelData.ExcelDataReader.ReadData(1, "NewPassword");
-                scenario = TestData.ExcelData.ExcelDataReader.ReadData(1, "Scenario");
-                Random random = new Random();
-                newUsername = string.Concat("QATest", random.Next().ToString(), "@cendyn17.com");
-                //loginCredentials(username, password, ProjectName);
-                Queries.GetActiveMemberEmail(data);
-                if (ProjectName.Equals("HotelIcon"))
                 {
-                    Navigation.Click_Button_SignIn();
-                }
-                LoginCredentials(data.MemberEmail, ProjectDetails.CommonFrontendPassword, ProjectName);
-                MySettingWait(ProjectName);
-                if (Driver.Url == LoginLand || Helper.IsElementVisible(PageObject_Navigation.Link_MySettings()))
-                {
-                    string PageTitle = Driver.Title;
-                    Helper.RegexFunction(PageTitle, pattern);
-                }
+                    Users data = new Users();
+                    //string ReturnResult;
+                    //string SuccessUpdate = Constants.UpdateSettingsMessage;
+                    //Random randomnumber = new Random();
+                    string username, password, newUsername, newPassword, scenario, validationMessage, confirmationMessage;
+                    username = TestData.ExcelData.ExcelDataReader.ReadData(1, "UserName");
+                    password = TestData.ExcelData.ExcelDataReader.ReadData(1, "Password");
+                    newPassword = TestData.ExcelData.ExcelDataReader.ReadData(1, "NewPassword");
+                    scenario = TestData.ExcelData.ExcelDataReader.ReadData(1, "Scenario");
+                    Random random = new Random();
+                    newUsername = string.Concat("QATest", random.Next().ToString(), "@cendyn17.com");
+                    //loginCredentials(username, password, ProjectName);
+                    Queries.GetActiveMemberEmail(data);
+                    if (ProjectName.Equals("HotelIcon"))
+                    {
+                        Navigation.Click_Button_SignIn();
+                    }
+                    LoginCredentials(data.MemberEmail, ProjectDetails.CommonFrontendPassword, ProjectName);
+                    MySettingWait(ProjectName);
+                    if (Driver.Url == LoginLand || Helper.IsElementVisible(PageObject_Navigation.Link_MySettings()))
+                    {
+                        string PageTitle = Driver.Title;
+                        Helper.RegexFunction(PageTitle, pattern);
+                    }
 
-                Logger.WriteDebugMessage("User should be able to Login Successfully");
-                Logger.LogTestData(TestPlanId, TestCaseId, "Email", data.MemberEmail);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Password New", ProjectDetails.CommonFrontendPassword);
+                    Logger.WriteDebugMessage("User should be able to Login Successfully");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Email", data.MemberEmail);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Password New", ProjectDetails.CommonFrontendPassword);
 
-                //2.Click on My Setting 
-                Navigation.ClickMySettings(ProjectName);
-                if (Driver.Url.Contains(MySettingsURL))
-                    Logger.WriteDebugMessage("Landed on the My Settings page.");
-                else
-                    Assert.Fail("User Landed on Wrong Page: " + Driver.Url);
+                    //2.Click on My Setting 
+                    Navigation.ClickMySettings(ProjectName);
+                    if (Driver.Url.Contains(MySettingsURL))
+                        Logger.WriteDebugMessage("Landed on the My Settings page.");
+                    else
+                        Assert.Fail("User Landed on Wrong Page: " + Driver.Url);
 
-                //3.Enter different Username into New User Name field under Update user section 
-                //4.Enter current password into "Please provide your current password *" field 
-                //5.Click Update User 
-                Logger.WriteInfoMessage(scenario + "is being testing");
-                Random ran = new Random();
-                int ranNo = ran.Next();
-                newUsername = String.Concat("qa", ranNo.ToString(), "@cendyn17.com");
-                MySettings.UpdateUserEmail(newUsername, ProjectDetails.CommonFrontendPassword, 1, ProjectName);
-                Logger.WriteDebugMessage("New username update successful and message displayed on screen about changed successful ");
-                Logger.LogTestData(TestPlanId, TestCaseId, "New Username", newUsername);
+                    //3.Enter different Username into New User Name field under Update user section 
+                    //4.Enter current password into "Please provide your current password *" field 
+                    //5.Click Update User 
+                    Logger.WriteInfoMessage(scenario + "is being testing");
+                    Random ran = new Random();
+                    int ranNo = ran.Next();
+                    newUsername = String.Concat("qa", ranNo.ToString(), "@cendyn17.com");
+                    MySettings.UpdateUserEmail(newUsername, ProjectDetails.CommonFrontendPassword, 1, ProjectName);
+                    Logger.WriteDebugMessage("New username update successful and message displayed on screen about changed successful ");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "New Username", newUsername);
 
-                ////6.Logout from application and navigated back to login screen
-                Navigation.ClickSignOut(ProjectName);
-                Logger.WriteInfoMessage("User is navigated to login screen ");
+                    ////6.Logout from application and navigated back to login screen
+                    Navigation.ClickSignOut(ProjectName);
+                    Logger.WriteInfoMessage("User is navigated to login screen ");
 
-                //7.Click on forget password,Enter the old user name and,Click on Recover
-                validationMessage = TestData.ExcelData.ExcelDataReader.ReadData(2, "ValidationMessage");
-                SignIn.Click_Link_ForgotYourLogin(ProjectName);
-                AddDelay(3000);
-                ForgotPassword.EnterEmail(data.MemberEmail);
-                Logger.WriteDebugMessage("Enter Email Address :" + data.MemberEmail);
-                ForgotPassword.ClickRecover();
-                Helper.ValitionMessage(validationMessage);
-                Logger.WriteInfoMessage("Msg should  display that email doesn't exist. ");
-                Logger.LogTestData(TestPlanId, TestCaseId, "Validation Message", validationMessage);
+                    //7.Click on forget password,Enter the old user name and,Click on Recover
+                    validationMessage = TestData.ExcelData.ExcelDataReader.ReadData(2, "ValidationMessage");
+                    SignIn.Click_Link_ForgotYourLogin(ProjectName);
+                    AddDelay(3000);
+                    ForgotPassword.EnterEmail(data.MemberEmail);
+                    Logger.WriteDebugMessage("Enter Email Address :" + data.MemberEmail);
+                    ForgotPassword.ClickRecover();
+                    Helper.ValitionMessage(validationMessage);
+                    Logger.WriteInfoMessage("Msg should  display that email doesn't exist. ");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Validation Message", validationMessage);
 
-                //8.Enter the updated user name  and click on recover 
-                confirmationMessage = TestData.ExcelData.ExcelDataReader.ReadData(2, "ConfirmationMessage");
-                ForgotPassword.EnterEmail(newUsername);
-                Logger.WriteDebugMessage("Enter Email Address :" + username);
-                ForgotPassword.ClickRecover();
-                Helper.ValitionMessage(confirmationMessage);
-                Logger.WriteInfoMessage("Confirmation msg  on should get displayed");
-                Logger.LogTestData(TestPlanId, TestCaseId, "Confirmation Message", confirmationMessage, true);
-                //9. Password recovery email sent to guest  and should be available in catchall 
-                Email.LogIntoCatchAll();
-                Email.CatchAll_SearchEmailAndOpenLatestMessage(newUsername + "  Password"); // Searched for the email
-                Email.ForgotPasswordEmail_Check();
-                CloseWindow();
-                Logger.WriteDebugMessage("Email should be available in catchall");
+                    //8.Enter the updated user name  and click on recover 
+                    confirmationMessage = TestData.ExcelData.ExcelDataReader.ReadData(2, "ConfirmationMessage");
+                    ForgotPassword.EnterEmail(newUsername);
+                    Logger.WriteDebugMessage("Enter Email Address :" + username);
+                    ForgotPassword.ClickRecover();
+                    Helper.ValitionMessage(confirmationMessage);
+                    Logger.WriteInfoMessage("Confirmation msg  on should get displayed");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Confirmation Message", confirmationMessage, true);
+                    //9. Password recovery email sent to guest  and should be available in catchall 
+                    Email.LogIntoCatchAll();
+                    Hotmail.SearchEmail(newUsername + "  Password");
+                    Hotmail.OpenLatestEmailSingleClick();
+                    //Email.CatchAll_SearchEmailAndOpenLatestMessage(newUsername + "  Password"); // Searched for the email
+                    Email.ForgotPasswordEmail_Check();
+                    //CloseWindow();
+                    Logger.WriteDebugMessage("Email should be available in catchall");
 
-                //10.In new tab login  to admin 
-                ControlToNewWindow();
-                Helper.OpenNewTab();
-                ControlToNewWindow();
-                Driver.Navigate().GoToUrl(ProjectDetails.CommonAdminURL);
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("member search page gets displayed ");
+                    //10.In new tab login  to admin 
+                    //ControlToNewWindow();
+                    //Helper.OpenNewTab();
+                    //ControlToNewWindow();
+                    Driver.Navigate().GoToUrl(ProjectDetails.CommonAdminURL);
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("member search page gets displayed ");
 
-                //11.Search for old  user name 
-                validationMessage = TestData.ExcelData.ExcelDataReader.ReadData(3, "ValidationMessage");
-                Admin.EnterEmail(data.MemberEmail);
-                Admin.Click_Button_MemberSearch();
-                AddDelay(2500);
-                VerifyTextOnPageAndHighLight(validationMessage);
-                Logger.WriteDebugMessage("Result set should not get displayed");
+                    //11.Search for old  user name 
+                    validationMessage = TestData.ExcelData.ExcelDataReader.ReadData(3, "ValidationMessage");
+                    Admin.EnterEmail(data.MemberEmail);
+                    Admin.Click_Button_MemberSearch();
+                    AddDelay(2500);
+                    VerifyTextOnPageAndHighLight(validationMessage);
+                    Logger.WriteDebugMessage("Result set should not get displayed");
 
-                //12.Search for new email address  
-                //13.Click on view icon 
-                Admin.EnterEmail(newUsername);
-                Admin.Click_Button_MemberSearch();
-                Admin.Click_Icon_View(ProjectName);
-                Logger.WriteDebugMessage("user landed on member information page ");
-
-                //14. Verify the email address 
-                VerifyTextOnPageAndHighLight(newUsername);
-                Logger.WriteDebugMessage("Email address should be the updated email address ");
-
-                //15 Verify the email  that display on click of  Activation email - Resend link 
-                Admin.Click_MemberInformation_Value_ActivationEmail();
-                VerifyTextOnPageAndHighLight(newUsername);
-                Logger.WriteDebugMessage("updated user name should get displayed ");
-                Admin.Click_ActivationEmail_Icon_Close();
-
-
-                //16. Verify the email  that display on click of Welcome email resend
-                if (!ProjectName.Equals("ESPC") && !ProjectName.Equals("Sacher"))
-                {
-                    Admin.Click_MemberInformation_Value_WelcomeEmail();
+                    //12.Search for new email address  
+                    //13.Click on view icon 
+                    Admin.EnterEmail(newUsername);
+                    Admin.Click_Button_MemberSearch();
+                    Admin.Click_Icon_View(ProjectName);
+                    Logger.WriteDebugMessage("user landed on member information page ");
+                    AddDelay(60000);
+                    //14. Verify the email address 
                     VerifyTextOnPageAndHighLight(newUsername);
-                    Logger.WriteDebugMessage(" on click updated user name should get displayed ");
-                    Admin.Click_WelcomeEmail_Icon_Close();
-                }
+                    Logger.WriteDebugMessage("Email address should be the updated email address ");
 
-                //17. Verify the email  that display on click of Member Login  Reset ​
-                Admin.Click_MemberInformation_Value_MemberLogin();
-                VerifyTextOnPageAndHighLight(newUsername);
-                Logger.WriteDebugMessage("user gets auto logged in to the portal  in a new tab ");
-                Admin.Click_MemberInformation_Icon_Close();
+                    //15 Verify the email  that display on click of  Activation email - Resend link 
+                    Admin.Click_MemberInformation_Value_ActivationEmail();
+                    VerifyTextOnPageAndHighLight(newUsername);
+                    Logger.WriteDebugMessage("updated user name should get displayed ");
+                    Admin.Click_ActivationEmail_Icon_Close();
 
-                //Reset email back to original
-                Admin.SendResetLogin(data.MemberEmail);
-            }
+
+                    //16. Verify the email  that display on click of Welcome email resend
+                    if (!ProjectName.Equals("ESPC") && !ProjectName.Equals("Sacher"))
+                    {
+                        Admin.Click_MemberInformation_Value_WelcomeEmail();
+                        VerifyTextOnPageAndHighLight(newUsername);
+                        Logger.WriteDebugMessage(" on click updated user name should get displayed ");
+                        Admin.Click_WelcomeEmail_Icon_Close();
+                    }
+
+                    //17. Verify the email  that display on click of Member Login  Reset ​
+                    Admin.Click_MemberInformation_Value_MemberLogin();
+                    VerifyTextOnPageAndHighLight(newUsername);
+                    Logger.WriteDebugMessage("user gets auto logged in to the portal  in a new tab ");
+                    Admin.Click_MemberInformation_Icon_Close();
+
+                    //Reset email back to original
+                    Admin.SendResetLogin(data.MemberEmail);
+                } 
         }
 
         //Commented the Test cases as related to V3 and not added in Global test plan

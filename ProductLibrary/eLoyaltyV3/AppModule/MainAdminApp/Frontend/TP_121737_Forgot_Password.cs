@@ -37,10 +37,11 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
 
                 //4.Check catchall for the recovery email.
                 Email.LogIntoCatchAll();
-                Helper.ReloadPage();
-                Hotmail.CheckOutLook();
+                //Helper.ReloadPage();
+                //Hotmail.CheckOutLook();
                 Hotmail.SearchEmail(data.MemberEmail);
-                try
+                Hotmail.OpenLatestEmailSingleClick();
+                /*try
                 {
                     //IWebElement element = Driver.FindElement(By.CssSelector("._lvv_11"));
                     //((IJavaScriptExecutor)Driver).ExecuteScript("arguments[0].removeAttribute('style')", element);
@@ -58,7 +59,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                     if (!flag1)
                         ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][3]")));
                     Logger.WriteDebugMessage("Failed due to below error" + ex.Message);
-                }
+                }*/
                 
                 Helper.PageDown();
                 Logger.WriteDebugMessage("Opened Latest Email.");

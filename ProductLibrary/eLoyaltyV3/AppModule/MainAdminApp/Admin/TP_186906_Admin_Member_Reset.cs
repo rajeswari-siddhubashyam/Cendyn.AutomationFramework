@@ -35,7 +35,8 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 //3.Click the "Member Login: Resend" link.
                 //4.Change the member's email and click "Update".
                 string updateEmail = String.Concat("QATest", randum.Next().ToString(), "@cendyn17.com");
-                Admin.SendResetLogin(updateEmail);
+                Admin.SendResetLogin(updateEmail); 
+                AddDelay(60000);
                 VerifyTextOnPage("Reset successful.");
                 Logger.WriteDebugMessage("'Reset successful' message is displayed.");
                 Logger.LogTestData(TestPlanId, TestCaseId, "Updated Email", updateEmail);
@@ -120,52 +121,53 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
         public static void TC_115266()
         {
             if (TestCaseId == Constants.TC_115266)
-            {
-                string searchEmail = "testdivya";
-                Users data = new Users();
-
-                //1. Login to Admin              
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
-
-                //2.Search for a member and click the "View" icon.
-                if (ProjectName.Equals("SandyLane") || ProjectName.Equals("AquaAston"))
                 {
-                    Admin.SelectMemberStatus("Active");
-                }
-                else
-                {
-                    Admin.EnterEmail(searchEmail);
-                }
-                string value = String.Concat(searchEmail, "@", "Cendyn17.com");
-                Admin.Click_Button_MemberSearch();
-                Admin.Click_Icon_View(ProjectName);
-                Logger.WriteDebugMessage("Land on the 'Member Information' tab.");
-                Logger.LogTestData(TestPlanId, TestCaseId, "Test Data", searchEmail);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Email", value, true);
+                    string searchEmail = "testdivya";
+                    Users data = new Users();
 
-                //3.Click the "Member Login: Resend" link.
-                //4.Change the member's email and click "Update".
-                string updateEmail = MakeCatchAllUnique(value);
-                Admin.SendResetLogin(updateEmail);
-                VerifyTextOnPage("Reset successful.");
-                Logger.WriteDebugMessage("'Reset successful' message is displayed.");
+                    //1. Login to Admin              
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
 
-                //5.Click the "Welcome Email Resend" link.
-                if (!(ProjectName.Equals("EHPC") || (ProjectName.Equals("Sacher"))))
-                {
-                    Admin.Click_MemberInformation_Value_WelcomeEmail();
-                    string value1 = Getdata(PageObject_Admin.MemberInformation_WelcomeEmail_UserLogin());
-                    if (value1.Equals(updateEmail))
+                    //2.Search for a member and click the "View" icon.
+                    if (ProjectName.Equals("SandyLane") || ProjectName.Equals("AquaAston"))
                     {
-                        Logger.WriteDebugMessage("The updated email address is displayed in the popup.");
+                        Admin.SelectMemberStatus("Active");
                     }
                     else
                     {
-                        Assert.Fail("The updated email address is NOT displayed in the popup");
+                        Admin.EnterEmail(searchEmail);
                     }
-                }
-            }
+                    string value = String.Concat(searchEmail, "@", "Cendyn17.com");
+                    Admin.Click_Button_MemberSearch();
+                    Admin.Click_Icon_View(ProjectName);
+                    Logger.WriteDebugMessage("Land on the 'Member Information' tab.");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Test Data", searchEmail);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Email", value, true);
+
+                    //3.Click the "Member Login: Resend" link.
+                    //4.Change the member's email and click "Update".
+                    string updateEmail = MakeCatchAllUnique(value);
+                    Admin.SendResetLogin(updateEmail);
+                    AddDelay(60000);
+                    VerifyTextOnPage("Reset successful.");
+                    Logger.WriteDebugMessage("'Reset successful' message is displayed.");
+                    AddDelay(30000);
+                    //5.Click the "Welcome Email Resend" link.
+                    if (!(ProjectName.Equals("EHPC") || (ProjectName.Equals("Sacher"))))
+                    {
+                        Admin.Click_MemberInformation_Value_WelcomeEmail();
+                        string value1 = Getdata(PageObject_Admin.MemberInformation_WelcomeEmail_UserLogin());
+                        if (value1.Equals(updateEmail))
+                        {
+                            Logger.WriteDebugMessage("The updated email address is displayed in the popup.");
+                        }
+                        else
+                        {
+                            Assert.Fail("The updated email address is NOT displayed in the popup");
+                        }
+                    }
+             }
         }
 
         public static void TC_115267()

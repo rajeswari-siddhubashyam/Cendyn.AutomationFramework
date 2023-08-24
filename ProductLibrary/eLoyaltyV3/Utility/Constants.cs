@@ -643,7 +643,7 @@ namespace eLoyaltyV3.Utility
         #region[CommonData]
         public static string CommonPassword = "Cendyn123$";
         public static string CatchAllEmail = "catchall@cendyn17.com";
-        public static string CatchAllPassword = "Autom4tion12346$";
+        public static string CatchAllPassword = "vy8UQZ*$2ABHPM";
         #endregion[CommonData]
 
         #region[ForgotPassword]

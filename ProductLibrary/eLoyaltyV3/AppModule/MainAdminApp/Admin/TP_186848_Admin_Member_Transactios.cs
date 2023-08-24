@@ -85,463 +85,472 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
         public static void TC_220655()
         {
             if (TestCaseId == Constants.TC_220655)
-            {
-                //1.Log into admin
-                string email, reason, points, hotel, expiration, internalComments, memberComments, bccEmail;
-                Users data = new Users();
-                Helper.ElementWait(PageObject_Admin.Admin_Text_UserName(), 60);
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
-
-                //2.Search for an active  profile 
-                //3.click on view 
-                Queries.GetActiveMemberEmail(data);
-                Admin.EnterEmail(data.MemberEmail);
-                Admin.Click_Button_MemberSearch();
-                Admin.Click_Icon_View(ProjectName);
-                Logger.WriteDebugMessage("Land on the 'Member Information'.");
-                Logger.LogTestData(TestPlanId, TestCaseId, "Active Email", data.MemberEmail);
-                //4.Navigate to Member Transaction 
-                Admin.Click_Tab_MemberTransactions();
-                Helper.PageDown();
-                Logger.WriteDebugMessage("Land on the Member Transactions.");
-
-                //5.Click "Add Transactions"
-                //6.Validate the field displayed 
-                Admin.Click_Button_AddTransaction();
-                ValidateTextOnPage("Transaction Reason:");
-                ValidateTextOnPage("Points:");
-                ValidateTextOnPage("Expiration Date:");
-                ValidateTextOnPage("Hotel:");
-                ValidateTextOnPage("Internal Comments:");
-                ValidateTextOnPage("Comments to Member:");
-                ValidateTextOnPage("Send Email to Member");
-                ValidateTextOnPage("Add Comments to Email");
-                ValidateTextOnPage("Member Email:");
-                ValidateTextOnPage("BCC");
-                Logger.WriteDebugMessage("All field should be displayed nder Add Transaction pop up");
-
-                //7.Keep all fields blank and click on Save button
-                Admin.Click_Button_Save();
-                AddDelay(2500);
-                Logger.WriteDebugMessage("'Please select a transaction reason,Please select a Hotel,Please enter internal comments,Please enter A pointswhen positive value , please enter Expiration date' message will displayed.");
-                VerifyTextOnPage("Please select a transaction reason.");
-                VerifyTextOnPage("Please enter internal comments.");
-                VerifyTextOnPage("Please enter points");
-                VerifyTextOnPage("Please enter Expiration Date if you are adding points.");
-
-                //8.Select Transaction Reason from  Transaction Reason Drop down               
-                if (ProjectName.Equals("IndependentCollection") || ProjectName.Equals("HotelIcon") || ProjectName.Equals("Fraser"))
                 {
-                    reason = TestData.ExcelData.TestDataReader.ReadData(1, "FraserReason");
-                }
-                else
-                {
-                    reason = TestData.ExcelData.TestDataReader.ReadData(1, "Reason");
-                }
+                    //1.Log into admin
+                    string email, reason, points, hotel, expiration, internalComments, memberComments, bccEmail;
+                    Users data = new Users();
+                    Helper.ElementWait(PageObject_Admin.Admin_Text_UserName(), 60);
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
+
+                    //2.Search for an active  profile 
+                    //3.click on view 
+                    Queries.GetActiveMemberEmail(data);
+                    Admin.EnterEmail(data.MemberEmail);
+                    Admin.Click_Button_MemberSearch();
+                    Admin.Click_Icon_View(ProjectName);
+                    Logger.WriteDebugMessage("Land on the 'Member Information'.");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Active Email", data.MemberEmail);
+                    //4.Navigate to Member Transaction 
+                    Admin.Click_Tab_MemberTransactions();
+                    Helper.PageDown();
+                    Logger.WriteDebugMessage("Land on the Member Transactions.");
+
+                    //5.Click "Add Transactions"
+                    //6.Validate the field displayed 
+                    Admin.Click_Button_AddTransaction();
+                    ValidateTextOnPage("Transaction Reason:");
+                    ValidateTextOnPage("Points:");
+                    ValidateTextOnPage("Expiration Date:");
+                    ValidateTextOnPage("Hotel:");
+                    ValidateTextOnPage("Internal Comments:");
+                    ValidateTextOnPage("Member Comments:");
+                    ValidateTextOnPage("Send Email to Member");
+                    ValidateTextOnPage("Add Comments to Email");
+                    ValidateTextOnPage("Member Email:");
+                    ValidateTextOnPage("BCC");
+                    Logger.WriteDebugMessage("All field should be displayed nder Add Transaction pop up");
+
+                    //7.Keep all fields blank and click on Save button
+                    Admin.Click_Button_Save();
+                    AddDelay(2500);
+                    Logger.WriteDebugMessage("'Please select a transaction reason,Please select a Hotel,Please enter internal comments,Please enter A pointswhen positive value , please enter Expiration date' message will displayed.");
+                    VerifyTextOnPage("Please select a transaction reason.");
+                    VerifyTextOnPage("Please enter internal comments.");
+                    VerifyTextOnPage("Please enter points");
+                    VerifyTextOnPage("Please enter Expiration Date if you are adding points.");
+
+                    //8.Select Transaction Reason from  Transaction Reason Drop down               
+                    if (ProjectName.Equals("IndependentCollection") || ProjectName.Equals("HotelIcon") || ProjectName.Equals("Fraser"))
+                    {
+                        reason = TestData.ExcelData.TestDataReader.ReadData(1, "FraserReason");
+                    }
+                    else
+                    {
+                        reason = TestData.ExcelData.TestDataReader.ReadData(1, "Reason");
+                    }
 
 
-                Admin.SelectTransactionReason(reason);
-                Logger.WriteDebugMessage("Displayed as selected.");
+                    Admin.SelectTransactionReason(reason);
+                    Logger.WriteDebugMessage("Displayed as selected.");
 
-                Logger.LogTestData(TestPlanId, TestCaseId, "Transaction Reason", reason);
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Transaction Reason", reason);
 
-                //9.Enter negative value in Points drop down.
-                points = TestData.ExcelData.TestDataReader.ReadData(1, "Points");
-                Admin.Enter_Text_Points(points);
-                Logger.WriteDebugMessage("It should  allow user to enter negative values.");
-                Logger.LogTestData(TestPlanId, TestCaseId, "Points", points);
+                    //9.Enter negative value in Points drop down.
+                    points = TestData.ExcelData.TestDataReader.ReadData(1, "Points");
+                    Admin.Enter_Text_Points(points);
+                    Logger.WriteDebugMessage("It should  allow user to enter negative values.");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Points", points);
 
-                //10.Select hotel from Hotel drop down
-                Queries.IdentifyHotel(data);
-                hotel = data.PropertyName;
-                Admin.SelectHotel(hotel);
-                Logger.WriteDebugMessage("Displayed as selected.");
-                Logger.LogTestData(TestPlanId, TestCaseId, "Propert Name", hotel);
+                    //10.Select hotel from Hotel drop down
+                    Queries.IdentifyHotel(data);
+                    hotel = data.PropertyName;
+                    Admin.SelectHotel(hotel);
+                    Logger.WriteDebugMessage("Displayed as selected.");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Propert Name", hotel);
 
-                //11.Paste/ Enter more than 500 all form characters in Internal Comments text area 
-                internalComments = TestData.ExcelData.TestDataReader.ReadData(1, "InternalComments");
-                Admin.EnterInternalComments(internalComments);
-                string value = Helper.Getdata(PageObject_Admin.Text_InternalComments());
-                if (value.Length.Equals(500))
-                {
-                    Logger.WriteDebugMessage("It should not allow user to enter more than 500 characters.");
-                }
-                else
-                {
-                    Assert.Fail("It is allowing user to enter more than 500 characters.");
-                }
+                    //11.Paste/ Enter more than 500 all form characters in Internal Comments text area 
+                    internalComments = TestData.ExcelData.TestDataReader.ReadData(1, "InternalComments");
+                    Admin.EnterInternalComments(internalComments);
+                    string value = Helper.Getdata(PageObject_Admin.Text_InternalComments());
+                    if (value.Length.Equals(500))
+                    {
+                        Logger.WriteDebugMessage("It should not allow user to enter more than 500 characters.");
+                    }
+                    else
+                    {
+                        Assert.Fail("It is allowing user to enter more than 500 characters.");
+                    }
 
-                //12.Paste/ Enter more than 500 all form characters in Member Comments text area 
-                memberComments = TestData.ExcelData.TestDataReader.ReadData(1, "MemberComments");
-                Admin.EnterCommentsToGuest(memberComments);
-                string value1 = Helper.Getdata(PageObject_Admin.Text_CommentsToGuest());
-                if (value1.Length.Equals(500))
-                {
-                    Logger.WriteDebugMessage("It should not allow user to enter more than 500 characters.");
-                }
-                else
-                {
-                    Assert.Fail("It is allowing user to enter more than 500 characters.");
-                }
+                    //12.Paste/ Enter more than 500 all form characters in Member Comments text area 
+                    memberComments = TestData.ExcelData.TestDataReader.ReadData(1, "MemberComments");
+                    Admin.EnterCommentsToGuest(memberComments);
+                    string value1 = Helper.Getdata(PageObject_Admin.Text_CommentsToGuest());
+                    if (value1.Length.Equals(500))
+                    {
+                        Logger.WriteDebugMessage("It should not allow user to enter more than 500 characters.");
+                    }
+                    else
+                    {
+                        Assert.Fail("It is allowing user to enter more than 500 characters.");
+                    }
 
-                //13.Enter valid email address in member email       
-                expiration = TestData.ExcelData.TestDataReader.ReadData(1, "Expiration");
-                Admin.EnterExpiration(expiration);
-                Logger.WriteDebugMessage("information should get saved & member transaction page should be displayed.");
-                Logger.LogTestData(TestPlanId, TestCaseId, "Expiration Date", expiration);
+                    //13.Enter valid email address in member email       
+                    expiration = TestData.ExcelData.TestDataReader.ReadData(1, "Expiration");
+                    Admin.EnterExpiration(expiration);
+                    Logger.WriteDebugMessage("information should get saved & member transaction page should be displayed.");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Expiration Date", expiration);
 
-                //14.Do not check, check box for Send Email to Member
-                //15.Check check box for Add Comments to Email
-                Admin.Click_RadioButton_AddCommentsToEmail();
-                Logger.WriteDebugMessage("should get checked");
+                    //14.Do not check, check box for Send Email to Member
+                    //15.Check check box for Add Comments to Email
+                    Admin.Click_RadioButton_AddCommentsToEmail();
+                    Logger.WriteDebugMessage("should get checked");
 
-                //16.Click on save button.
-                Admin.Click_Button_Save();
-                VerifyTextOnPage("Save Successfull");
-                Logger.WriteDebugMessage("Information should get saved and email should not be sent to member.");
+                    //16.Click on save button.
+                    Admin.Click_Button_Save();
+                    VerifyTextOnPage("Save Successfull");
+                    Logger.WriteDebugMessage("Information should get saved and email should not be sent to member.");
 
-                //17.Navigate to catchall and check for the email
-                OpenNewTab();
-                ControlToNewWindow();
-                Email.LogIntoCatchAll();
-                Hotmail.OutLookSearchEmail(data.MemberEmail + " " + points);
-                VerifyTextOnPage("We didn't find anything");
-                Logger.WriteDebugMessage("Email should not be triggered for the Member Email");
-                Logger.LogTestData(TestPlanId, TestCaseId, "Email triigered for", data.MemberEmail, true);
-                ControlToPreviousWindow();
+                    //17.Navigate to catchall and check for the email
+                    OpenNewTab();
+                    ControlToNewWindow();
+                    Email.LogIntoCatchAll();
+                    Hotmail.OutLookSearchEmail(data.MemberEmail + " " + points);
+                    VerifyTextOnPage("We didn't find anything");
+                    Logger.WriteDebugMessage("Email should not be triggered for the Member Email");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Email triigered for", data.MemberEmail, true);
+                    ControlToPreviousWindow();
 
-                //19.Click on Add transaction button 
-                Admin.Click_Button_AddTransaction();
-                Logger.WriteDebugMessage("Add Transaction pop up should be displayed");
+                    //19.Click on Add transaction button 
+                    Admin.Click_Button_AddTransaction();
+                    Logger.WriteDebugMessage("Add Transaction pop up should be displayed");
 
-                //20.Click member email to change the email
-                Admin.VerifyMemberEmailField();
+                    //20.Click member email to change the email
+                    Admin.VerifyMemberEmailField();
 
-                //21.Fill all required fields on Add Transaction page  and Click Save
-                //NOTE: Note down the number of points entered in Points field and check the checkbox for Send Email to Member and Add Valid email address in BBC Email
-                if (ProjectName.Equals("IndependentCollection") || ProjectName.Equals("HotelIcon"))
-                    reason = TestData.ExcelData.TestDataReader.ReadData(2, "IC_Reason");
-                else
-                    reason = TestData.ExcelData.TestDataReader.ReadData(2, "Reason");
-                points = TestData.ExcelData.TestDataReader.ReadData(2, "Points");
-                Queries.IdentifyHotel(data);
-                hotel = data.PropertyName;
-                internalComments = TestData.ExcelData.TestDataReader.ReadData(2, "InternalComments");
-                memberComments = TestData.ExcelData.TestDataReader.ReadData(2, "MemberComments");
-                bccEmail = Helper.MakeCatchAllUnique(TestData.ExcelData.TestDataReader.ReadData(2, "BCCEmail"));
-                expiration = TestData.ExcelData.TestDataReader.ReadData(2, "Expiration");
-                Admin.AddTransaction(reason, points, expiration, internalComments, memberComments, ProjectName);
-                Admin.EnterBCC(bccEmail);
+                    //21.Fill all required fields on Add Transaction page  and Click Save
+                    //NOTE: Note down the number of points entered in Points field and check the checkbox for Send Email to Member and Add Valid email address in BBC Email
+                    if (ProjectName.Equals("IndependentCollection") || ProjectName.Equals("HotelIcon"))
+                        reason = TestData.ExcelData.TestDataReader.ReadData(2, "IC_Reason");
+                    else
+                        reason = TestData.ExcelData.TestDataReader.ReadData(2, "Reason");
+                    points = TestData.ExcelData.TestDataReader.ReadData(2, "Points");
+                    Queries.IdentifyHotel(data);
+                    hotel = data.PropertyName;
+                    internalComments = TestData.ExcelData.TestDataReader.ReadData(2, "InternalComments");
+                    memberComments = TestData.ExcelData.TestDataReader.ReadData(2, "MemberComments");
+                    bccEmail = Helper.MakeCatchAllUnique(TestData.ExcelData.TestDataReader.ReadData(2, "BCCEmail"));
+                    expiration = TestData.ExcelData.TestDataReader.ReadData(2, "Expiration");
+                    Admin.AddTransaction(reason, points, expiration, internalComments, memberComments, ProjectName);
+                    Admin.EnterBCC(bccEmail);
 
-                Admin.SelectHotel(hotel);
-                Admin.Click_Button_Save();
-                VerifyTextOnPage("Save Successfull");
-                Logger.WriteDebugMessage(" Information should get saved and email should be sent to associated member.");
+                    Admin.SelectHotel(hotel);
+                    Admin.Click_Button_Save();
+                    VerifyTextOnPage("Save Successfull");
+                    Logger.WriteDebugMessage(" Information should get saved and email should be sent to associated member.");
 
-                //22.Open catchall account and Look for member email
-                //23.Check the member email and make sure the "Member Comments" are displayed on the email.                
-                ControlToNewWindow();
-                Helper.ReloadPage();
-                Hotmail.SearchEmailAndOpenLatestEmail(data.MemberEmail + " " + points);
-                Driver.Manage().Window.Maximize();
-                VerifyTextOnPageAndHighLight(points);
-                CloseWindow();
-                ControlToPreviousWindow();
-                Logger.WriteDebugMessage("The Member Comments are displayed on the email.");
+                    //22.Open catchall account and Look for member email
+                    //23.Check the member email and make sure the "Member Comments" are displayed on the email.                
+                    ControlToNewWindow();
+                    Helper.ReloadPage();
+                    Hotmail.SearchEmailAndOpenLatestEmail(data.MemberEmail + " " + points);
+                    Driver.Manage().Window.Maximize();
+                    VerifyTextOnPageAndHighLight(points);
+                    //CloseWindow();
+                    //ControlToPreviousWindow();
+                    Logger.WriteDebugMessage("The Member Comments are displayed on the email.");
 
-                //24.Open catchall account and Look for BCC email
-                //25.Check the member email and make sure the "Member Comments" are displayed on the email.
-                /// Commented the code as BCC email in not getting triggred in CatchALL
-                //ControlToNewWindow();
-                //Helper.ReloadPage();
-                //Hotmail.SearchEmailAndOpenLatestEmail(bccEmail);
-                //VerifyTextOnPageAndHighLight(points);
-                //Logger.WriteDebugMessage("The Comments are displayed on the email.");
+                    //24.Open catchall account and Look for BCC email
+                    //25.Check the member email and make sure the "Member Comments" are displayed on the email.
+                    /// Commented the code as BCC email in not getting triggred in CatchALL
+                    //ControlToNewWindow();
+                    //Helper.ReloadPage();
+                    //Hotmail.SearchEmailAndOpenLatestEmail(bccEmail);
+                    //VerifyTextOnPageAndHighLight(points);
+                    //Logger.WriteDebugMessage("The Comments are displayed on the email.");
 
             }
         }
 
         public static void TC_220919()
-        {
-            if (TestCaseId == Constants.TC_220919)
-            {
-                // Pre-requisites
-                string email, reason, points, hotel, expiration, internalComments, memberComments;
-                bool value;
-                Users data = new Users();
-
-                //1.Log into Loyalty admin.                                
-                Helper.ElementWait(PageObject_Admin.Admin_Text_UserName(), 60);
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
-
-                //2.Enter data in Email field and click on Search
-                //3.Click on View Icon
-                Queries.GetActiveMemberEmail(data);
-                Admin.EnterEmail(data.MemberEmail);
-                Admin.Click_Button_MemberSearch();
-                Admin.Click_Icon_View(ProjectName);
-                Logger.WriteDebugMessage("Land on the 'Member Information'.");
-                Logger.LogTestData(TestPlanId, TestCaseId, "Active Email", data.MemberEmail, true);
-
-                //4.Set member status as Inactive displaying under  member information section.
-                Admin.SelectStatus("Inactive");
-                Logger.WriteDebugMessage("Member status should be set to Inactive");
-
-                //5.Click on Member transaction page and Verify Visiblity of Add Transaction button
-                Admin.Click_Tab_MemberTransactions();
-                Helper.PageDown();
-                value = IsElementVisible(PageObject_Admin.Button_AddTransactions());
-                if (value.Equals(false))
+        { if (TestCaseId == Constants.TC_220919)
                 {
-                    Logger.WriteDebugMessage("Add Transaction button should not be displayed on member transaction page.");
+                    // Pre-requisites
+                    string email, reason, points, hotel, expiration, internalComments, memberComments;
+                    bool value;
+                    Users data = new Users();
+
+                    //1.Log into Loyalty admin.                                
+                    Helper.ElementWait(PageObject_Admin.Admin_Text_UserName(), 60);
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
+
+                    //2.Enter data in Email field and click on Search
+                    //3.Click on View Icon
+                    Queries.GetActiveMemberEmail(data);
+                    Admin.EnterEmail(data.MemberEmail);
+                    Admin.Click_Button_MemberSearch();
+                    Admin.Click_Icon_View(ProjectName);
+                    Logger.WriteDebugMessage("Land on the 'Member Information'.");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Active Email", data.MemberEmail, true);
+
+                    //4.Set member status as Inactive displaying under  member information section.
+                    Admin.SelectStatus("Inactive");
+                    Logger.WriteDebugMessage("Member status should be set to Inactive");
+
+                    //5.Click on Member transaction page and Verify Visiblity of Add Transaction button
+                    Admin.Click_Tab_MemberTransactions();
+                    Helper.PageDown();
+                    value = IsElementVisible(PageObject_Admin.Button_AddTransactions());
+                    if (value.Equals(false))
+                    {
+                        Logger.WriteDebugMessage("Add Transaction button should not be displayed on member transaction page.");
+                    }
+                    else
+                    {
+                        Assert.Fail("Add Transaction button is displayed on member transaction page.");
+                    }
+
+                    //6.Again click on member perk tab.
+                    Admin.Click_Tab_MemberAwards();
+                    Logger.WriteDebugMessage("Member Perks page should be displayed.");
+
+                    //7.Set member status to Expired
+                    Admin.SelectStatus("Deactivated");
+                    Logger.WriteDebugMessage("Member status should be set to Expired");
+
+                    //8.Click on Member transaction page and Verify Visiblity of Add Transaction button
+                    Admin.Click_Tab_MemberTransactions();
+                    value = IsElementVisible(PageObject_Admin.Button_AddTransactions());
+                    if (value.Equals(false))
+                    {
+                        Logger.WriteDebugMessage("Add Transaction button should not be displayed on member transaction page.");
+                    }
+                    else
+                    {
+                        Assert.Fail("Add Transaction button is displayed on member transaction page.");
+                    }
+
+                    //9.Set member status to active 
+                    Admin.Click_Tab_MemberAwards();
+                    Logger.WriteDebugMessage("Member Perks page should be displayed.");
+                    Admin.SelectStatus("Active");
+                    Logger.WriteDebugMessage("Member status should be set to active");
+                    Helper.ElementWait(PageObject_Admin.Tab_MemberTransactions(), 20);
+
+                    //10.Click on Member transaction page and Verify Visiblity of Add Transaction button
+                    Admin.Click_Tab_MemberTransactions();
+                    value = IsElementVisible(PageObject_Admin.Button_AddTransactions());
+                    if (value.Equals(true))
+                    {
+                        Logger.WriteDebugMessage("Add Transaction button should be displayed on member transaction page.");
+                    }
+                    else
+                    {
+                        Assert.Fail("Add Transaction button should not be displayed on member transaction page.");
+                    }
+
+                    //11.Click "Add Transaction"
+                    Admin.Click_Button_AddTransaction();
+                    Logger.WriteDebugMessage("Add Transaction popup is displayed.");
+
+                    //12.For "Points", enter a negative amount that will place the members total points in the negatives.
+                    //13.Fill in all required detail and press "Save"
+                    points = TestData.ExcelData.TestDataReader.ReadData(1, "Points");
+                    reason = TestData.ExcelData.TestDataReader.ReadData(1, "Reason");
+                    Queries.IdentifyHotel(data);
+
+                    internalComments = TestData.ExcelData.TestDataReader.ReadData(1, "InternalComments");
+                    memberComments = TestData.ExcelData.TestDataReader.ReadData(1, "MemberComments");
+                    expiration = TestData.ExcelData.TestDataReader.ReadData(1, "Expiration");
+                    Admin.AddTransaction(reason, "10", expiration, internalComments, memberComments, ProjectName);
+                    Admin.SelectHotel(data.PropertyName);
+                    Admin.Enter_Text_NegativePoints(points);
+                    Logger.WriteDebugMessage("Negative amount is entered.");
+                    Admin.Click_Button_Save();
+                    VerifyTextOnPage("No points available to deduct");
+                    Logger.WriteDebugMessage("Message is displaying");
+                    Admin.Click_Button_Close();
+
+                    //14.Click "Add Transaction"              
+                    Admin.Click_Button_AddTransaction();
+                    Logger.WriteDebugMessage("Add Transaction popup is displayed.");
+
+                    //15.Click the "Up" arrow in the "Points" field. 
+                    points = TestData.ExcelData.TestDataReader.ReadData(2, "Points");
+                    Admin.Enter_Text_Points(points);
+                    string text = Helper.Getdata(PageObject_Admin.Text_Points());
+                    if (text.Equals("1"))
+                    {
+                        Logger.WriteDebugMessage("Points are incremented by 1");
+                    }
+                    else
+                    {
+                        Assert.Fail("Points is NOT getting incremented by 1");
+                    }
                 }
-                else
-                {
-                    Assert.Fail("Add Transaction button is displayed on member transaction page.");
-                }
-
-                //6.Again click on member perk tab.
-                Admin.Click_Tab_MemberAwards();
-                Logger.WriteDebugMessage("Member Perks page should be displayed.");
-
-                //7.Set member status to Expired
-                Admin.SelectStatus("Deactivated");
-                Logger.WriteDebugMessage("Member status should be set to Expired");
-
-                //8.Click on Member transaction page and Verify Visiblity of Add Transaction button
-                Admin.Click_Tab_MemberTransactions();
-                value = IsElementVisible(PageObject_Admin.Button_AddTransactions());
-                if (value.Equals(false))
-                {
-                    Logger.WriteDebugMessage("Add Transaction button should not be displayed on member transaction page.");
-                }
-                else
-                {
-                    Assert.Fail("Add Transaction button is displayed on member transaction page.");
-                }
-
-                //9.Set member status to active 
-                Admin.Click_Tab_MemberAwards();
-                Logger.WriteDebugMessage("Member Perks page should be displayed.");
-                Admin.SelectStatus("Active");
-                Logger.WriteDebugMessage("Member status should be set to active");
-                Helper.ElementWait(PageObject_Admin.Tab_MemberTransactions(), 20);
-
-                //10.Click on Member transaction page and Verify Visiblity of Add Transaction button
-                Admin.Click_Tab_MemberTransactions();
-                value = IsElementVisible(PageObject_Admin.Button_AddTransactions());
-                if (value.Equals(true))
-                {
-                    Logger.WriteDebugMessage("Add Transaction button should be displayed on member transaction page.");
-                }
-                else
-                {
-                    Assert.Fail("Add Transaction button should not be displayed on member transaction page.");
-                }
-
-                //11.Click "Add Transaction"
-                Admin.Click_Button_AddTransaction();
-                Logger.WriteDebugMessage("Add Transaction popup is displayed.");
-
-                //12.For "Points", enter a negative amount that will place the members total points in the negatives.
-                //13.Fill in all required detail and press "Save"
-                points = TestData.ExcelData.TestDataReader.ReadData(1, "Points");
-                reason = TestData.ExcelData.TestDataReader.ReadData(1, "Reason");
-                Queries.IdentifyHotel(data);
-
-                internalComments = TestData.ExcelData.TestDataReader.ReadData(1, "InternalComments");
-                memberComments = TestData.ExcelData.TestDataReader.ReadData(1, "MemberComments");
-                expiration = TestData.ExcelData.TestDataReader.ReadData(1, "Expiration");
-                Admin.AddTransaction(reason, "10", expiration, internalComments, memberComments, ProjectName);
-                Admin.SelectHotel(data.PropertyName);
-                Admin.Enter_Text_NegativePoints(points);
-                Logger.WriteDebugMessage("Negative amount is entered.");
-                Admin.Click_Button_Save();
-                VerifyTextOnPage("No points available to deduct");
-                Logger.WriteDebugMessage("Message is displaying");
-                Admin.Click_Button_Close();
-
-                //14.Click "Add Transaction"              
-                Admin.Click_Button_AddTransaction();
-                Logger.WriteDebugMessage("Add Transaction popup is displayed.");
-
-                //15.Click the "Up" arrow in the "Points" field. 
-                points = TestData.ExcelData.TestDataReader.ReadData(2, "Points");
-                Admin.Enter_Text_Points(points);
-                string text = Helper.Getdata(PageObject_Admin.Text_Points());
-                if (text.Equals("1"))
-                {
-                    Logger.WriteDebugMessage("Points are incremented by 1");
-                }
-                else
-                {
-                    Assert.Fail("Points is NOT getting incremented by 1");
-                }
-            }
         }
 
         public static void TC_220954()
         {
             if (TestCaseId == Constants.TC_220954)
-            {
-                Users data = new Users();
-                string value, updatedValue, reason, points, hotel, expiration, internalComments, memberComments, bccEmail, transactionby;
-                int newValue;
-
-                //1.Login to admin 
-                Helper.ElementWait(PageObject_Admin.Admin_Text_UserName(), 60);
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Landed on Member search tab");
-
-                //2.Search for a  active guest  with more than 100 points
-                //email = TestData.ExcelData.TestDataReader.ReadData(1, "Email");
-                Queries.ReturnEmail_WithActiveAnd100Points(data, 100);
-                Admin.EnterEmail(data.MemberEmail);
-                Admin.Click_Button_MemberSearch();
-                Logger.WriteDebugMessage("Search result gets displayed");
-
-                //3.Click on view icon of a Active guest
-                Admin.Click_Icon_View(ProjectName);
-                Logger.LogTestData(TestPlanId, TestCaseId, "Email with More than 100 Points", data.MemberEmail);
-                Admin.Click_Tab_MemberTransactions();
-                Helper.PageDown();
-                Logger.WriteDebugMessage("Member Transaction tab gets selected ");
-
-                //4.Make a note of current points balance in member information page
-                ElementWait(PageObject_Admin.MemberTransaction_Arrow_Next(), 360);
-                value = Admin.BalancePoints();
-                Logger.WriteDebugMessage("Current points balance is noted.");
-                Logger.LogTestData(TestPlanId, TestCaseId, "Currect Points Balance", value);
-                //5.Click Add Transaction.
-                Admin.Click_Button_AddTransaction();
-                Logger.WriteDebugMessage("Add Transaction pop up should be displayed");
-
-                //6.Add points from by clicking up arrow in points field.
-                points = TestData.ExcelData.TestDataReader.ReadData(1, "Points");
-                if (ProjectName.Equals("IndependentCollection") || ProjectName.Equals("HotelIcon"))
-                    reason = TestData.ExcelData.TestDataReader.ReadData(1, "IC_Reason");
-                else
-                    reason = TestData.ExcelData.TestDataReader.ReadData(1, "Reason");
-                internalComments = TestData.ExcelData.TestDataReader.ReadData(1, "InternalComments");
-                memberComments = TestData.ExcelData.TestDataReader.ReadData(1, "MemberComments");
-                expiration = TestData.ExcelData.TestDataReader.ReadData(1, "Expiration");
-                Admin.AddTransaction(reason, points, expiration, internalComments, memberComments, ProjectName);
-                Admin.Click_Button_Save();
-                Logger.WriteDebugMessage("PointsPoints should get Added and Transaction is saved on Member transaction table page.");
-                newValue = Int32.Parse(value) + Int32.Parse(points);
-                updatedValue = Admin.BalancePoints();
-
-                //7.Verify the transaction is displayed in the member transaction table.
-                Queries.ReturnMemberAddTransactionDetails(data.MemberEmail, internalComments, data);
-                points = data.Points;
-                transactionby = (data.Transactionby).ToLower();
-                Logger.WriteDebugMessage("The transaction should display in the member transaction table." + points);
-
-                //8.Verify this new  admin email is present under the transaction by column in member transaction  table.
-                string adminCredentails = ProjectDetails.CommonAdminEmail;
-                if (transactionby.Equals(adminCredentails))
                 {
-                    Logger.WriteDebugMessage("Current Admin email is present under the transaction by column in member transaction table.");
-                }
-                else
-                {
-                    Assert.Fail("Current Admin Email is NOT present under the transaction by column");
-                }
+                    Users data = new Users();
+                    string value, updatedValue, reason, points, hotel, expiration, internalComments, memberComments, bccEmail, transactionby;
+                    int newValue;
 
-                //9.Verify the remaining points is displayed in the member information "Points balance" Field.
-                if (Int32.Parse(updatedValue).Equals(newValue))
-                {
-                    Logger.WriteDebugMessage("The added points should displayed in the member information 'Points balance' field.");
-                }
-                else
-                {
-                    Assert.Fail("The added points should NOT displayed in the member information 'Points balance' field.");
-                }
+                    //1.Login to admin 
+                    Helper.ElementWait(PageObject_Admin.Admin_Text_UserName(), 60);
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Landed on Member search tab");
 
-                //10.Open Catchall account. Search for member email.
-                OpenNewTab();
-                ControlToNewWindow();
-                Email.LogIntoCatchAll();
-                Helper.ReloadPage();
-                Hotmail.CheckOutLook();
-                Hotmail.SearchEmail(data.MemberEmail + " " + points);
-                try
-                {                
-                    ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
-                }
-                catch (Exception ex)
-                {
-                    ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
-                    Logger.WriteDebugMessage("Failed due to below error" + ex.Message);
-                }
-                Helper.PageDown();
-                Logger.WriteDebugMessage("Member email found.");
-                //11.Verify the  email point                 
-                VerifyTextOnPageAndHighLight(points);
-                Logger.WriteDebugMessage("The  email points added during the Transaction should be displayed");
+                    //2.Search for a  active guest  with more than 100 points
+                    //email = TestData.ExcelData.TestDataReader.ReadData(1, "Email");
+                    Queries.ReturnEmail_WithActiveAnd100Points(data, 100);
+                    //Queries.GetActiveMemberEmailMEMBER(data);
+                    //Queries.GetActiveMemberEmail(data);
+                    Admin.EnterEmail(data.MemberEmail);
+                    Admin.SelectMemberStatus("Active");
+                    Admin.Click_Button_MemberSearch();
+                    Logger.WriteDebugMessage("Search result gets displayed");
+                    //3.Click on view icon of a Active guest
+                    Admin.Click_Icon_View(ProjectName);
+                    try {
+                        Logger.LogTestData(TestPlanId, TestCaseId, "Email with More than 100 Points", data.MemberEmail);
+                        Admin.Click_Tab_MemberTransactions();
+                    }  
+                    catch {
+                        AddDelay(60000);
+                        Admin.Click_Tab_MemberTransactions();
+                    }
+                    
+                    Helper.PageDown();
+                    Logger.WriteDebugMessage("Member Transaction tab gets selected ");
 
-                //12.Navigate back to Admin Portal and Make a note of current points balance in member information page
-                ControlToPreviousWindow();
-                value = Admin.BalancePoints();
-                Logger.WriteDebugMessage("Current points balance is noted.");
+                    //4.Make a note of current points balance in member information page
+                    ElementWait(PageObject_Admin.MemberTransaction_Arrow_Next(), 360);
+                    value = Admin.BalancePoints();
+                    Logger.WriteDebugMessage("Current points balance is noted.");
+                    Logger.LogTestData(TestPlanId, TestCaseId, "Currect Points Balance", value);
+                    //5.Click Add Transaction.
+                    AddDelay(15000);
+                    Admin.Click_Button_AddTransaction();
+                    Logger.WriteDebugMessage("Add Transaction pop up should be displayed");
 
-                //13.Click Add Transaction
-                Admin.Click_Button_AddTransaction();
-                Logger.WriteDebugMessage("Add Transaction pop up should be displayed");
+                    //6.Add points from by clicking up arrow in points field.
+                    points = TestData.ExcelData.TestDataReader.ReadData(1, "Points");
+                    if (ProjectName.Equals("IndependentCollection") || ProjectName.Equals("HotelIcon"))
+                        reason = TestData.ExcelData.TestDataReader.ReadData(1, "IC_Reason");
+                    else
+                        reason = TestData.ExcelData.TestDataReader.ReadData(1, "Reason");
+                    internalComments = TestData.ExcelData.TestDataReader.ReadData(1, "InternalComments");
+                    memberComments = TestData.ExcelData.TestDataReader.ReadData(1, "MemberComments");
+                    expiration = TestData.ExcelData.TestDataReader.ReadData(1, "Expiration");
+                    Admin.AddTransaction(reason, points, expiration, internalComments, memberComments, ProjectName);
+                    Admin.Click_Button_Save();
+                    Logger.WriteDebugMessage("PointsPoints should get Added and Transaction is saved on Member transaction table page.");
+                    newValue = Int32.Parse(value) + Int32.Parse(points);
+                    updatedValue = Admin.BalancePoints();
 
-                //14.Deduct 100 points from by clicking down arrow in points field.Fill all required fields on Add Transaction page by adding valid information and click on save                
-                if (ProjectName.Equals("IndependentCollection") || ProjectName.Equals("HotelIcon"))
-                    reason = TestData.ExcelData.TestDataReader.ReadData(1, "IC_Reason");
-                else
-                    reason = TestData.ExcelData.TestDataReader.ReadData(1, "Reason");
+                    //7.Verify the transaction is displayed in the member transaction table.
+                    Queries.ReturnMemberAddTransactionDetails(data.MemberEmail, internalComments, data);
+                    points = data.Points;
+                    transactionby = (data.Transactionby).ToLower();
+                    Logger.WriteDebugMessage("The transaction should display in the member transaction table." + points);
 
-                internalComments = Helper.MakeUnique(TestData.ExcelData.TestDataReader.ReadData(2, "InternalComments"));
-                memberComments = TestData.ExcelData.TestDataReader.ReadData(1, "MemberComments");
-                expiration = TestData.ExcelData.TestDataReader.ReadData(1, "Expiration");
-                Admin.AddTransaction_NegativePoints(reason, points, expiration, internalComments, memberComments, ProjectName);
-                Admin.Click_Button_Save();
-                Logger.WriteDebugMessage("Points should get deducted and Transaction is saved on Member transaction table page.");
-                newValue = Int32.Parse(value) - Int32.Parse(points);
-                updatedValue = Admin.BalancePoints();
+                    //8.Verify this new  admin email is present under the transaction by column in member transaction  table.
+                    string adminCredentails = ProjectDetails.CommonAdminEmail;
+                    if (transactionby.Equals(adminCredentails))
+                    {
+                        Logger.WriteDebugMessage("Current Admin email is present under the transaction by column in member transaction table.");
+                    }
+                    else
+                    {
+                        Assert.Fail("Current Admin Email is NOT present under the transaction by column");
+                    }
 
-                //15.Verify the transaction is displayed in the member transaction table.
-                Queries.ReturnMemberAddTransactionDetails(data.MemberEmail, internalComments, data);
-                points = data.Points;
-                Logger.WriteDebugMessage("The transaction should display in the member transaction table." + points);
+                    //9.Verify the remaining points is displayed in the member information "Points balance" Field.
+                    if (Int32.Parse(updatedValue).Equals(newValue))
+                    {
+                        Logger.WriteDebugMessage("The added points should displayed in the member information 'Points balance' field.");
+                    }
+                    else
+                    {
+                        Assert.Fail("The added points should NOT displayed in the member information 'Points balance' field.");
+                    }
 
-                //16.Verify the remaining points is displayed in the member information "Points balance" Field.
-                if (Int32.Parse(updatedValue).Equals(newValue))
-                {
-                    Logger.WriteDebugMessage("The remaining points should displayed in the member information 'Points balance' field.");
-                }
-                else
-                {
-                    Assert.Fail("The remaining points should NOT displayed in the member information 'Points balance' field.");
-                }
+                    //10.Open Catchall account. Search for member email.
+                    OpenNewTab();
+                    ControlToNewWindow();
+                    Email.LogIntoCatchAll();
+                    try { Helper.ReloadPage(); } 
+                    catch { AddDelay(60000); }
+                    Hotmail.CheckOutLook();
+                    Hotmail.SearchEmail(data.MemberEmail + " " + points);
+                    try
+                    {
+                        ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
+                    }
+                    catch (Exception ex)
+                    {
+                        ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
+                        Logger.WriteDebugMessage("Failed due to below error" + ex.Message);
+                    }
+                    Helper.PageDown();
+                    Logger.WriteDebugMessage("Member email found.");
+                    //11.Verify the  email point                 
+                    VerifyTextOnPageAndHighLight(points);
+                    Logger.WriteDebugMessage("The  email points added during the Transaction should be displayed");
 
-                //17.Open Catchall account. Search for member email.                                
-                //18.Verify the  email point 
-                ControlToNewWindow();
-                Helper.ReloadPage();
-                Hotmail.CheckOutLook();
-                Hotmail.SearchEmail(data.MemberEmail);
-                try
-                {                
-                    ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
-                }
-                catch (Exception ex)
-                {
-                    ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
-                    Logger.WriteDebugMessage("Failed due to below error" + ex.Message);
-                }
-                Helper.PageDown();
-                VerifyTextOnPageAndHighLight(points);
-                Logger.WriteDebugMessage("The email points deducted during the Transaction should be displayed");
-            }
+                    //12.Navigate back to Admin Portal and Make a note of current points balance in member information page
+                    ControlToPreviousWindow();
+                    value = Admin.BalancePoints();
+                    Logger.WriteDebugMessage("Current points balance is noted.");
+
+                    //13.Click Add Transaction
+                    Admin.Click_Button_AddTransaction();
+                    Logger.WriteDebugMessage("Add Transaction pop up should be displayed");
+
+                    //14.Deduct 100 points from by clicking down arrow in points field.Fill all required fields on Add Transaction page by adding valid information and click on save                
+                    if (ProjectName.Equals("IndependentCollection") || ProjectName.Equals("HotelIcon"))
+                        reason = TestData.ExcelData.TestDataReader.ReadData(1, "IC_Reason");
+                    else
+                        reason = TestData.ExcelData.TestDataReader.ReadData(1, "Reason");
+
+                    internalComments = Helper.MakeUnique(TestData.ExcelData.TestDataReader.ReadData(2, "InternalComments"));
+                    memberComments = TestData.ExcelData.TestDataReader.ReadData(1, "MemberComments");
+                    expiration = TestData.ExcelData.TestDataReader.ReadData(1, "Expiration");
+                    Admin.AddTransaction_NegativePoints(reason, points, expiration, internalComments, memberComments, ProjectName);
+                    Admin.Click_Button_Save();
+                    Logger.WriteDebugMessage("Points should get deducted and Transaction is saved on Member transaction table page.");
+                    newValue = Int32.Parse(value) - Int32.Parse(points);
+                    updatedValue = Admin.BalancePoints();
+
+                    //15.Verify the transaction is displayed in the member transaction table.
+                    Queries.ReturnMemberAddTransactionDetails(data.MemberEmail, internalComments, data);
+                    points = data.Points;
+                    Logger.WriteDebugMessage("The transaction should display in the member transaction table." + points);
+
+                    //16.Verify the remaining points is displayed in the member information "Points balance" Field.
+                    if (Int32.Parse(updatedValue).Equals(newValue))
+                    {
+                        Logger.WriteDebugMessage("The remaining points should displayed in the member information 'Points balance' field.");
+                    }
+                    else
+                    {
+                        Assert.Fail("The remaining points should NOT displayed in the member information 'Points balance' field.");
+                    }
+
+                    //17.Open Catchall account. Search for member email.                                
+                    //18.Verify the  email point 
+                    ControlToNewWindow();
+                    Helper.ReloadPage();
+                    Hotmail.CheckOutLook();
+                    Hotmail.SearchEmail(data.MemberEmail);
+                    try
+                    {
+                        ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
+                    }
+                    catch (Exception ex)
+                    {
+                        ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
+                        Logger.WriteDebugMessage("Failed due to below error" + ex.Message);
+                    }
+                    Helper.PageDown();
+                    VerifyTextOnPageAndHighLight(points);
+                    Logger.WriteDebugMessage("The email points deducted during the Transaction should be displayed");
+             }
         }
-
         public static void TC_124380()
         {
             if (TestCaseId == Constants.TC_124380)

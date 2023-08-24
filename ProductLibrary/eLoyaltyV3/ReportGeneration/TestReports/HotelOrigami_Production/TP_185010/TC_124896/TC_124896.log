@@ -1,43 +1,10 @@
-2023-05-23 16:57:00,880 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
-2023-05-23 16:57:01,084 ::INFO ::[Logger]:: Chrome is currently being used for testing.
-2023-05-23 16:57:01,116 ::INFO ::[Logger]::  is used for Testing
-2023-05-23 16:57:01,226 ::INFO ::[Logger]:: This is the login page.https://origamiloyalty.cendyn.com/en-US/Login?ReturnUrl=%2Fen-US%2FOverview
-2023-05-23 16:57:01,226 ::INFO ::[Logger]:: Execution started at:-May-23-2023 16-57-01-PM
-2023-05-23 16:57:01,226 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-05-23 16:57:01,241 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
-2023-05-23 16:57:01,241 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_124896         XXXXXXXXXXXXXXXX
-2023-05-23 16:57:01,241 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-05-23 16:57:01,273 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
-2023-05-23 16:57:24,396 ::INFO ::[Logger]:: Clicked the Link_ForgotYourLogin element on the SignIn page.
-2023-05-23 16:57:25,170 ::DEBUG::[Logger]:: 1) user landed on forget password page
-2023-05-23 17:04:19,840 ::ERROR::[Logger]:: eLoyaltyV3_Flow :: Script::Failed
-System.Data.SqlClient.SqlException (0x80131904): Cannot open database "eInsightCRM_HotelOrigami" requested by the login. The login failed.
-Login failed for user 'eContactSupportReadOnly'.
-   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
-   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
-   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
-   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
-   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
-   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
-   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
-   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
-   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
-   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
-   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
-   at System.Data.SqlClient.SqlConnection.Open()
-   at eLoyaltyV3.Utility.Queries.GetActiveMemberEmail(Users data, String projectname) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\Utility\Queries.cs:line 2618
-   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TC_124896() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp\Frontend\TP_121737_Forgot_Password.cs:line 30
-   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TP_185010(String ProjectName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp.cs:line 839
-   at HotelOrigami.Portal_PostDeployment_TP_185010.TC_124896() in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\ProductLibrary\eLoyaltyV3\TestPlan\HotelOrigami\Portal_PostDeployment_TP_185010 .cs:line 49
-ClientConnectionId:5440aa80-bbf9-45c5-a1cf-14c985020b48
-Error Number:4060,State:1,Class:11
-2023-05-23 17:04:22,071 ::ERROR::[Logger]:: Error in Takescreenshot code
-2023-05-23 17:04:23,144 ::ERROR::[Logger]:: Exception while taking screenshot
-OpenQA.Selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.127)
-   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
-   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
-   at OpenQA.Selenium.WebDriver.GetScreenshot()
-   at InfoMessageLogger.ReportGeneration.CaptureScreenshot.CapturescreenShot(String filename) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\InfoMessageLogger\ReportGeneration\CaptureScreenshot.cs:line 29
-2023-05-23 17:04:55,185 ::INFO ::[Logger]:: E.N.D
+2023-07-20 09:17:35,036 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-07-20 09:17:35,335 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-07-20 09:17:35,370 ::INFO ::[Logger]::  is used for Testing
+2023-07-20 09:17:35,444 ::INFO ::[Logger]:: This is the login page.https://origamiloyalty.cendyn.com/en-US/Login?ReturnUrl=%2Fen-US%2FOverview
+2023-07-20 09:17:35,447 ::INFO ::[Logger]:: Execution started at:-Jul-20-2023 09-17-35-AM
+2023-07-20 09:17:35,448 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-07-20 09:17:35,451 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-07-20 09:17:35,452 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_124896         XXXXXXXXXXXXXXXX
+2023-07-20 09:17:35,453 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-07-20 09:17:35,474 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=744}

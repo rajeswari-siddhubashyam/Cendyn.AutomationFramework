@@ -120,6 +120,7 @@ namespace eLoyaltyV3.AppModule.UI
 
         public static string GetValueEmailAddress(string Projectname)
         {
+            Helper.ElementWait(PageObject_Admin.Admin_Value_Email(Projectname), 240);
             string value = PageObject_Admin.Admin_Value_Email(Projectname).Text;
             string[] data = value.Split(':');
             return data[1];
@@ -202,6 +203,7 @@ namespace eLoyaltyV3.AppModule.UI
         public static void EnterMemberNumber(string text)
         {
             Helper.ElementWait(PageObject_Admin.Textbox_MemberNumber(), 240);
+            Helper.ElementClearText(PageObject_Admin.Textbox_MemberNumber());
             Helper.ElementEnterText(PageObject_Admin.Textbox_MemberNumber(), text);
         }
 
@@ -219,6 +221,7 @@ namespace eLoyaltyV3.AppModule.UI
         }
         public static void EnterFirstname(string text)
         {
+            Helper.ElementClearText(PageObject_Admin.Textbox_Firstname());
             Helper.ElementWait(PageObject_Admin.Textbox_Firstname(), 240);
             Helper.ElementEnterText(PageObject_Admin.Textbox_Firstname(), text);
         }
@@ -232,7 +235,8 @@ namespace eLoyaltyV3.AppModule.UI
 
         public static void EnterEmail(string text)
         {
-            Helper.ElementWait(PageObject_Admin.Textbox_Email(), 240);
+            Helper.ElementWait(PageObject_Admin.Textbox_Email(), 340);
+            Helper.ElementClearText(PageObject_Admin.Textbox_Email());
             Helper.ElementEnterText(PageObject_Admin.Textbox_Email(), text);
         }
         public static void RecoveryEmail(string text)
@@ -1077,7 +1081,7 @@ namespace eLoyaltyV3.AppModule.UI
 
         public static void Click_Tab_MemberAwards()
         {
-            Helper.ElementWait(PageObject_Admin.Tab_MemberAwards(), 240);
+            Helper.ElementWait(PageObject_Admin.Tab_MemberAwards(), 340);
             Helper.ElementClick(PageObject_Admin.Tab_MemberAwards());
         }
 
@@ -1224,7 +1228,7 @@ namespace eLoyaltyV3.AppModule.UI
         #region[Admin_Information]
         public static void SelectStatus(string value)
         {
-            Helper.ElementWait(PageObject_Admin.Value_MemberStatus(), 240);
+            Helper.ElementWait(PageObject_Admin.Value_MemberStatus(), 440);
             Helper.ElementClick(PageObject_Admin.Value_MemberStatus());
             Helper.ElementSelectFromDropDown(PageObject_Admin.MemberInformation_Dropdown_MemberStatus(), value);
             Helper.ElementClick(PageObject_Admin.Icon_Right());
@@ -1249,7 +1253,7 @@ namespace eLoyaltyV3.AppModule.UI
 
         public static void SendResetLogin(string value)
         {
-            Helper.ElementWait(PageObject_Admin.MemberInformation_Value_MemberLogin(), 240);
+            Helper.ElementWait(PageObject_Admin.MemberInformation_Value_MemberLogin(), 340);
             Helper.ElementClick(PageObject_Admin.MemberInformation_Value_MemberLogin());
             PageObject_Admin.MemberInformation_Text_UserLogin().Clear();
             Helper.ElementEnterText(PageObject_Admin.MemberInformation_Text_UserLogin(), value);
@@ -1338,7 +1342,7 @@ namespace eLoyaltyV3.AppModule.UI
 
         public static void Click_MemberInformation_Value_WelcomeEmail()
         {
-            Helper.ElementWait(PageObject_Admin.MemberInformation_Value_WelcomeEmail(), 240);
+            Helper.ElementWait(PageObject_Admin.MemberInformation_Value_WelcomeEmail(), 440);
             Helper.ElementClick(PageObject_Admin.MemberInformation_Value_WelcomeEmail());
         }
 
@@ -1431,8 +1435,9 @@ namespace eLoyaltyV3.AppModule.UI
         #region[Admin_MemberTransaction]
         public static void Click_Button_AddTransaction()
         {
-            Helper.DynamicScroll(Helper.Driver, PageObject_Admin.Button_AddTransactions());
             Helper.ElementWait(PageObject_Admin.Button_AddTransactions(), 240);
+            Helper.DynamicScroll(Helper.Driver, PageObject_Admin.Button_AddTransactions());
+            Helper.ElementWait(PageObject_Admin.Button_AddTransactions(), 140);
             Helper.ElementClick(PageObject_Admin.Button_AddTransactions());
         }
 
@@ -1716,6 +1721,7 @@ namespace eLoyaltyV3.AppModule.UI
 
         public static void Enter_Text_Filter(string value)
         {
+            Helper.ElementClearText(PageObject_Admin.Admin_MemberStay_Text_Filter());
             Helper.ElementWait(PageObject_Admin.Admin_MemberStay_Text_Filter(), 240);
             Helper.ElementEnterText(PageObject_Admin.Admin_MemberStay_Text_Filter(), value);
         }
@@ -2221,18 +2227,21 @@ namespace eLoyaltyV3.AppModule.UI
         public static void SignUpSource_Text_SignUpSourceCode(string value)
         {
             Helper.ElementWait(PageObject_Admin.SignUpSource_Text_SignUpSourceCode(), 240);
+            Helper.ElementClearText(PageObject_Admin.SignUpSource_Text_SignUpSourceCode());
             Helper.ElementEnterText(PageObject_Admin.SignUpSource_Text_SignUpSourceCode(), value);
         }
 
         public static void SignUpSource_Text_Filter(string value)
         {
             Helper.ElementWait(PageObject_Admin.SignUpSource_Text_Filter(), 240);
+            Helper.ElementClearText(PageObject_Admin.SignUpSource_Text_Filter());
             Helper.ElementEnterText(PageObject_Admin.SignUpSource_Text_Filter(), value);
         }
 
         public static void SignUpSource_Text_SignUpSourceName(string value)
         {
             Helper.ElementWait(PageObject_Admin.SignUpSource_Text_SignUpSourceName(), 240);
+            Helper.ElementClearText(PageObject_Admin.SignUpSource_Text_SignUpSourceName());
             Helper.ElementEnterText(PageObject_Admin.SignUpSource_Text_SignUpSourceName(), value);
         }
 
@@ -2656,30 +2665,35 @@ namespace eLoyaltyV3.AppModule.UI
         public static void LoyaltySetUp_Offers_Text_Title(string value)
         {
             Helper.ElementWait(PageObject_Admin.LoyaltySetUp_Offers_Text_Title(), 240);
+            Helper.ElementClearText(PageObject_Admin.LoyaltySetUp_Offers_Text_Title());
             Helper.ElementEnterText(PageObject_Admin.LoyaltySetUp_Offers_Text_Title(), value);
         }
 
         public static void LoyaltySetUp_Offers_Text_PromotionStart(string value)
         {
             Helper.ElementWait(PageObject_Admin.LoyaltySetUp_Offers_Text_PromotionStart(), 240);
+            Helper.ElementClearText(PageObject_Admin.LoyaltySetUp_Offers_Text_PromotionStart());
             Helper.ElementEnterText(PageObject_Admin.LoyaltySetUp_Offers_Text_PromotionStart(), value);
         }
 
         public static void LoyaltySetUp_Offers_Text_PromotionEnd(string value)
         {
             Helper.ElementWait(PageObject_Admin.LoyaltySetUp_Offers_Text_PromotionEnd(), 240);
+            Helper.ElementClearText(PageObject_Admin.LoyaltySetUp_Offers_Text_PromotionEnd());
             Helper.ElementEnterText(PageObject_Admin.LoyaltySetUp_Offers_Text_PromotionEnd(), value);
         }
 
         public static void LoyaltySetUp_Offers_Text_VisibilityStart(string value)
         {
             Helper.ElementWait(PageObject_Admin.LoyaltySetUp_Offers_Text_VisibilityStart(), 240);
+            Helper.ElementClearText(PageObject_Admin.LoyaltySetUp_Offers_Text_VisibilityStart());
             Helper.ElementEnterText(PageObject_Admin.LoyaltySetUp_Offers_Text_VisibilityStart(), value);
         }
 
         public static void LoyaltySetUp_Offers_Text_VisibilityEnd(string value)
         {
             Helper.ElementWait(PageObject_Admin.LoyaltySetUp_Offers_Text_VisibilityEnd(), 240);
+            Helper.ElementClearText(PageObject_Admin.LoyaltySetUp_Offers_Text_VisibilityEnd());
             Helper.ElementEnterText(PageObject_Admin.LoyaltySetUp_Offers_Text_VisibilityEnd(), value);
         }
 
@@ -2721,6 +2735,7 @@ namespace eLoyaltyV3.AppModule.UI
         public static void LoyaltySetUp_Offers_Text_ButtonText(string value)
         {
             Helper.ElementWait(PageObject_Admin.LoyaltySetUp_Offers_Text_ButtonText(), 240);
+            Helper.ElementClearText(PageObject_Admin.LoyaltySetUp_Offers_Text_ButtonText());
             Helper.ElementEnterText(PageObject_Admin.LoyaltySetUp_Offers_Text_ButtonText(), value);
         }
 
@@ -2738,6 +2753,7 @@ namespace eLoyaltyV3.AppModule.UI
         public static void LoyaltySetUp_Offers_Text_PromotionDescription(string value)
         {
             Helper.EnterFrame(ObjectRepository.Admin_LoyaltySetUp_Offers_Iframe_Description);
+            Helper.ElementClearText(PageObject_Admin.LoyaltySetUp_Offers_Text_Description());
             Helper.ElementEnterText(PageObject_Admin.LoyaltySetUp_Offers_Text_Description(), value);
             Helper.ExitFrame();
         }
@@ -3328,6 +3344,7 @@ namespace eLoyaltyV3.AppModule.UI
 
         public static void ManualMerge_Text_Email(string value)
         {
+            Helper.ElementClearText(PageObject_Admin.Admin_ManualMerge_Text_Email());
             Helper.ElementWait(PageObject_Admin.Admin_ManualMerge_Text_Email(), 240);
             Helper.ElementEnterText(PageObject_Admin.Admin_ManualMerge_Text_Email(), value);
         }
@@ -4327,6 +4344,7 @@ namespace eLoyaltyV3.AppModule.UI
         }
         public static void Enter_Input_EmailSetup_FromEmail(String value)
         {
+            Helper.ElementClearText(PageObject_Admin.Input_EmailSetup_FromEmail());
             Helper.ElementEnterText(PageObject_Admin.Input_EmailSetup_FromEmail(), value);
         }
         public static void Click_Button_EmailSetup_Save()
@@ -4349,30 +4367,37 @@ namespace eLoyaltyV3.AppModule.UI
         #region[Admin_LoyaltyRule_RuleRestrictions]
         public static void Enter_Rule_Restrict_MinRevenue(string value)
         {
+            Helper.ElementClearText(PageObject_Admin.Enter_Rule_Restrict_MinRevenue());
             Helper.ElementEnterText(PageObject_Admin.Enter_Rule_Restrict_MinRevenue(), value);
         }
         public static void Enter_Rule_Restrict_MinRoomRevenue(string value)
         {
+            Helper.ElementClearText(PageObject_Admin.Enter_Rule_Restrict_MinRoomRevenue());
             Helper.ElementEnterText(PageObject_Admin.Enter_Rule_Restrict_MinRoomRevenue(), value);
         }
         public static void Enter_Rule_Restrict_MinFandBRevenue(string value)
         {
+            Helper.ElementClearText(PageObject_Admin.Enter_Rule_Restrict_MinFandBRevenue());
             Helper.ElementEnterText(PageObject_Admin.Enter_Rule_Restrict_MinFandBRevenue(), value);
         }
         public static void Enter_Rule_Restrict_MinotherRevenue(string value)
         {
+            Helper.ElementClearText(PageObject_Admin.Enter_Rule_Restrict_MinotherRevenue());
             Helper.ElementEnterText(PageObject_Admin.Enter_Rule_Restrict_MinotherRevenue(), value);
         }
         public static void Enter_Rule_Restrict_MinNight(string value)
         {
+            Helper.ElementClearText(PageObject_Admin.Enter_Rule_Restrict_MinNight());
             Helper.ElementEnterText(PageObject_Admin.Enter_Rule_Restrict_MinNight(), value);
         }
         public static void Enter_Rule_Restrict_MinStay(string value)
         {
+            Helper.ElementClearText(PageObject_Admin.Enter_Rule_Restrict_MinStay());
             Helper.ElementEnterText(PageObject_Admin.Enter_Rule_Restrict_MinStay(), value);
         }
         public static void Enter_Rule_Restrict_MaxStay(string value)
         {
+            Helper.ElementClearText(PageObject_Admin.Enter_Rule_Restrict_MaxStay());
             Helper.ElementEnterText(PageObject_Admin.Enter_Rule_Restrict_MaxStay(), value);
         }
         public static void Click_Rule_Restrict_MarketCode()

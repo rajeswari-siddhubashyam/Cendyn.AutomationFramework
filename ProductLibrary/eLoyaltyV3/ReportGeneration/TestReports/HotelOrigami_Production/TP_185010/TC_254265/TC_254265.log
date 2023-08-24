@@ -1,63 +1,63 @@
-2023-05-15 16:42:13,468 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
-2023-05-15 16:42:13,471 ::INFO ::[Logger]:: Chrome is currently being used for testing.
-2023-05-15 16:42:13,473 ::INFO ::[Logger]::  is used for Testing
-2023-05-15 16:42:13,482 ::INFO ::[Logger]:: This is the login page.https://origamiloyalty.cendyn.com/en-US/Login?ReturnUrl=%2Fen-US%2FOverview
-2023-05-15 16:42:13,483 ::INFO ::[Logger]:: Execution started at:-May-15-2023 16-42-13-PM
-2023-05-15 16:42:13,485 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-05-15 16:42:13,487 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
-2023-05-15 16:42:13,489 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_254265         XXXXXXXXXXXXXXXX
-2023-05-15 16:42:13,490 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-05-15 16:42:13,497 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
-2023-05-15 16:42:22,393 ::INFO ::[Logger]:: Clicked the Click_Contact_Link element on the Navigation page.
-2023-05-15 16:42:30,008 ::DEBUG::[Logger]:: 1) Landed on the Contact Us page.
-2023-05-15 16:42:39,195 ::INFO ::[Logger]:: Clicked the Button_Send element on the ContactUs page.
-2023-05-15 16:42:39,198 ::DEBUG::[Logger]:: 2) Landed on the Contact Us page.
-2023-05-15 16:42:45,580 ::INFO ::[Logger]:: This field cannot be blank Found on the page
-2023-05-15 16:42:47,620 ::INFO ::[Logger]:: This field cannot be blank Found on the page
-2023-05-15 16:42:49,703 ::INFO ::[Logger]:: The captcha field is required Found on the page
-2023-05-15 16:42:49,705 ::DEBUG::[Logger]:: 3) Validation message should get displayed
-2023-05-15 16:43:02,723 ::INFO ::[Logger]:: Selected the Missing Stays/Points value from the DDM_Subject drop down.
-2023-05-15 16:43:08,262 ::INFO ::[Logger]:: Clicked the Button_Send element on the ContactUs page.
-2023-05-15 16:43:10,319 ::INFO ::[Logger]:: This field cannot be blank Found on the page
-2023-05-15 16:43:12,365 ::INFO ::[Logger]:: This field cannot be blank Found on the page
-2023-05-15 16:43:12,367 ::DEBUG::[Logger]:: 4) Validation message should get displayed
-2023-05-15 16:43:17,256 ::INFO ::[Logger]:: The captcha field is required Found on the page
-2023-05-15 16:43:17,258 ::DEBUG::[Logger]:: 5) Validation message should get displayed
-2023-05-15 16:43:29,239 ::INFO ::[Logger]:: Selected the Points Redemption Inquiry value from the DDM_Subject drop down.
-2023-05-15 16:43:34,717 ::INFO ::[Logger]:: Clicked the Button_Send element on the ContactUs page.
-2023-05-15 16:43:37,155 ::INFO ::[Logger]:: This field cannot be blank Found on the page
-2023-05-15 16:43:39,564 ::INFO ::[Logger]:: This field cannot be blank Found on the page
-2023-05-15 16:43:39,566 ::DEBUG::[Logger]:: 6) Validation message should get displayed
-2023-05-15 16:43:45,375 ::INFO ::[Logger]:: The captcha field is required Found on the page
-2023-05-15 16:43:45,377 ::DEBUG::[Logger]:: 7) Validation message should get displayed
-2023-05-15 16:43:56,029 ::INFO ::[Logger]:: Selected the Reservations Inquiry value from the DDM_Subject drop down.
-2023-05-15 16:44:01,724 ::INFO ::[Logger]:: Clicked the Button_Send element on the ContactUs page.
-2023-05-15 16:44:04,064 ::INFO ::[Logger]:: This field cannot be blank Found on the page
-2023-05-15 16:44:06,540 ::INFO ::[Logger]:: This field cannot be blank Found on the page
-2023-05-15 16:44:06,543 ::DEBUG::[Logger]:: 8) Validation message should get displayed
-2023-05-15 16:44:11,954 ::INFO ::[Logger]:: The captcha field is required Found on the page
-2023-05-15 16:44:11,956 ::DEBUG::[Logger]:: 9) Validation message should get displayed
-2023-05-15 16:44:23,045 ::INFO ::[Logger]:: Selected the Feedback on Club Rewards value from the DDM_Subject drop down.
-2023-05-15 16:44:28,815 ::INFO ::[Logger]:: Clicked the Button_Send element on the ContactUs page.
-2023-05-15 16:44:31,204 ::INFO ::[Logger]:: This field cannot be blank Found on the page
-2023-05-15 16:44:33,236 ::INFO ::[Logger]:: This field cannot be blank Found on the page
-2023-05-15 16:44:33,238 ::DEBUG::[Logger]:: 10) Validation message should get displayed
-2023-05-15 16:44:38,067 ::INFO ::[Logger]:: The captcha field is required Found on the page
-2023-05-15 16:44:38,069 ::DEBUG::[Logger]:: 11) Validation message should get displayed
-2023-05-15 16:44:50,332 ::INFO ::[Logger]:: Selected the Feedback on Property value from the DDM_Subject drop down.
-2023-05-15 16:44:55,956 ::INFO ::[Logger]:: Clicked the Button_Send element on the ContactUs page.
-2023-05-15 16:44:58,470 ::INFO ::[Logger]:: This field cannot be blank Found on the page
-2023-05-15 16:45:00,795 ::INFO ::[Logger]:: This field cannot be blank Found on the page
-2023-05-15 16:45:00,796 ::DEBUG::[Logger]:: 12) Validation message should get displayed
-2023-05-15 16:45:06,580 ::INFO ::[Logger]:: The captcha field is required Found on the page
-2023-05-15 16:45:06,582 ::DEBUG::[Logger]:: 13) Validation message should get displayed
-2023-05-15 16:45:18,146 ::INFO ::[Logger]:: Selected the Other value from the DDM_Subject drop down.
-2023-05-15 16:45:23,941 ::INFO ::[Logger]:: Clicked the Button_Send element on the ContactUs page.
-2023-05-15 16:45:26,079 ::INFO ::[Logger]:: This field cannot be blank Found on the page
-2023-05-15 16:45:28,125 ::INFO ::[Logger]:: This field cannot be blank Found on the page
-2023-05-15 16:45:28,127 ::DEBUG::[Logger]:: 14) Validation message should get displayed
-2023-05-15 16:45:33,287 ::INFO ::[Logger]:: The captcha field is required Found on the page
-2023-05-15 16:45:33,291 ::DEBUG::[Logger]:: 15) Validation message should get displayed
-2023-05-15 16:45:35,786 ::DEBUG::[Logger]:: 16) Test case passed successfully
-2023-05-15 16:45:38,282 ::INFO ::[Logger]:: HotelOrigami_Production:: Script ::Passed
-2023-05-15 16:46:20,881 ::INFO ::[Logger]:: E.N.D
+2023-07-19 12:14:16,561 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-07-19 12:14:16,563 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-07-19 12:14:16,564 ::INFO ::[Logger]::  is used for Testing
+2023-07-19 12:14:16,698 ::INFO ::[Logger]:: This is the login page.https://origamiloyalty.cendyn.com/en-US/Login?ReturnUrl=%2Fen-US%2FOverview
+2023-07-19 12:14:16,701 ::INFO ::[Logger]:: Execution started at:-Jul-19-2023 12-14-16-PM
+2023-07-19 12:14:16,710 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-07-19 12:14:16,713 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-07-19 12:14:16,716 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_254265         XXXXXXXXXXXXXXXX
+2023-07-19 12:14:16,717 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-07-19 12:14:16,833 ::INFO ::[Logger]:: Window Size is: {Width=1366, Height=768}
+2023-07-19 12:14:24,367 ::INFO ::[Logger]:: Clicked the Click_Contact_Link element on the Navigation page.
+2023-07-19 12:14:25,648 ::DEBUG::[Logger]:: 1) Landed on the Contact Us page.
+2023-07-19 12:14:36,138 ::INFO ::[Logger]:: Clicked the Button_Send element on the ContactUs page.
+2023-07-19 12:14:36,141 ::DEBUG::[Logger]:: 2) Landed on the Contact Us page.
+2023-07-19 12:14:42,280 ::INFO ::[Logger]:: This field cannot be blank Found on the page
+2023-07-19 12:14:44,686 ::INFO ::[Logger]:: This field cannot be blank Found on the page
+2023-07-19 12:14:47,436 ::INFO ::[Logger]:: The captcha field is required Found on the page
+2023-07-19 12:14:47,438 ::DEBUG::[Logger]:: 3) Validation message should get displayed
+2023-07-19 12:15:00,221 ::INFO ::[Logger]:: Selected the 'Missing Stays/Points' value from the DDM_Subject drop down.
+2023-07-19 12:15:06,172 ::INFO ::[Logger]:: Clicked the Button_Send element on the ContactUs page.
+2023-07-19 12:15:08,837 ::INFO ::[Logger]:: This field cannot be blank Found on the page
+2023-07-19 12:15:11,279 ::INFO ::[Logger]:: This field cannot be blank Found on the page
+2023-07-19 12:15:11,280 ::DEBUG::[Logger]:: 4) Validation message should get displayed
+2023-07-19 12:15:17,754 ::INFO ::[Logger]:: The captcha field is required Found on the page
+2023-07-19 12:15:17,757 ::DEBUG::[Logger]:: 5) Validation message should get displayed
+2023-07-19 12:15:34,205 ::INFO ::[Logger]:: Selected the 'Points Redemption Inquiry' value from the DDM_Subject drop down.
+2023-07-19 12:15:39,949 ::INFO ::[Logger]:: Clicked the Button_Send element on the ContactUs page.
+2023-07-19 12:15:42,568 ::INFO ::[Logger]:: This field cannot be blank Found on the page
+2023-07-19 12:15:45,068 ::INFO ::[Logger]:: This field cannot be blank Found on the page
+2023-07-19 12:15:45,072 ::DEBUG::[Logger]:: 6) Validation message should get displayed
+2023-07-19 12:15:51,430 ::INFO ::[Logger]:: The captcha field is required Found on the page
+2023-07-19 12:15:51,432 ::DEBUG::[Logger]:: 7) Validation message should get displayed
+2023-07-19 12:16:03,313 ::INFO ::[Logger]:: Selected the 'Reservations Inquiry' value from the DDM_Subject drop down.
+2023-07-19 12:16:09,056 ::INFO ::[Logger]:: Clicked the Button_Send element on the ContactUs page.
+2023-07-19 12:16:11,760 ::INFO ::[Logger]:: This field cannot be blank Found on the page
+2023-07-19 12:16:14,149 ::INFO ::[Logger]:: This field cannot be blank Found on the page
+2023-07-19 12:16:14,151 ::DEBUG::[Logger]:: 8) Validation message should get displayed
+2023-07-19 12:16:20,809 ::INFO ::[Logger]:: The captcha field is required Found on the page
+2023-07-19 12:16:20,812 ::DEBUG::[Logger]:: 9) Validation message should get displayed
+2023-07-19 12:16:32,769 ::INFO ::[Logger]:: Selected the 'Feedback on Club Rewards' value from the DDM_Subject drop down.
+2023-07-19 12:16:38,594 ::INFO ::[Logger]:: Clicked the Button_Send element on the ContactUs page.
+2023-07-19 12:16:41,210 ::INFO ::[Logger]:: This field cannot be blank Found on the page
+2023-07-19 12:16:43,635 ::INFO ::[Logger]:: This field cannot be blank Found on the page
+2023-07-19 12:16:43,638 ::DEBUG::[Logger]:: 10) Validation message should get displayed
+2023-07-19 12:16:49,901 ::INFO ::[Logger]:: The captcha field is required Found on the page
+2023-07-19 12:16:49,903 ::DEBUG::[Logger]:: 11) Validation message should get displayed
+2023-07-19 12:17:01,737 ::INFO ::[Logger]:: Selected the 'Feedback on Property' value from the DDM_Subject drop down.
+2023-07-19 12:17:07,528 ::INFO ::[Logger]:: Clicked the Button_Send element on the ContactUs page.
+2023-07-19 12:17:10,436 ::INFO ::[Logger]:: This field cannot be blank Found on the page
+2023-07-19 12:17:12,933 ::INFO ::[Logger]:: This field cannot be blank Found on the page
+2023-07-19 12:17:12,936 ::DEBUG::[Logger]:: 12) Validation message should get displayed
+2023-07-19 12:17:19,278 ::INFO ::[Logger]:: The captcha field is required Found on the page
+2023-07-19 12:17:19,280 ::DEBUG::[Logger]:: 13) Validation message should get displayed
+2023-07-19 12:17:30,988 ::INFO ::[Logger]:: Selected the 'Other' value from the DDM_Subject drop down.
+2023-07-19 12:17:36,826 ::INFO ::[Logger]:: Clicked the Button_Send element on the ContactUs page.
+2023-07-19 12:17:42,524 ::INFO ::[Logger]:: This field cannot be blank Found on the page
+2023-07-19 12:17:44,929 ::INFO ::[Logger]:: This field cannot be blank Found on the page
+2023-07-19 12:17:44,932 ::DEBUG::[Logger]:: 14) Validation message should get displayed
+2023-07-19 12:17:51,322 ::INFO ::[Logger]:: The captcha field is required Found on the page
+2023-07-19 12:17:51,324 ::DEBUG::[Logger]:: 15) Validation message should get displayed
+2023-07-19 12:17:54,787 ::DEBUG::[Logger]:: 16) Test case passed successfully
+2023-07-19 12:17:58,119 ::INFO ::[Logger]:: HotelOrigami_Production:: Script ::Passed
+2023-07-19 12:17:59,995 ::INFO ::[Logger]:: E.N.D

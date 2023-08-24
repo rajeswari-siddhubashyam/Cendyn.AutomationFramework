@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using InfoMessageLogger;
 using BaseUtility.Utility;
 using Constants = eLoyaltyV3.Utility.Constants;
+using OpenQA.Selenium.DevTools.V104.Debugger;
 
 namespace eLoyaltyV3.AppModule.UI
 {
@@ -115,9 +116,18 @@ namespace eLoyaltyV3.AppModule.UI
                 }
                 else if (ProjectName == "HotelOrigami")
                 {
-                    Helper.ScrollToElement(Helper.Driver.FindElement(By.XPath("//div[@class='x_email_content']/table/tbody/tr/td")));
-                    Helper.ElementClick(Helper.Driver.FindElement(By.XPath("//div[@class='x_email_content']/table/tbody/tr/td")));
-                    Logger.WriteInfoMessage("Clicked the Activation link on the Activation email.");
+                    if (Helper.IsElementDisplayed(Helper.Driver.FindElement(By.XPath("//a[@class='ms-outlook-linkify']"))))
+                    {
+                        Helper.ScrollToElement(Helper.Driver.FindElement(By.XPath("//a[@class='ms-outlook-linkify']")));
+                        Helper.ElementClick(Helper.Driver.FindElement(By.XPath("//a[@class='ms-outlook-linkify']")));
+                        Logger.WriteInfoMessage("Clicked the Activation link on the Activation email.");
+                       
+                    }
+                    else {
+                        Helper.ScrollToElement(Helper.Driver.FindElement(By.XPath("//div[@class='x_email_content']/table/tbody/tr/td")));
+                        Helper.ElementClick(Helper.Driver.FindElement(By.XPath("//div[@class='x_email_content']/table/tbody/tr/td")));
+                        Logger.WriteInfoMessage("Clicked the Activation link on the Activation email.");
+                    }
                 }
                 else if (ProjectName == "HotelIcon")
                 {
@@ -944,6 +954,7 @@ namespace eLoyaltyV3.AppModule.UI
     public class Hotmail : Helper
     {
         private static string SignIn_Email = "//input[@type='email']";
+        private static string SignIn_EmailNew = "//button[@id='Mail']";
         public static string SignIn_Button = "//input[@type='submit']";
         private static string SignIn_Password = "//input[@name='passwd']";
         private static string SignIn_DontShowAgainCheckBox = "//input[@name='DontShowAgain']";
@@ -979,10 +990,16 @@ namespace eLoyaltyV3.AppModule.UI
             try
             {
 
-                if(Driver.FindElement(By.XPath(SignIn_Email)).Displayed)
+                if(Helper.IsElementPresent((By.XPath(SignIn_Email))))
                 {
+                    ElementWait(Driver.FindElement(By.XPath(SignIn_Email)), 120);
                     ElementClick(Driver.FindElement(By.XPath(catchalladvancebutton)));
                     ElementClick(Driver.FindElement(By.XPath(catchallproceedbutton)));
+                }
+                else 
+                {
+                    //ElementClick(Driver.FindElement(By.XPath(SignIn_Email)));
+                    ElementClick(Driver.FindElement(By.XPath(SignIn_EmailNew)));
                 }
 
             }catch(Exception)
@@ -1012,6 +1029,7 @@ namespace eLoyaltyV3.AppModule.UI
         public static void NavigateToOutLookLogin()
         {
             Driver.Navigate().GoToUrl("https://login.microsoftonline.com/");
+            AddDelay(10000);
             try
             {
                 if (IsElementPresent(By.XPath("//img[@alt='Outlook']")))
@@ -1124,13 +1142,14 @@ namespace eLoyaltyV3.AppModule.UI
                 IJavaScriptExecutor js = (IJavaScriptExecutor)Driver;
                 js.ExecuteScript("arguments[0].click();", SearchElement);
                 //ElementClick(Driver.FindElement(By.XPath(SearchIcon)));
-                ElementClearText(Driver.FindElement(By.XPath(SearchBox)));
-                ElementEnterText(Driver.FindElement(By.XPath(SearchBox)), search);
-                Driver.FindElement(By.XPath(SearchBox)).SendKeys(Keys.Enter);
+                ElementClearText(Driver.FindElement(By.Id("topSearchInput")));
+                ElementEnterText(Driver.FindElement(By.Id("topSearchInput")), search);
+                Driver.FindElement(By.Id("topSearchInput")).SendKeys(Keys.Enter);
                 AddDelay(5000);
             }
             catch (Exception e)
             {
+                
                 Assert.Fail("" + e);
             }
         }
@@ -1139,7 +1158,7 @@ namespace eLoyaltyV3.AppModule.UI
         /// This will open the Top Results first email message if you pass aram as vTopresults else Select All results  .
         /// Email must have the filters turned off
         /// </summary>
-        private static void OpenLatestEmailbyTopResults(string Topresults)
+        public static void OpenLatestEmailbyTopResults(string Topresults)
         {
             try
             {

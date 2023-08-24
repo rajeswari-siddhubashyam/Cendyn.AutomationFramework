@@ -70,7 +70,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
 
                 //Enter all mandatory field except for Image data and click on save 
                 Admin.AddORUpdateOffers(title, visibilityStartDate, visibilityEndDate, data.MembershipLevel, visibilityStartDate, visibilityEndDate, shortdescription);
-                Helper.DynamicScroll(Driver,PageObject_Admin.LoyaltySetUp_Offers_Button_AddAnotherPromotion());
+                Helper.DynamicScroll(Driver, PageObject_Admin.LoyaltySetUp_Offers_Button_AddAnotherPromotion());
                 Admin.Click_LoyaltySetUp_Offers_Button_AddAnotherPromotion();
                 VerifyTextOnPageAndHighLight(imageValidation);
                 Logger.WriteDebugMessage(imageValidation + " = Validation message should get displayed");
@@ -143,7 +143,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Logger.WriteDebugMessage(shortDescriptionValidation + " = Validation message should get displayed");
 
                 //Click on Add Promotion 
-                
+
                 Admin.Click_LoyaltySetUp_Offers_Button_AddAnotherPromotion();
                 VerifyTextOnPageAndHighLight(shortDescriptionValidation);
                 Logger.WriteDebugMessage(shortDescriptionValidation + " = Validation message should get displayed");
@@ -203,7 +203,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Short Description", shortdescription);
                 Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Promotion Code Validation", promotionCodeValidation);
                 Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Description Validation", descriptionValidation);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Button Text Validation", buttonTextValidation,true);
+                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Button Text Validation", buttonTextValidation, true);
             }
         }
 
@@ -212,7 +212,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
             if (TestCaseId == Constants.TC_109686)
             {
                 //pre-requiste
-                string imagePath, frontend_URL,title, visibilityStartDate, visibilityEndDate, promotionDescription, promotionCode, buttonName, shortdescription;
+                string imagePath, frontend_URL, title, visibilityStartDate, visibilityEndDate, promotionDescription, promotionCode, buttonName, shortdescription;
                 Random ranno = new Random();
                 Users data = new Users();
                 Utility.Queries.GetMemberLevel(data, 2);
@@ -225,7 +225,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 visibilityStartDate = TestData.ExcelData.TestDataReader.ReadData(1, "VisibilityStartDate");
                 visibilityEndDate = TestData.ExcelData.TestDataReader.ReadData(1, "VisibilityEndDate");
                 promotionDescription = MakeUnique("Promotion");
-                promotionCode = ranno.Next().ToString().Substring(0,5);
+                promotionCode = ranno.Next().ToString().Substring(0, 5);
                 buttonName = String.Concat("Button_", ranno.Next().ToString().Substring(0, 4));
                 shortdescription = TestData.ExcelData.TestDataReader.ReadData(1, "ShortDescription");
                 frontend_URL = TestData.ExcelData.TestDataReader.ReadData(1, "Frontend_URL");
@@ -244,12 +244,12 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Logger.WriteDebugMessage("Offers editor page should get open");
 
                 //Enter all mandatory field except for Image data and click on save 
-                Admin.AddORUpdateOffers(title+"$", visibilityStartDate, visibilityEndDate, data.MembershipLevel, visibilityStartDate, visibilityEndDate, shortdescription+"*");
+                Admin.AddORUpdateOffers(title + "$", visibilityStartDate, visibilityEndDate, data.MembershipLevel, visibilityStartDate, visibilityEndDate, shortdescription + "*");
                 Admin.LoyaltySetUp_Offers_SelectMemberLevelALL();
                 Admin.UploadImage(imagePath);
                 AddDelay(5000);
                 Logger.WriteDebugMessage("Details are entered succesfully on Add offer overlay");
-                Admin.AddPromotion(promotionCode+"#", buttonName+"@", data.PropertyName, promotionDescription+"&", ProjectName);
+                Admin.AddPromotion(promotionCode + "#", buttonName + "@", data.PropertyName, promotionDescription + "&", ProjectName);
                 Admin.Click_LoyaltySetUp_Offers_Button_ConfirmPromotion();
                 Logger.WriteDebugMessage("Promotion is added successfully");
                 Admin.Click_LoyaltySetUp_Offers_Button_Save();
@@ -262,11 +262,11 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 LoginCredentials(data.MemberEmail, ProjectDetails.CommonFrontendPassword, ProjectName);
                 Navigation.Click_Link_SpecialOffer();
                 Logger.WriteDebugMessage("Navigated to Offers tab");
-                ScrollToText(title+"$");
-                VerifyTextOnPageAndHighLight(title+"$");
+                ScrollToText(title + "$");
+                VerifyTextOnPageAndHighLight(title + "$");
                 VerifyTextOnPageAndHighLight(shortdescription + "*");
-                Navigation.Click_SpecialOffers_Readmore(title+"$");
-                VerifyTextOnPageAndHighLight(promotionDescription+"&");
+                Navigation.Click_SpecialOffers_Readmore(title + "$");
+                VerifyTextOnPageAndHighLight(promotionDescription + "&");
                 Logger.WriteDebugMessage("Details displaying on the Frontend as Admin");
 
 
@@ -274,13 +274,13 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 //Log Test data into Log file and extend Report
 
                 Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Image Path", imagePath);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Title", title+"$");
+                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Title", title + "$");
                 Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Visibility Start Date", visibilityStartDate);
                 Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Visibility End Date", visibilityEndDate);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Promotion Description", promotionDescription+"&");
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Promotion Code", promotionCode+"#");
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Button Name", buttonName+"@");
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Short Description", shortdescription+"*",true);
+                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Promotion Description", promotionDescription + "&");
+                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Promotion Code", promotionCode + "#");
+                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Button Name", buttonName + "@");
+                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Short Description", shortdescription + "*", true);
             }
         }
 
@@ -327,7 +327,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Admin.Click_LoyaltySetUp_Offers_Button_ConfirmPromotion();
                 Logger.WriteDebugMessage("Promotion is added successfully");
                 Admin.Click_LoyaltySetUp_Offers_Button_Save();
-                if(PageObject_Admin.LoyaltySetUp_Offers_Button_Save().Displayed)
+                if (PageObject_Admin.LoyaltySetUp_Offers_Button_Save().Displayed)
                 {
                     Admin.Click_LoyaltySetUp_Offers_Button_Cancel();
                 }
@@ -337,7 +337,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Admin.LoyaltySetUp_Offers_Text_Filter(title);
                 AddDelay(5000);
                 VerifyTextOnPageAndHighLight(title);
-                Logger.WriteDebugMessage(title+"= Offers saved successfully");
+                Logger.WriteDebugMessage(title + "= Offers saved successfully");
 
                 // Edit recently added offer and verify details entered while adding
                 Admin.Click_LoyaltySetUp_Offers_Icon_Edit();
@@ -355,7 +355,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Promotion Description", promotionDescription);
                 Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Promotion Code", promotionCode);
                 Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Button Name", buttonName);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Short Description", shortdescription,true);
+                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Short Description", shortdescription, true);
             }
         }
         private static void TC_109689()
@@ -367,7 +367,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Random ranno = new Random();
                 Users data = new Users();
                 Queries.GetMemberLevel(data, 2);
-                
+
 
                 //Retrive data from database
                 imagePath = String.Concat(ProjectPath, TestData.ExcelData.TestDataReader.ReadData(1, "ImagePath"));
@@ -406,7 +406,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                     VerifyTextOnPageAndHighLight(cancelButton_Validation);
                     Logger.WriteDebugMessage(cancelButton_Validation + "= Offers Canceled successfully");
                 }
-                
+
 
                 //Log Test data into Log file and extend Report
                 Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Image Path", imagePath);
@@ -414,81 +414,81 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Visibility Start Date", visibilityStartDate);
                 Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Visibility End Date", visibilityEndDate);
                 Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Short Description", shortdescription);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Cancel Button Validation", cancelButton_Validation,true);
+                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Cancel Button Validation", cancelButton_Validation, true);
             }
         }
         private static void TC_109750()
         {
             if (TestCaseId == Constants.TC_109750)
-            {
-                //pre-requiste
-                string imagePath, title, visibilityStartDate, visibilityEndDate, shortdescription, visibilityStartDate_Greater, visibilityDate_Validation, promotionDate_Validation;
-                Random ranno = new Random();
-                Users data = new Users();
-                Queries.GetMemberLevel(data, 2);
-                Queries.IdentifyHotel(data);
-                
-
-                //Retrive data from test data
-                imagePath = String.Concat(ProjectPath, TestData.ExcelData.TestDataReader.ReadData(1, "ImagePath"));
-                title = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "Title"), ranno.Next().ToString());
-                visibilityStartDate = TestData.ExcelData.TestDataReader.ReadData(1, "VisibilityStartDate");
-                visibilityEndDate = TestData.ExcelData.TestDataReader.ReadData(1, "VisibilityEndDate");
-                shortdescription = TestData.ExcelData.TestDataReader.ReadData(1, "ShortDescription");
-                visibilityStartDate_Greater = TestData.ExcelData.TestDataReader.ReadData(1, "VisibilityStartDate_Greater");
-                visibilityDate_Validation = TestData.ExcelData.TestDataReader.ReadData(1, "VisibilityDate_Validation");
-                promotionDate_Validation = TestData.ExcelData.TestDataReader.ReadData(1, "PromotionDate_Validation");
+                {
+                    //pre-requiste
+                    string imagePath, title, visibilityStartDate, visibilityEndDate, shortdescription, visibilityStartDate_Greater, visibilityDate_Validation, promotionDate_Validation;
+                    Random ranno = new Random();
+                    Users data = new Users();
+                    Queries.GetMemberLevel(data, 2);
+                    Queries.IdentifyHotel(data);
 
 
-                // Navigate to Admin
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
+                    //Retrive data from test data
+                    imagePath = String.Concat(ProjectPath, TestData.ExcelData.TestDataReader.ReadData(1, "ImagePath"));
+                    title = String.Concat(TestData.ExcelData.TestDataReader.ReadData(1, "Title"), ranno.Next().ToString());
+                    visibilityStartDate = TestData.ExcelData.TestDataReader.ReadData(1, "VisibilityStartDate");
+                    visibilityEndDate = TestData.ExcelData.TestDataReader.ReadData(1, "VisibilityEndDate");
+                    shortdescription = TestData.ExcelData.TestDataReader.ReadData(1, "ShortDescription");
+                    visibilityStartDate_Greater = TestData.ExcelData.TestDataReader.ReadData(1, "VisibilityStartDate_Greater");
+                    visibilityDate_Validation = TestData.ExcelData.TestDataReader.ReadData(1, "VisibilityDate_Validation");
+                    promotionDate_Validation = TestData.ExcelData.TestDataReader.ReadData(1, "PromotionDate_Validation");
 
-                //Navigate to Loyalty Setup -> Offer tab
-                Admin.Click_Menu_LoyaltySetup();
-                Logger.WriteDebugMessage("Loyalty Setup tab get clicked");
-                Admin.Click_SubTab_Offers();
-                Logger.WriteDebugMessage("Offers sub tab get clicked");
-                Admin.Click_LoyaltySetUp_Offers_Button_AddOffers();
-                Logger.WriteDebugMessage("Offers editor page should get open");
 
-                //Enter Visibility Period start date > Visibility Period End date using copy paste  
+                    // Navigate to Admin
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
 
-                Admin.AddORUpdateOffers(title, visibilityStartDate_Greater, visibilityEndDate, data.MembershipLevel, visibilityStartDate, visibilityEndDate, shortdescription);
-                Admin.UploadImage(imagePath);
-                AddDelay(10000);
-                Admin.Click_LoyaltySetUp_Offers_Button_AddAnotherPromotion();
-                VerifyTextOnPageAndHighLight(visibilityDate_Validation);
-                Logger.WriteDebugMessage(visibilityDate_Validation + " = Validation message displayed");
+                    //Navigate to Loyalty Setup -> Offer tab
+                    Admin.Click_Menu_LoyaltySetup();
+                    Logger.WriteDebugMessage("Loyalty Setup tab get clicked");
+                    Admin.Click_SubTab_Offers();
+                    Logger.WriteDebugMessage("Offers sub tab get clicked");
+                    Admin.Click_LoyaltySetUp_Offers_Button_AddOffers();
+                    Logger.WriteDebugMessage("Offers editor page should get open");
 
-                //Update Correct Visibility Start and End Date
-                Admin.LoyaltySetUp_Offers_Text_VisibilityStart(visibilityStartDate);
-                Admin.LoyaltySetUp_Offers_Text_VisibilityEnd(visibilityEndDate);
+                    //Enter Visibility Period start date > Visibility Period End date using copy paste  
 
-                //Enter Promotion Period start date > Promotion Period End date using copy paste  
-                Admin.LoyaltySetUp_Offers_Text_PromotionStart(visibilityStartDate_Greater);
-                Admin.LoyaltySetUp_Offers_Text_PromotionEnd(visibilityEndDate);
-                Admin.Click_LoyaltySetUp_Offers_Button_AddAnotherPromotion();
-                VerifyTextOnPageAndHighLight(promotionDate_Validation);
-                Logger.WriteDebugMessage(promotionDate_Validation + " = Validation message displayed");
+                    Admin.AddORUpdateOffers(title, visibilityStartDate_Greater, visibilityEndDate, data.MembershipLevel, visibilityStartDate, visibilityEndDate, shortdescription);
+                    Admin.UploadImage(imagePath);
+                    AddDelay(10000);
+                    Admin.Click_LoyaltySetUp_Offers_Button_AddAnotherPromotion();
+                    VerifyTextOnPageAndHighLight(visibilityDate_Validation);
+                    Logger.WriteDebugMessage(visibilityDate_Validation + " = Validation message displayed");
 
-                //Log Test data into Log file and extend Report
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Image Path", imagePath);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Title", title);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Visibility Start Date", visibilityStartDate);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Visibility End Date", visibilityEndDate);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Short Description", shortdescription);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Greater Date", visibilityStartDate_Greater);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Visibility Date Validation", visibilityDate_Validation);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Promotion Date Validation", promotionDate_Validation,true);
-            }
+                    //Update Correct Visibility Start and End Date
+                    Admin.LoyaltySetUp_Offers_Text_VisibilityStart(visibilityStartDate);
+                    Admin.LoyaltySetUp_Offers_Text_VisibilityEnd(visibilityEndDate);
+
+                    //Enter Promotion Period start date > Promotion Period End date using copy paste  
+                    Admin.LoyaltySetUp_Offers_Text_PromotionStart(visibilityStartDate_Greater);
+                    Admin.LoyaltySetUp_Offers_Text_PromotionEnd(visibilityEndDate);
+                    Admin.Click_LoyaltySetUp_Offers_Button_AddAnotherPromotion();
+                    VerifyTextOnPageAndHighLight(promotionDate_Validation);
+                    Logger.WriteDebugMessage(promotionDate_Validation + " = Validation message displayed");
+
+                    //Log Test data into Log file and extend Report
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Image Path", imagePath);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Title", title);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Visibility Start Date", visibilityStartDate);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Visibility End Date", visibilityEndDate);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Short Description", shortdescription);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Greater Date", visibilityStartDate_Greater);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Visibility Date Validation", visibilityDate_Validation);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Promotion Date Validation", promotionDate_Validation, true);
+                }
         }
         private static void TC_110850()
         {
             if (TestCaseId == Constants.TC_110850)
             {
                 //Pre-requisite
-                string title,buttonName, hotel, promotionDescription;
+                string title, buttonName, hotel, promotionDescription;
                 Users data = new Users();
                 Queries.GetMemberLevel(data, 2);
                 Queries.IdentifyHotel(data);
@@ -498,7 +498,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 //Retrieve data
                 hotel = data.PropertyName;
                 promotionDescription = MakeUnique("Promotion");
-                buttonName = String.Concat("Button_", ranno.Next().ToString().Substring(0,4));
+                buttonName = String.Concat("Button_", ranno.Next().ToString().Substring(0, 4));
 
                 // Navigate to Admin
                 AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
@@ -518,7 +518,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Logger.WriteDebugMessage("User landed on  Offer Editor page");
 
                 //Click on  edit icon against one of the Promos grid  and Capture the Promo  code
-            //    Helper.ScrollToElement(PageObject_Admin.LoyaltySetUp_Offers_Button_EditPromotion());
+                //    Helper.ScrollToElement(PageObject_Admin.LoyaltySetUp_Offers_Button_EditPromotion());
                 Admin.Click_LoyaltySetUp_Offers_Button_EditPromotion();
                 string promotionCode = Helper.Getdata(PageObject_Admin.LoyaltySetUp_Offers_Text_PromotionCode());
                 Logger.WriteDebugMessage(promotionCode + "= Offer Promo captured");
@@ -568,16 +568,17 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Title", title);
                 Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Hotel", hotel);
                 Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Promotion Description", promotionDescription);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Button Name", buttonName,true);
+                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "Button Name", buttonName, true);
             }
         }
         private static void TC_109685()
         {
+
             if (TestCaseId == Constants.TC_109685)
             {
                 //pre-requiste
                 string imagePath, title, visibilityStartDate, visibilityEndDate, promotionDescription, promotionCode, buttonName, shortdescription, shortdescription_CharLimit,
-                    title_CharLimit, promoDescription_CharLimit, promoCode_CharLimit, buttonText_CharLimit, shortdescription_CharLimitValidation,promoDescription_CharLimitValidation;
+                    title_CharLimit, promoDescription_CharLimit, promoCode_CharLimit, buttonText_CharLimit, shortdescription_CharLimitValidation, promoDescription_CharLimitValidation;
                 Random ranno = new Random();
                 Users data = new Users();
                 Utility.Queries.GetMemberLevel(data, 2);
@@ -619,7 +620,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
                 Helper.DynamicScroll(Driver, PageObject_Admin.LoyaltySetUp_Offers_Button_AddAnotherPromotion());
                 Admin.Click_LoyaltySetUp_Offers_Button_AddAnotherPromotion();
                 VerifyTextOnPageAndHighLight(shortdescription_CharLimitValidation);
-                Logger.WriteDebugMessage(shortdescription_CharLimitValidation+"= Validation message displayed");
+                Logger.WriteDebugMessage(shortdescription_CharLimitValidation + "= Validation message displayed");
 
                 // Validate char limit for Title
                 Admin.LoyaltySetUp_Offers_Text_ShortDescription(shortdescription);

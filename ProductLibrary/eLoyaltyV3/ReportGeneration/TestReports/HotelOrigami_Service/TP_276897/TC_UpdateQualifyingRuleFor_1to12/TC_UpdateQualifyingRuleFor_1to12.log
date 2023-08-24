@@ -1,13 +1,10 @@
-2023-05-16 08:30:07,108 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
-2023-05-16 08:30:07,161 ::INFO ::[Logger]:: Chrome is currently being used for testing.
-2023-05-16 08:30:07,168 ::INFO ::[Logger]::  is used for Testing
-2023-05-16 08:30:07,174 ::INFO ::[Logger]:: This is the login page.data:,
-2023-05-16 08:30:07,174 ::INFO ::[Logger]:: Execution started at:-May-16-2023 08-30-07-AM
-2023-05-16 08:30:07,175 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-05-16 08:30:07,175 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
-2023-05-16 08:30:07,176 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_UpdateQualifyingRuleFor_1to12         XXXXXXXXXXXXXXXX
-2023-05-16 08:30:07,177 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-05-16 08:30:07,180 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
-2023-05-16 08:30:41,904 ::INFO ::[Logger]:: Qualifying Stay Rule and Qualifying Night Rule is Updated
-2023-05-16 08:30:41,904 ::INFO ::[Logger]:: HotelOrigami_Service:: Script ::Passed
-2023-05-16 08:30:42,401 ::INFO ::[Logger]:: E.N.D
+2023-07-18 11:10:49,235 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-07-18 11:10:49,388 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-07-18 11:10:49,420 ::INFO ::[Logger]::  is used for Testing
+2023-07-18 11:10:50,565 ::INFO ::[Logger]:: This is the login page.data:,
+2023-07-18 11:10:50,569 ::INFO ::[Logger]:: Execution started at:-Jul-18-2023 11-10-50-AM
+2023-07-18 11:10:50,579 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-07-18 11:10:50,582 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-07-18 11:10:50,599 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_UpdateQualifyingRuleFor_1to12         XXXXXXXXXXXXXXXX
+2023-07-18 11:10:50,601 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-07-18 11:10:50,757 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=744}

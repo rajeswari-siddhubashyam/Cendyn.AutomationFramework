@@ -21,6 +21,7 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
     {
         public static void TC_264512()
         {
+            
             if (TestCaseId == Constants.TC_264512)
             {
                 //pre-requiste
@@ -109,212 +110,222 @@ namespace eLoyaltyV3.AppModule.MainAdminApp
         }
         public static void TC_264521()
         {
-            if (TestCaseId == Constants.TC_264521)
+            try
             {
-                Users data = new Users();
-                Queries.GetActiveTestEmailTemplate(data);
-                Queries.GetActiveMemberEmail(data);
-                string fromEmail1, fromEmail2;
 
-                //Retrive data from test data
-                fromEmail1 = TestData.ExcelData.TestDataReader.ReadData(1, "FromEmail");
-                fromEmail2 = TestData.ExcelData.TestDataReader.ReadData(2, "FromEmail");
-
-                // Navigate to Admin
-                AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
-                Logger.WriteDebugMessage("Logged in successfully.");
-
-                //Navigate to Email Setup Tab
-                Admin.Click_Menu_EmailSetuUp();
-                Logger.WriteDebugMessage("Navigated to Admin Email Setup Page");
-
-                //Verify fields available in Member level grid
-                Admin.Enter_Filter_EmailSetup_SearchEmail(data.EmailName);
-                if (PageObject_Admin.Button_EmailSetup_EditEmail().Displayed)
-                    Logger.WriteDebugMessage("Email is Getting Displayed on the Dashboard");
-                else
-                    Assert.Fail("Email Not Found");
-                
-                //Cliick on Edit button for email
-                Admin.Click_Button_EmailSetup_EditEmail();
-                if (PageObject_Admin.Input_EmailSetup_FromEmail().Displayed)
+                if (TestCaseId == Constants.TC_264521)
                 {
-                    Logger.WriteDebugMessage("Edit Overlay got Displayed");
-                }
+                    Users data = new Users();
+                    Queries.GetActiveTestEmailTemplate(data);
+                    Queries.GetActiveMemberEmail(data);
+                    string fromEmail1, fromEmail2;
 
-                //Update From Email Address and Save the changes
-                Admin.Enter_Input_EmailSetup_FromEmail(fromEmail1);
-                Logger.WriteDebugMessage("Entered From Email address in field");
-                Admin.Click_Button_EmailSetup_Save();
-                ElementWait(PageObject_Admin.Button_EmailSetup_Add_Email(), 240);
-                Logger.WriteDebugMessage("Changes got saved and Updated From email as "+fromEmail1);
+                    //Retrive data from test data
+                    fromEmail1 = TestData.ExcelData.TestDataReader.ReadData(1, "FromEmail");
+                    fromEmail2 = TestData.ExcelData.TestDataReader.ReadData(2, "FromEmail");
 
-                //Trigger email from Admin
-                Admin.Click_Menu_Home();
-                Logger.WriteDebugMessage("Landed on Admin Home Page");
-                Admin.EnterEmail(data.MemberEmail);
-                Logger.WriteDebugMessage("Entered Active Email address");
-                Admin.Click_Button_MemberSearch();
-                Logger.WriteDebugMessage("Member Got Displayed");
-                Admin.Click_Icon_View(ProjectName);
-                Helper.ElementWait(PageObject_Admin.MemberInformation_Value_MemberLogin(), 240);
-                Logger.WriteDebugMessage("Landed on Member Information Page");
-                Admin.SendActivationEmail();
+                    // Navigate to Admin
+                    AdminLoginCredentials(ProjectDetails.CommonAdminEmail, ProjectDetails.CommonAdminPassword);
+                    Logger.WriteDebugMessage("Logged in successfully.");
 
-                //Login to CatchAll and Verify the Email
-                OpenNewTab();
-                ControlToNextWindow();
-                Email.LogIntoCatchAll();
-                Time.AddDelay(10000);
-                Helper.ReloadPage();
-                Hotmail.CheckOutLook();
-                Hotmail.SearchEmail(data.MemberEmail);
-                try
-                {   
+                    //Navigate to Email Setup Tab
+                    Admin.Click_Menu_EmailSetuUp();
+                    Logger.WriteDebugMessage("Navigated to Admin Email Setup Page");
+
+                    //Verify fields available in Member level grid
+                    Admin.Enter_Filter_EmailSetup_SearchEmail(data.EmailName);
+                    if (PageObject_Admin.Button_EmailSetup_EditEmail().Displayed)
+                        Logger.WriteDebugMessage("Email is Getting Displayed on the Dashboard");
+                    else
+                        Assert.Fail("Email Not Found");
+
+                    //Cliick on Edit button for email
+                    Admin.Click_Button_EmailSetup_EditEmail();
+                    if (PageObject_Admin.Input_EmailSetup_FromEmail().Displayed)
+                    {
+                        Logger.WriteDebugMessage("Edit Overlay got Displayed");
+                    }
+
+                    //Update From Email Address and Save the changes
+                    Admin.Enter_Input_EmailSetup_FromEmail(fromEmail1);
+                    Logger.WriteDebugMessage("Entered From Email address in field");
+                    Admin.Click_Button_EmailSetup_Save();
+                    ElementWait(PageObject_Admin.Button_EmailSetup_Add_Email(), 240);
+                    Logger.WriteDebugMessage("Changes got saved and Updated From email as " + fromEmail1);
+
+                    //Trigger email from Admin
+                    Admin.Click_Menu_Home();
+                    Logger.WriteDebugMessage("Landed on Admin Home Page");
+                    Admin.EnterEmail(data.MemberEmail);
+                    Logger.WriteDebugMessage("Entered Active Email address");
+                    Admin.Click_Button_MemberSearch();
+                    Logger.WriteDebugMessage("Member Got Displayed");
+                    Admin.Click_Icon_View(ProjectName);
+                    Helper.ElementWait(PageObject_Admin.MemberInformation_Value_MemberLogin(), 240);
+                    Logger.WriteDebugMessage("Landed on Member Information Page");
+                    Admin.SendActivationEmail();
+
+                    //Login to CatchAll and Verify the Email
+                    OpenNewTab();
+                    ControlToNextWindow();
+                    Email.LogIntoCatchAll();
+                    Time.AddDelay(10000);
+                    Helper.ReloadPage();
+                    Hotmail.CheckOutLook();
+                    Hotmail.SearchEmail(data.MemberEmail);
+                    Hotmail.OpenLatestEmailSingleClick();
+                    /*try
+                    {   
+                        try
+                        {
+                            ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
+                        }
+                        catch
+                        {
+                            try
+                            {
+                                ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][3]")));
+                            }
+                            catch
+                            {
+                                ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][2]")));
+                            }
+                        }
+
+
+                    }
+                    catch
+                    {
+                        ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
+                    }*/
+                    Helper.PageDown();
+                    if (Admin.CatchAllEmailname().Contains(data.MemberEmail))
+                        Logger.WriteDebugMessage("From email address = " + data.MemberEmail + "found on the page for Activation Email");
+                    else
+                        Assert.Fail("From email address does not found on the page for Activation Email");
+
+                    //Trigger one more email from Admin
+                    ControlToPreviousWindow();
+                    Admin.SendWelcomeEmail();
+                    ControlToNextWindow();
+                    Helper.ReloadPage();
+                    Hotmail.CheckOutLook();
+                    Hotmail.SearchEmail(data.MemberEmail);
+                    Hotmail.OpenLatestEmailSingleClick();
+                    /*
                     try
                     {
                         ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
                     }
-                    catch
+                    catch (Exception ex)
                     {
-                        try
-                        {
-                            ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][3]")));
-                        }
-                        catch
-                        {
-                            ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][2]")));
-                        }
+                        ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
+                    }*/
+                    Helper.PageDown();
+                    if (Admin.CatchAllEmailname().Contains(data.MemberEmail))
+                        Logger.WriteDebugMessage("From email address = " + data.MemberEmail + "found on the page for Welcome Email");
+                    else
+                        Assert.Fail("From email address does not found on the page for Welcome Email");
+
+                    //Verify the Email in Database on propertysetting and PropertyEmailSettings tables
+                    Queries.GetSettingValueFromPropertySettings(data);
+                    Queries.GetFromEmailFromPropertyEmailSettings(data);
+                    if (data.SettingValue == fromEmail1 && data.EmailFromAddress == fromEmail1)
+                        Logger.WriteInfoMessage("From Email address = " + fromEmail1 + " is reflecting correctly on Property Settings and PropertyEmailSettings Table");
+                    else
+                        Assert.Fail("From Email address = " + fromEmail1 + " is not reflecting correctly on Property Settings and PropertyEmailSettings Table");
+
+
+                    //Update the From Email address to old email address
+                    ControlToPreviousWindow();
+                    Logger.WriteDebugMessage("Landed on Admin Email Setup Page");
+                    Admin.Click_Menu_EmailSetuUp();
+                    Logger.WriteDebugMessage("Navigated to Admin Email Setup Page");
+                    Admin.Enter_Filter_EmailSetup_SearchEmail(data.EmailName);
+                    if (PageObject_Admin.Button_EmailSetup_EditEmail().Displayed)
+                        Logger.WriteDebugMessage("Email is Getting Displayed on the Dashboard");
+                    else
+                        Assert.Fail("Email Not Found");
+                    Admin.Click_Button_EmailSetup_EditEmail();
+                    if (PageObject_Admin.Input_EmailSetup_FromEmail().Displayed)
+                    {
+                        Logger.WriteDebugMessage("Edit Overlay got Displayed");
                     }
-                    
+                    Admin.Enter_Input_EmailSetup_FromEmail(fromEmail2);
+                    Logger.WriteDebugMessage("Entered From Email address in field");
+                    Admin.Click_Button_EmailSetup_Save();
+                    ElementWait(PageObject_Admin.Button_EmailSetup_Add_Email(), 240);
+                    Logger.WriteDebugMessage("Changes got saved and Updated From email as " + fromEmail2);
+
+                    //Trigger Another email from new FromEmail and verify the email
+                    Admin.Click_Menu_Home();
+                    Logger.WriteDebugMessage("Landed on Admin Home Page");
+                    Admin.EnterEmail(data.MemberEmail);
+                    Logger.WriteDebugMessage("Entered Active Email address");
+                    Admin.Click_Button_MemberSearch();
+                    Logger.WriteDebugMessage("Member Got Displayed");
+                    Admin.Click_Icon_View(ProjectName);
+                    Helper.ElementWait(PageObject_Admin.MemberInformation_Value_MemberLogin(), 240);
+                    Logger.WriteDebugMessage("Landed on Member Information Page");
+                    Admin.SendActivationEmail();
+
+                    //Verify the Email in catchall
+                    ControlToNextWindow();
+                    Helper.ReloadPage();
+                    Hotmail.CheckOutLook();
+                    Hotmail.SearchEmail(data.MemberEmail);
+                    Hotmail.OpenLatestEmailSingleClick();
+                    /*try
+                    {
+                        ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
+                    }
+                    catch (Exception ex)
+                    {
+                        ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
+                    }*/
+                    Helper.PageDown();
+                    if (Admin.CatchAllEmailname().Contains("hotelorigami@cendyn.com"))
+                        Logger.WriteDebugMessage("From email address = hotelorigami@cendyn.com found on the page for Activation Email");
+                    else
+                        Assert.Fail("From email address does not found on the page for Activation Email");
+
+                    //Trigger one more email from Admin
+                    ControlToPreviousWindow();
+                    Admin.SendWelcomeEmail();
+                    ControlToNextWindow();
+                    Helper.ReloadPage();
+                    Hotmail.CheckOutLook();
+                    Hotmail.SearchEmail(data.MemberEmail);
+                    Hotmail.OpenLatestEmailSingleClick();
+                    /* try
+                     {
+                         ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
+                     }
+                     catch (Exception ex)
+                     {
+                         ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
+                     }*/
+                    Helper.PageDown();
+                    if (Admin.CatchAllEmailname().Contains("hotelorigami@cendyn.com"))
+                        Logger.WriteDebugMessage("From email address = hotelorigami@cendyn.com  found on the page for Welcome Email");
+                    else
+                        Assert.Fail("From email address does not found on the page for Welcome Email");
+
+                    //Verify the Email in Database on propertysetting and PropertyEmailSettings tables
+                    Queries.GetSettingValueFromPropertySettings(data);
+                    Queries.GetFromEmailFromPropertyEmailSettings(data);
+                    if (data.SettingValue == fromEmail2 && data.EmailFromAddress == fromEmail2)
+                        Logger.WriteInfoMessage("From Email address = " + fromEmail2 + " is reflecting correctly on Property Settings and PropertyEmailSettings Table");
+                    else
+                        Assert.Fail("From Email address = " + fromEmail2 + " is not reflecting correctly on Property Settings and PropertyEmailSettings Table");
+
+                    //Log Test data into Log file and extend Report
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_1st From Email Address", fromEmail1);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_2nd From Email Address", fromEmail2, true);
 
                 }
-                catch
-                {
-                    ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
-                }
-                Helper.PageDown();
-                if (Admin.CatchAllEmailname().Contains("origami@cendyn17.com"))
-                    Logger.WriteDebugMessage("From email address = origami@cendyn17.com found on the page for Activation Email");
-                else
-                    Assert.Fail("From email address does not found on the page for Activation Email");
-
-                //Trigger one more email from Admin
-                ControlToPreviousWindow();
-                Admin.SendWelcomeEmail();
-                ControlToNextWindow();
-                Helper.ReloadPage();
-                Hotmail.CheckOutLook();
-                Hotmail.SearchEmail(data.MemberEmail);
-                try
-                {
-                    ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
-                }
-                catch (Exception ex)
-                {
-                    ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
-                }
-                Helper.PageDown();
-                if (Admin.CatchAllEmailname().Contains("origami@cendyn17.com"))
-                    Logger.WriteDebugMessage("From email address = origami@cendyn17.com found on the page for Welcome Email");
-                else
-                    Assert.Fail("From email address does not found on the page for Welcome Email");
-
-                //Verify the Email in Database on propertysetting and PropertyEmailSettings tables
-                Queries.GetSettingValueFromPropertySettings(data);
-                Queries.GetFromEmailFromPropertyEmailSettings(data);
-                if (data.SettingValue == fromEmail1 && data.EmailFromAddress == fromEmail1)
-                    Logger.WriteInfoMessage("From Email address = "+ fromEmail1 + " is reflecting correctly on Property Settings and PropertyEmailSettings Table");
-                else
-                    Assert.Fail("From Email address = "+ fromEmail1 + " is not reflecting correctly on Property Settings and PropertyEmailSettings Table");
-
-
-                //Update the From Email address to old email address
-                ControlToPreviousWindow();
-                Logger.WriteDebugMessage("Landed on Admin Email Setup Page");
-                Admin.Click_Menu_EmailSetuUp();
-                Logger.WriteDebugMessage("Navigated to Admin Email Setup Page");
-                Admin.Enter_Filter_EmailSetup_SearchEmail(data.EmailName);
-                if (PageObject_Admin.Button_EmailSetup_EditEmail().Displayed)
-                    Logger.WriteDebugMessage("Email is Getting Displayed on the Dashboard");
-                else
-                    Assert.Fail("Email Not Found");
-                Admin.Click_Button_EmailSetup_EditEmail();
-                if (PageObject_Admin.Input_EmailSetup_FromEmail().Displayed)
-                {
-                    Logger.WriteDebugMessage("Edit Overlay got Displayed");
-                }
-                Admin.Enter_Input_EmailSetup_FromEmail(fromEmail2);
-                Logger.WriteDebugMessage("Entered From Email address in field");
-                Admin.Click_Button_EmailSetup_Save();
-                ElementWait(PageObject_Admin.Button_EmailSetup_Add_Email(), 240);
-                Logger.WriteDebugMessage("Changes got saved and Updated From email as " + fromEmail2);
-
-                //Trigger Another email from new FromEmail and verify the email
-                Admin.Click_Menu_Home();
-                Logger.WriteDebugMessage("Landed on Admin Home Page");
-                Admin.EnterEmail(data.MemberEmail);
-                Logger.WriteDebugMessage("Entered Active Email address");
-                Admin.Click_Button_MemberSearch();
-                Logger.WriteDebugMessage("Member Got Displayed");
-                Admin.Click_Icon_View(ProjectName);
-                Helper.ElementWait(PageObject_Admin.MemberInformation_Value_MemberLogin(), 240);
-                Logger.WriteDebugMessage("Landed on Member Information Page");
-                Admin.SendActivationEmail(); 
-
-                //Verify the Email in catchall
-                ControlToNextWindow();
-                Helper.ReloadPage();
-                Hotmail.CheckOutLook();
-                Hotmail.SearchEmail(data.MemberEmail);
-                try
-                {
-                    ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
-                }
-                catch (Exception ex)
-                {
-                    ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
-                }
-                Helper.PageDown();
-                if (Admin.CatchAllEmailname().Contains("hotelorigami@cendyn.com"))
-                    Logger.WriteDebugMessage("From email address = hotelorigami@cendyn.com found on the page for Activation Email");
-                else
-                    Assert.Fail("From email address does not found on the page for Activation Email");
-                
-                //Trigger one more email from Admin
-                ControlToPreviousWindow();
-                Admin.SendWelcomeEmail();
-                ControlToNextWindow();
-                Helper.ReloadPage();
-                Hotmail.CheckOutLook();
-                Hotmail.SearchEmail(data.MemberEmail);
-                try
-                {
-                    ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][4]")));
-                }
-                catch (Exception ex)
-                {
-                    ElementClick(Driver.FindElement(By.XPath("//div[@role='region'][@tabindex='-1']//div[@data-convid][1]")));
-                }
-                Helper.PageDown();
-                if (Admin.CatchAllEmailname().Contains("hotelorigami@cendyn.com"))
-                    Logger.WriteDebugMessage("From email address = hotelorigami@cendyn.com  found on the page for Welcome Email");
-                else
-                    Assert.Fail("From email address does not found on the page for Welcome Email");
-
-                //Verify the Email in Database on propertysetting and PropertyEmailSettings tables
-                Queries.GetSettingValueFromPropertySettings(data);
-                Queries.GetFromEmailFromPropertyEmailSettings(data);
-                if (data.SettingValue == fromEmail2 && data.EmailFromAddress == fromEmail2)
-                    Logger.WriteInfoMessage("From Email address = " + fromEmail2 + " is reflecting correctly on Property Settings and PropertyEmailSettings Table");
-                else
-                    Assert.Fail("From Email address = " + fromEmail2 + " is not reflecting correctly on Property Settings and PropertyEmailSettings Table");
-
-                //Log Test data into Log file and extend Report
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_1st From Email Address", fromEmail1);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_2nd From Email Address", fromEmail2, true);
-
             }
+            catch (Exception e) { }
         }
     }
 }

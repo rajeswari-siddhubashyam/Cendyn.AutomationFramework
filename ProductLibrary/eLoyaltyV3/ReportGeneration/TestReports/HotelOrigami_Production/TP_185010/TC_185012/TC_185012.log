@@ -1,27 +1,27 @@
-2023-05-15 16:39:18,768 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
-2023-05-15 16:39:18,771 ::INFO ::[Logger]:: Chrome is currently being used for testing.
-2023-05-15 16:39:18,773 ::INFO ::[Logger]::  is used for Testing
-2023-05-15 16:39:18,781 ::INFO ::[Logger]:: This is the login page.https://origamiloyalty.cendyn.com/en-US/Login?ReturnUrl=%2Fen-US%2FOverview
-2023-05-15 16:39:18,782 ::INFO ::[Logger]:: Execution started at:-May-15-2023 16-39-18-PM
-2023-05-15 16:39:18,784 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-05-15 16:39:18,786 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
-2023-05-15 16:39:18,787 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_185012         XXXXXXXXXXXXXXXX
-2023-05-15 16:39:18,788 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2023-05-15 16:39:18,793 ::INFO ::[Logger]:: Window Size is: {Width=1382, Height=736}
-2023-05-15 16:39:18,800 ::DEBUG::[Logger]:: 1) user landed on login page
-2023-05-15 16:39:54,895 ::DEBUG::[Logger]:: 2) User Successfully landed to Landing Page:Login - Club Rewards
-2023-05-15 16:40:32,789 ::ERROR::[Logger]:: The //div[@class='navbar-header']/descendant::li/a[ text()='Enroll'] element was not found on the page.
+2023-07-19 12:12:07,594 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-07-19 12:12:07,596 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-07-19 12:12:07,597 ::INFO ::[Logger]::  is used for Testing
+2023-07-19 12:12:07,714 ::INFO ::[Logger]:: This is the login page.https://origamiloyalty.cendyn.com/en-US/Login?ReturnUrl=%2Fen-US%2FOverview
+2023-07-19 12:12:07,717 ::INFO ::[Logger]:: Execution started at:-Jul-19-2023 12-12-07-PM
+2023-07-19 12:12:07,718 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-07-19 12:12:07,723 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-07-19 12:12:07,724 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_185012         XXXXXXXXXXXXXXXX
+2023-07-19 12:12:07,725 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-07-19 12:12:07,838 ::INFO ::[Logger]:: Window Size is: {Width=1366, Height=768}
+2023-07-19 12:12:07,849 ::DEBUG::[Logger]:: 1) user landed on login page
+2023-07-19 12:12:58,031 ::DEBUG::[Logger]:: 2) User Successfully landed to Landing Page:Login - Club Rewards
+2023-07-19 12:13:50,125 ::ERROR::[Logger]:: The //div[@class='navbar-header']/descendant::li/a[ text()='Enroll'] element was not found on the page.
 OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='navbar-header']/descendant::li/a[ text()='Enroll']"}
-  (Session info: chrome=113.0.5672.93)
+  (Session info: chrome=105.0.5195.28)
    at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
    at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
    at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
    at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
    at OpenQA.Selenium.By.FindElement(ISearchContext context)
    at OpenQA.Selenium.WebDriver.FindElement(By by)
-   at BaseUtility.PageObject.PageAction.Find_ElementXPath(String repoName) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\PageObject\PageAction.cs:line 33
-2023-05-15 16:40:34,809 ::FATAL::[Logger]:: Unable to click the Link_Enroll element on the Navigation page.System.NullReferenceException: Object reference not set to an instance of an object.
-   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Users\msridhar\Source\Repos\Cendyn.AutomationFramework\BaseUtility\Utility\Helper.cs:line 81
-2023-05-15 16:40:34,812 ::DEBUG::[Logger]:: 3) Verification of Tabs failed 
-2023-05-15 16:40:37,670 ::INFO ::[Logger]:: HotelOrigami_Production:: Script ::Passed
-2023-05-15 16:41:08,915 ::INFO ::[Logger]:: E.N.D
+   at BaseUtility.PageObject.PageAction.Find_ElementXPath(String repoName) in C:\Automation\BaseUtility\PageObject\PageAction.cs:line 33
+2023-07-19 12:13:52,140 ::FATAL::[Logger]:: Unable to click the Link_Enroll element on the Navigation page.System.NullReferenceException: Object reference not set to an instance of an object.
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Automation\BaseUtility\Utility\Helper.cs:line 81
+2023-07-19 12:13:52,143 ::DEBUG::[Logger]:: 3) Verification of Tabs failed 
+2023-07-19 12:13:55,897 ::INFO ::[Logger]:: HotelOrigami_Production:: Script ::Passed
+2023-07-19 12:13:57,782 ::INFO ::[Logger]:: E.N.D

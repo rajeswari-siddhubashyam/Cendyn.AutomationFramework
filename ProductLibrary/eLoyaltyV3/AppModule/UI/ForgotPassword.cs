@@ -18,6 +18,7 @@ namespace eLoyaltyV3.AppModule.UI
 
         public static void EnterEmail(string email)
         {
+            Helper.ElementClearText(PageObject_ForgotPassword.ForgotPassword_Email());
             Helper.ElementWait(PageObject_ForgotPassword.ForgotPassword_Email(), 240);
             Helper.ElementEnterText(PageObject_ForgotPassword.ForgotPassword_Email(), email);
             Helper.AddDelay(7000);

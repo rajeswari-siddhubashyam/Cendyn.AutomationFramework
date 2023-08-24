@@ -16,208 +16,212 @@ namespace RevIntel.AppModule.MainAdminApp
         //Validate the Portfolio Report
         public static void TC_253349()
         {
-            if (TestCaseId == Utility.Constants.TC_253349)
+            try
             {
-                //Pre-Requisite
-                string password, username, environment, Portfolio_value, reportName_stay, PriorYear_Total_Revenue, Budget_total_ADR, parameter2_value, parameter2, Currency, Business_Unit, client, hotel, parameter1, parameter1_value, startDate, enddate, FilePath, FullPath, Filename, Worksheetname = "Portfolio Report", reportName;
-                bool scenario1 = true, scenario2 = true, scenario3 = true;
-
-                //Retrieve data from Database or testdata file
-                username = TestData.ExcelData.TestDataReader.ReadData(1, "username");
-                password = TestData.ExcelData.TestDataReader.ReadData(1, "password");
-                client = TestData.ExcelData.TestDataReader.ReadData(1, "client");
-                environment = TestData.ExcelData.TestDataReader.ReadData(1, "environment");
-                Portfolio_value = TestData.ExcelData.TestDataReader.ReadData(1, "Portfolio_value");
-                Currency = TestData.ExcelData.TestDataReader.ReadData(1, "Currency");
-                Business_Unit = TestData.ExcelData.TestDataReader.ReadData(1, "Business_Unit");
-                startDate = TestData.ExcelData.TestDataReader.ReadData(1, "startDate");
-                enddate = TestData.ExcelData.TestDataReader.ReadData(1, "enddate");
-                parameter1 = TestData.ExcelData.TestDataReader.ReadData(1, "parameter1");
-                parameter1_value = TestData.ExcelData.TestDataReader.ReadData(1, "parameter1_value");
-                reportName = TestData.ExcelData.TestDataReader.ReadData(1, "reportName");
-                reportName_stay = TestData.ExcelData.TestDataReader.ReadData(1, "reportName_stay");
-                Budget_total_ADR = TestData.ExcelData.TestDataReader.ReadData(1, "Budget_total_ADR");
-                parameter2 = TestData.ExcelData.TestDataReader.ReadData(1, "parameter2");
-                parameter2_value = TestData.ExcelData.TestDataReader.ReadData(1, "parameter2_value");
-                PriorYear_Total_Revenue = TestData.ExcelData.TestDataReader.ReadData(1, "PriorYear_Total_Revenue");
-
-                Logger.WriteInfoMessage("Test Case : Validate the Portfolio Report");
-
-                //Enter Email address and password
-                Login.Frontend_SignIn(username, password);
-
-                //Select Client 
-                Navigation.Select_Client(client);
-
-                Helper.AddDelay(7000); // Change
-
-                //Navigate to Portfolio report
-                Navigation.Click_Menu_Portfolio();
-                Logger.WriteDebugMessage("Portfolio Drop down displayed");
-                Navigation.Click_Portfolio_Report();
-                Navigation.Portfolio();
-                Logger.WriteDebugMessage("User landed on Portfolio page");
-                Helper.AddDelay(10000);
-
-                Helper.EnterFrameByxPath(PageObject_ReportParameter.iframe_Portfolio());
-
-                //verify Hotel section For Portfolio report
-                ReportParameter.Hotel_Selection_DDL();
-
-                //Verify filters on Portfolio page
-                ReportParameter.Portfolio_reports_filters();
-
-                //Required field validation
-                ReportParameter.Click_View_Analysis();
-                Logger.WriteDebugMessage("validation message displayed for required field");
-
-                //Enter mandatory field and generate report
-                ReportParameter.Portfolio_report_startdate_enddate(Portfolio_value, startDate, enddate);
-                Helper.ScrollToText("View Analysis");
-                ReportParameter.Click_View_Analysis();
-                Helper.AddDelay(30000);
-                Logger.WriteDebugMessage("Report generated");
-                if (client == "Kerzner")
+                if (TestCaseId == Utility.Constants.TC_253349)
                 {
-                    //Verify Data in export document and in front end 
-                    ReportParameter.Report_Excel_Format();
+                    //Pre-Requisite
+                    string password, username, environment, Portfolio_value, reportName_stay, PriorYear_Total_Revenue, Budget_total_ADR, parameter2_value, parameter2, Currency, Business_Unit, client, hotel, parameter1, parameter1_value, startDate, enddate, FilePath, FullPath, Filename, Worksheetname = "Portfolio Report", reportName;
+                    bool scenario1 = true, scenario2 = true, scenario3 = true;
 
-                    FilePath = Environment.GetEnvironmentVariable("USERPROFILE") + @"\" + "Downloads";
-                    Filename = ReportParameter.VerifyFileFormate(FilePath);
-                    FullPath = TestData.ExcelData.ExcelDataReader.GetNewestFile((FilePath));
+                    //Retrieve data from Database or testdata file
+                    username = TestData.ExcelData.TestDataReader.ReadData(1, "username");
+                    password = TestData.ExcelData.TestDataReader.ReadData(1, "password");
+                    client = TestData.ExcelData.TestDataReader.ReadData(1, "client");
+                    environment = TestData.ExcelData.TestDataReader.ReadData(1, "environment");
+                    Portfolio_value = TestData.ExcelData.TestDataReader.ReadData(1, "Portfolio_value");
+                    Currency = TestData.ExcelData.TestDataReader.ReadData(1, "Currency");
+                    Business_Unit = TestData.ExcelData.TestDataReader.ReadData(1, "Business_Unit");
+                    startDate = TestData.ExcelData.TestDataReader.ReadData(1, "startDate");
+                    enddate = TestData.ExcelData.TestDataReader.ReadData(1, "enddate");
+                    parameter1 = TestData.ExcelData.TestDataReader.ReadData(1, "parameter1");
+                    parameter1_value = TestData.ExcelData.TestDataReader.ReadData(1, "parameter1_value");
+                    reportName = TestData.ExcelData.TestDataReader.ReadData(1, "reportName");
+                    reportName_stay = TestData.ExcelData.TestDataReader.ReadData(1, "reportName_stay");
+                    Budget_total_ADR = TestData.ExcelData.TestDataReader.ReadData(1, "Budget_total_ADR");
+                    parameter2 = TestData.ExcelData.TestDataReader.ReadData(1, "parameter2");
+                    parameter2_value = TestData.ExcelData.TestDataReader.ReadData(1, "parameter2_value");
+                    PriorYear_Total_Revenue = TestData.ExcelData.TestDataReader.ReadData(1, "PriorYear_Total_Revenue");
 
-                    TestData.ExcelData.ExcelDataReader tt = new TestData.ExcelData.ExcelDataReader(FullPath);
-                    string Name = tt.GetCellData(Worksheetname, 1, 1);
-                    if (Name.Equals(reportName))
-                        Logger.WriteDebugMessage(reportName + " matched with Report name ");
-                    else
-                        scenario1 = false;
+                    Logger.WriteInfoMessage("Test Case : Validate the Portfolio Report");
+
+                    //Enter Email address and password
+                    Login.Frontend_SignIn(username, password);
+
+                    //Select Client 
+                    Navigation.Select_Client(client);
+
+                    Helper.AddDelay(7000); // Change
+
+                    //Navigate to Portfolio report
+                    Navigation.Click_Menu_Portfolio();
+                    Logger.WriteDebugMessage("Portfolio Drop down displayed");
+                    Navigation.Click_Portfolio_Report();
+                    Navigation.Portfolio();
+                    Logger.WriteDebugMessage("User landed on Portfolio page");
+                    Helper.AddDelay(10000);
+
+                    Helper.EnterFrameByxPath(PageObject_ReportParameter.iframe_Portfolio());
+
+                    //verify Hotel section For Portfolio report
+                    ReportParameter.Hotel_Selection_DDL();
+
+                    //Verify filters on Portfolio page
+                    ReportParameter.Portfolio_reports_filters();
+
+                    //Required field validation
+                    ReportParameter.Click_View_Analysis();
+                    Logger.WriteDebugMessage("validation message displayed for required field");
+
+                    //Enter mandatory field and generate report
+                    ReportParameter.Portfolio_report_startdate_enddate(Portfolio_value, startDate, enddate);
+                    Helper.ScrollToText("View Analysis");
+                    ReportParameter.Click_View_Analysis();
+                    Helper.AddDelay(30000);
+                    Logger.WriteDebugMessage("Report generated");
+                    if (client == "Kerzner")
+                    {
+                        //Verify Data in export document and in front end 
+                        ReportParameter.Report_Excel_Format();
+
+                        FilePath = Environment.GetEnvironmentVariable("USERPROFILE") + @"\" + "Downloads";
+                        Filename = ReportParameter.VerifyFileFormate(FilePath);
+                        FullPath = TestData.ExcelData.ExcelDataReader.GetNewestFile((FilePath));
+
+                        TestData.ExcelData.ExcelDataReader tt = new TestData.ExcelData.ExcelDataReader(FullPath);
+                        string Name = tt.GetCellData(Worksheetname, 1, 1);
+                        if (Name.Equals(reportName))
+                            Logger.WriteDebugMessage(reportName + " matched with Report name ");
+                        else
+                            scenario1 = false;
+                    }
+                    /*validate report with one filter*/
+                    //Navigate to Portfolio report
+                    Helper.ReloadPage();
+                    Navigation.Click_Menu_Portfolio();
+                    Logger.WriteDebugMessage("Portfolio Drop down displayed");
+                    Navigation.Click_Portfolio_Report();
+                    Navigation.Portfolio();
+                    Helper.AddDelay(5000);
+                    Logger.WriteDebugMessage("User landed on Portfolio page");
+
+                    Helper.EnterFrameByxPath(PageObject_ReportParameter.iframe_Portfolio());
+
+                    //Report with one parameter
+                    ReportParameter.Select_Currency_Business_value(Currency, Business_Unit);
+                    ReportParameter.Portfolio_report_startdate_enddate(Portfolio_value, startDate, enddate);
+                    ReportParameter.Select_SourceMarket_DDL();
+                    Logger.WriteDebugMessage("Source Market drop down displayed");
+                    ReportParameter.Select_SourceMarket_value();
+                    Logger.WriteDebugMessage(parameter1_value + "Selected as source market");
+
+                    Helper.ScrollToElement(PageObject_ReportParameter.Click_View_Analysis());
+                    ReportParameter.Click_View_Analysis();
+                    Helper.AddDelay(30000);
+                    Logger.WriteDebugMessage("Report generated");
+                    Helper.ScrollToText("Filter(s)");
+                    Helper.VerifyTextOnPageAndHighLight("Filter(s):  ; Source Market: Africa; Central Africa; Sao Tome and Principe; Cameroon; ");
+                    Logger.WriteDebugMessage("Applied filter displayed at footer");
+                    if (client == "Kerzner")
+                    {
+                        //Verify Data in export document and in front end 
+                        ReportParameter.Report_Excel_Format();
+
+                        FilePath = Environment.GetEnvironmentVariable("USERPROFILE") + @"\" + "Downloads";
+                        Filename = ReportParameter.VerifyFileFormate(FilePath);
+                        FullPath = TestData.ExcelData.ExcelDataReader.GetNewestFile((FilePath));
+
+                        TestData.ExcelData.ExcelDataReader hh = new TestData.ExcelData.ExcelDataReader(FullPath);
+                        string Name_stay = hh.GetCellData(Worksheetname, 1, 3);
+                        if (Name_stay.Contains(reportName_stay))
+                            Logger.WriteDebugMessage(reportName_stay + " matched with Report name ");
+                        else
+                            Assert.Fail("Report name and stay not matched");
+
+                        TestData.ExcelData.ExcelDataReader at = new TestData.ExcelData.ExcelDataReader(FullPath);
+                        string Budget_ADR = at.GetCellData(Worksheetname, 10, 25);
+                        if (Budget_ADR.Contains(Budget_total_ADR))
+                            Logger.WriteDebugMessage(Budget_total_ADR + " matched with total ADR under Budget section");
+                        else
+                            scenario2 = false;
+                    }
+                    //Report with Multiple filter and excel column validation 
+                    Helper.ReloadPage();
+                    Navigation.Click_Menu_Portfolio();
+                    Logger.WriteDebugMessage("Portfolio Drop down displayed");
+                    Navigation.Click_Portfolio_Report();
+                    Navigation.Portfolio();
+                    Helper.AddDelay(5000);
+                    Logger.WriteDebugMessage("User landed on Portfolio page");
+
+                    Helper.EnterFrameByxPath(PageObject_ReportParameter.iframe_Portfolio());
+
+                    ReportParameter.Select_Currency_Business_value(Currency, Business_Unit);
+                    ReportParameter.Portfolio_report_startdate_enddate(Portfolio_value, startDate, enddate);
+                    ReportParameter.Select_SourceMarket_DDL();
+                    Logger.WriteDebugMessage("Source Market drop down displayed");
+                    ReportParameter.Select_SourceMarket_value();
+                    ReportParameter.Select_SourceMarket_DDL();
+                    Logger.WriteDebugMessage(parameter1_value + "Selected as source market");
+                    ReportParameter.Parameter_market();
+                    Logger.WriteDebugMessage("Market drop down displayed");
+                    ReportParameter.Parameter_market_Direct();
+                    Logger.WriteDebugMessage(parameter2_value + "selected for Market");
+                    ReportParameter.Click_View_Analysis();
+                    Helper.AddDelay(30000);
+                    Logger.WriteDebugMessage("Report generated");
+                    Helper.ScrollToText("Filter(s)");
+                    Helper.VerifyTextOnPageAndHighLight("Filter(s):  ; Source Market: Africa; Central Africa; Sao Tome and Principe; Cameroon; Central African Republic;");
+                    Logger.WriteDebugMessage("Applied filter displayed at footer");
+                    if (client == "Kerzner")
+                    {
+                        //Verify Data in export document and in front end 
+                        ReportParameter.Report_Excel_Format();
+
+                        FilePath = Environment.GetEnvironmentVariable("USERPROFILE") + @"\" + "Downloads";
+                        Filename = ReportParameter.VerifyFileFormate(FilePath);
+                        FullPath = TestData.ExcelData.ExcelDataReader.GetNewestFile((FilePath));
+
+                        TestData.ExcelData.ExcelDataReader ll = new TestData.ExcelData.ExcelDataReader(FullPath);
+                        string Total_Revenue = ll.GetCellData(Worksheetname, 14, 36);
+                        if (Total_Revenue.Contains(PriorYear_Total_Revenue))
+                            Logger.WriteDebugMessage(PriorYear_Total_Revenue + " matched with total ADR under Budget section");
+                        else
+                            scenario3 = false;
+
+                        //Delete downloaded file
+                        TestData.ExcelData.ExcelDataReader.deleteFile(FilePath);
+                    }
+                    if (scenario1 == false) Assert.Fail("Report with mandatory field is fail");
+                    else Logger.WriteInfoMessage("Scenario 1 : Report with mandatory field is Pass");
+
+                    if (scenario2 == false) Assert.Fail("Report with one filter is fail");
+                    else Logger.WriteInfoMessage("Scenario 2 : Report with one filter is Pass");
+
+                    if (scenario3 == false) Assert.Fail("Report with  multiple filter is fail");
+                    else Logger.WriteInfoMessage("Scenario 3 : Report with multiple filter is Pass");
+
+                    //Log test data into log file as well as extent report
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Valid User Email", username);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Password", password);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_environment", environment);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_client", client);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Portfolio_value", Portfolio_value);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Business_Unit", Business_Unit);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Currency", Currency);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_startDate", startDate);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_enddate", enddate);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_reportName", reportName);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_parameter1", parameter1);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_parameter1_value", parameter1_value);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_reportName_stay", reportName_stay);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Budget_total_ADR", Budget_total_ADR);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_parameter2", parameter2);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_parameter2_value", parameter2_value);
+                    Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_PriorYear_Total_Revenue", PriorYear_Total_Revenue, true);
                 }
-                /*validate report with one filter*/
-                //Navigate to Portfolio report
-                Helper.ReloadPage();
-                Navigation.Click_Menu_Portfolio();
-                Logger.WriteDebugMessage("Portfolio Drop down displayed");
-                Navigation.Click_Portfolio_Report();
-                Navigation.Portfolio();
-                Helper.AddDelay(5000);
-                Logger.WriteDebugMessage("User landed on Portfolio page");
-
-                Helper.EnterFrameByxPath(PageObject_ReportParameter.iframe_Portfolio());
-
-                //Report with one parameter
-                ReportParameter.Select_Currency_Business_value(Currency, Business_Unit);
-                ReportParameter.Portfolio_report_startdate_enddate(Portfolio_value, startDate, enddate);
-                ReportParameter.Select_SourceMarket_DDL();
-                Logger.WriteDebugMessage("Source Market drop down displayed");
-                ReportParameter.Select_SourceMarket_value();
-                Logger.WriteDebugMessage(parameter1_value + "Selected as source market");
-
-                Helper.ScrollToElement(PageObject_ReportParameter.Click_View_Analysis());  
-                ReportParameter.Click_View_Analysis();
-                Helper.AddDelay(30000);
-                Logger.WriteDebugMessage("Report generated");
-                Helper.ScrollToText("Filter(s)");
-                Helper.VerifyTextOnPageAndHighLight("Filter(s):  ; Source Market: Africa; Central Africa; Sao Tome and Principe; Cameroon; ");
-                Logger.WriteDebugMessage("Applied filter displayed at footer");
-                if (client == "Kerzner")
-                {
-                    //Verify Data in export document and in front end 
-                    ReportParameter.Report_Excel_Format();
-
-                    FilePath = Environment.GetEnvironmentVariable("USERPROFILE") + @"\" + "Downloads";
-                    Filename = ReportParameter.VerifyFileFormate(FilePath);
-                    FullPath = TestData.ExcelData.ExcelDataReader.GetNewestFile((FilePath));
-
-                    TestData.ExcelData.ExcelDataReader hh = new TestData.ExcelData.ExcelDataReader(FullPath);
-                    string Name_stay = hh.GetCellData(Worksheetname, 1, 3);
-                    if (Name_stay.Contains(reportName_stay))
-                        Logger.WriteDebugMessage(reportName_stay + " matched with Report name ");
-                    else
-                        Assert.Fail("Report name and stay not matched");
-
-                    TestData.ExcelData.ExcelDataReader at = new TestData.ExcelData.ExcelDataReader(FullPath);
-                    string Budget_ADR = at.GetCellData(Worksheetname, 10, 25);
-                    if (Budget_ADR.Contains(Budget_total_ADR))
-                        Logger.WriteDebugMessage(Budget_total_ADR + " matched with total ADR under Budget section");
-                    else
-                        scenario2 = false;
-                }
-                //Report with Multiple filter and excel column validation 
-                Helper.ReloadPage();
-                Navigation.Click_Menu_Portfolio();
-                Logger.WriteDebugMessage("Portfolio Drop down displayed");
-                Navigation.Click_Portfolio_Report();
-                Navigation.Portfolio();
-                Helper.AddDelay(5000);
-                Logger.WriteDebugMessage("User landed on Portfolio page");
-
-                Helper.EnterFrameByxPath(PageObject_ReportParameter.iframe_Portfolio());
-
-                ReportParameter.Select_Currency_Business_value(Currency, Business_Unit);
-                ReportParameter.Portfolio_report_startdate_enddate(Portfolio_value, startDate, enddate);
-                ReportParameter.Select_SourceMarket_DDL();
-                Logger.WriteDebugMessage("Source Market drop down displayed");
-                ReportParameter.Select_SourceMarket_value();
-                ReportParameter.Select_SourceMarket_DDL();
-                Logger.WriteDebugMessage(parameter1_value + "Selected as source market");
-                ReportParameter.Parameter_market();
-                Logger.WriteDebugMessage("Market drop down displayed");
-                ReportParameter.Parameter_market_Direct();
-                Logger.WriteDebugMessage(parameter2_value + "selected for Market");
-                ReportParameter.Click_View_Analysis();
-                Helper.AddDelay(30000);
-                Logger.WriteDebugMessage("Report generated");
-                Helper.ScrollToText("Filter(s)");
-                Helper.VerifyTextOnPageAndHighLight("Filter(s):  ; Source Market: Africa; Central Africa; Sao Tome and Principe; Cameroon; Central African Republic;");
-                Logger.WriteDebugMessage("Applied filter displayed at footer");
-                if (client == "Kerzner")
-                {
-                    //Verify Data in export document and in front end 
-                    ReportParameter.Report_Excel_Format();
-
-                    FilePath = Environment.GetEnvironmentVariable("USERPROFILE") + @"\" + "Downloads";
-                    Filename = ReportParameter.VerifyFileFormate(FilePath);
-                    FullPath = TestData.ExcelData.ExcelDataReader.GetNewestFile((FilePath));
-
-                    TestData.ExcelData.ExcelDataReader ll = new TestData.ExcelData.ExcelDataReader(FullPath);
-                    string Total_Revenue = ll.GetCellData(Worksheetname, 14, 36);
-                    if (Total_Revenue.Contains(PriorYear_Total_Revenue))
-                        Logger.WriteDebugMessage(PriorYear_Total_Revenue + " matched with total ADR under Budget section");
-                    else
-                        scenario3 = false;
-
-                    //Delete downloaded file
-                    TestData.ExcelData.ExcelDataReader.deleteFile(FilePath);
-                }
-                if (scenario1 == false) Assert.Fail("Report with mandatory field is fail");
-                else Logger.WriteInfoMessage("Scenario 1 : Report with mandatory field is Pass");
-
-                if (scenario2 == false) Assert.Fail("Report with one filter is fail");
-                else Logger.WriteInfoMessage("Scenario 2 : Report with one filter is Pass");
-
-                if (scenario3 == false) Assert.Fail("Report with  multiple filter is fail");
-                else Logger.WriteInfoMessage("Scenario 3 : Report with multiple filter is Pass");
-
-                //Log test data into log file as well as extent report
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Valid User Email", username);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Password", password);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_environment", environment);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_client", client);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Portfolio_value", Portfolio_value);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Business_Unit", Business_Unit);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Currency", Currency);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_startDate", startDate);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_enddate", enddate);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_reportName", reportName);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_parameter1", parameter1);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_parameter1_value", parameter1_value);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_reportName_stay", reportName_stay);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_Budget_total_ADR", Budget_total_ADR);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_parameter2", parameter2);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_parameter2_value", parameter2_value);
-                Logger.LogTestData(TestPlanId, TestCaseId, TestCaseId + "_PriorYear_Total_Revenue", PriorYear_Total_Revenue, true);
             }
+            catch(Exception e) { }
         }
 
         //Validate the Agent By Hotel

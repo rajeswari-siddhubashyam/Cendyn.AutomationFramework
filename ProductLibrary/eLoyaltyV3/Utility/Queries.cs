@@ -1600,7 +1600,7 @@ namespace eLoyaltyV3.Utility
                     " with(nolock) inner join AdminAccountTransaction Atc with(nolock)" +
                     " on DC.ProfileId = Atc.ProfileId where DC.Email = '" + EmailAddress + "' and atc.CommentsInternal = '" + comments + "'";
 
-            using (SqlConnection connection = DBHelper.SqlConn())
+            using (  SqlConnection connection = DBHelper.SqlConn())
             {
                 connection.Open();
 
@@ -1733,6 +1733,38 @@ namespace eLoyaltyV3.Utility
                     "WHERE PlD.MemberType IS NOT NULL AND U.Email Like '%@cendyn17.com' AND MS.MembershipStatus = '" + status + "'";
 
             if (status=="Active")
+                query += " AND PLD.Balance > 0";
+
+            using (SqlConnection connection = DBHelper.SqlConn())
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.CommandTimeout = 60;
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            data.eMail = reader["email"].ToString();
+                            data.Balance = reader["Balance"].ToString();
+                            data.Membership = reader["membership"].ToString();
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            return data;
+        }
+        public static Users GetDataPerStausWitPointBalanceZero(string status, Users data, string Projectname)
+        {
+            query = "SELECT TOP 1 U.email, PLD.Balance, cust.membership from users U WITH (NOLOCK) " +
+                    "INNER JOIN ProfileLoyaltyDetail PLd WITH(NOLOCK) ON PLD.ProfileID = U.ProfileID " +
+                    "INNER JOIN D_customer cust WITH (nolock) ON cust.profileid = PLD.ProfileID " +
+                    "INNER JOIN L_MembershipStatus MS WITH(NOLOCK) ON MS.ID = PLD.MembershipStatus " +
+                    "WHERE PlD.MemberType IS NOT NULL AND U.Email Like '%@cendyn17.com' AND MS.MembershipStatus = '" + status + "' AND PLD.Balance=0";
+
+            if (status == "Active")
                 query += " AND PLD.Balance > 0";
 
             using (SqlConnection connection = DBHelper.SqlConn())
@@ -2109,7 +2141,7 @@ namespace eLoyaltyV3.Utility
         {
             query = "select top 1 m.MemberEmail from MemberShips as m with(nolock) " +
                     "inner join ProfileLoyaltyDetail PLD with(nolock) on m.ProfileId = PLD.ProfileId " +
-                    "where PLD.Balance >" + balance + " and m.MemberPassword = 'D8DC2C8B51482DB762FB7E3103E91C3A9B4969D3' order by PLD.Balance asc";
+                    "where PLD.Balance >" + balance + " and m.MembershipStatus = 1 and m.MemberPassword = 'D8DC2C8B51482DB762FB7E3103E91C3A9B4969D3' order by PLD.Balance asc";
 
             columnName = "MemberEmail";
             data.MemberEmail = DBHelper.ExecuteQueryAndReturnColumn(query, columnName);
@@ -2431,7 +2463,7 @@ namespace eLoyaltyV3.Utility
             }
             return data;
         }
-
+        
         public static Users GetDataPer_ManualTransaction(int row, Users data, string email = null)
         {
             query = "SELECT DISTINCT TOP 1 m.MemberEmail " +
@@ -4562,6 +4594,7 @@ namespace eLoyaltyV3.Utility
                         while (reader.Read())
                         {
                             data.ProfileID = reader["ProfileID"].ToString();
+                            data.RegistrationTime = reader["RegistrationTime"].ToString();
                         }
                     }
                 }

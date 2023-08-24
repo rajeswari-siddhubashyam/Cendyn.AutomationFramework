@@ -1,0 +1,53 @@
+2023-08-24 06:31:55,320 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-08-24 06:31:55,322 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-08-24 06:31:55,323 ::INFO ::[Logger]::  is used for Testing
+2023-08-24 06:31:55,428 ::INFO ::[Logger]:: This is the login page.https://guestloyaltyadminorigamidemo.cendyn.com/en-US
+2023-08-24 06:31:55,430 ::INFO ::[Logger]:: Execution started at:-Aug-24-2023 06-31-55-AM
+2023-08-24 06:31:55,431 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-08-24 06:31:55,432 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-08-24 06:31:55,435 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_194749         XXXXXXXXXXXXXXXX
+2023-08-24 06:31:55,436 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-08-24 06:31:55,561 ::INFO ::[Logger]:: Window Size is: {Width=1366, Height=768}
+2023-08-24 06:31:57,959 ::INFO ::[Logger]:: Cleared text in the Admin_Text_UserName element on the Admin page.
+2023-08-24 06:31:59,845 ::INFO ::[Logger]:: Inserted text in the Admin_Text_UserName element on the Admin page.
+2023-08-24 06:32:05,799 ::INFO ::[Logger]:: Cleared text in the Admin_Text_Password element on the Admin page.
+2023-08-24 06:32:07,699 ::INFO ::[Logger]:: Inserted text in the Admin_Text_Password element on the Admin page.
+2023-08-24 06:32:07,702 ::DEBUG::[Logger]:: 1) Entered Username and Password
+2023-08-24 06:32:19,742 ::INFO ::[Logger]:: Clicked the Admin_Button_Login element on the Admin page.
+2023-08-24 06:32:19,744 ::DEBUG::[Logger]:: 2) Logged in successfully
+2023-08-24 06:33:07,993 ::ERROR::[Logger]:: The //a[contains(text(),'Home')] element was not found on the page.
+OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'Home')]"}
+  (Session info: chrome=105.0.5195.28)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at BaseUtility.PageObject.PageAction.Find_ElementXPath(String repoName) in C:\Automation\BaseUtility\PageObject\PageAction.cs:line 33
+2023-08-24 06:37:08,390 ::ERROR::[Logger]:: Element not found
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 240 seconds
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at BaseUtility.Utility.Helper.ElementWait(IWebElement element, Int32 time) in C:\Automation\BaseUtility\Utility\Helper.cs:line 168
+2023-08-24 06:37:57,152 ::ERROR::[Logger]:: The //a[contains(text(),'Home')] element was not found on the page.
+OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'Home')]"}
+  (Session info: chrome=105.0.5195.28)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at BaseUtility.PageObject.PageAction.Find_ElementXPath(String repoName) in C:\Automation\BaseUtility\PageObject\PageAction.cs:line 33
+2023-08-24 06:37:59,161 ::FATAL::[Logger]:: Unable to click the Menu_Home element on the Admin page.System.NullReferenceException: Object reference not set to an instance of an object.
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Automation\BaseUtility\Utility\Helper.cs:line 81
+2023-08-24 06:38:00,439 ::ERROR::[Logger]:: eLoyaltyV3_Flow :: Script::Failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BaseUtility.Utility.Helper.ElementClick(IWebElement element) in C:\Automation\BaseUtility\Utility\Helper.cs:line 88
+   at eLoyaltyV3.AppModule.UI.Admin.Click_Menu_Home() in C:\Automation\ProductLibrary\eLoyaltyV3\AppModule\Admin\Admin.cs:line 1149
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TC_194749() in C:\Automation\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp\Admin\TP_193880_Admin_Smoke_End_To_End_Cases.cs:line 1748
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TP_189000(String ProjectName) in C:\Automation\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp.cs:line 831
+   at HotelOrigami.Admin_PostDeployment_TP_189000.TC_194749() in C:\Automation\ProductLibrary\eLoyaltyV3\TestPlan\HotelOrigami\Admin_PostDeployment_TP_189000.cs:line 123
+2023-08-24 06:38:12,278 ::INFO ::[Logger]:: E.N.D

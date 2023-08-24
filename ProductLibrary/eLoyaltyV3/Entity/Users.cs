@@ -41,7 +41,9 @@ namespace eLoyaltyV3.Entity
         public string DepartureDate { get; set; }
         public string PropertyCode { get; set; }
         public string PropertyId { get; set; }
-        
+
+        public string RegistrationTime { get; set; }
+
         public string RateType { get; set; }
         public string SetBy { get; set; }
         public string ChangeTypeId { get; set; }

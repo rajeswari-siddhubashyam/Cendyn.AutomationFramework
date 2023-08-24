@@ -1,0 +1,33 @@
+2023-08-24 06:29:53,473 ::INFO ::[Logger]:: Execution of BaseUtility Test cases
+2023-08-24 06:29:53,479 ::INFO ::[Logger]:: Chrome is currently being used for testing.
+2023-08-24 06:29:53,481 ::INFO ::[Logger]::  is used for Testing
+2023-08-24 06:29:53,596 ::INFO ::[Logger]:: This is the login page.https://guestloyaltyadminorigamidemo.cendyn.com/en-US
+2023-08-24 06:29:53,599 ::INFO ::[Logger]:: Execution started at:-Aug-24-2023 06-29-53-AM
+2023-08-24 06:29:53,601 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-08-24 06:29:53,607 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      S.T.A.R.T.     XXXXXXXXXXXXXXXX
+2023-08-24 06:29:53,610 ::INFO ::[Logger]:: XXXXXXXXXXXXXXXXX      TC_189003         XXXXXXXXXXXXXXXX
+2023-08-24 06:29:53,611 ::INFO ::[Logger]:: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2023-08-24 06:29:53,721 ::INFO ::[Logger]:: Window Size is: {Width=1366, Height=768}
+2023-08-24 06:30:05,033 ::ERROR::[Logger]:: eLoyaltyV3_Flow :: Script::Failed
+System.Data.SqlClient.SqlException (0x80131904): Cannot open database "eInsightCRM_HotelOrigami" requested by the login. The login failed.
+Login failed for user 'eContactSupportReadOnly'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at eLoyaltyV3.Utility.Queries.GetDataPerStatus(String status, Users data, String Projectname) in C:\Automation\ProductLibrary\eLoyaltyV3\Utility\Queries.cs:line 1740
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TC_189003() in C:\Automation\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp\Admin\TP_186894_Admin_Member_Status.cs:line 421
+   at eLoyaltyV3.AppModule.MainAdminApp.MainAdminApp.TP_189000(String ProjectName) in C:\Automation\ProductLibrary\eLoyaltyV3\AppModule\MainAdminApp.cs:line 829
+   at HotelOrigami.Admin_PostDeployment_TP_189000.TC_189003() in C:\Automation\ProductLibrary\eLoyaltyV3\TestPlan\HotelOrigami\Admin_PostDeployment_TP_189000.cs:line 75
+ClientConnectionId:70ef373c-a553-4b11-8f72-6f33ba8b48ec
+Error Number:4060,State:1,Class:11
+2023-08-24 06:30:15,766 ::INFO ::[Logger]:: E.N.D
