@@ -3,7 +3,7 @@
 ################################################################################
 
 /.vs/AutomationFramework/v16
-/BaseUtility/bin/Debug
+#/BaseUtility/bin/Debug
 /BaseUtility/obj
 /Common/bin/Debug
 /Common/obj
